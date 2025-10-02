@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown } from "@/components/icons"
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -62,79 +62,28 @@ export function Navigation() {
                 <ChevronDown className="h-3 w-3" />
               </Link>
               {desktopDropdowns.incluu && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
                   <a
                     href="https://incluu.us/blog"
-                    rel="noopener noreferrer"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium">Blog</div>
                     <p className="text-xs text-muted-foreground mt-1">Latest insights and articles</p>
                   </a>
-                  <Link
-                    href="/incluu/case-studies"
-                    onClick={closeAllDesktopDropdowns}
+                  <a
+                    href="https://dr-dede.vercel.app/case-studies"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium">Case Studies</div>
                     <p className="text-xs text-muted-foreground mt-1">Real-world impact stories</p>
-                  </Link>
-                  <Link
-                    href="/incluu/testimonials"
-                    onClick={closeAllDesktopDropdowns}
+                  </a>
+                  <a
+                    href="https://dr-dede.vercel.app/testimonials"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium">Testimonials</div>
                     <p className="text-xs text-muted-foreground mt-1">Client success stories</p>
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            <div
-              className="relative"
-              onMouseEnter={() => toggleDesktopDropdown("resources")}
-              onMouseLeave={() => toggleDesktopDropdown("resources")}
-            >
-              <Link
-                href="/resources"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
-              >
-                Resources
-                <ChevronDown className="h-3 w-3" />
-              </Link>
-              {desktopDropdowns.resources && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2">
-                  <a
-                    href="https://pmukyznd.manus.space/"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
-                  >
-                    <div className="text-sm font-medium">ROI Calculator</div>
-                    <p className="text-xs text-muted-foreground mt-1">Calculate your AI ROI potential</p>
                   </a>
-                  <Link
-                    href="/resources/stories"
-                    onClick={closeAllDesktopDropdowns}
-                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
-                  >
-                    <div className="text-sm font-medium">Stories</div>
-                    <p className="text-xs text-muted-foreground mt-1">Inspiring narratives</p>
-                  </Link>
-                  <Link
-                    href="/resources/privacy"
-                    onClick={closeAllDesktopDropdowns}
-                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
-                  >
-                    <div className="text-sm font-medium">Privacy Policy</div>
-                  </Link>
-                  <Link
-                    href="/resources/terms"
-                    onClick={closeAllDesktopDropdowns}
-                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
-                  >
-                    <div className="text-sm font-medium">Terms of Service</div>
-                  </Link>
                 </div>
               )}
             </div>
@@ -152,7 +101,7 @@ export function Navigation() {
                 <ChevronDown className="h-3 w-3" />
               </Link>
               {desktopDropdowns.drDede && (
-                <div className="absolute top-full right-0 mt-2 w-72 bg-background border border-border rounded-lg shadow-lg p-2">
+                <div className="absolute top-full right-0 mt-2 w-72 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
                   <div
                     className="relative"
                     onMouseEnter={() => toggleDesktopDropdown("retreats")}
@@ -170,7 +119,7 @@ export function Navigation() {
                       <ChevronDown className="h-3 w-3 -rotate-90" />
                     </Link>
                     {desktopDropdowns.retreats && (
-                      <div className="absolute right-full top-0 mr-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2">
+                      <div className="absolute right-full top-0 mr-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
                         <Link
                           href="/dr-dede/retreats/executive"
                           onClick={closeAllDesktopDropdowns}
@@ -207,13 +156,59 @@ export function Navigation() {
                     <p className="text-xs text-muted-foreground mt-1">Book Dr. Dédé for your event</p>
                   </Link>
                   <a
-                    href="https://nslacnow.manus.space/"
-                    rel="noopener noreferrer"
+                    href="https://www.youtube.com/watch?v=mSQuZG_DHVY"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium">Watch TEDx</div>
                     <p className="text-xs text-muted-foreground mt-1">Transforming AI through equity</p>
                   </a>
+                </div>
+              )}
+            </div>
+
+            <div
+              className="relative"
+              onMouseEnter={() => toggleDesktopDropdown("resources")}
+              onMouseLeave={() => toggleDesktopDropdown("resources")}
+            >
+              <Link
+                href="/resources"
+                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
+              >
+                Resources
+                <ChevronDown className="h-3 w-3" />
+              </Link>
+              {desktopDropdowns.resources && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
+                  <a
+                    href="https://pmukyznd.manus.space/"
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium">ROI Calculator</div>
+                    <p className="text-xs text-muted-foreground mt-1">Calculate your AI ROI potential</p>
+                  </a>
+                  <Link
+                    href="/resources/stories"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium">Stories</div>
+                    <p className="text-xs text-muted-foreground mt-1">Inspiring narratives</p>
+                  </Link>
+                  <Link
+                    href="/resources/privacy"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium">Privacy Policy</div>
+                  </Link>
+                  <Link
+                    href="/resources/terms"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium">Terms of Service</div>
+                  </Link>
                 </div>
               )}
             </div>
@@ -268,79 +263,21 @@ export function Navigation() {
                 </div>
                 {mobileDropdowns.incluu && (
                   <div className="pl-8 flex flex-col gap-2">
-                    <a
-                      href="https://incluu.us/blog"
-                      rel="noopener noreferrer"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                    >
+                    <a href="https://incluu.us/blog" className="text-sm text-foreground/70 hover:text-foreground py-2">
                       Blog
                     </a>
-                    <Link
-                      href="/incluu/case-studies"
+                    <a
+                      href="https://dr-dede.vercel.app/case-studies"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
                     >
                       Case Studies
-                    </Link>
-                    <Link
-                      href="/incluu/testimonials"
+                    </a>
+                    <a
+                      href="https://dr-dede.vercel.app/testimonials"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
                     >
                       Testimonials
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              <div>
-                <div className="flex items-center justify-between">
-                  <Link
-                    href="/resources"
-                    className="flex-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2 px-4"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Resources
-                  </Link>
-                  <button
-                    onClick={() => toggleMobileDropdown("resources")}
-                    className="p-2 text-foreground/80 hover:text-foreground"
-                  >
-                    <ChevronDown
-                      className={`h-4 w-4 transition-transform ${mobileDropdowns.resources ? "rotate-180" : ""}`}
-                    />
-                  </button>
-                </div>
-                {mobileDropdowns.resources && (
-                  <div className="pl-8 flex-col gap-2">
-                    <a
-                      href="https://pmukyznd.manus.space/"
-                      rel="noopener noreferrer"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                    >
-                      ROI Calculator
                     </a>
-                    <Link
-                      href="/resources/stories"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Stories
-                    </Link>
-                    <Link
-                      href="/resources/privacy"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Privacy Policy
-                    </Link>
-                    <Link
-                      href="/resources/terms"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Terms of Service
-                    </Link>
                   </div>
                 )}
               </div>
@@ -366,24 +303,15 @@ export function Navigation() {
                 {mobileDropdowns.drDede && (
                   <div className="pl-8 flex flex-col gap-2">
                     <div>
-                      <Link
-                        href="/dr-dede/retreats"
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center justify-between w-full text-sm text-foreground/70 hover:text-foreground py-2"
+                      <button
+                        onClick={() => toggleMobileDropdown("retreats")}
+                        className="flex items-center justify-between w-full text-sm text-foreground/70 hover:text-foreground py-2 text-left"
                       >
                         <span>Retreats & Advocacy</span>
-                        <button
-                          onClick={(e) => {
-                            e.preventDefault()
-                            toggleMobileDropdown("retreats")
-                          }}
-                          className="p-1"
-                        >
-                          <ChevronDown
-                            className={`h-3 w-3 transition-transform ${mobileDropdowns.retreats ? "rotate-180" : ""}`}
-                          />
-                        </button>
-                      </Link>
+                        <ChevronDown
+                          className={`h-3 w-3 transition-transform ${mobileDropdowns.retreats ? "rotate-180" : ""}`}
+                        />
+                      </button>
                       {mobileDropdowns.retreats && (
                         <div className="pl-4 flex flex-col gap-2 mt-2">
                           <Link
@@ -418,12 +346,62 @@ export function Navigation() {
                       Speaking & Events
                     </Link>
                     <a
-                      href="https://nslacnow.manus.space/"
-                      rel="noopener noreferrer"
+                      href="https://www.youtube.com/watch?v=mSQuZG_DHVY"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
                     >
                       Watch TEDx
                     </a>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/resources"
+                    className="flex-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2 px-4"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Resources
+                  </Link>
+                  <button
+                    onClick={() => toggleMobileDropdown("resources")}
+                    className="p-2 text-foreground/80 hover:text-foreground"
+                  >
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${mobileDropdowns.resources ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                </div>
+                {mobileDropdowns.resources && (
+                  <div className="pl-8 flex flex-col gap-2">
+                    <a
+                      href="https://pmukyznd.manus.space/"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                    >
+                      ROI Calculator
+                    </a>
+                    <Link
+                      href="/resources/stories"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Stories
+                    </Link>
+                    <Link
+                      href="/resources/privacy"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Privacy Policy
+                    </Link>
+                    <Link
+                      href="/resources/terms"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Terms of Service
+                    </Link>
                   </div>
                 )}
               </div>

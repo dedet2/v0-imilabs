@@ -1,5 +1,7 @@
+"use client"
+
 import Link from "next/link"
-import { Linkedin, Twitter, Youtube, Mail, Instagram, Facebook } from "lucide-react"
+import { Linkedin, Twitter, Youtube, Mail, Instagram, Facebook } from "@/components/icons"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -82,7 +84,6 @@ export function Footer() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="https://linkedin.com/in/drdede"
-                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="LinkedIn"
               >
@@ -90,7 +91,6 @@ export function Footer() {
               </a>
               <a
                 href="https://twitter.com/drdede"
-                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Twitter"
               >
@@ -98,7 +98,6 @@ export function Footer() {
               </a>
               <a
                 href="https://youtube.com/@drdede"
-                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="YouTube"
               >
@@ -106,7 +105,6 @@ export function Footer() {
               </a>
               <a
                 href="https://instagram.com/drdede"
-                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Instagram"
               >
@@ -114,7 +112,6 @@ export function Footer() {
               </a>
               <a
                 href="https://facebook.com/drdede"
-                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Facebook"
               >
