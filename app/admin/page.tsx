@@ -71,10 +71,10 @@ export default function AdminPage() {
 
               <div className="pt-4">
                 <Button asChild className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:opacity-90">
-                  <Link href="https://risktravel-dashboard.vercel.app" rel="noopener noreferrer">
+                  <a href="https://risktravel-dashboard.vercel.app" rel="noopener noreferrer">
                     Access Dashboard
                     <ExternalLink className="ml-2 h-4 w-4" />
-                  </Link>
+                  </a>
                 </Button>
               </div>
 

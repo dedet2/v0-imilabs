@@ -300,10 +300,10 @@ export default function DrDedePage() {
                     </ul>
                   </div>
                   <Button asChild className="bg-red-600 hover:bg-red-700">
-                    <Link href="https://youtube.com" rel="noopener noreferrer">
+                    <a href="https://youtube.com/@DrDeterWithDede" rel="noopener noreferrer">
                       <Play className="mr-2 h-4 w-4" />
                       Watch TEDx Talk
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </div>

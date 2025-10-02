@@ -53,7 +53,7 @@ export default function TEDxPage() {
                 <div className="aspect-video bg-black">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.youtube.com/embed/mSQuZG_DHVY"
                     title="Dr. Dédé TEDx Talk: You've Been Coded Out"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
