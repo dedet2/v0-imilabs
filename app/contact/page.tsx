@@ -90,7 +90,7 @@ export default function ContactPage() {
                   Follow Dr. Dédé for insights on AI governance and tech equity
                 </p>
                 <a
-                  href="https://linkedin.com/in/dr-dede"
+                  href="https://www.linkedin.com/in/dr-dede/"
                   rel="noopener noreferrer"
                   className="text-sm font-medium underline hover:no-underline"
                 >

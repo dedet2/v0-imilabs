@@ -33,7 +33,7 @@ export default function CaseStudiesPage() {
               {[
                 { value: "$200M+", label: "Compliance Costs Saved" },
                 { value: "$500M+", label: "New Markets Unlocked" },
-                { value: "50+", label: "Organizations Transformed" },
+                { value: "$1.5B+", label: "Total Value Created" },
               ].map((stat, index) => (
                 <Card key={index} className="p-6 text-center">
                   <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>

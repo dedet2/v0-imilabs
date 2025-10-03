@@ -70,20 +70,22 @@ export function Navigation() {
                     <div className="text-sm font-medium">Blog</div>
                     <p className="text-xs text-muted-foreground mt-1">Latest insights and articles</p>
                   </a>
-                  <a
-                    href="https://dr-dede.vercel.app/case-studies"
+                  <Link
+                    href="/case-studies"
+                    onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium">Case Studies</div>
                     <p className="text-xs text-muted-foreground mt-1">Real-world impact stories</p>
-                  </a>
-                  <a
-                    href="https://dr-dede.vercel.app/testimonials"
+                  </Link>
+                  <Link
+                    href="/testimonials"
+                    onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium">Testimonials</div>
                     <p className="text-xs text-muted-foreground mt-1">Client success stories</p>
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
@@ -266,18 +268,20 @@ export function Navigation() {
                     <a href="https://incluu.us/blog" className="text-sm text-foreground/70 hover:text-foreground py-2">
                       Blog
                     </a>
-                    <a
-                      href="https://dr-dede.vercel.app/case-studies"
+                    <Link
+                      href="/case-studies"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       Case Studies
-                    </a>
-                    <a
-                      href="https://dr-dede.vercel.app/testimonials"
+                    </Link>
+                    <Link
+                      href="/testimonials"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       Testimonials
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>

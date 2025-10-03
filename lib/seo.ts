@@ -18,7 +18,7 @@ export function generateStructuredData(config: SEOConfig) {
     url: baseUrl,
     image: `${baseUrl}/og-image.jpg`,
     sameAs: [
-      "https://linkedin.com/in/drdede",
+      "https://www.linkedin.com/in/dr-dede/",
       "https://twitter.com/drdede",
       "https://youtube.com/@drdede",
       "https://incluu.us",

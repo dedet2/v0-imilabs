@@ -83,7 +83,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Connect</h3>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://linkedin.com/in/drdede"
+                href="https://www.linkedin.com/in/dr-dede/"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="LinkedIn"
               >

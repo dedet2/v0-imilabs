@@ -78,7 +78,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           <Card className="text-center bg-white/80 backdrop-blur-sm border-purple-100">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-purple-600">$1B+</CardTitle>
+              <CardTitle className="text-3xl font-bold text-purple-600">$1.5B+</CardTitle>
               <CardDescription>Total Cost Savings</CardDescription>
             </CardHeader>
           </Card>
