@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Shield, Lock, Eye, FileText, UserCheck, Globe } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Dr. Dédé & incluu",
@@ -7,15 +8,27 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen pt-16">
+    <main className="min-h-screen pt-16 bg-gradient-to-br from-violet-900 via-purple-800 to-cyan-500">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-muted-foreground mb-12">Last updated: {new Date().toLocaleDateString()}</p>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="p-4 rounded-2xl bg-gradient-to-br from-violet-600 to-cyan-400">
+              <Shield className="h-10 w-10 text-white" />
+            </div>
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white">Privacy Policy</h1>
+              <p className="text-cyan-100 mt-2">Last updated: {new Date().toLocaleDateString()}</p>
+            </div>
+          </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-12">
             <section>
-              <h2 className="text-2xl font-bold mb-4">Introduction</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <FileText className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">Introduction</h2>
+              </div>
               <p className="text-foreground/80 leading-relaxed">
                 Dr. Dédé Tetsubayashi and incluu ("we," "our," or "us") are committed to protecting your privacy. This
                 Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our
@@ -24,7 +37,12 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">Information We Collect</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <Eye className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">Information We Collect</h2>
+              </div>
 
               <h3 className="text-xl font-semibold mb-3 mt-6">Personal Information</h3>
               <p className="text-foreground/80 leading-relaxed mb-3">
@@ -60,7 +78,12 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">How We Use Your Information</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <UserCheck className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">How We Use Your Information</h2>
+              </div>
               <p className="text-foreground/80 leading-relaxed mb-3">We use the information we collect to:</p>
               <ul className="list-disc pl-6 space-y-2 text-foreground/80">
                 <li>Provide and improve our services</li>
@@ -72,7 +95,12 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">Information Sharing and Disclosure</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <Globe className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">Information Sharing and Disclosure</h2>
+              </div>
               <p className="text-foreground/80 leading-relaxed mb-3">
                 We do not sell, trade, or rent your personal information to third parties. We may share your information
                 with:
@@ -85,7 +113,12 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">Data Security</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <Lock className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">Data Security</h2>
+              </div>
               <p className="text-foreground/80 leading-relaxed">
                 We implement appropriate technical and organizational measures to protect your personal information
                 against unauthorized access, alteration, disclosure, or destruction.
@@ -145,7 +178,7 @@ export default function PrivacyPage() {
                 Email: privacy@incluu.us
                 <br />
                 Website:{" "}
-                <a href="/contact" className="text-primary hover:underline">
+                <a href="/contact" className="text-violet-600 hover:text-cyan-600 transition-colors hover:underline">
                   Contact Form
                 </a>
               </p>

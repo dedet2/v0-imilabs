@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Scale, FileCheck, Shield, AlertCircle, Gavel, Users } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Terms of Service | Dr. Dédé & incluu",
@@ -7,15 +8,27 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen pt-16">
+    <main className="min-h-screen pt-16 bg-gradient-to-br from-violet-900 via-purple-800 to-cyan-500">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Terms of Service</h1>
-          <p className="text-muted-foreground mb-12">Last updated: {new Date().toLocaleDateString()}</p>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="p-4 rounded-2xl bg-gradient-to-br from-violet-600 to-cyan-400">
+              <Scale className="h-10 w-10 text-white" />
+            </div>
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white">Terms of Service</h1>
+              <p className="text-cyan-100 mt-2">Last updated: {new Date().toLocaleDateString()}</p>
+            </div>
+          </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-12">
             <section>
-              <h2 className="text-2xl font-bold mb-4">Agreement to Terms</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <FileCheck className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">Agreement to Terms</h2>
+              </div>
               <p className="text-foreground/80 leading-relaxed">
                 By accessing or using the services provided by Dr. Dédé Tetsubayashi and incluu ("we," "our," or "us"),
                 you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use
@@ -24,7 +37,12 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">Services</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <Users className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">Services</h2>
+              </div>
               <p className="text-foreground/80 leading-relaxed mb-3">We provide the following services:</p>
               <ul className="list-disc pl-6 space-y-2 text-foreground/80">
                 <li>AI governance and compliance consulting</li>
@@ -36,7 +54,12 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">Use of Services</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <Shield className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">Use of Services</h2>
+              </div>
 
               <h3 className="text-xl font-semibold mb-3 mt-6">Eligibility</h3>
               <p className="text-foreground/80 leading-relaxed">
@@ -96,7 +119,12 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">Cancellation and Refunds</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <AlertCircle className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">Cancellation and Refunds</h2>
+              </div>
               <p className="text-foreground/80 leading-relaxed mb-3">
                 Cancellation and refund policies vary by service type and will be specified in engagement agreements.
                 Generally:
@@ -133,7 +161,12 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">Governing Law</h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400">
+                  <Gavel className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">Governing Law</h2>
+              </div>
               <p className="text-foreground/80 leading-relaxed">
                 These Terms shall be governed by and construed in accordance with the laws of the United States and the
                 State of California, without regard to conflict of law principles.
@@ -173,7 +206,7 @@ export default function TermsPage() {
                 Email: legal@incluu.us
                 <br />
                 Website:{" "}
-                <a href="/contact" className="text-primary hover:underline">
+                <a href="/contact" className="text-violet-600 hover:text-cyan-600 transition-colors hover:underline">
                   Contact Form
                 </a>
               </p>

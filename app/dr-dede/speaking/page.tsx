@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Mic, Users, Award, Calendar, CheckCircle2 } from "lucide-react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Book Dr. Dédé for Speaking & Events | TEDx Speaker",
@@ -14,24 +15,30 @@ export default function SpeakingPage() {
   return (
     <main className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 sm:py-32 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.15),transparent_60%)]" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <Award className="h-5 w-5 text-primary" />
-              <span className="text-sm font-semibold text-primary">TEDx Speaker</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6 border border-white/30">
+              <Award className="h-5 w-5 text-white" />
+              <span className="text-sm font-semibold text-white">TEDx Speaker</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6 drop-shadow-lg">
               Speaking & Events with Dr. Dédé
             </h1>
-            <p className="text-xl sm:text-2xl text-foreground/70 text-balance mb-8">
+            <p className="text-xl sm:text-2xl text-white/95 text-balance mb-8 drop-shadow leading-relaxed">
               Transform your event with powerful insights on AI governance, tech equity, and inclusive innovation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+              <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-50 shadow-xl">
                 <Link href="/contact?service=speaking">Book Dr. Dédé</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="bg-transparent text-white border-white hover:bg-white/10"
+              >
                 <Link href="/dr-dede/tedx">Watch TEDx Talk</Link>
               </Button>
             </div>
@@ -58,6 +65,7 @@ export default function SpeakingPage() {
                     "Regulatory compliance frameworks",
                     "Ethical AI development",
                   ],
+                  image: "/professional-speaker-presenting-ai-governance-to-c.jpg",
                 },
                 {
                   icon: Users,
@@ -70,6 +78,7 @@ export default function SpeakingPage() {
                     "Expanding market reach",
                     "Building inclusive teams",
                   ],
+                  image: "/diverse-team-collaborating-on-inclusive-technology.jpg",
                 },
                 {
                   icon: Award,
@@ -82,6 +91,7 @@ export default function SpeakingPage() {
                     "Proactive compliance",
                     "Building high-performing teams",
                   ],
+                  image: "/executive-leadership-workshop-with-diverse-busines.jpg",
                 },
                 {
                   icon: Calendar,
@@ -93,20 +103,28 @@ export default function SpeakingPage() {
                     "Human-AI collaboration",
                     "Ethical automation",
                   ],
+                  image: "/futuristic-office-with-ai-technology-and-diverse-w.jpg",
                 },
               ].map((topic, index) => (
-                <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
-                  <topic.icon className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{topic.title}</h3>
-                  <p className="text-foreground/70 mb-6 leading-relaxed">{topic.description}</p>
-                  <ul className="space-y-2">
-                    {topic.topics.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground/80">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="relative h-48 w-full">
+                    <Image src={topic.image || "/placeholder.svg"} alt={topic.title} fill className="object-cover" />
+                  </div>
+                  <div className="p-8">
+                    <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-purple-600 to-cyan-400 flex items-center justify-center mb-4">
+                      <topic.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3">{topic.title}</h3>
+                    <p className="text-foreground/70 mb-6 leading-relaxed">{topic.description}</p>
+                    <ul className="space-y-2">
+                      {topic.topics.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-foreground/80">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </Card>
               ))}
             </div>
@@ -236,14 +254,14 @@ export default function SpeakingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-secondary/20 to-primary/20">
+      <section className="py-20 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Book Dr. Dédé?</h2>
-            <p className="text-xl text-foreground/70 mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white drop-shadow-lg">Ready to Book Dr. Dédé?</h2>
+            <p className="text-xl text-white/95 mb-8 drop-shadow leading-relaxed">
               Transform your next event with insights that inspire action and drive real change.
             </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-50 shadow-xl">
               <Link href="/contact?service=speaking">Request Speaking Engagement</Link>
             </Button>
           </div>

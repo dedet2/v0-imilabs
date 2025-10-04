@@ -38,14 +38,17 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="text-xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+            <div className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-purple-500 bg-clip-text text-transparent">
               Dr. Dédé
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+            <Link
+              href="/"
+              className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent hover:from-violet-700 hover:to-cyan-500 transition-all"
+            >
               Home
             </Link>
 
@@ -56,10 +59,10 @@ export function Navigation() {
             >
               <Link
                 href="/incluu"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
+                className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent hover:from-violet-700 hover:to-cyan-500 transition-all flex items-center gap-1"
               >
                 incluu
-                <ChevronDown className="h-3 w-3" />
+                <ChevronDown className="h-3 w-3 text-violet-600" />
               </Link>
               {desktopDropdowns.incluu && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
@@ -67,7 +70,9 @@ export function Navigation() {
                     href="https://incluu.us/blog"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
-                    <div className="text-sm font-medium">Blog</div>
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Blog
+                    </div>
                     <p className="text-xs text-muted-foreground mt-1">Latest insights and articles</p>
                   </a>
                   <Link
@@ -75,7 +80,9 @@ export function Navigation() {
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
-                    <div className="text-sm font-medium">Case Studies</div>
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Case Studies
+                    </div>
                     <p className="text-xs text-muted-foreground mt-1">Real-world impact stories</p>
                   </Link>
                   <Link
@@ -83,7 +90,9 @@ export function Navigation() {
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
-                    <div className="text-sm font-medium">Testimonials</div>
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Testimonials
+                    </div>
                     <p className="text-xs text-muted-foreground mt-1">Client success stories</p>
                   </Link>
                 </div>
@@ -97,10 +106,10 @@ export function Navigation() {
             >
               <Link
                 href="/dr-dede"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
+                className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent hover:from-violet-700 hover:to-cyan-500 transition-all flex items-center gap-1"
               >
                 Dr. Dédé
-                <ChevronDown className="h-3 w-3" />
+                <ChevronDown className="h-3 w-3 text-violet-600" />
               </Link>
               {desktopDropdowns.drDede && (
                 <div className="absolute top-full right-0 mt-2 w-72 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
@@ -115,7 +124,9 @@ export function Navigation() {
                       className="px-4 py-3 rounded-md hover:bg-accent transition-colors cursor-pointer flex items-center justify-between"
                     >
                       <div>
-                        <div className="text-sm font-medium">Retreats & Advocacy</div>
+                        <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                          Retreats & Advocacy
+                        </div>
                         <p className="text-xs text-muted-foreground mt-1">Transformative experiences</p>
                       </div>
                       <ChevronDown className="h-3 w-3 -rotate-90" />
@@ -127,7 +138,9 @@ export function Navigation() {
                           onClick={closeAllDesktopDropdowns}
                           className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                         >
-                          <div className="text-sm font-medium">Executive Retreats</div>
+                          <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                            Executive Retreats
+                          </div>
                           <p className="text-xs text-muted-foreground mt-1">Leadership transformation</p>
                         </Link>
                         <Link
@@ -135,7 +148,9 @@ export function Navigation() {
                           onClick={closeAllDesktopDropdowns}
                           className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                         >
-                          <div className="text-sm font-medium">Luxury Wellness</div>
+                          <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                            Luxury Wellness
+                          </div>
                           <p className="text-xs text-muted-foreground mt-1">Holistic rejuvenation</p>
                         </Link>
                         <Link
@@ -143,7 +158,9 @@ export function Navigation() {
                           onClick={closeAllDesktopDropdowns}
                           className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                         >
-                          <div className="text-sm font-medium">Disability Advocacy</div>
+                          <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                            Disability Advocacy
+                          </div>
                           <p className="text-xs text-muted-foreground mt-1">Inclusive innovation</p>
                         </Link>
                       </div>
@@ -154,14 +171,18 @@ export function Navigation() {
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
-                    <div className="text-sm font-medium">Speaking & Events</div>
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Speaking & Events
+                    </div>
                     <p className="text-xs text-muted-foreground mt-1">Book Dr. Dédé for your event</p>
                   </Link>
                   <a
                     href="https://www.youtube.com/watch?v=mSQuZG_DHVY"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
-                    <div className="text-sm font-medium">Watch TEDx</div>
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Watch TEDx
+                    </div>
                     <p className="text-xs text-muted-foreground mt-1">Transforming AI through equity</p>
                   </a>
                 </div>
@@ -175,10 +196,10 @@ export function Navigation() {
             >
               <Link
                 href="/resources"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
+                className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent hover:from-violet-700 hover:to-cyan-500 transition-all flex items-center gap-1"
               >
                 Resources
-                <ChevronDown className="h-3 w-3" />
+                <ChevronDown className="h-3 w-3 text-violet-600" />
               </Link>
               {desktopDropdowns.resources && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
@@ -186,7 +207,9 @@ export function Navigation() {
                     href="https://pmukyznd.manus.space/"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
-                    <div className="text-sm font-medium">ROI Calculator</div>
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      ROI Calculator
+                    </div>
                     <p className="text-xs text-muted-foreground mt-1">Calculate your AI ROI potential</p>
                   </a>
                   <Link
@@ -194,7 +217,9 @@ export function Navigation() {
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
-                    <div className="text-sm font-medium">Stories</div>
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Stories
+                    </div>
                     <p className="text-xs text-muted-foreground mt-1">Inspiring narratives</p>
                   </Link>
                   <Link
@@ -202,14 +227,18 @@ export function Navigation() {
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
-                    <div className="text-sm font-medium">Privacy Policy</div>
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Privacy Policy
+                    </div>
                   </Link>
                   <Link
                     href="/resources/terms"
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
-                    <div className="text-sm font-medium">Terms of Service</div>
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Terms of Service
+                    </div>
                   </Link>
                 </div>
               )}
@@ -217,12 +246,16 @@ export function Navigation() {
 
             <Link
               href="/contact"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent hover:from-violet-700 hover:to-cyan-500 transition-all"
             >
               Contact
             </Link>
 
-            <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
+            <Button
+              asChild
+              size="sm"
+              className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500 text-white border-0"
+            >
               <Link href="/contact">Schedule Consultation</Link>
             </Button>
           </div>
@@ -239,7 +272,7 @@ export function Navigation() {
             <div className="flex flex-col gap-2">
               <Link
                 href="/"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2 px-4"
+                className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent py-2 px-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
@@ -249,7 +282,7 @@ export function Navigation() {
                 <div className="flex items-center justify-between">
                   <Link
                     href="/incluu"
-                    className="flex-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2 px-4"
+                    className="flex-1 text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent py-2 px-4"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     incluu
@@ -290,7 +323,7 @@ export function Navigation() {
                 <div className="flex items-center justify-between">
                   <Link
                     href="/dr-dede"
-                    className="flex-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2 px-4"
+                    className="flex-1 text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent py-2 px-4"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Dr. Dédé
@@ -309,7 +342,7 @@ export function Navigation() {
                     <div>
                       <button
                         onClick={() => toggleMobileDropdown("retreats")}
-                        className="flex items-center justify-between w-full text-sm text-foreground/70 hover:text-foreground py-2 text-left"
+                        className="flex items-center justify-between w-full text-sm text-foreground/60 hover:text-foreground py-2 text-left"
                       >
                         <span>Retreats & Advocacy</span>
                         <ChevronDown
@@ -363,7 +396,7 @@ export function Navigation() {
                 <div className="flex items-center justify-between">
                   <Link
                     href="/resources"
-                    className="flex-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2 px-4"
+                    className="flex-1 text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent py-2 px-4"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Resources
@@ -412,14 +445,17 @@ export function Navigation() {
 
               <Link
                 href="/contact"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2 px-4"
+                className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent py-2 px-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
 
               <div className="px-4 pt-2">
-                <Button asChild className="bg-primary hover:bg-primary/90 w-full">
+                <Button
+                  asChild
+                  className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500 text-white border-0 w-full"
+                >
                   <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                     Schedule Consultation
                   </Link>

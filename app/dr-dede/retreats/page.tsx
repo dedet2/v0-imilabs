@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Sparkles, Heart, Users, Mountain, CheckCircle2 } from "lucide-react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Luxury Retreats & Disability Advocacy | Dr. Dédé",
@@ -14,18 +15,21 @@ export default function RetreatsPage() {
   return (
     <main className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 sm:py-32 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.15),transparent_60%)]" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <Heart className="h-5 w-5 text-primary" />
-              <span className="text-sm font-semibold text-primary">Transformative Experiences</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6 border border-white/30">
+              <Heart className="h-5 w-5 text-white" />
+              <span className="text-sm font-semibold text-white">Transformative Experiences</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6">Retreats & Advocacy</h1>
-            <p className="text-xl sm:text-2xl text-foreground/70 text-balance mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6 drop-shadow-lg">
+              Retreats & Advocacy
+            </h1>
+            <p className="text-xl sm:text-2xl text-white/95 text-balance mb-8 drop-shadow leading-relaxed">
               Luxury wellness experiences and disability advocacy programs that transform individuals and organizations
             </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-50 shadow-xl">
               <Link href="/contact?service=retreats">Inquire About Retreats</Link>
             </Button>
           </div>
@@ -52,6 +56,7 @@ export default function RetreatsPage() {
                     "Inclusive leadership training",
                   ],
                   duration: "3-5 days",
+                  image: "/luxury-executive-retreat-with-diverse-leaders-in-m.jpg",
                 },
                 {
                   icon: Mountain,
@@ -65,6 +70,7 @@ export default function RetreatsPage() {
                     "Spa & therapeutic services",
                   ],
                   duration: "5-7 days",
+                  image: "/accessible-luxury-spa-wellness-retreat-with-inclus.jpg",
                 },
                 {
                   icon: Users,
@@ -78,23 +84,59 @@ export default function RetreatsPage() {
                     "Cultural competency training",
                   ],
                   duration: "2-4 days",
+                  image: "/diverse-team-building-retreat-with-collaborative-a.jpg",
                 },
               ].map((retreat, index) => (
-                <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
-                  <retreat.icon className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{retreat.title}</h3>
-                  <p className="text-foreground/70 mb-6 leading-relaxed">{retreat.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {retreat.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground/80">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="text-sm font-semibold text-primary">{retreat.duration}</div>
+                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={retreat.image || "/placeholder.svg"}
+                      alt={retreat.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-purple-600 to-cyan-400 flex items-center justify-center mb-4">
+                      <retreat.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3">{retreat.title}</h3>
+                    <p className="text-foreground/70 mb-6 leading-relaxed">{retreat.description}</p>
+                    <ul className="space-y-2 mb-6">
+                      {retreat.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-foreground/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="text-sm font-semibold text-primary">{retreat.duration}</div>
+                  </div>
                 </Card>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Retreat Experiences</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                <Image src="/luxury-accessible-spa-with-modern-design.jpg" alt="Luxury Spa" fill className="object-cover" />
+              </div>
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                <Image src="/diverse-executives-in-meditation-session.jpg" alt="Meditation Session" fill className="object-cover" />
+              </div>
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                <Image src="/gourmet-healthy-meal-presentation.jpg" alt="Gourmet Dining" fill className="object-cover" />
+              </div>
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                <Image src="/accessible-yoga-studio-with-natural-light.jpg" alt="Yoga Studio" fill className="object-cover" />
+              </div>
             </div>
           </div>
         </div>
@@ -237,19 +279,26 @@ export default function RetreatsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-secondary/20 to-primary/20">
+      <section className="py-20 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Transform Your Experience?</h2>
-            <p className="text-xl text-foreground/70 mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white drop-shadow-lg">
+              Ready to Transform Your Experience?
+            </h2>
+            <p className="text-xl text-white/95 mb-8 drop-shadow leading-relaxed">
               Inquire about our luxury retreats and advocacy programs to create lasting change for individuals and
               organizations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+              <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-50 shadow-xl">
                 <Link href="/contact?service=retreats">Inquire About Retreats</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="bg-transparent text-white border-white hover:bg-white/10"
+              >
                 <Link href="/contact?service=advocacy">Request Advocacy Consultation</Link>
               </Button>
             </div>

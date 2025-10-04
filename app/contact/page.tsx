@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Phone, Linkedin, MapPin, Clock } from "lucide-react"
+import { Mail, Phone, Linkedin, MapPin, Clock, Calendar, Users, Sparkles } from "lucide-react"
 import { ContactForm } from "@/components/contact-form"
 
 export const metadata: Metadata = {
@@ -115,8 +115,88 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Services Quick Links */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-br from-purple-50/50 to-cyan-50/50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-balance">Why Work With Dr. Dédé?</h2>
+            <p className="text-muted-foreground text-pretty leading-relaxed max-w-2xl mx-auto">
+              Combining deep technical expertise with lived experience to create transformative solutions for your
+              organization
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            <Card className="bg-white/90 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-400">
+                    <Sparkles className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Proven Expertise</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      TEDx speaker, AI governance expert, and thought leader in tech equity with years of experience
+                      guiding Fortune 500 companies
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/90 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-600 to-purple-400">
+                    <Users className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Holistic Approach</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Integrating technical compliance with human-centered design and disability justice principles
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/90 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-400">
+                    <Calendar className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Flexible Engagement</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      From one-time speaking engagements to ongoing consulting partnerships, we adapt to your needs
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/90 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-600 to-purple-400">
+                    <Sparkles className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Measurable Impact</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Data-driven strategies that deliver real results in compliance, accessibility, and organizational
+                      transformation
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Quick Links */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-balance">What Can We Help You With?</h2>
@@ -148,7 +228,7 @@ export default function ContactPage() {
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   TEDx talks, keynotes, and corporate workshops
                 </p>
-                <a href="/dr-dede#speaking" className="text-sm font-medium text-cyan-600 hover:text-cyan-700">
+                <a href="/dr-dede/speaking" className="text-sm font-medium text-cyan-600 hover:text-cyan-700">
                   Book Speaking →
                 </a>
               </CardContent>
@@ -156,13 +236,13 @@ export default function ContactPage() {
 
             <Card className="bg-white/90 backdrop-blur-sm hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-lg">Luxury Retreats</CardTitle>
+                <CardTitle className="text-lg">Retreats & Wellness</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   Transformative wellness and leadership development
                 </p>
-                <a href="/dr-dede" className="text-sm font-medium text-purple-600 hover:text-purple-700">
+                <a href="/dr-dede/retreats" className="text-sm font-medium text-purple-600 hover:text-purple-700">
                   Explore Retreats →
                 </a>
               </CardContent>

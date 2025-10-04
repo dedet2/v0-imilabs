@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: "Dr. Dédé Tetsubayashi | AI Governance Expert & TEDx Speaker",
   description:
-    "Meet Dr. Dédé Tetsubayashi - AI Governance Expert, Disability Advocate, and TEDx Speaker. PhD in Technology Policy, 20+ years transforming tech equity.",
+    "Meet Dr. Dédé Tetsubayashi - AI Governance Expert, Disability Advocate, and TEDx Speaker. PhD in Technology Policy, 25+ years transforming tech equity.",
   openGraph: {
     title: "Dr. Dédé Tetsubayashi | AI Governance Expert & TEDx Speaker",
     description: "AI Governance Expert, Disability Advocate, and TEDx Speaker",
@@ -559,7 +559,7 @@ export default function DrDedePage() {
                   <div>
                     <h3 className="font-semibold mb-1">Fortune 100 Experience</h3>
                     <p className="text-sm text-muted-foreground">
-                      20+ years advising leading tech companies and startups
+                      25+ years advising leading tech companies and startups
                     </p>
                   </div>
                 </div>
@@ -619,24 +619,6 @@ export default function DrDedePage() {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className="mb-6 flex justify-center">
-                <Button asChild size="lg" className="bg-red-600 hover:bg-red-700">
-                  <a href="https://www.youtube.com/watch?v=mSQuZG_DHVY" target="_blank" rel="noopener noreferrer">
-                    <Play className="mr-2 h-4 w-4" />
-                    Watch TEDx Talk
-                  </a>
-                </Button>
-              </div>
-
-              <div className="mb-6 flex justify-center">
-                <Button asChild size="lg" className="bg-red-600 hover:bg-red-700">
-                  <a href="https://www.youtube.com/watch?v=mSQuZG_DHVY" target="_blank" rel="noopener noreferrer">
-                    <Play className="mr-2 h-4 w-4" />
-                    Watch TEDx Talk
-                  </a>
-                </Button>
               </div>
 
               <div className="mb-8">

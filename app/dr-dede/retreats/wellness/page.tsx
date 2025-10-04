@@ -16,26 +16,31 @@ export default function WellnessRetreatsPage() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <div className="max-w-5xl mx-auto">
-          <Badge className="mb-4 bg-cyan-100 text-cyan-700 border-cyan-200" variant="outline">
-            Holistic Wellness & Rejuvenation
-          </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">Luxury Wellness Retreats</h1>
-          <p className="text-xl text-muted-foreground mb-8 text-pretty leading-relaxed max-w-3xl">
-            Transformative wellness experiences that honor your whole self—mind, body, and spirit—in luxury settings
-            designed for complete accessibility and comfort.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:opacity-90">
-              <Link href="/contact">
-                Book Your Retreat
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="#offerings">Explore Offerings</Link>
-            </Button>
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.15),transparent_60%)]" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <Badge className="mb-4 bg-white/20 text-white border-white/30 backdrop-blur-sm" variant="outline">
+              Holistic Wellness & Rejuvenation
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance text-white drop-shadow-lg">
+              Luxury Wellness Retreats
+            </h1>
+            <p className="text-xl text-white/95 mb-8 text-pretty leading-relaxed max-w-3xl drop-shadow">
+              Transformative wellness experiences that honor your whole self—mind, body, and spirit—in luxury settings
+              designed for complete accessibility and comfort.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:opacity-90">
+                <Link href="/contact">
+                  Book Your Retreat
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link href="#offerings">Explore Offerings</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -72,30 +77,38 @@ export default function WellnessRetreatsPage() {
       {/* Featured Retreat */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-5xl mx-auto">
-          <Card className="bg-gradient-to-br from-purple-600 to-cyan-600 text-white border-0">
-            <CardContent className="p-8 md:p-12">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="flex-1">
-                  <Badge className="mb-4 bg-white/20 text-white border-white/30" variant="outline">
+          <Card className="bg-gradient-to-br from-purple-600 to-cyan-600 text-white border-0 overflow-hidden">
+            <CardContent className="p-0">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <Badge className="mb-4 bg-white/20 text-white border-white/30 w-fit" variant="outline">
                     Featured Retreat
                   </Badge>
                   <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Rest as Resistance</h2>
-                  <p className="text-lg mb-6 opacity-90 leading-relaxed">
-                    A transformative wellness experience that reframes rest as a radical act of self-care and social
-                    justice. Join us for a journey that honors your need for restoration while challenging systems that
-                    demand constant productivity.
+                  <p className="text-lg mb-4 opacity-90 leading-relaxed">
+                    A luxury healing experience in Japan for women executives reclaiming rest as a right. December 8-18,
+                    2025 in Tokyo, Kamakura, Beppu, and Miyajima.
                   </p>
-                  <Button asChild size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100">
-                    <a href="https://restasresistance.manus.space/" rel="noopener noreferrer">
+                  <p className="text-base mb-6 opacity-90 leading-relaxed">
+                    Bask in slow mornings, onsen rituals, forest bathing, and ryokan care—mindfully crafted for deep
+                    restoration, community, and liberation.
+                  </p>
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="secondary"
+                    className="bg-white text-purple-600 hover:bg-gray-100 w-fit"
+                  >
+                    <a href="https://rar.dr-dede.com" target="_blank" rel="noopener noreferrer">
                       Learn More About Rest as Resistance
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </Button>
                 </div>
-                <div className="relative w-full md:w-64 h-64 rounded-lg overflow-hidden shadow-2xl flex-shrink-0">
+                <div className="relative h-64 md:h-auto min-h-[400px]">
                   <Image
-                    src="/serene-wellness-retreat-with-accessible-spa-facilities.jpg"
-                    alt="Rest as Resistance Retreat"
+                    src="/japanese-mountains-with-fall-foliage-and-tradition.jpg"
+                    alt="Rest as Resistance Retreat in Japan"
                     fill
                     className="object-cover"
                   />
@@ -103,19 +116,73 @@ export default function WellnessRetreatsPage() {
               </div>
             </CardContent>
           </Card>
+
+          {/* Japanese retreat imagery grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <Image src="/japanese-hot-spring-onsen-with-mountain-views-at-s.jpg" alt="Japanese Hot Springs" fill className="object-cover" />
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <Image src="/traditional-japanese-ryokan-with-tatami-rooms-and-.jpg" alt="Traditional Ryokan" fill className="object-cover" />
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <Image src="/japanese-temple-surrounded-by-red-and-orange-fall-.jpg" alt="Temple in Fall Colors" fill className="object-cover" />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Offerings */}
       <section id="offerings" className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-balance">Retreat Offerings</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-balance">Retreat Offerings</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+            From intimate Japanese wellness journeys to personalized luxury experiences, our retreats are designed to
+            restore, rejuvenate, and transform.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Japanese Retreat offering */}
             <Card className="bg-white/90 backdrop-blur-sm">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-cyan-100 flex items-center justify-center mb-4">
-                  <Heart className="h-6 w-6 text-cyan-600" />
+                <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-purple-600 to-cyan-400 flex items-center justify-center mb-4">
+                  <Mountain className="h-6 w-6 text-white" />
+                </div>
+                <CardTitle>Rest as Resistance — Japan 2025</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  A 10-day luxury healing experience in Japan for women executives. Experience Tokyo, Kamakura, Beppu
+                  hot springs, and Miyajima's sacred island.
+                </p>
+                <ul className="space-y-2 text-sm mb-4">
+                  <li className="flex items-start gap-2">
+                    <Sun className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <span>Private onsen rituals & forest bathing</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Moon className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <span>Traditional ryokan accommodations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Sparkles className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <span>Slow mornings & intentional rest practices</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Heart className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <span>Limited to 8-10 guests for intimate care</span>
+                  </li>
+                </ul>
+                <Badge variant="secondary" className="text-xs">
+                  December 8-18, 2025
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/90 backdrop-blur-sm">
+              <CardHeader>
+                <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center mb-4">
+                  <Heart className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle>Mindfulness & Meditation</CardTitle>
               </CardHeader>
@@ -143,8 +210,8 @@ export default function WellnessRetreatsPage() {
 
             <Card className="bg-white/90 backdrop-blur-sm">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
-                  <Waves className="h-6 w-6 text-purple-600" />
+                <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4">
+                  <Waves className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle>Adaptive Movement & Yoga</CardTitle>
               </CardHeader>
@@ -172,8 +239,8 @@ export default function WellnessRetreatsPage() {
 
             <Card className="bg-white/90 backdrop-blur-sm">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-cyan-100 flex items-center justify-center mb-4">
-                  <Sparkles className="h-6 w-6 text-cyan-600" />
+                <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center mb-4">
+                  <Sparkles className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle>Spa & Bodywork</CardTitle>
               </CardHeader>
@@ -201,8 +268,8 @@ export default function WellnessRetreatsPage() {
 
             <Card className="bg-white/90 backdrop-blur-sm">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
-                  <Mountain className="h-6 w-6 text-purple-600" />
+                <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-purple-600 to-cyan-400 flex items-center justify-center mb-4">
+                  <Mountain className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle>Nutrition & Nourishment</CardTitle>
               </CardHeader>
@@ -250,7 +317,7 @@ export default function WellnessRetreatsPage() {
                       <span>Private suites with roll-in showers and adjustable features</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <div className="h-5 w-5 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0 mt-0-5">
+                      <div className="h-5 w-5 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                         ✓
                       </div>
                       <span>Sensory-friendly quiet spaces</span>
