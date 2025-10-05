@@ -353,7 +353,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="h-full flex flex-col bg-white/90 backdrop-blur-xl border-purple-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 group relative overflow-hidden">
+              <Card className="min-h-[420px] flex flex-col bg-white/90 backdrop-blur-xl border-purple-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 group relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-50/80 via-transparent to-fuchsia-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="space-y-6 relative z-10">
                   <div className="flex items-center gap-5 mb-3">
@@ -386,7 +386,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="h-full flex flex-col bg-white/90 backdrop-blur-xl border-cyan-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 animation-delay-100 group relative overflow-hidden">
+              <Card className="min-h-[420px] flex flex-col bg-white/90 backdrop-blur-xl border-cyan-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 animation-delay-100 group relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/80 via-transparent to-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="space-y-6 relative z-10">
                   <div className="flex items-center gap-5 mb-3">
@@ -419,7 +419,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="h-full flex flex-col bg-white/90 backdrop-blur-xl border-purple-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 animation-delay-200 group relative overflow-hidden">
+              <Card className="min-h-[420px] flex flex-col bg-white/90 backdrop-blur-xl border-purple-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 animation-delay-200 group relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-50/80 via-transparent to-fuchsia-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="space-y-6 relative z-10">
                   <div className="flex items-center gap-5 mb-3">
@@ -452,7 +452,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="h-full flex flex-col bg-white/90 backdrop-blur-xl border-cyan-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 animation-delay-300 group relative overflow-hidden md:col-span-2">
+              <Card className="min-h-[420px] flex flex-col bg-white/90 backdrop-blur-xl border-cyan-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 animation-delay-300 group relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/80 via-transparent to-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="space-y-6 relative z-10">
                   <div className="flex items-center gap-5 mb-3">
@@ -485,7 +485,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="h-full flex flex-col bg-white/90 backdrop-blur-xl border-purple-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 animation-delay-400 group relative overflow-hidden md:col-span-2">
+              <Card className="min-h-[420px] flex flex-col bg-white/90 backdrop-blur-xl border-purple-200/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 fade-in-section opacity-0 animation-delay-400 group relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-50/80 via-transparent to-fuchsia-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="space-y-6 relative z-10">
                   <div className="flex items-center gap-5 mb-3">
