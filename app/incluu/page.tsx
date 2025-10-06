@@ -36,7 +36,7 @@ export default function IncluuPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm backdrop-blur-sm" variant="outline">
+            <Badge className="mb-6 bg-white/20 text-white border-white/30 text-base backdrop-blur-sm" variant="outline">
               Black-Woman-Owned • Tech Equity Pioneer
             </Badge>
             <div className="inline-flex items-center gap-2 mb-6">
@@ -408,7 +408,7 @@ export default function IncluuPage() {
                     few, has inspired thousands to rethink technology's role in society.
                   </p>
                   <Button asChild variant="outline">
-                    <Link href="/dr-dede#hero">View Full Bio & Credentials</Link>
+                    <Link href="/dr-dede">View Full Bio & Credentials</Link>
                   </Button>
                 </div>
               </div>
