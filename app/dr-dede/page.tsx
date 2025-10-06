@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: "Dr. Dédé Tetsubayashi | AI Governance Expert & TEDx Speaker",
   description:
-    "Meet Dr. Dédé Tetsubayashi - AI Governance Expert, Disability Advocate, and TEDx Speaker. PhD in Technology Policy, 25+ years transforming tech equity.",
+    "Meet Dr. Dédé Tetsubayashi - AI Governance Expert, Disability Advocate, and TEDx Speaker. 25+ years transforming tech equity.",
   openGraph: {
     title: "Dr. Dédé Tetsubayashi | AI Governance Expert & TEDx Speaker",
     description: "AI Governance Expert, Disability Advocate, and TEDx Speaker",
@@ -33,8 +33,9 @@ export const metadata: Metadata = {
 export default function DrDedePage() {
   return (
     <div className="relative">
+      <div id="top" className="absolute top-0 left-0 w-full h-0" />
       {/* Hero Section - Based on external site design */}
-      <section id="hero" className="min-h-[90vh] relative overflow-hidden scroll-mt-16">
+      <section className="min-h-[90vh] relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -518,7 +519,7 @@ export default function DrDedePage() {
                     <GraduationCap className="h-5 w-5 text-purple-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">PhD, Technology Policy</h3>
+                    <h3 className="font-semibold mb-1">Cornell University</h3>
                     <p className="text-sm text-muted-foreground">
                       Specialized in AI governance and digital equity frameworks
                     </p>
@@ -670,10 +671,29 @@ export default function DrDedePage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Left Column: Help me reach 10,000 Subscribers */}
+                {/* Left Column: Why It Matters */}
+                <div className="bg-gradient-to-br from-cyan-50 to-purple-50 rounded-lg p-6 border border-cyan-200">
+                  <h4 className="text-lg font-bold mb-3 text-center">Why It Matters</h4>
+                  <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                    <p>
+                      When we center the margins, we unlock a greater future for all. Dr. Dédé's mission is to make
+                      ethical, socially responsive tech the NEW standard—not the exception.
+                    </p>
+                    <p>
+                      This talk is a rallying cry to disrupt the harmful defaults in design in lieu of tech that has
+                      been built with intention, accountability, and care.
+                    </p>
+                    <p>
+                      AI systems are being deployed at unprecedented scale, yet many organizations lack the governance
+                      frameworks needed to ensure compliance, equity, and ethical deployment.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Column: Subscribe */}
                 <div className="bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 text-white rounded-lg p-6 shadow-xl">
                   <Heart className="h-10 w-10 mx-auto mb-3 opacity-90" />
-                  <h4 className="text-lg font-bold mb-3 text-center">Help me reach 10,000 Subscribers!</h4>
+                  <h4 className="text-lg font-bold mb-3 text-center">Join the Movement</h4>
                   <div className="space-y-2 text-sm mb-4">
                     <div className="flex items-start gap-2">
                       <span className="font-bold">✅ SUBSCRIBE</span>
@@ -693,8 +713,7 @@ export default function DrDedePage() {
                     </div>
                   </div>
                   <p className="text-sm mb-4 opacity-90">
-                    Let's hit 10K together and send a message: Ethical, socially responsive tech isn't optional, it's
-                    essential!
+                    Let's send a message: Ethical, socially responsive tech isn't optional, it's essential!
                   </p>
                   <Button
                     asChild
@@ -706,25 +725,6 @@ export default function DrDedePage() {
                       Subscribe on YouTube
                     </a>
                   </Button>
-                </div>
-
-                {/* Right Column: Why It Matters */}
-                <div className="bg-gradient-to-br from-cyan-50 to-purple-50 rounded-lg p-6 border border-cyan-200">
-                  <h4 className="text-lg font-bold mb-3 text-center">Why It Matters</h4>
-                  <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-                    <p>
-                      When we center the margins, we unlock a greater future for all. Dr. Dédé's mission is to make
-                      ethical, socially responsive tech the NEW standard—not the exception.
-                    </p>
-                    <p>
-                      This talk is a rallying cry to disrupt the harmful defaults in design in lieu of tech that has
-                      been built with intention, accountability, and care.
-                    </p>
-                    <p>
-                      AI systems are being deployed at unprecedented scale, yet many organizations lack the governance
-                      frameworks needed to ensure compliance, equity, and ethical deployment.
-                    </p>
-                  </div>
                 </div>
               </div>
             </CardContent>

@@ -15,8 +15,11 @@ import {
   Globe,
   Users,
   TrendingUp,
+  Download, // Import Download icon
 } from "@/components/icons"
 import Image from "next/image"
+import { SamplePDFPreview } from "@/components/sample-pdf-preview"
+import { ResourceGateModal } from "@/components/resource-gate-modal"
 
 export const metadata: Metadata = {
   title: "incluu | Expert AI Governance & Tech Equity Solutions",
@@ -36,14 +39,20 @@ export default function IncluuPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 text-2xl backdrop-blur-sm" variant="outline">
-              Black-Woman-Owned • Tech Equity Pioneer
-            </Badge>
-            <div className="inline-flex items-center gap-2 mb-6">
-              <div className="relative h-10 w-10 rounded-lg overflow-hidden">
-                <Image src="/incluu-logo.png" alt="incluu logo" fill className="object-contain" />
+            <div className="inline-flex flex-col items-center gap-4 mb-6">
+              <div className="flex items-center gap-2">
+                <div className="relative h-10 w-10 rounded-lg overflow-hidden">
+                  <Image src="/incluu-logo.png" alt="incluu logo" fill className="object-contain" />
+                </div>
+                <span className="text-2xl font-bold text-white drop-shadow-lg">incluu</span>
               </div>
-              <span className="text-2xl font-bold text-white drop-shadow-lg">incluu</span>
+              <Badge
+                className="bg-gradient-to-r from-[#8B5CF6] via-[#6366F1] to-[#06B6D4] text-white border-0 text-4xl px-6 py-3 shadow-lg"
+                variant="outline"
+              >
+                Black-Woman-Owned • Tech Equity Pioneer
+              </Badge>
+              {/* </CHANGE> */}
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance text-white drop-shadow-lg">
               Expert AI Governance &<br />
@@ -373,11 +382,12 @@ export default function IncluuPage() {
 
           <Card className="bg-white/90 backdrop-blur-sm">
             <CardContent className="p-8 md:p-12">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="flex flex-col md:flex-row gap-8">
                 <div className="relative w-64 h-80 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
                   <Image src="/dr-dede-incluu-headshot.jpg" alt="Dr. Dédé Tetsubayashi" fill className="object-cover" />
                 </div>
-                <div className="flex-1 text-center md:text-left">
+                {/* </CHANGE> */}
+                <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2">Dr. Dédé Tetsubayashi</h3>
                   <p className="text-lg text-purple-600 font-semibold mb-4">
                     AI Governance Expert • Digital Equity Pioneer • Tech Ethics Thought Leader
@@ -412,65 +422,65 @@ export default function IncluuPage() {
                   </Button>
                 </div>
               </div>
-
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 pt-8 border-t">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
-                    <Award className="h-5 w-5 text-purple-600" />
-                  </div>
-                  <div className="text-sm">
-                    <div className="font-semibold">Cornell University</div>
-                    <div className="text-xs text-muted-foreground">Academic Excellence</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0">
-                    <Globe className="h-5 w-5 text-cyan-600" />
-                  </div>
-                  <div className="text-sm">
-                    <div className="font-semibold">Global Expertise</div>
-                    <div className="text-xs text-muted-foreground">Fortune 500 Experience</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
-                    <Users className="h-5 w-5 text-purple-600" />
-                  </div>
-                  <div className="text-sm">
-                    <div className="font-semibold">Industry Recognition</div>
-                    <div className="text-xs text-muted-foreground">Proven Results</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-5 w-5 text-cyan-600" />
-                  </div>
-                  <div className="text-sm">
-                    <div className="font-semibold">Certified Ethics Practitioner</div>
-                    <div className="text-xs text-muted-foreground">Professional Standards</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="h-5 w-5 text-purple-600" />
-                  </div>
-                  <div className="text-sm">
-                    <div className="font-semibold">Featured DEI Expert</div>
-                    <div className="text-xs text-muted-foreground">MIT Tech Review</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0">
-                    <Building2 className="h-5 w-5 text-cyan-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Board Advisor</div>
-                    <div className="text-xs text-muted-foreground">Multiple Organizations</div>
-                  </div>
-                </div>
-              </div>
             </CardContent>
           </Card>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 pt-8 border-t">
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                <Award className="h-5 w-5 text-purple-600" />
+              </div>
+              <div className="text-sm">
+                <div className="font-semibold">Cornell University</div>
+                <div className="text-xs text-muted-foreground">Academic Excellence</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0">
+                <Globe className="h-5 w-5 text-cyan-600" />
+              </div>
+              <div className="text-sm">
+                <div className="font-semibold">Global Expertise</div>
+                <div className="text-xs text-muted-foreground">Fortune 500 Experience</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                <Users className="h-5 w-5 text-purple-600" />
+              </div>
+              <div className="text-sm">
+                <div className="font-semibold">Industry Recognition</div>
+                <div className="text-xs text-muted-foreground">Proven Results</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0">
+                <Shield className="h-5 w-5 text-cyan-600" />
+              </div>
+              <div className="text-sm">
+                <div className="font-semibold">Certified Ethics Practitioner</div>
+                <div className="text-xs text-muted-foreground">Professional Standards</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                <TrendingUp className="h-5 w-5 text-purple-600" />
+              </div>
+              <div className="text-sm">
+                <div className="font-semibold">Featured DEI Expert</div>
+                <div className="text-xs text-muted-foreground">MIT Tech Review</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0">
+                <Building2 className="h-5 w-5 text-cyan-600" />
+              </div>
+              <div>
+                <div className="font-semibold">Board Advisor</div>
+                <div className="text-xs text-muted-foreground">Multiple Organizations</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -841,6 +851,111 @@ export default function IncluuPage() {
           </div>
         </div>
       </section>
+
+      {/* Featured Resources */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-br from-purple-100 via-cyan-100 to-purple-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200" variant="outline">
+              Free Resources
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Expert Insights & Implementation Tools</h2>
+            <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
+              Access professionally crafted resources to accelerate your AI governance and tech equity initiatives
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {/* Resource 1 - Whitepaper */}
+            <div>
+              <SamplePDFPreview
+                title="The Business Case for AI Governance: A Strategic Framework for Enterprise Leaders"
+                type="whitepaper"
+              />
+              <div className="text-center mt-6">
+                <ResourceGateModal
+                  resourceTitle="The Business Case for AI Governance"
+                  resourceType="whitepaper"
+                  resourceDescription="Download this comprehensive 25-page whitepaper exploring how strategic AI governance drives measurable ROI, reduces regulatory risk, and unlocks new market opportunities."
+                >
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800"
+                  >
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Free Whitepaper
+                  </Button>
+                </ResourceGateModal>
+              </div>
+            </div>
+
+            {/* Resource 2 - Tool */}
+            <div>
+              <SamplePDFPreview
+                title="AI Bias Detection Checklist: A Practical Implementation Guide for Product Teams"
+                type="tool"
+              />
+              <div className="text-center mt-6">
+                <ResourceGateModal
+                  resourceTitle="AI Bias Detection Checklist"
+                  resourceType="tool"
+                  resourceDescription="Get this actionable 15-page checklist with step-by-step frameworks for identifying and mitigating algorithmic bias in your AI systems."
+                >
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800"
+                  >
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Free Tool
+                  </Button>
+                </ResourceGateModal>
+              </div>
+            </div>
+
+            {/* Resource 3 - Report */}
+            <div>
+              <SamplePDFPreview
+                title="2025 Tech Equity Trends Report: Market Insights & Strategic Opportunities"
+                type="report"
+              />
+              <div className="text-center mt-6">
+                <ResourceGateModal
+                  resourceTitle="2025 Tech Equity Trends Report"
+                  resourceType="report"
+                  resourceDescription="Access this exclusive 30-page industry report featuring data-driven insights, market analysis, and strategic recommendations for tech equity leaders."
+                >
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-purple-600 via-purple-500 to-cyan-600 hover:from-purple-700 hover:via-purple-600 hover:to-cyan-700"
+                  >
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Free Report
+                  </Button>
+                </ResourceGateModal>
+              </div>
+            </div>
+          </div>
+
+          <Card className="mt-16 bg-white border-purple-200">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold mb-4">Want More Resources?</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Join our newsletter to receive exclusive insights, case studies, and implementation frameworks delivered
+                monthly.
+              </p>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent"
+              >
+                <Link href="/contact">Subscribe to Newsletter</Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      {/* </CHANGE> */}
 
       {/* CTA */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">

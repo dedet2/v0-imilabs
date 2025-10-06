@@ -1,30 +1,45 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { CheckCircle2 } from "@/components/icons"
+import { CheckCircle2, FileText, Download } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 
 interface ResourceGateModalProps {
-  isOpen: boolean
-  onClose: () => void
   resourceTitle: string
-  resourceType: "whitepaper" | "case-study" | "report" | "tool" | "media" | "program"
+  resourceType:
+    | "whitepaper"
+    | "case-study"
+    | "report"
+    | "tool"
+    | "media"
+    | "program"
+    | "template"
+    | "guide"
+    | "training"
   resourceDescription?: string
+  children: React.ReactNode
 }
 
 export function ResourceGateModal({
-  isOpen,
-  onClose,
   resourceTitle,
   resourceType,
   resourceDescription,
+  children,
 }: ResourceGateModalProps) {
+  const [isOpen, setIsOpen] = useState(false)
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -39,7 +54,6 @@ export function ResourceGateModal({
     e.preventDefault()
 
     // TODO: Integrate with CRM/email service
-    // For now, just simulate submission
     console.log("Form submitted:", { ...formData, resourceTitle, resourceType })
 
     setIsSubmitted(true)
@@ -47,7 +61,7 @@ export function ResourceGateModal({
     // Reset after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false)
-      onClose()
+      setIsOpen(false)
       setFormData({
         firstName: "",
         lastName: "",
@@ -67,8 +81,9 @@ export function ResourceGateModal({
   }
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[500px]">
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogTrigger asChild>{children}</DialogTrigger>
+      <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
         {!isSubmitted ? (
           <>
             <DialogHeader>
@@ -80,6 +95,38 @@ export function ResourceGateModal({
                   `Fill out the form below to access this ${resourceType.replace("-", " ")} and join our newsletter for exclusive insights on AI governance and tech equity.`}
               </DialogDescription>
             </DialogHeader>
+
+            <Card className="bg-gradient-to-br from-purple-50 to-cyan-50 border-purple-200">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="h-16 w-16 rounded-lg bg-gradient-to-br from-purple-600 to-cyan-600 flex items-center justify-center flex-shrink-0">
+                    <FileText className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold mb-2">What You'll Receive:</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li className="flex items-start gap-2">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 text-purple-600" />
+                        <span>Professionally formatted PDF delivered to your inbox</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 text-purple-600" />
+                        <span>Actionable frameworks and implementation guides</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 text-purple-600" />
+                        <span>Exclusive insights from 25+ years of expertise</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 text-purple-600" />
+                        <span>Monthly newsletter with latest trends and updates</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            {/* </CHANGE> */}
 
             <form onSubmit={handleSubmit} className="space-y-4 mt-4">
               <div className="grid grid-cols-2 gap-4">
@@ -157,7 +204,12 @@ export function ResourceGateModal({
               </div>
 
               <div className="flex gap-3 pt-4">
-                <Button type="button" variant="outline" onClick={onClose} className="flex-1 bg-transparent">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setIsOpen(false)}
+                  className="flex-1 bg-transparent"
+                >
                   Cancel
                 </Button>
                 <Button
@@ -179,9 +231,25 @@ export function ResourceGateModal({
               <CheckCircle2 className="h-8 w-8 text-white" />
             </div>
             <DialogTitle className="text-2xl mb-2">Thank You!</DialogTitle>
-            <DialogDescription className="text-base">
-              Check your email for access to {resourceTitle}. We've also added you to our newsletter.
+            <DialogDescription className="text-base mb-4">
+              Check your email for access to <strong>{resourceTitle}</strong>.
             </DialogDescription>
+            <Card className="bg-gradient-to-br from-purple-50 to-cyan-50 border-purple-200 max-w-md mx-auto">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-purple-600 to-cyan-600 flex items-center justify-center flex-shrink-0">
+                    <FileText className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <div className="font-semibold text-sm">PDF Sent to:</div>
+                    <div className="text-sm text-muted-foreground">{formData.email}</div>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground text-left">
+                  You've also been added to our newsletter for exclusive insights on AI governance and tech equity.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         )}
       </DialogContent>
