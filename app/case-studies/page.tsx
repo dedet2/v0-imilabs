@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowRight, TrendingUp, Shield, Users } from "lucide-react"
+import { ResourceGateModal } from "@/components/resource-gate-modal"
 
 export const metadata: Metadata = {
   title: "Case Studies | incluu - Real-World AI Governance Impact",
@@ -14,7 +15,7 @@ export default function CaseStudiesPage() {
   return (
     <main className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-32 bg-gradient-to-br from-purple-600/95 via-purple-400/90 to-cyan-400/95">
+      <section className="relative py-20 sm:py-32 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold mb-6">
@@ -117,10 +118,16 @@ export default function CaseStudiesPage() {
                         <div className="text-sm text-foreground/70">Approval Speed</div>
                       </div>
                     </div>
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                      View Full Analysis
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <ResourceGateModal
+                      resourceTitle="Fortune 500 AI Governance Transformation - Full Analysis"
+                      resourceType="case-study"
+                      resourceDescription="Complete case study with implementation details, ROI analysis, and lessons learned"
+                    >
+                      <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                        View Full Analysis
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </ResourceGateModal>
                   </div>
                 </div>
               </Card>
@@ -148,10 +155,16 @@ export default function CaseStudiesPage() {
                           <div className="text-sm text-foreground/70">Diagnostic Accuracy</div>
                         </div>
                       </div>
-                      <Button className="w-full bg-cyan-600 hover:bg-cyan-700">
-                        View Full Analysis
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <ResourceGateModal
+                        resourceTitle="Healthcare AI Accessibility - Full Analysis"
+                        resourceType="case-study"
+                        resourceDescription="Detailed case study with accessibility improvements and market expansion results"
+                      >
+                        <Button className="w-full bg-cyan-600 hover:bg-cyan-700">
+                          View Full Analysis
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </ResourceGateModal>
                     </div>
                   </div>
                   <div className="relative aspect-video lg:aspect-auto order-1 lg:order-2">
@@ -215,10 +228,16 @@ export default function CaseStudiesPage() {
                         <div className="text-sm text-foreground/70">Development Speed</div>
                       </div>
                     </div>
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                      View Full Analysis
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <ResourceGateModal
+                      resourceTitle="Startup AI Ethics Framework - Full Analysis"
+                      resourceType="case-study"
+                      resourceDescription="Complete case study showing how ethical AI practices secured Series B funding"
+                    >
+                      <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                        View Full Analysis
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </ResourceGateModal>
                   </div>
                 </div>
               </Card>
@@ -577,7 +596,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-500 shadow-2xl">
+      <section className="py-20 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4] shadow-2xl">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 drop-shadow-lg">

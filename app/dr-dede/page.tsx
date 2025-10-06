@@ -34,54 +34,58 @@ export default function DrDedePage() {
   return (
     <div className="relative">
       {/* Hero Section - Based on external site design */}
-      <section className="min-h-[90vh] relative overflow-hidden">
+      <section id="hero" className="min-h-[90vh] relative overflow-hidden scroll-mt-16">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/professional-portrait-of-dr--d-d--tetsubayashi--ai.jpg"
+            src="/DrDedeSept2024_LaanclaCreative-95.jpg"
             alt=""
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/70 via-purple-500/70 to-cyan-400/70"></div>
         </div>
 
         {/* Content */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Column - Text Content */}
-              <div>
-                <h1 className="text-5xl md:text-7xl font-bold mb-4 text-balance leading-tight text-white drop-shadow-lg">
-                  Transforming AI Through
-                  <br />
-                  <span className="bg-gradient-to-r from-cyan-300 to-cyan-100 bg-clip-text text-transparent">
-                    Equitable Innovation
-                  </span>
-                </h1>
-                <p className="text-xl text-white mb-6 text-pretty leading-relaxed max-w-xl drop-shadow">
-                  Watch my TEDx talk on managing artificial intelligence systems to serve everyone, not just the
-                  privileged few.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white shadow-xl">
-                    <a href="https://www.youtube.com/watch?v=mSQuZG_DHVY" target="_blank" rel="noopener noreferrer">
-                      <Play className="mr-2 h-4 w-4" />
-                      Watch TEDx Talk
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white/20 bg-white/10 backdrop-blur-sm shadow-xl"
-                  >
-                    <Link href="/contact">Book a Session</Link>
-                  </Button>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Left Column - Empty/Spacer */}
+              <div></div>
 
-              {/* Right Column - Video and Subscriber Progress */}
-              <div className="space-y-6">
+              {/* Right Column - Text Content and Video */}
+              <div className="space-y-8">
+                {/* Text Content */}
+                <div>
+                  <h1 className="text-5xl md:text-7xl font-bold mb-4 text-balance leading-tight text-white drop-shadow-lg">
+                    Transforming AI Through
+                    <br />
+                    <span className="bg-gradient-to-r from-cyan-300 to-cyan-100 bg-clip-text text-transparent">
+                      Equitable Innovation
+                    </span>
+                  </h1>
+                  <p className="text-xl text-white mb-6 text-pretty leading-relaxed drop-shadow">
+                    Watch my TEDx talk on managing artificial intelligence systems to serve everyone, not just the
+                    privileged few.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white shadow-xl">
+                      <a href="https://www.youtube.com/watch?v=mSQuZG_DHVY" target="_blank" rel="noopener noreferrer">
+                        <Play className="mr-2 h-4 w-4" />
+                        Watch TEDx Talk
+                      </a>
+                    </Button>
+                    <Button
+                      asChild
+                      size="lg"
+                      variant="outline"
+                      className="border-white text-white hover:bg-white/20 bg-white/10 backdrop-blur-sm shadow-xl"
+                    >
+                      <Link href="/contact">Book a Session</Link>
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Video Embed */}
                 <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
                   <a
                     href="https://www.youtube.com/watch?v=mSQuZG_DHVY"
@@ -100,23 +104,6 @@ export default function DrDedePage() {
                       </div>
                     </div>
                   </a>
-                </div>
-
-                {/* Subscriber Progress */}
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm font-medium text-gray-600">Progress to 10K subscribers</span>
-                    <span className="text-2xl font-bold text-cyan-600">24</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
-                    <div className="bg-cyan-500 h-2 rounded-full" style={{ width: "0.24%" }}></div>
-                  </div>
-                  <p className="text-xs text-gray-500 mb-4">24 views published</p>
-                  <Button asChild className="w-full bg-cyan-500 hover:bg-cyan-600 text-white">
-                    <a href="https://www.youtube.com/@the_drdede" target="_blank" rel="noopener noreferrer">
-                      SUBSCRIBE ON YOUTUBE
-                    </a>
-                  </Button>
                 </div>
               </div>
             </div>
@@ -406,14 +393,20 @@ export default function DrDedePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  As a PhD in Technology Policy and over 20 years of hands-on experience, Dr. Tetsubayashi has
-                  transformed how Fortune 100 enterprises and startups alike approach tech equity and ethical technology
-                  implementations.
+                  Dr. Dédé Tetsubayashi (she/they) is a Cornell University educated social scientist and technologist
+                  with over 25 years of experience promoting equitable outcomes at the intersection of ethical
+                  technology and social justice across the U.S., APAC, and African markets.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  As a disability advocate, Dr. Tetsubayashi brings a unique combination of academic rigor, industry
+                  experience, and lived perspective to every engagement. She has partnered with organizations ranging
+                  from start-ups to Fortune 100 companies, all with the shared goal of fostering a more equitable tech
+                  landscape.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  She has saved companies $200M+ in regulatory cost avoidance and unlocked $500M+ in new market
-                  opportunities through strategic equity implementations. Her work spans healthcare, finance, education,
-                  retail, and emerging technology sectors.
+                  With over 25 years of hands-on experience, Dr. Tetsubayashi has delivered quantifiable business
+                  impact: $200+ million in regulatory cost savings and $500+ million in new market opportunities through
+                  strategic tech equity implementations.
                 </p>
               </CardContent>
             </Card>

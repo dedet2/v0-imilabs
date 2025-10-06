@@ -4,132 +4,107 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Base colors - Light theme with gradient-ready tokens */
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* Professional color system inspired by design references */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.09 0 0);
 
-  /* Card system */
+  /* Card system with subtle elevation */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.09 0 0);
 
   /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.09 0 0);
 
-  /* Primary - Cyan accent from incluu */
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  /* Primary - Deep professional blue */
+  --primary: oklch(0.35 0.15 280);
+  --primary-foreground: oklch(0.99 0 0);
 
-  /* Secondary - Purple from brand gradient */
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  /* Secondary - Sophisticated purple accent */
+  --secondary: oklch(0.96 0.01 280);
+  --secondary-foreground: oklch(0.35 0.15 280);
 
   /* Muted elements */
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --muted: oklch(0.96 0.005 250);
+  --muted-foreground: oklch(0.45 0.01 250);
 
-  /* Accent - Bright cyan for CTAs */
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Accent - Professional teal */
+  --accent: oklch(0.65 0.15 200);
+  --accent-foreground: oklch(0.09 0 0);
 
   /* Destructive */
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.99 0 0);
 
   /* Borders and inputs */
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: oklch(0.9 0.005 250);
+  --input: oklch(0.9 0.005 250);
+  --ring: oklch(0.35 0.15 280);
 
-  /* Brand-specific gradients */
-  --gradient-start: oklch(0.75 0 0);
-  --gradient-middle: oklch(0.8 0 0);
-  --gradient-end: oklch(0.85 0 0);
-
-  /* incluu brand tokens */
-  --incluu-primary: oklch(0.55 0 0);
-  --incluu-accent: oklch(0.7 0 0);
-  --incluu-bg: oklch(0.95 0 0);
-
-  /* Dr. Dédé brand tokens */
-  --drdede-primary: oklch(0.5 0 0);
-  --drdede-accent: oklch(0.65 0 0);
-  --drdede-bg: oklch(0.96 0 0);
+  /* Brand-specific tokens */
+  --brand-purple: oklch(0.45 0.15 280);
+  --brand-teal: oklch(0.55 0.12 200);
+  --brand-navy: oklch(0.2 0.05 250);
 
   /* Sidebar tokens */
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: oklch(0.99 0 0);
+  --sidebar-foreground: oklch(0.09 0 0);
+  --sidebar-primary: oklch(0.35 0.15 280);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.96 0.01 280);
+  --sidebar-accent-foreground: oklch(0.35 0.15 280);
+  --sidebar-border: oklch(0.9 0.005 250);
+  --sidebar-ring: oklch(0.35 0.15 280);
 
   /* Chart tokens */
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --chart-1: oklch(0.35 0.15 280);
+  --chart-2: oklch(0.65 0.15 200);
+  --chart-3: oklch(0.6 0.15 160);
+  --chart-4: oklch(0.5 0.18 300);
+  --chart-5: oklch(0.65 0.12 140);
 
-  --radius: 0.625rem;
+  --radius: 0.75rem;
   --font-geist-sans: "Geist Sans", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
+
+  /* Branded gradient colors */
+  --gradient-from: oklch(0.35 0.15 280); /* Deep violet */
+  --gradient-to: oklch(0.65 0.15 200); /* Bright cyan */
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
+  --background: oklch(0.09 0 0);
+  --foreground: oklch(0.99 0 0);
+  --card: oklch(0.12 0 0);
+  --card-foreground: oklch(0.99 0 0);
+  --popover: oklch(0.09 0 0);
+  --popover-foreground: oklch(0.99 0 0);
+  --primary: oklch(0.99 0 0);
+  --primary-foreground: oklch(0.09 0 0);
+  --secondary: oklch(0.2 0.01 280);
+  --secondary-foreground: oklch(0.99 0 0);
+  --muted: oklch(0.2 0.005 250);
+  --muted-foreground: oklch(0.65 0.01 250);
+  --accent: oklch(0.65 0.15 200);
+  --accent-foreground: oklch(0.09 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.2 0.005 250);
+  --input: oklch(0.2 0.005 250);
+  --ring: oklch(0.65 0.15 200);
 
   /* Sidebar tokens */
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
-
-  /* Chart tokens */
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-}
-
-.high-contrast {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0 0 0);
-  --primary: oklch(0 0 0);
-  --primary-foreground: oklch(1 0 0);
-  --border: oklch(0 0 0);
-  --input: oklch(0 0 0);
+  --sidebar: oklch(0.12 0 0);
+  --sidebar-foreground: oklch(0.99 0 0);
+  --sidebar-primary: oklch(0.65 0.15 200);
+  --sidebar-primary-foreground: oklch(0.09 0 0);
+  --sidebar-accent: oklch(0.2 0.01 280);
+  --sidebar-accent-foreground: oklch(0.99 0 0);
+  --sidebar-border: oklch(0.2 0.005 250);
+  --sidebar-ring: oklch(0.65 0.15 200);
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-background: var(--background);
@@ -175,15 +150,13 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
 
-  /* Added focus visible styles for keyboard navigation */
   *:focus-visible {
     @apply outline-2 outline-offset-2 outline-ring;
   }
 
-  /* Added reduced motion support */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -204,13 +177,11 @@
     text-wrap: pretty;
   }
 
-  /* Enhanced animations for modern, engaging interactions */
-
-  /* Fade in animations */
+  /* Subtle fade in animations */
   @keyframes fade-in-up {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
@@ -219,50 +190,14 @@
   }
 
   .animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out forwards;
-  }
-
-  /* Added floating animations for hero background elements */
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0) translateX(0);
-    }
-    33% {
-      transform: translateY(-20px) translateX(10px);
-    }
-    66% {
-      transform: translateY(10px) translateX(-10px);
-    }
-  }
-
-  .animate-float {
-    animation: float 8s ease-in-out infinite;
-  }
-
-  .animate-float-delayed {
-    animation: float 10s ease-in-out infinite;
-    animation-delay: 1s;
-  }
-
-  /* Slow pulse for gradient overlay */
-  @keyframes pulse-slow {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.8;
-    }
-  }
-
-  .animate-pulse-slow {
-    animation: pulse-slow 4s ease-in-out infinite;
+    animation: fade-in-up 0.6s ease-out forwards;
   }
 
   /* Scroll-triggered fade in */
   .fade-in-section {
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
 
   .fade-in-section.animate-in {
@@ -270,7 +205,7 @@
     transform: translateY(0) !important;
   }
 
-  /* Animation delays for staggered effects */
+  /* Animation delays */
   .animation-delay-100 {
     animation-delay: 0.1s;
   }
@@ -283,7 +218,11 @@
     animation-delay: 0.3s;
   }
 
-  /* Added screen reader only utility */
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  /* Screen reader only */
   .sr-only {
     position: absolute;
     width: 1px;

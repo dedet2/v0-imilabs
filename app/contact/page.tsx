@@ -18,99 +18,105 @@ export default function ContactPage() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200" variant="outline">
-            Let's Connect
-          </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">Get in Touch</h1>
-          <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-            Ready to transform your AI strategy or book a speaking engagement? Let's discuss how we can work together.
-          </p>
-        </div>
-
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Contact Information */}
-          <div className="lg:col-span-1 space-y-6">
-            <Card className="bg-white/90 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="text-lg">Contact Information</CardTitle>
-                <CardDescription>Multiple ways to reach us</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium text-sm">Email</p>
-                    <a
-                      href="mailto:contact@drdede.com"
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      contact@drdede.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-cyan-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium text-sm">Phone</p>
-                    <a
-                      href="tel:+1234567890"
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      +1 (234) 567-8900
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium text-sm">Location</p>
-                    <p className="text-sm text-muted-foreground">San Francisco Bay Area, CA</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Clock className="h-5 w-5 text-cyan-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium text-sm">Response Time</p>
-                    <p className="text-sm text-muted-foreground">Within 24-48 hours</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-purple-600 to-cyan-600 text-white border-0">
-              <CardContent className="p-6">
-                <Linkedin className="h-8 w-8 mb-3 opacity-90" />
-                <h3 className="font-semibold mb-2">Connect on LinkedIn</h3>
-                <p className="text-sm opacity-90 mb-4 leading-relaxed">
-                  Follow Dr. Dédé for insights on AI governance and tech equity
-                </p>
-                <a
-                  href="https://www.linkedin.com/in/dr-dede/"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium underline hover:no-underline"
-                >
-                  View Profile →
-                </a>
-              </CardContent>
-            </Card>
+      <section className="relative bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4] text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <Badge className="mb-4 bg-white/20 text-white border-white/30 backdrop-blur-sm" variant="outline">
+              Let's Connect
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
+              Get in{" "}
+              <span className="bg-gradient-to-r from-cyan-300 to-cyan-100 bg-clip-text text-transparent">Touch</span>
+            </h1>
+            <p className="text-xl text-white/90 text-pretty leading-relaxed">
+              Ready to transform your AI strategy or book a speaking engagement? Let's discuss how we can work together.
+            </p>
           </div>
 
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card className="bg-white/90 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle>Send a Message</CardTitle>
-                <CardDescription>Fill out the form below and we'll get back to you soon</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ContactForm />
-              </CardContent>
-            </Card>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Contact Information */}
+            <div className="lg:col-span-1 space-y-6">
+              <Card className="bg-white/90 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="text-lg">Contact Information</CardTitle>
+                  <CardDescription>Multiple ways to reach us</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <Mail className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-sm">Email</p>
+                      <a
+                        href="mailto:contact@drdede.com"
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        contact@drdede.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Phone className="h-5 w-5 text-cyan-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-sm">Phone</p>
+                      <a
+                        href="tel:+1234567890"
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        +1 (234) 567-8900
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <MapPin className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-sm">Location</p>
+                      <p className="text-sm text-muted-foreground">San Francisco Bay Area, CA</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Clock className="h-5 w-5 text-cyan-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-sm">Response Time</p>
+                      <p className="text-sm text-muted-foreground">Within 24-48 hours</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-purple-600 to-cyan-600 text-white border-0">
+                <CardContent className="p-6">
+                  <Linkedin className="h-8 w-8 mb-3 opacity-90" />
+                  <h3 className="font-semibold mb-2">Connect on LinkedIn</h3>
+                  <p className="text-sm opacity-90 mb-4 leading-relaxed">
+                    Follow Dr. Dédé for insights on AI governance and tech equity
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/dr-dede/"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium underline hover:no-underline"
+                  >
+                    View Profile →
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Contact Form */}
+            <div className="lg:col-span-2">
+              <Card className="bg-white/90 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle>Send a Message</CardTitle>
+                  <CardDescription>Fill out the form below and we'll get back to you soon</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ContactForm />
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>

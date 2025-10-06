@@ -15,7 +15,17 @@ export default function SpeakingPage() {
   return (
     <main className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-32 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95 text-white overflow-hidden">
+      <section className="relative py-20 sm:py-32 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/background%20image-5OPnc8AlHTSoOxJ7nl3p76nm3yD6w0.png"
+            alt="Dr. Dédé Tetsubayashi"
+            fill
+            className="object-cover object-right"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.15),transparent_60%)]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -119,7 +129,9 @@ export default function SpeakingPage() {
                     <ul className="space-y-2">
                       {topic.topics.map((item, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div className="h-5 w-5 rounded-full bg-gradient-to-br from-purple-600 to-cyan-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <CheckCircle2 className="h-3 w-3 text-white" />
+                          </div>
                           <span className="text-sm text-foreground/80">{item}</span>
                         </li>
                       ))}
@@ -159,9 +171,9 @@ export default function SpeakingPage() {
                 <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
                   <h3 className="text-xl font-bold mb-3">{type.title}</h3>
                   <p className="text-sm text-foreground/70 mb-4 leading-relaxed">{type.description}</p>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full">
-                    <Calendar className="h-4 w-4 text-primary" />
-                    <span className="text-xs font-semibold text-primary">{type.duration}</span>
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-br from-purple-600 to-cyan-400 rounded-full">
+                    <Calendar className="h-4 w-4 text-white" />
+                    <span className="text-xs font-semibold text-white">{type.duration}</span>
                   </div>
                 </Card>
               ))}
@@ -202,12 +214,14 @@ export default function SpeakingPage() {
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                   <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center text-white font-bold text-lg">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-cyan-400 flex items-center justify-center text-white font-bold text-lg shadow-lg">
                         {engagement.year}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <div className="text-sm font-semibold text-primary mb-1">{engagement.event}</div>
+                      <div className="text-sm font-semibold bg-gradient-to-r from-purple-600 to-cyan-400 bg-clip-text text-transparent mb-1">
+                        {engagement.event}
+                      </div>
                       <h3 className="text-xl font-bold mb-2">{engagement.title}</h3>
                       <p className="text-foreground/70 leading-relaxed">{engagement.description}</p>
                     </div>

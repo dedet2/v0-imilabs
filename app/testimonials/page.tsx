@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Play } from "@/components/icons"
 import Image from "next/image"
+import { ResourceGateModal } from "@/components/resource-gate-modal"
 
 export const metadata: Metadata = {
   title: "Client Testimonials | What Our Clients Say",
@@ -16,7 +17,7 @@ export default function TestimonialsPage() {
   return (
     <main className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-32 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95 text-white overflow-hidden">
+      <section className="relative py-20 sm:py-32 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4] text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.15),transparent_60%)]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
@@ -122,10 +123,16 @@ export default function TestimonialsPage() {
                     and exposed the organization to potential $500M+ in penalties, lawsuits, and operational losses.
                     Legacy AI models showed severe bias in lending decisions affecting 2.3M customers.
                   </p>
-                  <Button variant="outline" className="w-full sm:w-auto bg-transparent">
-                    View Full Case Study
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <ResourceGateModal
+                    resourceTitle="Fortune 500 AI Risk Prevention - Full Case Study"
+                    resourceType="case-study"
+                    resourceDescription="Complete analysis of $500M savings through AI risk prevention strategies"
+                  >
+                    <Button variant="outline" className="w-full sm:w-auto bg-transparent">
+                      View Full Case Study
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </ResourceGateModal>
                 </CardContent>
               </Card>
 
@@ -170,10 +177,16 @@ export default function TestimonialsPage() {
                     revenue untapped. AI-powered market research tools excluded disabled consumers, representing 15% of
                     global purchasing power.
                   </p>
-                  <Button variant="outline" className="w-full sm:w-auto bg-transparent">
-                    View Full Case Study
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <ResourceGateModal
+                    resourceTitle="Emerging Markets AI Discovery - Full Case Study"
+                    resourceType="case-study"
+                    resourceDescription="Detailed analysis of $300M market opportunity through inclusive AI design"
+                  >
+                    <Button variant="outline" className="w-full sm:w-auto bg-transparent">
+                      View Full Case Study
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </ResourceGateModal>
                 </CardContent>
               </Card>
 
@@ -218,10 +231,16 @@ export default function TestimonialsPage() {
                     costs from misdiagnoses, extended treatments, and malpractice claims. Patient outcomes disparities
                     reached crisis levels.
                   </p>
-                  <Button variant="outline" className="w-full sm:w-auto bg-transparent">
-                    View Full Case Study
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <ResourceGateModal
+                    resourceTitle="Healthcare System Transformation - Full Case Study"
+                    resourceType="case-study"
+                    resourceDescription="Complete case study of $100M cost reduction through accessible AI systems"
+                  >
+                    <Button variant="outline" className="w-full sm:w-auto bg-transparent">
+                      View Full Case Study
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </ResourceGateModal>
                 </CardContent>
               </Card>
             </div>
@@ -505,7 +524,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95">
+      <section className="py-20 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white drop-shadow-lg">

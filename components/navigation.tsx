@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown } from "@/components/icons"
 
@@ -20,17 +20,51 @@ export function Navigation() {
     retreats: false,
   })
 
+  const timeoutRefs = useRef<{ [key: string]: NodeJS.Timeout | null }>({
+    incluu: null,
+    resources: null,
+    drDede: null,
+    retreats: null,
+  })
+
   const toggleMobileDropdown = (key: keyof typeof mobileDropdowns) => {
     setMobileDropdowns((prev) => ({ ...prev, [key]: !prev[key] }))
   }
 
-  const toggleDesktopDropdown = (key: keyof typeof desktopDropdowns) => {
-    setDesktopDropdowns((prev) => ({ ...prev, [key]: !prev[key] }))
+  const openDesktopDropdown = (key: keyof typeof desktopDropdowns) => {
+    // Clear any pending close timeout
+    if (timeoutRefs.current[key]) {
+      clearTimeout(timeoutRefs.current[key]!)
+      timeoutRefs.current[key] = null
+    }
+    setDesktopDropdowns((prev) => ({ ...prev, [key]: true }))
+  }
+
+  const closeDesktopDropdown = (key: keyof typeof desktopDropdowns) => {
+    // Set a timeout to close the dropdown after 300ms
+    timeoutRefs.current[key] = setTimeout(() => {
+      setDesktopDropdowns((prev) => ({ ...prev, [key]: false }))
+    }, 300)
   }
 
   const closeAllDesktopDropdowns = () => {
+    // Clear all timeouts
+    Object.keys(timeoutRefs.current).forEach((key) => {
+      if (timeoutRefs.current[key]) {
+        clearTimeout(timeoutRefs.current[key]!)
+        timeoutRefs.current[key] = null
+      }
+    })
     setDesktopDropdowns({ incluu: false, resources: false, drDede: false, retreats: false })
   }
+
+  useEffect(() => {
+    return () => {
+      Object.values(timeoutRefs.current).forEach((timeout) => {
+        if (timeout) clearTimeout(timeout)
+      })
+    }
+  }, [])
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -54,8 +88,8 @@ export function Navigation() {
 
             <div
               className="relative"
-              onMouseEnter={() => toggleDesktopDropdown("incluu")}
-              onMouseLeave={() => toggleDesktopDropdown("incluu")}
+              onMouseEnter={() => openDesktopDropdown("incluu")}
+              onMouseLeave={() => closeDesktopDropdown("incluu")}
             >
               <Link
                 href="/incluu"
@@ -65,7 +99,11 @@ export function Navigation() {
                 <ChevronDown className="h-3 w-3 text-violet-600" />
               </Link>
               {desktopDropdowns.incluu && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
+                <div
+                  className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50"
+                  onMouseEnter={() => openDesktopDropdown("incluu")}
+                  onMouseLeave={() => closeDesktopDropdown("incluu")}
+                >
                   <a
                     href="https://incluu.us/blog"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
@@ -101,8 +139,8 @@ export function Navigation() {
 
             <div
               className="relative"
-              onMouseEnter={() => toggleDesktopDropdown("drDede")}
-              onMouseLeave={() => toggleDesktopDropdown("drDede")}
+              onMouseEnter={() => openDesktopDropdown("drDede")}
+              onMouseLeave={() => closeDesktopDropdown("drDede")}
             >
               <Link
                 href="/dr-dede"
@@ -112,11 +150,15 @@ export function Navigation() {
                 <ChevronDown className="h-3 w-3 text-violet-600" />
               </Link>
               {desktopDropdowns.drDede && (
-                <div className="absolute top-full right-0 mt-2 w-72 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
+                <div
+                  className="absolute top-full right-0 mt-2 w-72 bg-background border border-border rounded-lg shadow-lg p-2 z-50"
+                  onMouseEnter={() => openDesktopDropdown("drDede")}
+                  onMouseLeave={() => closeDesktopDropdown("drDede")}
+                >
                   <div
                     className="relative"
-                    onMouseEnter={() => toggleDesktopDropdown("retreats")}
-                    onMouseLeave={() => toggleDesktopDropdown("retreats")}
+                    onMouseEnter={() => openDesktopDropdown("retreats")}
+                    onMouseLeave={() => closeDesktopDropdown("retreats")}
                   >
                     <Link
                       href="/dr-dede/retreats"
@@ -132,7 +174,11 @@ export function Navigation() {
                       <ChevronDown className="h-3 w-3 -rotate-90" />
                     </Link>
                     {desktopDropdowns.retreats && (
-                      <div className="absolute right-full top-0 mr-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
+                      <div
+                        className="absolute right-full top-0 mr-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50"
+                        onMouseEnter={() => openDesktopDropdown("retreats")}
+                        onMouseLeave={() => closeDesktopDropdown("retreats")}
+                      >
                         <Link
                           href="/dr-dede/retreats/executive"
                           onClick={closeAllDesktopDropdowns}
@@ -191,8 +237,8 @@ export function Navigation() {
 
             <div
               className="relative"
-              onMouseEnter={() => toggleDesktopDropdown("resources")}
-              onMouseLeave={() => toggleDesktopDropdown("resources")}
+              onMouseEnter={() => openDesktopDropdown("resources")}
+              onMouseLeave={() => closeDesktopDropdown("resources")}
             >
               <Link
                 href="/resources"
@@ -202,7 +248,11 @@ export function Navigation() {
                 <ChevronDown className="h-3 w-3 text-violet-600" />
               </Link>
               {desktopDropdowns.resources && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50">
+                <div
+                  className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50"
+                  onMouseEnter={() => openDesktopDropdown("resources")}
+                  onMouseLeave={() => closeDesktopDropdown("resources")}
+                >
                   <a
                     href="https://pmukyznd.manus.space/"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"

@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { ResourceGateModal } from "@/components/resource-gate-modal"
 import {
   BookOpen,
   FileText,
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 export default function ResourcesPage() {
   return (
     <div className="relative">
-      <section className="relative py-20 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95 text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4] text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.15),transparent_60%)]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -39,9 +40,11 @@ export default function ResourcesPage() {
               Knowledge Hub
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance text-white drop-shadow-lg">
-              All Resources
+              <span className="bg-gradient-to-r from-cyan-300 to-cyan-100 bg-clip-text text-transparent">
+                All Resources
+              </span>
             </h1>
-            <p className="text-xl text-white/95 text-pretty leading-relaxed drop-shadow">
+            <p className="text-xl text-white/90 text-pretty leading-relaxed drop-shadow">
               Explore comprehensive insights, frameworks, tools, and thought leadership on AI governance, tech equity,
               and inclusive innovation. Everything you need to drive meaningful change in your organization.
             </p>
@@ -114,7 +117,7 @@ export default function ResourcesPage() {
                   Calculate the potential return on investment for AI governance and tech equity initiatives
                 </p>
                 <Button asChild className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:opacity-90">
-                  <Link href="https://roicalculator.incluu.com" target="_blank">
+                  <Link href="https://pmukyznd.manus.space/" target="_blank">
                     Launch Calculator
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
@@ -173,69 +176,90 @@ export default function ResourcesPage() {
               <CardContent>
                 <ul className="space-y-4">
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="AI Governance Framework for Enterprise"
+                      resourceType="whitepaper"
+                      resourceDescription="Comprehensive implementation guide for enterprise AI governance"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">AI Governance Framework for Enterprise</div>
-                        <div className="text-xs text-muted-foreground">Comprehensive implementation guide</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">AI Governance Framework for Enterprise</div>
+                          <div className="text-xs text-muted-foreground">Comprehensive implementation guide</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="Tech Equity Implementation Guide"
+                      resourceType="whitepaper"
+                      resourceDescription="Step-by-step methodology for tech equity"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Tech Equity Implementation Guide</div>
-                        <div className="text-xs text-muted-foreground">Step-by-step methodology</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Tech Equity Implementation Guide</div>
+                          <div className="text-xs text-muted-foreground">Step-by-step methodology</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="Algorithmic Bias Detection Methods"
+                      resourceType="whitepaper"
+                      resourceDescription="Technical analysis framework for detecting algorithmic bias"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Algorithmic Bias Detection Methods</div>
-                        <div className="text-xs text-muted-foreground">Technical analysis framework</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Algorithmic Bias Detection Methods</div>
+                          <div className="text-xs text-muted-foreground">Technical analysis framework</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="Disability-Inclusive AI Design"
+                      resourceType="whitepaper"
+                      resourceDescription="Best practices & standards for disability-inclusive AI design"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Disability-Inclusive AI Design</div>
-                        <div className="text-xs text-muted-foreground">Best practices & standards</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Disability-Inclusive AI Design</div>
+                          <div className="text-xs text-muted-foreground">Best practices & standards</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="Global AI Compliance Landscape 2025"
+                      resourceType="whitepaper"
+                      resourceDescription="Regulatory overview of the global AI compliance landscape"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Global AI Compliance Landscape 2025</div>
-                        <div className="text-xs text-muted-foreground">Regulatory overview</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Global AI Compliance Landscape 2025</div>
+                          <div className="text-xs text-muted-foreground">Regulatory overview</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                 </ul>
-                <Button asChild variant="outline" className="w-full mt-6 bg-transparent">
-                  <Link href="#whitepapers">View All Whitepapers</Link>
-                </Button>
+                <ResourceGateModal
+                  resourceTitle="All Whitepapers & Research"
+                  resourceType="whitepaper"
+                  resourceDescription="Access our complete library of whitepapers and research documents"
+                >
+                  <Button variant="outline" className="w-full mt-6 bg-transparent">
+                    View All Whitepapers
+                  </Button>
+                </ResourceGateModal>
               </CardContent>
             </Card>
 
@@ -406,56 +430,68 @@ export default function ResourcesPage() {
               <CardContent>
                 <ul className="space-y-4">
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="AI Ethics Assessment Template"
+                      resourceType="template"
+                      resourceDescription="Comprehensive checklist for AI ethics assessment"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">AI Ethics Assessment Template</div>
-                        <div className="text-xs text-muted-foreground">Comprehensive checklist</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">AI Ethics Assessment Template</div>
+                          <div className="text-xs text-muted-foreground">Comprehensive checklist</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
+                  </li>
+                  <li>
+                    <ResourceGateModal
+                      resourceTitle="Bias Detection Toolkit"
+                      resourceType="tool"
+                      resourceDescription="Technical implementation toolkit for bias detection"
+                    >
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Bias Detection Toolkit</div>
+                          <div className="text-xs text-muted-foreground">Technical implementation</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
+                  </li>
+                  <li>
+                    <ResourceGateModal
+                      resourceTitle="Compliance Roadmap Template"
+                      resourceType="template"
+                      resourceDescription="90-day action plan for compliance"
+                    >
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Compliance Roadmap Template</div>
+                          <div className="text-xs text-muted-foreground">90-day action plan</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
+                  </li>
+                  <li>
+                    <ResourceGateModal
+                      resourceTitle="Stakeholder Engagement Guide"
+                      resourceType="guide"
+                      resourceDescription="Communication framework for stakeholder engagement"
+                    >
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Stakeholder Engagement Guide</div>
+                          <div className="text-xs text-muted-foreground">Communication framework</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                   <li>
                     <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
-                    >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Bias Detection Toolkit</div>
-                        <div className="text-xs text-muted-foreground">Technical implementation</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
-                    >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Compliance Roadmap Template</div>
-                        <div className="text-xs text-muted-foreground">90-day action plan</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
-                    >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Stakeholder Engagement Guide</div>
-                        <div className="text-xs text-muted-foreground">Communication framework</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://roicalculator.incluu.com"
+                      href="https://pmukyznd.manus.space/"
                       target="_blank"
                       className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
                       rel="noreferrer"
@@ -468,9 +504,15 @@ export default function ResourcesPage() {
                     </a>
                   </li>
                 </ul>
-                <Button asChild variant="outline" className="w-full mt-6 bg-transparent">
-                  <Link href="#tools">View All Tools</Link>
-                </Button>
+                <ResourceGateModal
+                  resourceTitle="All Templates & Tools"
+                  resourceType="template"
+                  resourceDescription="Access our complete library of templates and tools"
+                >
+                  <Button variant="outline" className="w-full mt-6 bg-transparent">
+                    View All Tools
+                  </Button>
+                </ResourceGateModal>
               </CardContent>
             </Card>
 
@@ -533,9 +575,15 @@ export default function ResourcesPage() {
                     </a>
                   </li>
                 </ul>
-                <Button asChild variant="outline" className="w-full mt-6 bg-transparent">
-                  <Link href="#training">View All Programs</Link>
-                </Button>
+                <ResourceGateModal
+                  resourceTitle="All Training & Workshops"
+                  resourceType="training"
+                  resourceDescription="Explore all our training and workshop programs"
+                >
+                  <Button variant="outline" className="w-full mt-6 bg-transparent">
+                    View All Programs
+                  </Button>
+                </ResourceGateModal>
               </CardContent>
             </Card>
 
@@ -550,69 +598,90 @@ export default function ResourcesPage() {
               <CardContent>
                 <ul className="space-y-4">
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="State of AI Governance 2025"
+                      resourceType="report"
+                      resourceDescription="Annual industry report on AI governance"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">State of AI Governance 2025</div>
-                        <div className="text-xs text-muted-foreground">Annual industry report</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">State of AI Governance 2025</div>
+                          <div className="text-xs text-muted-foreground">Annual industry report</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="Tech Equity Benchmark Study"
+                      resourceType="report"
+                      resourceDescription="500+ organizations surveyed on tech equity"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Tech Equity Benchmark Study</div>
-                        <div className="text-xs text-muted-foreground">500+ organizations surveyed</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Tech Equity Benchmark Study</div>
+                          <div className="text-xs text-muted-foreground">500+ organizations surveyed</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="AI Compliance Cost Analysis"
+                      resourceType="report"
+                      resourceDescription="ROI & budget planning for AI compliance"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">AI Compliance Cost Analysis</div>
-                        <div className="text-xs text-muted-foreground">ROI & budget planning</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">AI Compliance Cost Analysis</div>
+                          <div className="text-xs text-muted-foreground">ROI & budget planning</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="Disability Tech Market Report"
+                      resourceType="report"
+                      resourceDescription="$500M+ market opportunity in disability tech"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Disability Tech Market Report</div>
-                        <div className="text-xs text-muted-foreground">$500M+ market opportunity</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Disability Tech Market Report</div>
+                          <div className="text-xs text-muted-foreground">$500M+ market opportunity</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
+                    <ResourceGateModal
+                      resourceTitle="Quarterly Trends Digest"
+                      resourceType="report"
+                      resourceDescription="Latest developments in AI governance and tech equity"
                     >
-                      <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
-                      <div>
-                        <div className="font-medium">Quarterly Trends Digest</div>
-                        <div className="text-xs text-muted-foreground">Latest developments</div>
-                      </div>
-                    </a>
+                      <button className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2 text-left w-full">
+                        <Download className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
+                        <div>
+                          <div className="font-medium">Quarterly Trends Digest</div>
+                          <div className="text-xs text-muted-foreground">Latest developments</div>
+                        </div>
+                      </button>
+                    </ResourceGateModal>
                   </li>
                 </ul>
-                <Button asChild variant="outline" className="w-full mt-6 bg-transparent">
-                  <Link href="#reports">View All Reports</Link>
-                </Button>
+                <ResourceGateModal
+                  resourceTitle="All Industry Reports"
+                  resourceType="report"
+                  resourceDescription="Access our complete library of industry reports"
+                >
+                  <Button variant="outline" className="w-full mt-6 bg-transparent">
+                    View All Reports
+                  </Button>
+                </ResourceGateModal>
               </CardContent>
             </Card>
           </div>

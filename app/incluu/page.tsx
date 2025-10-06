@@ -33,22 +33,17 @@ export default function IncluuPage() {
     <div className="relative">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-400 to-cyan-400" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm backdrop-blur-sm" variant="outline">
               Black-Woman-Owned • Tech Equity Pioneer
             </Badge>
-            <div className="inline-flex items-center gap-3 mb-6">
-              <div className="relative h-12 w-12 rounded-lg overflow-hidden">
-                <Image
-                  src="/modern-tech-company-logo-with-purple-and-cyan-grad.jpg"
-                  alt="incluu logo"
-                  fill
-                  className="object-cover"
-                />
+            <div className="inline-flex items-center gap-2 mb-6">
+              <div className="relative h-10 w-10 rounded-lg overflow-hidden">
+                <Image src="/incluu-logo.png" alt="incluu logo" fill className="object-contain" />
               </div>
-              <span className="text-3xl font-bold text-white drop-shadow-lg">incluu</span>
+              <span className="text-2xl font-bold text-white drop-shadow-lg">incluu</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance text-white drop-shadow-lg">
               Expert AI Governance &<br />
@@ -98,7 +93,7 @@ export default function IncluuPage() {
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 via-cyan-500 to-cyan-600 bg-clip-text text-transparent mb-2">
-              25+
+              25+ years
             </div>
             <div className="text-sm text-muted-foreground">Years of Expertise</div>
             <div className="text-xs text-muted-foreground mt-1">Tech equity & governance</div>
@@ -379,28 +374,28 @@ export default function IncluuPage() {
           <Card className="bg-white/90 backdrop-blur-sm">
             <CardContent className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-xl flex-shrink-0">
-                  <Image
-                    src="/professional-headshot-of-african-american-woman-te.jpg"
-                    alt="Dr. Dédé Tetsubayashi"
-                    fill
-                    className="object-cover"
-                  />
+                <div className="relative w-64 h-80 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
+                  <Image src="/dr-dede-incluu-headshot.jpg" alt="Dr. Dédé Tetsubayashi" fill className="object-cover" />
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl font-bold mb-2">Dr. Dédé Tetsubayashi, PhD</h3>
+                  <h3 className="text-2xl font-bold mb-2">Dr. Dédé Tetsubayashi</h3>
                   <p className="text-lg text-purple-600 font-semibold mb-4">
                     AI Governance Expert • Digital Equity Pioneer • Tech Ethics Thought Leader
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Dr. Dédé Tetsubayashi is a globally recognized authority in AI governance, tech equity, and ethical
-                    technology implementation. As the founder of incluu consultancy, she has transformed how Fortune 500
-                    companies, government agencies, and educational institutions approach inclusive innovation and
-                    regulatory compliance.
+                    Dr. Dédé Tetsubayashi (she/they) is a Cornell University educated social scientist and technologist
+                    with over 25 years of experience promoting equitable outcomes at the intersection of ethical
+                    technology and social justice across the U.S., APAC, and African markets.
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    With a PhD in Technology Policy and over 15 years of hands-on experience, Dr. Tetsubayashi has
-                    delivered quantifiable business impact:{" "}
+                    As a disability advocate, Dr. Tetsubayashi brings a unique combination of academic rigor, industry
+                    experience, and lived perspective to every engagement. She has partnered with organizations ranging
+                    from start-ups to Fortune 100 companies, all with the shared goal of fostering a more equitable tech
+                    landscape.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    With over 25 years of hands-on experience, Dr. Tetsubayashi has delivered quantifiable business
+                    impact:{" "}
                     <span className="font-semibold text-foreground">$200+ million in regulatory cost savings</span> and{" "}
                     <span className="font-semibold text-foreground">$500+ million in new market opportunities</span>{" "}
                     through strategic tech equity implementations.
@@ -409,9 +404,11 @@ export default function IncluuPage() {
                     A sought-after keynote speaker and thought leader, Dr. Tetsubayashi has presented at major
                     conferences including AI Summit, Tech Inclusion, and the World Economic Forum. Her expertise has
                     been featured in Harvard Business Review, MIT Technology Review, and leading industry publications.
+                    Her TEDx talk on managing artificial intelligence systems to serve everyone, not just the privileged
+                    few, has inspired thousands to rethink technology's role in society.
                   </p>
                   <Button asChild variant="outline">
-                    <Link href="/dr-dede">View Full Bio & Credentials</Link>
+                    <Link href="/dr-dede#hero">View Full Bio & Credentials</Link>
                   </Button>
                 </div>
               </div>
@@ -422,7 +419,7 @@ export default function IncluuPage() {
                     <Award className="h-5 w-5 text-purple-600" />
                   </div>
                   <div className="text-sm">
-                    <div className="font-semibold">PhD Technology Policy</div>
+                    <div className="font-semibold">Cornell University</div>
                     <div className="text-xs text-muted-foreground">Academic Excellence</div>
                   </div>
                 </div>
@@ -466,7 +463,7 @@ export default function IncluuPage() {
                   <div className="h-10 w-10 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0">
                     <Building2 className="h-5 w-5 text-cyan-600" />
                   </div>
-                  <div className="text-sm">
+                  <div>
                     <div className="font-semibold">Board Advisor</div>
                     <div className="text-xs text-muted-foreground">Multiple Organizations</div>
                   </div>
@@ -537,7 +534,7 @@ export default function IncluuPage() {
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="relative w-full md:w-48 h-48 rounded-lg overflow-hidden flex-shrink-0">
                     <Image
-                      src="/modern-corporate-office-with-diverse-team-working-.jpg"
+                      src="/modern-corporate-office-with-diverse-team-working-on-ai-governance.jpg"
                       alt="AI Governance Implementation"
                       fill
                       className="object-cover"
@@ -574,7 +571,7 @@ export default function IncluuPage() {
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="relative w-full md:w-48 h-48 rounded-lg overflow-hidden flex-shrink-0">
                     <Image
-                      src="/healthcare-technology-with-diverse-patients-and-me.jpg"
+                      src="/healthcare-technology-with-diverse-patients-and-medical-professionals.jpg"
                       alt="Healthcare AI Equity"
                       fill
                       className="object-cover"
@@ -609,7 +606,7 @@ export default function IncluuPage() {
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="relative w-full md:w-48 h-48 rounded-lg overflow-hidden flex-shrink-0">
                     <Image
-                      src="/modern-fintech-office-with-diverse-professionals-.jpg"
+                      src="/modern-fintech-office-with-diverse-professionals-working.jpg"
                       alt="FinTech Compliance"
                       fill
                       className="object-cover"
@@ -645,7 +642,7 @@ export default function IncluuPage() {
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="relative w-full md:w-48 h-48 rounded-lg overflow-hidden flex-shrink-0">
                     <Image
-                      src="/educational-technology-classroom-with-diverse-st.jpg"
+                      src="/educational-technology-classroom-with-diverse-students.jpg"
                       alt="EdTech Accessibility"
                       fill
                       className="object-cover"
@@ -681,7 +678,7 @@ export default function IncluuPage() {
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="relative w-full md:w-48 h-48 rounded-lg overflow-hidden flex-shrink-0">
                     <Image
-                      src="/retail-technology-with-diverse-customers-and-sta.jpg"
+                      src="/retail-technology-with-diverse-customers-and-staff.jpg"
                       alt="Retail AI Ethics"
                       fill
                       className="object-cover"
