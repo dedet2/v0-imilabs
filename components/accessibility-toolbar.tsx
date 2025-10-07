@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Settings, Type, Contrast, Pause, Play } from "lucide-react"
+import { Settings, Type, Contrast, Pause, Play } from "@/components/icons"
 import {
   DropdownMenu,
   DropdownMenuContent,

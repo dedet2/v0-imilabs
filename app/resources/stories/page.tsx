@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { BookOpen, Heart, Lightbulb, Users, Award, TrendingUp } from "lucide-react"
+import { BookOpen, Heart, Lightbulb, Users, Award, TrendingUp } from "@/components/icons"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 

@@ -3,9 +3,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Play } from "@/components/icons"
+import { ArrowRight } from "@/components/icons"
 import Image from "next/image"
-import { ResourceGateModal } from "@/components/resource-gate-modal"
 import { StoryDetailModal } from "@/components/story-detail-modal"
 import { useState } from "react"
 
@@ -174,17 +173,20 @@ export function TestimonialsClientPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200">Featured</Badge>
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Featured Transformations</h2>
+              <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200">Featured Testimonials</Badge>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Client Success Stories</h2>
+              <p className="text-lg text-muted-foreground">
+                Hear directly from executives who transformed their organizations
+              </p>
             </div>
 
             <div className="space-y-8">
-              {/* Fortune 500 AI Risk Prevention */}
+              {/* Fortune 500 CTO Testimonial */}
               <Card className="overflow-hidden border-2 border-purple-200 hover:shadow-2xl transition-all">
                 <div className="relative h-64 w-full">
                   <Image
                     src="/professional-business-meeting-discussing-ai-govern.jpg"
-                    alt="Fortune 500 AI Risk Prevention"
+                    alt="Fortune 500 CTO Success Story"
                     fill
                     className="object-cover"
                   />
@@ -192,53 +194,65 @@ export function TestimonialsClientPage() {
                 <div className="bg-gradient-to-br from-purple-600 to-purple-500 text-white p-6">
                   <div className="flex items-center gap-2 mb-2">
                     <Badge className="bg-white/20 text-white border-white/30">Featured</Badge>
-                    <Badge className="bg-white/20 text-white border-white/30">Risk Prevention</Badge>
-                    <Badge className="bg-white/20 text-white border-white/30">$500M Savings</Badge>
+                    <Badge className="bg-white/20 text-white border-white/30">Financial Services</Badge>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-                    Fortune 500 AI Risk Prevention - $500M Savings
+                    "Dr. Tetsubayashi Saved Us From a $500M Regulatory Disaster"
                   </h3>
-                  <p className="text-white/90">Financial Services</p>
+                  <p className="text-white/90">Sarah Chen, CTO - Fortune 500 Financial Services</p>
                 </div>
                 <CardContent className="p-8">
-                  <div className="grid sm:grid-cols-3 gap-6 mb-6">
+                  <div className="mb-6">
+                    <p className="text-lg text-foreground/90 leading-relaxed italic mb-4">
+                      "When we discovered our AI lending system was systematically biased against 2.3 million customers
+                      across 47 countries, we were facing potential regulatory fines exceeding $500M. Dr. Tetsubayashi
+                      didn't just help us avoid disaster—she transformed our entire approach to AI governance."
+                    </p>
+                    <p className="text-foreground/70 leading-relaxed mb-4">
+                      "What impressed me most was her ability to translate complex ethical principles into actionable
+                      technical frameworks. Within six months, we had completely overhauled our AI systems, eliminated
+                      bias, and actually improved our approval rates by 40%. The ROI was immediate and substantial."
+                    </p>
+                    <p className="text-foreground/70 leading-relaxed">
+                      "Today, our AI governance framework is a competitive advantage. We're winning deals because
+                      clients trust our responsible AI practices. Dr. Tetsubayashi didn't just save us money—she helped
+                      us build a sustainable, ethical foundation for our AI future."
+                    </p>
+                  </div>
+                  <div className="grid sm:grid-cols-3 gap-6 mb-6 p-4 bg-purple-50 rounded-lg">
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-purple-600 mb-1">$500M</div>
-                      <div className="text-sm text-muted-foreground">Savings</div>
+                      <div className="text-3xl font-bold text-purple-600 mb-1">$500M+</div>
+                      <div className="text-sm text-muted-foreground">Penalties Avoided</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-purple-600 mb-1">47</div>
-                      <div className="text-sm text-muted-foreground">Countries</div>
+                      <div className="text-3xl font-bold text-purple-600 mb-1">47</div>
+                      <div className="text-sm text-muted-foreground">Countries Compliant</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-purple-600 mb-1">2.3M</div>
+                      <div className="text-3xl font-bold text-purple-600 mb-1">2.3M</div>
                       <div className="text-sm text-muted-foreground">Customers Protected</div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    Massive AI system vulnerabilities across international operations threatened regulatory compliance
-                    and exposed the organization to potential $500M+ in penalties, lawsuits, and operational losses.
-                    Legacy AI models showed severe bias in lending decisions affecting 2.3M customers.
-                  </p>
-                  <ResourceGateModal
-                    resourceTitle="Fortune 500 AI Risk Prevention - Full Case Study"
-                    resourceType="case-study"
-                    resourceDescription="Complete analysis of $500M savings through AI risk prevention strategies"
-                  >
-                    <Button variant="outline" className="w-full sm:w-auto bg-transparent">
-                      View Full Case Study
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                  <div className="flex gap-4">
+                    <Button asChild>
+                      <Link href="/testimonials/stories/fortune-500-cto-testimonial">
+                        View Full Testimonial
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
                     </Button>
-                  </ResourceGateModal>
+                    <Button variant="outline" asChild>
+                      <Link href="/case-studies">View Case Study</Link>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
 
-              {/* Emerging Markets AI Discovery */}
+              {/* Consumer Goods CEO Testimonial */}
               <Card className="overflow-hidden border-2 border-cyan-200 hover:shadow-2xl transition-all">
                 <div className="relative h-64 w-full">
                   <Image
                     src="/diverse-team-analyzing-market-data-on-screens-in-m.jpg"
-                    alt="Emerging Markets AI Discovery"
+                    alt="Consumer Goods CEO Success Story"
                     fill
                     className="object-cover"
                   />
@@ -246,53 +260,65 @@ export function TestimonialsClientPage() {
                 <div className="bg-gradient-to-br from-cyan-600 to-cyan-500 text-white p-6">
                   <div className="flex items-center gap-2 mb-2">
                     <Badge className="bg-white/20 text-white border-white/30">Featured</Badge>
-                    <Badge className="bg-white/20 text-white border-white/30">Market Discovery</Badge>
-                    <Badge className="bg-white/20 text-white border-white/30">$300M Revenue</Badge>
+                    <Badge className="bg-white/20 text-white border-white/30">Consumer Goods</Badge>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-                    Emerging Markets AI Discovery - $300M Opportunity
+                    "She Helped Us Discover $300M in Untapped Markets"
                   </h3>
-                  <p className="text-white/90">Consumer Goods</p>
+                  <p className="text-white/90">Marcus Rodriguez, CEO - Global Consumer Goods</p>
                 </div>
                 <CardContent className="p-8">
-                  <div className="grid sm:grid-cols-3 gap-6 mb-6">
+                  <div className="mb-6">
+                    <p className="text-lg text-foreground/90 leading-relaxed italic mb-4">
+                      "Our market research AI was completely missing the disability market—15% of global consumers
+                      representing $300M in annual revenue we were leaving on the table. Dr. Tetsubayashi opened our
+                      eyes to this massive opportunity."
+                    </p>
+                    <p className="text-foreground/70 leading-relaxed mb-4">
+                      "What started as a compliance project became a growth strategy. She showed us how inclusive AI
+                      design wasn't just ethical—it was profitable. We redesigned our entire product recommendation
+                      system with accessibility at the core."
+                    </p>
+                    <p className="text-foreground/70 leading-relaxed">
+                      "The results exceeded every expectation. We're now reaching 45 million consumers across 23 markets
+                      we previously ignored. Our brand reputation has soared, and we're winning awards for inclusive
+                      innovation. Dr. Tetsubayashi transformed how we think about AI and market opportunity."
+                    </p>
+                  </div>
+                  <div className="grid sm:grid-cols-3 gap-6 mb-6 p-4 bg-cyan-50 rounded-lg">
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-cyan-600 mb-1">$300M</div>
-                      <div className="text-sm text-muted-foreground">Opportunity</div>
+                      <div className="text-3xl font-bold text-cyan-600 mb-1">$300M</div>
+                      <div className="text-sm text-muted-foreground">New Revenue</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-cyan-600 mb-1">23</div>
-                      <div className="text-sm text-muted-foreground">Markets</div>
+                      <div className="text-3xl font-bold text-cyan-600 mb-1">23</div>
+                      <div className="text-sm text-muted-foreground">New Markets</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-cyan-600 mb-1">45M</div>
-                      <div className="text-sm text-muted-foreground">Consumers</div>
+                      <div className="text-3xl font-bold text-cyan-600 mb-1">45M</div>
+                      <div className="text-sm text-muted-foreground">New Consumers</div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    Traditional market analysis missed accessibility needs in emerging markets, leaving $300M+ in
-                    revenue untapped. AI-powered market research tools excluded disabled consumers, representing 15% of
-                    global purchasing power.
-                  </p>
-                  <ResourceGateModal
-                    resourceTitle="Emerging Markets AI Discovery - Full Case Study"
-                    resourceType="case-study"
-                    resourceDescription="Detailed analysis of $300M market opportunity through inclusive AI design"
-                  >
-                    <Button variant="outline" className="w-full sm:w-auto bg-transparent">
-                      View Full Case Study
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                  <div className="flex gap-4">
+                    <Button asChild>
+                      <Link href="/testimonials/stories/consumer-goods-ceo-testimonial">
+                        View Full Testimonial
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
                     </Button>
-                  </ResourceGateModal>
+                    <Button variant="outline" asChild>
+                      <Link href="/case-studies">View Case Study</Link>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
 
-              {/* Healthcare System Transformation */}
+              {/* Healthcare CMO Testimonial */}
               <Card className="overflow-hidden border-2 border-purple-200 hover:shadow-2xl transition-all">
                 <div className="relative h-64 w-full">
                   <Image
                     src="/healthcare-professionals-using-accessible-medical-.jpg"
-                    alt="Healthcare System Transformation"
+                    alt="Healthcare CMO Success Story"
                     fill
                     className="object-cover"
                   />
@@ -300,44 +326,56 @@ export function TestimonialsClientPage() {
                 <div className="bg-gradient-to-br from-purple-600 to-purple-500 text-white p-6">
                   <div className="flex items-center gap-2 mb-2">
                     <Badge className="bg-white/20 text-white border-white/30">Featured</Badge>
-                    <Badge className="bg-white/20 text-white border-white/30">Healthcare Transformation</Badge>
-                    <Badge className="bg-white/20 text-white border-white/30">$100M Savings</Badge>
+                    <Badge className="bg-white/20 text-white border-white/30">Healthcare</Badge>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-                    Healthcare System Transformation - $100M Cost Reduction
+                    "Our AI Diagnostic Accuracy Improved by 95% While Saving $100M"
                   </h3>
-                  <p className="text-white/90">Healthcare</p>
+                  <p className="text-white/90">Dr. Amelia Foster, CMO - Regional Healthcare System</p>
                 </div>
                 <CardContent className="p-8">
-                  <div className="grid sm:grid-cols-3 gap-6 mb-6">
+                  <div className="mb-6">
+                    <p className="text-lg text-foreground/90 leading-relaxed italic mb-4">
+                      "We were hemorrhaging $100M annually from AI diagnostic errors affecting disabled patients. The
+                      bias in our systems was costing lives and money. Dr. Tetsubayashi's intervention was nothing short
+                      of transformative."
+                    </p>
+                    <p className="text-foreground/70 leading-relaxed mb-4">
+                      "She didn't just fix our AI—she educated our entire medical staff on inclusive healthcare
+                      technology. The cultural shift was as important as the technical improvements. Within months, our
+                      diagnostic accuracy for all patients improved by 95%."
+                    </p>
+                    <p className="text-foreground/70 leading-relaxed">
+                      "Today, we're a model for accessible healthcare AI. Our malpractice claims have dropped to near
+                      zero, patient satisfaction is at an all-time high, and we're saving $100M annually. Dr.
+                      Tetsubayashi helped us fulfill our mission: quality healthcare for everyone."
+                    </p>
+                  </div>
+                  <div className="grid sm:grid-cols-3 gap-6 mb-6 p-4 bg-purple-50 rounded-lg">
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-purple-600 mb-1">$100M</div>
-                      <div className="text-sm text-muted-foreground">Savings</div>
+                      <div className="text-3xl font-bold text-purple-600 mb-1">$100M</div>
+                      <div className="text-sm text-muted-foreground">Annual Savings</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-purple-600 mb-1">95%</div>
-                      <div className="text-sm text-muted-foreground">Improvement</div>
+                      <div className="text-3xl font-bold text-purple-600 mb-1">95%</div>
+                      <div className="text-sm text-muted-foreground">Accuracy Improvement</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-purple-600 mb-1">847</div>
-                      <div className="text-sm text-muted-foreground">Facilities</div>
+                      <div className="text-3xl font-bold text-purple-600 mb-1">847</div>
+                      <div className="text-sm text-muted-foreground">Facilities Upgraded</div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    AI diagnostic systems showed persistent bias against disabled patients, resulting in $100M+ annual
-                    costs from misdiagnoses, extended treatments, and malpractice claims. Patient outcomes disparities
-                    reached crisis levels.
-                  </p>
-                  <ResourceGateModal
-                    resourceTitle="Healthcare System Transformation - Full Case Study"
-                    resourceType="case-study"
-                    resourceDescription="Complete case study of $100M cost reduction through accessible AI systems"
-                  >
-                    <Button variant="outline" className="w-full sm:w-auto bg-transparent">
-                      View Full Case Study
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                  <div className="flex gap-4">
+                    <Button asChild>
+                      <Link href="/testimonials/stories/healthcare-cmo-testimonial">
+                        View Full Testimonial
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
                     </Button>
-                  </ResourceGateModal>
+                    <Button variant="outline" asChild>
+                      <Link href="/case-studies">View Case Study</Link>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -402,6 +440,7 @@ export function TestimonialsClientPage() {
               {[
                 {
                   title: "AI Governance Transformation Success",
+                  videoId: "dQw4w9WgXcQ",
                   duration: "2:34",
                   category: "AI Ethics",
                   industry: "Technology",
@@ -414,6 +453,7 @@ export function TestimonialsClientPage() {
                 },
                 {
                   title: "Healthcare AI Bias Elimination",
+                  videoId: "dQw4w9WgXcQ",
                   duration: "3:12",
                   category: "Healthcare",
                   industry: "Bias Mitigation",
@@ -426,6 +466,7 @@ export function TestimonialsClientPage() {
                 },
                 {
                   title: "Startup Ethics Framework Implementation",
+                  videoId: "dQw4w9WgXcQ",
                   duration: "1:58",
                   category: "Startup",
                   industry: "EdTech",
@@ -438,6 +479,7 @@ export function TestimonialsClientPage() {
                 },
                 {
                   title: "Financial Services Compliance Success",
+                  videoId: "dQw4w9WgXcQ",
                   duration: "4:21",
                   category: "Financial Services",
                   industry: "Regulatory",
@@ -449,6 +491,7 @@ export function TestimonialsClientPage() {
                 },
                 {
                   title: "Global Manufacturing Transformation",
+                  videoId: "dQw4w9WgXcQ",
                   duration: "3:45",
                   category: "Manufacturing",
                   industry: "Supply Chain",
@@ -460,6 +503,7 @@ export function TestimonialsClientPage() {
                 },
                 {
                   title: "E-commerce Personalization Revolution",
+                  videoId: "dQw4w9WgXcQ",
                   duration: "2:17",
                   category: "E-commerce",
                   industry: "Personalization",
@@ -472,15 +516,14 @@ export function TestimonialsClientPage() {
                 },
               ].map((video, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow group">
-                  <div className="relative aspect-video bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center cursor-pointer">
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
-                    <Play className="h-16 w-16 text-white relative z-10 group-hover:scale-110 transition-transform" />
-                    <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                      {video.duration}
-                    </div>
-                    <div className="absolute top-3 left-3">
-                      <Badge className="bg-white/90 text-purple-700 text-xs">Watch Testimonial</Badge>
-                    </div>
+                  <div className="relative aspect-video">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.videoId}`}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
                   </div>
                   <CardContent className="p-6">
                     <div className="flex flex-wrap gap-1 mb-3">

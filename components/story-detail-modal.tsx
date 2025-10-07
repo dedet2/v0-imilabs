@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Download } from "@/components/icons"
-import { SamplePDFPreview } from "@/components/sample-pdf-preview"
+import { ResourceGateModal } from "@/components/resource-gate-modal"
 
 interface StoryDetailModalProps {
   isOpen: boolean
@@ -32,9 +32,6 @@ export function StoryDetailModal({ isOpen, onClose, story }: StoryDetailModalPro
         </DialogHeader>
 
         <div className="space-y-6">
-          {/* Story Preview */}
-          <SamplePDFPreview title={story.title} type="case-study" />
-
           {/* Metrics */}
           <div className="grid grid-cols-3 gap-4">
             {story.metrics.map((metric, index) => (
@@ -72,12 +69,17 @@ export function StoryDetailModal({ isOpen, onClose, story }: StoryDetailModalPro
             ))}
           </div>
 
-          {/* Download CTA */}
           <div className="border-t pt-6">
-            <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600">
-              <Download className="mr-2 h-4 w-4" />
-              Download Full Case Study (PDF)
-            </Button>
+            <ResourceGateModal
+              resourceTitle={story.title}
+              resourceType="case-study"
+              resourceDescription="Download the full case study with detailed analysis and implementation insights"
+            >
+              <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600">
+                <Download className="mr-2 h-4 w-4" />
+                Download Full Case Study (PDF)
+              </Button>
+            </ResourceGateModal>
           </div>
         </div>
       </DialogContent>

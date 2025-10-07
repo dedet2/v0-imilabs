@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Shield, Lock, Eye, FileText, UserCheck, Globe } from "lucide-react"
+import { Shield, Lock, Eye, FileText, UserCheck, Globe } from "@/components/icons"
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Dr. Dédé & incluu",

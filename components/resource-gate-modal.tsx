@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { CheckCircle2, FileText, Download } from "lucide-react"
+import { CheckCircle2, FileText, Download } from "@/components/icons"
 import { Card, CardContent } from "@/components/ui/card"
 
 interface ResourceGateModalProps {

@@ -15,11 +15,8 @@ import {
   Globe,
   Users,
   TrendingUp,
-  Download, // Import Download icon
 } from "@/components/icons"
 import Image from "next/image"
-import { SamplePDFPreview } from "@/components/sample-pdf-preview"
-import { ResourceGateModal } from "@/components/resource-gate-modal"
 
 export const metadata: Metadata = {
   title: "incluu | Expert AI Governance & Tech Equity Solutions",
@@ -52,7 +49,6 @@ export default function IncluuPage() {
               >
                 Black-Woman-Owned • Tech Equity Pioneer
               </Badge>
-              {/* </CHANGE> */}
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance text-white drop-shadow-lg">
               Expert AI Governance &<br />
@@ -383,10 +379,9 @@ export default function IncluuPage() {
           <Card className="bg-white/90 backdrop-blur-sm">
             <CardContent className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row gap-8">
-                <div className="relative w-64 h-80 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
+                <div className="relative w-80 h-96 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
                   <Image src="/dr-dede-incluu-headshot.jpg" alt="Dr. Dédé Tetsubayashi" fill className="object-cover" />
                 </div>
-                {/* </CHANGE> */}
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2">Dr. Dédé Tetsubayashi</h3>
                   <p className="text-lg text-purple-600 font-semibold mb-4">
@@ -417,8 +412,10 @@ export default function IncluuPage() {
                     Her TEDx talk on managing artificial intelligence systems to serve everyone, not just the privileged
                     few, has inspired thousands to rethink technology's role in society.
                   </p>
-                  <Button asChild variant="outline">
-                    <Link href="/dr-dede">View Full Bio & Credentials</Link>
+                  <Button asChild variant="outline" className="w-full sm:w-auto bg-transparent">
+                    <a href="https://preview-saas-landing-page-kzmoejne7td6dt9jvv45.vusercontent.net/">
+                      View Full Bio & Credentials
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -852,111 +849,6 @@ export default function IncluuPage() {
         </div>
       </section>
 
-      {/* Featured Resources */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-br from-purple-100 via-cyan-100 to-purple-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200" variant="outline">
-              Free Resources
-            </Badge>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Expert Insights & Implementation Tools</h2>
-            <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
-              Access professionally crafted resources to accelerate your AI governance and tech equity initiatives
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            {/* Resource 1 - Whitepaper */}
-            <div>
-              <SamplePDFPreview
-                title="The Business Case for AI Governance: A Strategic Framework for Enterprise Leaders"
-                type="whitepaper"
-              />
-              <div className="text-center mt-6">
-                <ResourceGateModal
-                  resourceTitle="The Business Case for AI Governance"
-                  resourceType="whitepaper"
-                  resourceDescription="Download this comprehensive 25-page whitepaper exploring how strategic AI governance drives measurable ROI, reduces regulatory risk, and unlocks new market opportunities."
-                >
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800"
-                  >
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Free Whitepaper
-                  </Button>
-                </ResourceGateModal>
-              </div>
-            </div>
-
-            {/* Resource 2 - Tool */}
-            <div>
-              <SamplePDFPreview
-                title="AI Bias Detection Checklist: A Practical Implementation Guide for Product Teams"
-                type="tool"
-              />
-              <div className="text-center mt-6">
-                <ResourceGateModal
-                  resourceTitle="AI Bias Detection Checklist"
-                  resourceType="tool"
-                  resourceDescription="Get this actionable 15-page checklist with step-by-step frameworks for identifying and mitigating algorithmic bias in your AI systems."
-                >
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800"
-                  >
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Free Tool
-                  </Button>
-                </ResourceGateModal>
-              </div>
-            </div>
-
-            {/* Resource 3 - Report */}
-            <div>
-              <SamplePDFPreview
-                title="2025 Tech Equity Trends Report: Market Insights & Strategic Opportunities"
-                type="report"
-              />
-              <div className="text-center mt-6">
-                <ResourceGateModal
-                  resourceTitle="2025 Tech Equity Trends Report"
-                  resourceType="report"
-                  resourceDescription="Access this exclusive 30-page industry report featuring data-driven insights, market analysis, and strategic recommendations for tech equity leaders."
-                >
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-purple-600 via-purple-500 to-cyan-600 hover:from-purple-700 hover:via-purple-600 hover:to-cyan-700"
-                  >
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Free Report
-                  </Button>
-                </ResourceGateModal>
-              </div>
-            </div>
-          </div>
-
-          <Card className="mt-16 bg-white border-purple-200">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4">Want More Resources?</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Join our newsletter to receive exclusive insights, case studies, and implementation frameworks delivered
-                monthly.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent"
-              >
-                <Link href="/contact">Subscribe to Newsletter</Link>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-      {/* </CHANGE> */}
-
       {/* CTA */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Card className="bg-gradient-to-br from-purple-700 via-purple-600 to-cyan-600 text-white border-0 max-w-4xl mx-auto shadow-2xl">
@@ -992,6 +884,60 @@ export default function IncluuPage() {
             </div>
           </CardContent>
         </Card>
+      </section>
+
+      {/* Trusted By Section */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-balance">Trusted By Industry Leaders</h2>
+            <p className="text-muted-foreground text-pretty">
+              Partnering with Fortune 500 companies, innovative startups, and leading institutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+            {/* Row 1 */}
+            <div className="flex items-center justify-center h-12 w-full">
+              <Image src="/microsoft-logo.png" alt="Microsoft" width={100} height={40} className="object-contain" />
+            </div>
+            <div className="flex items-center justify-center h-12 w-full">
+              <Image src="/google-logo.png" alt="Google" width={100} height={40} className="object-contain" />
+            </div>
+            <div className="flex items-center justify-center h-12 w-full">
+              <Image src="/amazon-logo.png" alt="Amazon" width={100} height={40} className="object-contain" />
+            </div>
+            <div className="flex items-center justify-center h-12 w-full">
+              <Image src="/ibm-logo.png" alt="IBM" width={100} height={40} className="object-contain" />
+            </div>
+
+            {/* Row 2 */}
+            <div className="flex items-center justify-center h-12 w-full">
+              <Image
+                src="/stanford-university-logo.png"
+                alt="Stanford University"
+                width={100}
+                height={40}
+                className="object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center h-12 w-full">
+              <Image src="/mit-logo-generic.png" alt="MIT" width={100} height={40} className="object-contain" />
+            </div>
+            <div className="flex items-center justify-center h-12 w-full">
+              <Image src="/salesforce-logo.png" alt="Salesforce" width={100} height={40} className="object-contain" />
+            </div>
+            <div className="flex items-center justify-center h-12 w-full">
+              <Image src="/adobe-logo.png" alt="Adobe" width={100} height={40} className="object-contain" />
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-sm text-muted-foreground">
+              And many more organizations across healthcare, finance, education, and technology sectors
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   )

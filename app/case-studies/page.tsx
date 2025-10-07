@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { ArrowRight, TrendingUp, Shield, Users } from "lucide-react"
+import { ArrowRight, TrendingUp, Shield, Users } from "@/components/icons"
 import { ResourceGateModal } from "@/components/resource-gate-modal"
 
 export const metadata: Metadata = {
@@ -110,12 +110,12 @@ export default function CaseStudiesPage() {
                     </p>
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div>
-                        <div className="text-3xl font-bold text-purple-600 mb-1">$2.8M</div>
-                        <div className="text-sm text-foreground/70">Cost Savings</div>
+                        <div className="text-3xl font-bold text-purple-600 mb-1">$500M+</div>
+                        <div className="text-sm text-foreground/70">Penalties Avoided</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold text-cyan-600 mb-1">40%</div>
-                        <div className="text-sm text-foreground/70">Approval Speed</div>
+                        <div className="text-3xl font-bold text-cyan-600 mb-1">47</div>
+                        <div className="text-sm text-foreground/70">Countries Compliant</div>
                       </div>
                     </div>
                     <ResourceGateModal
@@ -123,9 +123,17 @@ export default function CaseStudiesPage() {
                       resourceType="case-study"
                       resourceDescription="Complete case study with implementation details, ROI analysis, and lessons learned"
                     >
-                      <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                        View Full Analysis
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                      <Button
+                        className="min-w-[200px] bg-purple-600 hover:bg-purple-700 flex items-center justify-center gap-2 flex-nowrap"
+                        asChild
+                      >
+                        <Link
+                          href="/testimonials/stories/fortune-500-cto-testimonial"
+                          className="flex items-center gap-2 flex-nowrap"
+                        >
+                          <span className="whitespace-nowrap min-w-[140px]">View Full Analysis</span>
+                          <ArrowRight className="h-4 w-4 flex-shrink-0" />
+                        </Link>
                       </Button>
                     </ResourceGateModal>
                   </div>
@@ -147,8 +155,8 @@ export default function CaseStudiesPage() {
                       </p>
                       <div className="grid grid-cols-2 gap-4 mb-6">
                         <div>
-                          <div className="text-3xl font-bold text-cyan-600 mb-1">$2.3M</div>
-                          <div className="text-sm text-foreground/70">Cost Savings</div>
+                          <div className="text-3xl font-bold text-cyan-600 mb-1">$100M</div>
+                          <div className="text-sm text-foreground/70">Annual Savings</div>
                         </div>
                         <div>
                           <div className="text-3xl font-bold text-purple-600 mb-1">95%</div>
@@ -160,9 +168,17 @@ export default function CaseStudiesPage() {
                         resourceType="case-study"
                         resourceDescription="Detailed case study with accessibility improvements and market expansion results"
                       >
-                        <Button className="w-full bg-cyan-600 hover:bg-cyan-700">
-                          View Full Analysis
-                          <ArrowRight className="ml-2 h-4 w-4" />
+                        <Button
+                          className="min-w-[200px] bg-cyan-600 hover:bg-cyan-700 flex items-center justify-center gap-2 flex-nowrap"
+                          asChild
+                        >
+                          <Link
+                            href="/testimonials/stories/healthcare-cmo-testimonial"
+                            className="flex items-center gap-2 flex-nowrap"
+                          >
+                            <span className="whitespace-nowrap min-w-[140px]">View Full Analysis</span>
+                            <ArrowRight className="h-4 w-4 flex-shrink-0" />
+                          </Link>
                         </Button>
                       </ResourceGateModal>
                     </div>
@@ -220,12 +236,12 @@ export default function CaseStudiesPage() {
                     </p>
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div>
-                        <div className="text-3xl font-bold text-purple-600 mb-1">$50M</div>
-                        <div className="text-sm text-foreground/70">Funding Secured</div>
+                        <div className="text-3xl font-bold text-purple-600 mb-1">$300M</div>
+                        <div className="text-sm text-foreground/70">New Revenue</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold text-cyan-600 mb-1">35%</div>
-                        <div className="text-sm text-foreground/70">Development Speed</div>
+                        <div className="text-3xl font-bold text-cyan-600 mb-1">23</div>
+                        <div className="text-sm text-foreground/70">New Markets</div>
                       </div>
                     </div>
                     <ResourceGateModal
@@ -233,9 +249,17 @@ export default function CaseStudiesPage() {
                       resourceType="case-study"
                       resourceDescription="Complete case study showing how ethical AI practices secured Series B funding"
                     >
-                      <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                        View Full Analysis
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                      <Button
+                        className="min-w-[200px] bg-purple-600 hover:bg-purple-700 flex items-center justify-center gap-2 flex-nowrap"
+                        asChild
+                      >
+                        <Link
+                          href="/testimonials/stories/consumer-goods-ceo-testimonial"
+                          className="flex items-center gap-2 flex-nowrap"
+                        >
+                          <span className="whitespace-nowrap min-w-[140px]">View Full Analysis</span>
+                          <ArrowRight className="h-4 w-4 flex-shrink-0" />
+                        </Link>
                       </Button>
                     </ResourceGateModal>
                   </div>

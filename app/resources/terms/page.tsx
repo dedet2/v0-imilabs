@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Scale, FileCheck, Shield, AlertCircle, Gavel, Users } from "lucide-react"
+import { Scale, FileCheck, Shield, AlertCircle, Gavel, Users } from "@/components/icons"
 
 export const metadata: Metadata = {
   title: "Terms of Service | Dr. Dédé & incluu",
