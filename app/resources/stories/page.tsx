@@ -49,6 +49,7 @@ export default function StoriesPage() {
                 category: "Innovation",
                 image: "/diverse-team-celebrating-inclusive-product-launch.jpg",
                 stats: { revenue: "$75M", reach: "40%", timeline: "18 months" },
+                slug: "exclusion-to-innovation",
               },
               {
                 icon: Lightbulb,
@@ -60,6 +61,7 @@ export default function StoriesPage() {
                 category: "Compliance",
                 image: "/executive-team-reviewing-compliance-dashboard.jpg",
                 stats: { investment: "$200M", savings: "$50M", timeline: "12 months" },
+                slug: "wake-up-call",
               },
               {
                 icon: BookOpen,
@@ -71,6 +73,7 @@ export default function StoriesPage() {
                 category: "Culture",
                 image: "/diverse-tech-team-collaborating-in-modern-office.jpg",
                 stats: { satisfaction: "92%", retention: "85%", innovation: "60%" },
+                slug: "building-bridges",
               },
               {
                 icon: Users,
@@ -82,6 +85,7 @@ export default function StoriesPage() {
                 category: "Healthcare",
                 image: "/healthcare-professionals-using-accessible-ai-tools.jpg",
                 stats: { accuracy: "95%", savings: "$100M", patients: "2.3M" },
+                slug: "healthcare-ai",
               },
               {
                 icon: Award,
@@ -93,6 +97,7 @@ export default function StoriesPage() {
                 category: "Education",
                 image: "/students-using-accessible-learning-technology.jpg",
                 stats: { market: "45%", funding: "$30M", users: "500K+" },
+                slug: "edtech-accessibility",
               },
               {
                 icon: TrendingUp,
@@ -104,6 +109,7 @@ export default function StoriesPage() {
                 category: "Retail",
                 image: "/accessible-ecommerce-shopping-experience.jpg",
                 stats: { market: "23%", revenue: "$40M", customers: "1.2M" },
+                slug: "retail-ai",
               },
             ].map((story, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-2xl transition-shadow">
@@ -136,8 +142,8 @@ export default function StoriesPage() {
                       ))}
                     </div>
 
-                    <Button variant="link" className="p-0 h-auto text-purple-600 hover:text-purple-700">
-                      Read Full Story →
+                    <Button asChild variant="link" className="p-0 h-auto text-purple-600 hover:text-purple-700">
+                      <Link href={`/resources/stories/${story.slug}`}>Read Full Story →</Link>
                     </Button>
                   </div>
                 </div>
