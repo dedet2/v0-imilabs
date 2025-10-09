@@ -630,7 +630,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/contact?inquiry=media&topic=mit-interview"
                       className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
                     >
                       <ExternalLink className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
@@ -642,7 +642,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/contact?inquiry=media&topic=wef-panel"
                       className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
                     >
                       <ExternalLink className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
@@ -654,7 +654,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/contact?inquiry=media&topic=podcast"
                       className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
                     >
                       <Podcast className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
@@ -666,7 +666,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/contact?inquiry=media&topic=sxsw-keynote"
                       className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
                     >
                       <Video className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
@@ -683,6 +683,7 @@ export default function ResourcesPage() {
               </CardContent>
             </Card>
 
+            {/* Templates & Tools */}
             <Card className="bg-white hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-4 shadow-lg">
@@ -880,6 +881,7 @@ export default function ResourcesPage() {
               </CardContent>
             </Card>
 
+            {/* Training & Workshops */}
             <Card className="bg-white hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-cyan-600 to-cyan-700 flex items-center justify-center mb-4 shadow-lg">
@@ -891,7 +893,10 @@ export default function ResourcesPage() {
               <CardContent>
                 <ul className="space-y-4">
                   <li>
-                    <a href="#" className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2">
+                    <a
+                      href="/contact?inquiry=training&program=ai-governance-certification"
+                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
+                    >
                       <Award className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
                       <div>
                         <div className="font-medium">AI Governance Certification</div>
@@ -900,7 +905,10 @@ export default function ResourcesPage() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2">
+                    <a
+                      href="/contact?inquiry=training&program=executive-workshop"
+                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
+                    >
                       <Users className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
                       <div>
                         <div className="font-medium">Executive Workshop: Tech Equity</div>
@@ -909,7 +917,10 @@ export default function ResourcesPage() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2">
+                    <a
+                      href="/contact?inquiry=training&program=inclusive-design"
+                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
+                    >
                       <Users className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
                       <div>
                         <div className="font-medium">Inclusive Design Masterclass</div>
@@ -918,7 +929,10 @@ export default function ResourcesPage() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2">
+                    <a
+                      href="/contact?inquiry=training&program=webinar-series"
+                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
+                    >
                       <Video className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
                       <div>
                         <div className="font-medium">On-Demand Webinar Series</div>
