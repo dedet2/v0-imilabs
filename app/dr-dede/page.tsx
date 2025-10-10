@@ -210,13 +210,13 @@ export default function DrDedePage() {
             conventional approaches to AI governance and create lasting systemic change
           </p>
 
-          <div className="flex justify-center items-center mb-16">
-            <div className="relative w-96 h-[500px] rounded-lg overflow-hidden shadow-2xl">
+          <div className="flex justify-center mb-16">
+            <div className="relative w-full max-w-md h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/dr-dede-outdoor-professional.jpg"
+                src="/dr-dede-outdoor-urban.jpg"
                 alt="Dr. Dédé Tetsubayashi"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
               />
             </div>
           </div>
@@ -717,7 +717,7 @@ export default function DrDedePage() {
                     variant="secondary"
                     className="w-full bg-white text-purple-600 hover:bg-gray-100"
                   >
-                    <a href="https://www.youtube.com/@the_dr_dede" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/@the_drdede" target="_blank" rel="noopener noreferrer">
                       Subscribe on YouTube
                     </a>
                   </Button>

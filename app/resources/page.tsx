@@ -894,7 +894,7 @@ export default function ResourcesPage() {
                 <ul className="space-y-4">
                   <li>
                     <a
-                      href="/resources/training/ai-governance-certification"
+                      href="/contact?inquiry=training&program=ai-governance-certification"
                       className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
                       <Award className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
@@ -906,7 +906,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/resources/training/executive-workshop"
+                      href="/contact?inquiry=training&program=executive-workshop"
                       className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
                       <Users className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
@@ -918,7 +918,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/resources/training/inclusive-design"
+                      href="/contact?inquiry=training&program=inclusive-design"
                       className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
                       <Users className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
@@ -930,7 +930,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/resources/webinars"
+                      href="/contact?inquiry=training&program=webinar-series"
                       className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
                       <Video className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
