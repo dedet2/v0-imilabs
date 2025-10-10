@@ -38,7 +38,8 @@ export default function IncluuPage() {
             src="/incluu-hero.jpg"
             alt="incluu hero background"
             fill
-            className="object-cover object-right"
+            className="object-cover"
+            style={{ objectPosition: "100% center" }}
             priority
           />
         </div>
