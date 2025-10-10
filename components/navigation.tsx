@@ -171,11 +171,11 @@ export function Navigation() {
                         </div>
                         <p className="text-xs text-muted-foreground mt-1">Transformative experiences</p>
                       </div>
-                      <ChevronDown className="h-3 w-3 -rotate-90" />
+                      <ChevronDown className="h-3 w-3 rotate-90" />
                     </Link>
                     {desktopDropdowns.retreats && (
                       <div
-                        className="absolute right-full top-0 mr-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50"
+                        className="absolute left-full top-0 ml-2 w-64 bg-background border border-border rounded-lg shadow-lg p-2 z-50"
                         onMouseEnter={() => openDesktopDropdown("retreats")}
                         onMouseLeave={() => closeDesktopDropdown("retreats")}
                       >
