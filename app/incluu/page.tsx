@@ -38,11 +38,11 @@ export default function IncluuPage() {
             src="/incluu-hero.jpg"
             alt="incluu hero background"
             fill
-            className="object-cover object-right"
+            className="object-cover object-right opacity-50"
             priority
           />
         </div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#7209b7]/80 via-[#6366f1]/75 to-[#06b6d4]/80" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#7209b7]/40 via-[#6366f1]/45 to-[#06b6d4]/50" />
         <div className="container relative z-20 mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex flex-col items-center gap-4 mb-6">
