@@ -918,7 +918,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/contact?inquiry=training&program=inclusive-design"
+                      href="/resources/training/inclusive-design"
                       className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
                       <Users className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
@@ -930,7 +930,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/contact?inquiry=training&program=webinar-series"
+                      href="/resources/webinars"
                       className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
                       <Video className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />

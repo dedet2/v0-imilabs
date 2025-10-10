@@ -210,21 +210,13 @@ export default function DrDedePage() {
             conventional approaches to AI governance and create lasting systemic change
           </p>
 
-          {/* Circular Badges */}
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-center mb-16">
-            <div className="relative w-64 h-64 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center shadow-2xl">
-              <div className="text-center text-white p-8">
-                <p className="text-sm font-medium leading-relaxed drop-shadow">
-                  with Disability, Equity Professional, Advocate
-                </p>
-              </div>
-            </div>
-            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-gray-200 shadow-2xl">
+          <div className="flex justify-center items-center mb-16">
+            <div className="relative w-96 h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src="/dr-dede-outdoor-professional.jpg"
                 alt="Dr. Dédé Tetsubayashi"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-top"
               />
             </div>
           </div>
@@ -725,7 +717,7 @@ export default function DrDedePage() {
                     variant="secondary"
                     className="w-full bg-white text-purple-600 hover:bg-gray-100"
                   >
-                    <a href="https://www.youtube.com/@the_drdede" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/@the_dr_dede" target="_blank" rel="noopener noreferrer">
                       Subscribe on YouTube
                     </a>
                   </Button>
