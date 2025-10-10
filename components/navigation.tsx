@@ -171,7 +171,7 @@ export function Navigation() {
                         </div>
                         <p className="text-xs text-muted-foreground mt-1">Transformative experiences</p>
                       </div>
-                      <ChevronDown className="h-3 w-3 rotate-90" />
+                      <ChevronDown className="h-3 w-3 -rotate-90" />
                     </Link>
                     {desktopDropdowns.retreats && (
                       <div

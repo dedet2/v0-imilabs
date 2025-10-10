@@ -34,9 +34,11 @@ export default function IncluuPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div
-          className="absolute inset-0 z-0 bg-cover bg-no-repeat"
+          className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url(/incluu-hero.jpg)",
+            backgroundImage: "url('/incluu-hero.jpg')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "right center",
           }}
         />
