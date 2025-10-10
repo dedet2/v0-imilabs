@@ -37,7 +37,7 @@ export default function IncluuPage() {
           className="absolute inset-0 z-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url(/incluu-hero.jpg)",
-            backgroundPosition: "calc(100% + 300px) 50%",
+            backgroundPosition: "calc(100% + 800px) 50%",
           }}
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#7209b7]/80 via-[#6366f1]/75 to-[#06b6d4]/80" />
