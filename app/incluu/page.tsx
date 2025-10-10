@@ -34,7 +34,13 @@ export default function IncluuPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/incluu-hero.jpg" alt="incluu hero background" fill className="object-cover" priority />
+          <Image
+            src="/incluu-hero.jpg"
+            alt="incluu hero background"
+            fill
+            className="object-cover object-right"
+            priority
+          />
         </div>
         <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#7209b7]/80 via-[#6366f1]/75 to-[#06b6d4]/80" />
         <div className="container relative z-20 mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -382,8 +388,13 @@ export default function IncluuPage() {
           <Card className="bg-white/90 backdrop-blur-sm">
             <CardContent className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row gap-8">
-                <div className="relative w-80 h-96 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
-                  <Image src="/dr-dede-incluu-headshot.jpg" alt="Dr. Dédé Tetsubayashi" fill className="object-cover" />
+                <div className="relative w-full md:w-96 h-[500px] rounded-lg overflow-hidden shadow-xl flex-shrink-0">
+                  <Image
+                    src="/dr-dede-incluu-headshot.jpg"
+                    alt="Dr. Dédé Tetsubayashi"
+                    fill
+                    className="object-cover object-top"
+                  />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2">Dr. Dédé Tetsubayashi</h3>
