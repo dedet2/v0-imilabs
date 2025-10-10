@@ -34,11 +34,13 @@ export default function IncluuPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 z-0">
+          {/* CHANGE: Using custom positioning to force right alignment of geometric face */}
           <Image
             src="/incluu-hero.jpg"
             alt="incluu hero background"
             fill
-            className="object-cover object-right"
+            className="object-cover"
+            style={{ objectPosition: "right center" }}
             priority
           />
         </div>

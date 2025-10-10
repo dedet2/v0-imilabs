@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -218,10 +219,13 @@ export default function DrDedePage() {
                 </p>
               </div>
             </div>
-            <div className="relative w-64 h-64 rounded-full bg-white border-4 border-gray-200 flex items-center justify-center shadow-2xl">
-              <div className="text-center p-8">
-                <p className="text-sm font-medium text-gray-700 leading-relaxed">a Dédé in consultation setting</p>
-              </div>
+            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-gray-200 shadow-2xl">
+              <Image
+                src="/dr-dede-outdoor-professional.jpg"
+                alt="Dr. Dédé Tetsubayashi"
+                fill
+                className="object-cover object-center"
+              />
             </div>
           </div>
 
