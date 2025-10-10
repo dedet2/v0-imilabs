@@ -33,13 +33,15 @@ export default function IncluuPage() {
     <div className="relative">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-no-repeat"
-          style={{
-            backgroundImage: "url(/incluu-hero.jpg)",
-            backgroundPosition: "right center",
-          }}
-        />
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/incluu-hero.jpg"
+            alt="incluu hero background"
+            fill
+            className="object-cover object-right"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#7209b7]/80 via-[#6366f1]/75 to-[#06b6d4]/80" />
         <div className="container relative z-20 mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
@@ -500,7 +502,7 @@ export default function IncluuPage() {
                 Proven Business Impact
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground text-pretty">
+            <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
               Real results from strategic AI governance and tech equity implementations across industries
             </p>
           </div>
