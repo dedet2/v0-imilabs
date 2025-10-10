@@ -894,7 +894,7 @@ export default function ResourcesPage() {
                 <ul className="space-y-4">
                   <li>
                     <a
-                      href="/contact?inquiry=training&program=ai-governance-certification"
+                      href="/resources/training/ai-governance-certification"
                       className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
                       <Award className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
@@ -906,7 +906,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/contact?inquiry=training&program=executive-workshop"
+                      href="/resources/training/executive-workshop"
                       className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
                       <Users className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
