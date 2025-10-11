@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -210,14 +209,19 @@ export default function DrDedePage() {
             conventional approaches to AI governance and create lasting systemic change
           </p>
 
-          <div className="flex justify-center mb-16">
-            <div className="relative w-full max-w-md h-[600px] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/dr-dede-outdoor-urban.jpg"
-                alt="Dr. Dédé Tetsubayashi"
-                fill
-                className="object-cover object-center"
-              />
+          {/* Circular Badges */}
+          <div className="flex flex-col md:flex-row gap-8 justify-center items-center mb-16">
+            <div className="relative w-64 h-64 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center shadow-2xl">
+              <div className="text-center text-white p-8">
+                <p className="text-sm font-medium leading-relaxed drop-shadow">
+                  with Disability, Equity Professional, Advocate
+                </p>
+              </div>
+            </div>
+            <div className="relative w-64 h-64 rounded-full bg-white border-4 border-gray-200 flex items-center justify-center shadow-2xl">
+              <div className="text-center p-8">
+                <p className="text-sm font-medium text-gray-700 leading-relaxed">a Dédé in consultation setting</p>
+              </div>
             </div>
           </div>
 

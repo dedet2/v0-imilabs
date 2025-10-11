@@ -187,10 +187,10 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">© {currentYear} Dr. Dédé Tetsubayashi. All rights reserved.</p>
             <div className="flex gap-6 text-sm text-gray-400">
-              <Link href="/resources/privacy" className="hover:text-blue-400 transition-colors duration-200">
+              <Link href="/privacy" className="hover:text-blue-400 transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link href="/resources/terms" className="hover:text-blue-400 transition-colors duration-200">
+              <Link href="/terms" className="hover:text-blue-400 transition-colors duration-200">
                 Terms of Service
               </Link>
               <Link href="/accessibility" className="hover:text-blue-400 transition-colors duration-200">

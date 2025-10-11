@@ -3,10 +3,8 @@ import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { ResourceGateModal } from "@/components/resource-gate-modal"
 import { ResourcePreviewModal } from "@/components/resource-preview-modal"
-import { SamplePDFPreview } from "@/components/sample-pdf-preview"
 import {
   BookOpen,
   FileText,
@@ -20,7 +18,6 @@ import {
   Lightbulb,
   Users,
   Award,
-  ArrowRight,
 } from "@/components/icons"
 
 export const metadata: Metadata = {
@@ -399,204 +396,64 @@ export default function ResourcesPage() {
               <CardContent>
                 <ul className="space-y-4">
                   <li>
-                    <ResourcePreviewModal
-                      title="$50M AI Governance Framework Implementation"
-                      category="Case Study"
-                      badge="AI Governance"
-                      badgeColor="purple"
-                      description="Fortune 500 Healthcare Company"
-                      pageCount="18-page case study"
-                      fileSize="2.2 MB"
-                      executiveSummary="Comprehensive governance framework for AI deployment across 12 countries, enabling $50M+ in product launches with zero compliance violations."
-                      keyInsights={[
-                        "Automated compliance monitoring across 12 jurisdictions",
-                        "Cross-functional governance structure with clear accountability",
-                        "Risk assessment protocols preventing regulatory violations",
-                        "85% faster time-to-market for AI-powered products",
-                      ]}
-                      implementationSteps={[
-                        { title: "Assessment", description: "Current state analysis (4 weeks)" },
-                        { title: "Framework Design", description: "Custom governance structure (6 weeks)" },
-                        { title: "Deployment", description: "Phased implementation (12 weeks)" },
-                      ]}
-                      challenge="Fortune 500 healthcare company needed comprehensive governance framework for AI deployment across 12 countries while maintaining rapid innovation pace."
-                      solution="Developed automated compliance monitoring, risk assessment protocols, and cross-functional governance structure with clear accountability and decision-making processes."
-                      result="$50M+ in product launches enabled, 85% faster time-to-market, zero compliance violations across all jurisdictions, and 40% reduction in legal review cycles."
-                      tags={["AI Governance", "Healthcare", "Global Compliance"]}
-                      metrics={[
-                        { value: "$50M+", label: "Product Launches", sublabel: "Enabled revenue" },
-                        { value: "85%", label: "Faster TTM", sublabel: "Time-to-market" },
-                        { value: "0", label: "Violations", sublabel: "Compliance record" },
-                      ]}
+                    <a
+                      href="/case-studies"
+                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
-                      <button className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2 text-left w-full">
-                        <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
-                        <div>
-                          <div className="font-medium">$50M AI Governance Implementation</div>
-                          <div className="text-xs text-muted-foreground">Fortune 500 Healthcare</div>
-                        </div>
-                      </button>
-                    </ResourcePreviewModal>
+                      <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
+                      <div>
+                        <div className="font-medium">$50M AI Governance Implementation</div>
+                        <div className="text-xs text-muted-foreground">Fortune 500 Healthcare</div>
+                      </div>
+                    </a>
                   </li>
                   <li>
-                    <ResourcePreviewModal
-                      title="$25M Digital Equity in Healthcare AI"
-                      category="Case Study"
-                      badge="Digital Equity"
-                      badgeColor="cyan"
-                      description="Regional Health System"
-                      pageCount="16-page case study"
-                      fileSize="1.9 MB"
-                      executiveSummary="Bias detection framework and inclusive algorithm design resulting in 95% improvement in diagnostic accuracy across all demographics."
-                      keyInsights={[
-                        "Comprehensive bias detection across AI diagnostic tools",
-                        "Diverse data sourcing strategies for representative datasets",
-                        "Inclusive algorithm design principles and testing protocols",
-                        "$25M cost savings from reduced misdiagnoses",
-                      ]}
-                      implementationSteps={[
-                        { title: "Audit", description: "Bias assessment (3 weeks)" },
-                        { title: "Data Strategy", description: "Diverse sourcing (6 weeks)" },
-                        { title: "Algorithm Redesign", description: "Inclusive design (8 weeks)" },
-                      ]}
-                      challenge="AI diagnostic tools showing significant bias against minority populations, leading to misdiagnoses and potential liability risks."
-                      solution="Implemented comprehensive bias detection framework, diverse data sourcing strategies, and inclusive algorithm design principles with continuous monitoring."
-                      result="95% improvement in diagnostic accuracy across all demographics, $25M cost savings from reduced misdiagnoses, and enhanced patient trust and satisfaction."
-                      tags={["Digital Equity", "Healthcare AI", "Bias Detection"]}
-                      metrics={[
-                        { value: "95%", label: "Accuracy Gain", sublabel: "All demographics" },
-                        { value: "$25M", label: "Cost Savings", sublabel: "Reduced errors" },
-                        { value: "100%", label: "Patient Trust", sublabel: "Satisfaction score" },
-                      ]}
+                    <a
+                      href="/case-studies"
+                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
-                      <button className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2 text-left w-full">
-                        <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
-                        <div>
-                          <div className="font-medium">$25M Digital Equity in Healthcare AI</div>
-                          <div className="text-xs text-muted-foreground">Regional health system</div>
-                        </div>
-                      </button>
-                    </ResourcePreviewModal>
+                      <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
+                      <div>
+                        <div className="font-medium">$25M Digital Equity in Healthcare AI</div>
+                        <div className="text-xs text-muted-foreground">Regional health system</div>
+                      </div>
+                    </a>
                   </li>
                   <li>
-                    <ResourcePreviewModal
-                      title="$75M FinTech Regulatory Compliance Transformation"
-                      category="Case Study"
-                      badge="Financial Services"
-                      badgeColor="purple"
-                      description="Global Financial Services Platform"
-                      pageCount="20-page case study"
-                      fileSize="2.4 MB"
-                      executiveSummary="Comprehensive compliance framework enabling $75M Series B funding and 40% expansion in underserved markets with 100% regulatory compliance."
-                      keyInsights={[
-                        "Multi-jurisdiction compliance framework for financial services",
-                        "Automated monitoring systems for real-time compliance tracking",
-                        "Inclusive credit scoring models expanding market access",
-                        "100% regulatory compliance across 8 states",
-                      ]}
-                      implementationSteps={[
-                        { title: "Regulatory Mapping", description: "Jurisdiction analysis (4 weeks)" },
-                        { title: "Framework Development", description: "Compliance structure (8 weeks)" },
-                        { title: "System Integration", description: "Automated monitoring (10 weeks)" },
-                      ]}
-                      challenge="Navigate complex multi-jurisdiction financial regulations while scaling inclusive lending platform and preparing for Series B funding."
-                      solution="Developed comprehensive compliance framework with automated monitoring systems and inclusive credit scoring models that meet regulatory requirements while expanding market access."
-                      result="$75M Series B funding secured, 40% expansion in underserved markets, 100% regulatory compliance across 8 states, and zero compliance violations."
-                      tags={["FinTech", "Regulatory Compliance", "Financial Inclusion"]}
-                      metrics={[
-                        { value: "$75M", label: "Funding Secured", sublabel: "Series B" },
-                        { value: "40%", label: "Market Growth", sublabel: "Underserved segments" },
-                        { value: "100%", label: "Compliance", sublabel: "8 states" },
-                      ]}
+                    <a
+                      href="/case-studies"
+                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
-                      <button className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2 text-left w-full">
-                        <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
-                        <div>
-                          <div className="font-medium">$75M FinTech Compliance Framework</div>
-                          <div className="text-xs text-muted-foreground">Global financial services</div>
-                        </div>
-                      </button>
-                    </ResourcePreviewModal>
+                      <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
+                      <div>
+                        <div className="font-medium">$75M FinTech Compliance Framework</div>
+                        <div className="text-xs text-muted-foreground">Global financial services</div>
+                      </div>
+                    </a>
                   </li>
                   <li>
-                    <ResourcePreviewModal
-                      title="$30M EdTech Accessibility & Compliance Initiative"
-                      category="Case Study"
-                      badge="Education Technology"
-                      badgeColor="cyan"
-                      description="Leading Education Platform"
-                      pageCount="17-page case study"
-                      fileSize="2.0 MB"
-                      executiveSummary="Complete accessibility audit and inclusive design overhaul securing $30M in new contracts and 200% increase in users with disabilities."
-                      keyInsights={[
-                        "Comprehensive WCAG 2.1 AA compliance audit and remediation",
-                        "Inclusive design overhaul with user-centered testing",
-                        "Staff training program for accessibility best practices",
-                        "Industry accessibility award recognition",
-                      ]}
-                      implementationSteps={[
-                        { title: "Accessibility Audit", description: "WCAG assessment (3 weeks)" },
-                        { title: "Design Overhaul", description: "Inclusive redesign (10 weeks)" },
-                        { title: "Training Program", description: "Staff development (6 weeks)" },
-                      ]}
-                      challenge="Learning platform failing WCAG 2.1 AA standards, risking $12M in institutional contracts and facing potential accessibility lawsuits."
-                      solution="Conducted complete accessibility audit, implemented inclusive design overhaul with user-centered testing, and developed comprehensive staff training program."
-                      result="$30M in new contracts secured, 200% increase in users with disabilities, industry accessibility award, and zero accessibility complaints."
-                      tags={["EdTech", "Accessibility", "WCAG Compliance"]}
-                      metrics={[
-                        { value: "$30M", label: "New Contracts", sublabel: "Secured revenue" },
-                        { value: "200%", label: "User Growth", sublabel: "With disabilities" },
-                        { value: "100%", label: "WCAG AA", sublabel: "Compliance" },
-                      ]}
+                    <a
+                      href="/case-studies"
+                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
-                      <button className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2 text-left w-full">
-                        <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
-                        <div>
-                          <div className="font-medium">$30M EdTech Accessibility Transformation</div>
-                          <div className="text-xs text-muted-foreground">Leading education platform</div>
-                        </div>
-                      </button>
-                    </ResourcePreviewModal>
+                      <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
+                      <div>
+                        <div className="font-medium">$30M EdTech Accessibility Transformation</div>
+                        <div className="text-xs text-muted-foreground">Leading education platform</div>
+                      </div>
+                    </a>
                   </li>
                   <li>
-                    <ResourcePreviewModal
-                      title="$40M AI-Powered Personalization Ethics Framework"
-                      category="Case Study"
-                      badge="Retail & E-Commerce"
-                      badgeColor="purple"
-                      description="E-Commerce Leader"
-                      pageCount="19-page case study"
-                      fileSize="2.3 MB"
-                      executiveSummary="Ethical AI framework and fairness testing protocols resulting in $40M revenue increase and 60% improvement in cross-demographic engagement."
-                      keyInsights={[
-                        "Comprehensive ethical AI framework for personalization",
-                        "Fairness testing protocols for recommendation algorithms",
-                        "Diverse data strategies for representative customer insights",
-                        "Zero discrimination complaints post-implementation",
-                      ]}
-                      implementationSteps={[
-                        { title: "Ethics Framework", description: "Policy development (4 weeks)" },
-                        { title: "Algorithm Testing", description: "Fairness protocols (6 weeks)" },
-                        { title: "Data Strategy", description: "Diverse sourcing (8 weeks)" },
-                      ]}
-                      challenge="Recommendation algorithms perpetuating demographic biases, limiting market reach and creating potential discrimination risks."
-                      solution="Developed comprehensive ethical AI framework with fairness testing protocols and diverse data strategies to ensure equitable personalization across all customer segments."
-                      result="$40M revenue increase from expanded customer base, 60% improvement in cross-demographic engagement, zero discrimination complaints, and enhanced brand reputation."
-                      tags={["Retail AI", "Algorithmic Fairness", "Personalization"]}
-                      metrics={[
-                        { value: "$40M", label: "Revenue Growth", sublabel: "New customers" },
-                        { value: "60%", label: "Engagement", sublabel: "Cross-demographic" },
-                        { value: "0", label: "Complaints", sublabel: "Discrimination" },
-                      ]}
+                    <a
+                      href="/case-studies"
+                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
                     >
-                      <button className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2 text-left w-full">
-                        <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
-                        <div>
-                          <div className="font-medium">$40M Retail AI Personalization</div>
-                          <div className="text-xs text-muted-foreground">E-commerce leader</div>
-                        </div>
-                      </button>
-                    </ResourcePreviewModal>
+                      <TrendingUp className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
+                      <div>
+                        <div className="font-medium">$40M Retail AI Personalization</div>
+                        <div className="text-xs text-muted-foreground">E-commerce leader</div>
+                      </div>
+                    </a>
                   </li>
                 </ul>
                 <Button asChild variant="outline" className="w-full mt-6 bg-transparent">
@@ -630,7 +487,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/contact?inquiry=media&topic=mit-interview"
+                      href="#"
                       className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
                     >
                       <ExternalLink className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
@@ -642,7 +499,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/contact?inquiry=media&topic=wef-panel"
+                      href="#"
                       className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
                     >
                       <ExternalLink className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
@@ -654,7 +511,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/contact?inquiry=media&topic=podcast"
+                      href="#"
                       className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
                     >
                       <Podcast className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
@@ -666,7 +523,7 @@ export default function ResourcesPage() {
                   </li>
                   <li>
                     <a
-                      href="/contact?inquiry=media&topic=sxsw-keynote"
+                      href="#"
                       className="group text-sm hover:text-purple-600 transition-colors flex items-start gap-2"
                     >
                       <Video className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-purple-600" />
@@ -683,7 +540,6 @@ export default function ResourcesPage() {
               </CardContent>
             </Card>
 
-            {/* Templates & Tools */}
             <Card className="bg-white hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-4 shadow-lg">
@@ -881,7 +737,6 @@ export default function ResourcesPage() {
               </CardContent>
             </Card>
 
-            {/* Training & Workshops */}
             <Card className="bg-white hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-cyan-600 to-cyan-700 flex items-center justify-center mb-4 shadow-lg">
@@ -893,10 +748,7 @@ export default function ResourcesPage() {
               <CardContent>
                 <ul className="space-y-4">
                   <li>
-                    <a
-                      href="/contact?inquiry=training&program=ai-governance-certification"
-                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
-                    >
+                    <a href="#" className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2">
                       <Award className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
                       <div>
                         <div className="font-medium">AI Governance Certification</div>
@@ -905,10 +757,7 @@ export default function ResourcesPage() {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/contact?inquiry=training&program=executive-workshop"
-                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
-                    >
+                    <a href="#" className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2">
                       <Users className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
                       <div>
                         <div className="font-medium">Executive Workshop: Tech Equity</div>
@@ -917,10 +766,7 @@ export default function ResourcesPage() {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/contact?inquiry=training&program=inclusive-design"
-                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
-                    >
+                    <a href="#" className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2">
                       <Users className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
                       <div>
                         <div className="font-medium">Inclusive Design Masterclass</div>
@@ -929,10 +775,7 @@ export default function ResourcesPage() {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/contact?inquiry=training&program=webinar-series"
-                      className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2"
-                    >
+                    <a href="#" className="group text-sm hover:text-cyan-600 transition-colors flex items-start gap-2">
                       <Video className="h-4 w-4 mt-0.5 flex-shrink-0 group-hover:text-cyan-600" />
                       <div>
                         <div className="font-medium">On-Demand Webinar Series</div>
@@ -1184,112 +1027,6 @@ export default function ResourcesPage() {
           </div>
         </div>
 
-        {/* Added Expert Insights & Implementation Tools section */}
-        <section className="py-20 bg-gradient-to-br from-purple-100 via-cyan-100 to-purple-100">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200" variant="outline">
-                Free Resources
-              </Badge>
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">
-                Expert Insights & Implementation Tools
-              </h2>
-              <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
-                Access professionally crafted resources to accelerate your AI governance and tech equity initiatives
-              </p>
-            </div>
-
-            <div className="space-y-12">
-              {/* Resource 1 - Whitepaper */}
-              <div>
-                <SamplePDFPreview
-                  title="The Business Case for AI Governance: A Strategic Framework for Enterprise Leaders"
-                  type="whitepaper"
-                />
-                <div className="text-center mt-6">
-                  <ResourceGateModal
-                    resourceTitle="The Business Case for AI Governance"
-                    resourceType="whitepaper"
-                    resourceDescription="Download this comprehensive 25-page whitepaper exploring how strategic AI governance drives measurable ROI, reduces regulatory risk, and unlocks new market opportunities."
-                  >
-                    <Button
-                      size="lg"
-                      className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800"
-                    >
-                      <Download className="mr-2 h-5 w-5" />
-                      Download Free Whitepaper
-                    </Button>
-                  </ResourceGateModal>
-                </div>
-              </div>
-
-              {/* Resource 2 - Tool */}
-              <div>
-                <SamplePDFPreview
-                  title="AI Bias Detection Checklist: A Practical Implementation Guide for Product Teams"
-                  type="tool"
-                />
-                <div className="text-center mt-6">
-                  <ResourceGateModal
-                    resourceTitle="AI Bias Detection Checklist"
-                    resourceType="tool"
-                    resourceDescription="Get this actionable 15-page checklist with step-by-step frameworks for identifying and mitigating algorithmic bias in your AI systems."
-                  >
-                    <Button
-                      size="lg"
-                      className="bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800"
-                    >
-                      <Download className="mr-2 h-5 w-5" />
-                      Download Free Tool
-                    </Button>
-                  </ResourceGateModal>
-                </div>
-              </div>
-
-              {/* Resource 3 - Report */}
-              <div>
-                <SamplePDFPreview
-                  title="2025 Tech Equity Trends Report: Market Insights & Strategic Opportunities"
-                  type="report"
-                />
-                <div className="text-center mt-6">
-                  <ResourceGateModal
-                    resourceTitle="2025 Tech Equity Trends Report"
-                    resourceType="report"
-                    resourceDescription="Access this exclusive 30-page industry report featuring data-driven insights, market analysis, and strategic recommendations for tech equity leaders."
-                  >
-                    <Button
-                      size="lg"
-                      className="bg-gradient-to-r from-purple-600 via-purple-500 to-cyan-600 hover:from-purple-700 hover:via-purple-600 hover:to-cyan-700"
-                    >
-                      <Download className="mr-2 h-5 w-5" />
-                      Download Free Report
-                    </Button>
-                  </ResourceGateModal>
-                </div>
-              </div>
-            </div>
-
-            <Card className="mt-16 bg-white border-purple-200">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Want More Resources?</h3>
-                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Join our newsletter to receive exclusive insights, case studies, and implementation frameworks
-                  delivered monthly.
-                </p>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent"
-                >
-                  <Link href="/contact">Subscribe to Newsletter</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
         <div className="max-w-6xl mx-auto mb-16">
           <Card className="bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-500 text-white border-0 shadow-2xl">
             <CardContent className="p-8 md:p-12">
@@ -1312,79 +1049,6 @@ export default function ResourcesPage() {
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl font-bold mb-2 text-white drop-shadow-lg">50+</div>
                   <div className="text-white/90 text-sm">Organizations Transformed</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Stay Ahead of the Curve section */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <Card className="bg-white border-gray-200 shadow-lg">
-            <CardContent className="p-12 text-center">
-              <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-600 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <FileText className="h-8 w-8 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold mb-4">Stay Ahead of the Curve</h2>
-              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-                Join 10,000+ leaders receiving exclusive insights on AI governance, tech equity, and inclusive
-                innovation. Get monthly updates, early access to new resources, and invitations to exclusive events.
-              </p>
-              <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
-                <Input type="email" placeholder="Enter your email" className="flex-1" aria-label="Email address" />
-                <Button
-                  type="submit"
-                  className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700"
-                >
-                  Subscribe
-                </Button>
-              </form>
-              <p className="text-xs text-muted-foreground">
-                No spam. Unsubscribe anytime. Read our{" "}
-                <Link href="/privacy" className="underline hover:text-foreground">
-                  privacy policy
-                </Link>
-                .
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Ready to Transform Your Organization section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="bg-gradient-to-br from-purple-700 via-purple-600 to-cyan-600 text-white border-0 shadow-2xl overflow-hidden">
-            <CardContent className="p-12 text-center relative">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.1),transparent_60%)]" />
-              <div className="relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
-                  Ready to Transform Your Organization?
-                </h2>
-                <p className="text-lg text-white/95 mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow">
-                  Schedule a complimentary discovery call to discuss how our proven frameworks can drive measurable
-                  results for your organization.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="secondary"
-                    className="bg-white text-purple-700 hover:bg-gray-100 shadow-lg"
-                  >
-                    <Link href="/contact">
-                      Schedule Free Consultation
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm bg-transparent"
-                  >
-                    <Link href="/case-studies">View Success Stories</Link>
-                  </Button>
                 </div>
               </div>
             </CardContent>
