@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowLeft } from "@/components/icons"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Healthcare CMO Testimonial | Dr. Dédé Tetsubayashi",
@@ -36,89 +37,76 @@ export default function HealthcareCMOTestimonialPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-purple-700 mb-4">The Crisis</h2>
-                <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
-                  <p>
-                    "As CMO of a regional healthcare system with 847 facilities, I was facing a crisis that kept me up
-                    at night. Our AI diagnostic systems, which we'd invested millions in, were systematically failing
-                    disabled patients. Misdiagnoses were costing us $100M annually in extended treatments, malpractice
-                    claims, and regulatory penalties."
-                  </p>
-                  <p>
-                    "But the financial cost paled in comparison to the human cost. We were failing the patients who
-                    needed us most. Our mission is quality healthcare for everyone, and our AI systems were undermining
-                    that mission every single day."
-                  </p>
-                </div>
-              </div>
+            <div className="relative h-96 w-full mb-12 rounded-xl overflow-hidden">
+              <Image
+                src="/healthcare-professionals-using-accessible-medical-.jpg"
+                alt="Healthcare AI Transformation"
+                fill
+                className="object-cover"
+              />
+            </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-purple-700 mb-4">Finding the Solution</h2>
-                <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
-                  <p>
-                    "I'd heard Dr. Tetsubayashi speak at a medical technology conference about AI bias in healthcare.
-                    Her presentation was different from the usual academic discussions—she provided concrete examples of
-                    how AI systems fail disabled patients and, more importantly, how to fix them."
-                  </p>
-                  <p>
-                    "Within a week of our first conversation, she was on-site conducting a comprehensive audit of our AI
-                    systems. What she found was worse than I'd feared but also gave us a clear path forward."
-                  </p>
-                </div>
-              </div>
+            <div className="prose prose-lg max-w-none">
+              <h2>The Crisis</h2>
+              <p className="text-lg leading-relaxed">
+                "As CMO of a regional healthcare system with 847 facilities, I was facing a crisis that kept me up at
+                night. Our AI diagnostic systems, which we'd invested millions in, were systematically failing disabled
+                patients. Misdiagnoses were costing us $100M annually in extended treatments, malpractice claims, and
+                regulatory penalties."
+              </p>
+              <p className="text-lg leading-relaxed">
+                "But the financial cost paled in comparison to the human cost. We were failing the patients who needed
+                us most. Our mission is quality healthcare for everyone, and our AI systems were undermining that
+                mission every single day."
+              </p>
 
-              <div>
-                <h2 className="text-2xl font-bold text-purple-700 mb-4">The Transformation</h2>
-                <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
-                  <p>
-                    "Dr. Tetsubayashi's approach was comprehensive and systematic. She didn't just fix our AI
-                    algorithms—she transformed our entire approach to healthcare technology. We retrained our diagnostic
-                    models with inclusive datasets, implemented bias detection protocols, and established continuous
-                    monitoring systems."
-                  </p>
-                  <p>
-                    "But the technical fixes were only part of the solution. She also educated our entire medical
-                    staff—from physicians to nurses to technicians—on inclusive healthcare technology. The cultural
-                    shift was as important as the technical improvements."
-                  </p>
-                </div>
-              </div>
+              <h2>Finding the Solution</h2>
+              <p className="text-lg leading-relaxed">
+                "I'd heard Dr. Tetsubayashi speak at a medical technology conference about AI bias in healthcare. Her
+                presentation was different from the usual academic discussions—she provided concrete examples of how AI
+                systems fail disabled patients and, more importantly, how to fix them."
+              </p>
+              <p className="text-lg leading-relaxed">
+                "Within a week of our first conversation, she was on-site conducting a comprehensive audit of our AI
+                systems. What she found was worse than I'd feared but also gave us a clear path forward."
+              </p>
 
-              <div>
-                <h2 className="text-2xl font-bold text-purple-700 mb-4">The Results</h2>
-                <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
-                  <p>
-                    "The results were transformative. Within 12 months, our diagnostic accuracy for all patients
-                    improved by 95%. Misdiagnoses dropped to near zero. Patient satisfaction scores reached all-time
-                    highs. And we were saving $100M annually in costs we'd previously accepted as inevitable."
-                  </p>
-                  <p>
-                    "But the most meaningful impact was on patient outcomes. We were finally fulfilling our mission:
-                    quality healthcare for everyone, regardless of disability status. Our malpractice claims dropped
-                    dramatically, and our reputation in the community soared."
-                  </p>
-                </div>
-              </div>
+              <h2>The Transformation</h2>
+              <p className="text-lg leading-relaxed">
+                "Dr. Tetsubayashi's approach was comprehensive and systematic. She didn't just fix our AI algorithms—she
+                transformed our entire approach to healthcare technology. We retrained our diagnostic models with
+                inclusive datasets, implemented bias detection protocols, and established continuous monitoring
+                systems."
+              </p>
+              <p className="text-lg leading-relaxed">
+                "But the technical fixes were only part of the solution. She also educated our entire medical staff—from
+                physicians to nurses to technicians—on inclusive healthcare technology. The cultural shift was as
+                important as the technical improvements."
+              </p>
 
-              <div>
-                <h2 className="text-2xl font-bold text-purple-700 mb-4">The Lasting Impact</h2>
-                <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
-                  <p>
-                    "Today, we're a model for accessible healthcare AI. Other healthcare systems come to us to learn how
-                    we did it. Dr. Tetsubayashi helped us establish an AI ethics committee that reviews every new
-                    technology before deployment. We've prevented dozens of potential issues before they became
-                    problems."
-                  </p>
-                  <p>
-                    "If your healthcare organization is struggling with AI bias, don't wait until you're in crisis mode.
-                    Dr. Tetsubayashi's expertise can help you build inclusive healthcare AI systems that serve all
-                    patients equally. The investment pays for itself many times over—in both financial returns and
-                    patient outcomes."
-                  </p>
-                </div>
-              </div>
+              <h2>The Results</h2>
+              <p className="text-lg leading-relaxed">
+                "The results were transformative. Within 12 months, our diagnostic accuracy for all patients improved by
+                95%. Misdiagnoses dropped to near zero. Patient satisfaction scores reached all-time highs. And we were
+                saving $100M annually in costs we'd previously accepted as inevitable."
+              </p>
+              <p className="text-lg leading-relaxed">
+                "But the most meaningful impact was on patient outcomes. We were finally fulfilling our mission: quality
+                healthcare for everyone, regardless of disability status. Our malpractice claims dropped dramatically,
+                and our reputation in the community soared."
+              </p>
+
+              <h2>The Lasting Impact</h2>
+              <p className="text-lg leading-relaxed">
+                "Today, we're a model for accessible healthcare AI. Other healthcare systems come to us to learn how we
+                did it. Dr. Tetsubayashi helped us establish an AI ethics committee that reviews every new technology
+                before deployment. We've prevented dozens of potential issues before they became problems."
+              </p>
+              <p className="text-lg leading-relaxed">
+                "If your healthcare organization is struggling with AI bias, don't wait until you're in crisis mode. Dr.
+                Tetsubayashi's expertise can help you build inclusive healthcare AI systems that serve all patients
+                equally. The investment pays for itself many times over—in both financial returns and patient outcomes."
+              </p>
             </div>
 
             <Card className="mt-12 p-8 bg-purple-50 border-purple-200">
