@@ -39,7 +39,7 @@ export default function IncluuPage() {
             alt="incluu hero background"
             fill
             className="object-cover"
-            style={{ objectPosition: "90% 50%" }} // Moved from 80% to 90% to position face further right, away from centered text
+            style={{ objectPosition: "35% 50%" }} // Adjusted from 80% to 35% - since the geometric face is on the right side of the source image (~70% position), positioning the image at 35% brings the face into view on the right side of the viewport
             priority
           />
         </div>
@@ -236,7 +236,7 @@ export default function IncluuPage() {
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
             Building Equitable and Compliant Products
           </h3>
-          <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
+          <p className="text-lg text-muted-foreground text-pretty">
             Our comprehensive approach ensures your technology products meet the highest standards of equity,
             accessibility, and regulatory compliance—transforming potential risks into competitive advantages.
           </p>
