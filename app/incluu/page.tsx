@@ -39,14 +39,12 @@ export default function IncluuPage() {
             alt="incluu hero background"
             fill
             className="object-cover"
-            style={{ objectPosition: "20% 50%" }} // Adjusted from 35% to 20% - shifts image further left to position the geometric face (on right side of source image) completely to the right of the centered text, improving readability and accessibility
+            style={{ objectPosition: "10% 50%" }} // Adjusted from 20% to 10% - shifts image further left to position the geometric face (located at ~70-80% within source image) completely to the right of centered text, eliminating overlap and improving readability
             priority
           />
         </div>
         <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#7209b7]/10 via-[#6366f1]/10 to-[#06b6d4]/15" />
         <div className="container relative z-20 mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4]" />
-        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex flex-col items-center gap-4 mb-6">
               <div className="flex items-center gap-2">
@@ -391,8 +389,13 @@ export default function IncluuPage() {
           <Card className="bg-white/90 backdrop-blur-sm">
             <CardContent className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row gap-8">
-                <div className="relative w-80 h-96 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
-                  <Image src="/dr-dede-incluu-headshot.jpg" alt="Dr. Dédé Tetsubayashi" fill className="object-cover" />
+                <div className="relative w-full md:w-96 h-[500px] rounded-lg overflow-hidden shadow-xl flex-shrink-0">
+                  <Image
+                    src="/dr-dede-incluu-headshot.jpg"
+                    alt="Dr. Dédé Tetsubayashi"
+                    fill
+                    className="object-cover object-top"
+                  />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2">Dr. Dédé Tetsubayashi</h3>
@@ -425,9 +428,7 @@ export default function IncluuPage() {
                     few, has inspired thousands to rethink technology's role in society.
                   </p>
                   <Button asChild variant="outline" className="w-full sm:w-auto bg-transparent">
-                    <a href="https://preview-saas-landing-page-kzmoejne7td6dt9jvv45.vusercontent.net/">
-                      View Full Bio & Credentials
-                    </a>
+                    <a href="/dr-dede">View Full Bio & Credentials</a>
                   </Button>
                 </div>
               </div>
@@ -502,7 +503,7 @@ export default function IncluuPage() {
                 Proven Business Impact
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
+            <p className="text-lg text-muted-foreground text-pretty">
               Real results from strategic AI governance and tech equity implementations across industries
             </p>
           </div>
@@ -764,7 +765,7 @@ export default function IncluuPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Client Success Stories</h2>
-            <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
+            <p className="text-lg text-muted-foreground text-pretty">
               Trusted by leading organizations across industries
             </p>
           </div>
@@ -900,47 +901,161 @@ export default function IncluuPage() {
 
       {/* Trusted By Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3 text-balance">Trusted By Industry Leaders</h2>
             <p className="text-muted-foreground text-pretty">
-              Partnering with Fortune 500 companies, innovative startups, and leading institutions
+              Partnering with leading organizations committed to ethical technology and inclusive innovation
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-            {/* Row 1 */}
-            <div className="flex items-center justify-center h-12 w-full">
-              <Image src="/microsoft-logo.png" alt="Microsoft" width={100} height={40} className="object-contain" />
-            </div>
-            <div className="flex items-center justify-center h-12 w-full">
-              <Image src="/google-logo.png" alt="Google" width={100} height={40} className="object-contain" />
-            </div>
-            <div className="flex items-center justify-center h-12 w-full">
-              <Image src="/amazon-logo.png" alt="Amazon" width={100} height={40} className="object-contain" />
-            </div>
-            <div className="flex items-center justify-center h-12 w-full">
-              <Image src="/ibm-logo.png" alt="IBM" width={100} height={40} className="object-contain" />
-            </div>
-
-            {/* Row 2 */}
-            <div className="flex items-center justify-center h-12 w-full">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 items-center justify-items-center">
+            {/* Industry Leaders */}
+            <div className="flex items-center justify-center h-20 w-full px-4">
               <Image
-                src="/stanford-university-logo.png"
-                alt="Stanford University"
-                width={100}
-                height={40}
-                className="object-contain"
+                src="/microsoft-logo.png"
+                alt="Microsoft"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
               />
             </div>
-            <div className="flex items-center justify-center h-12 w-full">
-              <Image src="/mit-logo-generic.png" alt="MIT" width={100} height={40} className="object-contain" />
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/google-logo.png"
+                alt="Google"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
             </div>
-            <div className="flex items-center justify-center h-12 w-full">
-              <Image src="/salesforce-logo.png" alt="Salesforce" width={100} height={40} className="object-contain" />
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/amazon-logo.png"
+                alt="Amazon"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
             </div>
-            <div className="flex items-center justify-center h-12 w-full">
-              <Image src="/adobe-logo.png" alt="Adobe" width={100} height={40} className="object-contain" />
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/ibm-logo.png"
+                alt="IBM"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/stanford-university-logo.png"
+                alt="Stanford"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/mit-logo-generic.png"
+                alt="MIT"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/adobe-logo.png"
+                alt="Adobe"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/salesforce-cloud-logo.png"
+                alt="Salesforce"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+
+            {/* incluu.us Partners */}
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/meta-logo.webp"
+                alt="Meta"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/rakuten-logo.webp"
+                alt="Rakuten"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/asu-logo.webp"
+                alt="Arizona State University"
+                width={160}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/burkes-logo.webp"
+                alt="Burke's"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/signifyd-logo.webp"
+                alt="SIGNIFYD"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/leverage-to-lead-logo.webp"
+                alt="Leverage to Lead"
+                width={160}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/mystilio-logo.webp"
+                alt="Mysilio"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
+            </div>
+            <div className="flex items-center justify-center h-20 w-full px-4">
+              <Image
+                src="/refound-logo.webp"
+                alt="Refound"
+                width={140}
+                height={60}
+                className="object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
             </div>
           </div>
 
