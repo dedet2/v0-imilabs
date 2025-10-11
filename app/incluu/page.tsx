@@ -39,7 +39,7 @@ export default function IncluuPage() {
             alt="incluu hero background"
             fill
             className="object-cover"
-            style={{ objectPosition: "70% 50%" }}
+            style={{ objectPosition: "85% 50%" }}
             priority
           />
         </div>
