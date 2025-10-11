@@ -92,7 +92,7 @@ export default function HomePage() {
 
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 transform hover:scale-[1.02] transition-all duration-500 animate-fade-in-up animation-delay-200">
                 <Image
-                  src="/professional-portrait-of-african-american-woman-te.jpg"
+                  src="/DrDede47.jpg"
                   alt="Dr. Dédé Tetsubayashi - AI Governance Expert"
                   fill
                   className="object-cover"
