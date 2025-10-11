@@ -39,7 +39,7 @@ export default function IncluuPage() {
             alt="incluu hero background"
             fill
             className="object-cover"
-            style={{ objectPosition: "70% 50%" }} // Reverted from 85% back to 70%
+            style={{ objectPosition: "80% 50%" }} // Moved from 70% to 80% to position face further right
             priority
           />
         </div>
@@ -248,7 +248,7 @@ export default function IncluuPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Investment Packages</h2>
-            <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
+            <p className="text-lg text-muted-foreground text-pretty">
               Strategic engagements designed to deliver measurable ROI and lasting organizational transformation
             </p>
             <Badge className="mt-4 bg-red-100 text-red-700 border-red-200" variant="outline">
