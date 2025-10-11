@@ -39,7 +39,7 @@ export default function IncluuPage() {
             alt="incluu hero background"
             fill
             className="object-cover"
-            style={{ objectPosition: "80% 50%" }} // Moved from 70% to 80% to position face further right
+            style={{ objectPosition: "90% 50%" }} // Moved from 80% to 90% to position face further right, away from centered text
             priority
           />
         </div>
