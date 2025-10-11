@@ -38,15 +38,14 @@ export default function IncluuPage() {
             src="/incluu-hero.jpg"
             alt="incluu hero background"
             fill
-            className="object-cover"
-            style={{ objectPosition: "0% 50%" }}
+            className="object-cover object-right"
             priority
           />
         </div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#7209b7]/10 via-[#6366f1]/10 to-[#06b6d4]/15" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#7209b7]/5 via-[#6366f1]/5 to-[#06b6d4]/10" />
         <div className="container relative z-20 mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex flex-col items-center gap-4 mb-6">
+          <div className="max-w-2xl">
+            <div className="inline-flex flex-col items-start gap-4 mb-6">
               <div className="flex items-center gap-2">
                 <div className="relative h-10 w-10 rounded-lg overflow-hidden">
                   <Image src="/incluu-logo.png" alt="incluu logo" fill className="object-contain" />
@@ -64,12 +63,12 @@ export default function IncluuPage() {
               Expert AI Governance &<br />
               <span className="text-cyan-100">Tech Equity Solutions</span>
             </h1>
-            <p className="text-xl text-white/95 mb-8 max-w-3xl mx-auto text-pretty leading-relaxed drop-shadow">
+            <p className="text-xl text-white/95 mb-8 max-w-2xl text-pretty leading-relaxed drop-shadow">
               Dr. Dédé Tetsubayashi delivers transformational tech equity and AI governance consulting, generating
               proven results: <span className="font-semibold text-white">$200M+ in cost savings</span> and{" "}
               <span className="font-semibold text-white">$500M+ in market expansion</span> for enterprise clients.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-white/90 shadow-xl">
                 <Link href="/contact">
                   Schedule Consultation
