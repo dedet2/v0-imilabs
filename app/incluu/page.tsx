@@ -39,7 +39,7 @@ export default function IncluuPage() {
             alt="incluu hero background"
             fill
             className="object-cover"
-            style={{ objectPosition: "10% 50%" }} // Adjusted from 20% to 10% - shifts image further left to position the geometric face (located at ~70-80% within source image) completely to the right of centered text, eliminating overlap and improving readability
+            style={{ objectPosition: "0% 50%" }}
             priority
           />
         </div>
