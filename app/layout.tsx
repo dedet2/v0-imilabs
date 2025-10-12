@@ -8,7 +8,11 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 export const metadata: Metadata = {
   title: "Dr. Dédé Tetsubayashi | AI Governance Expert & Disability Advocate",
   description: "Expert AI Governance & Tech Equity Solutions",
-    generator: 'v0.app'
+  generator: "v0.app",
+  icons: {
+    icon: [{ url: "/incluu-logo.png" }],
+    apple: [{ url: "/incluu-logo.png" }],
+  },
 }
 
 export default function RootLayout({
