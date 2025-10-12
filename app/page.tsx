@@ -24,21 +24,7 @@ export default function HomePage() {
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
-    const hostname = window.location.hostname
-
-    // Redirect incluu.us visitors to /incluu page
-    if (hostname.includes("incluu.us")) {
-      window.location.href = "/incluu"
-      return
-    }
-
-    // Redirect dr-dede.com visitors to /dr-dede page
-    if (hostname.includes("dr-dede.com")) {
-      window.location.href = "/dr-dede"
-      return
-    }
-
-    // Only set up intersection observer if not redirecting
+    // Only set up intersection observer
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

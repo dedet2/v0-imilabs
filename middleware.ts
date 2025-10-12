@@ -5,14 +5,14 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") || ""
   const { pathname } = request.nextUrl
 
-  // If visiting incluu.us root, redirect to /incluu
+  // If visiting incluu.us root, rewrite to /incluu
   if (hostname.includes("incluu.us") && pathname === "/") {
-    return NextResponse.redirect(new URL("/incluu", request.url))
+    return NextResponse.rewrite(new URL("/incluu", request.url))
   }
 
-  // If visiting dr-dede.com root, redirect to /dr-dede
+  // If visiting dr-dede.com root, rewrite to /dr-dede
   if (hostname.includes("dr-dede.com") && pathname === "/") {
-    return NextResponse.redirect(new URL("/dr-dede", request.url))
+    return NextResponse.rewrite(new URL("/dr-dede", request.url))
   }
 
   return NextResponse.next()
