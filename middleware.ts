@@ -5,14 +5,17 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") || ""
   const { pathname } = request.nextUrl
 
-  // If visiting incluu.us root, rewrite to /incluu
-  if (hostname.includes("incluu.us") && pathname === "/") {
-    return NextResponse.rewrite(new URL("/incluu", request.url))
-  }
+  // Only rewrite domain-specific paths when explicitly navigating to /incluu or /dr-dede sections
 
-  // If visiting dr-dede.com root, rewrite to /dr-dede
-  if (hostname.includes("dr-dede.com") && pathname === "/") {
-    return NextResponse.rewrite(new URL("/dr-dede", request.url))
+  if (hostname.includes("incluu.us") || hostname.includes("dr-dede.com")) {
+    // Allow access to domain-specific sections when explicitly requested
+    if (pathname.startsWith("/incluu") || pathname.startsWith("/dr-dede")) {
+      return NextResponse.next()
+    }
+
+    // For all other paths (including root), show the unified home page
+    // This keeps the clean URL visible while serving the correct content
+    return NextResponse.next()
   }
 
   return NextResponse.next()
