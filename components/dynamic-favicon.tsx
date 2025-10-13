@@ -8,8 +8,7 @@ export function DynamicFavicon() {
     const hostname = window.location.hostname
     const isDrDede = hostname.includes("dr-dede")
 
-    // Set the appropriate favicon
-    const faviconPath = isDrDede ? "/dr-dede-favicon.png" : "/incluu-favicon.png"
+    const faviconPath = isDrDede ? "/dr-dede-favicon.jpg" : "/incluu-favicon.jpg"
 
     // Update all favicon link tags
     const links = document.querySelectorAll("link[rel*='icon']")
@@ -18,7 +17,7 @@ export function DynamicFavicon() {
     // Add new favicon links
     const iconLink = document.createElement("link")
     iconLink.rel = "icon"
-    iconLink.type = "image/png"
+    iconLink.type = "image/jpeg"
     iconLink.href = faviconPath
     document.head.appendChild(iconLink)
 
