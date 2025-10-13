@@ -10,9 +10,12 @@ export const metadata: Metadata = {
   description: "Expert AI Governance & Tech Equity Solutions",
   generator: "v0.app",
   icons: {
-    icon: [{ url: "/dr-dede-favicon.png", type: "image/png" }],
-    apple: [{ url: "/dr-dede-favicon.png" }],
-    shortcut: ["/dr-dede-favicon.png"],
+    icon: [
+      { url: "/dr-dede-favicon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png" }],
+    shortcut: ["/favicon.ico"],
   },
 }
 
