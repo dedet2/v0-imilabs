@@ -3,9 +3,12 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   icons: {
-    icon: [{ url: "/DrDede47.jpg", type: "image/jpeg" }],
-    apple: [{ url: "/DrDede47.jpg" }],
-    shortcut: ["/DrDede47.jpg"],
+    icon: [
+      { url: "/dr-dede-favicon.png", type: "image/png" },
+      { url: "/dr-dede-incluu-headshot.jpg", type: "image/jpeg" },
+    ],
+    apple: [{ url: "/dr-dede-favicon.png" }],
+    shortcut: ["/dr-dede-favicon.png"],
   },
 }
 
