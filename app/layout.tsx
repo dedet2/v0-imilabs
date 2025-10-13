@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { headers } from "next/headers"
 
+// Domain-based metadata generation for multi-domain support
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers()
   const domain = headersList.get("x-domain") || "incluu"
