@@ -9,14 +9,6 @@ export const metadata: Metadata = {
   title: "Dr. Dédé Tetsubayashi | AI Governance Expert & Disability Advocate",
   description: "Expert AI Governance & Tech Equity Solutions",
   generator: "v0.app",
-  icons: {
-    icon: [
-      { url: "/dr-dede-favicon.png", type: "image/png" },
-      { url: "/favicon.ico", sizes: "any" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png" }],
-    shortcut: ["/favicon.ico"],
-  },
 }
 
 export default function RootLayout({
