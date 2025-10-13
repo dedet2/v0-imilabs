@@ -18,9 +18,18 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Expert AI Governance & Tech Equity Solutions",
     generator: "v0.app",
     icons: {
-      icon: isDrDede ? "/dr-dede-incluu-headshot.jpg" : "/incluu-logo.png",
-      apple: isDrDede ? "/dr-dede-incluu-headshot.jpg" : "/incluu-logo.png",
-      shortcut: isDrDede ? "/dr-dede-incluu-headshot.jpg" : "/incluu-logo.png",
+      icon: [
+        {
+          url: isDrDede ? "/dr-dede-headshot.jpg" : "/incluu-logo-with-text.png",
+          type: isDrDede ? "image/jpeg" : "image/png",
+        },
+      ],
+      apple: [
+        {
+          url: isDrDede ? "/dr-dede-headshot.jpg" : "/incluu-logo-with-text.png",
+        },
+      ],
+      shortcut: [isDrDede ? "/dr-dede-headshot.jpg" : "/incluu-logo-with-text.png"],
     },
   }
 }
@@ -43,3 +52,7 @@ export default function RootLayout({
     </html>
   )
 }
+
+export const metadata = {
+      generator: 'v0.app'
+    };
