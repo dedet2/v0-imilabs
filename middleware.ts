@@ -4,21 +4,22 @@ import type { NextRequest } from "next/server"
 export function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") || ""
 
-  // Create response
-  const response = NextResponse.next()
+  const requestHeaders = new Headers(request.headers)
 
-  // Set a custom header to identify which domain is being accessed
-  // This will be used by the layout to determine which favicon to show
   if (hostname.includes("dr-dede.com")) {
-    response.headers.set("x-domain", "dr-dede")
+    requestHeaders.set("x-domain", "dr-dede")
   } else if (hostname.includes("incluu.us")) {
-    response.headers.set("x-domain", "incluu")
+    requestHeaders.set("x-domain", "incluu")
   } else {
-    // Default to incluu for localhost and other domains
-    response.headers.set("x-domain", "incluu")
+    requestHeaders.set("x-domain", "incluu")
   }
 
-  return response
+  // Create response with modified request headers
+  return NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  })
 }
 
 export const config = {
