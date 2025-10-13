@@ -4,19 +4,28 @@ import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import { headers } from "next/headers"
 
-export const metadata: Metadata = {
-  title: "Dr. Dédé Tetsubayashi | AI Governance Expert & Disability Advocate",
-  description: "Expert AI Governance & Tech Equity Solutions",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      { url: "/dr-dede-favicon.png", type: "image/png" },
-      { url: "/incluu-logo.png", type: "image/png" },
-    ],
-    apple: [{ url: "/dr-dede-favicon.png" }],
-    shortcut: ["/dr-dede-favicon.png"],
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers()
+  const domain = headersList.get("x-domain") || "incluu"
+
+  const isDrDede = domain === "dr-dede"
+
+  return {
+    title: isDrDede
+      ? "Dr. Dédé Tetsubayashi | AI Governance Expert & Disability Advocate"
+      : "incluu | Expert AI Governance & Tech Equity Solutions",
+    description: "Expert AI Governance & Tech Equity Solutions",
+    generator: "v0.app",
+    icons: {
+      icon: isDrDede
+        ? [{ url: "/dr-dede-favicon.png", type: "image/png" }]
+        : [{ url: "/incluu-favicon.png", type: "image/png" }],
+      apple: isDrDede ? [{ url: "/dr-dede-favicon.png" }] : [{ url: "/incluu-favicon.png" }],
+      shortcut: isDrDede ? ["/dr-dede-favicon.png"] : ["/incluu-favicon.png"],
+    },
+  }
 }
 
 export default function RootLayout({
@@ -37,3 +46,7 @@ export default function RootLayout({
     </html>
   )
 }
+
+export const metadata = {
+      generator: 'v0.app'
+    };

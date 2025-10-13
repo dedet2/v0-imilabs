@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function DrDedePage() {
+export default function Page() {
   return (
     <div className="relative">
       <div id="top" className="absolute top-0 left-0 w-full h-0" />

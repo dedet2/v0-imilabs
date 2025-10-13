@@ -20,7 +20,7 @@ import {
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 
-export default function HomePage() {
+export default function Page() {
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
@@ -132,7 +132,7 @@ export default function HomePage() {
                 </div>
               </CardHeader>
               <CardContent className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-purple-600 to-cyan-500 bg-clip-text text-transparent">
                   $200M+
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -148,7 +148,7 @@ export default function HomePage() {
                 </div>
               </CardHeader>
               <CardContent className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-purple-600 to-cyan-500 bg-clip-text text-transparent">
                   $500M+
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -164,7 +164,7 @@ export default function HomePage() {
                 </div>
               </CardHeader>
               <CardContent className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-purple-600 to-cyan-500 bg-clip-text text-transparent">
                   95%
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">Client Satisfaction & Success Rate</p>
@@ -178,7 +178,7 @@ export default function HomePage() {
                 </div>
               </CardHeader>
               <CardContent className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-purple-600 to-cyan-500 bg-clip-text text-transparent">
                   18 Mo
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">Average Time to Full Compliance</p>
