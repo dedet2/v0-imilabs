@@ -179,7 +179,7 @@ export default function Page() {
               </CardHeader>
               <CardContent className="space-y-2">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-purple-600 to-cyan-500 bg-clip-text text-transparent">
-                  18 Mo
+                  18 Mos
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">Average Time to Full Compliance</p>
               </CardContent>
