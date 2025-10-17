@@ -4,13 +4,28 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Loader2, CheckCircle2, XCircle, FileText, Video, Copy } from "@/components/icons"
+import { Loader2, CheckCircle2, XCircle, FileText, Video, Copy, Download } from "@/components/icons"
 
 export default function GenerateResourcesPage() {
   const [pdfStatus, setPdfStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [videoStatus, setVideoStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [pdfResults, setPdfResults] = useState<any>(null)
   const [videoResults, setVideoResults] = useState<any>(null)
+  const [debugInfo, setDebugInfo] = useState<any>(null)
+  const [showDebug, setShowDebug] = useState(false)
+
+  const checkEnvironment = async () => {
+    try {
+      const response = await fetch("/api/debug-env")
+      const data = await response.json()
+      setDebugInfo(data)
+      setShowDebug(true)
+    } catch (error) {
+      console.error("Failed to fetch debug info:", error)
+      setDebugInfo({ error: String(error) })
+      setShowDebug(true)
+    }
+  }
 
   const generatePDFs = async () => {
     setPdfStatus("loading")
@@ -49,6 +64,15 @@ export default function GenerateResourcesPage() {
     alert("Video URLs copied to clipboard! Paste into lib/testimonial-videos.ts")
   }
 
+  const downloadPDF = (dataUrl: string, filename: string) => {
+    const link = document.createElement("a")
+    link.href = dataUrl
+    link.download = filename
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <main className="min-h-screen pt-24 pb-20 bg-gradient-to-br from-purple-50 to-cyan-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,6 +81,22 @@ export default function GenerateResourcesPage() {
             <h1 className="text-4xl font-bold mb-4">Generate Resources</h1>
             <p className="text-lg text-muted-foreground">Generate PDFs and video testimonials for the website</p>
           </div>
+
+          <Card className="mb-6 bg-yellow-50 border-yellow-200">
+            <CardHeader>
+              <CardTitle className="text-sm">Debug Environment</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Button onClick={checkEnvironment} variant="outline" size="sm" className="mb-4 bg-transparent">
+                Check Environment Variables
+              </Button>
+              {showDebug && debugInfo && (
+                <pre className="text-xs bg-white p-4 rounded overflow-auto max-h-60">
+                  {JSON.stringify(debugInfo, null, 2)}
+                </pre>
+              )}
+            </CardContent>
+          </Card>
 
           <div className="grid gap-6">
             {/* PDF Generation */}
@@ -101,13 +141,25 @@ export default function GenerateResourcesPage() {
                     <div className="max-h-60 overflow-y-auto space-y-1">
                       {pdfResults.results?.map((result: any, index: number) => (
                         <div key={index} className="p-2 bg-white rounded text-sm">
-                          <div className="flex items-center justify-between">
+                          <div className="flex items-center justify-between gap-2">
                             <span className="truncate flex-1">{result.title}</span>
-                            {result.url ? (
-                              <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 ml-2" />
-                            ) : (
-                              <XCircle className="h-4 w-4 text-red-600 flex-shrink-0 ml-2" />
-                            )}
+                            <div className="flex items-center gap-2 flex-shrink-0">
+                              {result.url && (
+                                <Button
+                                  size="sm"
+                                  variant="ghost"
+                                  onClick={() => downloadPDF(result.url, result.downloadName)}
+                                  className="h-7 px-2"
+                                >
+                                  <Download className="h-3 w-3" />
+                                </Button>
+                              )}
+                              {result.url ? (
+                                <CheckCircle2 className="h-4 w-4 text-green-600" />
+                              ) : (
+                                <XCircle className="h-4 w-4 text-red-600" />
+                              )}
+                            </div>
                           </div>
                           {result.error && (
                             <div className="mt-1 text-xs text-red-600 bg-red-50 p-2 rounded">Error: {result.error}</div>
@@ -191,10 +243,9 @@ export default function GenerateResourcesPage() {
               <h3 className="font-semibold mb-2">Instructions:</h3>
               <ol className="list-decimal list-inside space-y-1 text-sm text-muted-foreground">
                 <li>Click "Generate All PDFs" to create all 15 downloadable resources</li>
+                <li>Click the download icon next to each PDF to save it locally</li>
                 <li>Click "Generate All Videos" to create AI video testimonials</li>
-                <li>Wait for generation to complete (may take several minutes)</li>
-                <li>Files will be automatically uploaded to Vercel Blob storage</li>
-                <li>Click "Copy Video URLs" and update lib/testimonial-videos.ts with the URLs</li>
+                <li>Note: In preview mode, PDFs are generated in-browser. Deploy to production for Blob storage.</li>
               </ol>
             </CardContent>
           </Card>

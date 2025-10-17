@@ -56,8 +56,49 @@ const testimonials = [
 export async function POST(request: NextRequest) {
   try {
     console.log("[v0] Starting testimonial video generation...")
-    console.log(`[v0] FAL_KEY exists: ${!!process.env.FAL_KEY}`)
-    console.log(`[v0] BLOB_READ_WRITE_TOKEN exists: ${!!process.env.BLOB_READ_WRITE_TOKEN}`)
+    console.log(`[v0] Environment check:`)
+    console.log(
+      `[v0] - FAL_KEY: ${process.env.FAL_KEY ? "SET (length: " + process.env.FAL_KEY.length + ")" : "NOT SET"}`,
+    )
+    console.log(
+      `[v0] - BLOB_READ_WRITE_TOKEN: ${process.env.BLOB_READ_WRITE_TOKEN ? "SET (length: " + process.env.BLOB_READ_WRITE_TOKEN.length + ")" : "NOT SET"}`,
+    )
+    console.log(`[v0] - NODE_ENV: ${process.env.NODE_ENV}`)
+
+    if (!process.env.FAL_KEY) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "FAL_KEY environment variable is not set. Please configure it in your Vercel project settings.",
+          results: testimonials.map((t) => ({
+            ...t,
+            success: false,
+            error: "FAL_KEY is not set",
+          })),
+          generated: 0,
+          total: testimonials.length,
+        },
+        { status: 500 },
+      )
+    }
+
+    if (!process.env.BLOB_READ_WRITE_TOKEN) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "BLOB_READ_WRITE_TOKEN environment variable is not set. Please configure it in your Vercel project settings.",
+          results: testimonials.map((t) => ({
+            ...t,
+            success: false,
+            error: "BLOB_READ_WRITE_TOKEN is not set",
+          })),
+          generated: 0,
+          total: testimonials.length,
+        },
+        { status: 500 },
+      )
+    }
 
     const results = []
 

@@ -1,5 +1,4 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { put } from "@vercel/blob"
 import { PDFDocument, rgb, StandardFonts } from "pdf-lib"
 
 const resources = [
@@ -189,7 +188,34 @@ For more information, visit: incluu.com`
 export async function POST(request: NextRequest) {
   try {
     console.log("[v0] Starting PDF generation...")
-    console.log(`[v0] BLOB_READ_WRITE_TOKEN exists: ${!!process.env.BLOB_READ_WRITE_TOKEN}`)
+    console.log(`[v0] Environment check:`)
+    console.log(
+      `[v0] - BLOB_READ_WRITE_TOKEN: ${process.env.BLOB_READ_WRITE_TOKEN ? "SET (length: " + process.env.BLOB_READ_WRITE_TOKEN.length + ")" : "NOT SET"}`,
+    )
+    console.log(`[v0] - NODE_ENV: ${process.env.NODE_ENV}`)
+    console.log(
+      `[v0] - All env keys: ${Object.keys(process.env)
+        .filter((k) => k.includes("BLOB"))
+        .join(", ")}`,
+    )
+
+    if (!process.env.BLOB_READ_WRITE_TOKEN) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "BLOB_READ_WRITE_TOKEN environment variable is not set. Please configure it in your Vercel project settings.",
+          results: resources.map((r) => ({
+            ...r,
+            success: false,
+            error: "BLOB_READ_WRITE_TOKEN is not set",
+          })),
+          generated: 0,
+          total: resources.length,
+        },
+        { status: 500 },
+      )
+    }
 
     const results = []
 
@@ -198,27 +224,21 @@ export async function POST(request: NextRequest) {
 
       try {
         const pdfBytes = await generatePDF(resource)
-        console.log(`[v0] PDF generated, uploading to Blob...`)
 
-        const blob = await put(`downloads/${resource.id}.pdf`, pdfBytes, {
-          access: "public",
-          addRandomSuffix: false,
-          contentType: "application/pdf",
-        })
+        // Convert to base64 for direct download
+        const base64 = Buffer.from(pdfBytes).toString("base64")
+        const dataUrl = `data:application/pdf;base64,${base64}`
 
-        console.log(`[v0] ✓ PDF uploaded: ${blob.url}`)
+        console.log(`[v0] ✓ PDF generated: ${resource.title}`)
 
         results.push({
           ...resource,
-          url: blob.url,
+          url: dataUrl,
+          downloadName: `${resource.id}.pdf`,
           success: true,
         })
       } catch (error) {
         console.error(`[v0] ✗ Failed to generate PDF for ${resource.title}:`, error)
-        if (error instanceof Error) {
-          console.error(`[v0] Error message: ${error.message}`)
-          console.error(`[v0] Error stack: ${error.stack}`)
-        }
         results.push({
           ...resource,
           url: null,
