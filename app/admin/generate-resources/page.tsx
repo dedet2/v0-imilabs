@@ -29,8 +29,12 @@ export default function GenerateResourcesPage() {
 
   const generatePDFs = async () => {
     setPdfStatus("loading")
+    setPdfResults(null) // Clear previous results
     try {
-      const response = await fetch("/api/generate-pdfs", { method: "POST" })
+      const response = await fetch(`/api/generate-pdfs?t=${Date.now()}`, {
+        method: "POST",
+        cache: "no-store",
+      })
       const data = await response.json()
       setPdfResults(data)
       setPdfStatus(response.ok ? "success" : "error")
@@ -42,8 +46,12 @@ export default function GenerateResourcesPage() {
 
   const generateVideos = async () => {
     setVideoStatus("loading")
+    setVideoResults(null) // Clear previous results
     try {
-      const response = await fetch("/api/generate-all-testimonials", { method: "POST" })
+      const response = await fetch(`/api/generate-all-testimonials?t=${Date.now()}`, {
+        method: "POST",
+        cache: "no-store",
+      })
       const data = await response.json()
       setVideoResults(data)
       setVideoStatus(response.ok ? "success" : "error")

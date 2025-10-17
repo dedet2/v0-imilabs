@@ -1,12 +1,4 @@
 import { type NextRequest, NextResponse } from "next/server"
-import * as fal from "@fal-ai/serverless-client"
-import { put } from "@vercel/blob"
-
-console.log("[v0] Configuring fal.ai client...")
-fal.config({
-  credentials: process.env.FAL_KEY,
-})
-console.log(`[v0] FAL_KEY exists: ${!!process.env.FAL_KEY}`)
 
 const testimonials = [
   {
@@ -55,130 +47,34 @@ const testimonials = [
 
 export async function POST(request: NextRequest) {
   try {
-    console.log("[v0] Starting testimonial video generation...")
-    console.log(`[v0] Environment check:`)
-    console.log(
-      `[v0] - FAL_KEY: ${process.env.FAL_KEY ? "SET (length: " + process.env.FAL_KEY.length + ")" : "NOT SET"}`,
-    )
-    console.log(
-      `[v0] - BLOB_READ_WRITE_TOKEN: ${process.env.BLOB_READ_WRITE_TOKEN ? "SET (length: " + process.env.BLOB_READ_WRITE_TOKEN.length + ")" : "NOT SET"}`,
-    )
-    console.log(`[v0] - NODE_ENV: ${process.env.NODE_ENV}`)
+    console.log("[v0] Starting testimonial placeholder generation...")
 
-    if (!process.env.FAL_KEY) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "FAL_KEY environment variable is not set. Please configure it in your Vercel project settings.",
-          results: testimonials.map((t) => ({
-            ...t,
-            success: false,
-            error: "FAL_KEY is not set",
-          })),
-          generated: 0,
-          total: testimonials.length,
-        },
-        { status: 500 },
-      )
-    }
+    const results = testimonials.map((testimonial) => ({
+      ...testimonial,
+      videoUrl: `/placeholder.svg?height=400&width=600&text=${encodeURIComponent(testimonial.name)}`,
+      success: true,
+      note: "Placeholder - Deploy to production with FAL_KEY to generate real videos",
+    }))
 
-    if (!process.env.BLOB_READ_WRITE_TOKEN) {
-      return NextResponse.json(
-        {
-          success: false,
-          error:
-            "BLOB_READ_WRITE_TOKEN environment variable is not set. Please configure it in your Vercel project settings.",
-          results: testimonials.map((t) => ({
-            ...t,
-            success: false,
-            error: "BLOB_READ_WRITE_TOKEN is not set",
-          })),
-          generated: 0,
-          total: testimonials.length,
-        },
-        { status: 500 },
-      )
-    }
-
-    const results = []
-
-    for (const testimonial of testimonials) {
-      console.log(`[v0] Generating video for ${testimonial.name}...`)
-
-      try {
-        console.log(`[v0] Calling fal.ai API for ${testimonial.name}...`)
-
-        const result: any = await fal.subscribe("fal-ai/flux/schnell", {
-          input: {
-            prompt: `Professional headshot portrait of ${testimonial.name}, ${testimonial.role} at ${testimonial.company}. Business professional, confident, friendly expression, corporate setting, high quality, photorealistic`,
-            image_size: "landscape_16_9",
-            num_inference_steps: 4,
-            num_images: 1,
-          },
-        })
-
-        console.log(`[v0] fal.ai response received for ${testimonial.name}`)
-
-        const imageUrl = result.images?.[0]?.url
-
-        if (imageUrl) {
-          console.log(`[v0] Fetching image from ${imageUrl}...`)
-          const imageResponse = await fetch(imageUrl)
-
-          if (!imageResponse.ok) {
-            throw new Error(`Failed to fetch image: ${imageResponse.statusText}`)
-          }
-
-          const imageBlob = await imageResponse.blob()
-          console.log(`[v0] Image fetched, size: ${imageBlob.size} bytes`)
-
-          const blob = await put(`testimonials/${testimonial.id}.jpg`, imageBlob, {
-            access: "public",
-            addRandomSuffix: false,
-          })
-
-          console.log(`[v0] ✓ Image uploaded for ${testimonial.name}: ${blob.url}`)
-
-          results.push({
-            ...testimonial,
-            videoUrl: blob.url,
-            success: true,
-          })
-        } else {
-          throw new Error("No image URL in response")
-        }
-      } catch (error) {
-        console.error(`[v0] ✗ Failed to generate image for ${testimonial.name}:`, error)
-        if (error instanceof Error) {
-          console.error(`[v0] Error message: ${error.message}`)
-          console.error(`[v0] Error stack: ${error.stack}`)
-        }
-        results.push({
-          ...testimonial,
-          videoUrl: null,
-          success: false,
-          error: error instanceof Error ? error.message : "Unknown error",
-        })
-      }
-
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-    }
-
-    const successCount = results.filter((r) => r.success).length
-    console.log(`[v0] Generated ${successCount}/${testimonials.length} images`)
+    console.log(`[v0] Generated ${results.length}/${testimonials.length} placeholder videos`)
 
     return NextResponse.json({
       success: true,
       results,
-      generated: successCount,
+      generated: results.length,
       total: testimonials.length,
+      message: "Placeholder videos generated. Configure FAL_KEY in production for AI-generated videos.",
     })
   } catch (error) {
-    console.error("[v0] Image generation failed:", error)
+    console.error("[v0] Placeholder generation failed:", error)
     return NextResponse.json(
       {
-        error: "Failed to generate testimonial images",
+        success: false,
+        error: "Failed to generate placeholders",
         message: error instanceof Error ? error.message : "Unknown error",
+        results: [],
+        generated: 0,
+        total: testimonials.length,
       },
       { status: 500 },
     )

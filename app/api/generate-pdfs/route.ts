@@ -187,35 +187,7 @@ For more information, visit: incluu.com`
 
 export async function POST(request: NextRequest) {
   try {
-    console.log("[v0] Starting PDF generation...")
-    console.log(`[v0] Environment check:`)
-    console.log(
-      `[v0] - BLOB_READ_WRITE_TOKEN: ${process.env.BLOB_READ_WRITE_TOKEN ? "SET (length: " + process.env.BLOB_READ_WRITE_TOKEN.length + ")" : "NOT SET"}`,
-    )
-    console.log(`[v0] - NODE_ENV: ${process.env.NODE_ENV}`)
-    console.log(
-      `[v0] - All env keys: ${Object.keys(process.env)
-        .filter((k) => k.includes("BLOB"))
-        .join(", ")}`,
-    )
-
-    if (!process.env.BLOB_READ_WRITE_TOKEN) {
-      return NextResponse.json(
-        {
-          success: false,
-          error:
-            "BLOB_READ_WRITE_TOKEN environment variable is not set. Please configure it in your Vercel project settings.",
-          results: resources.map((r) => ({
-            ...r,
-            success: false,
-            error: "BLOB_READ_WRITE_TOKEN is not set",
-          })),
-          generated: 0,
-          total: resources.length,
-        },
-        { status: 500 },
-      )
-    }
+    console.log("[v0] Starting PDF generation (base64 mode)...")
 
     const results = []
 
@@ -229,7 +201,7 @@ export async function POST(request: NextRequest) {
         const base64 = Buffer.from(pdfBytes).toString("base64")
         const dataUrl = `data:application/pdf;base64,${base64}`
 
-        console.log(`[v0] ✓ PDF generated: ${resource.title}`)
+        console.log(`[v0] ✓ PDF generated: ${resource.title} (${pdfBytes.length} bytes)`)
 
         results.push({
           ...resource,
@@ -261,8 +233,12 @@ export async function POST(request: NextRequest) {
     console.error("[v0] PDF generation failed:", error)
     return NextResponse.json(
       {
+        success: false,
         error: "Failed to generate PDFs",
         message: error instanceof Error ? error.message : "Unknown error",
+        results: [],
+        generated: 0,
+        total: resources.length,
       },
       { status: 500 },
     )
