@@ -100,12 +100,17 @@ export default function GenerateResourcesPage() {
                     </div>
                     <div className="max-h-60 overflow-y-auto space-y-1">
                       {pdfResults.results?.map((result: any, index: number) => (
-                        <div key={index} className="flex items-center justify-between p-2 bg-white rounded text-sm">
-                          <span className="truncate flex-1">{result.title}</span>
-                          {result.url ? (
-                            <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 ml-2" />
-                          ) : (
-                            <XCircle className="h-4 w-4 text-red-600 flex-shrink-0 ml-2" />
+                        <div key={index} className="p-2 bg-white rounded text-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="truncate flex-1">{result.title}</span>
+                            {result.url ? (
+                              <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 ml-2" />
+                            ) : (
+                              <XCircle className="h-4 w-4 text-red-600 flex-shrink-0 ml-2" />
+                            )}
+                          </div>
+                          {result.error && (
+                            <div className="mt-1 text-xs text-red-600 bg-red-50 p-2 rounded">Error: {result.error}</div>
                           )}
                         </div>
                       ))}
@@ -154,12 +159,17 @@ export default function GenerateResourcesPage() {
                     </div>
                     <div className="max-h-60 overflow-y-auto space-y-1">
                       {videoResults.results?.map((result: any, index: number) => (
-                        <div key={index} className="flex items-center justify-between p-2 bg-white rounded text-sm">
-                          <span className="truncate flex-1">{result.name}</span>
-                          {result.videoUrl ? (
-                            <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 ml-2" />
-                          ) : (
-                            <XCircle className="h-4 w-4 text-red-600 flex-shrink-0 ml-2" />
+                        <div key={index} className="p-2 bg-white rounded text-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="truncate flex-1">{result.name}</span>
+                            {result.videoUrl ? (
+                              <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 ml-2" />
+                            ) : (
+                              <XCircle className="h-4 w-4 text-red-600 flex-shrink-0 ml-2" />
+                            )}
+                          </div>
+                          {result.error && (
+                            <div className="mt-1 text-xs text-red-600 bg-red-50 p-2 rounded">Error: {result.error}</div>
                           )}
                         </div>
                       ))}
