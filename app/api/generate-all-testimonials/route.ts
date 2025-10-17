@@ -2,9 +2,11 @@ import { type NextRequest, NextResponse } from "next/server"
 import * as fal from "@fal-ai/serverless-client"
 import { put } from "@vercel/blob"
 
+console.log("[v0] Configuring fal.ai client...")
 fal.config({
   credentials: process.env.FAL_KEY,
 })
+console.log(`[v0] FAL_KEY exists: ${!!process.env.FAL_KEY}`)
 
 const testimonials = [
   {
@@ -54,6 +56,8 @@ const testimonials = [
 export async function POST(request: NextRequest) {
   try {
     console.log("[v0] Starting testimonial video generation...")
+    console.log(`[v0] FAL_KEY exists: ${!!process.env.FAL_KEY}`)
+    console.log(`[v0] BLOB_READ_WRITE_TOKEN exists: ${!!process.env.BLOB_READ_WRITE_TOKEN}`)
 
     const results = []
 
@@ -61,23 +65,34 @@ export async function POST(request: NextRequest) {
       console.log(`[v0] Generating video for ${testimonial.name}...`)
 
       try {
-        // Generate video using fal.ai Hedra model
-        const result = await fal.subscribe("fal-ai/hedra/character-1", {
+        console.log(`[v0] Calling fal.ai API for ${testimonial.name}...`)
+
+        const result: any = await fal.subscribe("fal-ai/hedra/character-1", {
           input: {
-            text: testimonial.text,
+            text: testimonial.text.substring(0, 500), // Limit text length
             aspect_ratio: "16:9",
             image_url: `https://api.dicebear.com/7.x/avataaars/svg?seed=${testimonial.id}`,
           },
         })
 
+        console.log(`[v0] fal.ai response received for ${testimonial.name}`)
+        console.log(`[v0] Video URL: ${result.video_url}`)
+
         if (result.video_url) {
-          // Fetch the video and upload to Vercel Blob
+          console.log(`[v0] Fetching video from ${result.video_url}...`)
           const videoResponse = await fetch(result.video_url)
+
+          if (!videoResponse.ok) {
+            throw new Error(`Failed to fetch video: ${videoResponse.statusText}`)
+          }
+
           const videoBlob = await videoResponse.blob()
+          console.log(`[v0] Video fetched, size: ${videoBlob.size} bytes`)
 
           const blob = await put(`testimonials/${testimonial.id}.mp4`, videoBlob, {
             access: "public",
             addRandomSuffix: false,
+            token: process.env.BLOB_READ_WRITE_TOKEN,
           })
 
           console.log(`[v0] ✓ Video uploaded for ${testimonial.name}: ${blob.url}`)
@@ -85,31 +100,45 @@ export async function POST(request: NextRequest) {
           results.push({
             ...testimonial,
             videoUrl: blob.url,
+            success: true,
           })
+        } else {
+          throw new Error("No video URL in response")
         }
       } catch (error) {
         console.error(`[v0] ✗ Failed to generate video for ${testimonial.name}:`, error)
+        if (error instanceof Error) {
+          console.error(`[v0] Error message: ${error.message}`)
+          console.error(`[v0] Error stack: ${error.stack}`)
+        }
         results.push({
           ...testimonial,
           videoUrl: null,
+          success: false,
           error: error instanceof Error ? error.message : "Unknown error",
         })
       }
 
-      // Add delay to avoid rate limiting
       await new Promise((resolve) => setTimeout(resolve, 2000))
     }
 
-    console.log(`[v0] Generated ${results.filter((r) => r.videoUrl).length}/${testimonials.length} videos`)
+    const successCount = results.filter((r) => r.success).length
+    console.log(`[v0] Generated ${successCount}/${testimonials.length} videos`)
 
     return NextResponse.json({
       success: true,
       results,
-      generated: results.filter((r) => r.videoUrl).length,
+      generated: successCount,
       total: testimonials.length,
     })
   } catch (error) {
     console.error("[v0] Video generation failed:", error)
-    return NextResponse.json({ error: "Failed to generate testimonial videos" }, { status: 500 })
+    return NextResponse.json(
+      {
+        error: "Failed to generate testimonial videos",
+        message: error instanceof Error ? error.message : "Unknown error",
+      },
+      { status: 500 },
+    )
   }
 }

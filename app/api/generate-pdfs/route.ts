@@ -96,6 +96,8 @@ const resources = [
 ]
 
 async function generatePDF(resource: (typeof resources)[0]) {
+  console.log(`[v0] Creating PDF document for ${resource.title}`)
+
   const pdfDoc = await PDFDocument.create()
   const timesRomanFont = await pdfDoc.embedFont(StandardFonts.TimesRoman)
   const timesRomanBold = await pdfDoc.embedFont(StandardFonts.TimesRomanBold)
@@ -177,12 +179,17 @@ For more information, visit: incluu.com`
     color: rgb(0.5, 0.5, 0.5),
   })
 
-  return await pdfDoc.save()
+  console.log(`[v0] PDF document created, converting to bytes...`)
+  const pdfBytes = await pdfDoc.save()
+  console.log(`[v0] PDF bytes generated: ${pdfBytes.length} bytes`)
+
+  return pdfBytes
 }
 
 export async function POST(request: NextRequest) {
   try {
     console.log("[v0] Starting PDF generation...")
+    console.log(`[v0] BLOB_READ_WRITE_TOKEN exists: ${!!process.env.BLOB_READ_WRITE_TOKEN}`)
 
     const results = []
 
@@ -191,11 +198,17 @@ export async function POST(request: NextRequest) {
 
       try {
         const pdfBytes = await generatePDF(resource)
+        console.log(`[v0] PDF generated, uploading to Blob...`)
+
+        if (!process.env.BLOB_READ_WRITE_TOKEN) {
+          throw new Error("BLOB_READ_WRITE_TOKEN is not set")
+        }
 
         const blob = await put(`downloads/${resource.id}.pdf`, pdfBytes, {
           access: "public",
           addRandomSuffix: false,
           contentType: "application/pdf",
+          token: process.env.BLOB_READ_WRITE_TOKEN,
         })
 
         console.log(`[v0] ✓ PDF uploaded: ${blob.url}`)
@@ -203,27 +216,40 @@ export async function POST(request: NextRequest) {
         results.push({
           ...resource,
           url: blob.url,
+          success: true,
         })
       } catch (error) {
         console.error(`[v0] ✗ Failed to generate PDF for ${resource.title}:`, error)
+        if (error instanceof Error) {
+          console.error(`[v0] Error message: ${error.message}`)
+          console.error(`[v0] Error stack: ${error.stack}`)
+        }
         results.push({
           ...resource,
           url: null,
+          success: false,
           error: error instanceof Error ? error.message : "Unknown error",
         })
       }
     }
 
-    console.log(`[v0] Generated ${results.filter((r) => r.url).length}/${resources.length} PDFs`)
+    const successCount = results.filter((r) => r.success).length
+    console.log(`[v0] Generated ${successCount}/${resources.length} PDFs`)
 
     return NextResponse.json({
       success: true,
       results,
-      generated: results.filter((r) => r.url).length,
+      generated: successCount,
       total: resources.length,
     })
   } catch (error) {
     console.error("[v0] PDF generation failed:", error)
-    return NextResponse.json({ error: "Failed to generate PDFs" }, { status: 500 })
+    return NextResponse.json(
+      {
+        error: "Failed to generate PDFs",
+        message: error instanceof Error ? error.message : "Unknown error",
+      },
+      { status: 500 },
+    )
   }
 }
