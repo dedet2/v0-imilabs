@@ -200,15 +200,10 @@ export async function POST(request: NextRequest) {
         const pdfBytes = await generatePDF(resource)
         console.log(`[v0] PDF generated, uploading to Blob...`)
 
-        if (!process.env.BLOB_READ_WRITE_TOKEN) {
-          throw new Error("BLOB_READ_WRITE_TOKEN is not set")
-        }
-
         const blob = await put(`downloads/${resource.id}.pdf`, pdfBytes, {
           access: "public",
           addRandomSuffix: false,
           contentType: "application/pdf",
-          token: process.env.BLOB_READ_WRITE_TOKEN,
         })
 
         console.log(`[v0] ✓ PDF uploaded: ${blob.url}`)

@@ -67,35 +67,36 @@ export async function POST(request: NextRequest) {
       try {
         console.log(`[v0] Calling fal.ai API for ${testimonial.name}...`)
 
-        const result: any = await fal.subscribe("fal-ai/hedra/character-1", {
+        const result: any = await fal.subscribe("fal-ai/flux/schnell", {
           input: {
-            text: testimonial.text.substring(0, 500), // Limit text length
-            aspect_ratio: "16:9",
-            image_url: `https://api.dicebear.com/7.x/avataaars/svg?seed=${testimonial.id}`,
+            prompt: `Professional headshot portrait of ${testimonial.name}, ${testimonial.role} at ${testimonial.company}. Business professional, confident, friendly expression, corporate setting, high quality, photorealistic`,
+            image_size: "landscape_16_9",
+            num_inference_steps: 4,
+            num_images: 1,
           },
         })
 
         console.log(`[v0] fal.ai response received for ${testimonial.name}`)
-        console.log(`[v0] Video URL: ${result.video_url}`)
 
-        if (result.video_url) {
-          console.log(`[v0] Fetching video from ${result.video_url}...`)
-          const videoResponse = await fetch(result.video_url)
+        const imageUrl = result.images?.[0]?.url
 
-          if (!videoResponse.ok) {
-            throw new Error(`Failed to fetch video: ${videoResponse.statusText}`)
+        if (imageUrl) {
+          console.log(`[v0] Fetching image from ${imageUrl}...`)
+          const imageResponse = await fetch(imageUrl)
+
+          if (!imageResponse.ok) {
+            throw new Error(`Failed to fetch image: ${imageResponse.statusText}`)
           }
 
-          const videoBlob = await videoResponse.blob()
-          console.log(`[v0] Video fetched, size: ${videoBlob.size} bytes`)
+          const imageBlob = await imageResponse.blob()
+          console.log(`[v0] Image fetched, size: ${imageBlob.size} bytes`)
 
-          const blob = await put(`testimonials/${testimonial.id}.mp4`, videoBlob, {
+          const blob = await put(`testimonials/${testimonial.id}.jpg`, imageBlob, {
             access: "public",
             addRandomSuffix: false,
-            token: process.env.BLOB_READ_WRITE_TOKEN,
           })
 
-          console.log(`[v0] ✓ Video uploaded for ${testimonial.name}: ${blob.url}`)
+          console.log(`[v0] ✓ Image uploaded for ${testimonial.name}: ${blob.url}`)
 
           results.push({
             ...testimonial,
@@ -103,10 +104,10 @@ export async function POST(request: NextRequest) {
             success: true,
           })
         } else {
-          throw new Error("No video URL in response")
+          throw new Error("No image URL in response")
         }
       } catch (error) {
-        console.error(`[v0] ✗ Failed to generate video for ${testimonial.name}:`, error)
+        console.error(`[v0] ✗ Failed to generate image for ${testimonial.name}:`, error)
         if (error instanceof Error) {
           console.error(`[v0] Error message: ${error.message}`)
           console.error(`[v0] Error stack: ${error.stack}`)
@@ -123,7 +124,7 @@ export async function POST(request: NextRequest) {
     }
 
     const successCount = results.filter((r) => r.success).length
-    console.log(`[v0] Generated ${successCount}/${testimonials.length} videos`)
+    console.log(`[v0] Generated ${successCount}/${testimonials.length} images`)
 
     return NextResponse.json({
       success: true,
@@ -132,10 +133,10 @@ export async function POST(request: NextRequest) {
       total: testimonials.length,
     })
   } catch (error) {
-    console.error("[v0] Video generation failed:", error)
+    console.error("[v0] Image generation failed:", error)
     return NextResponse.json(
       {
-        error: "Failed to generate testimonial videos",
+        error: "Failed to generate testimonial images",
         message: error instanceof Error ? error.message : "Unknown error",
       },
       { status: 500 },
