@@ -7,6 +7,8 @@ import { ArrowRight } from "@/components/icons"
 import Image from "next/image"
 import { StoryDetailModal } from "@/components/story-detail-modal"
 import { useState } from "react"
+import { VideoTestimonialCard } from "@/components/video-testimonial-card"
+import { testimonialVideos } from "@/lib/testimonial-videos"
 
 export function TestimonialsClientPage() {
   const [selectedStory, setSelectedStory] = useState<any>(null)
@@ -437,115 +439,8 @@ export function TestimonialsClientPage() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "AI Governance Transformation Success",
-                  videoId: "dQw4w9WgXcQ",
-                  duration: "2:34",
-                  category: "AI Ethics",
-                  industry: "Technology",
-                  company: "Fortune 500",
-                  quote:
-                    "Dr. Tetsubayashi completely transformed our approach to AI ethics. The ROI was immediate and substantial.",
-                  author: "Sarah Chen",
-                  role: "Chief Technology Officer",
-                  companyName: "TechForward Inc.",
-                },
-                {
-                  title: "Healthcare AI Bias Elimination",
-                  videoId: "dQw4w9WgXcQ",
-                  duration: "3:12",
-                  category: "Healthcare",
-                  industry: "Bias Mitigation",
-                  company: "Patient Care",
-                  quote:
-                    "The accessibility improvements Dr. Tetsubayashi implemented saved us millions and countless lives.",
-                  author: "Dr. Marcus Rodriguez",
-                  role: "Chief Medical Officer",
-                  companyName: "Regional Medical Center",
-                },
-                {
-                  title: "Startup Ethics Framework Implementation",
-                  videoId: "dQw4w9WgXcQ",
-                  duration: "1:58",
-                  category: "Startup",
-                  industry: "EdTech",
-                  company: "Series C",
-                  quote:
-                    "Dr. Tetsubayashi helped us secure $50M Series C by demonstrating our responsible AI practices.",
-                  author: "Amelia Foster",
-                  role: "CEO & Founder",
-                  companyName: "InnovateLabs",
-                },
-                {
-                  title: "Financial Services Compliance Success",
-                  videoId: "dQw4w9WgXcQ",
-                  duration: "4:21",
-                  category: "Financial Services",
-                  industry: "Regulatory",
-                  company: "Risk Management",
-                  quote: "Dr. Tetsubayashi saved us from a $500M regulatory penalty while improving our AI systems.",
-                  author: "James Park",
-                  role: "VP Legal & Compliance",
-                  companyName: "DataStream Corp",
-                },
-                {
-                  title: "Global Manufacturing Transformation",
-                  videoId: "dQw4w9WgXcQ",
-                  duration: "3:45",
-                  category: "Manufacturing",
-                  industry: "Supply Chain",
-                  company: "ESG",
-                  quote: "The supply chain AI improvements delivered $75M in savings while advancing our ESG goals.",
-                  author: "Dr. Lisa Kumar",
-                  role: "Chief Innovation Officer",
-                  companyName: "Global Manufacturing Solutions",
-                },
-                {
-                  title: "E-commerce Personalization Revolution",
-                  videoId: "dQw4w9WgXcQ",
-                  duration: "2:17",
-                  category: "E-commerce",
-                  industry: "Personalization",
-                  company: "Customer Experience",
-                  quote:
-                    "Inclusive AI personalization increased our revenue by $95M while improving customer satisfaction.",
-                  author: "Michael Zhang",
-                  role: "Head of Product",
-                  companyName: "ShopSmart Global",
-                },
-              ].map((video, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow group">
-                  <div className="relative aspect-video">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${video.videoId}`}
-                      title={video.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex flex-wrap gap-1 mb-3">
-                      <Badge variant="outline" className="text-xs">
-                        {video.category}
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        {video.industry}
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        {video.company}
-                      </Badge>
-                    </div>
-                    <h3 className="font-bold mb-3">{video.title}</h3>
-                    <p className="text-sm text-muted-foreground italic mb-4">"{video.quote}"</p>
-                    <div className="border-t pt-4">
-                      <div className="font-semibold text-sm">{video.author}</div>
-                      <div className="text-xs text-muted-foreground">{video.role}</div>
-                      <div className="text-xs text-muted-foreground">{video.companyName}</div>
-                    </div>
-                  </CardContent>
-                </Card>
+              {testimonialVideos.map((video) => (
+                <VideoTestimonialCard key={video.id} {...video} />
               ))}
             </div>
           </div>
