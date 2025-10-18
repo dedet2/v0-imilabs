@@ -1,4 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server"
+import * as fal from "@fal-ai/serverless-client"
 
 const testimonials = [
   {
@@ -47,30 +48,94 @@ const testimonials = [
 
 export async function POST(request: NextRequest) {
   try {
-    console.log("[v0] Starting testimonial placeholder generation...")
+    const falKey = process.env.FAL_KEY
 
-    const results = testimonials.map((testimonial) => ({
-      ...testimonial,
-      videoUrl: `/placeholder.svg?height=400&width=600&text=${encodeURIComponent(testimonial.name)}`,
-      success: true,
-      note: "Placeholder - Deploy to production with FAL_KEY to generate real videos",
-    }))
+    if (!falKey) {
+      // Return placeholder videos for preview environment
+      const results = testimonials.map((testimonial) => ({
+        ...testimonial,
+        videoUrl: `/placeholder.svg?height=400&width=600&text=${encodeURIComponent(testimonial.name)}`,
+        success: true,
+        note: "Placeholder - Deploy to production with FAL_KEY to generate real videos",
+      }))
 
-    console.log(`[v0] Generated ${results.length}/${testimonials.length} placeholder videos`)
+      return NextResponse.json({
+        success: true,
+        results,
+        generated: results.length,
+        total: testimonials.length,
+        message: "Placeholder videos generated. Configure FAL_KEY in production for AI-generated videos.",
+      })
+    }
+
+    // Production: Generate actual AI videos using fal.ai
+    fal.config({ credentials: falKey })
+
+    const results = []
+
+    for (const testimonial of testimonials) {
+      try {
+        // Generate professional headshot using fal.ai image generation
+        const imageResult = await fal.subscribe("fal-ai/flux/schnell", {
+          input: {
+            prompt: `Professional corporate headshot of ${testimonial.name}, ${testimonial.role}, business attire, neutral background, high quality, professional photography`,
+            image_size: "square",
+            num_inference_steps: 4,
+            num_images: 1,
+          },
+        })
+
+        const imageUrl = imageResult.data?.images?.[0]?.url
+
+        if (!imageUrl) {
+          throw new Error("Failed to generate image")
+        }
+
+        // Generate talking avatar video with testimonial text
+        const videoResult = await fal.subscribe("fal-ai/ai-avatar/single-text", {
+          input: {
+            image_url: imageUrl,
+            text: testimonial.text,
+            voice: "en-US-Neural2-A", // Professional voice
+          },
+        })
+
+        const videoUrl = videoResult.data?.video?.url
+
+        if (!videoUrl) {
+          throw new Error("Failed to generate video")
+        }
+
+        results.push({
+          ...testimonial,
+          videoUrl,
+          imageUrl,
+          success: true,
+        })
+      } catch (error) {
+        results.push({
+          ...testimonial,
+          videoUrl: null,
+          success: false,
+          error: error instanceof Error ? error.message : "Unknown error",
+        })
+      }
+    }
+
+    const successCount = results.filter((r) => r.success).length
 
     return NextResponse.json({
       success: true,
       results,
-      generated: results.length,
+      generated: successCount,
       total: testimonials.length,
-      message: "Placeholder videos generated. Configure FAL_KEY in production for AI-generated videos.",
+      message: `Generated ${successCount}/${testimonials.length} AI video testimonials`,
     })
   } catch (error) {
-    console.error("[v0] Placeholder generation failed:", error)
     return NextResponse.json(
       {
         success: false,
-        error: "Failed to generate placeholders",
+        error: "Failed to generate videos",
         message: error instanceof Error ? error.message : "Unknown error",
         results: [],
         generated: 0,

@@ -19,7 +19,7 @@ export const testimonialVideos: TestimonialVideo[] = [
   {
     id: "sarah-chen-cto",
     title: "AI Governance Transformation Success",
-    videoUrl: null, // To be populated after generation
+    videoUrl: "/placeholder.svg?height=400&width=600&text=Sarah+Chen+Testimonial",
     duration: "2:34",
     category: "AI Ethics",
     industry: "Technology",
@@ -32,7 +32,7 @@ export const testimonialVideos: TestimonialVideo[] = [
   {
     id: "marcus-rodriguez-cmo",
     title: "Healthcare AI Bias Elimination",
-    videoUrl: null,
+    videoUrl: "/placeholder.svg?height=400&width=600&text=Dr.+Marcus+Rodriguez+Testimonial",
     duration: "3:12",
     category: "Healthcare",
     industry: "Bias Mitigation",
@@ -45,7 +45,7 @@ export const testimonialVideos: TestimonialVideo[] = [
   {
     id: "amelia-foster-ceo",
     title: "Startup Ethics Framework Implementation",
-    videoUrl: null,
+    videoUrl: "/placeholder.svg?height=400&width=600&text=Amelia+Foster+Testimonial",
     duration: "1:58",
     category: "Startup",
     industry: "EdTech",
@@ -58,7 +58,7 @@ export const testimonialVideos: TestimonialVideo[] = [
   {
     id: "james-park-vp",
     title: "Financial Services Compliance Success",
-    videoUrl: null,
+    videoUrl: "/placeholder.svg?height=400&width=600&text=James+Park+Testimonial",
     duration: "4:21",
     category: "Financial Services",
     industry: "Regulatory",
@@ -71,7 +71,7 @@ export const testimonialVideos: TestimonialVideo[] = [
   {
     id: "lisa-kumar-cio",
     title: "Global Manufacturing Transformation",
-    videoUrl: null,
+    videoUrl: "/placeholder.svg?height=400&width=600&text=Dr.+Lisa+Kumar+Testimonial",
     duration: "3:45",
     category: "Manufacturing",
     industry: "Supply Chain",
@@ -84,7 +84,7 @@ export const testimonialVideos: TestimonialVideo[] = [
   {
     id: "michael-zhang-product",
     title: "E-commerce Personalization Revolution",
-    videoUrl: null,
+    videoUrl: "/placeholder.svg?height=400&width=600&text=Michael+Zhang+Testimonial",
     duration: "2:17",
     category: "E-commerce",
     industry: "Personalization",
