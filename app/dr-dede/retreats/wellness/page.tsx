@@ -84,14 +84,14 @@ export default function WellnessRetreatsPage() {
                   <Badge className="mb-4 bg-white/20 text-white border-white/30 w-fit" variant="outline">
                     Featured Retreat
                   </Badge>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Rest as Resistance</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Bloom Into Rest — Japan 2026</h2>
                   <p className="text-lg mb-4 opacity-90 leading-relaxed">
-                    A luxury healing experience in Japan for women executives reclaiming rest as a right. December 8-18,
-                    2025 in Tokyo, Kamakura, Beppu, and Miyajima.
+                    A transformative spring retreat during Japan's legendary cherry blossom season. Experience renewal
+                    and liberation through onsen healing, forest bathing, and mindful restoration in peak sakura bloom.
                   </p>
                   <p className="text-base mb-6 opacity-90 leading-relaxed">
-                    Bask in slow mornings, onsen rituals, forest bathing, and ryokan care—mindfully crafted for deep
-                    restoration, community, and liberation.
+                    Journey through Tokyo, Kyoto, Hakone, and the Japanese Alps during April's magical hanami
+                    season—thoughtfully designed for women executives reclaiming rest as a sacred right.
                   </p>
                   <Button
                     asChild
@@ -99,7 +99,11 @@ export default function WellnessRetreatsPage() {
                     variant="secondary"
                     className="bg-white text-purple-600 hover:bg-gray-100 w-fit"
                   >
-                    <a href="https://rar.dr-dede.com" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://v0-rest-as-resistance-kt19hdfbk-dedet2s-projects.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Learn More About Rest as Resistance
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
@@ -107,8 +111,8 @@ export default function WellnessRetreatsPage() {
                 </div>
                 <div className="relative h-64 md:h-auto min-h-[400px]">
                   <Image
-                    src="/japanese-mountains-with-fall-foliage-and-tradition.jpg"
-                    alt="Rest as Resistance Retreat in Japan"
+                    src="/japanese-temple-pagoda-surrounded-by-pink-cherry-b.jpg"
+                    alt="Bloom Into Rest - Japan Cherry Blossom Retreat 2026"
                     fill
                     className="object-cover"
                   />
@@ -120,13 +124,18 @@ export default function WellnessRetreatsPage() {
           {/* Japanese retreat imagery grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image src="/japanese-hot-spring-onsen-with-mountain-views-at-s.jpg" alt="Japanese Hot Springs" fill className="object-cover" />
+              <Image src="/japanese-hot-spring-onsen-with-cherry-blossoms-sak.jpg" alt="Onsen with Cherry Blossoms" fill className="object-cover" />
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image src="/traditional-japanese-ryokan-with-tatami-rooms-and-.jpg" alt="Traditional Ryokan" fill className="object-cover" />
+              <Image src="/traditional-japanese-ryokan-garden-with-pink-cherr.jpg" alt="Ryokan Garden in Spring" fill className="object-cover" />
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image src="/japanese-temple-surrounded-by-red-and-orange-fall-.jpg" alt="Temple in Fall Colors" fill className="object-cover" />
+              <Image
+                src="/mount-fuji-with-pink-cherry-blossoms-sakura-foregr.jpg"
+                alt="Mount Fuji with Cherry Blossoms"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -142,20 +151,41 @@ export default function WellnessRetreatsPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Japanese Retreat offering */}
             <Card className="bg-white/90 backdrop-blur-sm">
               <CardHeader>
                 <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-purple-600 to-cyan-400 flex items-center justify-center mb-4">
                   <Mountain className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle>Rest as Resistance — Japan 2025</CardTitle>
+                <CardTitle>Rest as Resistance — Japan Retreats</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  A 10-day luxury healing experience in Japan for women executives. Experience Tokyo, Kamakura, Beppu
-                  hot springs, and Miyajima's sacred island.
-                </p>
-                <ul className="space-y-2 text-sm mb-4">
+                <div className="space-y-6">
+                  {/* First retreat */}
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Japan 2025</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                      A 10-day luxury healing experience in Japan for women executives. Experience Tokyo, Kamakura,
+                      Beppu hot springs, and Miyajima's sacred island.
+                    </p>
+                    <Badge variant="secondary" className="text-xs mb-3">
+                      December 8-18, 2025
+                    </Badge>
+                  </div>
+
+                  {/* Upcoming retreat */}
+                  <div className="pt-4 border-t">
+                    <h4 className="font-semibold text-sm mb-2">Japan April 2026: Bloom Into Rest</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                      Experience the magic of cherry blossom season. A transformative spring retreat during sakura
+                      season, combining rest practices with the beauty of Japan's most celebrated time of year.
+                    </p>
+                    <Badge variant="secondary" className="text-xs mb-3">
+                      April 2026 (Dates TBA)
+                    </Badge>
+                  </div>
+                </div>
+
+                <ul className="space-y-2 text-sm mt-4 pt-4 border-t">
                   <li className="flex items-start gap-2">
                     <Sun className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
                     <span>Private onsen rituals & forest bathing</span>
@@ -173,9 +203,6 @@ export default function WellnessRetreatsPage() {
                     <span>Limited to 8-10 guests for intimate care</span>
                   </li>
                 </ul>
-                <Badge variant="secondary" className="text-xs">
-                  December 8-18, 2025
-                </Badge>
               </CardContent>
             </Card>
 
