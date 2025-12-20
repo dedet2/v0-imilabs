@@ -99,11 +99,7 @@ export default function WellnessRetreatsPage() {
                     variant="secondary"
                     className="bg-white text-purple-600 hover:bg-gray-100 w-fit"
                   >
-                    <a
-                      href="https://v0-rest-as-resistance-kt19hdfbk-dedet2s-projects.vercel.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="https://rar.dr-dede.com" target="_blank" rel="noopener noreferrer">
                       Learn More About Rest as Resistance
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
@@ -124,10 +120,20 @@ export default function WellnessRetreatsPage() {
           {/* Japanese retreat imagery grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image src="/japanese-hot-spring-onsen-with-cherry-blossoms-sak.jpg" alt="Onsen with Cherry Blossoms" fill className="object-cover" />
+              <Image
+                src="/japanese-hot-spring-onsen-with-cherry-blossoms-sak.jpg"
+                alt="Onsen with Cherry Blossoms"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image src="/traditional-japanese-ryokan-garden-with-pink-cherr.jpg" alt="Ryokan Garden in Spring" fill className="object-cover" />
+              <Image
+                src="/traditional-japanese-ryokan-garden-with-pink-cherr.jpg"
+                alt="Ryokan Garden in Spring"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
               <Image
