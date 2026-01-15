@@ -4,7 +4,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Users, Target, Lightbulb, TrendingUp, Calendar, MapPin } from "lucide-react"
+import { ArrowRight, Users, Target, Lightbulb, TrendingUp, Calendar, MapPin, Sparkles } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Executive Retreats | Dr. Dédé Tetsubayashi",
@@ -78,13 +78,28 @@ export default function ExecutiveRetreatsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image src="/executive-team-in-strategic-planning-session.jpg" alt="Strategic Planning" fill className="object-cover" />
+              <Image
+                src="/executive-team-in-strategic-planning-session.jpg"
+                alt="Strategic Planning"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image src="/luxury-retreat-venue-with-mountain-views.jpg" alt="Retreat Venue" fill className="object-cover" />
+              <Image
+                src="/luxury-retreat-venue-with-mountain-views.jpg"
+                alt="Retreat Venue"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <Image src="/diverse-executives-networking-at-luxury-event.jpg" alt="Executive Networking" fill className="object-cover" />
+              <Image
+                src="/diverse-executives-networking-at-luxury-event.jpg"
+                alt="Executive Networking"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
@@ -226,6 +241,56 @@ export default function ExecutiveRetreatsPage() {
               </ul>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Corporate Wellness Partnerships */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">Corporate Wellness Partnerships</h2>
+            <p className="text-center text-lg text-foreground/70 mb-12 max-w-3xl mx-auto">
+              Bring transformative wellness experiences to your organization. Our corporate partnerships offer
+              customized retreat experiences, executive wellness programs, and team restoration initiatives.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {[
+                {
+                  icon: Sparkles,
+                  title: "Executive Wellness Programs",
+                  description:
+                    "Customized wellness experiences for C-suite and senior leadership teams addressing burnout and enhancing strategic thinking.",
+                },
+                {
+                  icon: Users,
+                  title: "Team Wellness Programs",
+                  description:
+                    "Multi-day wellness experiences strengthening team cohesion while providing deep restoration for high-performing teams and ERG groups.",
+                },
+                {
+                  icon: Target,
+                  title: "Wellness Sponsorships",
+                  description:
+                    "Sponsor employee participation in public retreats as part of DEI, wellness, or professional development initiatives.",
+                },
+              ].map((program, index) => (
+                <Card key={index} className="p-8 hover:shadow-lg transition-shadow text-center">
+                  <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-[#667eea] to-[#06b6d4] flex items-center justify-center mx-auto mb-4">
+                    <program.icon className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{program.title}</h3>
+                  <p className="text-foreground/70 leading-relaxed">{program.description}</p>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Button asChild size="lg" className="bg-gradient-to-r from-[#667eea] to-[#06b6d4]">
+                <Link href="/dr-dede/retreats/partnerships">Explore Corporate Partnerships</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -32,7 +32,6 @@ export function Navigation() {
   }
 
   const openDesktopDropdown = (key: keyof typeof desktopDropdowns) => {
-    // Clear any pending close timeout
     if (timeoutRefs.current[key]) {
       clearTimeout(timeoutRefs.current[key]!)
       timeoutRefs.current[key] = null
@@ -41,14 +40,12 @@ export function Navigation() {
   }
 
   const closeDesktopDropdown = (key: keyof typeof desktopDropdowns) => {
-    // Set a timeout to close the dropdown after 300ms
     timeoutRefs.current[key] = setTimeout(() => {
       setDesktopDropdowns((prev) => ({ ...prev, [key]: false }))
     }, 300)
   }
 
   const closeAllDesktopDropdowns = () => {
-    // Clear all timeouts
     Object.keys(timeoutRefs.current).forEach((key) => {
       if (timeoutRefs.current[key]) {
         clearTimeout(timeoutRefs.current[key]!)
@@ -73,7 +70,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-purple-500 bg-clip-text text-transparent">
-              Dr. Dédé
+              Dr. Dédé & incluu
             </div>
           </Link>
 
@@ -86,6 +83,7 @@ export function Navigation() {
               Home
             </Link>
 
+            {/* incluu Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => openDesktopDropdown("incluu")}
@@ -104,15 +102,16 @@ export function Navigation() {
                   onMouseEnter={() => openDesktopDropdown("incluu")}
                   onMouseLeave={() => closeDesktopDropdown("incluu")}
                 >
-                  <a
-                    href="https://incluu.us/blog"
+                  <Link
+                    href="/blog"
+                    onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
                       Blog
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Latest insights and articles</p>
-                  </a>
+                  </Link>
                   <Link
                     href="/case-studies"
                     onClick={closeAllDesktopDropdowns}
@@ -137,6 +136,7 @@ export function Navigation() {
               )}
             </div>
 
+            {/* Dr. Dédé Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => openDesktopDropdown("drDede")}
@@ -155,13 +155,14 @@ export function Navigation() {
                   onMouseEnter={() => openDesktopDropdown("drDede")}
                   onMouseLeave={() => closeDesktopDropdown("drDede")}
                 >
+                  {/* Retreats & Advocacy with nested menu */}
                   <div
                     className="relative"
                     onMouseEnter={() => openDesktopDropdown("retreats")}
                     onMouseLeave={() => closeDesktopDropdown("retreats")}
                   >
                     <Link
-                      href="/dr-dede/retreats"
+                      href="/retreats-advocacy"
                       onClick={closeAllDesktopDropdowns}
                       className="px-4 py-3 rounded-md hover:bg-accent transition-colors cursor-pointer flex items-center justify-between"
                     >
@@ -180,40 +181,100 @@ export function Navigation() {
                         onMouseLeave={() => closeDesktopDropdown("retreats")}
                       >
                         <Link
-                          href="/dr-dede/retreats/executive"
+                          href="/retreats-advocacy"
+                          className="text-sm text-foreground/60 hover:text-foreground py-2"
                           onClick={closeAllDesktopDropdowns}
-                          className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                         >
-                          <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
-                            Executive Retreats
-                          </div>
-                          <p className="text-xs text-muted-foreground mt-1">Leadership transformation</p>
+                          All Retreats Overview
                         </Link>
                         <Link
-                          href="/dr-dede/retreats/wellness"
+                          href="/retreats-advocacy/executive-wellness"
+                          className="text-sm text-foreground/60 hover:text-foreground py-2"
                           onClick={closeAllDesktopDropdowns}
-                          className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                         >
-                          <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
-                            Luxury Wellness
-                          </div>
-                          <p className="text-xs text-muted-foreground mt-1">Holistic rejuvenation</p>
+                          Executive Wellness
                         </Link>
                         <Link
-                          href="/dr-dede/retreats/advocacy"
+                          href="/retreats-advocacy/luxury-wellness"
+                          className="text-sm text-foreground/60 hover:text-foreground py-2"
                           onClick={closeAllDesktopDropdowns}
-                          className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                         >
-                          <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
-                            Disability Advocacy
-                          </div>
-                          <p className="text-xs text-muted-foreground mt-1">Inclusive innovation</p>
+                          Luxury Wellness
+                        </Link>
+                        <Link
+                          href="/retreats-advocacy/luxury-wellness/rar-brand"
+                          className="text-sm text-foreground/60 hover:text-foreground py-2"
+                          onClick={closeAllDesktopDropdowns}
+                        >
+                          Rest as Resistance
+                        </Link>
+                        <div className="border-t border-border my-2" />
+                        <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">2026 Retreats</p>
+                        <Link
+                          href="/retreats-advocacy/cherry-blossom-2026"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Cherry Blossom 2026</div>
+                        </Link>
+                        <Link
+                          href="/retreats-advocacy/summer-solstice-2026"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Summer Solstice 2026</div>
+                        </Link>
+                        <Link
+                          href="/retreats-advocacy/autumn-equinox-2026"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Autumn Equinox 2026</div>
+                        </Link>
+                        <Link
+                          href="/retreats-advocacy/winter-solstice-2026"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Winter Solstice 2026</div>
+                        </Link>
+                        <div className="border-t border-border my-2" />
+                        <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">Private Family</p>
+                        <Link
+                          href="/retreats-advocacy/family-retreat-june-2026"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Family Retreat June 2026</div>
+                        </Link>
+                        <Link
+                          href="/retreats-advocacy/anniversary-celebration-2026"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Anniversary Celebration 2026</div>
+                        </Link>
+                        <div className="border-t border-border my-2" />
+                        <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">2027 Retreats</p>
+                        <Link
+                          href="/retreats-advocacy/cherry-blossom-2027"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Cherry Blossom 2027</div>
+                        </Link>
+                        <Link
+                          href="/retreats-advocacy/winter-solstice-2027"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Winter Solstice 2027 (Extended)</div>
+                        </Link>
+                        <div className="border-t border-border my-2" />
+                        <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">Past Retreats</p>
+                        <Link
+                          href="/retreats-advocacy/past-retreats"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">View All Past Retreats</div>
                         </Link>
                       </div>
                     )}
                   </div>
                   <Link
-                    href="/dr-dede/speaking"
+                    href="/speaking-events"
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
@@ -224,6 +285,8 @@ export function Navigation() {
                   </Link>
                   <a
                     href="https://www.youtube.com/watch?v=mSQuZG_DHVY"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
@@ -235,6 +298,7 @@ export function Navigation() {
               )}
             </div>
 
+            {/* Resources Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => openDesktopDropdown("resources")}
@@ -253,15 +317,16 @@ export function Navigation() {
                   onMouseEnter={() => openDesktopDropdown("resources")}
                   onMouseLeave={() => closeDesktopDropdown("resources")}
                 >
-                  <a
-                    href="https://pmukyznd.manus.space/"
+                  <Link
+                    href="/resources/roi-calculator"
+                    onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
                       ROI Calculator
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Calculate your AI ROI potential</p>
-                  </a>
+                  </Link>
                   <Link
                     href="/resources/stories"
                     onClick={closeAllDesktopDropdowns}
@@ -273,7 +338,7 @@ export function Navigation() {
                     <p className="text-xs text-muted-foreground mt-1">Inspiring narratives</p>
                   </Link>
                   <Link
-                    href="/resources/privacy"
+                    href="/resources/privacy-policy"
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
@@ -282,7 +347,7 @@ export function Navigation() {
                     </div>
                   </Link>
                   <Link
-                    href="/resources/terms"
+                    href="/resources/terms-of-service"
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
@@ -306,7 +371,7 @@ export function Navigation() {
               size="sm"
               className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500 text-white border-0"
             >
-              <Link href="/contact">Schedule Consultation</Link>
+              <Link href="/schedule-consultation">Schedule Consultation</Link>
             </Button>
           </div>
 
@@ -318,7 +383,7 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border">
+          <div className="lg:hidden py-4 border-t border-border max-h-[80vh] overflow-y-auto">
             <div className="flex flex-col gap-2">
               <Link
                 href="/"
@@ -328,6 +393,7 @@ export function Navigation() {
                 Home
               </Link>
 
+              {/* incluu Mobile */}
               <div>
                 <div className="flex items-center justify-between">
                   <Link
@@ -348,9 +414,13 @@ export function Navigation() {
                 </div>
                 {mobileDropdowns.incluu && (
                   <div className="pl-8 flex flex-col gap-2">
-                    <a href="https://incluu.us/blog" className="text-sm text-foreground/70 hover:text-foreground py-2">
+                    <Link
+                      href="/blog"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
                       Blog
-                    </a>
+                    </Link>
                     <Link
                       href="/case-studies"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
@@ -369,6 +439,7 @@ export function Navigation() {
                 )}
               </div>
 
+              {/* Dr. Dédé Mobile */}
               <div>
                 <div className="flex items-center justify-between">
                   <Link
@@ -389,6 +460,7 @@ export function Navigation() {
                 </div>
                 {mobileDropdowns.drDede && (
                   <div className="pl-8 flex flex-col gap-2">
+                    {/* Retreats nested */}
                     <div>
                       <button
                         onClick={() => toggleMobileDropdown("retreats")}
@@ -402,31 +474,109 @@ export function Navigation() {
                       {mobileDropdowns.retreats && (
                         <div className="pl-4 flex flex-col gap-2 mt-2">
                           <Link
-                            href="/dr-dede/retreats/executive"
+                            href="/retreats-advocacy"
                             className="text-sm text-foreground/60 hover:text-foreground py-2"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            Executive Retreats
+                            All Retreats Overview
                           </Link>
                           <Link
-                            href="/dr-dede/retreats/wellness"
+                            href="/retreats-advocacy/executive-wellness"
+                            className="text-sm text-foreground/60 hover:text-foreground py-2"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Executive Wellness
+                          </Link>
+                          <Link
+                            href="/retreats-advocacy/luxury-wellness"
                             className="text-sm text-foreground/60 hover:text-foreground py-2"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             Luxury Wellness
                           </Link>
                           <Link
-                            href="/dr-dede/retreats/advocacy"
+                            href="/retreats-advocacy/luxury-wellness/rar-brand"
                             className="text-sm text-foreground/60 hover:text-foreground py-2"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            Disability Advocacy
+                            Rest as Resistance
+                          </Link>
+                          <div className="border-t border-border my-1" />
+                          <p className="text-xs font-semibold text-muted-foreground py-1">2026 Retreats</p>
+                          <Link
+                            href="/retreats-advocacy/cherry-blossom-2026"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Cherry Blossom 2026
+                          </Link>
+                          <Link
+                            href="/retreats-advocacy/summer-solstice-2026"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Summer Solstice 2026
+                          </Link>
+                          <Link
+                            href="/retreats-advocacy/autumn-equinox-2026"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Autumn Equinox 2026
+                          </Link>
+                          <Link
+                            href="/retreats-advocacy/winter-solstice-2026"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Winter Solstice 2026
+                          </Link>
+                          <div className="border-t border-border my-1" />
+                          <p className="text-xs font-semibold text-muted-foreground py-1">Private Family</p>
+                          <Link
+                            href="/retreats-advocacy/family-retreat-june-2026"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Family Retreat June 2026
+                          </Link>
+                          <Link
+                            href="/retreats-advocacy/anniversary-celebration-2026"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Anniversary Celebration 2026
+                          </Link>
+                          <div className="border-t border-border my-1" />
+                          <p className="text-xs font-semibold text-muted-foreground py-1">2027 Retreats</p>
+                          <Link
+                            href="/retreats-advocacy/cherry-blossom-2027"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Cherry Blossom 2027
+                          </Link>
+                          <Link
+                            href="/retreats-advocacy/winter-solstice-2027"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Winter Solstice 2027 (Extended)
+                          </Link>
+                          <div className="border-t border-border my-1" />
+                          <p className="text-xs font-semibold text-muted-foreground py-1">Past Retreats</p>
+                          <Link
+                            href="/retreats-advocacy/past-retreats"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            View All Past Retreats
                           </Link>
                         </div>
                       )}
                     </div>
                     <Link
-                      href="/dr-dede/speaking"
+                      href="/speaking-events"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -434,6 +584,8 @@ export function Navigation() {
                     </Link>
                     <a
                       href="https://www.youtube.com/watch?v=mSQuZG_DHVY"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
                     >
                       Watch TEDx
@@ -442,6 +594,7 @@ export function Navigation() {
                 )}
               </div>
 
+              {/* Resources Mobile */}
               <div>
                 <div className="flex items-center justify-between">
                   <Link
@@ -462,12 +615,13 @@ export function Navigation() {
                 </div>
                 {mobileDropdowns.resources && (
                   <div className="pl-8 flex flex-col gap-2">
-                    <a
-                      href="https://pmukyznd.manus.space/"
+                    <Link
+                      href="/resources/roi-calculator"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       ROI Calculator
-                    </a>
+                    </Link>
                     <Link
                       href="/resources/stories"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
@@ -476,14 +630,14 @@ export function Navigation() {
                       Stories
                     </Link>
                     <Link
-                      href="/resources/privacy"
+                      href="/resources/privacy-policy"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Privacy Policy
                     </Link>
                     <Link
-                      href="/resources/terms"
+                      href="/resources/terms-of-service"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -504,9 +658,9 @@ export function Navigation() {
               <div className="px-4 pt-2">
                 <Button
                   asChild
-                  className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500 text-white border-0 w-full"
+                  className="w-full bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500 text-white border-0"
                 >
-                  <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+                  <Link href="/schedule-consultation" onClick={() => setMobileMenuOpen(false)}>
                     Schedule Consultation
                   </Link>
                 </Button>

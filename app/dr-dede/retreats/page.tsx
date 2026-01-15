@@ -38,11 +38,47 @@ export default function RetreatsPage() {
         </div>
       </section>
 
+      {/* Main Overview - Updated mission statement */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6">Wellness Designed for Everyone</h2>
+                <div className="space-y-4 text-lg text-foreground/70 leading-relaxed">
+                  <p>
+                    Our wellness retreats are founded on the principle that true luxury means accessibility for all.
+                    Every aspect of the experience—from the physical spaces to the wellness practices—is designed to be
+                    fully inclusive and deeply restorative.
+                  </p>
+                  <p>
+                    Led by Dr. Dédé Tetsubayashi and a team of wellness experts, these retreats combine evidence-based
+                    practices with personalized care, creating transformative experiences that honor your unique needs
+                    and goals.
+                  </p>
+                </div>
+              </div>
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/accessible-luxury-spa-wellness-retreat-with-inclus.jpg"
+                  alt="Luxury Wellness Experience"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Retreat Types */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Retreat Experiences</h2>
+            <p className="text-center text-lg text-foreground/70 mb-12 max-w-3xl mx-auto">
+              Transformative wellness journeys designed for leaders who deserve rest, renewal, and inclusive care.
+            </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               {[
@@ -50,42 +86,42 @@ export default function RetreatsPage() {
                   icon: Sparkles,
                   title: "Executive Retreats",
                   description:
-                    "Exclusive experiences for C-suite leaders to recharge, strategize, and build inclusive leadership capabilities.",
+                    "Customized wellness experiences for C-suite and senior leadership teams. Designed to address burnout, restore clarity, and enhance strategic thinking through culturally-informed rest practices.",
                   features: [
-                    "Private luxury accommodations",
-                    "Strategic planning sessions",
-                    "Wellness & mindfulness practices",
-                    "Inclusive leadership training",
+                    "Private group bookings (10-20 participants)",
+                    "Customized programming",
+                    "Leadership development integration",
+                    "Post-retreat integration support",
                   ],
-                  duration: "3-5 days",
+                  href: "/dr-dede/retreats/executive",
                   image: "/luxury-executive-retreat-with-diverse-leaders-in-m.jpg",
                 },
                 {
                   icon: Mountain,
                   title: "Luxury Wellness",
                   description:
-                    "Curated wellness experiences combining accessibility, luxury, and transformative personal growth.",
+                    "Premium wellness retreats in Japan combining traditional healing practices with modern luxury. Experience transformative rest in culturally-rich environments designed for deep restoration.",
                   features: [
-                    "Fully accessible venues",
-                    "Personalized wellness programs",
-                    "Gourmet inclusive dining",
-                    "Spa & therapeutic services",
+                    "Seasonal retreat experiences",
+                    "Traditional onsen healing",
+                    "Cultural immersion",
+                    "Small intimate groups (8-12 participants)",
                   ],
-                  duration: "5-7 days",
+                  href: "/dr-dede/retreats/wellness",
                   image: "/accessible-luxury-spa-wellness-retreat-with-inclus.jpg",
                 },
                 {
                   icon: Users,
-                  title: "Team Retreats",
+                  title: "Disability Retreats",
                   description:
-                    "Build high-performing, inclusive teams through immersive experiences and collaborative learning.",
+                    "Fully accessible wellness experiences designed specifically for individuals with disabilities. Every aspect thoughtfully curated to ensure comfort, dignity, and transformative healing.",
                   features: [
-                    "Team building activities",
-                    "Diversity & inclusion workshops",
-                    "Collaborative problem-solving",
-                    "Cultural competency training",
+                    "WCAG AAA accessible environments",
+                    "Adaptive wellness practices",
+                    "Specialized support staff",
+                    "Dignity-centered care",
                   ],
-                  duration: "2-4 days",
+                  href: "/dr-dede/retreats/advocacy",
                   image: "/diverse-team-building-retreat-with-collaborative-a.jpg",
                 },
               ].map((retreat, index) => (
@@ -99,7 +135,7 @@ export default function RetreatsPage() {
                     />
                   </div>
                   <div className="p-8">
-                    <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-purple-600 to-cyan-400 flex items-center justify-center mb-4">
+                    <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-[#667eea] to-[#06b6d4] flex items-center justify-center mb-4">
                       <retreat.icon className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold mb-3">{retreat.title}</h3>
@@ -112,9 +148,9 @@ export default function RetreatsPage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="text-sm font-semibold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                      {retreat.duration}
-                    </div>
+                    <Button asChild className="w-full bg-gradient-to-r from-[#667eea] to-[#06b6d4]">
+                      <Link href={retreat.href}>Learn More</Link>
+                    </Button>
                   </div>
                 </Card>
               ))}
@@ -155,6 +191,67 @@ export default function RetreatsPage() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Partnerships */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">Corporate Partnerships</h2>
+            <p className="text-center text-lg text-foreground/70 mb-12 max-w-3xl mx-auto">
+              Bring transformative wellness experiences to your organization. Our corporate partnerships offer
+              customized retreat experiences, executive wellness programs, and team restoration initiatives designed for
+              high-performing teams.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {[
+                {
+                  icon: Sparkles,
+                  title: "Executive Wellness Programs",
+                  description:
+                    "Customized wellness experiences for C-suite and senior leadership teams addressing burnout and enhancing strategic thinking.",
+                },
+                {
+                  icon: Users,
+                  title: "Team Wellness Programs",
+                  description:
+                    "Multi-day wellness experiences strengthening team cohesion while providing deep restoration for high-performing teams and ERG groups.",
+                },
+                {
+                  icon: Shield,
+                  title: "Wellness Sponsorships",
+                  description:
+                    "Sponsor employee participation in public retreats as part of DEI, wellness, or professional development initiatives demonstrating commitment to employee wellbeing.",
+                },
+              ].map((program, index) => (
+                <Card key={index} className="p-8 hover:shadow-lg transition-shadow text-center">
+                  <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-[#667eea] to-[#06b6d4] flex items-center justify-center mx-auto mb-4">
+                    <program.icon className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{program.title}</h3>
+                  <p className="text-foreground/70 leading-relaxed">{program.description}</p>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="p-8 bg-gradient-to-br from-[#667eea]/5 to-[#06b6d4]/5 text-center">
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#667eea] to-[#06b6d4] bg-clip-text text-transparent">
+                Partner With Us
+              </h3>
+              <p className="text-foreground/70 mb-6 leading-relaxed max-w-2xl mx-auto">
+                Interested in bringing transformative wellness to your organization? Let's discuss customized corporate
+                wellness solutions.
+              </p>
+              <Button asChild size="lg" className="bg-gradient-to-r from-[#667eea] to-[#06b6d4]">
+                <Link href="/dr-dede/retreats/partnerships">Schedule Corporate Consultation</Link>
+              </Button>
+              <p className="mt-4 text-sm text-foreground/60 italic">
+                Trusted by Fortune 500 companies and leading healthcare organizations
+              </p>
+            </Card>
           </div>
         </div>
       </section>
