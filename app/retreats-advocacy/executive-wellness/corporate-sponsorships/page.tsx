@@ -1,6 +1,31 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
+import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Corporate Wellness Sponsorships | Dr. Dédé Tetsubayashi",
+  description:
+    "Support your team's well-being through transformative wellness experiences in Japan. Sponsor employees for Rest as Resistance retreats.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/executive-wellness/corporate-sponsorships",
+  },
+  openGraph: {
+    title: "Corporate Wellness Sponsorships | Dr. Dédé Tetsubayashi",
+    description:
+      "Support your team's well-being through transformative wellness experiences in Japan. Sponsor employees for Rest as Resistance retreats.",
+    url: "https://dr-dede.com/retreats-advocacy/executive-wellness/corporate-sponsorships",
+    siteName: "Dr. Dédé Tetsubayashi",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corporate Wellness Sponsorships | Dr. Dédé Tetsubayashi",
+    description: "Support your team's well-being through transformative wellness experiences in Japan.",
+  },
+}
 
 export default function CorporateSponsorshipsPage() {
   return (
@@ -12,9 +37,9 @@ export default function CorporateSponsorshipsPage() {
           <p className="text-xl text-white/90 mb-8">
             Support your team's well-being through transformative wellness experiences in Japan
           </p>
-          <a href="mailto:info@dr-dede.com">
+          <Link href="/contact">
             <Button className="bg-white text-purple-600 px-8 py-3 rounded-md">Contact Us</Button>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -78,11 +103,11 @@ export default function CorporateSponsorshipsPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-light mb-6">Ready to Partner?</h2>
           <p className="text-lg text-gray-600 mb-8">Contact us to discuss custom corporate wellness solutions</p>
-          <a href="mailto:info@dr-dede.com">
+          <Link href="/contact">
             <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-md">
-              Email info@dr-dede.com
+              Contact Us About Sponsorships
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
     </div>

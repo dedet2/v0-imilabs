@@ -3,6 +3,39 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check, ArrowLeft } from "lucide-react"
 import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Winter Solstice 2026 | Rest as Resistance",
+  description:
+    "9-day flagship winter healing journey in Japan (December 14-22, 2026). Snow-covered temples, mountain onsen, winter solstice ceremony.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/winter-solstice-2026",
+  },
+  openGraph: {
+    title: "Winter Solstice 2026 | Rest as Resistance",
+    description:
+      "9-day flagship winter healing journey in Japan (December 14-22, 2026). Snow-covered temples, mountain onsen, winter solstice ceremony.",
+    url: "https://dr-dede.com/retreats-advocacy/winter-solstice-2026",
+    siteName: "Dr. Dédé Tetsubayashi",
+    images: [
+      {
+        url: "/diverse-women-snow-onsen-outdoor-hot-spring-japan-.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Winter Solstice 2026",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Winter Solstice 2026 | Rest as Resistance",
+    description: "9-day flagship winter healing journey in Japan with snow onsen and winter solstice ceremony.",
+    images: ["/diverse-women-snow-onsen-outdoor-hot-spring-japan-.jpg"],
+  },
+}
 
 export default function WinterSolstice2026Page() {
   return (
@@ -39,7 +72,6 @@ export default function WinterSolstice2026Page() {
           <p className="text-sm mb-8 opacity-80">
             Limited to 10–12 participants · Return home December 23 for Christmas with family
           </p>
-          <link rel="canonical" href="https://dr-dede.com/retreats-advocacy/winter-solstice-2026" />
           <Link href="/contact">
             <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide">
               Reserve Your Spot - From $15,500
@@ -321,7 +353,7 @@ export default function WinterSolstice2026Page() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold">
-                Apply Now
+                Reserve Your Seat
               </Button>
             </Link>
             <Link href="/retreats-advocacy">

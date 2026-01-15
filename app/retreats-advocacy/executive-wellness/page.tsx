@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dr-dede.com/retreats-advocacy/executive-wellness",
   },
+  openGraph: {
+    title: "Executive Wellness Programs | Dr. Dédé Tetsubayashi",
+    description:
+      "Transform your leadership through rest. Custom corporate wellness programs and executive retreat sponsorships designed for organizational impact.",
+    url: "https://dr-dede.com/retreats-advocacy/executive-wellness",
+    siteName: "Dr. Dédé Tetsubayashi",
+    images: [
+      {
+        url: "/diverse-black-women-executives-team-retreat-japan-.jpg",
+        width: 2400,
+        height: 1600,
+        alt: "Executive Wellness Programs",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Executive Wellness Programs | Dr. Dédé Tetsubayashi",
+    description:
+      "Transform your leadership through rest. Custom corporate wellness programs and executive retreat sponsorships.",
+    images: ["/diverse-black-women-executives-team-retreat-japan-.jpg"],
+  },
 }
 
 export default function ExecutiveWellnessPage() {
@@ -18,7 +42,7 @@ export default function ExecutiveWellnessPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section
-        className="relative min-h-[70vh] flex items-center justify-center"
+        className="relative py-20"
         style={{
           backgroundImage:
             "url(/placeholder.svg?height=1600&width=2400&query=diverse+Black+women+executives+team+retreat+Japan+mountain+view+professional)",

@@ -16,21 +16,65 @@ export const metadata: Metadata = {
 export default function RaRBrandPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-cyan-50">
+      {/* Hero Section - py-20 with deepened background */}
+      <section className="py-20 bg-gradient-to-br from-purple-300 via-purple-100 to-cyan-200">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-6xl md:text-7xl font-light mb-8 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-light mb-8 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
             Rest as Resistance
           </h1>
-          <blockquote className="text-2xl md:text-3xl italic text-gray-700 mb-4 font-light">
+          <blockquote className="text-2xl md:text-3xl italic text-gray-700 mb-4 font-light leading-relaxed">
             "Rest is not a luxury. It is resistance."
           </blockquote>
           <p className="text-sm text-gray-600 mb-12">— Tricia Hersey, The Nap Ministry</p>
           <Link href="/retreats-advocacy/cherry-blossom-2026">
-            <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-md">
+            <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-full hover:opacity-90">
               Explore 2026 Retreats
             </Button>
           </Link>
+        </div>
+      </section>
+
+      {/* The Three Pillars - MOVED TO TOP */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-light text-center mb-12 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+            The Three Pillars
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              {
+                icon: Users,
+                title: "Rest as Revolutionary",
+                description:
+                  "In a culture built on the exploitation of Black bodies through labor, choosing rest is radical resistance. Our retreats create protected space for Black women to reclaim rest as a birthright.",
+              },
+              {
+                icon: Heart,
+                title: "Culturally-Specific Care",
+                description:
+                  "Healing happens in context. Our retreats are designed by and for Black women, honoring the unique intersections of race, gender, and lived experience.",
+              },
+              {
+                icon: Mountain,
+                title: "Japan as Medicine",
+                description:
+                  "Japan's ancient wellness traditions—onsen hot springs, forest bathing, kaiseki cuisine, tea ceremony—become tools for deep restoration.",
+              },
+            ].map((pillar, i) => (
+              <div key={i} className="text-center">
+                <div
+                  className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center"
+                  style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)" }}
+                >
+                  <pillar.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                  {pillar.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">{pillar.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -326,52 +370,8 @@ export default function RaRBrandPage() {
         </div>
       </section>
 
-      {/* Philosophy Deep Dive */}
+      {/* Meet Your Host - Adding full text from HTML */}
       <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-light text-center mb-12 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
-            The Three Pillars
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              {
-                icon: Users,
-                title: "Rest as Revolutionary",
-                description:
-                  "In a culture built on the exploitation of Black bodies through labor, choosing rest is radical resistance. Our retreats create protected space for Black women to reclaim rest as a birthright.",
-              },
-              {
-                icon: Heart,
-                title: "Culturally-Specific Care",
-                description:
-                  "Healing happens in context. Our retreats are designed by and for Black women, honoring the unique intersections of race, gender, and lived experience.",
-              },
-              {
-                icon: Mountain,
-                title: "Japan as Medicine",
-                description:
-                  "Japan's ancient wellness traditions—onsen hot springs, forest bathing, kaiseki cuisine, tea ceremony—become tools for deep restoration.",
-              },
-            ].map((pillar, i) => (
-              <div key={i} className="text-center">
-                <div
-                  className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center"
-                  style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)" }}
-                >
-                  <pillar.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                  {pillar.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">{pillar.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Meet Your Host */}
-      <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-4xl font-light text-center mb-12 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
             Meet Your Host
@@ -381,28 +381,47 @@ export default function RaRBrandPage() {
               className="h-96 rounded-2xl bg-cover bg-center bg-gray-200"
               style={{
                 backgroundImage:
-                  "url(/placeholder.svg?height=400&width=400&query=professional+Black+woman+PhD+smiling+portrait+natural+hair)",
+                  "url(/placeholder.svg?height=400&width=400&query=Dr+Dede+Tetsubayashi+professional+portrait+Black+woman+PhD+smiling)",
               }}
             />
             <div>
-              <h3 className="text-3xl font-semibold mb-4">Dr. Dédé Tetsubayashi, PhD</h3>
+              <h3 className="text-3xl font-semibold mb-4 text-gray-900">Dr. Dédé Tetsubayashi, PhD</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                With a PhD from Cornell University and over 15 years of experience living in and studying Japan, Dr.
-                Dédé brings deep cultural expertise to every retreat.
+                As a queer, disabled Black woman with a PhD from Cornell University, Dr. Dédé brings lived experience to
+                creating truly inclusive wellness spaces. Her 15+ years living in Japan and fluency in seven languages
+                allow her to navigate cultural complexities while centering the needs of marginalized communities.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Fluent in Japanese and seven languages total, she creates seamless cultural immersion experiences while
-                holding space for Black women's unique healing journeys.
+                Former leadership roles at Meta, Salesforce, and WeWork inform her deep understanding of executive
+                burnout and the transformative power of intentional rest. She has facilitated wellness experiences for
+                25+ Black women leaders, creating spaces where rest is honored as resistance.
               </p>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Former leadership roles at Meta, Salesforce, and WeWork inform her understanding of executive burnout
-                and the transformative power of intentional rest.
+                Dr. Dédé's approach to wellness is grounded in disability justice, anti-racism, and the belief that
+                luxury must be accessible. Every retreat is designed with multiple access points—physical, cultural,
+                linguistic—ensuring that all participants can fully engage and experience deep restoration.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>PhD from Cornell University</li>
-                <li>15+ years Japan cultural expertise</li>
-                <li>Fluent in 7 languages including Japanese</li>
-                <li>Former Meta, Salesforce, WeWork</li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
+                  PhD from Cornell University
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
+                  15+ years Japan cultural expertise
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
+                  Fluent in 7 languages including Japanese
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
+                  Former Meta, Salesforce, WeWork leadership
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
+                  25+ Black women leaders served
+                </li>
               </ul>
             </div>
           </div>

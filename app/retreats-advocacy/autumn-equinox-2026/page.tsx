@@ -9,13 +9,37 @@ export const metadata: Metadata = {
   title: "Autumn Equinox 2026 - Crimson & Gold | Rest as Resistance",
   description:
     "11-day wellness retreat celebrating autumn equinox in Japan (Sept 22 - Oct 2, 2026). Fall foliage, balance, restoration.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/autumn-equinox-2026",
+  },
+  openGraph: {
+    title: "Autumn Equinox 2026 - Crimson & Gold | Rest as Resistance",
+    description:
+      "11-day wellness retreat celebrating autumn equinox in Japan (Sept 22 - Oct 2, 2026). Fall foliage, balance, restoration.",
+    url: "https://dr-dede.com/retreats-advocacy/autumn-equinox-2026",
+    siteName: "Dr. Dédé Tetsubayashi",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Autumn Equinox 2026 - Crimson & Gold",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Autumn Equinox 2026 - Crimson & Gold | Rest as Resistance",
+    description: "11-day wellness retreat celebrating autumn equinox in Japan with spectacular fall foliage.",
+    images: ["https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=1200&q=80"],
+  },
 }
 
 export default function AutumnEquinox2026Page() {
   return (
     <div className="min-h-screen bg-white">
-      <link rel="canonical" href="https://dr-dede.com/retreats-advocacy/autumn-equinox-2026" />
-
       <section
         className="relative min-h-[95vh] flex items-center justify-center pt-20"
         style={{
@@ -226,7 +250,7 @@ export default function AutumnEquinox2026Page() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold">
-                Apply Now
+                Reserve Your Seat
               </Button>
             </Link>
             <Link href="/retreats-advocacy">

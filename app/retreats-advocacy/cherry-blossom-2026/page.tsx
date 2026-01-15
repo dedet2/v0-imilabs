@@ -8,6 +8,29 @@ export const metadata = {
   title: "Cherry Blossom Edition 2026 | Rest as Resistance",
   description:
     "10-day wellness retreat in Japan during peak cherry blossom season (April 8-18, 2026). Kamakura, Tokyo, Premium Ryokan.",
+  openGraph: {
+    title: "Cherry Blossom Edition 2026 | Rest as Resistance",
+    description:
+      "10-day wellness retreat in Japan during peak cherry blossom season (April 8-18, 2026). Kamakura, Tokyo, Premium Ryokan.",
+    url: "https://dr-dede.com/retreats-advocacy/cherry-blossom-2026",
+    siteName: "Dr. Dédé Tetsubayashi",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Cherry Blossom Edition 2026",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cherry Blossom Edition 2026 | Rest as Resistance",
+    description: "10-day wellness retreat in Japan during peak cherry blossom season (April 8-18, 2026).",
+    images: ["https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&q=80"],
+  },
 }
 
 export default function CherryBlossom2026Page() {

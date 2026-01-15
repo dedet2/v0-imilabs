@@ -8,6 +8,29 @@ export const metadata = {
   title: "Summer Solstice in Hokkaido 2026 | Rest as Resistance",
   description:
     "7-day wellness retreat in Hokkaido during summer solstice (June 21-27, 2026). Lavender fields, pristine lakes, midnight sun.",
+  openGraph: {
+    title: "Summer Solstice in Hokkaido 2026 | Rest as Resistance",
+    description:
+      "7-day wellness retreat in Hokkaido during summer solstice (June 21-27, 2026). Lavender fields, pristine lakes, midnight sun.",
+    url: "https://dr-dede.com/retreats-advocacy/summer-solstice-2026",
+    siteName: "Dr. Dédé Tetsubayashi",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Summer Solstice in Hokkaido 2026",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Summer Solstice in Hokkaido 2026 | Rest as Resistance",
+    description: "7-day wellness retreat in Hokkaido during summer solstice. Lavender fields and midnight sun.",
+    images: ["https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1200&q=80"],
+  },
 }
 
 export default function SummerSolstice2026Page() {
@@ -117,21 +140,21 @@ export default function SummerSolstice2026Page() {
                   "Natural hot springs with panoramic mountain views. Healing volcanic mineral waters surrounded by summer wildflowers and alpine scenery.",
               },
               {
-                image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80",
                 icon: Mountain,
                 title: "Alpine Nature Walks",
                 description:
                   "Gentle forest trails through birch groves and wildflower meadows. Extended daylight hours mean leisurely afternoon hikes without rushing sunset.",
               },
               {
-                image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600&q=80",
                 icon: Sunrise,
                 title: "Sunrise Meditation",
                 description:
                   "Early morning practices by the lake. Experience the unique energy of solstice sunrise—nature's celebration of maximum light and life force.",
               },
               {
-                image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1544367567083-eca07ce68773?w=600&q=80",
                 icon: Heart,
                 title: "Rest as Resistance",
                 description:
@@ -230,7 +253,7 @@ export default function SummerSolstice2026Page() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold">
-                Apply Now
+                Reserve Your Seat
               </Button>
             </Link>
             <Link href="/retreats-advocacy/luxury-wellness">

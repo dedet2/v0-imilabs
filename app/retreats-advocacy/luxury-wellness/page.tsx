@@ -18,7 +18,7 @@ export default function LuxuryWellnessPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative min-h-[70vh] flex items-center justify-center"
+        className="relative py-20"
         style={{
           backgroundImage:
             "url(/placeholder.svg?height=1600&width=2400&query=diverse+women+various+ethnicities+wheelchair+user+enjoying+accessible+luxury+Japanese+onsen+spa)",

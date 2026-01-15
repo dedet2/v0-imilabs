@@ -2,6 +2,30 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check, Cherry, Sparkles, Users } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Cherry Blossom Edition 2027 | Rest as Resistance",
+  description:
+    "Enhanced 10-day wellness retreat during Japan's peak cherry blossom season (April 6-16, 2027). Limited to 12 participants.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/cherry-blossom-2027",
+  },
+  openGraph: {
+    title: "Cherry Blossom Edition 2027 | Rest as Resistance",
+    description:
+      "Enhanced 10-day wellness retreat during Japan's peak cherry blossom season (April 6-16, 2027). Limited to 12 participants.",
+    url: "https://dr-dede.com/retreats-advocacy/cherry-blossom-2027",
+    siteName: "Dr. Dédé Tetsubayashi",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cherry Blossom Edition 2027 | Rest as Resistance",
+    description: "Enhanced 10-day wellness retreat during Japan's peak cherry blossom season (April 6-16, 2027).",
+  },
+}
 
 export default function CherryBlossom2027Page() {
   return (
@@ -25,7 +49,6 @@ export default function CherryBlossom2027Page() {
             participants for an intimate, transformative experience.
           </p>
           <p className="text-lg font-medium mb-8">April 6-16, 2027 | Kamakura & Hakone</p>
-          <link rel="canonical" href="https://dr-dede.com/retreats-advocacy/cherry-blossom-2027" />
           <Link href="/contact">
             <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide">
               Reserve Early Bird - From $11,500
@@ -155,7 +178,7 @@ export default function CherryBlossom2027Page() {
           </p>
           <Link href="/contact">
             <Button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold">
-              Apply Now
+              Reserve Your Seat
             </Button>
           </Link>
         </div>
