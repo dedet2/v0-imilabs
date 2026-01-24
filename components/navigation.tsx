@@ -182,31 +182,31 @@ export function Navigation() {
                       >
                         <Link
                           href="/retreats-advocacy"
-                          className="text-sm text-foreground/60 hover:text-foreground py-2"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
                           onClick={closeAllDesktopDropdowns}
                         >
-                          All Retreats Overview
+                          <div className="text-sm text-foreground">All Retreats Overview</div>
                         </Link>
                         <Link
                           href="/retreats-advocacy/executive-wellness"
-                          className="text-sm text-foreground/60 hover:text-foreground py-2"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
                           onClick={closeAllDesktopDropdowns}
                         >
-                          Executive Wellness
+                          <div className="text-sm text-foreground">Executive Wellness</div>
                         </Link>
                         <Link
                           href="/retreats-advocacy/luxury-wellness"
-                          className="text-sm text-foreground/60 hover:text-foreground py-2"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
                           onClick={closeAllDesktopDropdowns}
                         >
-                          Luxury Wellness
+                          <div className="text-sm text-foreground">Luxury Wellness</div>
                         </Link>
                         <Link
                           href="/retreats-advocacy/luxury-wellness/rar-brand"
-                          className="text-sm text-foreground/60 hover:text-foreground py-2"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
                           onClick={closeAllDesktopDropdowns}
                         >
-                          Rest as Resistance
+                          <div className="text-sm text-foreground">Rest as Resistance</div>
                         </Link>
                         <div className="border-t border-border my-2" />
                         <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">2026 Retreats</p>
@@ -235,6 +235,20 @@ export function Navigation() {
                           <div className="text-sm text-foreground">Winter Solstice 2026</div>
                         </Link>
                         <div className="border-t border-border my-2" />
+                        <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">2027 Retreats</p>
+                        <Link
+                          href="/retreats-advocacy/cherry-blossom-2027"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Cherry Blossom 2027</div>
+                        </Link>
+                        <Link
+                          href="/retreats-advocacy/winter-solstice-2027"
+                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                        >
+                          <div className="text-sm text-foreground">Winter Solstice 2027 (16-Day Extended)</div>
+                        </Link>
+                        <div className="border-t border-border my-2" />
                         <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">Private Family</p>
                         <Link
                           href="/retreats-advocacy/family-retreat-june-2026"
@@ -249,35 +263,27 @@ export function Navigation() {
                           <div className="text-sm text-foreground">Anniversary Celebration 2026</div>
                         </Link>
                         <div className="border-t border-border my-2" />
-                        <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">2027 Retreats</p>
-                        <Link
-                          href="/retreats-advocacy/cherry-blossom-2027"
-                          className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
-                        >
-                          <div className="text-sm text-foreground">Cherry Blossom 2027</div>
-                        </Link>
-                        <div className="border-t border-border my-2" />
                         <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">Past Retreats</p>
                         <Link
-                          href="/retreats-advocacy/past-winter-snow-2025"
+                          href="/retreats-advocacy/past/winter-snow-2025"
                           className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
                         >
                           <div className="text-sm text-foreground">Winter Snow 2025</div>
                         </Link>
                         <Link
-                          href="/retreats-advocacy/past-spring-soaks-2025"
+                          href="/retreats-advocacy/past/spring-soaks-2025"
                           className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
                         >
                           <div className="text-sm text-foreground">Spring Soaks 2025</div>
                         </Link>
                         <Link
-                          href="/retreats-advocacy/past-fall-oasis-2025"
+                          href="/retreats-advocacy/past/fall-oasis-2025"
                           className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
                         >
                           <div className="text-sm text-foreground">Fall Oasis 2025</div>
                         </Link>
                         <Link
-                          href="/retreats-advocacy/past-new-years-2025"
+                          href="/retreats-advocacy/past/new-years-2025"
                           className="block px-4 py-2 rounded-md hover:bg-accent transition-colors"
                         >
                           <div className="text-sm text-foreground">New Year's 2025</div>
@@ -484,31 +490,31 @@ export function Navigation() {
                         />
                       </button>
                       {mobileDropdowns.retreats && (
-                        <div className="pl-4 flex flex-col gap-2 mt-2">
+                        <div className="pl-4 flex flex-col gap-1 mt-2">
                           <Link
                             href="/retreats-advocacy"
-                            className="text-sm text-foreground/60 hover:text-foreground py-2"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             All Retreats Overview
                           </Link>
                           <Link
                             href="/retreats-advocacy/executive-wellness"
-                            className="text-sm text-foreground/60 hover:text-foreground py-2"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             Executive Wellness
                           </Link>
                           <Link
                             href="/retreats-advocacy/luxury-wellness"
-                            className="text-sm text-foreground/60 hover:text-foreground py-2"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             Luxury Wellness
                           </Link>
                           <Link
                             href="/retreats-advocacy/luxury-wellness/rar-brand"
-                            className="text-sm text-foreground/60 hover:text-foreground py-2"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             Rest as Resistance
@@ -544,6 +550,22 @@ export function Navigation() {
                             Winter Solstice 2026
                           </Link>
                           <div className="border-t border-border my-1" />
+                          <p className="text-xs font-semibold text-muted-foreground py-1">2027 Retreats</p>
+                          <Link
+                            href="/retreats-advocacy/cherry-blossom-2027"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Cherry Blossom 2027
+                          </Link>
+                          <Link
+                            href="/retreats-advocacy/winter-solstice-2027"
+                            className="text-sm text-foreground/60 hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Winter Solstice 2027 (16-Day Extended)
+                          </Link>
+                          <div className="border-t border-border my-1" />
                           <p className="text-xs font-semibold text-muted-foreground py-1">Private Family</p>
                           <Link
                             href="/retreats-advocacy/family-retreat-june-2026"
@@ -560,39 +582,30 @@ export function Navigation() {
                             Anniversary Celebration 2026
                           </Link>
                           <div className="border-t border-border my-1" />
-                          <p className="text-xs font-semibold text-muted-foreground py-1">2027 Retreats</p>
-                          <Link
-                            href="/retreats-advocacy/cherry-blossom-2027"
-                            className="text-sm text-foreground/60 hover:text-foreground py-1"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            Cherry Blossom 2027
-                          </Link>
-                          <div className="border-t border-border my-1" />
                           <p className="text-xs font-semibold text-muted-foreground py-1">Past Retreats</p>
                           <Link
-                            href="/retreats-advocacy/past-winter-snow-2025"
+                            href="/retreats-advocacy/past/winter-snow-2025"
                             className="text-sm text-foreground/60 hover:text-foreground py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             Winter Snow 2025
                           </Link>
                           <Link
-                            href="/retreats-advocacy/past-spring-soaks-2025"
+                            href="/retreats-advocacy/past/spring-soaks-2025"
                             className="text-sm text-foreground/60 hover:text-foreground py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             Spring Soaks 2025
                           </Link>
                           <Link
-                            href="/retreats-advocacy/past-fall-oasis-2025"
+                            href="/retreats-advocacy/past/fall-oasis-2025"
                             className="text-sm text-foreground/60 hover:text-foreground py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             Fall Oasis 2025
                           </Link>
                           <Link
-                            href="/retreats-advocacy/past-new-years-2025"
+                            href="/retreats-advocacy/past/new-years-2025"
                             className="text-sm text-foreground/60 hover:text-foreground py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >

@@ -1,23 +1,14 @@
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Mountain, Heart, Users } from "lucide-react"
-import type { Metadata } from "next"
+import { Mountain, Heart, Users, Check } from "lucide-react"
+import Image from "next/image"
 
-export const metadata: Metadata = {
-  title: "Rest as Resistance | Dr. Dédé Tetsubayashi",
-  description:
-    "Wellness retreats for Black women leaders. Rest as Resistance honors the movement founded by Tricia Hersey, creating sacred space for transformative healing.",
-  alternates: {
-    canonical: "https://dr-dede.com/retreats-advocacy/luxury-wellness/rar-brand",
-  },
-}
-
-export default function RaRBrandPage() {
+export default function RaRBrandHubPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section - py-20 with deepened background */}
-      <section className="py-20 bg-gradient-to-br from-purple-300 via-purple-100 to-cyan-200">
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Standard Branding #1 with softer background */}
+      <section className="py-20 bg-gradient-to-br from-purple-100 via-purple-50 to-cyan-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-light mb-8 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
             Rest as Resistance
@@ -27,19 +18,22 @@ export default function RaRBrandPage() {
           </blockquote>
           <p className="text-sm text-gray-600 mb-12">— Tricia Hersey, The Nap Ministry</p>
           <Link href="/retreats-advocacy/cherry-blossom-2026">
-            <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-full hover:opacity-90">
+            <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:opacity-90 px-8 py-3 rounded-md text-lg font-semibold">
               Explore 2026 Retreats
             </Button>
           </Link>
         </div>
       </section>
 
-      {/* The Three Pillars - MOVED TO TOP */}
+      {/* The Three Pillars */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-light text-center mb-12 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-light text-center mb-4 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
             The Three Pillars
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Our retreats are built on three foundational principles that honor the unique experiences of Black women leaders.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               {
@@ -62,10 +56,7 @@ export default function RaRBrandPage() {
               },
             ].map((pillar, i) => (
               <div key={i} className="text-center">
-                <div
-                  className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center"
-                  style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)" }}
-                >
+                <div className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center bg-gradient-to-r from-purple-600 to-cyan-600">
                   <pillar.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
@@ -79,7 +70,7 @@ export default function RaRBrandPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto px-4 text-center">
           {[
             { number: "10+", label: "Retreats Completed" },
@@ -98,7 +89,7 @@ export default function RaRBrandPage() {
       </section>
 
       {/* 2026 Retreat Calendar */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-light text-center mb-4 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
             2026 Seasonal Calendar
@@ -152,22 +143,22 @@ export default function RaRBrandPage() {
               <Card key={i} className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                 <CardHeader>
                   <div
-                    className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${retreat.gradient} text-white text-sm mb-3 w-fit`}
+                    className={`inline-block px-3 py-1 rounded-md bg-gradient-to-r ${retreat.gradient} text-white text-sm mb-3 w-fit font-medium`}
                   >
                     {retreat.season}
                   </div>
                   <CardTitle className="text-xl font-semibold mb-2">{retreat.title}</CardTitle>
-                  <CardDescription className="text-gray-600 mb-1">{retreat.dates}</CardDescription>
-                  <CardDescription className="text-sm text-gray-500 mb-3">{retreat.duration}</CardDescription>
+                  <CardDescription className="text-sm text-gray-600">{retreat.dates}</CardDescription>
+                  <div className="text-sm text-gray-500 mt-1">{retreat.duration}</div>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent mb-3">
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">{retreat.description}</p>
+                  <div className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
                     {retreat.price}
                   </div>
-                  <p className="text-sm text-gray-600 mb-4">{retreat.description}</p>
                   <Link href={retreat.link}>
-                    <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white">
-                      Learn More
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:opacity-90 rounded-md">
+                      View Details
                     </Button>
                   </Link>
                 </CardContent>
@@ -177,171 +168,63 @@ export default function RaRBrandPage() {
         </div>
       </section>
 
-      {/* Private Family Retreats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-light text-center mb-4 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
-            Private Family Retreats
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Intimate, customized experiences for families and private groups.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                badge: "Private Family",
-                title: "45-Year Anniversary Celebration",
-                dates: "April 5-25, 2026",
-                price: "$45,000",
-                description: "Celebrate your milestone with an intimate 3-week luxury journey through Japan.",
-                gradient: "from-amber-500 to-purple-400",
-                link: "/retreats-advocacy/anniversary-celebration-2026",
-              },
-              {
-                badge: "Private Family",
-                title: "Multi-Generational Family Adventure",
-                dates: "June 8-28, 2026",
-                price: "From $32,000",
-                description:
-                  "A 3-week multi-generational journey through Japan for families seeking meaningful connection.",
-                gradient: "from-green-500 to-blue-400",
-                link: "/retreats-advocacy/family-retreat-june-2026",
-              },
-            ].map((retreat, i) => (
-              <Card key={i} className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-                <CardHeader>
-                  <div
-                    className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${retreat.gradient} text-white text-sm mb-3 w-fit`}
-                  >
-                    {retreat.badge}
-                  </div>
-                  <CardTitle className="text-xl font-semibold mb-2">{retreat.title}</CardTitle>
-                  <CardDescription className="text-gray-600 mb-1">{retreat.dates}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600 mb-4">{retreat.description}</p>
-                  <div className="text-xl font-bold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent mb-4">
-                    {retreat.price}
-                  </div>
-                  <Link href={retreat.link}>
-                    <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white">
-                      Inquire Now
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 2027 Calendar Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-light text-center mb-4 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
-            2027 Seasonal Calendar
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Early bird pricing now available for our 2027 retreats. Reserve your spot before prices increase.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                season: "Spring",
-                title: "Cherry Blossom 2027",
-                dates: "April 6-16, 2027",
-                duration: "7 or 10 days",
-                price: "From $13,000",
-                description: "Second annual with enhanced programming based on 2026 feedback.",
-                gradient: "from-pink-500 to-rose-400",
-                link: "/retreats-advocacy/cherry-blossom-2027",
-                earlyBird: true,
-              },
-              {
-                season: "Summer",
-                title: "Summer Solstice 2027",
-                dates: "June 19-26, 2027",
-                duration: "7 days",
-                price: "$14,000",
-                description: "Hokkaido's lavender fields and midnight sun experience.",
-                gradient: "from-yellow-500 to-green-400",
-                link: "/retreats-advocacy/summer-solstice-2026",
-                earlyBird: true,
-              },
-              {
-                season: "Fall",
-                title: "Autumn Equinox 2027",
-                dates: "Sept 21 - Oct 1, 2027",
-                duration: "11 days",
-                price: "$15,000",
-                description: "Kyoto's temples ablaze with autumn colors.",
-                gradient: "from-orange-500 to-red-400",
-                link: "/retreats-advocacy/autumn-equinox-2026",
-                earlyBird: true,
-              },
-              {
-                season: "Winter",
-                title: "Winter Solstice 2027",
-                dates: "December 14-29, 2027",
-                duration: "16 days",
-                price: "From $27,500",
-                description: "Extended journey: Winter Solstice through Japanese New Year.",
-                gradient: "from-blue-500 to-cyan-400",
-                link: "/retreats-advocacy/winter-solstice-2027",
-                earlyBird: true,
-              },
-            ].map((retreat, i) => (
-              <Card key={i} className={`border-none shadow-lg ${retreat.earlyBird ? "ring-2 ring-purple-600" : ""}`}>
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-3">
-                    <div
-                      className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${retreat.gradient} text-white text-sm w-fit`}
-                    >
-                      {retreat.season}
-                    </div>
-                    {retreat.earlyBird && (
-                      <div className="inline-block px-2 py-0.5 rounded-full bg-purple-100 text-purple-600 text-xs font-semibold">
-                        Early Bird
-                      </div>
-                    )}
-                  </div>
-                  <CardTitle className="text-xl font-semibold mb-2">{retreat.title}</CardTitle>
-                  <CardDescription className="text-gray-600 mb-1">{retreat.dates}</CardDescription>
-                  <CardDescription className="text-sm text-gray-500 mb-3">{retreat.duration}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent mb-3">
-                    {retreat.price}
-                  </div>
-                  <p className="text-sm text-gray-600 mb-4">{retreat.description}</p>
-                  {retreat.link !== "#" ? (
-                    <Link href={retreat.link}>
-                      <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white">
-                        Reserve Now
-                      </Button>
-                    </Link>
-                  ) : (
-                    <Button disabled className="w-full">
-                      Coming Soon
-                    </Button>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Past Retreats Section */}
+      {/* What to Expect */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-light mb-6 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-light text-center mb-12 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+            What to Expect
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6">Inclusive Luxury</h3>
+              <ul className="space-y-4">
+                {[
+                  "Wheelchair-accessible accommodations",
+                  "Premium ryokans with modern amenities",
+                  "Private onsen experiences",
+                  "Gourmet kaiseki dining with dietary accommodations",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-cyan-600">
+                      <Check className="w-3 h-3 text-white" />
+                    </div>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-6">Culturally-Centered Programming</h3>
+              <ul className="space-y-4">
+                {[
+                  "Facilitators who understand Black women's experiences",
+                  "Space for authentic rest without code-switching",
+                  "Community building with other Black women leaders",
+                  "Trauma-informed, culturally-responsive practices",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-cyan-600">
+                      <Check className="w-3 h-3 text-white" />
+                    </div>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Past Retreats */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-light text-center mb-4 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
             Past Retreats
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Explore our transformational retreats from 2025 and see the impact of Rest as Resistance.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: "Fall Restorative Oasis",
@@ -353,8 +236,11 @@ export default function RaRBrandPage() {
               { title: "Winter Snow", dates: "February 2025", link: "/retreats-advocacy/past-winter-snow-2025" },
             ].map((retreat, i) => (
               <Link href={retreat.link} key={i}>
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                   <CardContent className="p-6">
+                    <div className="inline-block px-2 py-1 rounded-md bg-gray-200 text-gray-700 text-xs mb-3 font-medium">
+                      Past Retreat
+                    </div>
                     <h3 className="text-lg font-semibold mb-1">{retreat.title}</h3>
                     <p className="text-gray-600 text-sm">{retreat.dates}</p>
                   </CardContent>
@@ -362,28 +248,24 @@ export default function RaRBrandPage() {
               </Link>
             ))}
           </div>
-          <Link href="/retreats-advocacy/past-retreats">
-            <Button variant="outline" className="bg-transparent">
-              View All Past Retreats
-            </Button>
-          </Link>
         </div>
       </section>
 
-      {/* Meet Your Host - Adding full text from HTML */}
-      <section className="py-20 bg-white">
+      {/* Meet Your Host */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-4xl font-light text-center mb-12 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
             Meet Your Host
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-              className="h-96 rounded-2xl bg-cover bg-center bg-gray-200"
-              style={{
-                backgroundImage:
-                  "url(/placeholder.svg?height=400&width=400&query=Dr+Dede+Tetsubayashi+professional+portrait+Black+woman+PhD+smiling)",
-              }}
-            />
+            <div className="relative h-96 rounded-xl overflow-hidden bg-gray-200">
+              <Image
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800"
+                alt="Dr. Dédé Tetsubayashi"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div>
               <h3 className="text-3xl font-semibold mb-4 text-gray-900">Dr. Dédé Tetsubayashi, PhD</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
@@ -402,26 +284,18 @@ export default function RaRBrandPage() {
                 linguistic—ensuring that all participants can fully engage and experience deep restoration.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
-                  PhD from Cornell University
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
-                  15+ years Japan cultural expertise
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
-                  Fluent in 7 languages including Japanese
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
-                  Former Meta, Salesforce, WeWork leadership
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 mt-1.5 flex-shrink-0" />
-                  25+ Black women leaders served
-                </li>
+                {[
+                  "PhD from Cornell University",
+                  "15+ years Japan cultural expertise",
+                  "Fluent in 7 languages including Japanese",
+                  "Former Meta, Salesforce, WeWork leadership",
+                  "25+ Black women leaders served",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-600 mt-1.5 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -447,9 +321,9 @@ export default function RaRBrandPage() {
                 attribution: "— Executive Leader, 2025 Retreat",
               },
             ].map((testimonial, i) => (
-              <Card key={i} className="bg-gray-50 border-l-4 border-purple-600">
+              <Card key={i} className="bg-gray-50 border-l-4 border-purple-600 shadow-md">
                 <CardContent className="p-8">
-                  <p className="text-xl italic text-gray-700 mb-4">"{testimonial.quote}"</p>
+                  <p className="text-xl italic text-gray-700 mb-4 leading-relaxed">"{testimonial.quote}"</p>
                   <p className="text-sm text-gray-600">{testimonial.attribution}</p>
                 </CardContent>
               </Card>
@@ -462,15 +336,12 @@ export default function RaRBrandPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-light mb-6">Corporate Partnerships Available</h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             Organizations can sponsor employees to attend Rest as Resistance retreats as part of DEI and wellness
             initiatives. Tax-deductible sponsorship options available.
           </p>
           <Link href="/retreats-advocacy/executive-wellness/corporate-sponsorships">
-            <Button
-              variant="outline"
-              className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-3 rounded-md bg-transparent"
-            >
+            <Button className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-3 rounded-md bg-transparent">
               Learn About Sponsorships
             </Button>
           </Link>
@@ -481,14 +352,18 @@ export default function RaRBrandPage() {
       <section className="py-20 bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-400">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-light text-white mb-6">Join the Movement</h2>
-          <p className="text-xl text-white/90 mb-8">Choose rest. Choose resistance. Choose yourself.</p>
+          <p className="text-xl text-white/95 mb-8 leading-relaxed">
+            Choose rest. Choose resistance. Choose yourself.
+          </p>
           <Link href="/retreats-advocacy/cherry-blossom-2026">
-            <Button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-md text-lg font-semibold">
+            <Button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-md text-lg font-semibold shadow-xl">
               Choose Your Retreat
             </Button>
           </Link>
         </div>
       </section>
+
+      {/* NO FOOTER - Handled by live site */}
     </div>
   )
 }
