@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/card"
 import { Check, X, Menu } from "lucide-react" // Import X and Menu
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Navigation } from "@/components/navigation"
 
 export default function Home() {
   const [selectedJourney, setSelectedJourney] = useState("")
@@ -72,8 +73,11 @@ ${formData.message}
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+      {/* Main Site Navigation */}
+      <Navigation />
+
+      {/* Page-specific Navigation */}
+      <nav className="fixed top-16 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm shadow-sm">
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex justify-center items-center h-16">
             {/* Desktop Navigation */}
@@ -150,7 +154,7 @@ ${formData.message}
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen flex items-start justify-start pt-20 sm:pt-24 md:pt-32 px-4 sm:px-8 md:px-16 lg:px-24">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen flex items-start justify-start pt-36 sm:pt-40 md:pt-48 px-4 sm:px-8 md:px-16 lg:px-24">
         <div className="absolute inset-0">
           <img src="/images/cherry-blossom-hero.jpg" alt="Cherry blossoms" className="w-full h-full object-cover opacity-70" />
           <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/20 to-white/30" />
