@@ -112,7 +112,7 @@ export default function AutumnEquinox2026Page() {
                   "Experience Japan's most spectacular autumn colors at their peak. Crimson Japanese maples, golden ginkgo trees, and sacred temple gardens painted in nature's masterpiece.",
               },
               {
-                image: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=600&q=80",
                 icon: Sparkles,
                 title: "Sacred Temple Visits",
                 description:
@@ -126,21 +126,21 @@ export default function AutumnEquinox2026Page() {
                   "Explore iconic fall foliage sites: Tofuku-ji Temple's sea of red, Philosopher's Path lined with maples, Kiyomizu-dera's panoramic autumn views.",
               },
               {
-                image: "https://images.unsplash.com/photo-1591361692293-cf35c9d5e0f5?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=80",
                 icon: Sparkles,
                 title: "Mountain Onsen Retreat",
                 description:
                   "Hakone luxury onsen with Mt. Fuji views and autumn foliage. Multiple daily hot spring experiences. Private baths surrounded by crimson leaves.",
               },
               {
-                image: "https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&q=80",
                 icon: Mountain,
                 title: "Nikko's Sacred Mountains",
                 description:
                   "Lake Chuzenji reflection walks with fall colors mirrored in crystal waters. Forest bathing through ancient cedar groves and autumn-painted hillsides.",
               },
               {
-                image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=80",
                 icon: Users,
                 title: "Equinox Ceremony",
                 description:
@@ -265,47 +265,7 @@ export default function AutumnEquinox2026Page() {
         </div>
       </section>
 
-      <footer className="relative py-16 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-orange-500 to-amber-500" />
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          <div>
-            <h4 className="text-amber-400 font-bold text-lg mb-4">Autumn Equinox 2026</h4>
-            <p className="mb-1">September 22 - October 2, 2026</p>
-            <p>Tokyo · Nikko · Kyoto · Hakone</p>
-            <p className="mt-4 text-sm opacity-80 italic">
-              With gratitude to Tricia Hersey, the Nap Bishop, whose work on rest as resistance inspires this movement.
-            </p>
-          </div>
-          <div>
-            <h4 className="text-amber-400 font-bold text-lg mb-4">Contact</h4>
-            <Link href="/contact" className="flex items-center gap-2 hover:text-amber-400 transition-colors mb-2">
-              <Mail className="w-4 h-4" />
-              <span>Contact Us</span>
-            </Link>
-            <a href="https://dr-dede.com/retreats-advocacy" className="block hover:text-amber-400 transition-colors">
-              dr-dede.com/retreats
-            </a>
-          </div>
-          <div>
-            <h4 className="text-amber-400 font-bold text-lg mb-4">Quick Links</h4>
-            <Link href="/retreats-advocacy" className="block hover:text-amber-400 transition-colors mb-2">
-              All Retreats
-            </Link>
-            <Link
-              href="/retreats-advocacy/luxury-wellness"
-              className="block hover:text-amber-400 transition-colors mb-2"
-            >
-              Luxury Wellness
-            </Link>
-            <Link href="/contact" className="block hover:text-amber-400 transition-colors">
-              Inquire
-            </Link>
-          </div>
-        </div>
-        <div className="max-w-6xl mx-auto mt-8 pt-8 border-t border-gray-700 text-center text-sm opacity-70">
-          <p>© 2026 Dr. Dédé Tetsubayashi · All Rights Reserved</p>
-        </div>
-      </footer>
+      {/* NO FOOTER - Site handles it */}
     </div>
   )
 }

@@ -51,22 +51,22 @@ const nextConfig = {
       // Past retreats
       {
         source: "/dr-dede/retreats/past-winter-snow-2025",
-        destination: "/retreats-advocacy/past-winter-snow-2025",
+        destination: "/retreats-advocacy/past/winter-snow-2025",
         permanent: true,
       },
       {
         source: "/dr-dede/retreats/past-spring-soaks-2025",
-        destination: "/retreats-advocacy/past-spring-soaks-2025",
+        destination: "/retreats-advocacy/past/spring-soaks-2025",
         permanent: true,
       },
       {
         source: "/dr-dede/retreats/past-fall-oasis-2025",
-        destination: "/retreats-advocacy/past-fall-oasis-2025",
+        destination: "/retreats-advocacy/past/fall-oasis-2025",
         permanent: true,
       },
       {
         source: "/dr-dede/retreats/past-new-years-2025",
-        destination: "/retreats-advocacy/past-new-years-2025",
+        destination: "/retreats-advocacy/past/new-years-2025",
         permanent: true,
       },
 
@@ -110,6 +110,9 @@ const nextConfig = {
     domains: ["images.unsplash.com", "unsplash.com", "blob.vercel-storage.com", "public.blob.vercel-storage.com"],
     formats: ["image/webp", "image/avif"],
     unoptimized: true,
+  },
+  async rewrites() {
+    return []
   },
   async headers() {
     return [

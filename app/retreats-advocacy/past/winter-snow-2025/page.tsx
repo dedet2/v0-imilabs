@@ -2,45 +2,42 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Snowflake, Bath, Mountain, Utensils, Camera, Heart, ArrowLeft } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Last Winter Snow 2025 | Past Retreat Archive",
+  description: "A journey through Japan's legendary snow country - March 2025 in Niigata & Nagano.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/past/winter-snow-2025",
+  },
+}
 
 export default function PastWinterSnow2025Page() {
   return (
     <div className="min-h-screen bg-[#fafafa]">
-      <link rel="canonical" href="https://dr-dede.com/retreats-advocacy/past-winter-snow-2025" />
-
       {/* Hero Section */}
       <section
         className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-16"
         style={{
-          background: "linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(6,182,212,0.1) 100%)",
+          backgroundImage: `linear-gradient(135deg, rgba(102,126,234,0.85) 0%, rgba(6,182,212,0.85) 100%), url('https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=1600&q=80')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <span
-          className="inline-block px-6 py-2 rounded-full text-sm font-semibold tracking-wider uppercase text-white mb-6"
-          style={{
-            background: "linear-gradient(135deg, #667eea 0%, #06b6d4 100%)",
-          }}
-        >
+        <span className="inline-block px-6 py-2 rounded-full text-sm font-semibold tracking-wider uppercase text-white mb-6 bg-white/20 border border-white/30 backdrop-blur-sm">
           Past Retreat Archive
         </span>
-        <h1
-          className="text-4xl md:text-6xl font-light mb-4"
-          style={{
-            background: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
+        <h1 className="text-4xl md:text-6xl font-light mb-4 text-white">
           Last Winter Snow
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-2 max-w-2xl">
+        <p className="text-lg md:text-xl text-white/90 mb-2 max-w-2xl">
           A journey through Japan&apos;s legendary snow country
         </p>
-        <p className="text-gray-500 font-medium mb-8">March 2025 | Niigata & Nagano</p>
-        <Link href="/retreats-advocacy/past-retreats">
-          <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent">
+        <p className="text-white/80 font-medium mb-8">March 2025 | Niigata & Nagano</p>
+        <Link href="/retreats-advocacy">
+          <Button variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Past Retreats
+            Back to All Retreats
           </Button>
         </Link>
       </section>
@@ -118,20 +115,7 @@ export default function PastWinterSnow2025Page() {
                     background: "linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(6,182,212,0.1) 100%)",
                   }}
                 >
-                  <item.icon
-                    className="w-8 h-8"
-                    style={{
-                      stroke: "url(#gradient)",
-                    }}
-                  />
-                  <svg width="0" height="0">
-                    <defs>
-                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#667eea" />
-                        <stop offset="100%" stopColor="#06b6d4" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <item.icon className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>

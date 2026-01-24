@@ -2,16 +2,24 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Heart, Utensils, Camera, Check } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "45th Anniversary Celebration | Private Luxury Retreat",
+  description: "Celebrate 45 years of love with a bespoke three-week journey through Japan's most romantic destinations.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/anniversary-celebration-2026",
+  },
+}
 
 export default function AnniversaryCelebration2026Page() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Gold/Purple/Lavender theme matching HTML */}
+      {/* Hero Section - Gold/Purple/Lavender theme */}
       <section
         className="relative min-h-[90vh] flex items-center justify-center"
         style={{
-          backgroundImage:
-            "url(/placeholder.svg?height=1600&width=2400&query=elegant+older+Black+couple+celebrating+anniversary+Japanese+garden+romantic)",
+          backgroundImage: "url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -34,19 +42,19 @@ export default function AnniversaryCelebration2026Page() {
             45 Years of Love
           </h1>
           <p className="text-2xl md:text-3xl font-light mb-4 opacity-95">Anniversary Celebration in Japan</p>
-          <p className="text-xl mb-4 opacity-95">April 5-25, 2026 · Tokyo · Kyoto · Hakone · Kamakura</p>
+          <p className="text-xl mb-4 opacity-95">April 5-25, 2026 | Tokyo, Kyoto, Hakone, Kamakura</p>
           <p className="text-lg max-w-3xl mx-auto mb-10 opacity-95 leading-relaxed">
             Celebrate 45 years of love with a bespoke three-week journey through Japan's most romantic destinations.
             Private experiences, Michelin dining, and renewal of vows ceremony curated exclusively for you.
           </p>
-          <a href="mailto:info@dr-dede.com?subject=45th%20Anniversary%20Celebration%20Inquiry">
+          <Link href="/contact">
             <Button
               className="px-8 py-4 text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
               style={{ background: "linear-gradient(to right, #9333ea 0%, #0891b2 100%)" }}
             >
               Schedule Consultation
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -77,81 +85,45 @@ export default function AnniversaryCelebration2026Page() {
             Exclusive Romance Experiences
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Renewal of Vows */}
-            <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-0 rounded-2xl bg-white">
-              <div
-                className="h-64 bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "url(/placeholder.svg?height=600&width=600&query=older+Black+couple+renewal+of+vows+ceremony+Kyoto+temple+romantic+elegant)",
-                }}
-              />
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center"
-                    style={{ background: "linear-gradient(135deg, #d4af37 0%, #9333ea 100%)" }}
-                  >
-                    <Heart className="w-5 h-5 text-white" />
+            {[
+              {
+                icon: Heart,
+                title: "Renewal of Vows",
+                description: "Private ceremony at historic Kyoto temple with traditional elements and professional photography.",
+                image: "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=600&q=80",
+              },
+              {
+                icon: Utensils,
+                title: "Michelin Dining",
+                description: "Private anniversary dinner at Tokyo's finest Michelin-starred restaurant plus premium kaiseki throughout.",
+                image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
+              },
+              {
+                icon: Camera,
+                title: "Professional Photography",
+                description: "Two full days with photographer capturing your journey at iconic locations throughout Japan.",
+                image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80",
+              },
+            ].map((item, i) => (
+              <Card key={i} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-0 rounded-2xl bg-white">
+                <div
+                  className="h-64 bg-cover bg-center"
+                  style={{ backgroundImage: `url('${item.image}')` }}
+                />
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div
+                      className="w-10 h-10 rounded-lg flex items-center justify-center"
+                      style={{ background: "linear-gradient(135deg, #d4af37 0%, #9333ea 100%)" }}
+                    >
+                      <item.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-purple-700">{item.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-purple-700">Renewal of Vows</h3>
-                </div>
-                <p className="text-purple-900 leading-relaxed">
-                  Private ceremony at historic Kyoto temple with traditional elements and professional photography.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Michelin Dining */}
-            <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-0 rounded-2xl bg-white">
-              <div
-                className="h-64 bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "url(/placeholder.svg?height=600&width=600&query=sophisticated+older+Black+couple+Michelin+star+restaurant+kaiseki+dinner+Tokyo)",
-                }}
-              />
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center"
-                    style={{ background: "linear-gradient(135deg, #d4af37 0%, #9333ea 100%)" }}
-                  >
-                    <Utensils className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-purple-700">Michelin Dining</h3>
-                </div>
-                <p className="text-purple-900 leading-relaxed">
-                  Private anniversary dinner at Tokyo's finest Michelin-starred restaurant plus premium kaiseki
-                  throughout.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Professional Photography */}
-            <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-0 rounded-2xl bg-white">
-              <div
-                className="h-64 bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "url(/placeholder.svg?height=600&width=600&query=older+Black+couple+professional+photo+shoot+cherry+blossoms+Japan+elegant)",
-                }}
-              />
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center"
-                    style={{ background: "linear-gradient(135deg, #d4af37 0%, #9333ea 100%)" }}
-                  >
-                    <Camera className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-purple-700">Professional Photography</h3>
-                </div>
-                <p className="text-purple-900 leading-relaxed">
-                  Two full days with photographer capturing your journey at iconic locations throughout Japan.
-                </p>
-              </CardContent>
-            </Card>
+                  <p className="text-purple-900 leading-relaxed">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -185,38 +157,30 @@ export default function AnniversaryCelebration2026Page() {
               >
                 $45,000
               </p>
-              <p className="text-indigo-500 text-lg mb-8">For 2 people · 21 days / 20 nights</p>
+              <p className="text-indigo-500 text-lg mb-8">For 2 people | 21 days / 20 nights</p>
               <ul className="text-left space-y-3 mb-8 text-gray-700">
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-amber-500" /> 20 nights luxury accommodations
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-amber-500" /> All meals at premium restaurants
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-amber-500" /> Private car & driver throughout
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-amber-500" /> Michelin-star anniversary dinner
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-amber-500" /> Renewal of vows ceremony
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-amber-500" /> Professional photographer (2 days)
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-amber-500" /> 24/7 concierge services
-                </li>
+                {[
+                  "20 nights luxury accommodations",
+                  "All meals at premium restaurants",
+                  "Private car & driver throughout",
+                  "Michelin-star anniversary dinner",
+                  "Renewal of vows ceremony",
+                  "Professional photographer (2 days)",
+                  "24/7 concierge services",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-amber-500" /> {item}
+                  </li>
+                ))}
               </ul>
-              <a href="mailto:info@dr-dede.com?subject=45th%20Anniversary%20Celebration%20Inquiry" className="block">
+              <Link href="/contact">
                 <Button
                   className="w-full py-4 text-lg font-bold rounded-lg"
                   style={{ background: "linear-gradient(to right, #9333ea 0%, #0891b2 100%)" }}
                 >
                   Schedule Consultation
                 </Button>
-              </a>
+              </Link>
             </CardContent>
           </Card>
         </div>
@@ -229,20 +193,21 @@ export default function AnniversaryCelebration2026Page() {
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-8">Begin Planning Your Celebration</h2>
-          <p className="text-xl mb-4">
-            Email:{" "}
-            <a href="mailto:info@dr-dede.com" className="underline">
-              info@dr-dede.com
-            </a>
-          </p>
-          <Link href="/retreats-advocacy">
-            <Button
-              variant="outline"
-              className="mt-4 border-2 border-white text-white hover:bg-white/10 bg-transparent"
-            >
-              View All Retreats
+          <Link href="/contact">
+            <Button className="px-8 py-4 text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 bg-white text-purple-600">
+              Contact Us
             </Button>
           </Link>
+          <div className="mt-4">
+            <Link href="/retreats-advocacy">
+              <Button
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white/10 bg-transparent"
+              >
+                View All Retreats
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

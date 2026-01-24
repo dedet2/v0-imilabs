@@ -126,21 +126,21 @@ export default function SummerSolstice2026Page() {
                   "Wander through endless purple lavender fields at Farm Tomita. Breathe in healing aromatherapy while capturing moments in Japan's most photographed summer landscape.",
               },
               {
-                image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80",
                 icon: Droplets,
                 title: "Lake Toya Serenity",
                 description:
                   "Pristine volcanic caldera lake with crystal-clear waters. Sunset boat rides, lakeside meditation, and stargazing under the midnight sun's extended twilight.",
               },
               {
-                image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=80",
                 icon: Mountain,
                 title: "Mountain Onsen Retreats",
                 description:
                   "Natural hot springs with panoramic mountain views. Healing volcanic mineral waters surrounded by summer wildflowers and alpine scenery.",
               },
               {
-                image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80",
                 icon: Mountain,
                 title: "Alpine Nature Walks",
                 description:
@@ -154,7 +154,7 @@ export default function SummerSolstice2026Page() {
                   "Early morning practices by the lake. Experience the unique energy of solstice sunrise—nature's celebration of maximum light and life force.",
               },
               {
-                image: "https://images.unsplash.com/photo-1544367567083-eca07ce68773?w=600&q=80",
+                image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80",
                 icon: Heart,
                 title: "Rest as Resistance",
                 description:
@@ -269,47 +269,7 @@ export default function SummerSolstice2026Page() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300 relative">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400" />
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          <div>
-            <h4 className="text-green-400 font-bold mb-4">Summer Solstice in Hokkaido 2026</h4>
-            <p>June 21-27, 2026</p>
-            <p>Sapporo · Lake Toya · Furano</p>
-            <p className="text-sm mt-4 italic opacity-80">
-              With gratitude to Tricia Hersey, the Nap Bishop, whose work on rest as resistance inspires this movement.
-            </p>
-          </div>
-          <div>
-            <h4 className="text-green-400 font-bold mb-4">Contact</h4>
-            <Link href="/contact" className="block hover:text-green-400 transition-colors">
-              Inquire About This Retreat
-            </Link>
-            <Link
-              href="/retreats-advocacy/luxury-wellness"
-              className="block hover:text-green-400 transition-colors mt-2"
-            >
-              View All Retreats
-            </Link>
-          </div>
-          <div>
-            <h4 className="text-green-400 font-bold mb-4">Quick Links</h4>
-            <Link href="/retreats-advocacy" className="block hover:text-green-400 transition-colors">
-              All Retreats
-            </Link>
-            <Link
-              href="/retreats-advocacy/luxury-wellness/rar-brand"
-              className="block hover:text-green-400 transition-colors mt-2"
-            >
-              Rest as Resistance
-            </Link>
-          </div>
-        </div>
-        <div className="max-w-6xl mx-auto mt-8 pt-8 border-t border-green-400/20 text-center text-sm">
-          <p>© 2026 Dr. Dédé Tetsubayashi · All Rights Reserved</p>
-        </div>
-      </footer>
+      {/* NO FOOTER - Site handles it */}
     </div>
   )
 }

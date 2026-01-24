@@ -1,46 +1,43 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Sparkles, Bath, Landmark, Utensils, Bell, Heart, ArrowLeft } from "lucide-react"
+import { Flower2, Bath, TreeDeciduous, Utensils, Camera, Heart, ArrowLeft } from "lucide-react"
+import type { Metadata } from "next"
 
-export default function PastNewYears2025Page() {
+export const metadata: Metadata = {
+  title: "Late Spring Soaks 2025 | Past Retreat Archive",
+  description: "Cherry blossoms and hot springs in the heart of Japan - May 2025 in Kamakura & Hakone.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/past/spring-soaks-2025",
+  },
+}
+
+export default function PastSpringSoaks2025Page() {
   return (
     <div className="min-h-screen bg-[#fafafa]">
-      <link rel="canonical" href="https://dr-dede.com/retreats-advocacy/past-new-years-2025" />
-
       {/* Hero Section */}
       <section
         className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-16"
         style={{
-          background: "linear-gradient(135deg, rgba(79,70,229,0.1) 0%, rgba(139,92,246,0.1) 100%)",
+          backgroundImage: `linear-gradient(135deg, rgba(102,126,234,0.85) 0%, rgba(240,147,251,0.85) 100%), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600&q=80')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <span
-          className="inline-block px-6 py-2 rounded-full text-sm font-semibold tracking-wider uppercase text-white mb-6"
-          style={{
-            background: "linear-gradient(135deg, #667eea 0%, #06b6d4 100%)",
-          }}
-        >
+        <span className="inline-block px-6 py-2 rounded-full text-sm font-semibold tracking-wider uppercase text-white mb-6 bg-white/20 border border-white/30 backdrop-blur-sm">
           Past Retreat Archive
         </span>
-        <h1
-          className="text-4xl md:text-6xl font-light mb-4"
-          style={{
-            background: "linear-gradient(135deg, #4f46e5 0%, #8b5cf6 50%, #a78bfa 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          New Year&apos;s Rest
+        <h1 className="text-4xl md:text-6xl font-light mb-4 text-white">
+          Late Spring Soaks
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-2 max-w-2xl">
-          Ringing in the new year with intention and restoration
+        <p className="text-lg md:text-xl text-white/90 mb-2 max-w-2xl">
+          Cherry blossoms and hot springs in the heart of Japan
         </p>
-        <p className="text-gray-500 font-medium mb-8">December 2025 | Nagano & Tokyo</p>
-        <Link href="/retreats-advocacy/past-retreats">
-          <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent">
+        <p className="text-white/80 font-medium mb-8">May 2025 | Kamakura & Hakone</p>
+        <Link href="/retreats-advocacy">
+          <Button variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Past Retreats
+            Back to All Retreats
           </Button>
         </Link>
       </section>
@@ -50,17 +47,17 @@ export default function PastNewYears2025Page() {
         <h2
           className="text-3xl md:text-4xl font-light text-center mb-8"
           style={{
-            background: "linear-gradient(135deg, #4f46e5 0%, #8b5cf6 100%)",
+            background: "linear-gradient(135deg, #667eea 0%, #06b6d4 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
         >
-          A New Beginning
+          A Season of Renewal
         </h2>
         <p className="text-lg text-gray-600 leading-relaxed text-center max-w-3xl mx-auto">
-          Our New Year&apos;s Rest retreat offered participants a transformative way to close out the year and welcome
-          the new one. Traditional Japanese New Year celebrations, combined with mountain onsen retreats and Tokyo city
-          exploration, created a perfect balance of reflection and renewal.
+          Our Late Spring Soaks retreat captured the magic of Japan&apos;s late sakura season, with cherry blossom
+          petals gently falling into steaming outdoor onsens. Participants experienced the profound beauty of hanami
+          (flower viewing) combined with deep relaxation in Hakone&apos;s legendary hot spring resorts.
         </p>
       </section>
 
@@ -69,7 +66,7 @@ export default function PastNewYears2025Page() {
         <h2
           className="text-3xl font-light text-center mb-12"
           style={{
-            background: "linear-gradient(135deg, #4f46e5 0%, #8b5cf6 100%)",
+            background: "linear-gradient(135deg, #667eea 0%, #06b6d4 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -79,34 +76,34 @@ export default function PastNewYears2025Page() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              icon: Sparkles,
-              title: "New Year Celebrations",
-              description: "Traditional hatsumode visits to Shinto shrines at midnight",
+              icon: Flower2,
+              title: "Cherry Blossoms",
+              description: "Private hanami picnics under late-blooming sakura trees",
             },
             {
               icon: Bath,
-              title: "Mountain Onsens",
-              description: "Healing hot springs in the Japanese Alps with snow views",
+              title: "Hakone Onsens",
+              description: "Natural hot springs with views of Mount Fuji",
             },
             {
-              icon: Landmark,
-              title: "Temple Ceremonies",
-              description: "Joya no Kane bell ringing to release the old year",
+              icon: TreeDeciduous,
+              title: "Kamakura Temples",
+              description: "Meditative walks through ancient Buddhist temples and gardens",
             },
             {
               icon: Utensils,
-              title: "Osechi Cuisine",
-              description: "Traditional New Year's feast with symbolic dishes",
+              title: "Spring Cuisine",
+              description: "Seasonal kaiseki featuring fresh bamboo shoots and sakura mochi",
             },
             {
-              icon: Bell,
-              title: "Intention Setting",
-              description: "Guided workshops for setting purposeful new year intentions",
+              icon: Camera,
+              title: "Cultural Immersion",
+              description: "Tea ceremony and ikebana workshops with local artisans",
             },
             {
               icon: Heart,
               title: "Sisterhood",
-              description: "Celebrating new beginnings with a supportive community",
+              description: "Deep bonds formed over shared experiences and reflection",
             },
           ].map((item, i) => (
             <Card key={i} className="border-none shadow-lg hover:shadow-xl transition-all">
@@ -114,7 +111,7 @@ export default function PastNewYears2025Page() {
                 <div
                   className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
                   style={{
-                    background: "linear-gradient(135deg, rgba(79,70,229,0.1) 0%, rgba(139,92,246,0.1) 100%)",
+                    background: "linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(240,147,251,0.1) 100%)",
                   }}
                 >
                   <item.icon className="w-8 h-8 text-purple-600" />
@@ -130,14 +127,14 @@ export default function PastNewYears2025Page() {
       {/* Testimonial */}
       <section
         className="py-16"
-        style={{ background: "linear-gradient(135deg, #4f46e5 0%, #8b5cf6 50%, #a78bfa 100%)" }}
+        style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)" }}
       >
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <p className="text-2xl md:text-3xl font-light italic mb-6">
-            &quot;Starting the new year in Japan, surrounded by women who understand the need for intentional rest,
-            changed how I approach everything. I returned home renewed and ready.&quot;
+            &quot;Watching cherry blossom petals float down while soaking in an onsen overlooking Mount Fuji—that moment
+            will stay with me forever.&quot;
           </p>
-          <p className="text-lg opacity-90">— New Year&apos;s Rest 2025 Participant</p>
+          <p className="text-lg opacity-90">— Spring Soaks 2025 Participant</p>
         </div>
       </section>
 
@@ -147,7 +144,7 @@ export default function PastNewYears2025Page() {
           <h2
             className="text-3xl font-light mb-6"
             style={{
-              background: "linear-gradient(135deg, #4f46e5 0%, #8b5cf6 50%, #a78bfa 100%)",
+              background: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -159,7 +156,7 @@ export default function PastNewYears2025Page() {
             <Button
               className="px-8 py-3 text-white font-semibold"
               style={{
-                background: "linear-gradient(135deg, #4f46e5 0%, #8b5cf6 50%, #a78bfa 100%)",
+                background: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)",
               }}
             >
               View 2026 Retreats

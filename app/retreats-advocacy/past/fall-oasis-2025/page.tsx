@@ -2,43 +2,42 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Leaf, Bath, Landmark, Utensils, Camera, Heart, ArrowLeft } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Fall Restorative Oasis 2025 | Past Retreat Archive",
+  description: "Autumn colors and ancient temples in Kyoto - November 2025 in Kyoto & Nara.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/past/fall-oasis-2025",
+  },
+}
 
 export default function PastFallOasis2025Page() {
   return (
     <div className="min-h-screen bg-[#fafafa]">
-      <link rel="canonical" href="https://dr-dede.com/retreats-advocacy/past-fall-oasis-2025" />
-
       {/* Hero Section */}
       <section
         className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-16"
         style={{
-          background: "linear-gradient(135deg, rgba(234,88,12,0.1) 0%, rgba(245,158,11,0.1) 100%)",
+          backgroundImage: `linear-gradient(135deg, rgba(234,88,12,0.85) 0%, rgba(245,158,11,0.85) 100%), url('https://images.unsplash.com/photo-1528164344705-47542687000d?w=1600&q=80')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <span
-          className="inline-block px-6 py-2 rounded-full text-sm font-semibold tracking-wider uppercase text-white mb-6"
-          style={{
-            background: "linear-gradient(135deg, #667eea 0%, #06b6d4 100%)",
-          }}
-        >
+        <span className="inline-block px-6 py-2 rounded-full text-sm font-semibold tracking-wider uppercase text-white mb-6 bg-white/20 border border-white/30 backdrop-blur-sm">
           Past Retreat Archive
         </span>
-        <h1
-          className="text-4xl md:text-6xl font-light mb-4"
-          style={{
-            background: "linear-gradient(135deg, #ea580c 0%, #f59e0b 50%, #fbbf24 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
+        <h1 className="text-4xl md:text-6xl font-light mb-4 text-white">
           Fall Restorative Oasis
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-2 max-w-2xl">Autumn colors and ancient temples in Kyoto</p>
-        <p className="text-gray-500 font-medium mb-8">November 2025 | Kyoto & Nara</p>
-        <Link href="/retreats-advocacy/past-retreats">
-          <Button variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-50 bg-transparent">
+        <p className="text-lg md:text-xl text-white/90 mb-2 max-w-2xl">
+          Autumn colors and ancient temples in Kyoto
+        </p>
+        <p className="text-white/80 font-medium mb-8">November 2025 | Kyoto & Nara</p>
+        <Link href="/retreats-advocacy">
+          <Button variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Past Retreats
+            Back to All Retreats
           </Button>
         </Link>
       </section>
