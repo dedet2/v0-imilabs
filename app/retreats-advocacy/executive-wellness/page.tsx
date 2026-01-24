@@ -9,7 +9,7 @@ export default function ExecutiveWellnessHub() {
       <section
         className="relative min-h-[70vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url(https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600)",
+          backgroundImage: "url(/luxury-retreat-venue-with-modern-accessible-design.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -11,7 +11,7 @@ export default function LuxuryWellnessHubPage() {
       <section
         className="relative min-h-[70vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url(https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600)",
+          backgroundImage: "url(/cOGqHCdiwvzOjN9thWnU3.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
