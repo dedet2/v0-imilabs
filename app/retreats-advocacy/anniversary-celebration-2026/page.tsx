@@ -19,7 +19,7 @@ export default function AnniversaryCelebration2026Page() {
       <section
         className="relative min-h-[90vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')",
+          backgroundImage: "url('/love-celebration-japan.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -102,7 +102,7 @@ export default function AnniversaryCelebration2026Page() {
                 icon: Camera,
                 title: "Professional Photography",
                 description: "Two full days with photographer capturing your journey at iconic locations throughout Japan.",
-                image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80",
+                image: "/02-ekYLf16--NMAgcW86O.jpg",
               },
             ].map((item, i) => (
               <Card key={i} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-0 rounded-2xl bg-white">

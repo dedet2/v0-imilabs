@@ -218,7 +218,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
                   "Post-retreat integration support",
                 ],
                 link: "/retreats-advocacy/executive-wellness",
-                image: "/luxury-retreat-venue-with-modern-accessible-design.jpg",
+                image: "/diverse-executives-networking-at-luxury-event.jpg",
                 icon: (
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />

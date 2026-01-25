@@ -1,186 +1,383 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Check, Cherry, Sparkles, Users } from "lucide-react"
-import type { Metadata } from "next"
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Cherry Blossom Edition 2027 | Rest as Resistance",
-  description:
-    "Enhanced 10-day wellness retreat during Japan's peak cherry blossom season (April 6-16, 2027). Limited to 12 participants.",
-  alternates: {
-    canonical: "https://dr-dede.com/retreats-advocacy/cherry-blossom-2027",
-  },
+  description: "Join us for Cherry Blossom retreat in Japan (April 6-16, 2027). Enhanced experiences for 2027 season.",
   openGraph: {
     title: "Cherry Blossom Edition 2027 | Rest as Resistance",
-    description:
-      "Enhanced 10-day wellness retreat during Japan's peak cherry blossom season (April 6-16, 2027). Limited to 12 participants.",
+    description: "Join us for Cherry Blossom retreat in Japan (April 6-16, 2027). Enhanced experiences for 2027 season.",
     url: "https://dr-dede.com/retreats-advocacy/cherry-blossom-2027",
     siteName: "Dr. Dédé Tetsubayashi",
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Cherry Blossom Edition 2027 | Rest as Resistance",
-    description: "Enhanced 10-day wellness retreat during Japan's peak cherry blossom season (April 6-16, 2027).",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/cherry-blossom-2027",
   },
 }
 
 export default function CherryBlossom2027Page() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Spring Pink Theme */}
+      <style jsx>{`
+        :root {
+          --magenta-bright: #ff1493;
+          --fuchsia-deep: #c71585;
+          --rose-soft: #fff0f5;
+          --bloom-gold: #ffd700;
+          --sakura-white: #fffaf0;
+        }
+
+        @keyframes shimmer {
+          0%, 100% { opacity: 0.8; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .hero-bg::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at 30% 40%, rgba(255,215,0,0.15), transparent 50%),
+                      radial-gradient(circle at 70% 60%, rgba(255,255,255,0.25), transparent 55%);
+          animation: shimmer 30s ease-in-out infinite;
+        }
+      `}</style>
+
+      {/* Navigation */}
+      <nav className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link href="/" className="text-xl font-bold" style={{ background: "linear-gradient(to right, #ff1493, #c71585)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              Dr. Dédé Tetsubayashi
+            </Link>
+            <div className="hidden md:flex space-x-8">
+              <Link href="/retreats-advocacy" className="text-gray-700 hover:text-pink-600">Retreats</Link>
+              <Link href="/about" className="text-gray-700 hover:text-pink-600">About</Link>
+              <Link href="/contact" className="text-gray-700 hover:text-pink-600">Contact</Link>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
       <section
-        className="relative min-h-[95vh] flex items-center justify-center pt-20"
+        className="hero-bg relative min-h-screen flex items-center justify-center text-white px-4 py-32 overflow-hidden"
         style={{
-          background:
-            "linear-gradient(135deg, rgba(255,179,217,0.9) 0%, rgba(255,105,180,0.85) 50%, rgba(255,182,193,0.9) 100%)",
+          background: `linear-gradient(135deg, rgba(255,20,147,0.92) 0%, rgba(199,21,133,0.88) 50%, rgba(255,105,180,0.92) 100%),
+                      url('https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=1600') center/cover`,
         }}
       >
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <div className="inline-block px-4 py-2 bg-white/25 border-2 border-white/40 rounded-full text-sm font-bold tracking-widest uppercase mb-8 backdrop-blur-sm">
-            Spring 2027 - Early Bird Available
+        <div className="relative z-10 max-w-5xl text-center">
+          <span
+            className="inline-block px-10 py-4 rounded-lg text-sm font-extrabold tracking-[4px] uppercase mb-12 backdrop-blur-xl"
+            style={{
+              background: "rgba(255,215,0,0.25)",
+              border: "3px solid rgba(255,215,0,0.5)",
+              boxShadow: "0 6px 25px rgba(255,215,0,0.3)",
+              color: "var(--bloom-gold)",
+            }}
+          >
+            EARLY BIRD OPEN · 2027 EDITION
+          </span>
+          <h1
+            className="font-black mb-8 leading-none"
+            style={{
+              fontSize: "clamp(4rem, 13vw, 7.5rem)",
+              textShadow: "0 8px 30px rgba(199,21,133,0.5), 0 4px 12px rgba(0,0,0,0.2)",
+              letterSpacing: "-3px",
+            }}
+          >
+            Cherry Blossom
+          </h1>
+          <div
+            className="mb-8 font-extralight tracking-widest"
+            style={{
+              fontSize: "clamp(2rem, 7vw, 3.25rem)",
+              textShadow: "0 3px 12px rgba(0,0,0,0.15)",
+              letterSpacing: "3px",
+            }}
+          >
+            2027 Edition
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg">Bloom Into Rest</h1>
-          <p className="text-2xl md:text-3xl font-light mb-4 tracking-wide">Cherry Blossom 2027</p>
-          <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto leading-relaxed">
-            Our second annual spring retreat with enhanced programming based on 2026 participant feedback. Limited to 12
-            participants for an intimate, transformative experience.
+          <p
+            className="mb-14 leading-relaxed max-w-4xl mx-auto font-light"
+            style={{
+              fontSize: "1.4rem",
+              textShadow: "0 2px 10px rgba(0,0,0,0.12)",
+            }}
+          >
+            We return to Japan&apos;s sakura season with deeper experiences, enhanced amenities, and even more transformative programming. April 6–16, 2027.
           </p>
-          <p className="text-lg font-medium mb-8">April 6-16, 2027 | Kamakura & Hakone</p>
-          <Link href="/contact">
-            <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide">
-              Reserve Early Bird - From $11,500
-            </Button>
-          </Link>
+          <a
+            href="#reserve"
+            className="inline-block px-16 py-7 rounded-lg text-xl font-extrabold uppercase tracking-wider transition-all duration-300 hover:-translate-y-1"
+            style={{
+              background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)",
+              boxShadow: "0 10px 30px rgba(255,20,147,0.4), 0 4px 12px rgba(0,0,0,0.2)",
+            }}
+          >
+            Reserve Your Spot Now
+          </a>
+          <div
+            className="mt-8 text-sm tracking-wide"
+            style={{ color: "var(--sakura-white)", opacity: 0.95 }}
+          >
+            Limited to 12 Guests
+          </div>
         </div>
       </section>
 
-      {/* What's New */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+      {/* Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
           <h2
-            className="text-4xl md:text-5xl font-extrabold text-center mb-6"
+            className="text-center font-light mb-12"
             style={{
-              background: "linear-gradient(135deg, #ff69b4 0%, #ff1493 50%, #ffb3d9 100%)",
+              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+              background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
-            Enhanced for 2027
+            2027: Elevated Experiences
           </h2>
-          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16 leading-relaxed">
-            Based on feedback from our inaugural 2026 retreat, we've refined and expanded the experience.
-          </p>
+          <div className="space-y-8 text-lg text-gray-700 leading-relaxed">
+            <p className="text-center">
+              Cherry Blossom 2027 represents the evolution of our signature spring retreat. Drawing on years of experience facilitating transformative wellness journeys in Japan, we&apos;ve designed extended temple stays, elevated dining experiences, private onsen time, and deepened our Rest as Resistance programming.
+            </p>
+            <p className="text-center">
+              This is Japan&apos;s sakura season at its finest: ten days of pink-petaled splendor, ancient wellness wisdom, and community with women who understand that rest is not indulgence—it&apos;s revolution.
+            </p>
+            <p className="text-center">
+              Whether you choose our 7-day core experience or the full 10-day journey, you&apos;ll return home transformed, rested, and connected to a global sisterhood committed to liberation through rest.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-8">
+      {/* Experiences */}
+      <section className="py-24" style={{ background: "var(--rose-soft)" }}>
+        <div className="max-w-7xl mx-auto px-4">
+          <h2
+            className="text-center font-light mb-20"
+            style={{
+              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+              background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            2027 Experiences
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Cherry,
-                title: "Extended Hanami",
-                description:
-                  "More time for cherry blossom viewing with additional private garden access and photography sessions.",
+                title: "Private Sakura Viewings",
+                desc: "Exclusive early-morning access to Kyoto's most iconic cherry blossom spots—before crowds arrive. Guided meditation under centuries-old trees.",
+                img: "/02-ekYLf16--NMAgcW86O.jpg",
               },
               {
-                icon: Sparkles,
-                title: "Enhanced Wellness",
-                description:
-                  "Additional spa treatments, personalized wellness consultations, and integration coaching sessions.",
+                title: "Extended Onsen Rituals",
+                desc: "Private onsen reservations daily. Hot springs surrounded by spring blossoms become your sanctuary for deep nervous system reset.",
+                img: "photo-1528360983277-13d401cdc186",
               },
               {
-                icon: Users,
-                title: "Deeper Community",
-                description:
-                  "Alumni reunion opportunity and enhanced sisterhood circles with longer facilitated sessions.",
+                title: "Sacred Temple Immersions",
+                desc: "Extended temple stays with morning meditation sessions. Connect with resident monks and learn ancient practices of mindfulness and contemplation.",
+                img: "/hot-spring-mountain.jpg",
+              },
+              {
+                title: "Mt. Fuji Sakura Viewing",
+                desc: "Exclusive access to premium viewing spots where cherry blossoms frame Japan's sacred mountain. Photography guidance included.",
+                img: "photo-1490806843957-31f4c9a91c65",
+              },
+              {
+                title: "Kimono Experience Day",
+                desc: "Professional kimono dressing and styled photography session. Walk through historic districts in traditional spring attire.",
+                img: "photo-1480796927426-f609979314bd",
+              },
+              {
+                title: "Bamboo Grove Meditation",
+                desc: "Guided meditation walks through Kyoto's iconic bamboo forests. Sound healing sessions amidst nature's cathedral.",
+                img: "photo-1549096222-7d8d15c87d88",
+              },
+              {
+                title: "Luxury Spa Treatments",
+                desc: "Enhanced spa program featuring Japanese healing modalities. Hot stone therapy, facial treatments, and body work tailored to your needs.",
+                img: "photo-1544161515-4ab6ce6db874",
+              },
+              {
+                title: "Rest as Resistance Intensives",
+                desc: "Workshop series on liberation through rest. Integration practices, embodied movement, and facilitated circles.",
+                img: "photo-1506905925346-21bda4d32df4",
+              },
+              {
+                title: "Elevated Kaiseki Dining",
+                desc: "Michelin-quality seasonal cuisine at every dinner. Spring ingredients at their peak, presented with artistry.",
+                img: "photo-1555396273-367ea4eb4db5",
               },
             ].map((item, i) => (
-              <Card key={i} className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center">
-                    <item.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-pink-600">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                </CardContent>
-              </Card>
+              <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all">
+                <div
+                  className="h-72 bg-cover bg-center"
+                  style={{ backgroundImage: `url(https://images.unsplash.com/${item.img}?w=800&q=80)` }}
+                />
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Early Bird Pricing */}
-      <section className="py-20 px-4 bg-gradient-to-br from-pink-50 to-rose-50">
-        <div className="max-w-lg mx-auto">
+      {/* Pricing */}
+      <section id="investment" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
           <h2
-            className="text-4xl font-extrabold text-center mb-16"
+            className="text-center font-light mb-8"
             style={{
-              background: "linear-gradient(135deg, #ff69b4 0%, #ff1493 100%)",
+              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+              background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
-            Early Bird Pricing
+            Your 2027 Investment
           </h2>
+          <p className="text-center text-xl text-gray-600 mb-20 max-w-4xl mx-auto">
+            Early bird pricing available. Payment plans accepted. Pricing reflects peak season demand and enhanced programming.
+          </p>
 
-          <Card className="border-2 border-pink-500 shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-pink-500 to-rose-400" />
-            <div className="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-              SAVE $1,000
-            </div>
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold text-pink-600 mb-2">10-Day Journey</h3>
-              <p className="text-gray-600 mb-4">Book by December 31, 2026</p>
-              <div
-                className="text-5xl font-black mb-2"
-                style={{
-                  background: "linear-gradient(135deg, #ff69b4 0%, #ff1493 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                $11,500
-              </div>
-              <p className="text-gray-500 line-through mb-6">Regular price: $12,500</p>
-              <ul className="text-left space-y-3 mb-8">
-                {[
-                  "10 nights luxury ryokan",
-                  "All meals included",
-                  "Private onsen access",
-                  "Enhanced wellness programming",
-                  "Alumni reunion events",
-                  "Priority booking for 2028",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-gradient-to-r from-pink-500 to-rose-400 flex items-center justify-center">
-                      <Check className="w-3 h-3 text-white" />
-                    </div>
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Whispering Pines */}
+            <div className="bg-white rounded-3xl p-10 shadow-xl border-2 border-gray-100">
+              <h3 className="text-3xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
+                Whispering Pines
+              </h3>
+              <div className="text-5xl font-bold mb-2">$13,500</div>
+              <p className="text-xl text-gray-600 mb-8 font-semibold">7-Day Core Experience</p>
+              <ul className="space-y-4 text-lg mb-10">
+                <li>✓ 7 days / 6 nights Kamakura base</li>
+                <li>✓ Enhanced meal program (all included)</li>
+                <li>✓ Daily onsen & spa access</li>
+                <li>✓ All cultural excursions</li>
+                <li>✓ Group integration circles</li>
+                <li>✓ Complete transportation</li>
               </ul>
-              <Link href="/contact">
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3">
-                  Reserve Now
-                </Button>
-              </Link>
-            </CardContent>
-          </Card>
+              <a
+                href="#reserve"
+                className="block w-full text-center px-6 py-4 rounded-lg font-bold text-white transition-all"
+                style={{ background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)" }}
+              >
+                Choose 7-Day
+              </a>
+            </div>
+
+            {/* Golden Crane - Featured */}
+            <div className="bg-white rounded-3xl p-10 shadow-2xl border-4" style={{ borderColor: "var(--fuchsia-deep)" }}>
+              <div
+                className="inline-block px-6 py-2 rounded-lg text-sm font-bold mb-6 text-white"
+                style={{ background: "var(--fuchsia-deep)" }}
+              >
+                HIGHLY RECOMMENDED
+              </div>
+              <h3 className="text-3xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
+                Golden Crane
+              </h3>
+              <div className="text-5xl font-bold mb-2">$15,000</div>
+              <p className="text-xl text-gray-600 mb-8 font-semibold">10-Day Complete Journey</p>
+              <ul className="space-y-4 text-lg mb-10">
+                <li>✓ All 7-Day features included</li>
+                <li>✓ PLUS 3 additional nights</li>
+                <li>✓ Premium ryokan upgrade</li>
+                <li>✓ Private onsen experiences</li>
+                <li>✓ Michelin kaiseki dinners</li>
+                <li>✓ Extended integration time</li>
+              </ul>
+              <a
+                href="#reserve"
+                className="block w-full text-center px-6 py-4 rounded-lg font-bold text-white transition-all"
+                style={{ background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)" }}
+              >
+                Choose 10-Day
+              </a>
+            </div>
+
+            {/* Eternal Blossom */}
+            <div className="bg-white rounded-3xl p-10 shadow-xl border-2 border-gray-100">
+              <h3 className="text-3xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
+                Eternal Blossom
+              </h3>
+              <div className="text-5xl font-bold mb-2">$18,000</div>
+              <p className="text-xl text-gray-600 mb-8 font-semibold">10-Day Ultra Luxury</p>
+              <ul className="space-y-4 text-lg mb-10">
+                <li>✓ All Golden Crane benefits</li>
+                <li>✓ Best-in-class accommodations</li>
+                <li>✓ Private spa treatment series</li>
+                <li>✓ Professional kimono photoshoot</li>
+                <li>✓ 90-min life design session</li>
+                <li>✓ VIP concierge throughout</li>
+              </ul>
+              <a
+                href="#reserve"
+                className="block w-full text-center px-6 py-4 rounded-lg font-bold text-white transition-all"
+                style={{ background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)" }}
+              >
+                Choose Luxury
+              </a>
+            </div>
+          </div>
+
+          {/* Early Bird */}
+          <div
+            className="max-w-3xl mx-auto rounded-3xl p-10 text-center border-2"
+            style={{ background: "var(--rose-soft)", borderColor: "var(--fuchsia-deep)" }}
+          >
+            <h3 className="text-3xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
+              Early Bird Special
+            </h3>
+            <p className="text-xl text-gray-700 leading-relaxed">
+              Book before June 1, 2026 and save $500 on any package. Payment plans available with 3-installment option.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-4 bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-400">
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-4xl font-bold mb-6">Secure Your 2027 Spot</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Limited to 12 participants. Early bird pricing ends December 31, 2026.
+      {/* Reserve */}
+      <section
+        id="reserve"
+        className="py-24"
+        style={{
+          background: `linear-gradient(135deg, rgba(255,20,147,0.92) 0%, rgba(199,21,133,0.88) 50%, rgba(255,105,180,0.92) 100%)`,
+        }}
+      >
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2
+            className="mb-8 font-light text-white"
+            style={{
+              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+            }}
+          >
+            Secure Your Place
+          </h2>
+          <p className="text-xl text-white mb-12 leading-relaxed">
+            Email us to begin your reservation and receive the full retreat prospectus with detailed itinerary, accommodation details, and payment options.
           </p>
-          <Link href="/contact">
-            <Button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold">
-              Reserve Your Seat
-            </Button>
-          </Link>
+          <a
+            href="mailto:rar@dr-dede.com"
+            className="inline-block px-16 py-7 rounded-lg text-xl font-extrabold uppercase tracking-wider transition-all hover:-translate-y-1 text-white"
+            style={{
+              background: "rgba(255,255,255,0.25)",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+              border: "2px solid rgba(255,255,255,0.5)",
+            }}
+          >
+            Begin Your Reservation
+          </a>
         </div>
       </section>
     </div>
