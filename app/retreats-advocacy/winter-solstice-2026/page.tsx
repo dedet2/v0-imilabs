@@ -45,7 +45,9 @@ export default function WinterSolstice2026Page() {
         className="relative min-h-[95vh] flex items-center justify-center pt-20"
         style={{
           background:
-            "linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(6,182,212,0.8) 50%, rgba(147,197,253,0.85) 100%)",
+            `linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(6,182,212,0.8) 50%, rgba(147,197,253,0.85) 100%), url('/niseko.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
@@ -123,37 +125,37 @@ export default function WinterSolstice2026Page() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                image: "/diverse-women-snow-onsen-outdoor-hot-spring-japan-.jpg",
+                image: "/_RvbnBLRcjXDCa8z8XAhh.jpg",
                 title: "Snow Onsen",
                 description:
                   "Soak in outdoor hot springs surrounded by pristine snow, experiencing the magical contrast of heat and cold.",
               },
               {
-                image: "/diverse-women-various-ethnicities-solstice-ceremon.jpg",
+                image: "/cQIAyMvMmvn_U7F9hodBd.jpg",
                 title: "Solstice Ceremony",
                 description:
                   "Celebrate the return of the light with a special winter solstice ritual honoring rest, darkness, and renewal.",
               },
               {
-                image: "/diverse-women-wheelchair-user-snow-country-japan-w.jpg",
+                image: "/snow-village.jpg",
                 title: "Snow Country",
                 description:
                   "Experience the landscapes that inspired Kawabata's Nobel Prize-winning novel in Japan's legendary snow country.",
               },
               {
-                image: "/diverse-women-various-ethnicities-yuzu-bath-ritual.jpg",
+                image: "/-L01k1x5hFfHSLvFgxeag.jpg",
                 title: "Yuzu Bath Ritual",
                 description:
                   "Traditional winter solstice bathing with citrus, believed to prevent colds and bring good fortune.",
               },
               {
-                image: "/diverse-women-deep-reflection-meditation-winter-ja.jpg",
+                image: "/temple-snow.jpg",
                 title: "Deep Reflection",
                 description:
                   "Use winter's natural stillness for profound inner work and intention-setting for the year ahead.",
               },
               {
-                image: "/diverse-women-luxury-ryokan-accessible-traditional.jpg",
+                image: "/lCGDyyabxAa6b72Hxpi-h.jpg",
                 title: "Ryokan Luxury",
                 description:
                   "Stay in historic ryokans known for exceptional hospitality, cuisine, and private hot spring baths.",
