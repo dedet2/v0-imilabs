@@ -45,22 +45,6 @@ export default function CherryBlossom2027Page() {
         }
       `}</style>
 
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-xl font-bold" style={{ background: "linear-gradient(to right, #ff1493, #c71585)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              Dr. Dédé Tetsubayashi
-            </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/retreats-advocacy" className="text-gray-700 hover:text-pink-600">Retreats</Link>
-              <Link href="/about" className="text-gray-700 hover:text-pink-600">About</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-pink-600">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section
         className="hero-bg relative min-h-screen flex items-center justify-center text-white px-4 py-32 overflow-hidden"
