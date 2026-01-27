@@ -149,7 +149,7 @@ export default function CherryBlossom2027Page() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                image: "/02-ekYLf16--NMAgcW86O.jpg",
+                image: "/cherry-blossom-hero.jpg",
                 icon: Sparkles,
                 title: "Private Sakura Viewings",
                 description: "Exclusive early-morning access to Kyoto's most iconic cherry blossom spots—before crowds arrive. Guided meditation under centuries-old trees.",
@@ -161,7 +161,7 @@ export default function CherryBlossom2027Page() {
                 description: "Private onsen reservations daily. Hot springs surrounded by spring blossoms become your sanctuary for deep nervous system reset.",
               },
               {
-                image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+                image: "/cherry-blossoms-temple.jpg",
                 icon: Mountain,
                 title: "Sacred Temple Immersions",
                 description: "Extended temple stays with morning meditation sessions. Connect with resident monks and learn ancient practices of mindfulness and contemplation.",
@@ -173,31 +173,31 @@ export default function CherryBlossom2027Page() {
                 description: "Exclusive access to premium viewing spots where cherry blossoms frame Japan's sacred mountain. Photography guidance included.",
               },
               {
-                image: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&q=80",
+                image: "/5_zUKNkUVBXUJ6-fdh9Zf.jpg",
                 icon: Heart,
                 title: "Kimono Experience Day",
                 description: "Professional kimono dressing and styled photography session. Walk through historic districts in traditional spring attire.",
               },
               {
-                image: "https://images.unsplash.com/photo-1549096222-7d8d15c87d88?w=800&q=80",
+                image: "/LUU5TnS9Z4Wm96LhiHuov.jpg",
                 icon: Sparkles,
                 title: "Bamboo Grove Meditation",
                 description: "Guided meditation walks through Kyoto's iconic bamboo forests. Sound healing sessions amidst nature's cathedral.",
               },
               {
-                image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80",
+                image: "/h8DOrl6yi6A8mp82NeTGY.jpg",
                 icon: Heart,
                 title: "Luxury Spa Treatments",
                 description: "Enhanced spa program featuring Japanese healing modalities. Hot stone therapy, facial treatments, and body work tailored to your needs.",
               },
               {
-                image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+                image: "/black-women-friends-circle.jpg",
                 icon: Users,
                 title: "Rest as Resistance Intensives",
                 description: "Workshop series on liberation through rest. Integration practices, embodied movement, and facilitated circles.",
               },
               {
-                image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+                image: "/kaiseki-cuisine.jpg",
                 icon: Utensils,
                 title: "Elevated Kaiseki Dining",
                 description: "Michelin-quality seasonal cuisine at every dinner. Spring ingredients at their peak, presented with artistry.",
