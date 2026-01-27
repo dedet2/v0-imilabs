@@ -1,4 +1,6 @@
 import Link from "next/link"
+import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata = {
   title: "Cherry Blossom Edition 2027 | Rest as Resistance",
@@ -172,63 +174,63 @@ export default function CherryBlossom2027Page() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                image: "/02-ekYLf16--NMAgcW86O.jpg",
                 title: "Private Sakura Viewings",
-                desc: "Exclusive early-morning access to Kyoto's most iconic cherry blossom spots—before crowds arrive. Guided meditation under centuries-old trees.",
-                img: "/02-ekYLf16--NMAgcW86O.jpg",
+                description: "Exclusive early-morning access to Kyoto's most iconic cherry blossom spots—before crowds arrive. Guided meditation under centuries-old trees.",
               },
               {
+                image: "/hot-spring-mountain.jpg",
                 title: "Extended Onsen Rituals",
-                desc: "Private onsen reservations daily. Hot springs surrounded by spring blossoms become your sanctuary for deep nervous system reset.",
-                img: "photo-1528360983277-13d401cdc186",
+                description: "Private onsen reservations daily. Hot springs surrounded by spring blossoms become your sanctuary for deep nervous system reset.",
               },
               {
+                image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
                 title: "Sacred Temple Immersions",
-                desc: "Extended temple stays with morning meditation sessions. Connect with resident monks and learn ancient practices of mindfulness and contemplation.",
-                img: "/hot-spring-mountain.jpg",
+                description: "Extended temple stays with morning meditation sessions. Connect with resident monks and learn ancient practices of mindfulness and contemplation.",
               },
               {
+                image: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&q=80",
                 title: "Mt. Fuji Sakura Viewing",
-                desc: "Exclusive access to premium viewing spots where cherry blossoms frame Japan's sacred mountain. Photography guidance included.",
-                img: "photo-1490806843957-31f4c9a91c65",
+                description: "Exclusive access to premium viewing spots where cherry blossoms frame Japan's sacred mountain. Photography guidance included.",
               },
               {
+                image: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&q=80",
                 title: "Kimono Experience Day",
-                desc: "Professional kimono dressing and styled photography session. Walk through historic districts in traditional spring attire.",
-                img: "photo-1480796927426-f609979314bd",
+                description: "Professional kimono dressing and styled photography session. Walk through historic districts in traditional spring attire.",
               },
               {
+                image: "https://images.unsplash.com/photo-1549096222-7d8d15c87d88?w=800&q=80",
                 title: "Bamboo Grove Meditation",
-                desc: "Guided meditation walks through Kyoto's iconic bamboo forests. Sound healing sessions amidst nature's cathedral.",
-                img: "photo-1549096222-7d8d15c87d88",
+                description: "Guided meditation walks through Kyoto's iconic bamboo forests. Sound healing sessions amidst nature's cathedral.",
               },
               {
+                image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80",
                 title: "Luxury Spa Treatments",
-                desc: "Enhanced spa program featuring Japanese healing modalities. Hot stone therapy, facial treatments, and body work tailored to your needs.",
-                img: "photo-1544161515-4ab6ce6db874",
+                description: "Enhanced spa program featuring Japanese healing modalities. Hot stone therapy, facial treatments, and body work tailored to your needs.",
               },
               {
+                image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
                 title: "Rest as Resistance Intensives",
-                desc: "Workshop series on liberation through rest. Integration practices, embodied movement, and facilitated circles.",
-                img: "photo-1506905925346-21bda4d32df4",
+                description: "Workshop series on liberation through rest. Integration practices, embodied movement, and facilitated circles.",
               },
               {
+                image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
                 title: "Elevated Kaiseki Dining",
-                desc: "Michelin-quality seasonal cuisine at every dinner. Spring ingredients at their peak, presented with artistry.",
-                img: "photo-1555396273-367ea4eb4db5",
+                description: "Michelin-quality seasonal cuisine at every dinner. Spring ingredients at their peak, presented with artistry.",
               },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all">
-                <div
-                  className="h-72 bg-cover bg-center"
-                  style={{ backgroundImage: `url(https://images.unsplash.com/${item.img}?w=800&q=80)` }}
-                />
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">{item.desc}</p>
+              <Card
+                key={i}
+                className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 overflow-hidden"
+              >
+                <div className="relative h-60">
+                  <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
                 </div>
-              </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-3" style={{ color: "var(--fuchsia-deep)" }}>{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
