@@ -115,41 +115,27 @@ export default function CherryBlossom2027Page() {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2
-            className="text-center font-light mb-12"
-            style={{
-              fontSize: "clamp(2.5rem, 6vw, 4rem)",
-              background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            2027: Elevated Experiences
-          </h2>
-          <div className="space-y-8 text-lg text-gray-700 leading-relaxed">
-            <p className="text-center">
-              Cherry Blossom 2027 represents the evolution of our signature spring retreat. Drawing on years of experience facilitating transformative wellness journeys in Japan, we&apos;ve designed extended temple stays, elevated dining experiences, private onsen time, and deepened our Rest as Resistance programming.
-            </p>
-            <p className="text-center">
-              This is Japan&apos;s sakura season at its finest: ten days of pink-petaled splendor, ancient wellness wisdom, and community with women who understand that rest is not indulgence—it&apos;s revolution.
-            </p>
-            <p className="text-center">
-              Whether you choose our 7-day core experience or the full 10-day journey, you&apos;ll return home transformed, rested, and connected to a global sisterhood committed to liberation through rest.
-            </p>
-          </div>
+      {/* Intro Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-pink-50 to-rose-50">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            Cherry Blossom 2027 represents the evolution of our signature spring retreat. Drawing on years of experience facilitating transformative wellness journeys in Japan, we&apos;ve designed extended temple stays, elevated dining experiences, private onsen time, and deepened our Rest as Resistance programming.
+          </p>
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
+            This is Japan&apos;s sakura season at its finest: ten days of pink-petaled splendor, ancient wellness wisdom, and community.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            Whether you choose our 7-day core experience or the full 10-day journey, you&apos;ll return home transformed, rested, and connected to a global sisterhood committed to liberation through rest.
+          </p>
         </div>
       </section>
 
-      {/* Experiences */}
-      <section className="py-24" style={{ background: "var(--rose-soft)" }}>
-        <div className="max-w-7xl mx-auto px-4">
+      {/* The Experience */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
           <h2
-            className="text-center font-extrabold mb-20"
+            className="text-4xl md:text-5xl font-extrabold text-center mb-6"
             style={{
-              fontSize: "clamp(2.5rem, 5vw, 5rem)",
               background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -157,6 +143,9 @@ export default function CherryBlossom2027Page() {
           >
             2027 Experiences
           </h2>
+          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16 leading-relaxed">
+            Ten days of pink-petaled splendor, ancient wellness wisdom, and community with women who understand that rest is not indulgence—it&apos;s revolution.
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -235,114 +224,172 @@ export default function CherryBlossom2027Page() {
       </section>
 
       {/* Pricing */}
-      <section id="investment" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-20 px-4 bg-gradient-to-br from-pink-50 to-rose-50">
+        <div className="max-w-6xl mx-auto">
           <h2
-            className="text-center font-extrabold mb-8"
+            className="text-4xl font-extrabold text-center mb-16"
             style={{
-              fontSize: "clamp(2.5rem, 5vw, 5rem)",
               background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
-            Your 2027 Investment
+            Investment
           </h2>
-          <p className="text-center text-xl text-gray-600 mb-20 max-w-4xl mx-auto">
-            Early bird pricing available. Payment plans accepted. Pricing reflects peak season demand and enhanced programming.
-          </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Whispering Pines */}
-            <div className="bg-white rounded-3xl p-10 shadow-xl border-2 border-gray-100">
-              <h3 className="text-3xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
-                Whispering Pines
-              </h3>
-              <div className="text-5xl font-bold mb-2">$13,500</div>
-              <p className="text-xl text-gray-600 mb-8 font-semibold">7-Day Core Experience</p>
-              <ul className="space-y-4 text-lg mb-10">
-                <li>✓ 7 days / 6 nights Kamakura base</li>
-                <li>✓ Enhanced meal program (all included)</li>
-                <li>✓ Daily onsen & spa access</li>
-                <li>✓ All cultural excursions</li>
-                <li>✓ Group integration circles</li>
-                <li>✓ Complete transportation</li>
-              </ul>
-              <a
-                href="#reserve"
-                className="block w-full text-center px-6 py-4 rounded-lg font-bold text-white transition-all"
-                style={{ background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)" }}
-              >
-                Choose 7-Day
-              </a>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Whispering Pines - 7 Day */}
+            <Card className="border-none shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-pink-500 to-rose-400" />
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--fuchsia-deep)" }}>Whispering Pines</h3>
+                <p className="text-gray-600 mb-4">7-Day Core Experience</p>
+                <div
+                  className="text-5xl font-black mb-2"
+                  style={{
+                    background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  $13,500
+                </div>
+                <p className="text-gray-500 mb-6">Shared occupancy</p>
 
-            {/* Golden Crane - Featured */}
-            <div className="bg-white rounded-3xl p-10 shadow-2xl border-4" style={{ borderColor: "var(--fuchsia-deep)" }}>
-              <div
-                className="inline-block px-6 py-2 rounded-lg text-sm font-bold mb-6 text-white"
-                style={{ background: "var(--fuchsia-deep)" }}
-              >
+                <ul className="text-left space-y-3 mb-8">
+                  {[
+                    "7 days / 6 nights Kamakura base",
+                    "Enhanced meal program (all included)",
+                    "Daily onsen & spa access",
+                    "All cultural excursions",
+                    "Group integration circles",
+                    "Complete transportation",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-gradient-to-r from-pink-500 to-rose-400 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link href="/contact">
+                  <Button className="w-full text-white py-4 text-lg font-bold" style={{ background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)" }}>
+                    Choose 7-Day
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Golden Crane - 10 Day (Recommended) */}
+            <Card className="border-none shadow-xl relative overflow-hidden ring-2 ring-pink-500">
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-pink-500 to-rose-400" />
+              <div className="absolute top-4 right-4 bg-gradient-to-r from-pink-500 to-rose-400 text-white text-xs font-bold px-3 py-1 rounded-full">
                 HIGHLY RECOMMENDED
               </div>
-              <h3 className="text-3xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
-                Golden Crane
-              </h3>
-              <div className="text-5xl font-bold mb-2">$15,000</div>
-              <p className="text-xl text-gray-600 mb-8 font-semibold">10-Day Complete Journey</p>
-              <ul className="space-y-4 text-lg mb-10">
-                <li>✓ All 7-Day features included</li>
-                <li>✓ PLUS 3 additional nights</li>
-                <li>✓ Premium ryokan upgrade</li>
-                <li>✓ Private onsen experiences</li>
-                <li>✓ Michelin kaiseki dinners</li>
-                <li>✓ Extended integration time</li>
-              </ul>
-              <a
-                href="#reserve"
-                className="block w-full text-center px-6 py-4 rounded-lg font-bold text-white transition-all"
-                style={{ background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)" }}
-              >
-                Choose 10-Day
-              </a>
-            </div>
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--fuchsia-deep)" }}>Golden Crane</h3>
+                <p className="text-gray-600 mb-4">10-Day Complete Journey</p>
+                <div
+                  className="text-5xl font-black mb-2"
+                  style={{
+                    background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  $15,000
+                </div>
+                <p className="text-gray-500 mb-6">Shared occupancy</p>
 
-            {/* Eternal Blossom */}
-            <div className="bg-white rounded-3xl p-10 shadow-xl border-2 border-gray-100">
-              <h3 className="text-3xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
-                Eternal Blossom
-              </h3>
-              <div className="text-5xl font-bold mb-2">$18,000</div>
-              <p className="text-xl text-gray-600 mb-8 font-semibold">10-Day Ultra Luxury</p>
-              <ul className="space-y-4 text-lg mb-10">
-                <li>✓ All Golden Crane benefits</li>
-                <li>✓ Best-in-class accommodations</li>
-                <li>✓ Private spa treatment series</li>
-                <li>✓ Professional kimono photoshoot</li>
-                <li>✓ 90-min life design session</li>
-                <li>✓ VIP concierge throughout</li>
-              </ul>
-              <a
-                href="#reserve"
-                className="block w-full text-center px-6 py-4 rounded-lg font-bold text-white transition-all"
-                style={{ background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)" }}
-              >
-                Choose Luxury
-              </a>
-            </div>
+                <ul className="text-left space-y-3 mb-8">
+                  {[
+                    "All 7-Day features included",
+                    "PLUS 3 additional nights",
+                    "Premium ryokan upgrade",
+                    "Private onsen experiences",
+                    "Michelin kaiseki dinners",
+                    "Extended integration time",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-gradient-to-r from-pink-500 to-rose-400 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link href="/contact">
+                  <Button className="w-full text-white py-4 text-lg font-bold" style={{ background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)" }}>
+                    Choose 10-Day
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Eternal Blossom - Ultra Luxury */}
+            <Card className="border-none shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-pink-500 to-rose-400" />
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--fuchsia-deep)" }}>Eternal Blossom</h3>
+                <p className="text-gray-600 mb-4">10-Day Ultra Luxury</p>
+                <div
+                  className="text-5xl font-black mb-2"
+                  style={{
+                    background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  $18,000
+                </div>
+                <p className="text-gray-500 mb-6">Shared occupancy</p>
+
+                <ul className="text-left space-y-3 mb-8">
+                  {[
+                    "All Golden Crane benefits",
+                    "Best-in-class accommodations",
+                    "Private spa treatment series",
+                    "Professional kimono photoshoot",
+                    "90-min life design session",
+                    "VIP concierge throughout",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-gradient-to-r from-pink-500 to-rose-400 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link href="/contact">
+                  <Button className="w-full text-white py-4 text-lg font-bold" style={{ background: "linear-gradient(to right, #ff1493 0%, #c71585 100%)" }}>
+                    Choose Luxury
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Early Bird */}
-          <div
-            className="max-w-3xl mx-auto rounded-3xl p-10 text-center border-2"
-            style={{ background: "var(--rose-soft)", borderColor: "var(--fuchsia-deep)" }}
-          >
-            <h3 className="text-3xl font-bold mb-4" style={{ color: "var(--fuchsia-deep)" }}>
-              Early Bird Special
-            </h3>
-            <p className="text-xl text-gray-700 leading-relaxed">
-              Book before June 1, 2026 and save $500 on any package. Payment plans available with 3-installment option.
-            </p>
+          {/* Early Bird Special */}
+          <div className="mt-12 text-center">
+            <Card className="border-none shadow-lg max-w-xl mx-auto">
+              <CardContent className="p-6">
+                <h4 className="text-xl font-bold mb-2" style={{ color: "var(--fuchsia-deep)" }}>Early Bird Special</h4>
+                <p className="text-gray-600">
+                  Book before June 1, 2026 and save $500 on any package. Payment plans available with 3-installment option.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
