@@ -145,9 +145,9 @@ export default function CherryBlossom2027Page() {
       <section className="py-24" style={{ background: "var(--rose-soft)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <h2
-            className="text-center font-light mb-20"
+            className="text-center font-extrabold mb-20"
             style={{
-              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+              fontSize: "clamp(2.5rem, 5vw, 5rem)",
               background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -224,9 +224,9 @@ export default function CherryBlossom2027Page() {
       <section id="investment" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2
-            className="text-center font-light mb-8"
+            className="text-center font-extrabold mb-8"
             style={{
-              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+              fontSize: "clamp(2.5rem, 5vw, 5rem)",
               background: "linear-gradient(135deg, #ff1493 0%, #c71585 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -343,9 +343,9 @@ export default function CherryBlossom2027Page() {
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2
-            className="mb-8 font-light text-white"
+            className="mb-8 font-bold text-white"
             style={{
-              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+              fontSize: "clamp(2rem, 5vw, 4rem)",
             }}
           >
             Secure Your Place
@@ -353,17 +353,28 @@ export default function CherryBlossom2027Page() {
           <p className="text-xl text-white mb-12 leading-relaxed">
             Email us to begin your reservation and receive the full retreat prospectus with detailed itinerary, accommodation details, and payment options.
           </p>
-          <a
-            href="mailto:rar@dr-dede.com"
-            className="inline-block px-16 py-7 rounded-lg text-xl font-extrabold uppercase tracking-wider transition-all hover:-translate-y-1 text-white"
-            style={{
-              background: "rgba(255,255,255,0.25)",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
-              border: "2px solid rgba(255,255,255,0.5)",
-            }}
-          >
-            Begin Your Reservation
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:rar@dr-dede.com"
+              className="inline-block px-8 py-4 rounded-lg text-lg font-bold transition-all hover:opacity-90"
+              style={{
+                background: "white",
+                color: "#9333ea",
+              }}
+            >
+              Begin Your Reservation
+            </a>
+            <Link
+              href="/retreats-advocacy"
+              className="inline-block px-8 py-4 rounded-lg text-lg font-bold transition-all hover:bg-white/10 text-white"
+              style={{
+                border: "2px solid white",
+                background: "transparent",
+              }}
+            >
+              View All Retreats
+            </Link>
+          </div>
         </div>
       </section>
     </div>
