@@ -1,6 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Sparkles, Droplets, Mountain, Heart, Users, Utensils } from "lucide-react"
 
 export const metadata = {
   title: "Cherry Blossom Edition 2027 | Rest as Resistance",
@@ -159,46 +161,55 @@ export default function CherryBlossom2027Page() {
             {[
               {
                 image: "/02-ekYLf16--NMAgcW86O.jpg",
+                icon: Sparkles,
                 title: "Private Sakura Viewings",
                 description: "Exclusive early-morning access to Kyoto's most iconic cherry blossom spots—before crowds arrive. Guided meditation under centuries-old trees.",
               },
               {
                 image: "/hot-spring-mountain.jpg",
+                icon: Droplets,
                 title: "Extended Onsen Rituals",
                 description: "Private onsen reservations daily. Hot springs surrounded by spring blossoms become your sanctuary for deep nervous system reset.",
               },
               {
                 image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+                icon: Mountain,
                 title: "Sacred Temple Immersions",
                 description: "Extended temple stays with morning meditation sessions. Connect with resident monks and learn ancient practices of mindfulness and contemplation.",
               },
               {
                 image: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&q=80",
+                icon: Mountain,
                 title: "Mt. Fuji Sakura Viewing",
                 description: "Exclusive access to premium viewing spots where cherry blossoms frame Japan's sacred mountain. Photography guidance included.",
               },
               {
                 image: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&q=80",
+                icon: Heart,
                 title: "Kimono Experience Day",
                 description: "Professional kimono dressing and styled photography session. Walk through historic districts in traditional spring attire.",
               },
               {
                 image: "https://images.unsplash.com/photo-1549096222-7d8d15c87d88?w=800&q=80",
+                icon: Sparkles,
                 title: "Bamboo Grove Meditation",
                 description: "Guided meditation walks through Kyoto's iconic bamboo forests. Sound healing sessions amidst nature's cathedral.",
               },
               {
                 image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80",
+                icon: Heart,
                 title: "Luxury Spa Treatments",
                 description: "Enhanced spa program featuring Japanese healing modalities. Hot stone therapy, facial treatments, and body work tailored to your needs.",
               },
               {
                 image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+                icon: Users,
                 title: "Rest as Resistance Intensives",
                 description: "Workshop series on liberation through rest. Integration practices, embodied movement, and facilitated circles.",
               },
               {
                 image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+                icon: Utensils,
                 title: "Elevated Kaiseki Dining",
                 description: "Michelin-quality seasonal cuisine at every dinner. Spring ingredients at their peak, presented with artistry.",
               },
@@ -211,7 +222,10 @@ export default function CherryBlossom2027Page() {
                   <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3" style={{ color: "var(--fuchsia-deep)" }}>{item.title}</h3>
+                  <div className="flex items-center gap-3 mb-3">
+                    <item.icon className="w-6 h-6" style={{ color: "var(--fuchsia-deep)" }} />
+                    <h3 className="text-xl font-bold" style={{ color: "var(--fuchsia-deep)" }}>{item.title}</h3>
+                  </div>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
@@ -334,45 +348,24 @@ export default function CherryBlossom2027Page() {
       </section>
 
       {/* Reserve */}
-      <section
-        id="reserve"
-        className="py-24"
-        style={{
-          background: `linear-gradient(135deg, rgba(255,20,147,0.92) 0%, rgba(199,21,133,0.88) 50%, rgba(255,105,180,0.92) 100%)`,
-        }}
-      >
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2
-            className="mb-8 font-bold text-white"
-            style={{
-              fontSize: "clamp(2rem, 5vw, 4rem)",
-            }}
-          >
-            Secure Your Place
-          </h2>
-          <p className="text-xl text-white mb-12 leading-relaxed">
-            Email us to begin your reservation and receive the full retreat prospectus with detailed itinerary, accommodation details, and payment options.
-          </p>
+      <section id="reserve" className="py-20 px-4 bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-400">
+        <div className="max-w-3xl mx-auto text-center text-white">
+          <h2 className="text-4xl font-bold mb-6">Ready for Cherry Blossom 2027?</h2>
+          <p className="text-xl mb-8 opacity-90">Limited to 12 participants. Early bird pricing ends June 1, 2026.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:rar@dr-dede.com"
-              className="inline-block px-8 py-4 rounded-lg text-lg font-bold transition-all hover:opacity-90"
-              style={{
-                background: "white",
-                color: "#9333ea",
-              }}
-            >
-              Begin Your Reservation
+            <a href="mailto:rar@dr-dede.com">
+              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold">
+                Begin Your Reservation
+              </Button>
             </a>
-            <Link
-              href="/retreats-advocacy"
-              className="inline-block px-8 py-4 rounded-lg text-lg font-bold transition-all hover:bg-white/10 text-white"
-              style={{
-                border: "2px solid white",
-                background: "transparent",
-              }}
-            >
-              View All Retreats
+            <Link href="/retreats-advocacy">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg font-bold bg-transparent"
+              >
+                View All Retreats
+              </Button>
             </Link>
           </div>
         </div>

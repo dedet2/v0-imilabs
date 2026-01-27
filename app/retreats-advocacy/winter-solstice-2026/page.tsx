@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Check, ArrowLeft } from "lucide-react"
+import { Check, ArrowLeft, Sparkles, Mountain, Users, Droplets, Heart } from "lucide-react"
 import Image from "next/image"
 import type { Metadata } from "next"
 
@@ -126,36 +126,42 @@ export default function WinterSolstice2026Page() {
             {[
               {
                 image: "/_RvbnBLRcjXDCa8z8XAhh.jpg",
+                icon: Droplets,
                 title: "Snow Onsen",
                 description:
                   "Soak in outdoor hot springs surrounded by pristine snow, experiencing the magical contrast of heat and cold.",
               },
               {
                 image: "/cQIAyMvMmvn_U7F9hodBd.jpg",
+                icon: Sparkles,
                 title: "Solstice Ceremony",
                 description:
                   "Celebrate the return of the light with a special winter solstice ritual honoring rest, darkness, and renewal.",
               },
               {
                 image: "/snow-village.jpg",
+                icon: Mountain,
                 title: "Snow Country",
                 description:
                   "Experience the landscapes that inspired Kawabata's Nobel Prize-winning novel in Japan's legendary snow country.",
               },
               {
                 image: "/-L01k1x5hFfHSLvFgxeag.jpg",
+                icon: Heart,
                 title: "Yuzu Bath Ritual",
                 description:
                   "Traditional winter solstice bathing with citrus, believed to prevent colds and bring good fortune.",
               },
               {
                 image: "/temple-snow.jpg",
+                icon: Sparkles,
                 title: "Deep Reflection",
                 description:
                   "Use winter's natural stillness for profound inner work and intention-setting for the year ahead.",
               },
               {
                 image: "/lCGDyyabxAa6b72Hxpi-h.jpg",
+                icon: Users,
                 title: "Ryokan Luxury",
                 description:
                   "Stay in historic ryokans known for exceptional hospitality, cuisine, and private hot spring baths.",
@@ -169,7 +175,10 @@ export default function WinterSolstice2026Page() {
                   <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-blue-600">{item.title}</h3>
+                  <div className="flex items-center gap-3 mb-3">
+                    <item.icon className="w-6 h-6 text-blue-600" />
+                    <h3 className="text-xl font-bold text-blue-600">{item.title}</h3>
+                  </div>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
