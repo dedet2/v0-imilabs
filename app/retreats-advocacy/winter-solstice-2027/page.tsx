@@ -8,13 +8,11 @@ import { Check, Mountain, Snowflake, Sparkles, Sun, Users, Waves, ArrowLeft } fr
 export default function WinterSolstice2027Page() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Winter Ice Blue Theme */}
+      {/* Hero Section - Winter Ice Blue Theme (pale ice-blue matching HTML) */}
       <section
         className="relative min-h-[95vh] flex items-center justify-center pt-20"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(59,130,246,0.9) 0%, rgba(6,182,212,0.85) 50%, rgba(147,197,253,0.9) 100%), url('/japan-snow2.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          background: "linear-gradient(135deg, #93c5fd 0%, #a5f3fc 50%, #dbeafe 100%)",
         }}
       >
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
