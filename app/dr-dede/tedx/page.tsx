@@ -78,7 +78,7 @@ export default function TEDxPage() {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Key Takeaways</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">Key Takeaways</h2>
 
               <div className="grid gap-6">
                 {[
@@ -131,13 +131,13 @@ export default function TEDxPage() {
         <section className="py-20 bg-gradient-to-br from-secondary via-secondary/80 to-primary">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent mb-6">
                 Help me reach 10,000 Subscribers!
               </h2>
-              <p className="text-xl text-white/90 mb-4">
-                Right now, there's a real-time counter tracking our collective impact.
+              <p className="text-xl text-foreground mb-4">
+                Right now, there's a real-time counter tracking our collective impact. Every subscriber helps amplify this work. Let's hit 10k together and send a message:
+                Ethical, socially responsive tech isn't optional, it's essential!
               </p>
-              <p className="text-lg text-white/80 mb-12">Every subscriber helps amplify this work.</p>
 
               <div className="grid md:grid-cols-3 gap-8 mb-12">
                 {/* Subscribe Card */}
@@ -154,13 +154,13 @@ export default function TEDxPage() {
                       </p>
                       <p className="text-sm text-foreground/70">
                         <strong>FOLLOW</strong> and join the movement at{" "}
-                        <a href="https://instagram.com/DrDeterWithDede" className="text-primary hover:underline">
-                          @DrDeterWithDede
+                        <a href="https://www.instagram.com/the_drdede/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                          @the_drdede
                         </a>
                       </p>
                     </div>
-                    <Button asChild className="w-full bg-[#FF0000] hover:bg-[#CC0000]">
-                      <a href="https://www.youtube.com/@DrDeterWithDede" rel="noopener noreferrer">
+                    <Button asChild className="w-full bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500">
+                      <a href="https://www.youtube.com/@the_drdede" target="_blank" rel="noopener noreferrer">
                         Subscribe Now
                       </a>
                     </Button>
@@ -186,19 +186,14 @@ export default function TEDxPage() {
                 {/* Photo Card */}
                 <Card className="p-0 overflow-hidden bg-white">
                   <img
-                    src="/tedx-stage-with-speaker-dr--dede-in-colorful-outfi.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zk6mV6KqzzC33gokqE9p9_946b7a779d91408f8f6f35c71482e652-yy7meNnqeSegxOrAr7udiirBcYjLf9.jpg"
                     alt="Dr. Dédé speaking at TEDx"
                     className="w-full h-full object-cover"
                   />
                 </Card>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <p className="text-white font-semibold text-lg">Let's hit 10k together and send a message:</p>
-                <p className="text-white/90 italic text-lg">
-                  Ethical, socially responsive tech isn't optional, it's essential!
-                </p>
-              </div>
+
             </div>
           </div>
         </section>
@@ -207,16 +202,16 @@ export default function TEDxPage() {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Transform Your AI Strategy?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">Ready to Transform Your AI Strategy?</h2>
               <p className="text-xl text-foreground/70 mb-8">
                 Book Dr. Dédé for your next event or schedule a consultation to discuss how to build compliant,
                 high-performing AI systems.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                <Button asChild size="lg" className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500">
                   <Link href="/dr-dede/speaking">Book Speaking Engagement</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg" variant="outline" className="border-violet-600 text-violet-600 hover:bg-violet-50">
                   <Link href="/contact">Schedule Consultation</Link>
                 </Button>
               </div>

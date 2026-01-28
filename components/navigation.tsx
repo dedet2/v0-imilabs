@@ -301,17 +301,16 @@ export function Navigation() {
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Book Dr. Dédé for your event</p>
                   </Link>
-                  <a
-                    href="https://www.youtube.com/watch?v=mSQuZG_DHVY"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/dr-dede/tedx"
+                    onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
                   >
                     <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
                       Watch TEDx
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Transforming AI through equity</p>
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
@@ -621,14 +620,13 @@ export function Navigation() {
                     >
                       Speaking & Events
                     </Link>
-                    <a
-                      href="https://www.youtube.com/watch?v=mSQuZG_DHVY"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/dr-dede/tedx"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       Watch TEDx
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
