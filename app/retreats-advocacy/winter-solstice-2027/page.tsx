@@ -8,14 +8,30 @@ import { Check, Mountain, Snowflake, Sparkles, Sun, Users, Waves, ArrowLeft } fr
 export default function WinterSolstice2027Page() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Winter Ice Blue Theme (pale ice-blue matching HTML) */}
+      {/* Hero Section - Winter Ice Blue Theme (matching HTML exactly) */}
       <section
-        className="relative min-h-[95vh] flex items-center justify-center pt-20"
+        className="relative min-h-[95vh] flex items-center justify-center pt-20 overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, #93c5fd 0%, #a5f3fc 50%, #dbeafe 100%)",
+          background: "linear-gradient(135deg, rgba(59,130,246,0.9) 0%, rgba(6,182,212,0.85) 50%, rgba(147,197,253,0.9) 100%)",
         }}
       >
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('/illuminations.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        {/* Gradient overlay matching HTML */}
+        <div 
+          className="absolute inset-0 z-[1]"
+          style={{
+            background: "linear-gradient(135deg, rgba(59,130,246,0.9) 0%, rgba(6,182,212,0.85) 50%, rgba(147,197,253,0.9) 100%)",
+          }}
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white flex flex-col items-center">
           <Link
             href="/retreats-advocacy"
             className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
@@ -70,7 +86,7 @@ export default function WinterSolstice2027Page() {
                 title: "Snow Country Immersion",
                 description:
                   "Five nights in Japan's legendary snow country. Daily onsen rituals in mountain hot springs, forest bathing through winter landscapes, and profound quiet.",
-                image: "/japan-snow-country.jpg",
+                image: "/japan-snow2.jpg",
               },
               {
                 icon: Mountain,
