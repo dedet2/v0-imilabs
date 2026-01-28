@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Check, ArrowLeft, Sparkles, Mountain, Users, Droplets, Heart } from "lucide-react"
+import { Check, ArrowLeft } from "lucide-react"
 import Image from "next/image"
 import type { Metadata } from "next"
 
@@ -45,9 +45,7 @@ export default function WinterSolstice2026Page() {
         className="relative min-h-[95vh] flex items-center justify-center pt-20"
         style={{
           background:
-            `linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(6,182,212,0.8) 50%, rgba(147,197,253,0.85) 100%), url('/niseko.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+            "linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(6,182,212,0.8) 50%, rgba(147,197,253,0.85) 100%)",
         }}
       >
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
@@ -125,43 +123,37 @@ export default function WinterSolstice2026Page() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                image: "/_RvbnBLRcjXDCa8z8XAhh.jpg",
-                icon: Droplets,
+                image: "/diverse-women-snow-onsen-outdoor-hot-spring-japan-.jpg",
                 title: "Snow Onsen",
                 description:
                   "Soak in outdoor hot springs surrounded by pristine snow, experiencing the magical contrast of heat and cold.",
               },
               {
-                image: "/cQIAyMvMmvn_U7F9hodBd.jpg",
-                icon: Sparkles,
+                image: "/diverse-women-various-ethnicities-solstice-ceremon.jpg",
                 title: "Solstice Ceremony",
                 description:
                   "Celebrate the return of the light with a special winter solstice ritual honoring rest, darkness, and renewal.",
               },
               {
-                image: "/snow-village.jpg",
-                icon: Mountain,
+                image: "/diverse-women-wheelchair-user-snow-country-japan-w.jpg",
                 title: "Snow Country",
                 description:
                   "Experience the landscapes that inspired Kawabata's Nobel Prize-winning novel in Japan's legendary snow country.",
               },
               {
-                image: "/-L01k1x5hFfHSLvFgxeag.jpg",
-                icon: Heart,
+                image: "/diverse-women-various-ethnicities-yuzu-bath-ritual.jpg",
                 title: "Yuzu Bath Ritual",
                 description:
                   "Traditional winter solstice bathing with citrus, believed to prevent colds and bring good fortune.",
               },
               {
-                image: "/temple-snow.jpg",
-                icon: Sparkles,
+                image: "/diverse-women-deep-reflection-meditation-winter-ja.jpg",
                 title: "Deep Reflection",
                 description:
                   "Use winter's natural stillness for profound inner work and intention-setting for the year ahead.",
               },
               {
-                image: "/lCGDyyabxAa6b72Hxpi-h.jpg",
-                icon: Users,
+                image: "/diverse-women-luxury-ryokan-accessible-traditional.jpg",
                 title: "Ryokan Luxury",
                 description:
                   "Stay in historic ryokans known for exceptional hospitality, cuisine, and private hot spring baths.",
@@ -175,10 +167,7 @@ export default function WinterSolstice2026Page() {
                   <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
                 </div>
                 <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <item.icon className="w-6 h-6 text-blue-600" />
-                    <h3 className="text-xl font-bold text-blue-600">{item.title}</h3>
-                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-blue-600">{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>

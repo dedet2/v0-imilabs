@@ -19,7 +19,7 @@ export default function FamilyRetreatJune2026Page() {
       <section
         className="relative min-h-[90vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url('/family-retreat-hero.jpg')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -94,7 +94,7 @@ export default function FamilyRetreatJune2026Page() {
                 icon: Ticket,
                 title: "Theme Parks",
                 description: "Tokyo DisneySea and 2 full days at Universal Studios Japan with age-appropriate activities for all family members.",
-                image: "/tokyo-disney-sea.jpg",
+                image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
               },
               {
                 icon: Castle,
@@ -106,7 +106,7 @@ export default function FamilyRetreatJune2026Page() {
                 icon: Mountain,
                 title: "Nature & Relaxation",
                 description: "Hokkaido lavender fields, Lake Toya hot springs, scenic cable cars, and accessible accommodations for all ages.",
-                image: "/yuzu-bath-relaxation.jpg",
+                image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80",
               },
             ].map((item, i) => (
               <Card key={i} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-0 rounded-2xl">

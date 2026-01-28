@@ -43,7 +43,7 @@ export default function AutumnEquinox2026Page() {
       <section
         className="relative min-h-[95vh] flex items-center justify-center pt-20"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(220,38,38,0.85) 0%, rgba(245,158,11,0.8) 50%, rgba(217,119,6,0.85) 100%), url('/02-ekYLf16--NMAgcW86O.jpg')`,
+          backgroundImage: `linear-gradient(135deg, rgba(220,38,38,0.85) 0%, rgba(245,158,11,0.8) 50%, rgba(217,119,6,0.85) 100%), url('https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=1600&q=80')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -119,28 +119,28 @@ export default function AutumnEquinox2026Page() {
                   "UNESCO World Heritage sites in Nikko surrounded by autumn glory. Kyoto's ancient temples framed by fall colors. Morning meditation in nature's cathedral.",
               },
               {
-                image: "/02-ekYLf16--NMAgcW86O.jpg",
+                image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80",
                 icon: Mountain,
                 title: "Kyoto in Crimson",
                 description:
                   "Explore iconic fall foliage sites: Tofuku-ji Temple's sea of red, Philosopher's Path lined with maples, Kiyomizu-dera's panoramic autumn views.",
               },
               {
-                image: "/eSJeV4qEeaL_JYc6PEc_3.jpg",
+                image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=80",
                 icon: Sparkles,
                 title: "Mountain Onsen Retreat",
                 description:
                   "Hakone luxury onsen with Mt. Fuji views and autumn foliage. Multiple daily hot spring experiences. Private baths surrounded by crimson leaves.",
               },
               {
-                image: "/HoE5VBM9_L6HbYK0FJEqR.jpg",
+                image: "https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&q=80",
                 icon: Mountain,
                 title: "Nikko's Sacred Mountains",
                 description:
                   "Lake Chuzenji reflection walks with fall colors mirrored in crystal waters. Forest bathing through ancient cedar groves and autumn-painted hillsides.",
               },
               {
-                image: "/ON02fw2x-e_k-A6Px5078.jpg",
+                image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=80",
                 icon: Users,
                 title: "Equinox Ceremony",
                 description:

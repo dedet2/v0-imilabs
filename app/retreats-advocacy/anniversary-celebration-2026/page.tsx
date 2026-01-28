@@ -19,7 +19,7 @@ export default function AnniversaryCelebration2026Page() {
       <section
         className="relative min-h-[90vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url('/anniversary-vow-renewal.jpg')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -90,7 +90,7 @@ export default function AnniversaryCelebration2026Page() {
                 icon: Heart,
                 title: "Renewal of Vows",
                 description: "Private ceremony at historic Kyoto temple with traditional elements and professional photography.",
-                image: "/anniversary-vow-renewal.jpg",
+                image: "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=600&q=80",
               },
               {
                 icon: Utensils,
@@ -102,7 +102,7 @@ export default function AnniversaryCelebration2026Page() {
                 icon: Camera,
                 title: "Professional Photography",
                 description: "Two full days with photographer capturing your journey at iconic locations throughout Japan.",
-                image: "/anniversary-photography.jpg",
+                image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80",
               },
             ].map((item, i) => (
               <Card key={i} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-0 rounded-2xl bg-white">

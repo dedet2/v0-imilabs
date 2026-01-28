@@ -12,7 +12,7 @@ export default function PastNewYears2025Page() {
       <section
         className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-16"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(79,70,229,0.85) 0%, rgba(139,92,246,0.85) 100%), url('/new-years-snow-village.jpg')`,
+          backgroundImage: `linear-gradient(135deg, rgba(79,70,229,0.85) 0%, rgba(139,92,246,0.85) 100%), url('https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=1600&q=80')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
