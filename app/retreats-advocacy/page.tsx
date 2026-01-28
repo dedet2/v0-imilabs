@@ -313,7 +313,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
                 alt: "Forest bathing shinrin-yoku experience",
               },
               {
-                src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&q=80",
+                src: "/cherry-blossoms-temple2.jpg",
                 alt: "Inclusive outdoor wellness gathering with diverse participants",
               },
             ].map((photo, i) => (
