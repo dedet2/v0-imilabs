@@ -42,7 +42,7 @@ export default function SummerSolstice2026Page() {
       <section
         className="relative min-h-[95vh] flex items-center justify-center pt-20 overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(79,179,212,0.85) 0%, rgba(155,135,245,0.8) 50%, rgba(110,231,183,0.85) 100%), url('/lavender.jpg')`,
+          backgroundImage: `linear-gradient(135deg, rgba(79,179,212,0.85) 0%, rgba(155,135,245,0.8) 50%, rgba(110,231,183,0.85) 100%), url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1600&q=80')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -126,14 +126,14 @@ export default function SummerSolstice2026Page() {
                   "Wander through endless purple lavender fields at Farm Tomita. Breathe in healing aromatherapy while capturing moments in Japan's most photographed summer landscape.",
               },
               {
-                image: "/95koFZnoIxUhL46ZNu0MS.jpg",
+                image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80",
                 icon: Droplets,
                 title: "Lake Toya Serenity",
                 description:
                   "Pristine volcanic caldera lake with crystal-clear waters. Sunset boat rides, lakeside meditation, and stargazing under the midnight sun's extended twilight.",
               },
               {
-                image: "/CMkR4NSHlSM7V6A41zEug.jpg",
+                image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=80",
                 icon: Mountain,
                 title: "Mountain Onsen Retreats",
                 description:
@@ -147,7 +147,7 @@ export default function SummerSolstice2026Page() {
                   "Gentle forest trails through birch groves and wildflower meadows. Extended daylight hours mean leisurely afternoon hikes without rushing sunset.",
               },
               {
-                image: "/Jdmy3-wHyQkp-wzzeq4oA.jpg",
+                image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600&q=80",
                 icon: Sunrise,
                 title: "Sunrise Meditation",
                 description:
