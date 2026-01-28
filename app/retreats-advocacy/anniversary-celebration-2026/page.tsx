@@ -19,7 +19,7 @@ export default function AnniversaryCelebration2026Page() {
       <section
         className="relative min-h-[90vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url('/love-celebration-japan.jpg')",
+          backgroundImage: "url('/anniversary-vow-renewal.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -90,7 +90,7 @@ export default function AnniversaryCelebration2026Page() {
                 icon: Heart,
                 title: "Renewal of Vows",
                 description: "Private ceremony at historic Kyoto temple with traditional elements and professional photography.",
-                image: "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=600&q=80",
+                image: "/anniversary-vow-renewal.jpg",
               },
               {
                 icon: Utensils,
@@ -102,7 +102,7 @@ export default function AnniversaryCelebration2026Page() {
                 icon: Camera,
                 title: "Professional Photography",
                 description: "Two full days with photographer capturing your journey at iconic locations throughout Japan.",
-                image: "/02-ekYLf16--NMAgcW86O.jpg",
+                image: "/anniversary-photography.jpg",
               },
             ].map((item, i) => (
               <Card key={i} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-0 rounded-2xl bg-white">
