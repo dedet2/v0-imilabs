@@ -1,8 +1,9 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Check, Mountain, Snowflake, Sparkles, Sun, Users, Waves, Calendar, MapPin } from "lucide-react"
+import { Check, Mountain, Snowflake, Sparkles, Sun, Users, Waves, ArrowLeft } from "lucide-react"
 
 export default function WinterSolstice2027Page() {
   return (
@@ -11,13 +12,20 @@ export default function WinterSolstice2027Page() {
       <section
         className="relative min-h-[95vh] flex items-center justify-center pt-20"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(6,182,212,0.8) 50%, rgba(147,197,253,0.85) 100%), url('/japan-snow2.jpg')`,
+          backgroundImage: `linear-gradient(135deg, rgba(59,130,246,0.9) 0%, rgba(6,182,212,0.85) 50%, rgba(147,197,253,0.9) 100%), url('/japan-snow2.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <div className="inline-block px-4 py-2 bg-white/25 border-2 border-white/40 rounded-full text-sm font-bold tracking-widest uppercase mb-8 backdrop-blur-sm">
+          <Link
+            href="/retreats-advocacy"
+            className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Retreats
+          </Link>
+          <div className="inline-block px-6 py-3 bg-white/25 border-2 border-white/40 rounded-full text-sm font-bold tracking-widest uppercase mb-8 backdrop-blur-sm">
             Winter 2027 - Extended Journey
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg">
@@ -57,7 +65,7 @@ export default function WinterSolstice2027Page() {
             restore, and emerge renewed.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Snowflake,
@@ -102,16 +110,18 @@ export default function WinterSolstice2027Page() {
                 image: "/yuzu-bath-finale.jpg",
               },
             ].map((item, i) => (
-              <Card key={i} className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 overflow-hidden">
-                <div 
-                  className="h-48 bg-cover bg-center"
-                  style={{ backgroundImage: `url('${item.image}')` }}
-                />
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center -mt-10 relative z-10 border-4 border-white shadow-lg">
-                    <item.icon className="w-6 h-6 text-white" />
+              <Card
+                key={i}
+                className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 overflow-hidden"
+              >
+                <div className="relative h-60">
+                  <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
+                </div>
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <item.icon className="w-6 h-6 text-blue-600" />
+                    <h3 className="text-xl font-bold text-blue-600">{item.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-blue-600">{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
