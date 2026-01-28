@@ -7,12 +7,13 @@ import { Check, Mountain, Snowflake, Sparkles, Sun, Users, Waves, Calendar, MapP
 export default function WinterSolstice2027Page() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Winter Blue/Cyan Theme */}
+      {/* Hero Section - Winter Ice Blue Theme */}
       <section
         className="relative min-h-[95vh] flex items-center justify-center pt-20"
         style={{
-          background:
-            "linear-gradient(135deg, rgba(59,130,246,0.9) 0%, rgba(6,182,212,0.85) 50%, rgba(147,197,253,0.9) 100%)",
+          backgroundImage: `linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(6,182,212,0.8) 50%, rgba(147,197,253,0.85) 100%), url('/japan-snow2.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
@@ -63,42 +64,52 @@ export default function WinterSolstice2027Page() {
                 title: "Snow Country Immersion",
                 description:
                   "Five nights in Japan's legendary snow country. Daily onsen rituals in mountain hot springs, forest bathing through winter landscapes, and profound quiet.",
+                image: "/japan-snow-country.jpg",
               },
               {
                 icon: Mountain,
                 title: "Sacred Winter Temples",
                 description:
                   "Experience Kyoto's most sacred sites in their winter beauty. Four days exploring temples, zen gardens under snow, and traditional tea ceremonies.",
+                image: "/lights-snow.jpg",
               },
               {
                 icon: Waves,
                 title: "Daily Onsen Rituals",
                 description:
                   "Morning and evening hot spring practices throughout the journey. Experience yuzu baths on the winter solstice and private onsen time.",
+                image: "/winter-onsen-night.jpg",
               },
               {
                 icon: Sun,
                 title: "Winter Solstice Ceremony",
                 description:
                   "Celebrate December 21st with traditional yuzu bath rituals, Ichiyo Raifuku charm ceremony, and seasonal foods honoring the return of light.",
+                image: "/winter-solstice-ceremony.jpg",
               },
               {
                 icon: Sparkles,
                 title: "Winter Illuminations",
                 description:
                   "Tokyo and Kyoto transform with spectacular winter light displays. Experience the magic of Japanese winter celebrations.",
+                image: "/illuminations.jpg",
               },
               {
                 icon: Users,
                 title: "Luxury Ryokan Finale",
                 description:
                   "Two nights at a premium ryokan with private onsen, spa treatments, and gourmet kaiseki. The perfect culmination of your winter journey.",
+                image: "/yuzu-bath-finale.jpg",
               },
             ].map((item, i) => (
-              <Card key={i} className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center">
-                    <item.icon className="w-8 h-8 text-white" />
+              <Card key={i} className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 overflow-hidden">
+                <div 
+                  className="h-48 bg-cover bg-center"
+                  style={{ backgroundImage: `url('${item.image}')` }}
+                />
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center -mt-10 relative z-10 border-4 border-white shadow-lg">
+                    <item.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-blue-600">{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
