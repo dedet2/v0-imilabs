@@ -58,7 +58,7 @@ export default function CorporatePartnershipsPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+                src="/diverse-executives-networking-at-luxury-event.jpg"
                 alt="Executive Retreat Experience"
                 fill
                 className="object-cover"

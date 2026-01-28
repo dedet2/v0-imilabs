@@ -68,7 +68,7 @@ export default function ExecutiveRetreatsPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src="/luxury-retreat-venue-with-modern-accessible-design.jpg"
+                src="/diverse-executives-networking-at-luxury-event.jpg"
                 alt="Executive Retreat Venue"
                 fill
                 className="object-cover"

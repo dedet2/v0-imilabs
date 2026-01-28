@@ -10,7 +10,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
       <section
         className="relative min-h-[70vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url(https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600)",
+          backgroundImage: "url(/cOGqHCdiwvzOjN9thWnU3.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -97,7 +97,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80"
+                src="/owqCqtxXILQUpUVhJUngi.jpg"
                 alt="Diverse corporate retreat with inclusive team wellness activities"
                 fill
                 className="object-cover"
@@ -218,7 +218,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
                   "Post-retreat integration support",
                 ],
                 link: "/retreats-advocacy/executive-wellness",
-                image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+                image: "/diverse-executives-networking-at-luxury-event.jpg",
                 icon: (
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
@@ -236,7 +236,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
                   "Small intimate groups (8-12 participants)",
                 ],
                 link: "/retreats-advocacy/luxury-wellness",
-                image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400",
+                image: "/cOGqHCdiwvzOjN9thWnU3.jpg",
                 icon: (
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
@@ -254,7 +254,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
                   "Dignity-centered care",
                 ],
                 link: "/retreats-advocacy/disability-retreats",
-                image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=400&q=80",
+                image: "/serene-wellness-retreat-with-accessible-spa-facilities.jpg",
                 icon: (
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
@@ -313,7 +313,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
                 alt: "Forest bathing shinrin-yoku experience",
               },
               {
-                src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&q=80",
+                src: "/cherry-blossoms-temple2.jpg",
                 alt: "Inclusive outdoor wellness gathering with diverse participants",
               },
             ].map((photo, i) => (

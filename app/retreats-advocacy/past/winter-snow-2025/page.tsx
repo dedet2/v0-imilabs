@@ -19,7 +19,7 @@ export default function PastWinterSnow2025Page() {
       <section
         className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-16"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(102,126,234,0.85) 0%, rgba(6,182,212,0.85) 100%), url('https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=1600&q=80')`,
+          backgroundImage: `linear-gradient(135deg, rgba(102,126,234,0.85) 0%, rgba(6,182,212,0.85) 100%), url('/japan-winter.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

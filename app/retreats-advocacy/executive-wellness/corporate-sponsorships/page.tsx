@@ -42,7 +42,7 @@ export default function CorporateSponsorshipsPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+                src="/executive-team-in-strategic-planning-session.jpg"
                 alt="Corporate-sponsored inclusive retreat with diverse team members"
                 fill
                 className="object-cover"

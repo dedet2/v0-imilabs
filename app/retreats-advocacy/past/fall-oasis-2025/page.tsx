@@ -19,7 +19,7 @@ export default function PastFallOasis2025Page() {
       <section
         className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-16"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(234,88,12,0.85) 0%, rgba(245,158,11,0.85) 100%), url('https://images.unsplash.com/photo-1528164344705-47542687000d?w=1600&q=80')`,
+          backgroundImage: `linear-gradient(135deg, rgba(234,88,12,0.85) 0%, rgba(245,158,11,0.85) 100%), url('/fall-oasis-fuji.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

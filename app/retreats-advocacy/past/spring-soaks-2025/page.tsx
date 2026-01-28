@@ -19,7 +19,7 @@ export default function PastSpringSoaks2025Page() {
       <section
         className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-16"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(102,126,234,0.85) 0%, rgba(240,147,251,0.85) 100%), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600&q=80')`,
+          backgroundImage: `linear-gradient(135deg, rgba(102,126,234,0.85) 0%, rgba(240,147,251,0.85) 100%), url('/spring-onsen.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

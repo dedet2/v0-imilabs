@@ -260,7 +260,7 @@ export default function RaRBrandHubPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-xl overflow-hidden bg-gray-200">
               <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800"
+                src="/wadi-rum-valley-of-sand-jordan.jpg"
                 alt="Dr. Dédé Tetsubayashi"
                 fill
                 className="object-cover"
