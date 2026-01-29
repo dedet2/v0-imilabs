@@ -1,3 +1,13 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Cherry Blossom Retreat 2026 | Rest as Resistance Japan",
+  description: "Experience the transformative Cherry Blossom Edition retreat in Japan. March 30 - April 9, 2026 in Tokyo, Kamakura, and Kyoto. Luxury wellness retreat for Black women.",
+  alternates: {
+    canonical: "https://dr-dede.com/dr-dede/retreats/wellness/cherry-blossom-2026",
+  },
+}
+
 export default function CherryBlossomPage() {
   return (
     <div className="min-h-screen bg-[#fdfcfb]">

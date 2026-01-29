@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Calendar, Clock, User } from "lucide-react"
+import { Calendar, Clock, User } from "lucide-react"
 import Image from "next/image"
+import { NewsletterForm } from "@/components/newsletter-form"
 
 export const metadata: Metadata = {
   title: "Blog | Dr. Dédé & incluu",
@@ -199,12 +199,13 @@ export default function BlogPage() {
                 <p className="text-foreground/70 mb-6 leading-relaxed">
                   Subscribe to receive the latest insights on AI governance, tech equity, and inclusive innovation delivered to your inbox.
                 </p>
-                <Button asChild className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500">
-                  <Link href="/contact">
-                    Subscribe to Newsletter
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                <NewsletterForm 
+                  source="blog" 
+                  variant="default" 
+                  buttonText="Subscribe"
+                  placeholder="Enter your email"
+                  className="max-w-md mx-auto"
+                />
               </div>
             </div>
           </div>

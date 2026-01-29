@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS public.leads (
   first_name TEXT,
   last_name TEXT,
   company TEXT,
-  source TEXT NOT NULL DEFAULT 'newsletter', -- 'newsletter', 'roi-calculator', 'contact', 'retreat'
+  source TEXT NOT NULL DEFAULT 'newsletter', -- 'newsletter', 'roi-calculator', 'contact', 'retreat', 'footer', 'blog', 'resources'
+  interests TEXT[], -- Array of interest areas
   metadata JSONB DEFAULT '{}',
   subscribed_to_newsletter BOOLEAN DEFAULT true,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),

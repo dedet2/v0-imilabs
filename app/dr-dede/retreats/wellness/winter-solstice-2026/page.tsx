@@ -1,3 +1,13 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Winter Solstice Retreat 2026 | Rest as Resistance Japan",
+  description: "Embrace the stillness with our Winter Solstice retreat in Japan's snow country. December 2026. Luxury wellness retreat featuring hot springs and winter illuminations.",
+  alternates: {
+    canonical: "https://dr-dede.com/dr-dede/retreats/wellness/winter-solstice-2026",
+  },
+}
+
 export default function WinterSolsticePage() {
   return (
     <div className="min-h-screen bg-[#fafafa]">

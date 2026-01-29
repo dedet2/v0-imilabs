@@ -2,12 +2,29 @@
 
 import Link from "next/link"
 import { Linkedin, Twitter, Youtube, Mail, Instagram, Facebook } from "@/components/icons"
+import { NewsletterForm } from "@/components/newsletter-form"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white border-t border-gray-700 mt-20">
+      {/* Newsletter Section */}
+      <div className="border-b border-gray-700">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="max-w-2xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-3">Stay Updated</h3>
+            <p className="text-gray-300 mb-6">Get the latest insights on AI governance, tech equity, and inclusive innovation delivered to your inbox.</p>
+            <NewsletterForm 
+              source="footer" 
+              variant="footer" 
+              buttonText="Subscribe"
+              placeholder="Enter your email"
+            />
+          </div>
+        </div>
+      </div>
+      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
@@ -187,10 +204,10 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">© {currentYear} Dr. Dédé Tetsubayashi. All rights reserved.</p>
             <div className="flex gap-6 text-sm text-gray-400">
-              <Link href="/resources/privacy" className="hover:text-blue-400 transition-colors duration-200">
+              <Link href="/resources/privacy-policy" className="hover:text-blue-400 transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link href="/resources/terms" className="hover:text-blue-400 transition-colors duration-200">
+              <Link href="/resources/terms-of-service" className="hover:text-blue-400 transition-colors duration-200">
                 Terms of Service
               </Link>
               <Link href="/accessibility" className="hover:text-blue-400 transition-colors duration-200">
