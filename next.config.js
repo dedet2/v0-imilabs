@@ -101,9 +101,6 @@ const nextConfig = {
       { source: "/dr-dede/retreats/executive", destination: "/retreats-advocacy/executive-wellness", permanent: true },
       { source: "/dr-dede/retreats/advocacy", destination: "/retreats-advocacy/disability-retreats", permanent: true },
 
-      // Catch-all for any remaining /dr-dede/ paths
-      { source: "/dr-dede/:path*", destination: "/:path*", permanent: true },
-      { source: "/incluu/:path*", destination: "/:path*", permanent: true },
     ]
   },
   images: {

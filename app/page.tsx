@@ -86,7 +86,7 @@ export default function Page() {
                     variant="outline"
                     className="border-2 border-white/40 text-white hover:bg-white/20 bg-white/5 font-semibold text-base backdrop-blur-sm shadow-xl"
                   >
-                    <Link href="/dr-dede">Explore Services</Link>
+                    <Link href="/dr-dede#services">Explore Services</Link>
                   </Button>
                 </div>
               </div>
