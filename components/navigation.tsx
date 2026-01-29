@@ -91,6 +91,7 @@ export function Navigation() {
             >
               <Link
                 href="/incluu"
+                onClick={closeAllDesktopDropdowns}
                 className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent hover:from-violet-700 hover:to-cyan-500 transition-all flex items-center gap-1"
               >
                 incluu
@@ -144,6 +145,7 @@ export function Navigation() {
             >
               <Link
                 href="/dr-dede"
+                onClick={closeAllDesktopDropdowns}
                 className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent hover:from-violet-700 hover:to-cyan-500 transition-all flex items-center gap-1"
               >
                 Dr. Dédé
@@ -416,12 +418,18 @@ export function Navigation() {
                   <Link
                     href="/incluu"
                     className="flex-1 text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent py-2 px-4"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setMobileMenuOpen(false)
+                    }}
                   >
                     incluu
                   </Link>
                   <button
-                    onClick={() => toggleMobileDropdown("incluu")}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      toggleMobileDropdown("incluu")
+                    }}
                     className="p-2 text-foreground/80 hover:text-foreground"
                   >
                     <ChevronDown
@@ -462,12 +470,18 @@ export function Navigation() {
                   <Link
                     href="/dr-dede"
                     className="flex-1 text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent py-2 px-4"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setMobileMenuOpen(false)
+                    }}
                   >
                     Dr. Dédé
                   </Link>
                   <button
-                    onClick={() => toggleMobileDropdown("drDede")}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      toggleMobileDropdown("drDede")
+                    }}
                     className="p-2 text-foreground/80 hover:text-foreground"
                   >
                     <ChevronDown
@@ -637,12 +651,18 @@ export function Navigation() {
                   <Link
                     href="/resources"
                     className="flex-1 text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent py-2 px-4"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setMobileMenuOpen(false)
+                    }}
                   >
                     Resources
                   </Link>
                   <button
-                    onClick={() => toggleMobileDropdown("resources")}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      toggleMobileDropdown("resources")
+                    }}
                     className="p-2 text-foreground/80 hover:text-foreground"
                   >
                     <ChevronDown

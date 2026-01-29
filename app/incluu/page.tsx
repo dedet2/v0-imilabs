@@ -84,7 +84,7 @@ export default function IncluuPage() {
                 variant="outline"
                 className="border-white text-white hover:bg-white/10 bg-white/5 backdrop-blur-sm"
               >
-                <Link href="#services">Explore Services</Link>
+                <Link href="/incluu#services">Explore Services</Link>
               </Button>
             </div>
           </div>

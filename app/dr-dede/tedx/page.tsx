@@ -2,8 +2,10 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { CheckCircle2, Youtube, MessageCircle } from "lucide-react"
+import { CheckCircle2, Youtube, MessageCircle } from "@/components/icons"
 import { StructuredData } from "@/components/structured-data"
+
+// TEDx Talk Page for Dr. Dédé
 
 export const metadata: Metadata = {
   title: "Watch Dr. Dédé's TEDx Talk | You've Been Coded Out",
