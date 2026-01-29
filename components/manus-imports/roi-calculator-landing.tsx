@@ -91,8 +91,8 @@ export default function ROICalculatorLanding() {
 
         {/* Feature Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {/* Card 1 */}
-          <div className="bg-purple-600/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-8 text-center">
+          {/* Card 1 - Light lavender/purple with subtle border */}
+          <div className="bg-purple-400/30 backdrop-blur-sm border border-purple-300/40 rounded-2xl p-8 text-center">
             <div className="flex justify-center mb-4">
               <Clock className="w-12 h-12 text-white" />
             </div>
@@ -100,17 +100,17 @@ export default function ROICalculatorLanding() {
             <p className="text-purple-100">Automate repetitive tasks</p>
           </div>
 
-          {/* Card 2 */}
-          <div className="bg-cyan-500/50 backdrop-blur-sm border border-cyan-300/30 rounded-2xl p-8 text-center">
+          {/* Card 2 - Solid teal/cyan */}
+          <div className="bg-cyan-500 backdrop-blur-sm border border-cyan-400/50 rounded-2xl p-8 text-center">
             <div className="flex justify-center mb-4">
               <DollarSign className="w-12 h-12 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Reduce Costs by 40%</h3>
-            <p className="text-white">Optimize operations</p>
+            <p className="text-cyan-50">Optimize operations</p>
           </div>
 
-          {/* Card 3 */}
-          <div className="bg-purple-600/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-8 text-center">
+          {/* Card 3 - Purple to cyan gradient */}
+          <div className="bg-gradient-to-r from-purple-500/60 to-cyan-500/60 backdrop-blur-sm border border-purple-300/30 rounded-2xl p-8 text-center">
             <div className="flex justify-center mb-4">
               <TrendingUp className="w-12 h-12 text-white" />
             </div>
