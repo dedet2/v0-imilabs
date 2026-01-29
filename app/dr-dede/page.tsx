@@ -257,7 +257,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-white">
+      <section id="services" className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-cyan-100 text-cyan-700 border-cyan-200" variant="outline">
