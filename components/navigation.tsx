@@ -91,6 +91,7 @@ export function Navigation() {
             >
               <Link
                 href="/incluu"
+                onClick={closeAllDesktopDropdowns}
                 className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent hover:from-violet-700 hover:to-cyan-500 transition-all flex items-center gap-1"
               >
                 incluu
@@ -144,6 +145,7 @@ export function Navigation() {
             >
               <Link
                 href="/dr-dede"
+                onClick={closeAllDesktopDropdowns}
                 className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent hover:from-violet-700 hover:to-cyan-500 transition-all flex items-center gap-1"
               >
                 Dr. Dédé

@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card"
 import { CheckCircle2, Youtube, MessageCircle } from "@/components/icons"
 import { StructuredData } from "@/components/structured-data"
 
+// TEDx Talk Page for Dr. Dédé
+
 export const metadata: Metadata = {
   title: "Watch Dr. Dédé's TEDx Talk | You've Been Coded Out",
   description:
