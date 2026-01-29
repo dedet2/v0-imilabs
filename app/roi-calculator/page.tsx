@@ -1,14 +1,5 @@
-"use client"
+import ROICalculatorLanding from "@/components/manus-imports/roi-calculator-landing"
 
-export default function ROICalculatorEmbedPage() {
-  return (
-    <div className="min-h-screen w-full">
-      <iframe
-        src="https://pmukyznd.manus.space/"
-        className="w-full h-screen border-0"
-        title="ROI Calculator"
-        allow="fullscreen"
-      />
-    </div>
-  )
+export default function ROICalculatorPage() {
+  return <ROICalculatorLanding />
 }
