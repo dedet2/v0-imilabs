@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import { Clock, DollarSign, TrendingUp, Calculator, Mail, Sparkles, Check, Star, ShieldCheck } from "lucide-react"
 
 export default function ROICalculatorLanding() {
   const router = useRouter()
@@ -69,7 +70,7 @@ export default function ROICalculatorLanding() {
         {/* Badge */}
         <div className="flex justify-center mb-8">
           <div className="bg-gradient-to-r from-purple-500 to-cyan-400 text-white px-6 py-2 rounded-full inline-flex items-center">
-            <span className="mr-2">✨</span>
+            <Sparkles className="w-5 h-5 mr-2" />
             <span>Free Business Assessment Tool</span>
           </div>
         </div>
@@ -92,21 +93,27 @@ export default function ROICalculatorLanding() {
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {/* Card 1 */}
           <div className="bg-purple-600/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-8 text-center">
-            <div className="text-4xl mb-4">⏰</div>
+            <div className="flex justify-center mb-4">
+              <Clock className="w-12 h-12 text-white" />
+            </div>
             <h3 className="text-2xl font-bold text-white mb-2">Save 20+ Hours/Week</h3>
             <p className="text-purple-100">Automate repetitive tasks</p>
           </div>
 
           {/* Card 2 */}
           <div className="bg-cyan-500/50 backdrop-blur-sm border border-cyan-300/30 rounded-2xl p-8 text-center">
-            <div className="text-4xl mb-4">💲</div>
+            <div className="flex justify-center mb-4">
+              <DollarSign className="w-12 h-12 text-white" />
+            </div>
             <h3 className="text-2xl font-bold text-white mb-2">Reduce Costs by 40%</h3>
             <p className="text-white">Optimize operations</p>
           </div>
 
           {/* Card 3 */}
           <div className="bg-purple-600/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-8 text-center">
-            <div className="text-4xl mb-4">📈</div>
+            <div className="flex justify-center mb-4">
+              <TrendingUp className="w-12 h-12 text-white" />
+            </div>
             <h3 className="text-2xl font-bold text-white mb-2">Boost Revenue 25%</h3>
             <p className="text-purple-100">Focus on growth activities</p>
           </div>
@@ -116,7 +123,7 @@ export default function ROICalculatorLanding() {
         <div className="max-w-2xl mx-auto bg-white rounded-3xl p-8 shadow-2xl">
           <div className="text-center mb-6">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-400 rounded-full mb-4">
-              <span className="text-3xl">🧮</span>
+              <Calculator className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-3xl font-bold text-purple-600 mb-2">Get Your Free ROI Calculator</h2>
             <p className="text-gray-600">Enter your details below to access your personalized business ROI assessment</p>
@@ -124,7 +131,11 @@ export default function ROICalculatorLanding() {
 
           {success ? (
             <div className="text-center py-8">
-              <div className="text-5xl mb-4">🎉</div>
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                  <ShieldCheck className="w-10 h-10 text-green-600" />
+                </div>
+              </div>
               <h3 className="text-2xl font-bold text-green-600 mb-2">Success!</h3>
               <p className="text-gray-600">Redirecting you to the ROI Calculator...</p>
             </div>
@@ -177,7 +188,7 @@ export default function ROICalculatorLanding() {
                   </>
                 ) : (
                   <>
-                    <span className="mr-2">📧</span>
+                    <Mail className="w-5 h-5 mr-2" />
                     Send Me the Calculator
                   </>
                 )}
@@ -186,7 +197,7 @@ export default function ROICalculatorLanding() {
           )}
 
           <p className="text-center text-gray-500 text-sm mt-4 flex items-center justify-center">
-            <span className="mr-2">✓</span>
+            <Check className="w-4 h-4 mr-2 text-green-500" />
             We respect your privacy. No spam, unsubscribe anytime.
           </p>
 
@@ -195,19 +206,19 @@ export default function ROICalculatorLanding() {
             <h4 className="font-bold text-gray-800 mb-4">What You'll Get:</h4>
             <div className="grid md:grid-cols-2 gap-3">
               <div className="flex items-center text-gray-700">
-                <span className="text-green-500 mr-2">✓</span>
+                <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                 Instant access to ROI calculator
               </div>
               <div className="flex items-center text-gray-700">
-                <span className="text-green-500 mr-2">✓</span>
+                <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                 Personalized savings report
               </div>
               <div className="flex items-center text-gray-700">
-                <span className="text-green-500 mr-2">✓</span>
+                <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                 AI Implementation Roadmap
               </div>
               <div className="flex items-center text-gray-700">
-                <span className="text-green-500 mr-2">✓</span>
+                <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                 Exclusive business insights
               </div>
             </div>
@@ -223,9 +234,7 @@ export default function ROICalculatorLanding() {
             <div className="bg-white rounded-2xl p-6">
               <div className="flex mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">
-                    ⭐
-                  </span>
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
               <p className="text-gray-700 mb-4">
@@ -242,9 +251,7 @@ export default function ROICalculatorLanding() {
             <div className="bg-white rounded-2xl p-6">
               <div className="flex mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">
-                    ⭐
-                  </span>
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
               <p className="text-gray-700 mb-4">
@@ -261,9 +268,7 @@ export default function ROICalculatorLanding() {
             <div className="bg-white rounded-2xl p-6">
               <div className="flex mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">
-                    ⭐
-                  </span>
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
               <p className="text-gray-700 mb-4">
