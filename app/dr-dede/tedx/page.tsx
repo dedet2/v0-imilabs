@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     title: "Watch Dr. Dédé's TEDx Talk | You've Been Coded Out",
     description: "Discover how to build compliant, high-performing AI systems that work for all.",
   },
+  alternates: {
+    canonical: "https://dr-dede.com/dr-dede/tedx",
+  },
 }
 
 export default function TEDxPage() {
@@ -31,14 +34,15 @@ export default function TEDxPage() {
 
       <main className="min-h-screen pt-16">
         {/* Hero Section */}
-        <section className="relative py-20 sm:py-32">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 sm:py-32 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4] text-white overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.15),transparent_60%)]" />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6 drop-shadow-lg">
                 Dr. Dédé's <span className="text-[#FF2B06]">TED</span>
-                <span className="text-foreground">x</span> Talk
+                <span className="text-white">x</span> Talk
               </h1>
-              <p className="text-xl sm:text-2xl text-foreground/80 text-balance mb-8 italic">
+              <p className="text-xl sm:text-2xl text-white/95 text-balance mb-8 italic drop-shadow leading-relaxed">
                 "You've Been Coded Out: How To Make AI Work For All"
               </p>
             </div>
@@ -132,7 +136,7 @@ export default function TEDxPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent mb-6">
-                Help me reach 10,000 Subscribers!
+                Help me reach 10,000 Views!
               </h2>
               <p className="text-xl text-foreground mb-4">
                 Right now, there's a real-time counter tracking our collective impact. Every subscriber helps amplify this work. Let's hit 10k together and send a message:

@@ -8,6 +8,8 @@ import { Label } from "@/components/ui/label"
 import { Slider } from "@/components/ui/slider"
 import { Calculator, TrendingUp, DollarSign, Users, Shield } from "lucide-react"
 
+// Note: Metadata must be in a separate layout.tsx for client components
+
 export default function ROICalculatorPage() {
   const [employees, setEmployees] = useState(100)
   const [revenue, setRevenue] = useState(10000000)

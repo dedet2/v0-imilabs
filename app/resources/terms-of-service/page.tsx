@@ -4,6 +4,9 @@ import { Scale, FileCheck, Shield, AlertCircle, Gavel, Users } from "@/component
 export const metadata: Metadata = {
   title: "Terms of Service | Dr. Dédé & incluu",
   description: "Terms of service for Dr. Dédé Tetsubayashi and incluu services.",
+  alternates: {
+    canonical: "https://dr-dede.com/resources/terms-of-service",
+  },
 }
 
 export default function TermsPage() {

@@ -1,7 +1,17 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "Rest as Resistance Retreats | Luxury Wellness in Japan",
+  description:
+    "Experience transformative luxury wellness retreats in Japan. Rest as Resistance retreats for Black women and allies featuring onsen, meditation, and cultural immersion.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy",
+  },
+}
 
 export default function RetreatsAdvocacyHubComprehensive() {
   return (

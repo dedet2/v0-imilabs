@@ -4,6 +4,9 @@ import { Shield, Lock, Eye, FileText, UserCheck, Globe } from "@/components/icon
 export const metadata: Metadata = {
   title: "Privacy Policy | Dr. Dédé & incluu",
   description: "Privacy policy for Dr. Dédé Tetsubayashi and incluu services.",
+  alternates: {
+    canonical: "https://dr-dede.com/resources/privacy-policy",
+  },
 }
 
 export default function PrivacyPage() {

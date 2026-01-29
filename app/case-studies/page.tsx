@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Case Studies | incluu - Real-World AI Governance Impact",
   description:
     "Discover how incluu has helped organizations save $200M+ in compliance costs and unlock $500M+ in new markets through AI governance and tech equity.",
+  alternates: {
+    canonical: "https://dr-dede.com/case-studies",
+  },
 }
 
 export default function CaseStudiesPage() {

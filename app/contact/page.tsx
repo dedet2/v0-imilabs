@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     title: "Contact Dr. Dédé | Schedule Consultation",
     description: "Get in touch for AI governance consulting, speaking engagements, or luxury retreats",
   },
+  alternates: {
+    canonical: "https://dr-dede.com/contact",
+  },
 }
 
 export default function ContactPage() {

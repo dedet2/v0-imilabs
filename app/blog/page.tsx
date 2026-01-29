@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     title: "Blog | Dr. Dédé & incluu",
     description: "Insights on AI governance, tech equity, disability advocacy, and inclusive innovation.",
   },
+  alternates: {
+    canonical: "https://dr-dede.com/blog",
+  },
 }
 
 const blogPosts = [

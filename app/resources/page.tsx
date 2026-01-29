@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: "Resources | Dr. Dédé Tetsubayashi",
   description:
     "Access whitepapers, case studies, TEDx talks, tools, and resources on AI governance, tech equity, and disability advocacy.",
+  alternates: {
+    canonical: "https://dr-dede.com/resources",
+  },
   openGraph: {
     title: "Resources | Dr. Dédé Tetsubayashi",
     description: "Comprehensive resources on AI governance, tech equity, and inclusive innovation",

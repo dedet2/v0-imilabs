@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Book Dr. Dédé for Speaking & Events | TEDx Speaker",
   description:
     "Book Dr. Dédé Tetsubayashi for keynotes, panels, and workshops on AI governance, tech equity, and disability advocacy. TEDx speaker with proven impact.",
+  alternates: {
+    canonical: "https://dr-dede.com/speaking-events",
+  },
 }
 
 export default function SpeakingPage() {
@@ -25,7 +28,7 @@ export default function SpeakingPage() {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/95 via-purple-500/95 to-cyan-400/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/70 via-purple-500/70 to-cyan-400/70" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.15),transparent_60%)]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

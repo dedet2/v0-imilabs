@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     title: "Dr. Dédé Tetsubayashi | AI Governance Expert & TEDx Speaker",
     description: "AI Governance Expert, Disability Advocate, and TEDx Speaker",
   },
+  alternates: {
+    canonical: "https://dr-dede.com/dr-dede",
+  },
 }
 
 export default function Page() {

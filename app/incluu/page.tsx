@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     title: "incluu | Expert AI Governance & Tech Equity Solutions",
     description: "Strategic AI governance consulting and tech equity solutions",
   },
+  alternates: {
+    canonical: "https://dr-dede.com/incluu",
+  },
 }
 
 export default function IncluuPage() {
