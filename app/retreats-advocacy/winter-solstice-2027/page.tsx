@@ -1,9 +1,18 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check, Mountain, Snowflake, Sparkles, Sun, Users, Waves, ArrowLeft } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Winter Solstice 2027: The Complete Journey | Rest as Resistance",
+  description: "Experience our most immersive winter retreat: 16 transformative days in Japan. December 13-28, 2027 featuring Tokyo, snow country, Kyoto, and premium ryokan. From $20,500.",
+  alternates: {
+    canonical: "https://dr-dede.com/retreats-advocacy/winter-solstice-2027",
+  },
+}
 
 export default function WinterSolstice2027Page() {
   return (
@@ -53,7 +62,7 @@ export default function WinterSolstice2027Page() {
           <p className="text-lg font-medium mb-8">December 13-28, 2027 | Tokyo · Snow Country · Kyoto · Premium Ryokan</p>
           <Link href="/contact">
             <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide">
-              Apply Now - From $20,500
+              Reserve Now - From $20,500
             </Button>
           </Link>
           <p className="text-sm mt-4 opacity-90">Early Bird Pricing Available Through March 2027</p>
@@ -492,7 +501,7 @@ export default function WinterSolstice2027Page() {
               <div className="text-center pt-6">
                 <Link href="/contact">
                   <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide">
-                    Apply Now
+                    Reserve Now
                   </Button>
                 </Link>
                 <p className="text-sm text-gray-600 mt-4">

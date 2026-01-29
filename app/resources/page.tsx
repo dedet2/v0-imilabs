@@ -3,10 +3,10 @@ import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { ResourceGateModal } from "@/components/resource-gate-modal"
 import { ResourcePreviewModal } from "@/components/resource-preview-modal"
 import { SamplePDFPreview } from "@/components/sample-pdf-preview"
+import { NewsletterForm } from "@/components/newsletter-form"
 import {
   BookOpen,
   FileText,
@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: "Resources | Dr. Dédé Tetsubayashi",
   description:
     "Access whitepapers, case studies, TEDx talks, tools, and resources on AI governance, tech equity, and disability advocacy.",
+  alternates: {
+    canonical: "https://dr-dede.com/resources",
+  },
   openGraph: {
     title: "Resources | Dr. Dédé Tetsubayashi",
     description: "Comprehensive resources on AI governance, tech equity, and inclusive innovation",
@@ -1277,14 +1280,13 @@ export default function ResourcesPage() {
                   Join our newsletter to receive exclusive insights, case studies, and implementation frameworks
                   delivered monthly.
                 </p>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent"
-                >
-                  <Link href="/contact">Subscribe to Newsletter</Link>
-                </Button>
+                <NewsletterForm 
+                  source="resources" 
+                  variant="default" 
+                  buttonText="Subscribe"
+                  placeholder="Enter your email"
+                  className="max-w-md mx-auto"
+                />
               </CardContent>
             </Card>
           </div>
@@ -1341,7 +1343,7 @@ export default function ResourcesPage() {
               </form>
               <p className="text-xs text-muted-foreground">
                 No spam. Unsubscribe anytime. Read our{" "}
-                <Link href="/privacy" className="underline hover:text-foreground">
+                <Link href="/resources/privacy-policy" className="underline hover:text-foreground">
                   privacy policy
                 </Link>
                 .

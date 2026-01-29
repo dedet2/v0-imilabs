@@ -1,3 +1,13 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Summer Solstice Retreat 2026 | Rest as Resistance Japan",
+  description: "Celebrate the longest day with our Summer Solstice retreat in Hokkaido, Japan. June 20-27, 2026. Luxury wellness retreat for Black women featuring onsen and nature immersion.",
+  alternates: {
+    canonical: "https://dr-dede.com/dr-dede/retreats/wellness/summer-solstice-2026",
+  },
+}
+
 export default function SummerSolsticePage() {
   return (
     <div className="min-h-screen bg-[#fdfcfb]">

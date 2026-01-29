@@ -266,7 +266,7 @@ export default function AdvocacyRetreatsPage() {
             </p>
             <Button asChild size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100">
               <Link href="/contact">
-                Learn More & Apply
+                Learn More & Inquire
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

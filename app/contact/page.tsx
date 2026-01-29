@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     title: "Contact Dr. Dédé | Schedule Consultation",
     description: "Get in touch for AI governance consulting, speaking engagements, or luxury retreats",
   },
+  alternates: {
+    canonical: "https://dr-dede.com/contact",
+  },
 }
 
 export default function ContactPage() {
@@ -48,10 +51,10 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium text-sm">Email</p>
                       <a
-                        href="mailto:contact@drdede.com"
+                        href="mailto:info@dr-dede.com"
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
-                        contact@drdede.com
+                        info@dr-dede.com
                       </a>
                     </div>
                   </div>
@@ -59,13 +62,10 @@ export default function ContactPage() {
                   <div className="flex items-start gap-3">
                     <Phone className="h-5 w-5 text-cyan-600 mt-0.5 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-sm">Phone</p>
-                      <a
-                        href="tel:+1234567890"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        +1 (234) 567-8900
-                      </a>
+                      <p className="font-medium text-sm">Virtual Meetings</p>
+                      <span className="text-sm text-muted-foreground">
+                        Zoom / Google Meets
+                      </span>
                     </div>
                   </div>
 
