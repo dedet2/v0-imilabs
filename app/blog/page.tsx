@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { NewsletterForm } from "@/components/newsletter-form"
-import { blogPosts, getAllCategories } from "@/lib/blog-data"
+import { blogPosts } from "@/lib/blog-data"
 
 export const metadata: Metadata = {
   title: "Blog | Dr. Dédé & incluu",
@@ -19,8 +19,6 @@ export const metadata: Metadata = {
     canonical: "https://dr-dede.com/blog",
   },
 }
-
-const categories = getAllCategories()
 
 export default function BlogPage() {
   return (
