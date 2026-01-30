@@ -148,7 +148,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     date: "April 19, 2024",
     readTime: "6 min read",
-    image: "/diverse-tech-team-collaborating-in-modern-office.jpg",
+    image: "/blog/christina-wocintechchat-com-rmweulmcyxm-unsplash-1024x684-281-29.jpg",
     slug: "ethical-ai-and-smart-lock-systems",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -166,7 +166,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 18, 2024",
     readTime: "8 min read",
-    image: "/diverse-team-collaborating-on-inclusive-technology.jpg",
+    image: "/blog/adversarial-clothing.png",
     slug: "pitfalls-of-adversarial-clothing",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -184,7 +184,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     date: "April 18, 2024",
     readTime: "7 min read",
-    image: "/futuristic-office-with-ai-technology-and-diverse-w.jpg",
+    image: "/blog/amol-tyagi-0juktkotkpu-unsplash-1638x2048.jpg",
     slug: "facial-recognition-and-racial-bias",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -202,7 +202,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 7, 2024",
     readTime: "6 min read",
-    image: "/diverse-team-celebrating-inclusive-product-launch.jpg",
+    image: "/blog/blog-post-image-template.png",
     slug: "digital-blackface-are-you-complicit",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -220,7 +220,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 6, 2024",
     readTime: "6 min read",
-    image: "/executive-team-reviewing-compliance-dashboard.jpg",
+    image: "/blog/good_cheap_fast-2.png",
     slug: "what-is-liberatory-design",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -238,7 +238,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 5, 2024",
     readTime: "7 min read",
-    image: "/diverse-group-of-advocates-collaborating-in-accessible.jpg",
+    image: "/blog/ariel-sion-i7v-btpnktg-unsplash-2048x1365.jpg",
     slug: "importance-intersectionality-in-tech",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -256,7 +256,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 4, 2024",
     readTime: "7 min read",
-    image: "/professional-headshot-of-african-american-woman-te.jpg",
+    image: "/blog/0ha5_gjflj6n_okrx.jpeg",
     slug: "equal-pay-caregiving-covid19-inequities",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -274,7 +274,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 4, 2024",
     readTime: "5 min read",
-    image: "/african-american-woman-in-colorful-patterned-blaze.jpg",
+    image: "/blog/1lhfbfkk64woxkzqw9fddig.jpeg",
     slug: "black-woman-hypervisible-or-unseen",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -292,7 +292,7 @@ export const blogPosts: BlogPost[] = [
     category: "Business Impact",
     date: "April 3, 2024",
     readTime: "9 min read",
-    image: "/executive-leadership-workshop-with-diverse-busines.jpg",
+    image: "/blog/good_cheap_fast-2.png",
     slug: "5-things-holding-organizations-back-transformative-change",
     author: "Destiny Fox Kanno",
     content: [
@@ -309,7 +309,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 2, 2024",
     readTime: "6 min read",
-    image: "/modern-corporate-office-with-diverse-team-working-on-ai-governance.jpg",
+    image: "/blog/blog-post-image-template.png",
     slug: "divisive-fallacy-objective-truth",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -326,7 +326,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 1, 2024",
     readTime: "4 min read",
-    image: "/community-gathering-of-disability-advocates-celebr.jpg",
+    image: "/blog/blog-post-image-template.png",
     slug: "stand-in-unity-asian-allies",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -343,7 +343,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 7, 2024",
     readTime: "7 min read",
-    image: "/diverse-disability-advocates-in-workshop-discussio.jpg",
+    image: "/blog/ariel-sion-i7v-btpnktg-unsplash-2048x1365.jpg",
     slug: "what-is-intersectionality-why-important",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -360,7 +360,7 @@ export const blogPosts: BlogPost[] = [
     category: "Wellness",
     date: "March 6, 2024",
     readTime: "6 min read",
-    image: "/accessible-luxury-spa-wellness-retreat-with-inclus.jpg",
+    image: "/blog/blog-post-image-template.png",
     slug: "racism-and-wellness-industry",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -377,7 +377,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     date: "March 5, 2024",
     readTime: "8 min read",
-    image: "/healthcare-technology-with-diverse-patients-and-me.jpg",
+    image: "/blog/blog-post-image-template.png",
     slug: "race-norming-and-bioethics",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -394,7 +394,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 4, 2024",
     readTime: "7 min read",
-    image: "/dr-dede-incluu-headshot.jpg",
+    image: "/blog/1517500824426.jpg",
     slug: "black-excellence-low-expectations-white-supremacy",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -412,7 +412,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 3, 2024",
     readTime: "5 min read",
-    image: "/black-women-friends-circle.jpg",
+    image: "/blog/blog-post-image-template.png",
     slug: "spirit-of-juneteenth-acknowledgement",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -429,7 +429,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     date: "March 2, 2024",
     readTime: "7 min read",
-    image: "/tedx-stage-with-speaker-dr--dede-in-colorful-outfi.jpg",
+    image: "/blog/blog-post-image-template.png",
     slug: "60-minutes-encoded-bias",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -446,7 +446,7 @@ export const blogPosts: BlogPost[] = [
     category: "Wellness",
     date: "March 1, 2024",
     readTime: "8 min read",
-    image: "/professional-black-woman-dr-dede-smiling-portrait.jpg",
+    image: "/blog/0ha5_gjflj6n_okrx.jpeg",
     slug: "from-invisibility-to-radical-empathy",
     author: "Dr. Dédé Tetsubayashi",
     content: [
