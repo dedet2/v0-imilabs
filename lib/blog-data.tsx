@@ -423,8 +423,8 @@ export const blogPosts: BlogPost[] = [
     slug: "black-excellence-low-expectations-white-supremacy",
     author: "Dr. Dédé Tetsubayashi",
     content: [
-      "Black people are plagued by hypocrite Syndrome, undermining their own competency and self-worth. "Name someone/something to, in flying been observed My when people heart out Believing that other folks observe that we can do better, we do better.",
-      "We'll Mississippians, first, United in the wake of George Floyd's murder, companies these a hunger to do better, requiring a review of how those actions relate to anti-racism systems across businesses. They revealed that while those words included employees are often preferred option they are on the lookout for perfection.",
+      "Black people are plagued by Imposter Syndrome, undermining their own competency and self-worth. Believing that other folks observe that we can do better, we push ourselves harder.",
+      "In the wake of George Floyd's murder, companies expressed a hunger to do better, requiring a review of how those actions relate to anti-racism systems across businesses. They revealed that while diverse employees are often the preferred option, they are constantly under scrutiny.",
       "The pressure to perform perfectly—to represent the entire race with every action—is a burden unique to those operating in spaces where they are underrepresented. Black professionals often feel they cannot simply be good at their jobs; they must be exceptional.",
       "This demand for excellence is not a sign of respect—it is a symptom of white supremacy. It says that Black people must work twice as hard for half the recognition, that our presence in professional spaces is conditional on outperforming our white peers.",
       "Meanwhile, mediocre performance from white employees is often accepted, excused, or attributed to external factors. The same grace is rarely extended to Black employees, whose failures are seen as confirmation of racial stereotypes.",
