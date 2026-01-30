@@ -308,7 +308,7 @@ export const blogPosts: BlogPost[] = [
     slug: "5-things-holding-organizations-back-transformative-change",
     author: "Dr. Dédé Tetsubayashi",
     content: [
-      "At Incluu, LLC, we create more space for life. To some, this concept may sound dreamy, ambitious, and a little "woo-woo". It isn't. Our work is rooted in evidence-based theory and deep systems thinking. We partner with organizations to become radically equitable from the inside out.",
+      "At Incluu, LLC, we create more space for life. To some, this concept may sound dreamy, ambitious, and a little 'woo-woo'. It isn't. Our work is rooted in evidence-based theory and deep systems thinking. We partner with organizations to become radically equitable from the inside out.",
       "After years of this work, we've identified five common barriers that hold organizations back from achieving the transformative change they say they want. Organizations often approach DEI with the expectation that they can have fast, cheap, and high-quality outcomes. They want to check a box.",
       "The first barrier: treating DEI as a program rather than a practice. Organizations hire a diversity officer, launch a training, and consider the work done. But DEI is not a destination—it's an ongoing commitment that must be woven into every aspect of organizational culture.",
       "Second: lack of accountability at the leadership level. DEI initiatives without executive sponsorship and accountability are doomed to fail. Leaders must be willing to be held accountable for outcomes, not just intentions.",
