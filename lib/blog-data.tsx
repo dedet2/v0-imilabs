@@ -404,7 +404,7 @@ export const blogPosts: BlogPost[] = [
     slug: "race-norming-and-bioethics",
     author: "Dr. Dédé Tetsubayashi",
     content: [
-      "Race norming — also called "race corrections", "ethnic adjustments", and "race adjustment" — refers to the adjustment of medical test results or diagnostic calculations based on a patient's race. But why does this still exist?",
+      "Race norming — also called 'race corrections', 'ethnic adjustments', and 'race adjustment' — refers to the adjustment of medical test results or diagnostic calculations based on a patient's race. But why does this still exist?",
       "Race norming has a problematic history in fields ranging from employment testing to criminal justice. In medicine, it manifests as algorithms that adjust diagnostic thresholds based on race, often resulting in Black patients receiving less aggressive treatment.",
       "Consider the eGFR, a test that estimates kidney function. For decades, this test included a race-based adjustment that classified Black patients as having better kidney function than non-Black patients with identical lab values. The result? Black patients were less likely to be diagnosed with kidney disease and referred for transplant.",
       "After years of advocacy by Black physicians and patients, major medical organizations have begun removing race from clinical algorithms. But the damage of decades of race-normed medicine persists in health disparities.",
