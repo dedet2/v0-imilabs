@@ -127,7 +127,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     date: "November 20, 2025",
     readTime: "8 min read",
-    image: "/executive-boardroom-ai-strategy-discussion.jpg",
+    image: "/professional-business-meeting-discussing-ai-govern.jpg",
     slug: "ai-governance-c-suite-perspective",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -360,7 +360,7 @@ export const blogPosts: BlogPost[] = [
     category: "Wellness",
     date: "March 6, 2024",
     readTime: "6 min read",
-    image: "/blog-post-image-template.png",
+    image: "/accessible-luxury-spa-wellness-retreat-with-inclus.jpg",
     slug: "racism-and-wellness-industry",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -377,7 +377,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     date: "March 5, 2024",
     readTime: "8 min read",
-    image: "/blog-post-image-template.png",
+    image: "/healthcare-technology-with-diverse-patients-and-me.jpg",
     slug: "race-norming-and-bioethics",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -394,7 +394,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 4, 2024",
     readTime: "7 min read",
-    image: "/1517500824426.jpg",
+    image: "/dr-dede-incluu-headshot.jpg",
     slug: "black-excellence-low-expectations-white-supremacy",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -412,7 +412,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 3, 2024",
     readTime: "5 min read",
-    image: "/blog-post-image-template.png",
+    image: "/black-women-friends-circle.jpg",
     slug: "spirit-of-juneteenth-acknowledgement",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -429,7 +429,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     date: "March 2, 2024",
     readTime: "7 min read",
-    image: "/blog-post-image-template.png",
+    image: "/tedx-stage-with-speaker-dr--dede-in-colorful-outfi.jpg",
     slug: "60-minutes-encoded-bias",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -446,7 +446,7 @@ export const blogPosts: BlogPost[] = [
     category: "Wellness",
     date: "March 1, 2024",
     readTime: "8 min read",
-    image: "/0ha5_gjflj6n_okrx.jpeg",
+    image: "/professional-black-woman-dr-dede-smiling-portrait.jpg",
     slug: "from-invisibility-to-radical-empathy",
     author: "Dr. Dédé Tetsubayashi",
     content: [
