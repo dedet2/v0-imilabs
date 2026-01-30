@@ -448,7 +448,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 4, 2024",
     readTime: "7 min read",
-    image: "/blog/1517500824426.jpg",
+    image: "/blog/blog-post-image-template-2.png",
     slug: "black-excellence-low-expectations-white-supremacy",
     author: "Dr. Dédé Tetsubayashi",
     content: [
