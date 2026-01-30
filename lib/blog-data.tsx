@@ -403,29 +403,7 @@ export const blogPosts: BlogPost[] = [
       "<strong>About The Author:</strong> Destiny Fox Kanno (Des-tuh-knee Foks Kah-no), going by she/her/they/them, is an Incluu Consultant whose work in Account Management, Product & Project Management, and Customer Service lends itself to various diverse projects at Incluu. Destiny is an avid civil rights and social justice advocate, who recently having published a guide on how to support Black people after the George Floyd shooting, continues to raise awareness about equity and inclusion causes and issues around the globe.",
     ],
   },
-  // Continue with remaining articles...
-  {
-    id: 17,
-    title: "The Divisive Fallacy of Objective Truth",
-    description: "Examining how claims of objectivity often mask and perpetuate existing power structures.",
-    category: "Tech Equity",
-    date: "April 2, 2024",
-    readTime: "7 min read",
-    image: "/blog/the_divisive_fallacy_of_objective_truth-1.png",
-    slug: "divisive-fallacy-objective-truth",
-    author: "Dr. Dédé Tetsubayashi",
-    content: [
-      "At incluu, we often get asked about Helen Pluckrose and her position against what she calls 'Critical Social Justice Theory.' To summarize, Pluckrose believes that the progressive left's focus on systemic oppression undermines Liberalism's foundation of objectivity and individual rights.", rel='noopener noreferrer'>executive education courses</a> catered to this specialization, but also paid roles with devoted resources.",
-      "After years of this work, we've identified five common barriers that hold organizations back from achieving the transformative change they say they want. Organizations often approach DEI with the expectation that they can have fast, cheap, and high-quality outcomes. They want to check a box.",
-      "The first barrier: treating DEI as a program rather than a practice. Organizations hire a diversity officer, launch a training, and consider the work done. But DEI is not a destination—it's an ongoing commitment that must be woven into every aspect of organizational culture.",
-      "Second: lack of accountability at the leadership level. DEI initiatives without executive sponsorship and accountability are doomed to fail. Leaders must be willing to be held accountable for outcomes, not just intentions.",
-      "Third: centering comfort over growth. Transformative change is uncomfortable. Organizations that prioritize the comfort of dominant group members over the growth required for equity will never achieve meaningful change.",
-      "Fourth: insufficient investment. Meaningful DEI work requires resources—time, money, and personnel. Organizations that expect transformation on a shoestring budget are setting themselves up for failure.",
-      "Fifth: lack of systemic thinking. Individual trainings and initiatives cannot transform systems. Organizations must be willing to examine and change their policies, practices, and structures.",
-      "<strong>About The Author:</strong> <a href='https://www.incluu.us/author/destiny/' target='_blank' rel='noopener noreferrer'>Destiny Fox Kanno</a> (Des-tuh-knee Foks Kah-no), going by she/her/they/them, is an Incluu Consultant whose work in Account Management, Product & Project Management, and Customer Service lends itself to various diverse projects at Incluu.",
-    ],
-  },
-  {
+{
     id: 17,
     title: "The Divisive Fallacy of Objective Truth",
     description: "Examining how claims of objectivity often mask and perpetuate existing power structures.",
@@ -438,10 +416,11 @@ export const blogPosts: BlogPost[] = [
     content: [
       "<em>[Helen] Pluckrose believes there is an objective truth! She believes in one truth that is rooted in Western, White/European ideologies of a particular scientific method which denounces any other forms of truth. Of course, this is a dangerous assumption.</em>",
       "Helen Pluckrose, the founder of the site Counterweight*, has been outspoken in her critique of Critical Social Justice Theory (CSJ). In her article, <em>What do we Mean by Critical Social Justice</em>, published earlier this year, Pluckrose attempts to explain her opposition to Critical Social Justice.",
-      "Both CSJ and Liberalism, she agrees, seek to achieve social justice. Liberalism, however, assumes that the starting point of 'truth' is objective and not culturally informed. Pluckrose therefore believes that everyone can attain the same level of understanding of 'objective truth' with sufficient critical thinking skills.",
-      "This assertion is not supported by Critical Social Justice theory. CSJ questions the starting point of 'truth' and asks, whose truth: what is the positionality of the person claiming said truth, and further, what are the social structures affecting the power dynamics which then inform what becomes truth?",
+      "Both CSJ and Liberalism, she agrees, seek to achieve social justice. Liberalism, however, assumes that the starting point of truth is objective and not culturally informed. Pluckrose therefore believes that everyone can attain the same level of understanding of objective truth with sufficient critical thinking skills.",
+      "This assertion is not supported by Critical Social Justice theory. CSJ questions the starting point of truth and asks, whose truth: what is the positionality of the person claiming said truth, and further, what are the social structures affecting the power dynamics which then inform what becomes truth?",
       "In technology, claims of objectivity are particularly seductive and particularly dangerous. Algorithms are often presented as neutral and objective, when in reality they encode the biases of their creators and the inequities present in their training data.",
       "The goal is not to abandon the pursuit of truth, but to recognize that truth-seeking is always a human endeavor, shaped by human perspectives and serving human purposes. When we acknowledge this, we can begin to ask: Whose truth? Truth in service of what?",
+      "<strong>About The Author:</strong> <a href='https://www.incluu.us/author/drdede/' target='_blank' rel='noopener noreferrer'>Dr. Dede Tetsubayashi</a> (Deh-deh Teh-tsu-bye-ya-she) expertise is DEI + product + business value and integrating them into a teams and organizations best practices.",
     ],
   },
   {
