@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     category: "Compliance",
     date: "January 15, 2026",
     readTime: "8 min read",
-    image: "/blog/christina-wocintechchat-com-rmweulmcyxm-unsplash-1024x684-281-29.jpg",
+    image: "/blog/1517500824426.jpg",
     slug: "eu-ai-act-guide-2026",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     category: "Product Development",
     date: "January 8, 2026",
     readTime: "10 min read",
-    image: "/blog/pexels-photo-5723322-1.jpeg",
+    image: "/blog/1517500824426-1.jpg",
     slug: "inclusive-ai-framework",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     category: "Business Strategy",
     date: "December 18, 2025",
     readTime: "8 min read",
-    image: "/blog/ariel-sion-i7v-btpnktg-unsplash-2048x1365-1.jpg",
+    image: "/blog/1517500824426-4.jpg",
     slug: "business-case-responsible-ai",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -84,7 +84,7 @@ export const blogPosts: BlogPost[] = [
     category: "Technical",
     date: "December 5, 2025",
     readTime: "15 min read",
-    image: "/blog/1lhfbfkk64woxkzqw9fddig.jpeg",
+    image: "/blog/1517500824426-5.jpg",
     slug: "ai-bias-detection-mitigation",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -103,7 +103,7 @@ export const blogPosts: BlogPost[] = [
     category: "Governance",
     date: "November 22, 2025",
     readTime: "11 min read",
-    image: "/blog/1517500824426.jpg",
+    image: "/blog/1517500824426-6.jpg",
     slug: "ai-governance-structures",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
     category: "Compliance",
     date: "November 10, 2025",
     readTime: "9 min read",
-    image: "/blog/1517500824426-1.jpg",
+    image: "/blog/1517500824426-7.jpg",
     slug: "future-ai-regulation-global",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -141,7 +141,7 @@ export const blogPosts: BlogPost[] = [
     category: "Design",
     date: "October 28, 2025",
     readTime: "13 min read",
-    image: "/blog/gris-zy-1920x1080-1.jpeg",
+    image: "/blog/1517500824426-8.jpg",
     slug: "inclusive-design-patterns-ai",
     author: "Dr. Dédé Tetsubayashi",
     content: [
