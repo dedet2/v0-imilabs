@@ -248,7 +248,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 6, 2024",
     readTime: "7 min read",
-    image: "/blog/good_cheap_fast-2.png",
+    image: "/blog/libdes-2.jpg",
     slug: "what-is-liberatory-design",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -268,7 +268,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 5, 2024",
     readTime: "8 min read",
-    image: "/blog/ariel-sion-i7v-btpnktg-unsplash-2048x1365.jpg",
+    image: "/blog/christina-wocintechchat-com-rmweulmcyxm-unsplash-1024x684-281-29-2.jpg",
     slug: "importance-intersectionality-in-tech",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -349,7 +349,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 2, 2024",
     readTime: "7 min read",
-    image: "/blog/blog-post-image-template.png",
+    image: "/blog/the_divisive_fallacy_of_objective_truth-1.png",
     slug: "divisive-fallacy-objective-truth",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -369,7 +369,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 1, 2024",
     readTime: "5 min read",
-    image: "/blog/blog-post-image-template.png",
+    image: "/blog/pexels-photo-5723322-1.jpeg",
     slug: "stand-in-unity-asian-allies",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -388,7 +388,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 7, 2024",
     readTime: "8 min read",
-    image: "/blog/ariel-sion-i7v-btpnktg-unsplash-2048x1365.jpg",
+    image: "/blog/post1-1955x2048-2.jpg",
     slug: "what-is-intersectionality-why-important",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -408,7 +408,7 @@ export const blogPosts: BlogPost[] = [
     category: "Wellness",
     date: "March 6, 2024",
     readTime: "7 min read",
-    image: "/blog/blog-post-image-template.png",
+    image: "/blog/tanaka-pendeke-o9gfrup1l9w-unsplash-scaled-2.jpg",
     slug: "racism-and-wellness-industry",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -428,7 +428,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     date: "March 5, 2024",
     readTime: "8 min read",
-    image: "/blog/blog-post-image-template.png",
+    image: "/blog/trnava-university-lr_mkznghuu-unsplash-scaled-2.jpg",
     slug: "race-norming-and-bioethics",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -468,7 +468,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 3, 2024",
     readTime: "6 min read",
-    image: "/blog/blog-post-image-template.png",
+    image: "/blog/the-spirit-of-juneteenth-1.png",
     slug: "spirit-of-juneteenth-acknowledgement",
     author: "Dr. Dédé Tetsubayashi",
     content: [
