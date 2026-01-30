@@ -6,8 +6,10 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Calendar, Clock, User, Share2 } from "lucide-react"
 import Image from "next/image"
 import { notFound } from "next/navigation"
+import { getPostBySlug, getAllPostSlugs, blogPosts } from "@/lib/blog-data"
 
-const blogPosts: Record<string, {
+// Legacy posts kept for backwards compatibility - these will be merged with imported data
+const legacyBlogPosts: Record<string, {
   title: string
   description: string
   category: string
@@ -196,9 +198,34 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
+export function generateStaticParams() {
+  // Combine slugs from new blog data and legacy posts
+  const newSlugs = getAllPostSlugs()
+  const legacySlugs = Object.keys(legacyBlogPosts)
+  const allSlugs = [...new Set([...newSlugs, ...legacySlugs])]
+  
+  return allSlugs.map((slug) => ({
+    slug,
+  }))
+}
+
 export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const post = blogPosts[slug]
+  
+  // Try new blog data first, then fall back to legacy posts
+  const newPost = getPostBySlug(slug)
+  const legacyPost = legacyBlogPosts[slug]
+  
+  const post = newPost ? {
+    title: newPost.title,
+    description: newPost.description,
+    category: newPost.category,
+    date: newPost.date,
+    readTime: newPost.readTime,
+    image: newPost.image,
+    content: newPost.content,
+    author: newPost.author,
+  } : legacyPost
   
   if (!post) {
     notFound()
@@ -227,7 +254,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
             <div className="flex flex-wrap items-center gap-4 text-white/80">
               <span className="flex items-center gap-2">
                 <User className="h-4 w-4" />
-                Dr. Dédé Tetsubayashi
+                {'author' in post ? post.author : 'Dr. Dédé Tetsubayashi'}
               </span>
               <span className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />

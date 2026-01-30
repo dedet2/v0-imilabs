@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { NewsletterForm } from "@/components/newsletter-form"
+import { blogPosts, getAllCategories } from "@/lib/blog-data"
 
 export const metadata: Metadata = {
   title: "Blog | Dr. Dédé & incluu",
@@ -19,70 +20,7 @@ export const metadata: Metadata = {
   },
 }
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "The EU AI Act: What Leaders Need to Know in 2026",
-    description: "A comprehensive guide to the EU AI Act requirements and how organizations can prepare for compliance.",
-    category: "AI Governance",
-    date: "January 15, 2026",
-    readTime: "8 min read",
-    image: "/modern-corporate-office-with-diverse-team-working-on-ai-governance.jpg",
-    slug: "eu-ai-act-guide-2026",
-  },
-  {
-    id: 2,
-    title: "Disability as Innovation Driver: The Business Case",
-    description: "How inclusive design and accessibility-first thinking can unlock new markets and drive competitive advantage.",
-    category: "Tech Equity",
-    date: "January 8, 2026",
-    readTime: "6 min read",
-    image: "/diverse-team-collaborating-on-inclusive-technology.jpg",
-    slug: "disability-innovation-driver",
-  },
-  {
-    id: 3,
-    title: "Building Ethical AI Systems: A Framework for Success",
-    description: "Practical steps for implementing ethical AI governance that protects your organization and serves all users.",
-    category: "AI Governance",
-    date: "December 20, 2025",
-    readTime: "10 min read",
-    image: "/executive-team-reviewing-compliance-dashboard.jpg",
-    slug: "ethical-ai-framework",
-  },
-  {
-    id: 4,
-    title: "The ROI of Accessible Technology",
-    description: "Quantifying the business value of accessibility investments and inclusive design practices.",
-    category: "Business Impact",
-    date: "December 12, 2025",
-    readTime: "7 min read",
-    image: "/diverse-team-celebrating-inclusive-product-launch.jpg",
-    slug: "roi-accessible-technology",
-  },
-  {
-    id: 5,
-    title: "Algorithmic Bias: Detection and Prevention Strategies",
-    description: "Understanding how bias enters AI systems and practical approaches to identify and mitigate it.",
-    category: "AI Governance",
-    date: "December 5, 2025",
-    readTime: "9 min read",
-    image: "/diverse-tech-team-collaborating-in-modern-office.jpg",
-    slug: "algorithmic-bias-prevention",
-  },
-  {
-    id: 6,
-    title: "Rest as Resistance: The Wellness Imperative for Leaders",
-    description: "Why executive wellness and intentional rest are essential for sustainable leadership and innovation.",
-    category: "Wellness",
-    date: "November 28, 2025",
-    readTime: "5 min read",
-    image: "/diverse-executives-in-meditation-session.jpg",
-    slug: "rest-as-resistance-leaders",
-  },
-]
-
-const categories = ["All", "AI Governance", "Tech Equity", "Business Impact", "Wellness"]
+const categories = getAllCategories()
 
 export default function BlogPage() {
   return (
