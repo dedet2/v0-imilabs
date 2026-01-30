@@ -106,9 +106,11 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
           <div className="max-w-3xl mx-auto">
             <article className="prose prose-lg max-w-none">
               {post.content.map((paragraph, index) => (
-                <p key={index} className="text-foreground/80 leading-relaxed mb-6">
-                  {paragraph}
-                </p>
+                <p 
+                  key={index} 
+                  className="text-foreground/80 leading-relaxed mb-6 [&_a]:text-purple-600 [&_a]:underline [&_a]:hover:text-purple-800 [&_strong]:text-foreground [&_em]:italic"
+                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                />
               ))}
             </article>
 
