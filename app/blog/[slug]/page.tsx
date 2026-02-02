@@ -2,22 +2,23 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, ArrowRight, Calendar, Clock, User, Share2 } from "lucide-react"
+import { ArrowLeft, ArrowRight, Calendar, Clock, User } from "lucide-react"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { getPostBySlug, getAllPostSlugs, getAdjacentPosts } from "@/lib/blog-data"
 import { ShareButton } from "@/components/share-button"
+import { ArticleContent } from "@/components/article-content"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
-  
+
   if (!post) {
     return {
       title: "Article Not Found | Dr. Dédé Blog",
     }
   }
-  
+
   return {
     title: `${post.title} | Dr. Dédé Blog`,
     description: post.description,
@@ -43,7 +44,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
   const { slug } = await params
   const post = getPostBySlug(slug)
   const { prev, next } = getAdjacentPosts(slug)
-  
+
   if (!post) {
     notFound()
   }
@@ -55,8 +56,8 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%)]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <Link 
-              href="/blog" 
+            <Link
+              href="/blog"
               className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
@@ -68,6 +69,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance mb-6 drop-shadow-lg">
               {post.title}
             </h1>
+            <p className="text-xl text-white/95 mb-8 leading-relaxed max-w-3xl drop-shadow">{post.description}</p>
             <div className="flex flex-wrap items-center gap-4 text-white/80">
               <span className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -91,12 +93,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                className="object-cover"
-              />
+              <Image src={post.image} alt={post.title} fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -106,15 +103,30 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
       <section className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <article className="prose prose-lg max-w-none">
-              {post.content.map((paragraph, index) => (
-                <p 
-                  key={index} 
-                  className="text-foreground/80 leading-relaxed mb-6 [&_a]:text-purple-600 [&_a]:underline [&_a]:hover:text-purple-800 [&_strong]:text-foreground [&_em]:italic"
-                  dangerouslySetInnerHTML={{ __html: paragraph }}
-                />
-              ))}
-            </article>
+            <ArticleContent blocks={post.contentBlocks} />
+
+            {/* Author Card */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 sm:p-8 mt-12 shadow-lg border border-border/50">
+              <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-foreground mb-2">About Dr. Dédé Tetsubayashi</h3>
+                  <p className="text-foreground/80 mb-4">
+                    Dr. Dédé is a global advisor on AI governance, disability innovation, and inclusive technology
+                    strategy. She helps organizations navigate the intersection of AI regulation, accessibility, and
+                    responsible innovation.
+                  </p>
+                  <Button
+                    asChild
+                    className="bg-gradient-to-r from-cyan-600 to-violet-600 hover:from-cyan-700 hover:to-violet-700"
+                  >
+                    <Link href="/contact">
+                      Work With Dr. Dédé
+                      <ArrowRight className="h-4 w-4 ml-2" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
 
             {/* Share and CTA */}
             <div className="mt-12 pt-8 border-t">
@@ -123,7 +135,10 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
                   <span className="text-sm text-foreground/60">Share this article:</span>
                   <ShareButton title={post.title} slug={slug} />
                 </div>
-                <Button asChild className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500">
+                <Button
+                  asChild
+                  className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500"
+                >
                   <Link href="/contact">Schedule a Consultation</Link>
                 </Button>
               </div>
@@ -133,7 +148,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
             <div className="mt-12 pt-8 border-t">
               <div className="flex flex-col sm:flex-row justify-between gap-4">
                 {prev ? (
-                  <Link 
+                  <Link
                     href={`/blog/${prev.slug}`}
                     className="group flex flex-col p-4 rounded-lg border hover:border-violet-500 hover:bg-muted/50 transition-colors flex-1"
                   >
@@ -149,7 +164,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
                   <div className="flex-1" />
                 )}
                 {next ? (
-                  <Link 
+                  <Link
                     href={`/blog/${next.slug}`}
                     className="group flex flex-col p-4 rounded-lg border hover:border-violet-500 hover:bg-muted/50 transition-colors text-right flex-1"
                   >
