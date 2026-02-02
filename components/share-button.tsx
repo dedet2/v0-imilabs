@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -17,10 +17,13 @@ interface ShareButtonProps {
 
 export function ShareButton({ title, slug }: ShareButtonProps) {
   const [copied, setCopied] = useState(false)
-  
-  const shareUrl = typeof window !== "undefined" 
-    ? `${window.location.origin}/blog/${slug}`
-    : `/blog/${slug}`
+  const [canNativeShare, setCanNativeShare] = useState(false)
+  const [shareUrl, setShareUrl] = useState(`/blog/${slug}`)
+
+  useEffect(() => {
+    setShareUrl(`${window.location.origin}/blog/${slug}`)
+    setCanNativeShare(typeof navigator !== "undefined" && !!navigator.share)
+  }, [slug])
 
   const handleCopyLink = async () => {
     try {
@@ -32,7 +35,7 @@ export function ShareButton({ title, slug }: ShareButtonProps) {
     }
   }
 
-  const handleShare = async (platform: string) => {
+  const handleShare = (platform: string) => {
     const encodedUrl = encodeURIComponent(shareUrl)
     const encodedTitle = encodeURIComponent(title)
 
@@ -61,7 +64,7 @@ export function ShareButton({ title, slug }: ShareButtonProps) {
   }
 
   // Use native share on mobile if available
-  if (typeof navigator !== "undefined" && navigator.share) {
+  if (canNativeShare) {
     return (
       <Button variant="outline" size="sm" onClick={handleNativeShare}>
         <Share2 className="h-4 w-4 mr-2" />

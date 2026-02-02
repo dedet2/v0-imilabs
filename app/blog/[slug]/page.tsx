@@ -131,11 +131,11 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 
             {/* Previous / Next Article Navigation */}
             <div className="mt-12 pt-8 border-t">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex flex-col sm:flex-row justify-between gap-4">
                 {prev ? (
                   <Link 
                     href={`/blog/${prev.slug}`}
-                    className="group flex flex-col p-4 rounded-lg border hover:border-violet-500 hover:bg-muted/50 transition-colors"
+                    className="group flex flex-col p-4 rounded-lg border hover:border-violet-500 hover:bg-muted/50 transition-colors flex-1"
                   >
                     <span className="text-xs text-foreground/60 flex items-center gap-1 mb-2">
                       <ArrowLeft className="h-3 w-3" />
@@ -146,12 +146,12 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
                     </span>
                   </Link>
                 ) : (
-                  <div />
+                  <div className="flex-1" />
                 )}
                 {next ? (
                   <Link 
                     href={`/blog/${next.slug}`}
-                    className="group flex flex-col p-4 rounded-lg border hover:border-violet-500 hover:bg-muted/50 transition-colors text-right sm:text-right"
+                    className="group flex flex-col p-4 rounded-lg border hover:border-violet-500 hover:bg-muted/50 transition-colors text-right flex-1"
                   >
                     <span className="text-xs text-foreground/60 flex items-center justify-end gap-1 mb-2">
                       Next Article
@@ -162,7 +162,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
                     </span>
                   </Link>
                 ) : (
-                  <div />
+                  <div className="flex-1" />
                 )}
               </div>
             </div>
