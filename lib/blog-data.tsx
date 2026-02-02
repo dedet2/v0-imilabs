@@ -479,7 +479,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 7, 2024",
     readTime: "11 min read",
-    image: "/blog/tanaka-pendeke-o9gfrup1l9w-unsplash-scaled-2.jpg",
+    image: "/blog/tanaka-pendeke-o9gfrup1l9w-unsplash-scaled.jpg",
     slug: "racism-and-wellness-industry",
     author: "Dr. Dédé Tetsubayashi",
     content: [
