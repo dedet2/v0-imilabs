@@ -410,7 +410,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "April 2, 2024",
     readTime: "12 min read",
-    image: "/blog/the_divisive_fallacy_of_objective_truth-1.png",
+    image: "/blog/the_divisive_fallacy_of_objective_truth.jpg",
     slug: "divisive-fallacy-objective-truth",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -503,7 +503,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 7, 2024",
     readTime: "12 min read",
-    image: "/blog/trnava-university-lr_mkznghuu-unsplash-scaled-2.jpg",
+    image: "/blog/trnava-university-lr_mkznghuu-unsplash-scaled.jpg",
     slug: "race-norming-and-bioethics",
     author: "Dr. Dédé Tetsubayashi",
     content: [
@@ -551,7 +551,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tech Equity",
     date: "March 3, 2024",
     readTime: "7 min read",
-    image: "/blog/the-spirit-of-juneteenth-1.png",
+    image: "/blog/the-spirit-of-juneteenth.jpg",
     slug: "spirit-of-juneteenth-acknowledgement",
     author: "Destiny Fox Kanno",
     content: [
