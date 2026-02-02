@@ -2,10 +2,11 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Calendar, Clock, User, Share2 } from "lucide-react"
+import { ArrowLeft, ArrowRight, Calendar, Clock, User, Share2 } from "lucide-react"
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import { getPostBySlug, getAllPostSlugs } from "@/lib/blog-data"
+import { getPostBySlug, getAllPostSlugs, getAdjacentPosts } from "@/lib/blog-data"
+import { ShareButton } from "@/components/share-button"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
@@ -41,6 +42,7 @@ export function generateStaticParams() {
 export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const post = getPostBySlug(slug)
+  const { prev, next } = getAdjacentPosts(slug)
   
   if (!post) {
     notFound()
@@ -119,14 +121,49 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-foreground/60">Share this article:</span>
-                  <Button variant="outline" size="sm">
-                    <Share2 className="h-4 w-4 mr-2" />
-                    Share
-                  </Button>
+                  <ShareButton title={post.title} slug={slug} />
                 </div>
                 <Button asChild className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:from-violet-700 hover:to-cyan-500">
                   <Link href="/contact">Schedule a Consultation</Link>
                 </Button>
+              </div>
+            </div>
+
+            {/* Previous / Next Article Navigation */}
+            <div className="mt-12 pt-8 border-t">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {prev ? (
+                  <Link 
+                    href={`/blog/${prev.slug}`}
+                    className="group flex flex-col p-4 rounded-lg border hover:border-violet-500 hover:bg-muted/50 transition-colors"
+                  >
+                    <span className="text-xs text-foreground/60 flex items-center gap-1 mb-2">
+                      <ArrowLeft className="h-3 w-3" />
+                      Previous Article
+                    </span>
+                    <span className="font-medium text-foreground group-hover:text-violet-600 transition-colors line-clamp-2">
+                      {prev.title}
+                    </span>
+                  </Link>
+                ) : (
+                  <div />
+                )}
+                {next ? (
+                  <Link 
+                    href={`/blog/${next.slug}`}
+                    className="group flex flex-col p-4 rounded-lg border hover:border-violet-500 hover:bg-muted/50 transition-colors text-right sm:text-right"
+                  >
+                    <span className="text-xs text-foreground/60 flex items-center justify-end gap-1 mb-2">
+                      Next Article
+                      <ArrowRight className="h-3 w-3" />
+                    </span>
+                    <span className="font-medium text-foreground group-hover:text-violet-600 transition-colors line-clamp-2">
+                      {next.title}
+                    </span>
+                  </Link>
+                ) : (
+                  <div />
+                )}
               </div>
             </div>
           </div>

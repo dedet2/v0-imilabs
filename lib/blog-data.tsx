@@ -639,3 +639,13 @@ export function getRelatedPosts(currentSlug: string, limit: number = 3): BlogPos
     .filter((post) => post.slug !== currentSlug && post.category === currentPost.category)
     .slice(0, limit)
 }
+
+export function getAdjacentPosts(currentSlug: string): { prev: BlogPost | null; next: BlogPost | null } {
+  const currentIndex = blogPosts.findIndex((post) => post.slug === currentSlug)
+  if (currentIndex === -1) return { prev: null, next: null }
+
+  const prev = currentIndex > 0 ? blogPosts[currentIndex - 1] : null
+  const next = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null
+
+  return { prev, next }
+}
