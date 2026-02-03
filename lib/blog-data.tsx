@@ -2854,7 +2854,7 @@ export const blogPosts: BlogPost[] = [
     category: "Accessibility + Legal Risk",
     date: "November 5, 2025",
     readTime: "9 min read",
-    image: "/blog/accessibility-lawsuits.jpg",
+    image: "/blog/executive-team-reviewing-compliance-dashboard.jpg",
     slug: "accessibility-lawsuits-demand-letters",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3053,7 +3053,7 @@ export const blogPosts: BlogPost[] = [
     category: "Market Strategy + Disability Innovation",
     date: "November 2, 2025",
     readTime: "10 min read",
-    image: "/blog/diverse-business-team-in-modern-accessible-office.jpg",
+    image: "/blog/diverse-team-collaborating-on-inclusive-technology.jpg",
     slug: "disability-economy-strategy",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
