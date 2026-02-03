@@ -1368,7 +1368,29 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "Disability-led design means centering the needs of disabled users from research and ideation through launch and beyond. It means disabled people are in the room during product strategy sessions, design reviews, and launch decisions—not just during accessibility audits.",
+          "Disability-led design means centering the needs of disabled users from research and ideation through launch and beyond. It means disabled people are in the room during product strategy sessions, design reviews, and launch decisions—not just during accessibility audits. It means treating disability expertise as a strategic asset, not a box to check.",
+      },
+      { type: "heading3", content: "Why This Works" },
+      {
+        type: "paragraph",
+        content:
+          "When you design for users with the broadest range of access needs, you end up with products that work better for everyone. Voice interface built for blind users improves the experience for users driving or cooking. Captions designed for deaf users help people in noisy environments, second-language learners, and anyone who benefits from multimodal input. Simplified navigation designed for users with cognitive disabilities makes your product more intuitive for all users.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This isn't theoretical. Organizations that lead with disability-centered design consistently report higher user satisfaction scores, lower support costs, and faster time to usability across their entire user base. Disabled users are a testing ground for innovation that benefits everyone.",
+      },
+      { type: "heading3", content: "Practical Implementation" },
+      {
+        type: "paragraph",
+        content:
+          "Bring disabled people into your product team. This can take several forms: hiring disabled designers and engineers, creating advisory boards with disabled users and accessibility experts, running regular user research sessions with disabled participants, and building a culture where accessibility feedback is treated as product feedback, not an obstacle.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Start early. Don't wait for beta testing. Disability thinking should shape your product strategy, information architecture, and design principles from day one. Define accessibility requirements as part of your feature specifications. Ask: How will this work for users with different sensory abilities? Different cognitive processing? Different motor capabilities? Different environmental conditions?",
       },
       { type: "heading2", content: "Testing with Disabled Users: Real-World Validation" },
       {
@@ -1376,17 +1398,148 @@ export const blogPosts: BlogPost[] = [
         content:
           "Automated accessibility testing is valuable but limited. Tools can check code compliance—whether your headings are properly structured, whether images have alt text, whether color contrast meets standards. But they can't tell you whether your product is actually usable for real people with real disabilities.",
       },
+      {
+        type: "paragraph",
+        content:
+          "The gap between 'technically accessible' and 'actually usable' is where problems hide. A screen reader user might struggle with a data table structure that passes WCAG tests but uses confusing header associations. A user with dexterity challenges might technically be able to click a button that's positioned too small. A user with processing differences might find your interface logic confusing even though it's semantically correct.",
+      },
+      { type: "heading3", content: "What to Test" },
+      {
+        type: "paragraph",
+        content:
+          "Plan testing sessions with disabled users representing various disabilities and access needs: blind and low-vision users testing with screen readers, users with dexterity differences testing motor accessibility, deaf users testing caption and transcript quality, users with cognitive disabilities testing content clarity and interface complexity. Test across assistive technologies users actually use: different screen readers, voice control systems, switch access devices, magnification software.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Test in real environments. Lab testing is valuable, but disabled users also encounter your product in variable conditions: on mobile in sunlight, with unstable internet, in noisy environments, at different times of day when energy levels vary. Can your product work across these real-world scenarios?",
+      },
+      { type: "heading3", content: "Building Sustainable User Testing Programs" },
+      {
+        type: "paragraph",
+        content:
+          "One-off accessibility testing sessions won't cut it. Build ongoing relationships with disabled user communities. Offer fair compensation for user research (disabled people are not volunteers for accessibility work). Create feedback mechanisms that let users flag accessibility issues in production. Track accessibility feedback in the same system as other product feedback, giving it equal priority.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Train your product team to interpret user research with disabled participants. An accessibility issue isn't a bug in your accessibility knowledge—it's a signal that your product needs revision. When a screen reader user says your interface is confusing, don't blame their skill level. Redesign your interface.",
+      },
+      {
+        type: "checklistCard",
+        title: "Inclusive Product Framework: Six Essential Elements",
+        sections: [
+          {
+            heading: "1. Leadership Commitment",
+            items: [
+              "Accessibility isn't a feature request—it's a strategic requirement",
+              "Product leadership must allocate budget, time, and team capacity for inclusive design",
+              "Define accessibility requirements in your product strategy and roadmap",
+              "Make it part of your success metrics",
+            ],
+          },
+          {
+            heading: "2. Disability-Led Team",
+            items: [
+              "Hire disabled designers, engineers, and product managers",
+              "Create advisory boards with disabled users",
+              "Disabled people bring essential expertise that non-disabled teams lack",
+              "Their lived experience is irreplaceable data",
+            ],
+          },
+          {
+            heading: "3. Accessible Design Systems",
+            items: [
+              "Build accessibility into your component library and design system",
+              "Accessible components are the path of least resistance",
+              "When your default buttons, forms, and navigation patterns are accessible, your teams can't accidentally build inaccessible features",
+            ],
+          },
+          {
+            heading: "4. User Testing Programs",
+            items: [
+              "Establish ongoing user testing with disabled participants",
+              "Test across assistive technologies",
+              "Compensate users fairly",
+              "Treat findings as product requirements, not optional feedback",
+            ],
+          },
+          {
+            heading: "5. Inclusive Data Practices",
+            items: [
+              "Include disabled users in training data for AI systems",
+              "Test AI outputs across different disability types and access needs",
+              "Build bias detection specifically for accessibility failures",
+              "Monitor fairness metrics that matter to disabled communities",
+            ],
+          },
+          {
+            heading: "6. Continuous Feedback Loops",
+            items: [
+              "Make it easy for users to report accessibility issues",
+              "Track these issues in your product backlog",
+              "Respond quickly to accessibility feedback",
+              "Show disabled users that you're listening and iterating based on their input",
+            ],
+          },
+        ],
+      },
       { type: "heading2", content: "Inclusive Data Practices for AI Products" },
       {
         type: "paragraph",
         content:
-          "AI systems trained on skewed data produce skewed results. If your training data underrepresents disabled people, your AI system will underperform for disabled users. Inclusive data practices start with auditing your training data. Who is represented? Who is missing?",
+          "AI systems trained on skewed data produce skewed results. If your training data underrepresents disabled people, your AI system will underperform for disabled users. If your training data lacks examples of diverse communication styles, your natural language processing will fail for people whose speech patterns differ from the dominant group.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Inclusive data practices start with auditing your training data. Who is represented? Who is missing? What biases might be embedded in your datasets? If you're training a model on historical data, are you reproducing historical discrimination?",
+      },
+      { type: "heading3", content: "Representation in Training Data" },
+      {
+        type: "paragraph",
+        content:
+          "Actively include disabled people in your training data. This means soliciting participation from disabled communities, paying for data contributions, and ensuring your data labeling processes don't inadvertently exclude disabled perspectives. For audio models, include speech patterns across different disability types—users with apraxia, dysarthria, or other speech differences. For vision models, test on diverse eye conditions and visual abilities.",
+      },
+      { type: "heading3", content: "Bias Detection Across Disability Dimensions" },
+      {
+        type: "paragraph",
+        content:
+          "Standard fairness metrics measure bias across demographic groups. But they often miss disability-related bias. A recommendation system might perform equally well across racial groups but fail spectacularly for users with certain disabilities. A content moderation system might suppress speech from users with speech disabilities. Build fairness evaluation specifically for accessibility and disability outcomes.",
+      },
+      { type: "heading3", content: "Transparency About AI Limitations" },
+      {
+        type: "paragraph",
+        content:
+          "Be honest about what your AI system can't do. If your speech recognition works poorly with certain accent patterns or speech differences, disclose that. If your image recognition struggles with certain visual conditions, be transparent. Don't hide failures from users who need to make decisions based on knowing the system's limitations.",
+      },
+      {
+        type: "questionsCard",
+        variant: "purple",
+        questions: [
+          "Is disability expertise represented on your product team—not just in an advisory role, but in decision-making positions?",
+          "Do you have ongoing user testing programs with disabled users representing various access needs?",
+          "Have you audited your training data for representation of disabled people? For historical biases?",
+          "Are accessibility requirements part of your feature specifications and definition of done?",
+          "Do you have feedback mechanisms that let disabled users flag accessibility issues in production?",
+          "Are you measuring accessibility outcomes—not just compliance, but actual usability for disabled users?",
+        ],
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
           "Inclusive AI product design isn't charity. It's good business. It's better design. It's how you build products that work for the full range of human diversity—and that's how you build products that win.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The organizations that invest in disability-led design, that build testing programs with disabled users, that audit their data for accessibility failures—these organizations build better products. They reach larger markets. They avoid costly accessibility lawsuits. They attract and retain talent who value working somewhere that takes inclusion seriously.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The alternative is building products that work for some people and exclude others. That's not just ethically problematic—it's a competitive disadvantage. Build for disability. Build for inclusion. Build for everyone.",
       },
     ],
   },
@@ -1423,23 +1576,162 @@ export const blogPosts: BlogPost[] = [
         content:
           "Ethical AI requires governance structures with real authority and accountability. This means establishing clear roles, decision-making processes, and accountability mechanisms that span your organization. It's not enough to have an ethics committee that meets quarterly to discuss concerns. You need governance that integrates ethical review into the development process itself.",
       },
+      { type: "heading3", content: "Essential Governance Components" },
+      {
+        type: "paragraph",
+        content:
+          "First, define ethical ownership. Who owns the ethical outcomes of AI systems in your organization? Is it product leadership? A dedicated ethics function? A cross-functional review board? Whoever owns it needs authority to delay launch, demand changes, or escalate concerns. Without authority, accountability is theatrical.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Second, establish review mechanisms that happen early and often. Ethical review shouldn't be a gate at the end of development. It should be embedded throughout—during problem definition (why are we building this?), during design (how do we prevent harm?), during testing (what edge cases matter?), and during deployment (how do we monitor real-world impacts?).",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Third, build accountability into your incentive structures. Engineers and product managers should be rewarded for building ethical systems, not penalized for flagging risks. Make it safe to say no to a project because of ethical concerns. Make it career-limiting to ship a system despite known harms.",
+      },
+      { type: "heading3", content: "Governance in Practice" },
+      {
+        type: "paragraph",
+        content:
+          "Many organizations establish AI ethics boards—cross-functional teams with representation from engineering, product, legal, policy, and community. These boards work best when they have: executive sponsorship and authority, regular meeting cadence with concrete decision-making, clear criteria for which projects require review, documented review outcomes and reasoning, power to require changes or halt projects, mechanisms for ongoing monitoring post-launch, and external expertise (community members, domain experts, affected populations).",
+      },
       { type: "heading2", content: "Bias Detection: Making Harm Visible" },
       {
         type: "paragraph",
         content:
-          "Bias in AI systems is often invisible until someone gets hurt. A hiring algorithm systematically rejects qualified candidates from underrepresented groups. A medical AI underperforms for patients with darker skin tones. Effective bias detection requires multiple approaches working in concert.",
+          "Bias in AI systems is often invisible until someone gets hurt. A hiring algorithm systematically rejects qualified candidates from underrepresented groups. A medical AI underperforms for patients with darker skin tones. A content moderation system suppresses posts from disabled users. The harm exists before anyone recognizes it as a problem.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Effective bias detection requires multiple approaches working in concert. Automated testing can catch some biases. Human review and testing with affected populations catches others. Real-world monitoring surfaces harms that testing never anticipated. You need all three.",
+      },
+      {
+        type: "checklistCard",
+        title: "Multi-Layer Bias Detection Framework",
+        sections: [
+          {
+            heading: "Layer 1: Pre-Deployment Testing",
+            items: [
+              "Automated fairness testing on your datasets and models",
+              "Check for disparities in accuracy, false positive rates, false negative rates across demographic groups",
+              "Test on edge cases and underrepresented populations",
+              "This catches obvious statistical biases before deployment",
+            ],
+          },
+          {
+            heading: "Layer 2: Affected Community Testing",
+            items: [
+              "Have people from potentially affected communities test your system",
+              "A hiring algorithm might pass statistical fairness metrics but still feel like discrimination to candidates from underrepresented groups",
+              "Pay people for this testing—their insights are irreplaceable",
+            ],
+          },
+          {
+            heading: "Layer 3: Post-Deployment Monitoring",
+            items: [
+              "Monitor your system's performance in production across demographic groups",
+              "Set up alerts for disparities that emerge after launch",
+              "Track complaints and feedback specifically for fairness and bias concerns",
+              "Build feedback mechanisms that surface real-world harms quickly",
+            ],
+          },
+          {
+            heading: "Layer 4: Independent Auditing",
+            items: [
+              "Bring in external auditors to test your systems with fresh eyes",
+              "They'll catch things your internal team is blind to",
+              "Independent audits create accountability and surface risks your team may have normalized",
+            ],
+          },
+        ],
+      },
+      { type: "heading3", content: "What to Measure" },
+      {
+        type: "paragraph",
+        content:
+          "Don't just measure statistical parity. Measure outcomes that matter to affected communities. If your system is used in hiring, measure not just acceptance rates but downstream career outcomes. If your system is used in healthcare, measure not just diagnostic accuracy but health outcomes. If your system is used in content moderation, measure not just consistency but whether marginalized communities feel safe.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Document your findings. When you find bias, don't hide it. Document what you found, why it matters, and what you're doing about it. This documentation creates accountability and helps your organization learn over time.",
+      },
+      { type: "heading2", content: "Accountability That Matters" },
+      {
+        type: "paragraph",
+        content:
+          "Accountability mechanisms separate ethical companies from those with ethical rhetoric. Real accountability means:",
+      },
+      { type: "heading3", content: "Clear Ownership and Responsibility" },
+      {
+        type: "paragraph",
+        content:
+          "Someone owns the ethical outcomes of each AI system. Not a committee. A person who can be held responsible for bias, for harms, for failures. This person has authority to make changes and resources to implement them.",
+      },
+      { type: "heading3", content: "Measurable Standards" },
+      {
+        type: "paragraph",
+        content:
+          "Define what 'ethical' means for your system in measurable terms. Not aspirational principles, but specific metrics. If your system is used in credit decisions, what's your acceptable disparity rate? If it's used in content moderation, what's your acceptable false positive rate for marginalized communities? If it's used in medical diagnosis, what's your acceptable accuracy gap?",
+      },
+      { type: "heading3", content: "Consequences for Failure" },
+      {
+        type: "paragraph",
+        content:
+          "What happens when a system doesn't meet ethical standards? Are people held accountable? Do they face consequences? Does the system get pulled? Does the organization learn? Without consequences for failure, accountability is a fiction.",
+      },
+      { type: "heading3", content: "Public Transparency" },
+      {
+        type: "paragraph",
+        content:
+          "Share your ethical assessments with the public when possible. This creates external pressure to maintain standards and helps communities understand how you're making decisions about their data and lives.",
       },
       { type: "heading2", content: "Human Oversight: Keeping Humans in the Loop" },
       {
         type: "paragraph",
         content:
-          "High-stakes decisions should be made by humans informed by AI, not by AI systems making autonomous decisions about people's lives. This doesn't mean ignoring AI recommendations. It means building interfaces and processes that let humans understand what the AI is recommending and why.",
+          "High-stakes decisions should be made by humans informed by AI, not by AI systems making autonomous decisions about people's lives. If your system is used in hiring, parole, healthcare, credit decisions, or other domains with profound human consequences, humans need authority over the final decision.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This doesn't mean ignoring AI recommendations. It means building interfaces and processes that let humans understand what the AI is recommending and why, that highlight cases where the AI is uncertain or outside its training distribution, and that allow humans to override the recommendation when appropriate.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Effective human oversight requires training. People making decisions informed by AI need to understand what the AI can and can't do, what its limitations are, where bias might hide. They need tools to understand individual predictions. They need support systems for dealing with the cognitive load of reviewing AI recommendations.",
+      },
+      {
+        type: "questionsCard",
+        variant: "purple",
+        questions: [
+          "Define ethical ownership: Who owns ethical outcomes for each AI system in your organization?",
+          "Establish review mechanisms: When do systems require ethical review? Who reviews them? What decisions can they make?",
+          "Design bias detection: What testing will you do pre-deployment? How will you test with affected communities? How will you monitor in production?",
+          "Align incentives: How will you reward teams for building ethical systems? What happens when ethical concerns are raised?",
+          "Plan human oversight: Which decisions are too important for AI autonomy? How will you keep humans in the loop?",
+        ],
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "Ethical AI is built through governance structures, systematic bias detection, clear accountability, and human oversight. It's operationalized through policies, processes, and incentives. Organizations that treat ethics as operational infrastructure—not just values—will build more trustworthy systems and earn lasting competitive advantage.",
+          "Ethical AI is built through governance structures, systematic bias detection, clear accountability, and human oversight. It's operationalized through policies, processes, and incentives. It's maintained through ongoing monitoring, learning from failures, and continuous improvement.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Organizations that treat ethics as operational infrastructure—not just values—will build more trustworthy systems. They'll earn user trust. They'll attract talent who want to work somewhere that takes ethics seriously. And they'll build AI systems that actually help people rather than harming them.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The alternative is ethics as theater: impressive frameworks, no accountability, and harm that only becomes visible when it's too late. That's not a competitive strategy. It's a liability. Build ethics into your operations. That's how you build AI that lasts.",
       },
     ],
   },
@@ -2175,14 +2467,14 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   // Original Incluu blog articles from website migration
-  {
+{
     id: 20,
     title: "From Invisibility to Radical Empathy",
     description:
       "I am passionate about my work as a Product Inclusion Specialist, a profession where I build products that work for everybody, regardless of ability, gender, resources, culture, race, or class.",
-    category: "Tech Ethics + Inclusion",
+    category: "Product Inclusion + Ethics",
     date: "March 1, 2024",
-    readTime: "6 min read",
+    readTime: "8 min read",
     image: "/blog/0ha5_gjflj6n_okrx-1.jpeg",
     slug: "from-invisibility-to-radical-empathy",
     author: "Dr. Dédé Tetsubayashi",
@@ -2190,8 +2482,74 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "I am passionate about my work as a Product Inclusion Specialist, a profession where I build products that work for everybody, regardless of ability, gender, resources, culture, race, or class. I focus on building ethical products and processes that resist exploiting customers as merely transactional profit providers, because greed is the enemy of equal socioeconomic progress, and there is a middle: building equitably for both people and profits.",
+          "I am passionate about my work as a Product Inclusion Specialist, a profession where I build products that work for <em>every</em>body, regardless of ability, gender, resources, culture, race, or class. I focus on building ethical products and processes that resist exploiting customers as merely transactional profit providers, because greed is the enemy of equal socioeconomic progress, and there <em>is</em> a middle: building equitably for both people <em>and</em> profits.",
       },
+      {
+        type: "paragraph",
+        content:
+          "As technology has exploded around us and demonstrated capabilities beyond our imagination, we've come to believe that building machines will relieve us of our own biases and shortcomings. Machines, we believe, won't be flawed the way we are. With those beliefs in mind, we build triage robots to complete patient intake. They're made of metal, wires, and software, and thus can't carry preconceived notions, so they can't discriminate, right? In fact, machines are <a href='https://www.washingtonpost.com/health/2019/10/24/racial-bias-medical-algorithm-favors-white-patients-over-sicker-black-patients/' target='_blank' rel='noopener'>infused with our biases</a>, because the healthcare providers who contribute to the education of these robots consistently <a href='https://www.tctmd.com/news/inequities-exist-ed-triage-heart-failure-patients-repercussions' target='_blank' rel='noopener'>rate pain with bias</a>. The chilling reality is that we have seen time and again how <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4998763/' target='_blank' rel='noopener'>race, age, and gender</a> can all affect how your condition is assessed as well as <a href='https://www.washingtonpost.com/news/to-your-health/wp/2016/04/04/do-blacks-feel-less-pain-than-whites-their-doctors-may-think-so/' target='_blank' rel='noopener'>the type of care you're ultimately provided</a>—decisions that have life or death consequences.",
+      },
+      { type: "heading2", content: "The Myth of Neutral Technology" },
+      {
+        type: "paragraph",
+        content:
+          "Technologies have become invisible to many of us. We use them so often that we forget these ubiquitous conveniences—banking, public transit, credit cards, automobiles, even soap dispensers—as well as those that are new to us, are all designed and engineered by human beings who bring their own biases, conscious or not, to the design and engineering of these tools.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "These are the biases that exclude many of us from participating fully in this ever-changing and rapidly-growing digital world. It is for this exact reason that I incorporate anthropological perspectives in my work for product inclusion. Anthropology pushes us to be curious, to ask questions about how the world works; it pushes us to question 'truth,' to consider it and examine it from many vantage points.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Anthropology is an academic discipline that studies human society and culture, history and biology, our existence and subsistence, and the relationships we build with one another and the environment. With this approach I recognize that as people, we are unique not necessarily for our individual differences, but for our ability to bring our lived experiences, as shaped by our culture, environments, societies, and relationships, to bear on our individual truths. Biases are not unique to any one individual; we all have them; they're part of being human. And more importantly, they're key to building better products.",
+      },
+      { type: "heading2", content: "Why I Do This Work" },
+      {
+        type: "paragraph",
+        content:
+          "I often share this story: In 2015 while on a job search, my phone's keyboard auto-completed my middle name, 'Dédé' as 'deadbeat.' It was a sobering reminder of who designed this technology and who they were designing for. This wasn't an isolated incident—it was a symptom of systemic exclusion in tech design.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "These moments of exclusion accumulate. They tell people: you weren't considered. Your name, your language, your way of being in the world—it wasn't part of the plan. And when products consistently fail you, you start to question whether you belong in these digital spaces at all.",
+      },
+      { type: "heading2", content: "Moving from Invisibility to Empathy" },
+      {
+        type: "paragraph",
+        content:
+          "For too long, marginalized communities have been invisible in the design process. Their needs weren't considered. Their voices weren't heard. Their experiences weren't valued. The result? Products and services that don't work for them—or worse, actively harm them.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Radical empathy means more than understanding someone else's perspective. It means actively centering their experience in the design process. It means recognizing that the people closest to the problem are closest to the solution. It means building with communities, not just for them.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is why diverse teams matter. Not as tokens or checkboxes, but as experts. People who have experienced exclusion know where the gaps are. They know what questions to ask. They know what 'edge cases' are actually everyday experiences for millions of people.",
+      },
+      { type: "heading2", content: "The Path Forward" },
+      {
+        type: "paragraph",
+        content:
+          "Building inclusive technology isn't about adding features at the end. It's about fundamentally rethinking who we design for and how we design. It's about questioning our assumptions. It's about bringing diverse voices into every stage of the process—from conception through deployment and beyond.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The future of technology must be one where everyone can participate fully—where accessibility isn't an afterthought, where representation isn't tokenism, where inclusion isn't optional. This is the work I'm committed to, and the work I hope you'll join.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Because when we build products that work for the most marginalized among us, we build products that work better for everyone. That's not just good ethics—it's good business. And it's the future of technology.",
+      },
+    ],
+  },
       {
         type: "paragraph",
         content:
@@ -2238,26 +2596,47 @@ export const blogPosts: BlogPost[] = [
     slug: "60-minutes-and-encoded-bias",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
+      { type: "heading3", content: "Gut Reaction" },
       {
         type: "paragraph",
         content:
-          "Droplets of water building until the cup overflows. You spend time. Spend effort. And when you see a final product, without your name—without your history—you wonder if you're the one who's crazy.",
+          "<em>Droplets of water building until the cup overflows<br/>You spend time.<br/>Spend effort.<br/>And when you see a final product,<br/>without your name—<br/>without your history—<br/>you wonder if you're the<br/>one who's crazy.</em>",
       },
       {
         type: "paragraph",
         content:
-          "Recently, CBS's 60-minutes aired a segment on racial bias in facial recognition technology, referring to a December 2019 National Institute of Standards and Technology (NIST) study as a 'landmark study' while failing to mention the groundbreaking research on which the NIST study was based, and conducted by AI-research pioneers and Black women, Joy Buolamwini, Dr. Timnit Gebru and Inioluwa Deborah Raji.",
+          "Recently, CBS's 60-minutes aired a segment on racial bias in facial recognition technology, referring to a <a href='https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software' target='_blank' rel='noopener'>December 2019 National Institute of Standards and Technology (NIST) study</a> as a 'landmark study' while failing to mention the groundbreaking research on which the NIST study was based, and conducted by AI-research pioneers and Black women, <a href='https://www.linkedin.com/in/ACoAAAJJIe0B1R489TS1yJWh9uDEurkRPxbHRHY' target='_blank' rel='noopener'>Joy Buolamwini</a>, <a href='https://www.linkedin.com/in/timnit-gebru-7b3b407/' target='_blank' rel='noopener'>Dr. Timnit Gebru</a> and <a href='https://www.linkedin.com/in/deborah-raji-065751b2/' target='_blank' rel='noopener'>Inioluwa Deborah Raji</a>.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Ms. Buolamwini, who spent hours prepping the 60-minutes team, was summarily not given credit for her work, nor was she acknowledged as the one who made the work groundbreaking; thus erasing her from the narration while her work and knowledge were credited to what she refers to as 'Pale Males.'",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Appalled, I reshared a LinkedIn by <a href='https://www.linkedin.com/company/ajlunited/' target='_blank' rel='noopener'>The Algorithmic Justice League</a> as well as one by Ms. Buolamwini herself on my personal LinkedIn profile with the following comment hoping to inform others of how Black women continue to be treated as disposable within the tech community.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "<strong>'Pay attention: this is what misogynoir looks and feels like'</strong>",
       },
       { type: "heading2", content: "The Erasure of Black Women in AI Research" },
       {
         type: "paragraph",
         content:
-          "Ms. Buolamwini, who founded the Algorithmic Justice League, first published her findings in 2018 with her MIT thesis and the documentary 'Coded Bias.' Her work, along with that of Dr. Gebru and Raji, laid the foundation for understanding how facial recognition systems fail people of color, particularly Black women.",
+          "Ms. Buolamwini, who founded the <a href='https://www.ajl.org/' target='_blank' rel='noopener'>Algorithmic Justice League</a>, first published her findings in 2018 with her MIT thesis, <a href='https://www.media.mit.edu/publications/full-gender-shades-thesis-17/' target='_blank' rel='noopener'>Gender Shades</a>, and later the documentary <a href='https://www.codedbias.com/' target='_blank' rel='noopener'>Coded Bias</a>. Her work, along with that of Dr. Gebru and Raji, laid the foundation for understanding how facial recognition systems fail people of color, particularly Black women.",
       },
       {
         type: "paragraph",
         content:
           "The NIST study that 60 Minutes called 'landmark' built upon this earlier work. Yet the segment made no mention of these researchers. This pattern of erasure—where Black women's contributions are overlooked while their work is absorbed into mainstream narratives—is all too common in tech and academia.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is not an isolated incident. It's part of a pattern: Black women do the hard work of identifying bias, building datasets, running experiments, publishing findings—and then watch as institutions credit themselves or white researchers for 'discovering' what Black women have been saying all along.",
       },
       { type: "heading2", content: "Why Attribution Matters" },
       {
@@ -2269,6 +2648,22 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         content:
           "When we erase the contributions of Black women in AI research, we perpetuate the very dynamics that lead to biased systems in the first place: the assumption that certain voices matter more than others, that certain perspectives are more legitimate, that certain people are more worthy of recognition.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Ms. Buolamwini risked her career to call out tech giants. She faced skepticism, dismissal, and hostility. And now, when her work is finally being taken seriously, she's being written out of the story. This is how institutional racism works in practice.",
+      },
+      { type: "heading2", content: "What We Can Do" },
+      {
+        type: "paragraph",
+        content:
+          "Cite Black women. Credit Black women. Amplify Black women. When you see erasure happening, name it. When media outlets fail to credit the researchers whose work they're reporting on, call them out. Share the original sources. Tell the full story.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "And if you're in a position of power—if you're hiring, if you're funding, if you're publishing, if you're producing—do the work to ensure that credit goes where it's due. The people who did the hard work deserve recognition. History should remember who led the way.",
       },
     ],
   },
@@ -2294,6 +2689,17 @@ export const blogPosts: BlogPost[] = [
         content:
           "Gatekeeping humanity by only granting the privilege of it being recognized, is wrong. There lies the audacity of racism: to believe freedom can be taken and given at one's will and without recourse.",
       },
+      { type: "heading2", content: "The Historical Context" },
+      {
+        type: "paragraph",
+        content:
+          "Juneteenth commemorates June 19, 1865—the day Union soldiers arrived in Galveston, Texas, announcing that the Civil War had ended and enslaved people were now free. This was two and a half years after the Emancipation Proclamation. Two and a half years during which people who were legally free continued to be held in bondage because those in power chose not to tell them.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This delay was not an accident. It was a choice. A choice to extract as much labor as possible from people who had every right to their freedom. A choice that reveals the gap between what America says it values and what it actually does.",
+      },
       { type: "heading2", content: "Beyond Symbolism" },
       {
         type: "paragraph",
@@ -2303,13 +2709,28 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "True acknowledgement requires action. It requires dismantling the systems that perpetuate inequality. It requires reparations. It requires education. It requires a fundamental reckoning with our history and its ongoing impact.",
+          "We cannot celebrate freedom while people are incarcerated at disproportionate rates. We cannot celebrate freedom while voter suppression laws target Black communities. We cannot celebrate freedom while the wealth gap continues to widen. We cannot celebrate freedom while Black bodies are killed with impunity.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "True acknowledgement requires action. It requires dismantling the systems that perpetuate inequality. It requires reparations—not as charity, but as debt owed. It requires education that tells the truth about our history. It requires a fundamental reckoning with slavery's ongoing legacy.",
       },
       { type: "heading2", content: "The Work Continues" },
       {
         type: "paragraph",
         content:
           "A holiday is a beginning, not an end. It's a marker that says 'this matters.' But the spirit of Juneteenth—the spirit of liberation, of recognition, of the long fight for freedom—demands more than a day off work. It demands sustained commitment to justice.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "How will you honor that spirit? Not just on June 19th, but every day? What systems will you challenge? What labor will you do? What sacrifices will you make? The holiday asks us to remember. The spirit asks us to act.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Because the work of liberation is not complete. And until it is—until every person can live freely, fully, and with dignity—Juneteenth remains a reminder of how far we still have to go.",
       },
     ],
   },
@@ -2335,6 +2756,17 @@ export const blogPosts: BlogPost[] = [
         content:
           "In the wake of George Floyd's murder, corporate America pledged to do better, saying it would diversify its leadership, encourage equity and take concrete actions to root out systemic racism. They revealed that while Black and Hispanic employees are often overrepresented as compared to U.S. census data on the nation's workforce among the technicians, administrative assistants and service workers, they are significantly underrepresented in managerial and executive ranks.",
       },
+      { type: "heading2", content: "The Myth of Meritocracy" },
+      {
+        type: "paragraph",
+        content:
+          "We're told that America is a meritocracy—that hard work and talent are rewarded regardless of background. But the data tells a different story. Identical resumes with 'white-sounding' names receive 50% more callbacks than those with 'Black-sounding' names. Black candidates with clean records are less likely to be hired than white candidates with felony convictions.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The system was never designed to recognize Black excellence. It was designed to suppress it. To steal it. To profit from it while denying its source. And when Black people succeed despite these barriers, the system explains away that success—affirmative action, diversity hire, lucky break—anything to avoid acknowledging that we earned our place.",
+      },
       { type: "heading2", content: "The Double Bind" },
       {
         type: "paragraph",
@@ -2344,13 +2776,28 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "This is the soft bigotry of low expectations meeting the hard wall of systemic exclusion. White supremacy creates barriers, then blames those who struggle to overcome them. It demands excellence, then dismisses that excellence as affirmative action.",
+          "This is the soft bigotry of low expectations meeting the hard wall of systemic exclusion. White supremacy creates barriers, then blames those who struggle to overcome them. It demands excellence, then dismisses that excellence as affirmative action. It sets us up to fail, then points to our failure as proof of our inadequacy.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The psychological toll of this double bind is immense. Always performing. Always proving. Always wondering whether the criticism is about your work or your identity. Always carrying the weight of representing your entire race while being told you were only hired because of it.",
       },
       { type: "heading2", content: "Reclaiming Excellence" },
       {
         type: "paragraph",
         content:
           "Black excellence has never been about meeting white standards. It's about thriving despite a system designed for our failure. It's about community, resilience, and the refusal to be diminished. The measure of our worth isn't determined by those who would exclude us.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Our ancestors built this country—literally, with their hands and their labor. They created art, music, culture, invention. They survived the unsurvivable. That is our inheritance. That is our excellence. And it doesn't need white validation to be real.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "So to my Black colleagues: your imposter syndrome is a reasonable response to an unreasonable situation. You are not an imposter. You belong. Not because they let you in—but because you earned your place, against odds they can't begin to understand.",
       },
     ],
   },
@@ -2376,6 +2823,17 @@ export const blogPosts: BlogPost[] = [
         content:
           "Race-norming is believed to have been integrated into clinical risk assessment tools in 1981. Similar to the 'soft-bigotry of low expectations,' the practice is predicated on othering BIPOC communities, and most adversely affects Black people.",
       },
+      { type: "heading2", content: "The Historical Roots" },
+      {
+        type: "paragraph",
+        content:
+          "The use of race in medicine has deep and troubling roots. Much of what we 'know' about racial differences in health comes from research conducted during slavery—research that sought to justify the brutalization of Black bodies by claiming they were fundamentally different from white bodies. That Black people felt less pain. That Black lungs worked differently. That Black bodies could endure more.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "These pseudoscientific claims were never true. But they persist in medical education, in clinical practice, in the algorithms that determine who gets care and who doesn't. They persist because they serve a purpose: they allow the healthcare system to provide inferior care to Black patients while claiming to be objective.",
+      },
       { type: "heading2", content: "The Harm of Race-Based Medicine" },
       {
         type: "paragraph",
@@ -2385,13 +2843,28 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "The NFL's use of race-norming in concussion settlements is a stark example: the practice assumed Black players started with lower cognitive function, making it harder for them to demonstrate impairment and receive compensation. This isn't medicine—it's discrimination codified in algorithms.",
+          "Consider kidney function: the eGFR calculation includes a 'race adjustment' that makes Black patients appear to have better kidney function than they actually do. The result? Black patients are referred later for dialysis and transplant, leading to worse outcomes. The algorithm doesn't account for why Black patients might have different kidney function—the effects of discrimination, environmental racism, lack of access to care. It just adjusts the number.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The NFL's use of race-norming in concussion settlements brought this issue to national attention: the practice assumed Black players started with lower cognitive function, making it harder for them to demonstrate impairment and receive compensation. The assumption wasn't just wrong—it was racist. And it cost Black players millions of dollars in compensation they were owed.",
       },
       { type: "heading2", content: "Toward Equitable Healthcare" },
       {
         type: "paragraph",
         content:
           "Removing race from medical algorithms isn't enough. We need to examine how racism—not race—affects health outcomes. We need to address social determinants of health, not use race as a proxy for them. We need to build healthcare systems that serve all patients equitably.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This means training healthcare providers to recognize their own biases. It means collecting better data on social determinants. It means building algorithms that account for systemic racism rather than encoding it. And it means listening to Black patients when they describe their symptoms—rather than assuming they're exaggerating.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Because the goal of medicine should be to provide the best possible care for every patient. And that's not possible when the tools we use assume some patients are worth less than others.",
       },
     ],
   },
@@ -2426,13 +2899,39 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "Yoga, meditation, and mindfulness practices have roots in cultures around the world, many of them non-white. Yet these practices have been packaged and sold primarily to white, affluent consumers, often stripped of their cultural context and spiritual significance.",
+          "Scroll through any wellness Instagram feed and you'll see thin, white, able-bodied women in expensive athleisure doing yoga poses on pristine beaches. The message is clear: wellness is for people who look like this, who can afford this, who have this kind of leisure time. Everyone else is invisible.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Yoga, meditation, and mindfulness practices have roots in cultures around the world, many of them non-white. Yet these practices have been packaged and sold primarily to white, affluent consumers, often stripped of their cultural context and spiritual significance. The wellness industry takes from other cultures while excluding the people of those cultures.",
+      },
+      { type: "heading2", content: "The Economics of Exclusion" },
+      {
+        type: "paragraph",
+        content:
+          "Wellness has become big business—a multi-trillion dollar industry. But access to wellness isn't equally distributed. Gym memberships, organic food, meditation apps, yoga classes—these things cost money. They require time. They require living in neighborhoods where these options exist.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Meanwhile, BIPOC communities face higher rates of chronic disease, mental health challenges, and stress-related conditions. The same communities that need wellness the most are the ones least likely to be able to access it. This isn't accidental—it's the predictable result of an industry built by and for white consumers.",
       },
       { type: "heading2", content: "Inclusive Wellness" },
       {
         type: "paragraph",
         content:
-          "True wellness must be accessible to all. It must honor the traditions from which practices come. It must recognize that for many BIPOC communities, wellness also means healing from the trauma of racism. The wellness industry has work to do—and that work starts with representation, accessibility, and cultural humility.",
+          "True wellness must be accessible to all. It must honor the traditions from which practices come—acknowledging that yoga comes from India, that meditation has Buddhist roots, that many healing practices come from Indigenous cultures. It must pay those debts, not just extract profit.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It must recognize that for many BIPOC communities, wellness also means healing from the trauma of racism. The stress of discrimination is a health condition. The anxiety of navigating white spaces is a health condition. Any wellness practice that doesn't acknowledge this isn't actually addressing wellness for everyone.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The wellness industry has work to do—and that work starts with representation, accessibility, and cultural humility. It means diversifying who leads wellness spaces. It means making wellness affordable and accessible. It means doing the internal work of examining how the industry perpetuates exclusion. Wellness should be for everyone. Until it is, it's just another form of privilege.",
       },
     ],
   },
@@ -2458,6 +2957,17 @@ export const blogPosts: BlogPost[] = [
         content:
           "Incluu operates by educating and training folks to lead with curiosity and an open mind and heart; therefore, we strongly believe that education and learning on the perspectives of others is the best way to begin combating the hate and violence that plagues our communities.",
       },
+      { type: "heading2", content: "The Rise in Anti-Asian Violence" },
+      {
+        type: "paragraph",
+        content:
+          "The COVID-19 pandemic exposed and exacerbated anti-Asian racism in America. Attacks on Asian Americans increased by nearly 150%. Elderly Asian Americans were targeted on the streets. Asian-owned businesses were vandalized. The violence was fueled by rhetoric that blamed Asian people for a global pandemic—rhetoric that came from the highest levels of government.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "But anti-Asian racism didn't start with COVID. It has deep roots in American history: the Chinese Exclusion Act, Japanese internment camps, the murder of Vincent Chin, the post-9/11 targeting of South Asian Americans. The model minority myth has never protected Asian Americans from violence—it has only made that violence less visible.",
+      },
       { type: "heading2", content: "Coalition Building" },
       {
         type: "paragraph",
@@ -2467,7 +2977,18 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
+          "We've seen attempts to pit Asian and Black communities against each other—to use the model minority myth to justify anti-Black racism, to blame Black individuals for anti-Asian violence while ignoring the white supremacy that underlies both. We reject these tactics. Our liberation is bound together.",
+      },
+      {
+        type: "paragraph",
+        content:
           "We commit to listening, learning, and acting in solidarity with our Asian siblings. We commit to calling out the racism that has been directed at Asian communities, particularly during the pandemic. We commit to the long work of building a world where all of us can be safe.",
+      },
+      { type: "heading2", content: "What You Can Do" },
+      {
+        type: "paragraph",
+        content:
+          "Educate yourself on Asian American history. Support Asian-owned businesses. Intervene when you witness harassment—safely, in ways that center the victim's wishes. Donate to organizations led by and serving Asian communities. And most importantly: speak up. Silence is complicity. When someone in your life makes racist 'jokes' or spreads anti-Asian misinformation, challenge them. Change starts with the conversations we're willing to have.",
       },
     ],
   },
@@ -2493,22 +3014,48 @@ export const blogPosts: BlogPost[] = [
         content:
           "Helen Pluckrose, the founder of the site Counterweight, has been outspoken in her critique of Critical Social Justice Theory (CSJ). In her article, 'What do we Mean by Critical Social Justice,' published earlier this year, Pluckrose attempts to explain her opposition to Critical Social Justice. She begins with the assertion that Liberalism and CST are quite similar and have shared goals.",
       },
+      { type: "heading2", content: "The Politics of 'Objectivity'" },
+      {
+        type: "paragraph",
+        content:
+          "The claim to objectivity is itself a political move. When someone declares their position 'objective' and opposing views 'ideological,' they're not making a neutral assessment—they're claiming authority. They're saying: my perspective is the default, the norm, the truth. Yours is deviation.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is how power works in knowledge production. Western, white, male perspectives have been coded as 'universal' and 'objective' for centuries. Alternative perspectives—from women, from people of color, from the Global South, from Indigenous communities—have been dismissed as 'subjective,' 'particular,' or 'biased.'",
+      },
       { type: "heading2", content: "The Myth of Objectivity" },
       {
         type: "paragraph",
         content:
-          "The idea that there is a single, objective truth—accessible through Western scientific methods—ignores the ways that knowledge production itself is shaped by power. Whose questions get asked? Whose methods are considered valid? Whose perspectives are treated as universal?",
+          "The idea that there is a single, objective truth—accessible through Western scientific methods—ignores the ways that knowledge production itself is shaped by power. Whose questions get asked? Whose methods are considered valid? Whose perspectives are treated as universal? These aren't neutral decisions. They're political ones.",
       },
       {
         type: "paragraph",
         content:
           "This isn't to say that facts don't exist or that evidence doesn't matter. It's to recognize that what we count as evidence, how we interpret it, and whose interpretation we privilege are all shaped by our social position. Acknowledging this isn't relativism—it's intellectual honesty.",
       },
+      {
+        type: "paragraph",
+        content:
+          "The scientific method itself was developed in a particular cultural context, by particular people, to answer particular questions. It's a powerful tool—but it's not the only tool for understanding the world. And pretending otherwise is itself a form of cultural imperialism.",
+      },
       { type: "heading2", content: "Beyond False Dichotomies" },
       {
         type: "paragraph",
         content:
-          "The choice isn't between 'objective truth' and chaos. It's between a narrow conception of knowledge that centers certain voices and a more capacious understanding that makes room for multiple ways of knowing. This isn't division—it's expansion.",
+          "Critics of Critical Social Justice love to present a false choice: either you believe in objective truth, or you believe anything goes. This is a strawman. No serious scholar argues that all perspectives are equally valid in all contexts, or that we should abandon evidence-based reasoning.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The choice isn't between 'objective truth' and chaos. It's between a narrow conception of knowledge that centers certain voices and a more capacious understanding that makes room for multiple ways of knowing. This isn't division—it's expansion. It's recognizing that the world is complex, that different perspectives reveal different truths, and that no single vantage point captures everything.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Those who feel threatened by this expansion are often those who have benefited most from the old hierarchy. When your perspective has been treated as universal, any challenge feels like an attack. But it's not. It's an invitation to a richer, more honest understanding of the world we share.",
       },
     ],
   },
@@ -2532,33 +3079,69 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "The murder of George Floyd in May 2020 and the global Black Lives Matter protests that followed forced organizations to explore the concept of breaking down barriers in their peoples, practices, and products. In doing so, many sought and are seeking to transform.",
+          "The murder of George Floyd in May 2020 and the global Black Lives Matter protests that followed forced organizations to explore the concept of breaking down barriers in their peoples, practices, and products. In doing so, many sought and are seeking to transform. But transformation is hard. And many organizations are failing.",
       },
       { type: "heading2", content: "The Five Barriers" },
+      { type: "heading3", content: "1. Surface-Level Commitment" },
       {
         type: "paragraph",
         content:
-          "1. Surface-level commitment: Organizations that treat DEI as a checkbox rather than a fundamental value will never achieve transformative change. Hiring a diversity consultant isn't the same as changing your culture.",
+          "Organizations that treat DEI as a checkbox rather than a fundamental value will never achieve transformative change. Hiring a diversity consultant isn't the same as changing your culture. Posting a black square on Instagram isn't the same as examining your hiring practices. Saying 'we stand with Black lives' isn't the same as paying Black employees equitably.",
       },
       {
         type: "paragraph",
         content:
-          "2. Lack of accountability: Without clear metrics, ownership, and consequences, DEI initiatives stall. Who is responsible? How will you measure progress? What happens when you fall short?",
+          "Transformation requires going beyond optics. It means examining every process, every policy, every practice. It means asking hard questions and being willing to change the answers. It means treating DEI not as an add-on but as fundamental to how you do business.",
+      },
+      { type: "heading3", content: "2. Lack of Accountability" },
+      {
+        type: "paragraph",
+        content:
+          "Without clear metrics, ownership, and consequences, DEI initiatives stall. Who is responsible for these outcomes? How will you measure progress? What happens when you fall short? If there's no accountability, there's no change.",
       },
       {
         type: "paragraph",
         content:
-          "3. Resistance from leadership: Change requires champions at the top. When executives aren't fully committed, the message is clear: this isn't really a priority.",
+          "Accountability means setting specific, measurable goals. It means tying executive compensation to DEI outcomes. It means regular public reporting on progress. It means consequences when goals aren't met—not excuses.",
+      },
+      { type: "heading3", content: "3. Resistance from Leadership" },
+      {
+        type: "paragraph",
+        content:
+          "Change requires champions at the top. When executives aren't fully committed—when they delegate DEI to HR and never think about it again—the message is clear: this isn't really a priority. And employees notice.",
       },
       {
         type: "paragraph",
         content:
-          "4. One-time training: A single workshop won't undo years of ingrained practices. Transformation requires ongoing learning, dialogue, and iteration.",
+          "Leadership commitment means more than signing off on initiatives. It means personal investment. It means showing up, doing the work, modeling the behavior you want to see. It means making difficult decisions that prioritize equity over short-term profit or comfort.",
+      },
+      { type: "heading3", content: "4. One-Time Training" },
+      {
+        type: "paragraph",
+        content:
+          "A single workshop won't undo years of ingrained practices. Transformation requires ongoing learning, dialogue, and iteration. It requires creating spaces for difficult conversations, not just checking a training box.",
       },
       {
         type: "paragraph",
         content:
-          "5. Centering comfort over growth: Real change is uncomfortable. Organizations that prioritize the comfort of the majority over the needs of the marginalized will stay stuck.",
+          "Effective DEI work is continuous. It adapts. It responds to feedback. It goes deeper over time. A one-time unconscious bias training might raise awareness, but it won't change behavior. That requires sustained effort, practice, and reflection.",
+      },
+      { type: "heading3", content: "5. Centering Comfort Over Growth" },
+      {
+        type: "paragraph",
+        content:
+          "Real change is uncomfortable. It requires examining privilege, confronting bias, and ceding power. Organizations that prioritize the comfort of the majority over the needs of the marginalized will stay stuck.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Growth happens at the edge of comfort. If your DEI work never makes anyone uncomfortable, you're not going deep enough. The goal isn't to make everyone feel good—it's to create genuine equity. And that requires being willing to sit with discomfort.",
+      },
+      { type: "heading2", content: "The Path Forward" },
+      {
+        type: "paragraph",
+        content:
+          "Transformation is possible—but only for organizations willing to do the hard work. It requires commitment that goes beyond optics, accountability with teeth, leadership that leads, ongoing learning, and courage to be uncomfortable. The organizations that get this right will build better cultures, better products, and better futures. The ones that don't will be left behind.",
       },
     ],
   },
@@ -2584,6 +3167,17 @@ export const blogPosts: BlogPost[] = [
         content:
           "What is encoded in the language—as is often the case—is that International Women's Day is actually only a marker of the progress being made to bridge the wage gap between white men and white women. Black women currently observe equal pay day in August—August 3rd, this year, and it has yet to become cause for celebration.",
       },
+      { type: "heading2", content: "The Intersectional Wage Gap" },
+      {
+        type: "paragraph",
+        content:
+          "When we talk about the gender pay gap, we often cite a single number: women earn 82 cents for every dollar men earn. But this number obscures more than it reveals. White women earn about 79 cents to the white man's dollar. Black women earn 63 cents. Latina women earn 55 cents. Native American women earn 60 cents.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This isn't just a gender issue. It's a race issue. It's a class issue. It's an issue of intersecting oppressions that compound to create deeper inequity for women of color. And any solution that doesn't account for these intersections will fail.",
+      },
       { type: "heading2", content: "The Pandemic's Unequal Impact" },
       {
         type: "paragraph",
@@ -2593,13 +3187,28 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "For women of color, the impact was even more severe. Already facing wider pay gaps, more likely to be in frontline jobs, less likely to have the option to work from home—the pandemic hit hardest where the safety net was thinnest.",
+          "For women of color, the impact was even more severe. Already facing wider pay gaps, more likely to be in frontline jobs, less likely to have the option to work from home—the pandemic hit hardest where the safety net was thinnest. Black and Latina women saw the highest rates of job loss, the highest rates of leaving the workforce to provide care.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "And let's be clear about what 'leaving the workforce to provide care' means: it means doing essential, demanding, valuable work—for free. It means sacrificing career advancement, retirement savings, and economic security. It means that the economy runs on women's unpaid labor, and that women pay the price.",
       },
       { type: "heading2", content: "Building Back Differently" },
       {
         type: "paragraph",
         content:
           "We can't go back to normal because normal was the problem. A post-pandemic world must include universal childcare, paid family leave, and fair wages for care workers. It must value the labor that makes all other labor possible.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This isn't just good policy—it's economic necessity. When women can't work because they can't access childcare, the economy loses their contributions. When caregivers are paid poverty wages, we're saying their essential work doesn't matter. When we build economic systems on unpaid labor, we're building on a foundation that's unsustainable and unjust.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The pandemic showed us what breaks when we don't value care. The question now is whether we'll rebuild differently—or whether we'll return to systems that were always failing the women, especially women of color, who make everything else possible.",
       },
     ],
   },
@@ -2629,18 +3238,44 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "Coined by legal scholar Kimberlé Crenshaw, intersectionality recognizes that people hold multiple identities simultaneously, and that the intersection of these identities creates unique experiences of privilege and oppression. A Black woman doesn't experience racism and sexism separately—she experiences them as interlocking systems.",
+          "Coined by legal scholar Kimberlé Crenshaw in 1989, intersectionality recognizes that people hold multiple identities simultaneously, and that the intersection of these identities creates unique experiences of privilege and oppression. A Black woman doesn't experience racism and sexism separately—she experiences them as interlocking systems that create a distinct form of discrimination.",
       },
       {
         type: "paragraph",
         content:
-          "In tech, this means that systems can fail in ways that are only visible when you look at the intersection of identities. Facial recognition might work fine for white men and white women separately—but fail specifically for Black women.",
+          "In tech, this means that systems can fail in ways that are only visible when you look at the intersection of identities. Facial recognition might work fine for white men and white women separately—but fail specifically for Black women. A hiring algorithm might not discriminate against women or Black candidates individually, but discriminate against Black women specifically.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is why diversity initiatives that focus on single dimensions—'hire more women' or 'hire more people of color'—often fail. If you hire white women and Black men, you might check your diversity boxes while still creating an environment that's hostile to Black women. Intersectionality demands that we look at the full picture.",
+      },
+      { type: "heading2", content: "Why Tech Needs Intersectionality" },
+      {
+        type: "paragraph",
+        content:
+          "Technology scales bias. A biased hiring decision affects one person. A biased algorithm affects millions. When we build systems without intersectional analysis, we bake in discrimination at scale—discrimination that's often invisible to the people building the systems because they don't share the identities being harmed.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The Gender Shades project found that facial recognition systems had error rates of less than 1% for lighter-skinned men, but up to 35% for darker-skinned women. This isn't a bug—it's the predictable result of training data and testing protocols that didn't account for intersection of race and gender.",
       },
       { type: "heading2", content: "Designing with Intersectionality" },
       {
         type: "paragraph",
         content:
           "Although many big tech companies are hiring in-house DEI consultants and broaching the topic of more equitable design, true intersectional thinking requires more than diverse hiring. It requires asking whose experiences we're centering, whose data we're training on, and whose voices have power in the design process.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It means disaggregating your data. Not just 'how does this system perform for women?' but 'how does it perform for Black women, Asian women, disabled women, trans women?' It means user testing with people at the intersections. It means giving power to the people most likely to be harmed by your systems.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "And it means recognizing that you can't design for experiences you don't understand. This is why diverse teams matter—not as tokens, but as experts. People who live at the intersections understand failure modes that others miss. Their knowledge isn't optional; it's essential for building systems that work for everyone.",
       },
     ],
   },
@@ -2666,6 +3301,17 @@ export const blogPosts: BlogPost[] = [
         content:
           "As our critical thought processes evolve, as binaries and ceilings become more expansive, we are forced to reckon with the pervasive, insidious nature of the oppressive, exploitative, white supremacist, capitalist, heteronormative, patriarchal structures we have all been indoctrinated into, voluntarily... and not.",
       },
+      { type: "heading2", content: "Design Is Never Neutral" },
+      {
+        type: "paragraph",
+        content:
+          "Every design decision reflects values. When a building has stairs but no ramp, that's a design decision that values able-bodied access over disabled access. When an algorithm uses zip code as a feature, that's a design decision that encodes historical segregation. When a survey only offers 'male' and 'female' options, that's a design decision that erases non-binary people.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Traditional design thinking treats these as neutral choices—or worse, as 'edge cases' to be handled later. Liberatory design recognizes that every choice has politics, and that 'neutral' usually means 'defaulting to the perspective of people with power.'",
+      },
       { type: "heading2", content: "Defining Liberatory Design" },
       {
         type: "paragraph",
@@ -2675,13 +3321,23 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "Traditional design thinking assumes a neutral designer and a universal user. Liberatory design asks: Who is designing? For whom? With what assumptions? And most importantly: Does this design liberate or constrain?",
+          "Traditional design thinking assumes a neutral designer and a universal user. Liberatory design asks: Who is designing? For whom? With what assumptions? And most importantly: Does this design liberate or constrain? Does it expand possibilities or limit them? Does it empower people or control them?",
       },
       { type: "heading2", content: "Putting Liberation into Practice" },
       {
         type: "paragraph",
         content:
-          "Liberatory design isn't a checklist—it's a practice. It requires ongoing reflection on our own positionality, genuine partnership with communities, and willingness to cede control. The goal isn't a better product for the people; it's a better process with the people.",
+          "Liberatory design isn't a checklist—it's a practice. It requires ongoing reflection on our own positionality: What assumptions am I bringing? Whose perspective am I missing? How might my own privileges blind me to certain impacts?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It requires genuine partnership with communities—not extractive user research where we take insights and leave, but collaborative design where affected communities have real power over outcomes. It requires willingness to cede control, to be led by those most impacted rather than those with the most credentials.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The goal isn't a better product for the people; it's a better process with the people. And that process should build power, build capacity, build relationships—not just build products. Liberation isn't something we design for others. It's something we design alongside them.",
       },
     ],
   },
