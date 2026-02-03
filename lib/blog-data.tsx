@@ -1,15 +1,15 @@
 // Content block types for rich article content
 export type ContentBlock =
-  | { type: "paragraph"; content: string }
-  | { type: "heading2"; content: string }
-  | { type: "heading3"; content: string }
-  | { type: "keyTakeaways"; items: string[] }
-  | { type: "checklistCard"; title: string; sections: { heading: string; items: string[] }[] }
-  | { type: "timelineCard"; title: string; items: { heading: string; description: string }[] }
-  | { type: "innovationCard"; title: string; items: { heading: string; description: string }[] }
-  | { type: "designPatternsCard"; title: string; items: { heading: string; description: string }[] }
-  | { type: "questionsCard"; title?: string; questions: string[]; variant?: "purple" | "cyan" }
-  | { type: "practicalStepsCard"; title: string; items: { label: string; description: string }[] }
+  | { type: "paragraph", content: string }
+  | { type: "heading2", content: string }
+  | { type: "heading3", content: string }
+  | { type: "keyTakeaways", items: string[] }
+  | { type: "checklistCard", title: string, sections: { heading: string, items: string[] }[] }
+  | { type: "timelineCard", title: string, items: { heading: string, description: string }[] }
+  | { type: "innovationCard", title: string, items: { heading: string, description: string }[] }
+  | { type: "designPatternsCard", title: string, items: { heading: string, description: string }[] }
+  | { type: "questionsCard", title?: string, questions: string[], variant?: "purple" | "cyan" }
+  | { type: "practicalStepsCard", title: string, items: { label: string, description: string }[] }
 
 export interface BlogPost {
   id: number
