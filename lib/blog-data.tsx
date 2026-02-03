@@ -5053,7 +5053,7 @@ export const blogPosts: BlogPost[] = [
     category: "Race + Tech",
     date: "September 15, 2025",
     readTime: "8 min read",
-    image: "/blog/black-woman-hyper-visible.jpg",
+    image: "/blog/black-woman-hyper-visible.webp",
     slug: "black-woman-hyper-visible-utterly-unseen",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
