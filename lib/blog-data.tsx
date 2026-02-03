@@ -3361,56 +3361,24 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "The performances put society's most racist sensibilities on display and in turn fed them back to audiences to intensify these feelings and disperse them across culture. They depicted Black people as lazy, ignorant, hypersexual, musical, and inherently comedic. These stereotypes didn't stay on stage—they shaped policy, justified violence, and continue to influence how Black people are perceived today.",
-      },
-      { type: "heading2", content: "The History of Minstrelsy" },
-      {
-        type: "paragraph",
-        content:
-          "Minstrel shows were the most popular form of entertainment in America in the 19th century. White performers (and later, tragically, some Black performers forced to work within the genre) painted their faces black, exaggerated their lips, and performed caricatured versions of Black speech, movement, and culture. Characters like 'Jim Crow' and 'Zip Coon' became cultural touchstones that shaped American racism for generations.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "These performances weren't just entertainment—they were propaganda. They taught white audiences how to see Black people: as childlike, as threatening, as fundamentally other. They justified slavery, Jim Crow laws, and ongoing discrimination by portraying Black people as incapable of full citizenship.",
+          "The performances put society's most racist sensibilities on display and in turn fed them back to audiences to intensify these feelings and disperse them across culture.",
       },
       { type: "heading2", content: "GIFs, Memes, and Modern Minstrelsy" },
       {
         type: "paragraph",
         content:
-          "When non-Black people use GIFs and memes of Black people to express emotions—the sassy neck roll, the exaggerated reaction, the 'yas queen'—they're participating in a digital form of the same performance. They're using Black bodies as costumes for emotional expression while remaining distanced from the lived experience of Blackness.",
+          "When non-Black people use GIFs and memes of Black people to express emotions—the sassy neck roll, the exaggerated reaction—they're participating in a digital form of the same performance. They're using Black bodies as costumes for emotional expression while remaining distanced from the lived experience of Blackness.",
       },
       {
         type: "paragraph",
         content:
-          "This isn't about policing individual GIF usage. It's about recognizing patterns. Why are Black reaction GIFs so popular among non-Black users? Why do people who would never interact with Black people in real life feel comfortable 'performing' Blackness online? What assumptions about Black expressiveness, emotion, and 'realness' are being reinforced?",
-      },
-      {
-        type: "paragraph",
-        content:
-          "The same stereotypes that animated minstrel shows—Black people as naturally expressive, as dramatic, as entertaining—drive the circulation of these images. And just like minstrelsy, digital blackface allows non-Black people to consume and perform Blackness while maintaining distance from actual Black people and Black struggles.",
-      },
-      { type: "heading2", content: "Who Profits?" },
-      {
-        type: "paragraph",
-        content:
-          "When a GIF of a Black woman goes viral, who benefits? Usually not the Black woman herself. The platforms profit from engagement. The users get their likes and retweets. But the person in the image—often captured without consent, often in a moment never intended for public consumption—becomes a meme, stripped of context and humanity.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "This is extractive. It treats Black expressiveness as a resource to be mined for entertainment value, while the actual Black people creating that culture are often excluded from the economic benefits and subjected to the social costs.",
+          "This isn't about policing individual GIF usage. It's about recognizing patterns. Why are Black reaction GIFs so popular among non-Black users? What assumptions about Black expressiveness are being reinforced? Who profits from the circulation of these images?",
       },
       { type: "heading2", content: "Being Intentional Online" },
       {
         type: "paragraph",
         content:
-          "Digital spaces require the same critical consciousness as physical ones. Before hitting send, consider: Am I treating Black people as props for my own expression? Am I perpetuating stereotypes about Black emotionality? Would I be comfortable explaining my GIF choice to a Black colleague or friend?",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Being intentional isn't about perfection—it's about awareness and willingness to do differently. It's about asking ourselves why we reach for certain images and what work those images are doing. It's about recognizing that our online behavior reflects and reinforces our offline beliefs. And it's about committing to do better, even when no one is watching.",
+          "Digital spaces require the same critical consciousness as physical ones. Before hitting send, consider: Am I treating Black people as props for my own expression? Am I perpetuating stereotypes? Being intentional isn't about perfection—it's about awareness and willingness to do differently.",
       },
     ],
   },
@@ -3436,64 +3404,22 @@ export const blogPosts: BlogPost[] = [
         content:
           "For Parks, who was accused of the more serious crimes of assault and eluding the police, the fight to clear his name went on for the better part of a year. Before his case was thrown out of court, and his name cleared, Parks would go on to spend 10 days in jail, all due to algorithmic misidentification.",
       },
-      { type: "heading2", content: "The Cases" },
-      {
-        type: "paragraph",
-        content:
-          "Robert Williams was arrested in his driveway, in front of his wife and daughters, for a shoplifting crime he didn't commit. The police showed him a blurry surveillance photo and asked, 'Is this you?' Williams responded: 'I hope you don't think all Black people look alike.' But that's exactly what the algorithm thought.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Michael Oliver was accused of a felony he didn't commit based solely on a facial recognition match. He lost his job, spent money he didn't have on lawyers, and lived for months under the shadow of serious criminal charges—all because an algorithm got it wrong.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Nijeer Parks faced the most severe charges: aggravated assault, resisting arrest, and attempting to hit an officer with a car. He spent 10 days in jail and nearly a year fighting to prove his innocence. The 'evidence' against him? A facial recognition match to a fake driver's license found at the scene—a license bearing his photo but a different name and address.",
-      },
       { type: "heading2", content: "The Technology's Failure" },
       {
         type: "paragraph",
         content:
-          "Facial recognition systems consistently perform worse on darker-skinned faces, particularly those of Black women. The NIST study found error rates up to 100 times higher for certain demographics. This isn't a bug—it's the predictable result of training data that underrepresents these groups and testing processes that don't adequately assess performance across demographics.",
+          "Facial recognition systems consistently perform worse on darker-skinned faces, particularly those of Black women. This isn't a bug—it's the predictable result of training data that underrepresents these groups and testing processes that don't adequately assess performance across demographics.",
       },
       {
         type: "paragraph",
         content:
           "But the problem isn't just technical. It's the deployment of imperfect technology in high-stakes situations without adequate safeguards. It's treating algorithmic output as evidence rather than as one input among many. It's the assumption that technology is neutral even when the outcomes clearly are not.",
       },
-      {
-        type: "paragraph",
-        content:
-          "In each of these cases, investigators treated the facial recognition match as probable cause. They didn't do basic detective work. They didn't consider alibis. They arrested first and asked questions later—if they asked questions at all. The algorithm became the investigation, rather than a tool within it.",
-      },
-      { type: "heading2", content: "The Human Cost" },
-      {
-        type: "paragraph",
-        content:
-          "These men's lives were disrupted. They lost jobs, money, time, peace of mind, and dignity. Their families were traumatized. And they are almost certainly not alone—they're just the ones who fought back, the ones whose cases became public. How many others have been wrongly arrested, wrongly convicted, wrongly imprisoned because an algorithm said they were guilty?",
-      },
-      {
-        type: "paragraph",
-        content:
-          "And notice who bears this cost: Black people. The same communities already over-policed, over-incarcerated, and under-resourced are now facing a new form of algorithmic injustice. The technology may be new, but the pattern is very old.",
-      },
       { type: "heading2", content: "The Path Forward" },
       {
         type: "paragraph",
         content:
-          "Some cities have banned facial recognition technology entirely—San Francisco, Oakland, Boston, Portland. Others are implementing regulations around its use. But technical fixes and policy changes alone won't solve the problem.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "We need to fundamentally rethink how we deploy surveillance technology and who bears the cost of its failures. We need to ask whether the benefits of these systems outweigh the harms—and who gets to decide. We need to center the voices of those most likely to be harmed, not the companies selling the technology or the agencies deploying it.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Because until we do, there will be more Robert Williamses, more Michael Olivers, more Nijeer Parks—innocent people whose lives are upended because an algorithm said they looked like someone else. That's not justice. That's not progress. That's discrimination at scale.",
+          "Some cities have banned facial recognition technology entirely. Others are implementing regulations around its use. But technical fixes and policy changes alone won't solve the problem. We need to fundamentally rethink how we deploy surveillance technology and who bears the cost of its failures.",
       },
     ],
   },
@@ -3519,59 +3445,22 @@ export const blogPosts: BlogPost[] = [
         content:
           "The first and most fundamental tool we have within our arsenal is the call-in. The call-in is the seed from which the best accessible, equitable, and inclusive products and processes take shape. Who am I designing this for? Who am I designing it with? If they are not one and the same, we must go back and begin again.",
       },
-      { type: "heading2", content: "What is Adversarial Clothing?" },
-      {
-        type: "paragraph",
-        content:
-          "Adversarial clothing refers to garments—t-shirts, hoodies, scarves, accessories—designed with patterns that confuse facial recognition algorithms. These patterns exploit vulnerabilities in computer vision systems, causing them to misidentify faces or fail to detect them entirely.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "On the surface, this seems like a clever hack: use the system's weaknesses against it. And there's something appealing about the idea of individuals being able to protect themselves from surveillance. But when we look more closely, adversarial clothing reveals deep problems with how we approach technological resistance.",
-      },
       { type: "heading2", content: "The Problem with Individual Solutions" },
       {
         type: "paragraph",
         content:
-          "Adversarial clothing represents an individual solution to a systemic problem. It places the burden of evading surveillance on the very people most likely to be harmed by it. Why should citizens have to buy special clothing to avoid being tracked? Why should the cost—financial and cognitive—fall on individuals rather than on the systems doing the surveilling?",
+          "Adversarial clothing—garments designed to confuse facial recognition systems—represents an individual solution to a systemic problem. It places the burden of evading surveillance on the very people most likely to be harmed by it.",
       },
       {
         type: "paragraph",
         content:
-          "Moreover, it doesn't work equally for everyone. The effectiveness of these techniques varies based on the specific algorithms being used, the quality of the garment, lighting conditions, and more. Those with more resources have better access to the most effective versions. Those who are most visible to surveillance—often people of color in over-policed neighborhoods—are least likely to be able to afford or access these 'solutions.'",
-      },
-      {
-        type: "paragraph",
-        content:
-          "When we offer individual technical fixes for structural problems, we often deepen existing inequalities. The people with the most privilege get an escape hatch; everyone else is left to face the surveillance state unprotected.",
-      },
-      { type: "heading2", content: "The Arms Race Problem" },
-      {
-        type: "paragraph",
-        content:
-          "There's also a practical problem: adversarial techniques are temporary. They exploit specific vulnerabilities in current systems. As those systems are updated, the techniques stop working. This creates an arms race where individuals must constantly update their protective measures while surveillance companies have far more resources for development.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "It's not a race individuals can win. The tech companies developing facial recognition have billions of dollars, teams of engineers, and government contracts. Citizens buying special hoodies have... hoodies.",
+          "Moreover, it doesn't work equally for everyone. The effectiveness of these techniques varies, and those with more resources have better access to them. When we offer individual technical fixes for structural problems, we often deepen existing inequalities.",
       },
       { type: "heading2", content: "Systemic Change Required" },
       {
         type: "paragraph",
         content:
           "The solution to harmful surveillance isn't better camouflage—it's not building the harmful surveillance in the first place. We need to shift our focus from helping individuals evade bad systems to preventing those systems from being deployed.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "This means advocacy. It means regulation. It means bans on facial recognition in public spaces. It means accountability for companies that build and deploy these systems. It means centering the voices of those most harmed in decisions about whether and how these technologies are used.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Adversarial clothing is a fascinating technical achievement. But as a strategy for protecting communities from surveillance, it's a dead end. The real work is political, not technical. And it requires us to fight for a world where no one needs a special hoodie to walk down the street in peace.",
       },
     ],
   },
@@ -3601,56 +3490,19 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "The benefits are real and appealing. No more misplaced and lost keys. No costly locksmith services when you're locked out at 2am. The ease of allowing temporary and/or limited access to vendors, guests, and service providers without copying keys or changing locks.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "For people with certain disabilities, keyless entry can be genuinely liberating. Those with limited hand mobility or dexterity may struggle with traditional keys. Visual impairments can make it difficult to locate and insert keys. Smart locks that recognize you and open automatically remove these barriers.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "And there are legitimate security benefits. You can track who enters and when. You can revoke access instantly without collecting physical keys. You can be notified of any entry attempts. These features can enhance safety when deployed thoughtfully.",
+          "No more misplaced and lost keys, costly locksmith services, and the ease of allowing temporary and/or limited access to vendors, guests, and service providers. For people with certain disabilities, keyless entry can be genuinely liberating.",
       },
       { type: "heading2", content: "The Problems" },
       {
         type: "paragraph",
         content:
-          "But smart locks that use facial recognition inherit all the biases of that technology. If the system struggles to recognize darker-skinned faces—as many facial recognition systems do—then it fails differentially for Black and brown residents. Imagine being locked out of your own home, repeatedly, because the technology wasn't built with you in mind.",
+          "But smart locks that use facial recognition inherit all the biases of that technology. They create databases of who enters buildings and when. They can be used to surveil tenants and employees. And when they fail—as all technology eventually does—the consequences can be severe.",
       },
       {
         type: "paragraph",
         content:
-          "They create databases of who enters buildings and when. Every entry. Every exit. Every visitor. This data is valuable—and valuable data attracts those who want to use it. Who has access to this information? The building manager? The landlord? The police? How long is it retained? Can it be subpoenaed?",
-      },
-      {
-        type: "paragraph",
-        content:
-          "They can be used to surveil tenants and employees in ways that would have been unthinkable a generation ago. A landlord can see that you leave for work at 7am and return at 3pm. An employer can track bathroom breaks. A domestic abuser can monitor their partner's comings and goings. The same technology that provides convenience provides control.",
-      },
-      { type: "heading2", content: "Questions We Must Ask" },
-      {
-        type: "paragraph",
-        content:
-          "Before deploying these systems, we must ask hard questions. Who controls the data these systems generate? What happens when the technology fails for certain users more than others? How might landlords and employers misuse this surveillance capability? What consent processes are in place for residents and workers?",
-      },
-      {
-        type: "paragraph",
-        content:
-          "We must also consider power dynamics. Tenants often have little choice about the technology deployed in their buildings. Employees rarely get a vote on workplace surveillance. The people subjected to these systems are not the ones making decisions about them.",
-      },
-      { type: "heading2", content: "The Ethical Path Forward" },
-      {
-        type: "paragraph",
-        content:
-          "Convenience is not a sufficient justification for building pervasive surveillance into our homes and workplaces. We need clear policies about data ownership, retention, and access. We need consent mechanisms that give people genuine choices. We need alternatives for those who don't want to participate in facial recognition systems.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "And we need to center the voices of those most likely to be harmed: tenants, not landlords; workers, not employers; marginalized communities, not tech companies. Technology should serve people, not the other way around. Smart locks could be a genuine accessibility win—but only if we build them with ethics, equity, and consent at the center.",
+          "We must ask: Who controls the data these systems generate? What happens when the technology fails for certain users more than others? How might landlords and employers misuse this surveillance capability? Convenience is not a sufficient justification for building pervasive surveillance into our homes and workplaces.",
       },
     ],
   },
-]
+];
