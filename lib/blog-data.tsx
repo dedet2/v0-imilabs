@@ -967,7 +967,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Policy + Governance",
     date: "January 11, 2026",
     readTime: "9 min read",
-    image: "/blog/future-ai-regulation.jpg",
+    image: "/blog/executive-team-reviewing-compliance-dashboard.jpg",
     slug: "future-ai-regulation-global-trends",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -1002,28 +1002,143 @@ export const blogPosts: BlogPost[] = [
         content:
           "What makes the EU approach influential is its clarity and enforceability. The Act specifies what organizations must do, with concrete deadlines and substantial penalties. This creates a powerful incentive: organizations complying with the EU AI Act for European markets get a roadmap for global compliance.",
       },
+      {
+        type: "paragraph",
+        content:
+          "Regulators in Canada, Singapore, Japan, and Australia are all incorporating elements of the EU approach into their frameworks. The UK is designing an AI regulation with similar risk-based principles. Even the US is moving toward risk-based approaches, despite its more fragmented regulatory structure.",
+      },
       { type: "heading2", content: "The US Landscape: Fragmentation and Sector-Specific Rules" },
       {
         type: "paragraph",
         content:
           "The United States is taking a different approach: less regulation at the federal level, more at the state level, and more sector-specific rules from existing regulators. This creates complexity.",
       },
+      { type: "heading3", content: "State-Level Laws" },
       {
         type: "paragraph",
         content:
           "States are passing their own AI regulations. California, Colorado, and others are enacting laws on algorithmic transparency, bias in hiring, and automated decision-making in critical sectors. Each state has different requirements. Organizations must comply with all applicable state laws.",
       },
-      { type: "heading2", content: "Regional Approaches: Where Governance Diverges" },
+      { type: "heading3", content: "Sector-Specific Regulation" },
       {
         type: "paragraph",
         content:
-          "Canada is developing the Artificial Intelligence and Data Act (AIDA), which closely mirrors the EU AI Act's risk-based approach. The UK is pursuing a lighter-touch approach with the AI Bill, emphasizing principles and guidance. Brazil and Latin American regulators are emphasizing human rights and protecting vulnerable populations.",
+          "Banking regulators (OCC, Federal Reserve) are issuing guidance on AI risk management. The FTC is enforcing fairness and privacy rules that apply to AI. The HHS is developing rules for AI in healthcare. Each sector has its own regulators, authorities, and requirements. Compliance means navigating multiple regulatory regimes simultaneously.",
+      },
+      { type: "heading3", content: "Emerging Federal Frameworks" },
+      {
+        type: "paragraph",
+        content:
+          "The US is moving toward federal AI governance. The Biden-Harris administration released an AI Bill of Rights. Congress is drafting AI regulation. The NIST AI Risk Management Framework is becoming increasingly influential. But this is still fragmented compared to the EU's unified approach.",
+      },
+      { type: "heading2", content: "Regional Approaches: Where Governance Diverges" },
+      { type: "heading3", content: "Canada" },
+      {
+        type: "paragraph",
+        content:
+          "Canada is developing the Artificial Intelligence and Data Act (AIDA), which closely mirrors the EU AI Act's risk-based approach. The framework will cover high-risk systems, require impact assessments, and establish human oversight requirements. Canada also has strong privacy regulations through PIPEDA that apply to AI.",
+      },
+      { type: "heading3", content: "The UK" },
+      {
+        type: "paragraph",
+        content:
+          "The UK is pursuing a lighter-touch approach with the AI Bill. Rather than detailed prescriptive rules, the UK is emphasizing principles and guidance. Regulators in different sectors (financial services, healthcare, data protection) apply principles to their domains. This is less centralized than the EU but still converging on core principles.",
+      },
+      { type: "heading3", content: "Brazil and Latin America" },
+      {
+        type: "paragraph",
+        content:
+          "Brazil is developing AI governance frameworks focused on transparency, accountability, and preventing discrimination. Latin American regulators are emphasizing human rights and protecting vulnerable populations. These frameworks often include stronger protections for marginalized groups than European or US approaches.",
+      },
+      { type: "heading3", content: "Singapore and Asia-Pacific" },
+      {
+        type: "paragraph",
+        content:
+          "Singapore is taking a proactive, engagement-focused approach. IMDA and MAS issued governance frameworks and are working closely with industry. Other APAC nations (Australia, Japan, South Korea) are developing sector-specific guidance and risk-based frameworks similar to the EU approach.",
+      },
+      {
+        type: "timelineCard",
+        title: "Converging Global Themes in AI Governance",
+        items: [
+          {
+            heading: "Risk-Based Approaches",
+            description: "Most regulations classify AI by risk and set requirements proportionate to that risk. High-risk systems face stricter rules than low-risk ones.",
+          },
+          {
+            heading: "Transparency Requirements",
+            description: "Regulators worldwide expect organizations to document how AI works, what data it uses, and what decisions it makes. Opacity is increasingly unacceptable.",
+          },
+          {
+            heading: "Human Oversight",
+            description: "Humans must retain authority over AI decisions, especially in high-stakes contexts. Automated decision-making without human judgment is being restricted.",
+          },
+          {
+            heading: "Fairness and Bias Mitigation",
+            description: "Regulators expect organizations to test for bias, monitor performance across demographic groups, and take action to prevent discrimination.",
+          },
+          {
+            heading: "Accountability Mechanisms",
+            description: "Users must be able to appeal AI decisions, file complaints, and seek redress. Organizations must be accountable for their AI systems.",
+          },
+          {
+            heading: "Data Governance",
+            description: "How AI is trained matters. Regulators are focusing on data quality, bias in training data, and proper data governance practices.",
+          },
+        ],
+      },
+      { type: "heading2", content: "The Trajectory: Where Regulation is Heading" },
+      {
+        type: "paragraph",
+        content:
+          "Based on current trends, here's what to expect in the next 3-5 years:",
+      },
+      { type: "heading3", content: "Tighter Requirements for High-Risk AI" },
+      {
+        type: "paragraph",
+        content:
+          "AI in employment, lending, law enforcement, and healthcare will face increasingly strict requirements. Human oversight, bias testing, transparency, and accountability will become table stakes. Organizations deploying high-risk AI without these capabilities will face enforcement action.",
+      },
+      { type: "heading3", content: "Expansion of Regulation Beyond High-Risk Systems" },
+      {
+        type: "paragraph",
+        content:
+          "Early regulations focus on high-risk AI, but the scope is expanding. Generative AI, recommendation systems, and content moderation AI are increasingly subject to rules about transparency and accountability. The regulatory perimeter is expanding.",
+      },
+      { type: "heading3", content: "Convergence on Global Standards" },
+      {
+        type: "paragraph",
+        content:
+          "Despite fragmentation, we're seeing convergence on core principles. Organizations that comply with the EU AI Act are well-positioned for Canada, Singapore, and emerging markets. The baseline is: risk-based classification, impact assessment, human oversight, transparency, and bias monitoring.",
+      },
+      { type: "heading3", content: "Stronger Enforcement" },
+      {
+        type: "paragraph",
+        content:
+          "Regulators are building enforcement capacity. The EU AI Authority will have staff and resources to conduct audits. The US FTC is hiring people to enforce AI rules. National regulators worldwide are getting serious about enforcement. Non-compliance will have real consequences.",
+      },
+      { type: "heading2", content: "Preparing Your Organization for Global AI Governance" },
+      {
+        type: "questionsCard",
+        variant: "purple",
+        questions: [
+          "Start with the highest bar: Assume the strictest requirements will apply. Build AI governance that satisfies the EU AI Act, and you're likely compliant with most other regimes.",
+          "Map your jurisdictions: Where do you operate? Where are your users? Map all applicable regulations and identify overlapping requirements.",
+          "Build flexible governance: Create AI governance frameworks that can adapt to different regulatory regimes. Risk assessment, documentation, monitoring—these should scale to different requirements.",
+          "Monitor regulatory changes: AI regulation is evolving fast. Build a compliance monitoring process to track changes in key jurisdictions.",
+          "Engage with regulators: Don't wait for enforcement. Engage with regulators, participate in consultations, and help shape standards. Proactive engagement reduces risk.",
+          "Invest in governance infrastructure: Documentation, monitoring, bias detection, human oversight—build these capabilities now. They're table stakes for AI governance globally.",
+        ],
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "AI regulation is evolving rapidly. Organizations that invest in flexible, principled AI governance now will be better positioned as regulations tighten globally. Start with the highest bar—the EU AI Act—and build governance frameworks that can adapt to different regulatory regimes.",
+          "AI regulation is evolving rapidly. The specifics vary by region—the EU is prescriptive, the US is fragmented, Asia-Pacific is engagement-focused—but the direction is converging. Organizations that invest in flexible, principled AI governance now will be better positioned as regulations tighten globally.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The strategic approach is clear: start with the highest bar (the EU AI Act), build governance frameworks that can adapt to different regulatory regimes, and invest in the capabilities—documentation, monitoring, bias detection, human oversight—that are becoming requirements worldwide. The organizations that do this now will have a competitive advantage. Those who wait will be scrambling to catch up.",
       },
     ],
   },
@@ -1063,25 +1178,157 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "There's a persistent myth in leadership culture: the harder you work, the more committed you are. The evidence says something different. Chronic sleep deprivation impairs cognitive function as much as intoxication. Decision-making quality deteriorates under sustained stress. Attention narrows under pressure, causing leaders to miss peripheral threats.",
+          "There's a persistent myth in leadership culture: the harder you work, the more committed you are. The longer the hours, the more dedicated you must be. This myth is reinforced by startups glorifying the hustle, by investor expectations of founder availability, by board cultures that equate presence with competence.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The evidence says something different. Chronic sleep deprivation impairs cognitive function as much as intoxication. Decision-making quality deteriorates under sustained stress. Attention narrows under pressure, causing leaders to miss peripheral threats. Emotional regulation suffers, damaging relationships and cultures. Creativity and strategic thinking—the high-value work leaders should do—require rest.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Burned-out leaders don't just make bad decisions. They set the tone for entire organizations. Teams take cues from leadership. If executives are always available, working weekends, answering emails at midnight, teams internalize the message: your own rest doesn't matter, availability is the measure of commitment, boundaries are weakness.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The result is organizations where burnout is normalized, where people are exhausted, where good people leave because the culture is unsustainable. And paradoxically, the organization becomes less capable: burned-out teams make worse decisions, miss risks, and have reduced capacity for governance, strategic thinking, and innovation.",
       },
       { type: "heading2", content: "The Business Case for Rest" },
       {
         type: "paragraph",
         content:
-          "Well-rested leaders have higher quality decision-making. Studies on sleep deprivation show that after 17 hours without sleep, cognitive performance deteriorates to the level of someone with a blood alcohol content of 0.05 percent. Rested leaders also have better emotional regulation and judgment. They listen better. They think more strategically.",
+          "Beyond the moral imperative to care for people, there's a clear business case for rest. Well-rested leaders have higher quality decision-making. Studies on sleep deprivation show that after 17 hours without sleep, cognitive performance deteriorates to the level of someone with a blood alcohol content of 0.05 percent. After 24 hours without sleep, the impairment is roughly equivalent to 0.10 percent BAC. Running an organization on this level of impairment is inexplicable.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Rested leaders also have better emotional regulation and judgment. They listen better. They think more strategically. They spot risks that fatigued eyes miss. And they model the culture they want: if leaders honor boundaries around rest, teams see that sustainable work is possible.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Organizations with strong cultures around rest also have lower turnover. People stay longer. Institutional knowledge compounds. Team stability improves decision-making and execution.",
       },
       { type: "heading2", content: "Rest as a Governance Issue" },
       {
         type: "paragraph",
         content:
-          "Flexible work arrangements originally designed for disabled employees benefit all employees. Asynchronous communication structures were built for deaf employees and people using screen readers. Now they benefit neurodivergent employees, people managing ADHD, and people across time zones. The same applies to rest. Structured breaks, limited meeting hours, clear boundaries around evenings and weekends—these are governance infrastructure.",
+          "This is where the connection to disability and accessibility becomes important. Disability accommodation isn't just about accommodating disabled individuals. It's about building organizational infrastructure that works for everyone.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Flexible work arrangements originally designed for disabled employees benefit all employees: parents managing childcare, people dealing with chronic illness, people managing grief, people in different time zones. Asynchronous communication structures—documented decisions, written communication, recorded meetings—were built for deaf employees and people using screen readers. Now they benefit neurodivergent employees, people managing ADHD, and people across time zones.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The same applies to rest. Structured breaks, limited meeting hours, clear boundaries around evenings and weekends—these were designed to help people manage their energy and mental health. They benefit everyone. They're governance infrastructure.",
+      },
+      { type: "heading3", content: "What Rest-Supportive Governance Looks Like" },
+      {
+        type: "paragraph",
+        content:
+          "Organizations that treat rest as a governance issue make specific structural changes:",
+      },
+      {
+        type: "paragraph",
+        content:
+          "<strong>Clear boundaries around work hours:</strong> Meetings don't happen before 10 AM or after 6 PM. No meetings on Fridays. Leaders don't send messages on weekends. This isn't HR theater—it's policy enforced by leadership. If the CEO is in meetings at 7 PM, the message is clear: boundaries aren't real.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "<strong>Vacation is mandatory:</strong> Leaders take actual time off. Vacation days are required, not optional. Organizations with 'unlimited PTO' without accountability often see people taking less time off. Mandatory minimums—three weeks minimum, fully off, not checking email—create accountability and model the behavior organizations want.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "<strong>Asynchronous-first communication:</strong> Default to written documentation, recorded meetings, and asynchronous updates. Real-time synchronous communication—especially urgent synchronous meetings—is the exception, not the rule. This reduces the pressure to be always available and online.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "<strong>Structured sabbaticals for leadership:</strong> For executives and board members, regular sabbaticals—month-long breaks every few years—create space for reflection, perspective, and rejuvenation. This also builds institutional resilience by ensuring others can step into roles.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "<strong>Disability accommodation as standard:</strong> Flexible work arrangements, the ability to work from home, flexible meeting times, the option to turn off camera—these are available to everyone, not special accommodations for certain people. This normalizes them and makes them available to anyone who needs them.",
+      },
+      {
+        type: "checklistCard",
+        title: "Signs of Leadership Burnout and Recovery Strategies",
+        sections: [
+          {
+            heading: "Warning Signs",
+            items: [
+              "Persistent fatigue that doesn't improve with sleep",
+              "Difficulty concentrating or making decisions",
+              "Emotional exhaustion or cynicism",
+              "Loss of enthusiasm for work that used to feel meaningful",
+              "Frequent illness or physical symptoms",
+              "Deteriorating relationships with colleagues or family",
+            ],
+          },
+          {
+            heading: "Recovery Strategies",
+            items: [
+              "Non-negotiable sleep: 7-9 hours per night, consistently",
+              "Regular breaks: step outside, disconnect from screens, take actual lunch breaks",
+              "Exercise: even 20 minutes of movement improves cognitive function and mood",
+              "Boundaries: set clear limits on work hours and stick to them",
+              "Social connection: time with people outside work, not discussing work",
+              "Professional support: if burnout is severe, see a therapist or coach",
+            ],
+          },
+        ],
+      },
+      { type: "heading2", content: "Rest as Resistance to Exploitative Norms" },
+      {
+        type: "paragraph",
+        content:
+          "The phrase 'rest as resistance' deserves unpacking. In the context of work culture, rest is a form of resistance against exploitative norms that demand endless availability and sacrifice.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "When you set boundaries around work hours, you're resisting the cultural message that your worth is measured by how much you're willing to give. When you take actual vacation, you're refusing the idea that your value is your constant availability. When you prioritize sleep, you're rejecting the glorification of hustle and sleep deprivation.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is especially important for leaders from marginalized communities. Women, people of color, LGBTQ+ leaders, and other underrepresented groups often feel pressure to work harder, sacrifice more, and prove themselves more thoroughly. The cultural message is: 'You have to do twice as much to get half as far.' Accepting this is accepting a losing game.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Resisting exploitative work norms through rest is not selfish. It's strategic. It's saying: my health and wellbeing matter. My decision-making capacity matters. Sustainable work matters more than burnout. And organizations that understand this will outperform those that don't.",
+      },
+      { type: "heading2", content: "Creating Rest-Supportive Organizations" },
+      {
+        type: "questionsCard",
+        variant: "purple",
+        questions: [
+          "Model rest: Take actual vacation. Set clear boundaries around work hours. Share your sabbatical plans. Leaders set the tone.",
+          "Normalize rest conversations: Ask team members how they're doing, how they're managing their energy. Make wellbeing visible in one-on-ones and team discussions.",
+          "Build rest into organizational practices: No meetings before 10 AM. No all-hands after 5 PM. Mandatory minimum vacation. These are policies, not suggestions.",
+          "Audit meeting load: How many meetings are actually necessary? Can decisions be made asynchronously? Can information be shared in writing instead of live?",
+          "Invest in asynchronous infrastructure: Document decisions. Record meetings. Make information accessible without requiring real-time presence.",
+        ],
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
           "Rest is not a cost to be minimized. It's an investment with measurable returns: better decisions, lower turnover, stronger cultures, and more resilient organizations. Leaders who honor rest—their own and their teams'—build organizations that outperform those running on fumes.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The work of leadership requires sustained cognitive capacity, emotional regulation, strategic thinking, and creative problem-solving. None of these are possible when leaders are burned out. Rest is the foundation. And building organizations that treat rest as infrastructure—not indulgence—is one of the most important governance decisions leaders can make.",
       },
     ],
   },
@@ -1093,7 +1340,7 @@ export const blogPosts: BlogPost[] = [
     category: "Product Design + Accessibility",
     date: "December 28, 2025",
     readTime: "9 min read",
-    image: "/blog/building-inclusive-ai-products.jpg",
+    image: "/blog/diverse-team-celebrating-inclusive-product-launch.jpg",
     slug: "building-inclusive-ai-products-framework",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -1221,19 +1468,151 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "Algorithmic bias causes tangible harm. It denies loans to qualified borrowers from certain neighborhoods. It makes healthcare algorithms less effective for patients with darker skin tones. It biases criminal justice systems toward harsher sentences for marginalized groups. Understanding where bias comes from, how to detect it, and how to prevent it is essential for building AI systems that are fair and trustworthy.",
+          "Algorithmic bias causes tangible harm. It denies loans to qualified borrowers from certain neighborhoods. It makes healthcare algorithms less effective for patients with darker skin tones. It biases criminal justice systems toward harsher sentences for marginalized groups. It systematically disadvantages job candidates from underrepresented backgrounds. Understanding where bias comes from, how to detect it, and how to prevent it is essential for building AI systems that are fair and trustworthy.",
       },
       { type: "heading2", content: "Understanding Sources of Bias" },
       {
         type: "paragraph",
         content:
-          "Bias doesn't appear randomly in AI systems. It has sources. Historical data reflects historical discrimination. If you train a hiring algorithm on 50 years of hiring data from a company with documented discrimination problems, your algorithm will learn those discriminatory patterns.",
+          "Bias doesn't appear randomly in AI systems. It has sources. Understanding those sources is the first step toward detection and prevention.",
+      },
+      { type: "heading3", content: "Bias in Training Data" },
+      {
+        type: "paragraph",
+        content:
+          "Historical data reflects historical discrimination. If you train a hiring algorithm on 50 years of hiring data from a company with documented discrimination problems, your algorithm will learn those discriminatory patterns. If you train a credit model on lending data that reflects redlining policies, your model will perpetuate redlining.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "More subtly, training data may simply underrepresent certain populations. A medical AI trained primarily on patients from wealthy countries may not generalize well to patients with different disease patterns, body types, or genetic backgrounds. A facial recognition system trained on Northern European faces may have dramatically higher error rates on other populations.",
+      },
+      { type: "heading3", content: "Proxy Variables and Discrimination" },
+      {
+        type: "paragraph",
+        content:
+          "Sometimes bias doesn't come from explicitly including protected characteristics like race or gender. It comes from proxy variables that correlate with protected characteristics. A loan algorithm might use zip code as a feature. Zip code correlates with race due to historical housing discrimination. The algorithm learns to use this proxy to discriminate, even though race isn't explicitly in the model.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Identifying proxy variables requires domain knowledge and careful data analysis. A data scientist might not recognize that 'frequency of gym visits' correlates with socioeconomic status, or that 'type of smartphone' correlates with income. But these correlations mean these variables can amplify existing inequalities.",
+      },
+      { type: "heading3", content: "Design Choices and Bias" },
+      {
+        type: "paragraph",
+        content:
+          "Sometimes bias comes from how you define success. If you train a resume screening algorithm to optimize for 'likelihood of hiring' based on past hiring data, you're encoding past biases into the model. If you optimize a criminal justice algorithm for 'recidivism prediction,' you may be predicting who gets caught, not who actually reoffends—which reflects policing bias, not actual recidivism patterns.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The metrics you choose matter. The populations you test on matter. The decision thresholds you set matter. All of these are design choices that can embed bias.",
+      },
+      {
+        type: "checklistCard",
+        title: "Comprehensive Bias Detection Framework",
+        sections: [
+          {
+            heading: "1. Data Audit",
+            items: [
+              "Understand your training data. Who's represented? Who's missing?",
+              "Audit for representation across key demographics",
+              "Document limitations explicitly",
+            ],
+          },
+          {
+            heading: "2. Fairness Metrics",
+            items: [
+              "Calculate disparate impact ratios, equalized odds, calibration across groups",
+              "Measure performance for disadvantaged populations specifically",
+              "Set minimum acceptable fairness thresholds",
+            ],
+          },
+          {
+            heading: "3. Subgroup Testing",
+            items: [
+              "Test model performance across demographic and socioeconomic subgroups",
+              "Disaggregate your metrics—don't hide disparities in averages",
+            ],
+          },
+          {
+            heading: "4. Affected Community Testing",
+            items: [
+              "Have people from potentially affected communities test your system",
+              "Bring in domain experts, community advocates, and people with lived experience",
+            ],
+          },
+          {
+            heading: "5. Proxy Analysis",
+            items: [
+              "Analyze your features for proxy variables",
+              "Consider removing features that correlate with protected characteristics",
+            ],
+          },
+          {
+            heading: "6. Production Monitoring",
+            items: [
+              "Monitor your system in production for bias emergence or drift",
+              "Create feedback mechanisms for users to flag bias",
+              "Respond quickly to bias reports",
+            ],
+          },
+        ],
       },
       { type: "heading2", content: "Prevention Strategies: Upstream Solutions" },
       {
         type: "paragraph",
         content:
-          "Detection matters, but prevention is better. Build bias-resistant systems from the start. If your training data doesn't include diverse populations, your model won't work for diverse populations. Deliberately collect data from underrepresented groups. Be intentional about which features you use.",
+          "Detection matters, but prevention is better. Build bias-resistant systems from the start.",
+      },
+      { type: "heading3", content: "Inclusive Data Collection" },
+      {
+        type: "paragraph",
+        content:
+          "If your training data doesn't include diverse populations, your model won't work for diverse populations. Deliberately collect data from underrepresented groups. Oversample underrepresented populations. Partner with communities to ensure your data collection is ethical and representative.",
+      },
+      { type: "heading3", content: "Feature Selection for Fairness" },
+      {
+        type: "paragraph",
+        content:
+          "Be intentional about which features you use. Some features add value but amplify bias. Some features add minimal value but risk discrimination. Evaluate features not just for predictive power but for fairness implications. Remove proxy variables when possible.",
+      },
+      { type: "heading3", content: "Bias-Aware Model Selection" },
+      {
+        type: "paragraph",
+        content:
+          "Different model types have different fairness properties. Linear models are more interpretable and easier to audit than complex neural networks. Simpler models are often fairer and more trustworthy. Consider model complexity in your fairness evaluation.",
+      },
+      { type: "heading3", content: "Diverse Teams and Perspectives" },
+      {
+        type: "paragraph",
+        content:
+          "Homogeneous teams miss bias that diverse teams catch. Include people with different backgrounds, disciplines, and perspectives in model development. Disabled people bring accessibility expertise. People from affected communities bring lived experience. Diverse teams build fairer systems.",
+      },
+      { type: "heading2", content: "Mitigation Strategies: When Bias Is Found" },
+      {
+        type: "paragraph",
+        content:
+          "Despite your best efforts at prevention, you may find bias in your system. Here's how to respond:",
+      },
+      { type: "heading3", content: "Re-training with Balanced Data" },
+      {
+        type: "paragraph",
+        content:
+          "If bias stems from training data imbalance, collect more data from underrepresented populations and retrain your model. This often requires active data collection or synthetic data generation.",
+      },
+      { type: "heading3", content: "Changing Features or Architecture" },
+      {
+        type: "paragraph",
+        content:
+          "If specific features create bias, remove them and rebuild your model. If your model architecture amplifies bias, try a simpler approach. Sometimes architectural changes provide better fairness without sacrificing accuracy.",
+      },
+      { type: "heading3", content: "Increasing Human Oversight" },
+      {
+        type: "paragraph",
+        content:
+          "For high-stakes decisions, involve humans. Even a model with lower accuracy might produce fairer outcomes if humans review and can override decisions in cases where bias is likely.",
       },
       { type: "heading2", content: "Ongoing Monitoring: Never Stop Looking" },
       {
@@ -1241,11 +1620,34 @@ export const blogPosts: BlogPost[] = [
         content:
           "Bias detection isn't a one-time process. It's ongoing. Set up monitoring systems that track fairness metrics continuously. Create alerts that trigger when metrics degrade. Establish processes for responding quickly to bias reports.",
       },
+      {
+        type: "paragraph",
+        content:
+          "Real-world conditions change. Your users change. Your data distribution changes. Build monitoring that adapts to these changes. Track not just statistical metrics but user feedback, legal complaints, and community reports.",
+      },
+      {
+        type: "questionsCard",
+        variant: "purple",
+        questions: [
+          "Audit your training data for representation and historical biases",
+          "Identify potential proxy variables in your features",
+          "Define fairness metrics that matter for your use case",
+          "Build bias testing into your development and deployment pipeline",
+          "Create monitoring for ongoing fairness in production",
+          "Establish response procedures for when bias is discovered",
+          "Include affected community members in testing and feedback",
+        ],
+      },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "Bias in AI is a solvable problem—but it requires sustained attention, systematic processes, and organizational commitment. Organizations that invest in bias detection and prevention will build more trustworthy systems, avoid costly mistakes, and earn the trust of the communities they serve.",
+          "Bias in AI is a solvable problem—but it requires sustained attention, systematic processes, and organizational commitment. It's not a one-time fix. It's ongoing work. The organizations that invest in bias detection and prevention will build more trustworthy systems, avoid costly mistakes, and earn the trust of the communities they serve.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The choice is clear: build systems that reproduce historical bias and harm people, or build systems that actively work against discrimination. The technical tools exist. The frameworks exist. What's needed is commitment. Organizations that make that commitment will build better products—and a better world.",
       },
     ],
   },
@@ -1257,7 +1659,7 @@ export const blogPosts: BlogPost[] = [
     category: "UX Design + AI Trust",
     date: "December 7, 2025",
     readTime: "9 min read",
-    image: "/blog/designing-ai-uncertainty.jpg",
+    image: "/blog/diverse-team-collaborating-on-inclusive-technology.jpg",
     slug: "designing-ai-interfaces-uncertainty",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -1310,7 +1712,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance + Leadership",
     date: "November 30, 2025",
     readTime: "9 min read",
-    image: "/blog/burnout-to-boundaries.jpg",
+    image: "/blog/diverse-executives-in-meditation-session.jpg",
     slug: "burnout-to-boundaries-ai-governance",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -1362,7 +1764,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Regulation + Compliance",
     date: "November 23, 2025",
     readTime: "9 min read",
-    image: "/blog/eu-ai-act-practice-checklist.jpg",
+    image: "/blog/modern-corporate-office-with-diverse-team-working-on-ai-governance.jpg",
     slug: "eu-ai-act-practice-checklist-2026",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
