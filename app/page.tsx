@@ -20,10 +20,14 @@ import {
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 
+console.log("[v0] Page component loaded")
+
 export default function Page() {
+  console.log("[v0] Page rendering")
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
+    console.log("[v0] Page useEffect running")
     // Only set up intersection observer
     observerRef.current = new IntersectionObserver(
       (entries) => {
