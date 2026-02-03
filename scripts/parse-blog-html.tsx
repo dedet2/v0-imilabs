@@ -66,6 +66,7 @@ function stripHtml(html: string): string {
 
 /**
  * Parse new-style HTML articles (clean structure with tailwind)
+ * Extracts FULL content from hero section to footer, preserving order
  */
 function parseNewStyleHtml(html: string): Partial<BlogArticle> {
   const contentBlocks: ContentBlock[] = []
@@ -75,7 +76,8 @@ function parseNewStyleHtml(html: string): Partial<BlogArticle> {
   const title = titleMatch ? stripHtml(titleMatch[1]) : ''
   
   // Extract description from hero paragraph
-  const descMatch = html.match(/<p class="text-xl text-white[^"]*"[^>]*>([^<]+)<\/p>/i)
+  const descMatch = html.match(/<p class="text-xl[^"]*text-white[^"]*"[^>]*>([\s\S]*?)<\/p>/i) ||
+                    html.match(/<p class="[^"]*text-xl[^"]*"[^>]*>([\s\S]*?)<\/p>/i)
   const description = descMatch ? stripHtml(descMatch[1]) : ''
   
   // Extract category from badge
@@ -86,72 +88,69 @@ function parseNewStyleHtml(html: string): Partial<BlogArticle> {
   const readTimeMatch = html.match(/(\d+)\s*min\s*read/i)
   const readTime = readTimeMatch ? `${readTimeMatch[1]} min read` : ''
   
-  // Extract image from hero
-  const imageMatch = html.match(/src="images\/([^"]+)"/i)
-  const image = imageMatch ? `/images/blog/${imageMatch[1]}` : ''
+  // Extract image from hero - handle BOTH local images AND Unsplash URLs
+  let image = ''
+  const localImageMatch = html.match(/src="images\/([^"]+)"/i)
+  const unsplashMatch = html.match(/src="(https:\/\/images\.unsplash\.com\/[^"]+)"/i)
   
-  // Extract Key Takeaways
-  const keyTakeawaysMatch = html.match(/<div class="card-gradient[^"]*"[^>]*>[\s\S]*?<h2[^>]*>Key Takeaways<\/h2>[\s\S]*?<ul[^>]*>([\s\S]*?)<\/ul>/i)
-  if (keyTakeawaysMatch) {
-    const listItems = keyTakeawaysMatch[1].match(/<li[^>]*>[\s\S]*?<span[^>]*>([^<]*)<\/span>[\s\S]*?<\/li>/gi)
-    if (listItems) {
-      const items = listItems.map(li => {
-        const textMatch = li.match(/<span>([^<]*)<\/span>\s*<\/li>/i) || li.match(/<span[^>]*>([^<]*)<\/span>/gi)
-        if (textMatch) {
-          // Get the last span (the content one, not the bullet)
-          const spans = li.match(/<span[^>]*>([^<]*)<\/span>/gi)
-          if (spans && spans.length > 1) {
-            const lastSpan = spans[spans.length - 1]
-            const content = lastSpan.match(/<span[^>]*>([^<]*)<\/span>/i)
-            return content ? stripHtml(content[1]) : ''
-          }
-        }
-        return ''
-      }).filter(item => item.length > 0)
-      
-      if (items.length > 0) {
-        contentBlocks.push({ type: 'keyTakeaways', items })
-      }
-    }
+  if (localImageMatch) {
+    image = `/blog/${localImageMatch[1]}`
+  } else if (unsplashMatch) {
+    image = unsplashMatch[1]
   }
   
-  // Extract article content
+  // Extract date
+  const dateMatch = html.match(/<time[^>]*datetime="([^"]+)"/i) ||
+                    html.match(/(\w+\s+\d{1,2},\s+\d{4})/i)
+  const date = dateMatch ? dateMatch[1] : ''
+  
+  // Extract article content - get EVERYTHING between <article> and </article>
   const articleMatch = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i)
   if (articleMatch) {
     const articleContent = articleMatch[1]
     
-    // Extract paragraphs (skip the key takeaways card)
-    const paragraphs = articleContent.match(/<p class="text-(?:lg\s+)?text-gray-700[^"]*"[^>]*>([\s\S]*?)<\/p>/gi)
-    if (paragraphs) {
-      paragraphs.forEach(p => {
-        const content = stripHtml(p)
-        if (content.length > 20) { // Skip very short content
-          contentBlocks.push({ type: 'paragraph', content })
-        }
-      })
+    // Extract Key Takeaways first (if present)
+    const keyTakeawaysMatch = articleContent.match(/Key Takeaways[\s\S]*?<ul[^>]*>([\s\S]*?)<\/ul>/i)
+    if (keyTakeawaysMatch) {
+      const listHtml = keyTakeawaysMatch[1]
+      const items: string[] = []
+      const liMatches = listHtml.match(/<li[^>]*>([\s\S]*?)<\/li>/gi)
+      if (liMatches) {
+        liMatches.forEach(li => {
+          // Get text content, skip bullet spans
+          const text = stripHtml(li.replace(/<span[^>]*>[\s]*<\/span>/gi, ''))
+          if (text.length > 5) {
+            items.push(text)
+          }
+        })
+      }
+      if (items.length > 0) {
+        contentBlocks.push({ type: 'keyTakeaways', items })
+      }
     }
     
-    // Extract h2 headings
-    const h2s = articleContent.match(/<h2 class="text-3xl[^"]*"[^>]*>([^<]+)<\/h2>/gi)
-    if (h2s) {
-      h2s.forEach(h2 => {
-        const content = stripHtml(h2)
-        if (content.length > 0 && content !== 'Key Takeaways') {
-          // Find position and insert at appropriate place
-          contentBlocks.push({ type: 'heading2', content })
-        }
-      })
-    }
+    // Now extract ALL content in ORDER by finding h2, h3, and p tags sequentially
+    // Use a regex that captures all these elements in their original order
+    const contentPattern = /<(h2|h3|p)[^>]*>([\s\S]*?)<\/\1>/gi
+    let match
     
-    // Extract h3 headings
-    const h3s = articleContent.match(/<h3 class="text-xl[^"]*"[^>]*>([^<]+)<\/h3>/gi)
-    if (h3s) {
-      h3s.forEach(h3 => {
-        const content = stripHtml(h3)
-        if (content.length > 0) {
-          contentBlocks.push({ type: 'heading3', content })
-        }
-      })
+    while ((match = contentPattern.exec(articleContent)) !== null) {
+      const tagType = match[1].toLowerCase()
+      const content = stripHtml(match[2])
+      
+      // Skip empty content, Key Takeaways header, and very short content
+      if (content.length < 10) continue
+      if (content === 'Key Takeaways') continue
+      if (content.includes('Key Takeaways')) continue
+      
+      // Map tag type to content block type
+      if (tagType === 'h2') {
+        contentBlocks.push({ type: 'heading2', content })
+      } else if (tagType === 'h3') {
+        contentBlocks.push({ type: 'heading3', content })
+      } else if (tagType === 'p') {
+        contentBlocks.push({ type: 'paragraph', content })
+      }
     }
   }
   
@@ -161,71 +160,105 @@ function parseNewStyleHtml(html: string): Partial<BlogArticle> {
     category,
     readTime,
     image,
+    date,
     contentBlocks
   }
 }
 
 /**
  * Parse legacy Squarespace HTML articles
+ * Extracts FULL content from the blog-item-content div, preserving order
  */
 function parseLegacyHtml(html: string): Partial<BlogArticle> {
   const contentBlocks: ContentBlock[] = []
   
   // Extract title from meta or h1
   const titleMatch = html.match(/<meta itemprop="headline" content="([^"]+)"/i) ||
-                     html.match(/<h1[^>]*>([^<]+)<\/h1>/i)
+                     html.match(/<h1[^>]*class="[^"]*entry-title[^"]*"[^>]*>([\s\S]*?)<\/h1>/i) ||
+                     html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)
   const title = titleMatch ? stripHtml(titleMatch[1]) : ''
   
-  // Extract description from meta
+  // Extract description from meta or first paragraph
   const descMatch = html.match(/<meta name="description" content="([^"]+)"/i) ||
                     html.match(/<meta itemprop="description" content="([^"]+)"/i)
   const description = descMatch ? stripHtml(descMatch[1]).substring(0, 200) : ''
   
   // Extract date
-  const dateMatch = html.match(/<meta itemprop="datePublished" content="([^"]+)"/i)
+  const dateMatch = html.match(/<meta itemprop="datePublished" content="([^"]+)"/i) ||
+                    html.match(/<time[^>]*datetime="([^"]+)"/i) ||
+                    html.match(/<time[^>]*class="dt-published"[^>]*>([^<]+)</i)
   const date = dateMatch ? dateMatch[1].split('T')[0] : ''
   
-  // Extract image
-  const imageMatch = html.match(/<meta property="og:image" content="[^"]*\/([^"\/]+)"/i) ||
-                     html.match(/<meta itemprop="image" content="[^"]*\/([^"\/]+)"/i)
-  const image = imageMatch ? `/images/blog/${imageMatch[1]}` : ''
+  // Extract image - check og:image, itemprop:image, and img tags
+  let image = ''
+  const ogImageMatch = html.match(/<meta property="og:image" content="([^"]+)"/i)
+  const itemImageMatch = html.match(/<meta itemprop="image" content="([^"]+)"/i)
+  const imgMatch = html.match(/<img[^>]*class="[^"]*thumb-image[^"]*"[^>]*data-src="([^"]+)"/i) ||
+                   html.match(/<img[^>]*src="([^"]+)"[^>]*class="[^"]*thumb-image/i)
   
-  // Find the main content area - look for blog-item-content or article content
-  const contentMatch = html.match(/<div class="blog-item-content[^"]*"[^>]*>([\s\S]*?)<\/div>\s*<\/article>/i) ||
-                       html.match(/<div class="sqs-block-content"[^>]*>([\s\S]*?)<\/div>/gi)
+  if (ogImageMatch) {
+    // Extract just the filename from the full URL
+    const urlParts = ogImageMatch[1].split('/')
+    const filename = urlParts[urlParts.length - 1].split('?')[0]
+    image = `/blog/${filename}`
+  } else if (itemImageMatch) {
+    const urlParts = itemImageMatch[1].split('/')
+    const filename = urlParts[urlParts.length - 1].split('?')[0]
+    image = `/blog/${filename}`
+  } else if (imgMatch) {
+    const urlParts = imgMatch[1].split('/')
+    const filename = urlParts[urlParts.length - 1].split('?')[0]
+    image = `/blog/${filename}`
+  }
+  
+  // Find the main content area - get EVERYTHING from blog-item-content
+  // This captures from the content div all the way to its closing tag
+  const contentMatch = html.match(/<div class="blog-item-content[^"]*"[^>]*>([\s\S]*?)<\/div>\s*(?:<footer|<\/article)/i)
   
   if (contentMatch) {
-    const content = Array.isArray(contentMatch) ? contentMatch.join(' ') : contentMatch[1]
+    const content = contentMatch[1]
     
-    // Extract paragraphs
-    const paragraphs = content.match(/<p[^>]*>([\s\S]*?)<\/p>/gi)
-    if (paragraphs) {
-      paragraphs.forEach(p => {
-        const text = stripHtml(p)
-        if (text.length > 30) {
-          contentBlocks.push({ type: 'paragraph', content: text })
-        }
-      })
+    // Extract ALL content in ORDER by finding h2, h3, h4, and p tags sequentially
+    const contentPattern = /<(h2|h3|h4|p)[^>]*>([\s\S]*?)<\/\1>/gi
+    let match
+    
+    while ((match = contentPattern.exec(content)) !== null) {
+      const tagType = match[1].toLowerCase()
+      const text = stripHtml(match[2])
+      
+      // Skip empty or very short content
+      if (text.length < 15) continue
+      
+      // Map tag type to content block type
+      if (tagType === 'h2') {
+        contentBlocks.push({ type: 'heading2', content: text })
+      } else if (tagType === 'h3' || tagType === 'h4') {
+        contentBlocks.push({ type: 'heading3', content: text })
+      } else if (tagType === 'p') {
+        contentBlocks.push({ type: 'paragraph', content: text })
+      }
     }
-    
-    // Extract h2 headings
-    const h2s = content.match(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)
-    if (h2s) {
-      h2s.forEach(h2 => {
-        const text = stripHtml(h2)
-        if (text.length > 0) {
-          contentBlocks.push({ type: 'heading2', content: text })
-        }
-      })
-    }
-    
-    // Extract h3 headings  
-    const h3s = content.match(/<h3[^>]*>([\s\S]*?)<\/h3>/gi)
-    if (h3s) {
-      h3s.forEach(h3 => {
-        const text = stripHtml(h3)
-        if (text.length > 0) {
-          contentBlocks.push({ type: 'heading3', content: text })
+  }
+  
+  // If no content found, try sqs-block-content divs
+  if (contentBlocks.length === 0) {
+    const sqsBlocks = html.match(/<div class="sqs-block-content"[^>]*>([\s\S]*?)<\/div>/gi)
+    if (sqsBlocks) {
+      sqsBlocks.forEach(block => {
+        const contentPattern = /<(h2|h3|h4|p)[^>]*>([\s\S]*?)<\/\1>/gi
+        let match
+        while ((match = contentPattern.exec(block)) !== null) {
+          const tagType = match[1].toLowerCase()
+          const text = stripHtml(match[2])
+          if (text.length < 15) continue
+          
+          if (tagType === 'h2') {
+            contentBlocks.push({ type: 'heading2', content: text })
+          } else if (tagType === 'h3' || tagType === 'h4') {
+            contentBlocks.push({ type: 'heading3', content: text })
+          } else if (tagType === 'p') {
+            contentBlocks.push({ type: 'paragraph', content: text })
+          }
         }
       })
     }
