@@ -2852,7 +2852,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Accessibility litigation is rising. Demand letters cost money and time. Getting hit by a lawsuit you could have prevented is expensive. Here's what's happening, what's at stake, and how to get ahead of it.",
     category: "Accessibility + Legal Risk",
-    date: "November 9, 2025",
+    date: "November 5, 2025",
     readTime: "9 min read",
     image: "/blog/accessibility-lawsuits.jpg",
     slug: "accessibility-lawsuits-demand-letters",
