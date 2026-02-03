@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
     category: "Disability + AI Governance",
     date: "February 1, 2026",
     readTime: "8 min read",
-    image: "/blog/roi-accessible-technology.jpg",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&q=80",
     slug: "roi-accessible-technology",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -215,7 +215,7 @@ export const blogPosts: BlogPost[] = [
     category: "Disability + Innovation",
     date: "January 25, 2026",
     readTime: "9 min read",
-    image: "/blog/disability-innovation-driver.jpg",
+    image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=1920&h=1080&fit=crop&q=80",
     slug: "disability-innovation-curb-cut",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -440,7 +440,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance + Compliance",
     date: "January 18, 2026",
     readTime: "10 min read",
-    image: "/blog/eu-ai-act-leaders.jpg",
+    image: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=1920&h=1080&fit=crop&q=80",
     slug: "eu-ai-act-leaders-2026",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -691,7 +691,7 @@ export const blogPosts: BlogPost[] = [
     category: "Product Design + Accessibility",
     date: "January 11, 2026",
     readTime: "9 min read",
-    image: "/blog/inclusive-design-patterns.jpg",
+    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1920&h=1080&fit=crop&q=80",
     slug: "inclusive-design-patterns-ai",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -965,7 +965,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Policy + Governance",
     date: "January 4, 2026",
     readTime: "9 min read",
-    image: "/blog/executive-team-reviewing-compliance-dashboard.jpg",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&q=80",
     slug: "future-ai-regulation-global-trends",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -1176,7 +1176,7 @@ export const blogPosts: BlogPost[] = [
     category: "Leadership + Wellness",
     date: "December 28, 2025",
     readTime: "10 min read",
-    image: "/blog/rest-resistance-wellness.jpg",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&h=1080&fit=crop&q=80",
     slug: "rest-as-resistance-wellness-leaders",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -1384,7 +1384,7 @@ export const blogPosts: BlogPost[] = [
     category: "Product Design + Accessibility",
     date: "December 21, 2025",
     readTime: "9 min read",
-    image: "/blog/diverse-team-celebrating-inclusive-product-launch.jpg",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop&q=80",
     slug: "building-inclusive-ai-products-framework",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -1605,7 +1605,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance + Ethics",
     date: "December 14, 2025",
     readTime: "8 min read",
-    image: "/blog/building-ethical-ai-systems.jpg",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&h=1080&fit=crop&q=80",
     slug: "building-ethical-ai-systems-framework",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -1797,7 +1797,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Fairness + Risk Management",
     date: "December 7, 2025",
     readTime: "10 min read",
-    image: "/blog/algorithmic-bias-detection.jpg",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop&q=80",
     slug: "algorithmic-bias-detection-prevention",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -2005,7 +2005,7 @@ export const blogPosts: BlogPost[] = [
     category: "UX Design + AI Trust",
     date: "November 30, 2025",
     readTime: "9 min read",
-    image: "/blog/diverse-team-collaborating-on-inclusive-technology.jpg",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1920&h=1080&fit=crop&q=80",
     slug: "designing-ai-interfaces-uncertainty",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -2183,7 +2183,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance + Leadership",
     date: "November 23, 2025",
     readTime: "9 min read",
-    image: "/blog/diverse-executives-in-meditation-session.jpg",
+    image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1920&h=1080&fit=crop&q=80",
     slug: "burnout-to-boundaries-ai-governance",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -2398,7 +2398,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Regulation + Compliance",
     date: "November 16, 2025",
     readTime: "9 min read",
-    image: "/blog/modern-corporate-office-with-diverse-team-working-on-ai-governance.jpg",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&h=1080&fit=crop&q=80",
     slug: "eu-ai-act-practice-checklist-2026",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -2640,7 +2640,7 @@ export const blogPosts: BlogPost[] = [
     category: "Accessibility + AI Design",
     date: "November 9, 2025",
     readTime: "10 min read",
-    image: "/blog/diverse-tech-team-collaborating-in-modern-office.jpg",
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1920&h=1080&fit=crop&q=80",
     slug: "accessible-ai-assistants",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -2854,7 +2854,7 @@ export const blogPosts: BlogPost[] = [
     category: "Accessibility + Legal Risk",
     date: "November 5, 2025",
     readTime: "9 min read",
-    image: "/blog/executive-team-reviewing-compliance-dashboard.jpg",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&h=1080&fit=crop&q=80",
     slug: "accessibility-lawsuits-demand-letters",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3053,7 +3053,7 @@ export const blogPosts: BlogPost[] = [
     category: "Market Strategy + Disability Innovation",
     date: "November 2, 2025",
     readTime: "10 min read",
-    image: "/blog/diverse-team-collaborating-on-inclusive-technology.jpg",
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1920&h=1080&fit=crop&q=80",
     slug: "disability-economy-strategy",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3263,7 +3263,7 @@ export const blogPosts: BlogPost[] = [
     category: "Risk Travel + Disability Strategy",
     date: "October 26, 2025",
     readTime: "10 min read",
-    image: "/blog/professional-wheelchair-user-at-airport.jpg",
+    image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=1920&h=1080&fit=crop&q=80",
     slug: "risk-travel-disabled-professional",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3451,7 +3451,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI + Accessible Travel",
     date: "October 19, 2025",
     readTime: "9 min read",
-    image: "/blog/ai-accessibility-travel-app-interface.jpg",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=1080&fit=crop&q=80",
     slug: "ai-transforming-accessible-travel",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3617,7 +3617,7 @@ export const blogPosts: BlogPost[] = [
     category: "Regulation + Global Travel",
     date: "October 12, 2025",
     readTime: "10 min read",
-    image: "/blog/global-accessibility-map-diverse-travelers.jpg",
+    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1920&h=1080&fit=crop&q=80",
     slug: "global-accessibility-standards-travelers",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3801,7 +3801,7 @@ export const blogPosts: BlogPost[] = [
     category: "Disability Economy + Strategy",
     date: "October 5, 2025",
     readTime: "10 min read",
-    image: "/blog/accessible-hotel-room-modern-design.jpg",
+    image: "https://images.unsplash.com/photo-1502920514313-52581002a659?w=1920&h=1080&fit=crop&q=80",
     slug: "business-case-accessible-tourism",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
