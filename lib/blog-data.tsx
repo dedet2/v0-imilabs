@@ -32,7 +32,7 @@ export function getAllPostSlugs(): string[] {
   return blogPosts.map((post) => post.slug)
 }
 
-export function getAdjacentPosts(slug: string): { prev: BlogPost | null; next: BlogPost | null } {
+export function getAdjacentPosts(slug: string): { prev: BlogPost | null, next: BlogPost | null } {
   const currentIndex = blogPosts.findIndex((post) => post.slug === slug)
 
   if (currentIndex === -1) {
