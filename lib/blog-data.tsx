@@ -4128,6 +4128,109 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    id: 36,
+    title: "As A Black Woman, I'm Either Hyper Visible or Utterly Unseen",
+    description:
+      "A personal reflection on navigating invisibility and hypervisibility as a Black woman in tech, and the journey toward reclaiming full selfhood.",
+    category: "Race + Tech",
+    date: "September 15, 2025",
+    readTime: "8 min read",
+    image: "/blog/black-woman-hyper-visible.webp",
+    slug: "black-woman-hyper-visible-utterly-unseen",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "I was only five years old the first time I mentally code switched and went into another person's experience. My father was never able to handle the pain caused by the sickle cell anemia I was born with, and it was in the throes of a painful sickle cell crisis that I learned he couldn't cope with hospitals. Children are very perceptive to their parents' emotions, and in that moment I could feel his terror and helplessness pulsing within me as if it were my own. During that experience I decided that I had to be strong for the both of us. I was too young to manage all of my pain, my fear, and his anxiety; so, I minimized the agony in my body in order to diminish his panic.",
+      },
+      {
+        type: "paragraph",
+        content: "In doing so, we would all be okay.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Little did I know that this skill of diminishing myself would become an asset when I moved from Togo to America, where there is a strong societal standard for making other people comfortable. As a child, I internalized that being a good American citizen meant never getting into trouble, never asking for too much, never being ungrateful, and the list didn't stop there, despite how doing so sometimes endangered my life. As I progressed through schooling and professional life, the messaging included working twice as hard to prove I deserved to be here, and staying invisible so that my struggles would never burden anyone else or, more importantly, never interrupt the narrative of pure meritocracy.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "To this day, I disappear in order to manage other people's feelings and the world around me. My body takes on other people's fears, scrutiny, biases, and rejection. At 5 feet, 6 inches, I've been taught that my body will be taken as imposing or threatening, so I never wear heels. My posture suffers from trying to shrink myself into an acceptable form. Despite these undue expectations, I found ways to assert myself in my youth because this is the only body I have, and it refuses to be washed out. (I became a goth in high school to reclaim my sense of self. With all the makeup and clothing, it ensured I'd go unnoticed while also masking my race and gender.)",
+      },
+      { type: "heading2", content: "Invisibility Became a Requisite for Success" },
+      {
+        type: "paragraph",
+        content:
+          "The only way I could get work done, let alone advance in the tech industry, was to ensure no one was bothered by my differences, that I wasn't seen as an agitator, as difficult to work with, as overly questioning, or disrespectful to authority. To put it more bluntly, I learned to stay in my place. I was a very capable chameleon.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Looking back, one could say that an invisible life made me a really powerful client advocate. Since I could code switch so easily, it wasn't hard to build technology inclusive of wider abilities or different cultural norms. I could see the unseen and push companies to build for them, and we really did design better products. This all came at the cost of muting parts of myself, however, and I had to ask myself, \"What was the real price for all this good work?\"",
+      },
+      {
+        type: "paragraph",
+        content:
+          "I lived and worked in Japan for nearly a decade and was treated, quite openly, like a foreigner. All the other foreigners got the same treatment too. It didn't take me long to realize that this was how I'm treated at home; with suspicion and mistrust, quizzical looks and resigned head shakes. It was somewhat tolerable while living abroad because my race and gender wasn't the focus (being a foreigner was), but I knew something would have to be different when I returned home to America in 2018.",
+      },
+      { type: "heading2", content: "What I Didn't Know Is Who I Was Bringing Back Home" },
+      {
+        type: "paragraph",
+        content:
+          "Looking around cautiously, I searched for models of what a Black woman could be in this world to address that need for change. I wanted so badly to emerge from the armor I had built around myself, but I wondered what that would even look like. Most people look at celebrities or people in the media for that validation, and when I looked, I saw women like Kerry Washington and Viola Davis and wondered if I needed to start dressing better or wear stilettos. I saw Mellody Hobson and Vernā Myers and wondered if I needed to be better at business. While stars are an ideal in their own right, they don't always reflect the average individual walking down the street.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "I want to be kind, compassionate, playful, serious, uncompromising, demanding, driven, and fully human. I don't want to lose any part of myself.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Without Black female role models to whom I could relate, I didn't know how to become myself, or even who to become. Becoming visible was no simple matter of just announcing myself to the world. Not after a lifetime of believing that my skin, my hair, my body, and my voice were all sources of discomfort for the dominant culture. Did it matter that I had a doctorate, was multilingual, cultured, and experienced, if I didn't look the part? We need to find self-affirmation everywhere we go to play the part with confidence.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For a long time I speculated on which parts of me I could share and which I might have to conceal forever or even let die. Yet even with those feelings, words kept repeating from inside me like a mantra, a prayer, a plea: I want everything. I want to be professional and warm. I want to be kind, compassionate, playful, serious, uncompromising, demanding, driven, and fully human. I don't want to lose any part of myself. Why can't my whole self be acceptable, why can't it be enough?",
+      },
+      { type: "heading2", content: "The Baboon and the Bushman" },
+      {
+        type: "paragraph",
+        content:
+          "The comedian Dave Chappelle led me to an old nature video of how bushmen capture and use baboons to find water. In short, a bushman captures a baboon by hiding melon seeds in a tiny hole he's drilled into an ant heap. Curiosity overcomes the baboon and he sticks his hand in the hole and grabs the seeds, trapping himself with his own fist and stubbornness. \"If he were smart, he would just let go,\" the narrator says. But instead, he is captured and fed copious amounts of salt, so rare that he gorges himself and is soon weary with thirst. The bushman then releases the baboon and follows him to an underground spring, where they both drink.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In Chappelle's life, the seeds that trapped him were promises of money and fame. And he was smart enough to let go. For me, the analogy is about how a seemingly mutually beneficial arrangement is in reality transactional and manipulative. The creature is made into a tool, seen as a means to an end and useful only insofar as it can give the human what he wants — what the human is incapable of finding for himself. Yes, you could say the baboon was unharmed, but his very nature was used against him. He was made to thirst, and then made to share his resources with his captor. His value and everything that happens to him is driven by someone else's thirst.",
+      },
+      { type: "heading2", content: "Opening My Fist" },
+      {
+        type: "paragraph",
+        content:
+          "As a Black, disabled woman in tech, it's no exaggeration to say that I am rarely seen as a being unto myself, with autonomy, choices, and a voice. Society sees me as a means to a diversity quota or a token minority colleague whose very presence threatens the white supremacy narrative. When I came back to the States and decided to be fully seen at last, I opened my fist and let go of the mistaken belief that there was only one way to be an acceptable or palatable Black woman. I let go of the idea in my mind that someone like Kerry Washington is the vision of perfection. I let go of the belief that there was only room for one Black woman at a time, and that I would just have to wait my turn.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "I arrived in America with no more time to waste. I am here to build the products that more bodies can use. Products that recognize and serve difference instead of erasing it. I am here to remind myself that my identity is not and does not need to be a neatly bound whole and there are varying layers of intersectionality; concentric circles woven with beautiful contradictions that all make up who I am as an African, an American, first generation immigrant, trans-racial adoptee. As a person living with a life-long disability, as a multicultural and multilingual person, and as so much more. I am here to remind myself that that is okay, and I have patterns of strong, complex women in my ancestry, in my kith and kin family with whom I can find resonance.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "My hand is open. Hold the salt, and spread the wealth. No one will be led to take what is mine.",
+      },
+      { type: "heading2", content: "Honoring Black Women Who Inspired Me" },
+      {
+        type: "paragraph",
+        content:
+          "I'd like to honor several Black women (this is not an exhaustive list) who have helped or inspired me become who I am, whose words or lives or actions have entered into my own, thus overlapping with my own personhood — in particular, those who have played some role in helping to keep me strong, fighting for change, and believing that it is possible — either as surrogate mamas, mentors, activists, role models and/or guides. It is my way of emphasizing the fact that none of us does it all by herself, for each of us is linked in myriad ways to others: My birth mother Maman Delphine, Mia Birdsong, Joy Buolamwini, Nancy Douyon, Erica Joy Baker, Claudia Rankine, Vivianne Castillo, Annie Jean-Baptiste, Yakaira Núñez, Stephanie Lampkin, Noni Session, and Masheika Allgood.",
+      },
+    ],
+  },
+  {
     id: 22,
     title: "The Spirit of Juneteenth is Acknowledgement",
     description:
@@ -5042,109 +5145,6 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         content:
           "As with all emerging technologies, we must ask not just 'can we build this?' but 'should we build this, and for whom?' The answer, as always, requires centering those most likely to be harmed—not just those most likely to benefit.",
-      },
-    ],
-  },
-  {
-    id: 36,
-    title: "As A Black Woman, I'm Either Hyper Visible or Utterly Unseen",
-    description:
-      "A personal reflection on navigating invisibility and hypervisibility as a Black woman in tech, and the journey toward reclaiming full selfhood.",
-    category: "Race + Tech",
-    date: "September 15, 2025",
-    readTime: "8 min read",
-    image: "/blog/black-woman-hyper-visible.webp",
-    slug: "black-woman-hyper-visible-utterly-unseen",
-    author: "Dr. Dédé Tetsubayashi",
-    contentBlocks: [
-      {
-        type: "paragraph",
-        content:
-          "I was only five years old the first time I mentally code switched and went into another person's experience. My father was never able to handle the pain caused by the sickle cell anemia I was born with, and it was in the throes of a painful sickle cell crisis that I learned he couldn't cope with hospitals. Children are very perceptive to their parents' emotions, and in that moment I could feel his terror and helplessness pulsing within me as if it were my own. During that experience I decided that I had to be strong for the both of us. I was too young to manage all of my pain, my fear, and his anxiety; so, I minimized the agony in my body in order to diminish his panic.",
-      },
-      {
-        type: "paragraph",
-        content: "In doing so, we would all be okay.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Little did I know that this skill of diminishing myself would become an asset when I moved from Togo to America, where there is a strong societal standard for making other people comfortable. As a child, I internalized that being a good American citizen meant never getting into trouble, never asking for too much, never being ungrateful, and the list didn't stop there, despite how doing so sometimes endangered my life. As I progressed through schooling and professional life, the messaging included working twice as hard to prove I deserved to be here, and staying invisible so that my struggles would never burden anyone else or, more importantly, never interrupt the narrative of pure meritocracy.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "To this day, I disappear in order to manage other people's feelings and the world around me. My body takes on other people's fears, scrutiny, biases, and rejection. At 5 feet, 6 inches, I've been taught that my body will be taken as imposing or threatening, so I never wear heels. My posture suffers from trying to shrink myself into an acceptable form. Despite these undue expectations, I found ways to assert myself in my youth because this is the only body I have, and it refuses to be washed out. (I became a goth in high school to reclaim my sense of self. With all the makeup and clothing, it ensured I'd go unnoticed while also masking my race and gender.)",
-      },
-      { type: "heading2", content: "Invisibility Became a Requisite for Success" },
-      {
-        type: "paragraph",
-        content:
-          "The only way I could get work done, let alone advance in the tech industry, was to ensure no one was bothered by my differences, that I wasn't seen as an agitator, as difficult to work with, as overly questioning, or disrespectful to authority. To put it more bluntly, I learned to stay in my place. I was a very capable chameleon.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Looking back, one could say that an invisible life made me a really powerful client advocate. Since I could code switch so easily, it wasn't hard to build technology inclusive of wider abilities or different cultural norms. I could see the unseen and push companies to build for them, and we really did design better products. This all came at the cost of muting parts of myself, however, and I had to ask myself, \"What was the real price for all this good work?\"",
-      },
-      {
-        type: "paragraph",
-        content:
-          "I lived and worked in Japan for nearly a decade and was treated, quite openly, like a foreigner. All the other foreigners got the same treatment too. It didn't take me long to realize that this was how I'm treated at home; with suspicion and mistrust, quizzical looks and resigned head shakes. It was somewhat tolerable while living abroad because my race and gender wasn't the focus (being a foreigner was), but I knew something would have to be different when I returned home to America in 2018.",
-      },
-      { type: "heading2", content: "What I Didn't Know Is Who I Was Bringing Back Home" },
-      {
-        type: "paragraph",
-        content:
-          "Looking around cautiously, I searched for models of what a Black woman could be in this world to address that need for change. I wanted so badly to emerge from the armor I had built around myself, but I wondered what that would even look like. Most people look at celebrities or people in the media for that validation, and when I looked, I saw women like Kerry Washington and Viola Davis and wondered if I needed to start dressing better or wear stilettos. I saw Mellody Hobson and Vernā Myers and wondered if I needed to be better at business. While stars are an ideal in their own right, they don't always reflect the average individual walking down the street.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "I want to be kind, compassionate, playful, serious, uncompromising, demanding, driven, and fully human. I don't want to lose any part of myself.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Without Black female role models to whom I could relate, I didn't know how to become myself, or even who to become. Becoming visible was no simple matter of just announcing myself to the world. Not after a lifetime of believing that my skin, my hair, my body, and my voice were all sources of discomfort for the dominant culture. Did it matter that I had a doctorate, was multilingual, cultured, and experienced, if I didn't look the part? We need to find self-affirmation everywhere we go to play the part with confidence.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "For a long time I speculated on which parts of me I could share and which I might have to conceal forever or even let die. Yet even with those feelings, words kept repeating from inside me like a mantra, a prayer, a plea: I want everything. I want to be professional and warm. I want to be kind, compassionate, playful, serious, uncompromising, demanding, driven, and fully human. I don't want to lose any part of myself. Why can't my whole self be acceptable, why can't it be enough?",
-      },
-      { type: "heading2", content: "The Baboon and the Bushman" },
-      {
-        type: "paragraph",
-        content:
-          "The comedian Dave Chappelle led me to an old nature video of how bushmen capture and use baboons to find water. In short, a bushman captures a baboon by hiding melon seeds in a tiny hole he's drilled into an ant heap. Curiosity overcomes the baboon and he sticks his hand in the hole and grabs the seeds, trapping himself with his own fist and stubbornness. \"If he were smart, he would just let go,\" the narrator says. But instead, he is captured and fed copious amounts of salt, so rare that he gorges himself and is soon weary with thirst. The bushman then releases the baboon and follows him to an underground spring, where they both drink.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "In Chappelle's life, the seeds that trapped him were promises of money and fame. And he was smart enough to let go. For me, the analogy is about how a seemingly mutually beneficial arrangement is in reality transactional and manipulative. The creature is made into a tool, seen as a means to an end and useful only insofar as it can give the human what he wants — what the human is incapable of finding for himself. Yes, you could say the baboon was unharmed, but his very nature was used against him. He was made to thirst, and then made to share his resources with his captor. His value and everything that happens to him is driven by someone else's thirst.",
-      },
-      { type: "heading2", content: "Opening My Fist" },
-      {
-        type: "paragraph",
-        content:
-          "As a Black, disabled woman in tech, it's no exaggeration to say that I am rarely seen as a being unto myself, with autonomy, choices, and a voice. Society sees me as a means to a diversity quota or a token minority colleague whose very presence threatens the white supremacy narrative. When I came back to the States and decided to be fully seen at last, I opened my fist and let go of the mistaken belief that there was only one way to be an acceptable or palatable Black woman. I let go of the idea in my mind that someone like Kerry Washington is the vision of perfection. I let go of the belief that there was only room for one Black woman at a time, and that I would just have to wait my turn.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "I arrived in America with no more time to waste. I am here to build the products that more bodies can use. Products that recognize and serve difference instead of erasing it. I am here to remind myself that my identity is not and does not need to be a neatly bound whole and there are varying layers of intersectionality; concentric circles woven with beautiful contradictions that all make up who I am as an African, an American, first generation immigrant, trans-racial adoptee. As a person living with a life-long disability, as a multicultural and multilingual person, and as so much more. I am here to remind myself that that is okay, and I have patterns of strong, complex women in my ancestry, in my kith and kin family with whom I can find resonance.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "My hand is open. Hold the salt, and spread the wealth. No one will be led to take what is mine.",
-      },
-      { type: "heading2", content: "Honoring Black Women Who Inspired Me" },
-      {
-        type: "paragraph",
-        content:
-          "I'd like to honor several Black women (this is not an exhaustive list) who have helped or inspired me become who I am, whose words or lives or actions have entered into my own, thus overlapping with my own personhood — in particular, those who have played some role in helping to keep me strong, fighting for change, and believing that it is possible — either as surrogate mamas, mentors, activists, role models and/or guides. It is my way of emphasizing the fact that none of us does it all by herself, for each of us is linked in myriad ways to others: My birth mother Maman Delphine, Mia Birdsong, Joy Buolamwini, Nancy Douyon, Erica Joy Baker, Claudia Rankine, Vivianne Castillo, Annie Jean-Baptiste, Yakaira Núñez, Stephanie Lampkin, Noni Session, and Masheika Allgood.",
       },
     ],
   },

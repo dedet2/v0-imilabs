@@ -51,11 +51,27 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 
   return (
     <main className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className="relative py-20 sm:py-32 bg-gradient-to-br from-[#7209b7] via-[#6366f1] to-[#06b6d4] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%)]" />
+      {/* Hero Section with Background Image */}
+      <section className="relative py-20 sm:py-32 text-white overflow-hidden min-h-[400px] md:min-h-[500px]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src={post.image} 
+            alt={post.title} 
+            fill 
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#9333ea]/85 via-[#a855f7]/85 to-[#22d3ee]/85" />
+        </div>
+        {/* Radial Overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_60%)] z-[1]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.15),transparent_60%)] z-[1]" />
+        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl">
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
@@ -66,7 +82,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
             <Badge className="mb-4 bg-white/20 text-white border-white/30 backdrop-blur-sm" variant="outline">
               {post.category}
             </Badge>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance mb-6 drop-shadow-lg">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-balance mb-6 drop-shadow-lg">
               {post.title}
             </h1>
             <p className="text-xl text-white/95 mb-8 leading-relaxed max-w-3xl drop-shadow">{post.description}</p>
@@ -75,25 +91,11 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
                 <User className="h-4 w-4" />
                 {post.author}
               </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                {post.date}
-              </span>
+              <span>|</span>
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
                 {post.readTime}
               </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Image */}
-      <section className="py-8 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
-              <Image src={post.image} alt={post.title} fill className="object-cover" />
             </div>
           </div>
         </div>
