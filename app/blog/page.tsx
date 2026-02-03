@@ -8,6 +8,8 @@ import Image from "next/image"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { blogPosts } from "@/lib/blog-data"
 
+console.log("[v0] Blog page loaded - Total articles:", blogPosts.length, "First article:", blogPosts[0]?.title, "Last article:", blogPosts[blogPosts.length - 1]?.title)
+
 export const metadata: Metadata = {
   title: "Blog | Dr. Dédé & incluu",
   description: "Insights on AI governance, tech equity, disability advocacy, and inclusive innovation from Dr. Dédé Tetsubayashi.",
