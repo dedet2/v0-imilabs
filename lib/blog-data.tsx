@@ -1127,16 +1127,44 @@ export const blogPosts: BlogPost[] = [
           "Invest in governance infrastructure: Documentation, monitoring, bias detection, human oversight—build these capabilities now. They're table stakes for AI governance globally.",
         ],
       },
-      { type: "heading2", content: "The Bottom Line" },
+      { type: "heading2", content: "Key Questions for Leadership" },
+      {
+        type: "questionsCard",
+        variant: "cyan",
+        questions: [
+          "In which jurisdictions do we deploy AI? What regulations apply in each?",
+          "Are we tracking regulatory changes in key markets? Do we have a process to stay current?",
+          "What would global AI compliance look like for our organization? What's our timeline and budget?",
+          "Are we positioned to benefit from early compliance, or are we at risk of falling behind?",
+          "How are our competitors responding to AI regulation? Are we ahead or behind?",
+        ],
+      },
+      { type: "heading2", content: "The Opportunity Within Regulation" },
       {
         type: "paragraph",
         content:
-          "AI regulation is evolving rapidly. The specifics vary by region—the EU is prescriptive, the US is fragmented, Asia-Pacific is engagement-focused—but the direction is converging. Organizations that invest in flexible, principled AI governance now will be better positioned as regulations tighten globally.",
+          "AI regulation is often framed as a burden. Compliance costs money. It slows down development. It adds requirements.",
       },
       {
         type: "paragraph",
         content:
-          "The strategic approach is clear: start with the highest bar (the EU AI Act), build governance frameworks that can adapt to different regulatory regimes, and invest in the capabilities—documentation, monitoring, bias detection, human oversight—that are becoming requirements worldwide. The organizations that do this now will have a competitive advantage. Those who wait will be scrambling to catch up.",
+          "But there's another way to see this. Organizations that build strong AI governance now will have cleaner practices, better risk management, and more defensible operations. They'll be positioned to move faster as regulations clarify. They'll earn trust from users and regulators. And they'll have a competitive advantage over organizations that are slow to adapt.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The future of AI is not no regulation—it's intelligent regulation. Organizations that understand this and prepare accordingly will thrive. Those that wait will struggle.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "AI regulation is here and accelerating. The EU AI Act sets a template that regulators worldwide are following. The US is fragmenting into state and sector-specific rules. Other regions are developing localized approaches. But the core principles are converging: transparency, human oversight, fairness, and accountability.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Organizations should prepare now. Start with the EU AI Act as your baseline. Map your jurisdictions. Build flexible governance frameworks. Invest in compliance infrastructure. Engage with regulators. The organizations that move now will be positioned to lead in the regulated AI era. Those that wait will be playing catch-up.",
       },
     ],
   },
@@ -1313,20 +1341,38 @@ export const blogPosts: BlogPost[] = [
           "Model rest: Take actual vacation. Set clear boundaries around work hours. Share your sabbatical plans. Leaders set the tone.",
           "Normalize rest conversations: Ask team members how they're doing, how they're managing their energy. Make wellbeing visible in one-on-ones and team discussions.",
           "Build rest into organizational practices: No meetings before 10 AM. No all-hands after 5 PM. Mandatory minimum vacation. These are policies, not suggestions.",
-          "Audit meeting load: How many meetings are actually necessary? Can decisions be made asynchronously? Can information be shared in writing instead of live?",
-          "Invest in asynchronous infrastructure: Document decisions. Record meetings. Make information accessible without requiring real-time presence.",
+          "Audit meeting load: How many meetings are actually necessary? Which could be async? Reduce meeting burden to create space for real work and recovery.",
+          "Invest in tools and processes for async work: Documentation platforms, video recording tools, decision-making frameworks that don't require synchronous meetings.",
+          "Measure wellbeing outcomes: Include wellbeing metrics in performance reviews. Track burnout indicators. Make it clear that sustainable work is valued.",
+        ],
+      },
+      { type: "heading2", content: "Questions for Yourself and Your Leadership Team" },
+      {
+        type: "questionsCard",
+        variant: "cyan",
+        questions: [
+          "How many hours per week am I actually working? Is it sustainable?",
+          "When was the last time I took a real vacation where I was fully off work?",
+          "What messages am I sending about rest through my own behavior?",
+          "What organizational policies or cultural norms are making rest difficult for my team?",
+          "What would change if we treated wellbeing and rest as governance infrastructure, not soft HR issues?",
         ],
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "Rest is not a cost to be minimized. It's an investment with measurable returns: better decisions, lower turnover, stronger cultures, and more resilient organizations. Leaders who honor rest—their own and their teams'—build organizations that outperform those running on fumes.",
+          "Burnout in leadership is a widespread crisis. It damages individuals, teams, and organizations. It impairs decision-making, increases risk, and destroys the very cultures leaders are trying to build. Yet the solution is often overlooked: rest.",
       },
       {
         type: "paragraph",
         content:
-          "The work of leadership requires sustained cognitive capacity, emotional regulation, strategic thinking, and creative problem-solving. None of these are possible when leaders are burned out. Rest is the foundation. And building organizations that treat rest as infrastructure—not indulgence—is one of the most important governance decisions leaders can make.",
+          "Rest isn't a luxury or weakness. It's essential infrastructure for sustainable leadership. It's a governance issue. It's tied to decision quality, risk management, and organizational resilience. Leaders who understand this and build rest into their organizations will have better decision-making, stronger cultures, and lower turnover.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The invitation is clear: stop glorifying burnout. Stop treating availability as a proxy for commitment. Instead, build organizations where rest is valued, boundaries are respected, and sustainable work is possible. Your organization's future depends on it.",
       },
     ],
   },
@@ -1509,35 +1555,45 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "Be honest about what your AI system can't do. If your speech recognition works poorly with certain accent patterns or speech differences, disclose that. If your image recognition struggles with certain visual conditions, be transparent. Don't hide failures from users who need to make decisions based on knowing the system's limitations.",
+          "Be honest about what your AI system can't do. If your speech recognition works poorly with certain accent patterns or speech differences, disclose that. If your image recognition struggles with certain visual conditions, be transparent. Don't hide failures from users who need to make decisions based on your system's reliability.",
+      },
+      { type: "heading2", content: "From Good Intentions to Measurable Results" },
+      {
+        type: "paragraph",
+        content:
+          "Inclusive design requires ongoing investment and accountability. Set accessibility targets and measure progress. Track how many users with disabilities are using your product and whether they're having the same experience as non-disabled users. Monitor accessibility complaints and ensure they're being addressed as quickly as other critical issues.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Celebrate wins, but stay humble. Accessibility is not a destination you reach; it's a commitment you maintain. New features can introduce new accessibility barriers. User needs evolve. Technology changes. Your inclusive design program needs to evolve with them.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Most importantly: include disabled people in the process. They're not objects of your inclusive design efforts. They're experts with lived experience who understand what inclusion actually means. Listen to them, compensate them fairly for their expertise, and treat their feedback as the product insight it is.",
       },
       {
         type: "questionsCard",
+        title: "Reflection Questions for Your Team",
         variant: "purple",
         questions: [
-          "Is disability expertise represented on your product team—not just in an advisory role, but in decision-making positions?",
-          "Do you have ongoing user testing programs with disabled users representing various access needs?",
-          "Have you audited your training data for representation of disabled people? For historical biases?",
-          "Are accessibility requirements part of your feature specifications and definition of done?",
-          "Do you have feedback mechanisms that let disabled users flag accessibility issues in production?",
-          "Are you measuring accessibility outcomes—not just compliance, but actual usability for disabled users?",
+          "How many disabled people are on your product team? What perspectives are missing?",
+          "When was the last time your team tested your product with disabled users using real assistive technologies?",
+          "Do you know what accessibility barriers disabled users encounter with your product in production?",
+          "How are disabled users represented in your training data for AI systems?",
         ],
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "Inclusive AI product design isn't charity. It's good business. It's better design. It's how you build products that work for the full range of human diversity—and that's how you build products that win.",
+          "Inclusive AI products aren't an option or a nice-to-have. They're a competitive necessity. Products built with disabled users at the center are more innovative, more robust, and more valuable to broader audiences. Organizations that treat inclusive design as a core competency will outperform those who treat it as a compliance burden.",
       },
       {
         type: "paragraph",
         content:
-          "The organizations that invest in disability-led design, that build testing programs with disabled users, that audit their data for accessibility failures—these organizations build better products. They reach larger markets. They avoid costly accessibility lawsuits. They attract and retain talent who value working somewhere that takes inclusion seriously.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "The alternative is building products that work for some people and exclude others. That's not just ethically problematic—it's a competitive disadvantage. Build for disability. Build for inclusion. Build for everyone.",
+          "The path forward is clear: center disabled voices, build accessibility into your foundation, test rigorously with real users, practice inclusive data practices, and commit to continuous improvement. When you do, you don't just build accessible products. You build better products that work for everyone.",
       },
     ],
   },
@@ -1966,31 +2022,156 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "AI systems don't know what they don't know. They make predictions based on training data that may not cover all situations. They encounter edge cases they've never seen before. They fail in ways both obvious and subtle. Yet most AI interfaces present their outputs with false certainty: a single number, a confident recommendation, a clear decision. Users see this and assume the system is sure.",
+          "AI systems don't know what they don't know. They make predictions based on training data that may not cover all situations. They encounter edge cases they've never seen before. They fail in ways both obvious and subtle. Yet most AI interfaces present their outputs with false certainty: a single number, a confident recommendation, a clear decision. Users see this and assume the system is sure. Then they're disappointed or harmed when the system was wrong.",
       },
       { type: "heading2", content: "Understanding AI Uncertainty" },
       {
         type: "paragraph",
         content:
-          "Before we can design for uncertainty, we need to understand where it comes from. Some uncertainty is fundamental to the problem (aleatoric uncertainty). Some stems from your model's limitations (epistemic uncertainty). When the current situation differs from training data, models can fail spectacularly while appearing confident.",
+          "Before we can design for uncertainty, we need to understand where it comes from.",
       },
-      { type: "heading2", content: "Concrete Interface Patterns" },
+      { type: "heading3", content: "Aleatoric Uncertainty: Inherent Randomness" },
       {
         type: "paragraph",
         content:
-          "Instead of showing a single recommendation, show a range. Use visual metaphors that users intuitively understand: traffic light confidence levels, feature importance for explainability. Show users which features most influenced the prediction.",
+          "Some uncertainty is fundamental to the problem. In medical diagnosis, two patients with identical symptoms might have different conditions. In loan prediction, economic factors outside the model might determine whether a loan is repaid. This is aleatoric uncertainty—irreducible randomness in the world.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "With aleatoric uncertainty, even a perfect model can only be so confident. Users need to understand this. A recommendation with 70% confidence isn't wrong—it's appropriately uncertain for a genuinely uncertain situation.",
+      },
+      { type: "heading3", content: "Epistemic Uncertainty: Model Limitations" },
+      {
+        type: "paragraph",
+        content:
+          "Some uncertainty stems from your model's limitations. The model hasn't seen enough training data. The situation is outside the model's training distribution. The input is different from anything the model learned from. This is epistemic uncertainty—reducible through more or better data, or through acknowledging the limitation.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "With epistemic uncertainty, users need to know when the model is operating outside its knowledge base. If your spam filter has never seen this type of email, it should say so rather than guessing confidently.",
+      },
+      { type: "heading3", content: "Distribution Shift: When the World Changes" },
+      {
+        type: "paragraph",
+        content:
+          "Models are trained on historical data representing past conditions. But the world changes. Economic conditions shift. User preferences evolve. Attack patterns change. When the current situation differs from training data, models can fail spectacularly while appearing confident.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Good interfaces detect distribution shift and alert users. If current patterns diverge significantly from training data, the system should acknowledge this rather than pretending certainty it doesn't have.",
+      },
+      {
+        type: "designPatternsCard",
+        title: "Design Principles for Uncertain AI",
+        items: [
+          {
+            heading: "1. Honest Confidence Indicators",
+            description: "Show users how confident the AI system actually is. Use visual metaphors: confidence bars, color gradients (red for low confidence, green for high), explicit percentages. Make sure confidence reflects actual uncertainty, not marketing spin.",
+          },
+          {
+            heading: "2. Contextual Explanations",
+            description: "For high-stakes decisions, explain why the AI made its recommendation. What features influenced the decision? What would need to change for a different recommendation? Users with explanation can make better decisions about whether to trust the system.",
+          },
+          {
+            heading: "3. Safe Defaults",
+            description: "When uncertain, default to the safer option. If a credit recommendation is borderline, default to requiring human review rather than automatic approval. If a medical diagnosis is uncertain, recommend additional testing rather than skipping it. Safe defaults protect users when systems fail.",
+          },
+          {
+            heading: "4. Clear Error Handling",
+            description: "Surface errors transparently. Don't hide failures. Tell users when the system encountered an input it couldn't handle, when confidence was too low to recommend, when additional information is needed. Transparent errors are better than silent failures.",
+          },
+          {
+            heading: "5. Escalation Paths",
+            description: "Provide clear paths to human review. When AI can't decide confidently, when the situation is novel, when stakes are high, users should be able to escalate to a human decision-maker easily. Don't trap users with uncertain AI.",
+          },
+          {
+            heading: "6. Monitoring for Distribution Shift",
+            description: "Detect when inputs diverge from training data. Alert users and systems when you're operating outside your knowledge base. Build in monitoring for model drift and alert stakeholders when performance degrades.",
+          },
+        ],
+      },
+      { type: "heading2", content: "Concrete Interface Patterns" },
+      { type: "heading3", content: "Confidence Bands, Not Point Estimates" },
+      {
+        type: "paragraph",
+        content:
+          "Instead of showing a single recommendation ('Risk score: 0.72'), show a range ('Risk score: 0.65-0.79, with 70% confidence'). This communicates both the prediction and the uncertainty around it. Users understand that the actual value is probably within the band.",
+      },
+      { type: "heading3", content: "Traffic Light Confidence Levels" },
+      {
+        type: "paragraph",
+        content:
+          "Use visual metaphors that users intuitively understand: Green (high confidence, > 90%) means 'The AI is confident. You can probably trust this.' Yellow (moderate confidence, 60-90%) means 'The AI thinks this is likely but isn't certain. Review carefully.' Red (low confidence, < 60%) means 'The AI is uncertain. Require human review or additional information.'",
+      },
+      { type: "heading3", content: "Feature Importance for Explainability" },
+      {
+        type: "paragraph",
+        content:
+          "Show users which features most influenced the prediction. 'This recommendation is based primarily on: recent behavior (40%), account age (30%), location (20%), other factors (10%).' This helps users assess whether the reasoning makes sense.",
+      },
+      { type: "heading3", content: "Similarity to Training Data" },
+      {
+        type: "paragraph",
+        content:
+          "For novel inputs, show how similar they are to training data. 'This input resembles 5% of training examples. Consider extra caution.' This signals epistemic uncertainty to users who understand it.",
+      },
+      { type: "heading3", content: "Flags for Out-of-Distribution Inputs" },
+      {
+        type: "paragraph",
+        content:
+          "Detect inputs that differ significantly from training data and flag them explicitly. 'This case is unusual compared to training data. Recommend human review.' Users get a clear signal that the system is operating outside its expertise.",
       },
       { type: "heading2", content: "Human-AI Collaboration" },
       {
         type: "paragraph",
         content:
-          "The best AI interfaces aren't purely AI or purely human. They're collaborative systems where AI provides input and humans make decisions. Frame AI recommendations as decision support, not automatic decisions. Build feedback loops so humans can improve the system over time.",
+          "The best AI interfaces aren't purely AI or purely human. They're collaborative systems where AI provides input and humans make decisions.",
+      },
+      { type: "heading3", content: "Decision Support, Not Automation" },
+      {
+        type: "paragraph",
+        content:
+          "Frame AI recommendations as decision support, not automatic decisions. Show the AI recommendation, explain the reasoning, show confidence, then let humans decide. This maintains appropriate responsibility and allows humans to apply judgment that AI can't.",
+      },
+      { type: "heading3", content: "Feedback Loops" },
+      {
+        type: "paragraph",
+        content:
+          "When humans override AI recommendations, capture that feedback and use it to improve the system. Over time, feedback from human decisions helps the system learn where it was wrong. This also helps you detect distribution shift—if humans are overriding frequently, something has changed.",
+      },
+      { type: "heading3", content: "Training for Appropriate Reliance" },
+      {
+        type: "paragraph",
+        content:
+          "Good interface design is only half the solution. Users also need training on how to use AI appropriately. They need to understand the system's strengths and limitations. They need practice at recognizing when to trust recommendations and when to be skeptical. Without training, even well-designed interfaces fail.",
+      },
+      {
+        type: "practicalStepsCard",
+        title: "Building Uncertainty Into Your AI Product",
+        items: [
+          { label: "Quantify uncertainty", description: "Measure both aleatoric and epistemic uncertainty. Know what you don't know." },
+          { label: "Surface uncertainty", description: "Design interfaces that show uncertainty honestly. Avoid false certainty." },
+          { label: "Build confidence indicators", description: "Make uncertainty visible to users in your UI." },
+          { label: "Implement safe defaults", description: "Handle uncertain cases with error handling and safe defaults." },
+          { label: "Create escalation paths", description: "Let users involve humans when needed." },
+          { label: "Monitor distribution shift", description: "Alert users when the world has changed." },
+          { label: "Train users", description: "Help them understand when to trust AI and when to be skeptical." },
+          { label: "Build feedback loops", description: "Learn from human decisions and improve over time." },
+        ],
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "AI systems are uncertain, and that's okay. What's not okay is hiding that uncertainty from users. Interface design that surfaces uncertainty honestly enables users to make better decisions and maintains appropriate trust.",
+          "AI systems are uncertain, and that's okay. What's not okay is hiding that uncertainty from users. Interface design that surfaces uncertainty honestly—through confidence indicators, explanations, safe defaults, and clear escalation paths—enables users to make better decisions. It maintains appropriate skepticism rather than false trust. It protects people when systems fail.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The alternative is systems that inspire false confidence and then betray that confidence when they're wrong. Users feel deceived. Trust erodes. People are harmed. Designing for uncertainty isn't a constraint on your AI product—it's a foundation for building AI that people can actually rely on.",
       },
     ],
   },
@@ -2024,25 +2205,188 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "The answer is usually yes. Burnout is not just an individual wellness issue. It's a governance risk. Exhausted leaders and teams make worse decisions about AI, miss critical signals, communicate less honestly, and build unsustainable systems that fall apart under pressure.",
+          "The answer is usually yes.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Burnout is not just an individual wellness issue. It's a governance risk. Exhausted leaders and teams make worse decisions about AI, miss critical signals, communicate less honestly, and build unsustainable systems that fall apart under pressure. If you're serious about AI governance, you have to be serious about addressing burnout.",
       },
       { type: "heading2", content: "The Governance Cost of Burnout" },
       {
         type: "paragraph",
         content:
-          "Burnout degrades decision-making in predictable ways. Exhausted people operate in short-term survival mode. They skip steps. They rationalize corners. They become risk-blind—unable to see threats because they're cognitively overloaded. In AI governance specifically, this is dangerous.",
+          "Burnout degrades decision-making in predictable ways. Exhausted people operate in short-term survival mode. They skip steps. They rationalize corners. They default to 'that's how we've always done it' rather than rethinking structures. They become risk-blind—unable to see threats because they're cognitively overloaded.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In AI governance specifically, this is dangerous. Good governance requires sustained attention to detail, willingness to ask uncomfortable questions, and the cognitive space to think about edge cases and downstream consequences. When your governance team is running on fumes, you get compliance theater instead of real risk management.",
+      },
+      { type: "heading3", content: "How Burnout Breaks Governance Decisions" },
+      {
+        type: "paragraph",
+        content:
+          "Burned-out leaders skip stakeholder engagement because convening meetings feels impossible. They approve risk assessments without careful review because the alternative is another meeting they're already late to. They avoid hard conversations about algorithm bias or training data ethics because they don't have the emotional bandwidth to handle conflict. They prioritize speed and getting things done over building the trust and transparency that make governance actually work.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The irony is sharp: the more urgent and chaotic things feel, the more governance suffers. And yet most organizations respond by asking their governance teams to work harder.",
+      },
+      { type: "heading3", content: "The Honesty Problem" },
+      {
+        type: "paragraph",
+        content:
+          "One of the earliest casualties of burnout is candor. When people are exhausted, they stop raising concerns. They stop saying 'I don't know.' They stop asking for help. They nod along in meetings because they don't have the energy to object. A governance process that relies on people voluntarily surfacing problems gets very quiet very quickly.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "That silence is read as agreement. It's not. It's collapse.",
       },
       { type: "heading2", content: "Rest as a Governance Structure" },
       {
         type: "paragraph",
         content:
-          "Rest is not something your team members do on their own time after work. Rest is infrastructure. It's a design choice. It's something you build into how governance actually works. Sustainable meeting loads, leadership that models boundaries, governance roles that don't require superhuman availability.",
+          "This is where I want to reframe something fundamental: rest is not something your team members do on their own time after work. Rest is infrastructure. It's a design choice. It's something you build into how governance actually works.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A rest-positive AI governance structure looks different. It means:",
+      },
+      { type: "heading3", content: "Sustainable Meeting Loads" },
+      {
+        type: "paragraph",
+        content:
+          "Governance requires communication. But governance can also drown in meetings. If your AI ethics committee meets twice a week, your risk assessment team is always on-call, and your compliance officers have back-to-back sessions, you've created a structure where people can't think. Build in margins. Create blocks where governance teams have deep work time, not just meeting time. Make synchronous collaboration intentional, not infinite.",
+      },
+      { type: "heading3", content: "Leadership That Models Boundaries" },
+      {
+        type: "paragraph",
+        content:
+          "If you're the leader of a governance function, your team watches how you manage your own time. If you're answering Slack messages at 10pm, if you're saying yes to every meeting request, if you're visibly stressed and sleep-deprived, you're telling your team that governance is a job without boundaries. They'll internalize that message. They'll work unsustainably too. And their work will suffer.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Conversely, when leaders visibly take time off, when they say no to meetings, when they leave at a reasonable hour, they create permission for their teams to do the same. That permission is powerful. It's also practical—it's the only way to recruit and retain people who actually know how to do governance well.",
+      },
+      { type: "heading3", content: "Governance Roles That Don't Require Superhuman Availability" },
+      {
+        type: "paragraph",
+        content:
+          "Some organizations structure their governance so that a single person is accountable for everything. That person becomes a bottleneck and a burnout magnet. Better governance distributes load. Multiple people know how to do each critical function. People have clear off-days. Coverage is planned, not ad-hoc. Decision-making authority is shared, not concentrated.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This requires doing less and focusing governance on what actually matters. You can't govern everything equally. Pick your highest-risk areas, focus there, and accept that you'll have less detailed governance in lower-risk domains. That's okay. Sustainable governance is better than perfect governance that burns people out.",
+      },
+      { type: "heading2", content: "Building Rest-Positive Team Norms" },
+      {
+        type: "paragraph",
+        content:
+          "Creating space for rest also means establishing norms that make it acceptable to take that space. This is cultural work, and it's harder than it sounds.",
+      },
+      { type: "heading3", content: "Saying 'I Don't Know' and 'I Need Help'" },
+      {
+        type: "paragraph",
+        content:
+          "Exhausted people pretend to have more certainty than they do. They go along with decisions they have concerns about. They don't ask questions. If you want honest governance, you have to actively create space for uncertainty and for asking for help. That means rewarding people who say 'I'm not sure about this' and praising people who admit when they're overwhelmed.",
+      },
+      { type: "heading3", content: "Slowing Down on Big Decisions" },
+      {
+        type: "paragraph",
+        content:
+          "Not every AI governance decision needs to be made immediately. In fact, most don't. Building in intentional thinking time—a week to get stakeholder input, a few days to review a risk assessment, overnight to sleep on a governance policy—produces better decisions. It also signals to your team that quality thinking is valued over speed, and that people should engage their whole selves, not just rush through.",
+      },
+      { type: "heading3", content: "Rotating High-Stress Work" },
+      {
+        type: "paragraph",
+        content:
+          "Compliance audits are intense. Incident response is stressful. Data privacy reviews are detail-heavy. Don't let the same people do all the hard work. Rotate who takes on the most demanding governance tasks. Build in recovery time after intense periods. This prevents burnout and also spreads expertise—so you're not dependent on any one person.",
+      },
+      {
+        type: "checklistCard",
+        title: "Practical Steps: Implementing Rest-Positive AI Governance",
+        sections: [
+          {
+            heading: "1. Audit Your Governance Load",
+            items: [
+              "Map every meeting, decision, and accountability that falls on your governance team",
+              "Where are the bottlenecks? Who's overloaded?",
+              "What can be eliminated, automated, or delegated?",
+            ],
+          },
+          {
+            heading: "2. Set Governance Office Hours",
+            items: [
+              "Instead of always being available, establish specific times when your governance team is 'on call'",
+              "Outside those windows, people focus on deep work",
+            ],
+          },
+          {
+            heading: "3. Create a Governance Calendar That's Intentional",
+            items: [
+              "Schedule governance work and meetings with intent",
+              "Risk assessment season is August. Quarterly reviews are scheduled months ahead",
+              "People know when demands will be high and can plan accordingly",
+            ],
+          },
+          {
+            heading: "4. Establish Clear Decision Timelines",
+            items: [
+              "For AI governance decisions, you don't need an answer today",
+              "Give yourself permission to take a week to think, gather input, and decide well",
+              "Document decision timelines in your governance policies",
+            ],
+          },
+          {
+            heading: "5. Model Boundaries Visibly",
+            items: [
+              "If you lead governance, take your vacation. Leave at 5pm on Fridays",
+              "Don't answer Slack after hours",
+              "Tell your team explicitly: 'Sustainable governance is a priority, and I model that'",
+            ],
+          },
+          {
+            heading: "6. Rotate Governance Leadership",
+            items: [
+              "Don't let one person own AI governance",
+              "Share accountability. Rotate who leads different governance functions",
+              "Build in redundancy so the system doesn't collapse if someone burns out",
+            ],
+          },
+        ],
+      },
+      { type: "heading2", content: "The Paradox: Better Governance Through Less Urgency" },
+      {
+        type: "paragraph",
+        content:
+          "Here's the counterintuitive insight: the organizations that spend the most time on urgent governance work often have the worst governance. They're constantly in crisis mode, reacting to problems instead of anticipating them. By contrast, organizations that create space for deeper thinking, honest conversations, and sustainable work rhythms tend to have more resilient AI governance.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is because good governance isn't about speed. It's about attention. It's about people having the cognitive and emotional capacity to notice what matters, to ask good questions, to push back when something seems wrong. You can't do that when you're burned out.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The paradox resolves when you realize: slowing down makes governance faster. When your team isn't exhausted, decisions actually get made. Policies get implemented. Problems surface quickly instead of festering. You move with less friction because people aren't operating in survival mode.",
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "The organizations that spend the most time on urgent governance work often have the worst governance. They're constantly in crisis mode. By contrast, organizations that create space for deeper thinking, honest conversations, and sustainable work rhythms tend to have more resilient AI governance.",
+          "AI governance is here to stay. As regulations tighten and AI systems become more consequential, organizations will need thoughtful, thorough governance. You can either build that governance in a way that sustains people, or you can build it in a way that burns them out. But you can't have both excellent governance and a perpetually exhausted team.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If you're serious about AI governance, be serious about rest. It's not a distraction from governance work. It's foundational to it.",
       },
     ],
   },
