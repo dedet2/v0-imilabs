@@ -8,8 +8,8 @@
  * EXTRACTS CORRECT IMAGE PATHS from the original HTML files.
  */
 
-import * as fs from 'fs'
-import * as path from 'path'
+const fs = require('fs')
+const path = require('path')
 
 /**
  * Extracts text content from HTML, stripping tags but preserving text
