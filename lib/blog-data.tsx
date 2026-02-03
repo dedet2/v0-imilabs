@@ -1174,7 +1174,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Why rest is essential for sustainable leadership, better decisions, and an organization's governance capacity.",
     category: "Leadership + Wellness",
-    date: "January 4, 2026",
+    date: "December 28, 2025",
     readTime: "10 min read",
     image: "/blog/rest-resistance-wellness.jpg",
     slug: "rest-as-resistance-wellness-leaders",
@@ -1382,7 +1382,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Inclusive product design isn't an afterthought or a compliance checklist. It's a core competency that drives better outcomes for all users while expanding your market reach.",
     category: "Product Design + Accessibility",
-    date: "December 28, 2025",
+    date: "December 21, 2025",
     readTime: "9 min read",
     image: "/blog/diverse-team-celebrating-inclusive-product-launch.jpg",
     slug: "building-inclusive-ai-products-framework",
@@ -1603,7 +1603,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Ethical AI isn't a constraint on innovation. It's a foundation for sustainable, trustworthy systems that create long-term value for organizations and the communities they serve.",
     category: "AI Governance + Ethics",
-    date: "December 21, 2025",
+    date: "December 14, 2025",
     readTime: "8 min read",
     image: "/blog/building-ethical-ai-systems.jpg",
     slug: "building-ethical-ai-systems-framework",
@@ -1795,7 +1795,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bias in AI systems causes real harm to real people. Understanding how bias enters your systems and building detection infrastructure to catch it is essential for responsible AI deployment.",
     category: "AI Fairness + Risk Management",
-    date: "December 14, 2025",
+    date: "December 7, 2025",
     readTime: "10 min read",
     image: "/blog/algorithmic-bias-detection.jpg",
     slug: "algorithmic-bias-detection-prevention",
@@ -2003,7 +2003,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "AI systems are uncertain. Good interface design surfaces that uncertainty honestly, helping users make better decisions while maintaining trust.",
     category: "UX Design + AI Trust",
-    date: "December 7, 2025",
+    date: "November 30, 2025",
     readTime: "9 min read",
     image: "/blog/diverse-team-collaborating-on-inclusive-technology.jpg",
     slug: "designing-ai-interfaces-uncertainty",
@@ -2181,7 +2181,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "When leaders are burned out, AI governance suffers. Exhausted decision-makers make poor judgment calls, miss critical risks, and build dysfunctional teams. The path to better AI governance starts with rest.",
     category: "AI Governance + Leadership",
-    date: "November 30, 2025",
+    date: "November 23, 2025",
     readTime: "9 min read",
     image: "/blog/diverse-executives-in-meditation-session.jpg",
     slug: "burnout-to-boundaries-ai-governance",
@@ -2396,7 +2396,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "The EU AI Act is now in force. Organizations operating in or serving European markets need practical compliance strategies. Here's what you need to do right now.",
     category: "AI Regulation + Compliance",
-    date: "November 23, 2025",
+    date: "November 16, 2025",
     readTime: "9 min read",
     image: "/blog/modern-corporate-office-with-diverse-team-working-on-ai-governance.jpg",
     slug: "eu-ai-act-practice-checklist-2026",
@@ -2638,7 +2638,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "AI assistants are powerful tools. They're also frequently inaccessible. If your assistant only works through text or voice, you're excluding people who are deaf, hard of hearing, visually impaired, or have other disabilities.",
     category: "Accessibility + AI Design",
-    date: "November 16, 2025",
+    date: "November 9, 2025",
     readTime: "10 min read",
     image: "/blog/diverse-tech-team-collaborating-in-modern-office.jpg",
     slug: "accessible-ai-assistants",
@@ -3951,7 +3951,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Recognizing Juneteenth as a National Holiday is not a solution to ending racism. It's a bandaid, a temporary fix to a wound at which we have given only a cursory triage.",
     category: "Racial Justice + History",
-    date: "March 3, 2024",
+    date: "September 14, 2025",
     readTime: "5 min read",
     image: "/blog/the-spirit-of-juneteenth.jpg",
     slug: "the-spirit-of-juneteenth-is-acknowledgement",
@@ -4018,7 +4018,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Black people are plagued by Imposter Syndrome, questioning their own competency and self worth; 'Have I gained entry, or simply been allowed entry?'",
     category: "Racial Justice + Workplace",
-    date: "March 4, 2024",
+    date: "September 7, 2025",
     readTime: "7 min read",
     image: "/blog/blog-post-image-template-2.png",
     slug: "black-excellence-and-the-low-expectations-of-white-supremacy",
@@ -4085,7 +4085,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "'Race-norming'—also called 'race correction,' 'ethnic adjustment,' and 'race adjustment'—refers to the adjustment of medical test results or medical risk assessment algorithms based on a patient's race.",
     category: "Healthcare + Racial Justice",
-    date: "March 5, 2024",
+    date: "August 31, 2025",
     readTime: "8 min read",
     image: "/blog/trnava-university-lr_mkznghuu-unsplash-scaled-2.jpg",
     slug: "race-norming-and-bioethics",
@@ -4152,7 +4152,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "2015 brought us #OscarsSoWhite shedding light on the absence of BIPOC voices and representation in the Academy Awards. 2018 brought us another hashtag: #WellnessSoWhite.",
     category: "Wellness + Racial Justice",
-    date: "March 6, 2024",
+    date: "August 24, 2025",
     readTime: "6 min read",
     image: "/blog/tanaka-pendeke-o9gfrup1l9w-unsplash-scaled-2.jpg",
     slug: "racism-and-the-wellness-industry",
@@ -4219,7 +4219,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "It has taken us some time to find the words to express our deep empathy, sympathy, and worry for Asian communities across the US.",
     category: "Solidarity + Racial Justice",
-    date: "April 1, 2024",
+    date: "August 17, 2025",
     readTime: "5 min read",
     image: "/blog/pexels-photo-5723322-1.jpeg",
     slug: "we-stand-in-unity-with-our-asian-allies",
@@ -4276,7 +4276,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "[Helen] Pluckrose believes there is an objective truth! She believes in one truth that is rooted in Western, White/European ideologies of a particular scientific method which denounces any other forms of truth.",
     category: "Critical Theory + Philosophy",
-    date: "April 2, 2024",
+    date: "August 10, 2025",
     readTime: "8 min read",
     image: "/blog/the_divisive_fallacy_of_objective_truth.jpg",
     slug: "the-divisive-fallacy-of-objective-truth",
@@ -4343,7 +4343,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "At Incluu, LLC, we create brave spaces for life. Our work in the diversity, equity, and inclusion space at the intersection of human, tech, and civil rights has continued to expose the pitfalls organizations face.",
     category: "DEI + Organizational Change",
-    date: "April 3, 2024",
+    date: "August 3, 2025",
     readTime: "7 min read",
     image: "/blog/good_cheap_fast-2.png",
     slug: "5-things-holding-organizations-back-from-transformative-change",
@@ -4429,7 +4429,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "International Women's Day is a day in which many celebrate the progress we're making towards equal pay and fair wages between men and women.",
     category: "Gender Equity + Economic Justice",
-    date: "April 4, 2024",
+    date: "July 27, 2025",
     readTime: "6 min read",
     image: "/blog/gris-zy-1920x1080-1.jpeg",
     slug: "equal-pay-caregiving-how-covid19-further-exacerbates-existing-inequities",
@@ -4496,7 +4496,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "One of the biggest misconceptions about tech is aptly summarized: '[Tech is] afforded a supremacy that humans feel comfortable not questioning. And yet, technology isn't just a neutral tool.'",
     category: "Tech Ethics + Intersectionality",
-    date: "April 5, 2024",
+    date: "July 20, 2025",
     readTime: "8 min read",
     image: "/blog/christina-wocintechchat-com-rmweulmcyxm-unsplash-1024x684-281-29-2.jpg",
     slug: "the-importance-of-intersectionality-in-tech",
@@ -4563,7 +4563,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "At first, you might be thinking, what does design have to do with liberation? You might feel a tinge of discomfort come over you, and a sigh of, 'Is nothing safe from wokeness?'",
     category: "Design + Liberation",
-    date: "April 6, 2024",
+    date: "July 13, 2025",
     readTime: "7 min read",
     image: "/blog/libdes-2.jpg",
     slug: "what-is-liberatory-design",
@@ -4625,7 +4625,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "'Digital blackface' is used to describe various types of minstrel performance that become available in cyberspace. Blackface minstrelsy is a theatrical tradition dating back to the early 19th century.",
     category: "Digital Culture + Racism",
-    date: "April 7, 2024",
+    date: "July 6, 2025",
     readTime: "6 min read",
     image: "/blog/priscilla-du-preez-bjhuu6bpuza-unsplash-2048x1365-2.jpg",
     slug: "digital-blackface-are-you-complicit",
@@ -4682,7 +4682,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "In as many years, 3 Black men have had their lives upended by wrongful arrests. Robert Williams, Michael Oliver, and Nijeer Parks were misidentified by facial recognition software.",
     category: "AI Bias + Criminal Justice",
-    date: "April 18, 2024",
+    date: "June 29, 2025",
     readTime: "8 min read",
     image: "/blog/ariel-sion-i7v-btpnktg-unsplash-2048x1365-2.jpg",
     slug: "facial-recognition-and-racial-bias",
@@ -4738,7 +4738,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "When I present on panels about equitable and inclusive design, there are two areas I emphasize: these are the areas where we, as humans have the greatest opportunity to bring about transformative change.",
     category: "AI + Privacy",
-    date: "April 18, 2024",
+    date: "June 22, 2025",
     readTime: "7 min read",
     image: "/blog/adversarial-clothing.png",
     slug: "the-pitfalls-of-adversarial-clothing",
@@ -4805,7 +4805,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "I recently sat down with a group to discuss the pros and cons of emerging technologies from my perspective as both anthropologist and ethical technologist; specifically, smart lock systems.",
     category: "AI Ethics + Housing",
-    date: "April 19, 2024",
+    date: "June 15, 2025",
     readTime: "9 min read",
     image: "/blog/amol-tyagi-0juktkotkpu-unsplash-1638x2048-2.jpg",
     slug: "ethical-ai-and-smart-lock-systems",
