@@ -2415,31 +2415,220 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "The EU AI Act became enforceable in 2024, and we're now in the period where organizations are either getting ahead of compliance or running headlong toward violations. I've seen both approaches. The ones getting ahead are spending time now understanding what they actually need to do.",
+          "The EU AI Act became enforceable in 2024, and we're now in the period where organizations are either getting ahead of compliance or running headlong toward violations. I've seen both approaches. The ones getting ahead are spending time now understanding what they actually need to do. The ones who aren't will find enforcement much more expensive and disruptive.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is a practical guide to EU AI Act readiness in 2026. Not theoretical. Not what you might do someday. What you need to do now.",
       },
       { type: "heading2", content: "First: Does the EU AI Act Apply to You?" },
       {
         type: "paragraph",
         content:
-          "The EU AI Act applies if you operate in the EU market (sell to EU customers, have EU users, or provide services to EU organizations), are based in the EU, or have any AI system in your stack that touches EU users or data.",
+          "This question seems simple but trips up a lot of organizations. The EU AI Act applies if you: operate in the EU market (sell to EU customers, have EU users, or provide services to EU organizations), are based in the EU, or have any AI system in your stack that touches EU users or data.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If any of that applies to you, you need to think about EU AI Act compliance. The Act applies to AI systems, which broadly means software that uses machine learning or algorithmic decision-making. This includes chatbots, recommendation engines, hiring tools, content moderation systems, credit scoring systems, and more.",
       },
       { type: "heading2", content: "Second: Classify Your AI Systems by Risk" },
       {
         type: "paragraph",
         content:
-          "The EU AI Act has a tiered approach. Prohibited AI uses are flat-out banned. High-risk systems require extensive compliance. Limited-risk systems require transparency. Most AI systems fall into minimal or no risk categories.",
+          "The EU AI Act has a tiered approach. Not all AI systems require the same level of compliance. Risk classification determines your obligations:",
+      },
+      { type: "heading3", content: "Prohibited AI" },
+      {
+        type: "paragraph",
+        content:
+          "Some AI uses are flat-out banned under the Act. This includes subliminal AI manipulation, social credit scores, and real-time facial recognition in public spaces (with very limited exceptions). If you're using any of these, you need to stop.",
+      },
+      { type: "heading3", content: "High-Risk AI" },
+      {
+        type: "paragraph",
+        content:
+          "High-risk systems are those that could cause serious harm to fundamental rights. This includes AI used in hiring, education, creditworthiness assessment, and law enforcement. These systems require extensive compliance: detailed documentation, bias testing, human oversight, data quality requirements, and more.",
+      },
+      { type: "heading3", content: "Limited-Risk AI" },
+      {
+        type: "paragraph",
+        content:
+          "Systems that interact directly with people (like chatbots) fall into this category and require transparency obligations. You need to tell people they're interacting with AI and explain what it can and can't do.",
+      },
+      { type: "heading3", content: "Minimal or No Risk" },
+      {
+        type: "paragraph",
+        content:
+          "Most AI systems that don't directly impact rights or safety fall into this category. No specific compliance obligations, though best practices still matter.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The first practical step: classify every AI system you have. Most organizations have more AI systems than they realize. Tools, plugins, third-party APIs that use AI—it all counts. Make a list. Then classify each one by risk level.",
       },
       { type: "heading2", content: "Third: Build Your AI Inventory and Impact Assessment" },
       {
         type: "paragraph",
         content:
-          "You can't manage what you don't know you have. Organizations often discover hidden AI systems when they start compliance work. Your inventory should include name and purpose, risk classification, where it's deployed, what training data it uses, and who's accountable for it.",
+          "You can't manage what you don't know you have. Organizations often discover hidden AI systems when they start compliance work. A recommendation algorithm somewhere. A chatbot a team stood up. An API they're using that claims to use AI. An internal tool built with machine learning.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Your inventory should include: name and purpose of the AI system, risk classification, where it's deployed and who uses it, what training data it uses, whether it impacts EU users or data, key performance metrics and known limitations, and who's accountable for it.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For high-risk systems, you also need an impact assessment. This documents how the system could harm people, what safeguards you have in place, and how you'll monitor for problems.",
+      },
+      { type: "heading2", content: "Fourth: Documentation, Documentation, Documentation" },
+      {
+        type: "paragraph",
+        content:
+          "EU AI Act compliance is heavily documentation-focused. Regulators want to see evidence that you've thought through risks and taken action. For high-risk systems, you need:",
+      },
+      { type: "heading3", content: "Technical Documentation" },
+      {
+        type: "paragraph",
+        content:
+          "How the system was built, what data it uses, what architecture and algorithms power it, how it was trained and tested. This needs to be detailed enough that someone else could understand the system.",
+      },
+      { type: "heading3", content: "Training Data Documentation" },
+      {
+        type: "paragraph",
+        content:
+          "What data was used to train the system, how much, where it came from, whether it includes personal data, what biases or quality issues it has. This is critical for demonstrating that your system isn't discriminatory.",
+      },
+      { type: "heading3", content: "Testing and Performance Records" },
+      {
+        type: "paragraph",
+        content:
+          "How you tested the system for bias, accuracy, robustness, and adversarial attacks. What tests did you run? What results did you get? Where does the system underperform?",
+      },
+      { type: "heading3", content: "Monitoring and Maintenance Plans" },
+      {
+        type: "paragraph",
+        content:
+          "How you'll keep monitoring the system in production. What metrics will you track? What triggers require action? How will you handle drift or degradation?",
+      },
+      { type: "heading3", content: "Human Oversight Procedures" },
+      {
+        type: "paragraph",
+        content:
+          "For high-risk systems, humans need to stay in the loop. Document how your team will review system outputs, override decisions when needed, and escalate concerns.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The pattern here is clear: if you can document it, you can demonstrate compliance. If you can't document it, you have a problem.",
+      },
+      {
+        type: "checklistCard",
+        title: "EU AI Act Readiness Checklist",
+        sections: [
+          {
+            heading: "Phase 1: Assessment and Inventory",
+            items: [
+              "Identify all AI systems in your organization",
+              "Determine whether the EU AI Act applies to your organization",
+              "Classify each system by risk level",
+              "Create an inventory with all required information",
+              "Assign ownership and accountability for each system",
+            ],
+          },
+          {
+            heading: "Phase 2: High-Risk System Compliance",
+            items: [
+              "Conduct impact assessments for high-risk systems",
+              "Document training data, architecture, and algorithms",
+              "Implement and document testing for bias and accuracy",
+              "Design human oversight procedures",
+              "Establish monitoring and maintenance plans",
+              "Create data quality procedures",
+            ],
+          },
+          {
+            heading: "Phase 3: Limited-Risk and Transparency",
+            items: [
+              "For chatbots and interactive systems: create clear disclosures that AI is being used",
+              "Document system capabilities and limitations",
+              "Create user-facing documentation explaining how AI affects decisions",
+              "Implement procedures for users to exercise rights",
+            ],
+          },
+          {
+            heading: "Phase 4: Governance and Ongoing Compliance",
+            items: [
+              "Designate an AI governance lead or team",
+              "Establish a process for monitoring compliance over time",
+              "Create incident response procedures for AI-related harms",
+              "Build compliance into your AI development process",
+              "Train teams on EU AI Act requirements",
+              "Plan for regular audits and updates",
+            ],
+          },
+        ],
+      },
+      { type: "heading2", content: "Key Things to Get Right Now" },
+      { type: "heading3", content: "Identify Prohibited AI" },
+      {
+        type: "paragraph",
+        content:
+          "If you're using real-time facial recognition in public spaces, subliminal manipulation, or social credit scoring, you need to stop now. These are banned, and there's no compliance path. Full stop.",
+      },
+      { type: "heading3", content: "Document Training Data" },
+      {
+        type: "paragraph",
+        content:
+          "This is where a lot of organizations stumble. You need to be able to say exactly what data trained your system. If you can't, that's a serious compliance gap. If your data includes personal information from EU residents without proper legal basis, that compounds the problem.",
+      },
+      { type: "heading3", content: "Test for Bias" },
+      {
+        type: "paragraph",
+        content:
+          "For high-risk systems, you need evidence that you've tested for bias, particularly in protected characteristics. Use established bias testing frameworks. Document what you found and what you did about it. If you found bias and ignored it, that's a major liability.",
+      },
+      { type: "heading3", content: "Plan for Human Oversight" },
+      {
+        type: "paragraph",
+        content:
+          "High-risk systems need human involvement. This doesn't mean hiring an army of people to review every decision. It means your system is designed so humans can understand and override AI decisions when needed, and have procedures to do so.",
+      },
+      { type: "heading3", content: "Be Transparent with Users" },
+      {
+        type: "paragraph",
+        content:
+          "If your system interacts with people, they need to know they're interacting with AI. Be clear about what it can do and its limitations. This builds trust and ensures informed consent.",
+      },
+      { type: "heading2", content: "A Word on Penalties" },
+      {
+        type: "paragraph",
+        content:
+          "The EU AI Act comes with significant penalties. For high-risk AI violations, organizations can face fines up to 6% of global annual revenue. For other violations, it's 3%. These penalties increase over time as enforcement escalates. Organizations that start compliance now will be in a much better position than those that wait.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "There's also reputational risk. Enforcement actions are public. Getting caught violating the Act damages trust with customers, partners, and employees.",
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "EU AI Act compliance is achievable. It requires inventory, classification, documentation, and process changes. Start now. The organizations that begin compliance work early will be better positioned, more competitive, and more trusted.",
+          "EU AI Act compliance isn't optional. It's also not impossible if you start now. The organizations that will struggle are the ones that wait until they're under enforcement action or facing a legal challenge.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Your immediate next steps: audit your AI systems, classify them by risk, build your inventory, and start documenting. For high-risk systems, invest in bias testing, impact assessments, and governance structures. The work is substantial, but it's also foundational to responsible AI development. And it's what your regulators expect to see.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Get ahead of this now. Your future self will be grateful.",
       },
     ],
   },
@@ -2451,7 +2640,7 @@ export const blogPosts: BlogPost[] = [
     category: "Accessibility + AI Design",
     date: "November 16, 2025",
     readTime: "10 min read",
-    image: "/blog/accessible-ai-assistants.jpg",
+    image: "/blog/diverse-tech-team-collaborating-in-modern-office.jpg",
     slug: "accessible-ai-assistants",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -2468,25 +2657,192 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "I was on a call last week with a team that had just launched an AI assistant. They were excited about the capabilities—conversational, fast, helpful. But when I asked about accessibility, there was silence. They'd built it to work beautifully with voice and text. They hadn't thought about deaf users, hard of hearing users, blind users, or people with motor disabilities.",
+          "I was on a call last week with a team that had just launched an AI assistant. They were excited about the capabilities—conversational, fast, helpful. But when I asked about accessibility, there was silence. They'd built it to work beautifully with voice and text. They hadn't thought about deaf users, hard of hearing users, blind users, or people with motor disabilities. They'd accidentally created a system that worked great for some people and was unusable for others.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is the default pattern. AI assistants are built around a single interaction model—usually voice or text—and accessibility becomes an afterthought, if it happens at all.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It doesn't have to be this way. Building accessible AI assistants is not only the right thing to do—it's also better design. Multimodal interfaces serve more people, they're more resilient to errors, and they work better in diverse environments.",
       },
       { type: "heading2", content: "The Accessibility Problem with Most AI Assistants" },
       {
         type: "paragraph",
         content:
-          "Most AI assistants are built with one primary interface: voice or text. If your interface is voice-only, you've excluded deaf and hard of hearing users. If it's text-only, you've excluded blind users who rely on screen readers. If interactions require mouse clicks on visually small targets, you've excluded people with motor disabilities.",
+          "Most AI assistants are built with one primary interface: voice or text. If your interface is voice-only, you've excluded deaf and hard of hearing users. If it's text-only, you've excluded blind users who rely on screen readers. If interactions require mouse clicks on visually small targets, you've excluded people with motor disabilities or vision limitations.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The broader problem is design by persona. Developers imagine a 'typical user' and optimize for that person's needs. That typical user is rarely disabled. So accessibility gets overlooked until someone complains or a lawsuit forces the issue.",
+      },
+      { type: "heading3", content: "Voice Assistants and Deaf Users" },
+      {
+        type: "paragraph",
+        content:
+          "Voice assistants are incredibly useful if you can hear. But deaf and hard of hearing users can't use them. Even transcription doesn't fully solve this—if your assistant relies on voice input, deaf users can't interact with it. They're locked out.",
+      },
+      { type: "heading3", content: "Text Interfaces and Blind Users" },
+      {
+        type: "paragraph",
+        content:
+          "Text-based assistants are often built without screen reader support. The interface might be visual—buttons, layouts, formatting. If it's not properly marked up with semantic HTML and ARIA labels, blind users using screen readers can't navigate it. They get text read aloud without context or structure.",
+      },
+      { type: "heading3", content: "Complex Interactions and Motor Disabilities" },
+      {
+        type: "paragraph",
+        content:
+          "Some AI interfaces require precise mouse movements, rapid clicking, or touch gestures. People with motor disabilities, tremors, or limited dexterity struggle with these interfaces. They might be able to use keyboard navigation or voice input, but if the interface doesn't support it, they're excluded.",
       },
       { type: "heading2", content: "The Multimodal Approach: Accessibility as Design" },
       {
         type: "paragraph",
         content:
-          "The solution is multimodal design. This means building your AI assistant to work across multiple input and output modalities: text, voice, visual, keyboard, and alternative input methods. Users should be able to interact via voice, text, keyboard, or other input methods depending on their needs and environment.",
+          "The solution is multimodal design. This means building your AI assistant to work across multiple input and output modalities: text, voice, visual, keyboard, and alternative input methods. Not all at once for every interaction—but multiple pathways for people to engage.",
+      },
+      { type: "heading3", content: "Multiple Input Modes" },
+      {
+        type: "paragraph",
+        content:
+          "Users should be able to interact via voice, text, keyboard, or other input methods depending on their needs and environment. Deaf users need text or gesture input. Blind users need keyboard or voice input. Someone in a noisy environment might prefer text. Someone with arthritis might prefer voice. By supporting multiple input types, you serve everyone better.",
+      },
+      { type: "heading3", content: "Multiple Output Modes" },
+      {
+        type: "paragraph",
+        content:
+          "The assistant should be able to provide output through text, voice, visual formatting, and other means. Transcripts for voice output. Alt text for images. Captions if there's audio or video. Visual cues and text for information that might otherwise be only visual. This redundancy makes your assistant more useful and more accessible.",
+      },
+      { type: "heading3", content: "Semantic Structure and Markup" },
+      {
+        type: "paragraph",
+        content:
+          "If your assistant has a visual interface, it needs proper semantic HTML and ARIA labels so screen readers can navigate it effectively. Buttons should be actual buttons, not divs that look like buttons. Links should be links. Lists should be properly marked up. This matters tremendously for blind users and assistive technology.",
+      },
+      { type: "heading3", content: "Keyboard Navigation" },
+      {
+        type: "paragraph",
+        content:
+          "Every function your assistant supports should be accessible via keyboard. Tab order should be logical. Nothing should require a mouse. This is essential for people who can't use a mouse and for users with certain disabilities who rely on keyboard shortcuts.",
+      },
+      { type: "heading2", content: "Practical Design Principles" },
+      { type: "heading3", content: "Design for Multiple Sensory Modes" },
+      {
+        type: "paragraph",
+        content:
+          "Don't rely on a single sense to communicate information. If something is conveyed through color, also convey it through shape, text, or icon. If information is only available through sound, provide a text alternative. If the interface is only visual, provide voice or text alternatives.",
+      },
+      { type: "heading3", content: "Provide Context and Structure" },
+      {
+        type: "paragraph",
+        content:
+          "Users of assistive technology often navigate in a non-linear way. A screen reader user might jump from heading to heading. A voice user might skip around. Make sure your interface provides enough context and structure that people can understand what's happening even if they're not reading sequentially.",
+      },
+      { type: "heading3", content: "Test at Every Stage" },
+      {
+        type: "paragraph",
+        content:
+          "Accessibility isn't something you validate at the end. It's something you design for from the beginning and test continuously. Early in design, test with disabled users. As you build, test with screen readers, keyboard navigation, voice input. Get disabled people involved throughout development.",
+      },
+      { type: "heading3", content: "Document Limitations Clearly" },
+      {
+        type: "paragraph",
+        content:
+          "No assistant is perfectly accessible to everyone. Be honest about limitations. 'This assistant works with screen readers but not voice input.' 'You can use voice or keyboard, but not mouse.' Clear documentation helps people decide if your assistant will work for them.",
+      },
+      {
+        type: "checklistCard",
+        title: "Accessible AI Assistant Checklist",
+        sections: [
+          {
+            heading: "Input and Output",
+            items: [
+              "Support text input and output",
+              "Support voice input and output (with captions)",
+              "Support keyboard navigation",
+              "Support alternative input methods (voice commands, gestures, buttons)",
+              "Provide transcripts for audio output",
+              "Provide captions for any video or audio content",
+            ],
+          },
+          {
+            heading: "Markup and Structure",
+            items: [
+              "Use semantic HTML correctly (proper headings, lists, buttons, links)",
+              "Add ARIA labels where semantic HTML isn't sufficient",
+              "Ensure proper heading hierarchy",
+              "Test with screen readers (NVDA, JAWS, VoiceOver)",
+              "Ensure all interactive elements are accessible by keyboard",
+            ],
+          },
+          {
+            heading: "Visual and Sensory",
+            items: [
+              "Don't convey information through color alone",
+              "Ensure sufficient color contrast (WCAG AA minimum)",
+              "Provide alt text for all images",
+              "Support zoom without loss of functionality",
+              "Support high contrast modes",
+              "Don't require rapid or timed interactions",
+            ],
+          },
+          {
+            heading: "Testing and Validation",
+            items: [
+              "Test with disabled users throughout development",
+              "Run automated accessibility checks regularly",
+              "Test with screen readers and voice input",
+              "Test keyboard navigation thoroughly",
+              "Conduct manual accessibility testing",
+              "Test with different devices and browsers",
+            ],
+          },
+          {
+            heading: "Documentation",
+            items: [
+              "Document supported accessibility features",
+              "Document known limitations",
+              "Provide clear instructions for alternative input methods",
+              "Include accessibility information in help and support",
+            ],
+          },
+        ],
+      },
+      { type: "heading2", content: "Who You're Serving by Building Accessible Assistants" },
+      {
+        type: "paragraph",
+        content:
+          "When you build an accessible AI assistant, you're not just serving people with disabilities. You're also serving: someone using your assistant in a noisy environment (voice alone won't work), someone in a quiet environment where voice is awkward (text is better), someone with temporary injuries (broken arm, can't use mouse), someone using the interface on a different device than designed for, and someone who simply prefers a different modality.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Accessibility isn't just a niche concern. It's about making your assistant useful for the widest possible audience, under the widest possible circumstances.",
+      },
+      { type: "heading2", content: "The Business Case" },
+      {
+        type: "paragraph",
+        content:
+          "Building accessible AI assistants is also good business. Accessible assistants have larger addressable markets. They're more resilient to changes in how people use them. They're less likely to face legal challenges. And they're more likely to serve users well across diverse environments and use cases.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Beyond that, accessibility forces you to think more clearly about your assistant's design and capabilities. Multimodal interfaces are often clearer, more robust, and easier to use—even for people without disabilities.",
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "Building accessible AI assistants isn't just the right thing to do—it's better design. Multimodal interfaces serve more people, they're more resilient to errors, and they work better in diverse environments. The best AI assistants will be the ones that work for everyone.",
+          "AI assistants are powerful. They're also powerful tools for inclusion or exclusion, depending on how you build them. If you build them without thinking about accessibility, you're leaving people out. If you build them with accessibility in mind from the start, you create something that works better for everyone.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Start now. Test with disabled users. Build multimodal interfaces. Support keyboard navigation and screen readers. Document your limitations. Your assistant will be better for it, and more people will be able to use it.",
       },
     ],
   },
@@ -2517,29 +2873,175 @@ export const blogPosts: BlogPost[] = [
         content:
           "I've spent the last year tracking accessibility lawsuits and demand letters across multiple industries. The trend is clear: litigation is accelerating. Organizations that weren't even thinking about accessibility three years ago are now getting sued. The cost of these cases is not trivial—and the cost of ignoring accessibility is becoming prohibitive.",
       },
+      {
+        type: "paragraph",
+        content:
+          "This is not theoretical risk. This is real, measurable, and happening to organizations right now.",
+      },
       { type: "heading2", content: "The Rising Tide of Accessibility Litigation" },
       {
         type: "paragraph",
         content:
-          "In the past few years, accessibility lawsuits have exploded. Between 2018 and 2024, the number of federal accessibility lawsuits filed annually doubled. Who's being sued? Everyone. Fortune 500 companies. Small and mid-sized businesses. Local nonprofits. E-commerce sites, media companies, healthcare providers, banks, universities, and government agencies.",
+          "In the past few years, accessibility lawsuits have exploded. Between 2018 and 2024, the number of federal accessibility lawsuits filed annually doubled. And that's not counting settlements, state cases, or demand letters that never make it to formal litigation.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Who's being sued? Everyone. Fortune 500 companies. Small and mid-sized businesses. Local nonprofits. E-commerce sites, media companies, healthcare providers, banks, universities, and government agencies. If you have a digital product and you're not accessible, you're a target.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The cases vary, but the pattern is consistent. Someone encounters an inaccessible website or app. They contact the organization. The organization either ignores them or doesn't effectively fix the problem. Then the person—often represented by a disability rights attorney—files a lawsuit or sends a demand letter.",
+      },
+      { type: "heading3", content: "Who's Filing Suits?" },
+      {
+        type: "paragraph",
+        content:
+          "It's not always disability advocates. It's often disabled users themselves. Someone trying to order groceries online and discovering the website won't work with their screen reader. Someone trying to access government services and hitting a wall. Someone trying to apply for a job and finding the application is completely inaccessible.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "These people are frustrated. They've often contacted the organization multiple times and gotten nowhere. At that point, litigation becomes an option. And sometimes, it becomes the only option that produces change.",
+      },
+      { type: "heading2", content: "Demand Letters: The Warning Before the Lawsuit" },
+      {
+        type: "paragraph",
+        content:
+          "Many accessibility cases start with a demand letter. Someone (or an organization representing them) sends a formal letter detailing accessibility violations and demanding correction. Usually, the letter gives a timeline for response—often 30 days.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Demand letters themselves aren't lawsuits. But they're a clear signal that someone is serious. They also create a record of your knowledge of the problem. If you ignore a demand letter and later get sued, that letter becomes evidence that you knew about the issue and chose not to address it.",
+      },
+      { type: "heading3", content: "The Cost of a Demand Letter" },
+      {
+        type: "paragraph",
+        content:
+          "Even before litigation, demand letters cost money. You need lawyers to respond. You need to assess the claims. You need to decide whether to settle, fix the problem, or defend. If you settle, there are attorney fees and remediation costs. If you don't, you're heading toward litigation. A typical demand letter might cost $10,000 to $50,000 to handle, including legal review and initial remediation work.",
+      },
+      { type: "heading2", content: "The Legal Landscape: What You're Actually Liable For" },
+      {
+        type: "paragraph",
+        content:
+          "The law around digital accessibility is still evolving, but the trend is clear: accessibility is increasingly seen as legally required.",
+      },
+      { type: "heading3", content: "Title II of the ADA (Public Sector)" },
+      {
+        type: "paragraph",
+        content:
+          "If you're a public entity, Title II of the Americans with Disabilities Act applies to your digital properties. The ADA requires that people with disabilities have equal access to your services. Courts have consistently held that this includes websites and digital applications. If your website is inaccessible, you're violating Title II. It's that straightforward.",
+      },
+      { type: "heading3", content: "Title III of the ADA (Private Sector)" },
+      {
+        type: "paragraph",
+        content:
+          "For private entities, the law is less clear but rapidly clarifying through litigation. Title III requires that places of public accommodation (stores, restaurants, hotels, banks, and increasingly, websites) be accessible. Courts have been expanding this interpretation to include digital properties. If your website is a public accommodation, you need to make it accessible.",
+      },
+      { type: "heading3", content: "State and Local Laws" },
+      {
+        type: "paragraph",
+        content:
+          "Many states have their own accessibility laws, often with stricter requirements than federal law. California's UNRUH Civil Rights Act, for example, applies to private businesses and has been used extensively for accessibility cases. New York has its own digital accessibility law. These are in addition to federal requirements, not instead of them.",
       },
       { type: "heading2", content: "Overlay Tools Are Not a Defense" },
       {
         type: "paragraph",
         content:
-          "Many organizations have tried to solve accessibility by purchasing an 'overlay' tool—a JavaScript widget that adds accessibility features to an existing website. Courts and regulators are increasingly skeptical of this approach. In fact, overlays often create new accessibility problems on top of existing ones.",
+          "Many organizations have tried to solve accessibility by purchasing an 'overlay' tool—a JavaScript widget that adds accessibility features to an existing website. The theory is that you don't have to fix the underlying code; the overlay handles accessibility.",
       },
-      { type: "heading2", content: "How to Get Ahead of It" },
       {
         type: "paragraph",
         content:
-          "Get an independent accessibility audit of your website and apps. Create a remediation plan. Build accessibility into your development process. Make a public commitment. The cost of proactive compliance is a fraction of what you'll pay in litigation, remediation, and reputational damage.",
+          "Courts and regulators are increasingly skeptical of this approach. In fact, overlays often create new accessibility problems on top of existing ones. Screen reader users report that overlays interfere with their assistive technology. The overlays themselves often aren't accessible.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Regulators like the DoJ have made clear: using an overlay is not a substitute for fixing accessibility. It might reduce your legal liability slightly (you can argue you're making an effort), but it won't protect you from a serious accessibility lawsuit. If you're relying on an overlay as your accessibility strategy, you need a new strategy.",
+      },
+      {
+        type: "timelineCard",
+        title: "The Real Cost of an Accessibility Lawsuit",
+        items: [
+          {
+            heading: "Direct Legal Costs",
+            description: "Attorney fees: $100,000 to $500,000+. Settlement amounts: $15,000 to $500,000+. Court costs and expert witness fees: $10,000 to $100,000+.",
+          },
+          {
+            heading: "Remediation Costs",
+            description: "Accessibility audit: $10,000 to $50,000. Code remediation: $50,000 to $500,000+. Testing and validation: $10,000 to $50,000. Ongoing monitoring: $5,000 to $20,000 annually.",
+          },
+          {
+            heading: "Indirect Costs",
+            description: "Management time diverted from other work. Reputational damage and negative press. Disruption to development cycles. Increased scrutiny from regulators.",
+          },
+          {
+            heading: "Proactive Accessibility (for comparison)",
+            description: "Initial audit and strategy: $5,000 to $15,000. Design and development integration: $30,000 to $100,000 over time. Testing: $5,000 to $20,000 annually.",
+          },
+        ],
+      },
+      { type: "heading2", content: "How to Get Ahead of It" },
+      { type: "heading3", content: "1. Audit Your Digital Properties Now" },
+      {
+        type: "paragraph",
+        content:
+          "Get an independent accessibility audit of your website and apps. Not an audit by your own team (they'll miss things). Hire someone external who specializes in accessibility. They'll identify problems and prioritize them by severity.",
+      },
+      { type: "heading3", content: "2. Create a Remediation Plan" },
+      {
+        type: "paragraph",
+        content:
+          "Based on the audit, create a plan to fix the biggest issues first. Document your process. If you later face a lawsuit, demonstrating that you have a remediation plan in place is valuable. It shows you're taking the issue seriously.",
+      },
+      { type: "heading3", content: "3. Build Accessibility Into Your Development Process" },
+      {
+        type: "paragraph",
+        content:
+          "Retrofitting accessibility is expensive. Building it in from the start costs much less. Add accessibility requirements to your design guidelines. Test for accessibility as part of your QA process. Train your team.",
+      },
+      { type: "heading3", content: "4. Make a Public Commitment" },
+      {
+        type: "paragraph",
+        content:
+          "Post an accessibility statement on your website. Make a public commitment to WCAG 2.1 AA compliance (the standard used in accessibility cases). Provide a way for users to report accessibility issues and show that you're responding to them.",
+      },
+      { type: "heading3", content: "5. Don't Rely on Overlays" },
+      {
+        type: "paragraph",
+        content:
+          "Fix the underlying code. Overlays are not a legal defense and they create additional problems. They're a bandaid that makes your legal exposure worse, not better.",
+      },
+      { type: "heading3", content: "6. Get Legal Counsel Involved Early" },
+      {
+        type: "paragraph",
+        content:
+          "Don't wait for a lawsuit. Talk to a lawyer who specializes in digital accessibility. They can help you understand your liability and develop a smart remediation strategy.",
+      },
+      { type: "heading2", content: "The Math of Waiting" },
+      {
+        type: "paragraph",
+        content:
+          "Let's do the math. Proactive accessibility investment: $50,000 to $150,000 upfront plus $10,000 to $20,000 annually. That gets you a genuinely accessible website that serves more users and creates no legal risk.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Cost of an accessibility lawsuit: $150,000 to $1,000,000+, plus reputational damage, management distraction, and ongoing remediation. The math is clear. Proactive accessibility is not just the right thing to do. It's the smart financial decision.",
       },
       { type: "heading2", content: "The Bottom Line" },
       {
         type: "paragraph",
         content:
-          "Accessibility litigation is real, it's growing, and it's expensive. The organizations that get ahead of it now will save money, avoid disruption, and build products that work for everyone. The ones that wait will pay the price.",
+          "Accessibility litigation is rising and will continue to rise. Organizations that wait to address accessibility will get sued. Organizations that fix accessibility now will avoid those lawsuits, serve more users, and build trust with disabled communities.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The question isn't whether you can afford to invest in accessibility. The question is whether you can afford not to. Get an audit. Create a remediation plan. Fix the problems. Your future self—and your legal team—will be grateful.",
       },
     ],
   },
