@@ -2485,7 +2485,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "As technology has exploded around us and demonstrated capabilities beyond our imagination, we've come to believe that building machines will relieve us of our own biases and shortcomings. Machines, we believe, won't be flawed the way we are. With those beliefs in mind, we build triage robots to complete patient intake. They're made of metal, wires, and software, and thus can't carry preconceived notions, so they can't discriminate, right? In fact, machines are <a href='https://www.washingtonpost.com/health/2019/10/24/racial-bias-medical-algorithm-favors-white-patients-over-sicker-black-patients/' target='_blank' rel='noopener'>infused with our biases</a>, because the healthcare providers who contribute to the education of these robots consistently <a href='https://www.tctmd.com/news/inequities-exist-ed-triage-heart-failure-patients-repercussions' target='_blank' rel='noopener'>rate pain with bias</a>. The chilling reality is that we have seen time and again how <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4998763/' target='_blank' rel='noopener'>race, age, and gender</a> can all affect how your condition is assessed as well as <a href='https://www.washingtonpost.com/news/to-your-health/wp/2016/04/04/do-blacks-feel-less-pain-than-whites-their-doctors-may-think-so/' target='_blank' rel='noopener'>the type of care you're ultimately provided</a>—decisions that have life or death consequences.",
+          "As technology has exploded around us and demonstrated capabilities beyond our imagination, we've come to believe that building machines will relieve us of our own biases and shortcomings. Machines, we believe, won't be flawed the way we are. With those beliefs in mind, we build triage robots to complete patient intake. They're made of metal, wires, and software, and thus can't carry preconceived notions, so they can't discriminate, right? In fact, machines are infused with our biases, because the healthcare providers who contribute to the education of these robots consistently rate pain with bias. The chilling reality is that we have seen time and again how race, age, and gender can all affect how your condition is assessed as well as the type of care you're ultimately provided—decisions that have life or death consequences.",
       },
       { type: "heading2", content: "The Myth of Neutral Technology" },
       {
@@ -2598,12 +2598,12 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "<em>Droplets of water building until the cup overflows<br/>You spend time.<br/>Spend effort.<br/>And when you see a final product,<br/>without your name—<br/>without your history—<br/>you wonder if you're the<br/>one who's crazy.</em>",
+          "Droplets of water building until the cup overflows. You spend time. Spend effort. And when you see a final product, without your name—without your history—you wonder if you're the one who's crazy.",
       },
       {
         type: "paragraph",
         content:
-          "Recently, CBS's 60-minutes aired a segment on racial bias in facial recognition technology, referring to a <a href='https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software' target='_blank' rel='noopener'>December 2019 National Institute of Standards and Technology (NIST) study</a> as a 'landmark study' while failing to mention the groundbreaking research on which the NIST study was based, and conducted by AI-research pioneers and Black women, <a href='https://www.linkedin.com/in/ACoAAAJJIe0B1R489TS1yJWh9uDEurkRPxbHRHY' target='_blank' rel='noopener'>Joy Buolamwini</a>, <a href='https://www.linkedin.com/in/timnit-gebru-7b3b407/' target='_blank' rel='noopener'>Dr. Timnit Gebru</a> and <a href='https://www.linkedin.com/in/deborah-raji-065751b2/' target='_blank' rel='noopener'>Inioluwa Deborah Raji</a>.",
+          "Recently, CBS's 60-minutes aired a segment on racial bias in facial recognition technology, referring to a December 2019 National Institute of Standards and Technology (NIST) study as a 'landmark study' while failing to mention the groundbreaking research on which the NIST study was based, and conducted by AI-research pioneers and Black women, Joy Buolamwini, Dr. Timnit Gebru and Inioluwa Deborah Raji.",
       },
       {
         type: "paragraph",
@@ -2613,18 +2613,18 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "Appalled, I reshared a LinkedIn by <a href='https://www.linkedin.com/company/ajlunited/' target='_blank' rel='noopener'>The Algorithmic Justice League</a> as well as one by Ms. Buolamwini herself on my personal LinkedIn profile with the following comment hoping to inform others of how Black women continue to be treated as disposable within the tech community.",
+          "Appalled, I reshared a LinkedIn post by The Algorithmic Justice League as well as one by Ms. Buolamwini herself on my personal LinkedIn profile with the following comment hoping to inform others of how Black women continue to be treated as disposable within the tech community.",
       },
       {
         type: "paragraph",
         content:
-          "<strong>'Pay attention: this is what misogynoir looks and feels like'</strong>",
+          "'Pay attention: this is what misogynoir looks and feels like'",
       },
       { type: "heading2", content: "The Erasure of Black Women in AI Research" },
       {
         type: "paragraph",
         content:
-          "Ms. Buolamwini, who founded the <a href='https://www.ajl.org/' target='_blank' rel='noopener'>Algorithmic Justice League</a>, first published her findings in 2018 with her MIT thesis, <a href='https://www.media.mit.edu/publications/full-gender-shades-thesis-17/' target='_blank' rel='noopener'>Gender Shades</a>, and later the documentary <a href='https://www.codedbias.com/' target='_blank' rel='noopener'>Coded Bias</a>. Her work, along with that of Dr. Gebru and Raji, laid the foundation for understanding how facial recognition systems fail people of color, particularly Black women.",
+          "Ms. Buolamwini, who founded the Algorithmic Justice League, first published her findings in 2018 with her MIT thesis, Gender Shades, and later the documentary Coded Bias. Her work, along with that of Dr. Gebru and Raji, laid the foundation for understanding how facial recognition systems fail people of color, particularly Black women.",
       },
       {
         type: "paragraph",
