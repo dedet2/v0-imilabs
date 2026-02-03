@@ -2467,7 +2467,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   // Original Incluu blog articles from website migration
-{
+  {
     id: 20,
     title: "From Invisibility to Radical Empathy",
     description:
