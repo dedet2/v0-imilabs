@@ -2548,40 +2548,6 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-      {
-        type: "paragraph",
-        content:
-          "As technology has exploded around us and demonstrated capabilities beyond our imagination, we've come to believe that building machines will relieve us of our own biases and shortcomings. Machines, we believe, won't be flawed the way we are.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "The problem is that machines are built by humans. And humans carry bias. The data we feed into these systems reflects our history—a history marked by discrimination, exclusion, and inequity. When we don't actively work to counter these patterns, we encode them into our technology.",
-      },
-      { type: "heading2", content: "From Invisible to Seen" },
-      {
-        type: "paragraph",
-        content:
-          "For too long, marginalized communities have been invisible in the design process. Their needs weren't considered. Their voices weren't heard. Their experiences weren't valued. The result? Products and services that don't work for them—or worse, actively harm them.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Radical empathy means more than understanding someone else's perspective. It means actively centering their experience in the design process. It means recognizing that the people closest to the problem are closest to the solution. It means building with communities, not just for them.",
-      },
-      { type: "heading2", content: "The Path Forward" },
-      {
-        type: "paragraph",
-        content:
-          "Building inclusive technology isn't about adding features at the end. It's about fundamentally rethinking who we design for and how we design. It's about questioning our assumptions. It's about bringing diverse voices into every stage of the process.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "The future of technology must be one where everyone can participate fully—where accessibility isn't an afterthought, where representation isn't tokenism, where inclusion isn't optional. This is the work I'm committed to, and the work I hope you'll join.",
-      },
-    ],
-  },
   {
     id: 21,
     title: "60 Minutes and (En)Coded Bias",
