@@ -959,4 +959,1492 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    id: 5,
+    title: "The Future of AI Regulation: Global Trends",
+    description:
+      "How AI governance is evolving worldwide, where we're converging, and how to prepare your organization for the regulatory landscape ahead.",
+    category: "AI Policy + Governance",
+    date: "January 11, 2026",
+    readTime: "9 min read",
+    image: "/blog/future-ai-regulation.jpg",
+    slug: "future-ai-regulation-global-trends",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "The EU AI Act is becoming the global template. Regulators worldwide are adopting risk-based approaches and transparency requirements modeled on Europe's framework.",
+          "The US is fragmenting: federal regulation is emerging alongside state-level laws and sector-specific requirements creating a patchwork of compliance obligations.",
+          "Emerging markets are developing uniquely localized AI governance approaches that prioritize different values and reflect regional concerns.",
+          "Key global themes are converging: transparency requirements, human oversight, fairness and bias mitigation, and accountability mechanisms.",
+          "Organizations should prepare for global compliance by building flexible governance frameworks that can adapt to different regulatory regimes.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "AI regulation is moving fast. The EU AI Act is the most comprehensive framework, but it's not alone. Canada, the UK, Brazil, and emerging markets are all developing regulatory approaches. The US is charting a different course—less centralized, more fragmented. The result is a complex, rapidly shifting global landscape where organizations must navigate overlapping, sometimes conflicting requirements.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Yet beneath the surface, a pattern is emerging. Regulators worldwide are converging on core principles: AI systems should be transparent, subject to human oversight, fair across demographic groups, and accountable for their decisions. The specifics vary by region. But the direction is clear. Understanding this landscape and preparing your organization now is a strategic imperative.",
+      },
+      { type: "heading2", content: "The EU AI Act: The Global Template" },
+      {
+        type: "paragraph",
+        content:
+          "The EU AI Act is historically significant because it's the world's first comprehensive AI regulation, and its risk-based framework is being replicated globally. The Act's core structure—categorizing AI by risk level and setting requirements proportionate to that risk—is proving to be an effective template.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "What makes the EU approach influential is its clarity and enforceability. The Act specifies what organizations must do, with concrete deadlines and substantial penalties. This creates a powerful incentive: organizations complying with the EU AI Act for European markets get a roadmap for global compliance.",
+      },
+      { type: "heading2", content: "The US Landscape: Fragmentation and Sector-Specific Rules" },
+      {
+        type: "paragraph",
+        content:
+          "The United States is taking a different approach: less regulation at the federal level, more at the state level, and more sector-specific rules from existing regulators. This creates complexity.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "States are passing their own AI regulations. California, Colorado, and others are enacting laws on algorithmic transparency, bias in hiring, and automated decision-making in critical sectors. Each state has different requirements. Organizations must comply with all applicable state laws.",
+      },
+      { type: "heading2", content: "Regional Approaches: Where Governance Diverges" },
+      {
+        type: "paragraph",
+        content:
+          "Canada is developing the Artificial Intelligence and Data Act (AIDA), which closely mirrors the EU AI Act's risk-based approach. The UK is pursuing a lighter-touch approach with the AI Bill, emphasizing principles and guidance. Brazil and Latin American regulators are emphasizing human rights and protecting vulnerable populations.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "AI regulation is evolving rapidly. Organizations that invest in flexible, principled AI governance now will be better positioned as regulations tighten globally. Start with the highest bar—the EU AI Act—and build governance frameworks that can adapt to different regulatory regimes.",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Rest as Resistance: The Wellness Imperative for Leaders",
+    description:
+      "Why rest is essential for sustainable leadership, better decisions, and an organization's governance capacity.",
+    category: "Leadership + Wellness",
+    date: "January 4, 2026",
+    readTime: "10 min read",
+    image: "/blog/rest-resistance-wellness.jpg",
+    slug: "rest-as-resistance-wellness-leaders",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Burnout destroys decision-making capacity. Leaders running on empty make worse strategic choices, miss risks, and damage organizations.",
+          "Rest is not a luxury or weakness. It's essential infrastructure for sustainable leadership and better governance.",
+          "Disability accommodation practices—flexible work, asynchronous communication, structured breaks—benefit all leaders and teams.",
+          "Organizational boundaries around work hours and availability are governance infrastructure, not soft HR issues.",
+          "Organizations that prioritize leader wellbeing and rest have better risk management, faster decision-making, and stronger cultures.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "We're in the midst of a quiet crisis in leadership: burnout. Executives are working weekends. Founders are sleeping four hours a night. Board members are juggling multiple roles with no boundaries. Teams are running lean with no slack. The default assumption is that intensity, availability, and sacrifice are synonymous with dedication and success. This is wrong. It's also unsustainable and dangerous.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Burnout doesn't just affect individuals. It damages organizations. Burned-out leaders make worse decisions, miss risks, alienate teams, and destroy the very cultures and capabilities they're trying to build. The problem is so widespread that it's become invisible—normalized as 'the cost of leadership.' It's time to name this clearly: burnout is a governance failure. And rest is not a luxury. It's essential infrastructure for sustainable leadership.",
+      },
+      { type: "heading2", content: "The Burnout Trap: Why Intensity Is Not Leadership" },
+      {
+        type: "paragraph",
+        content:
+          "There's a persistent myth in leadership culture: the harder you work, the more committed you are. The evidence says something different. Chronic sleep deprivation impairs cognitive function as much as intoxication. Decision-making quality deteriorates under sustained stress. Attention narrows under pressure, causing leaders to miss peripheral threats.",
+      },
+      { type: "heading2", content: "The Business Case for Rest" },
+      {
+        type: "paragraph",
+        content:
+          "Well-rested leaders have higher quality decision-making. Studies on sleep deprivation show that after 17 hours without sleep, cognitive performance deteriorates to the level of someone with a blood alcohol content of 0.05 percent. Rested leaders also have better emotional regulation and judgment. They listen better. They think more strategically.",
+      },
+      { type: "heading2", content: "Rest as a Governance Issue" },
+      {
+        type: "paragraph",
+        content:
+          "Flexible work arrangements originally designed for disabled employees benefit all employees. Asynchronous communication structures were built for deaf employees and people using screen readers. Now they benefit neurodivergent employees, people managing ADHD, and people across time zones. The same applies to rest. Structured breaks, limited meeting hours, clear boundaries around evenings and weekends—these are governance infrastructure.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "Rest is not a cost to be minimized. It's an investment with measurable returns: better decisions, lower turnover, stronger cultures, and more resilient organizations. Leaders who honor rest—their own and their teams'—build organizations that outperform those running on fumes.",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Building Inclusive AI Products: A Framework",
+    description:
+      "Inclusive product design isn't an afterthought or a compliance checklist. It's a core competency that drives better outcomes for all users while expanding your market reach.",
+    category: "Product Design + Accessibility",
+    date: "December 28, 2025",
+    readTime: "9 min read",
+    image: "/blog/building-inclusive-ai-products.jpg",
+    slug: "building-inclusive-ai-products-framework",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Disability-led design—centering disabled users from the start—produces better products for everyone and uncovers user needs mainstream design misses entirely.",
+          "Testing with disabled users is not optional. It's essential validation that your product works in the real world, across devices, assistive technologies, and access needs.",
+          "Inclusive data practices prevent bias at the source, ensuring your AI systems reflect diverse user needs rather than reinforcing historical exclusions.",
+          "Build accessibility requirements into your product roadmap, design systems, and definition of done. Treat inclusion as a feature, not a bug fix.",
+          "Sustained inclusive design requires investment in accessibility expertise, disabled team members, and continuous user feedback loops with diverse communities.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "Building inclusive AI products isn't about adding accessibility features at the end of development. It's about centering diverse user needs, disabled perspectives, and accessibility thinking throughout the entire product lifecycle. When organizations approach inclusive design as a core competency rather than a compliance obligation, they build better products that reach larger markets and create less opportunity for bias to hide.",
+      },
+      { type: "heading2", content: "Disability-Led Design: The Foundation" },
+      {
+        type: "paragraph",
+        content:
+          "The most common mistake companies make is treating accessibility as something added after a product is 'finished.' By then, the product architecture is locked in, design patterns are established, and expensive rework is often necessary. A better approach: lead with disability.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Disability-led design means centering the needs of disabled users from research and ideation through launch and beyond. It means disabled people are in the room during product strategy sessions, design reviews, and launch decisions—not just during accessibility audits.",
+      },
+      { type: "heading2", content: "Testing with Disabled Users: Real-World Validation" },
+      {
+        type: "paragraph",
+        content:
+          "Automated accessibility testing is valuable but limited. Tools can check code compliance—whether your headings are properly structured, whether images have alt text, whether color contrast meets standards. But they can't tell you whether your product is actually usable for real people with real disabilities.",
+      },
+      { type: "heading2", content: "Inclusive Data Practices for AI Products" },
+      {
+        type: "paragraph",
+        content:
+          "AI systems trained on skewed data produce skewed results. If your training data underrepresents disabled people, your AI system will underperform for disabled users. Inclusive data practices start with auditing your training data. Who is represented? Who is missing?",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "Inclusive AI product design isn't charity. It's good business. It's better design. It's how you build products that work for the full range of human diversity—and that's how you build products that win.",
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "Building Ethical AI Systems: A Framework for Success",
+    description:
+      "Ethical AI isn't a constraint on innovation. It's a foundation for sustainable, trustworthy systems that create long-term value for organizations and the communities they serve.",
+    category: "AI Governance + Ethics",
+    date: "December 21, 2025",
+    readTime: "8 min read",
+    image: "/blog/building-ethical-ai-systems.jpg",
+    slug: "building-ethical-ai-systems-framework",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Ethical AI requires governance structures with clear accountability, defined roles, and decision-making authority. Without governance, ethics remains aspirational.",
+          "Bias detection must be systematic, ongoing, and multidimensional. Automated checks are necessary but insufficient. Human oversight catches context-dependent harms.",
+          "Accountability mechanisms matter more than policies. Define who owns ethical outcomes, how they're measured, and what happens when systems fail.",
+          "Human oversight is essential. High-stakes AI decisions should be made by humans informed by AI, not by AI systems making autonomous decisions about people's lives.",
+          "Ethical AI is operationalized through processes, incentives, and accountability mechanisms—not through good intentions or impressive ethics papers.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "Many organizations have published AI ethics frameworks that sit on digital shelves, gathering dust. They're well-intentioned, thoughtfully written, and largely ineffective. The gap between ethical principles and ethical practice is where most organizations fail. This is the difference between 'ethics as values' and 'ethics as operations.' We need both, but operations matter more.",
+      },
+      { type: "heading2", content: "From Principles to Governance: Building Infrastructure for Ethical Practice" },
+      {
+        type: "paragraph",
+        content:
+          "Ethical AI requires governance structures with real authority and accountability. This means establishing clear roles, decision-making processes, and accountability mechanisms that span your organization. It's not enough to have an ethics committee that meets quarterly to discuss concerns. You need governance that integrates ethical review into the development process itself.",
+      },
+      { type: "heading2", content: "Bias Detection: Making Harm Visible" },
+      {
+        type: "paragraph",
+        content:
+          "Bias in AI systems is often invisible until someone gets hurt. A hiring algorithm systematically rejects qualified candidates from underrepresented groups. A medical AI underperforms for patients with darker skin tones. Effective bias detection requires multiple approaches working in concert.",
+      },
+      { type: "heading2", content: "Human Oversight: Keeping Humans in the Loop" },
+      {
+        type: "paragraph",
+        content:
+          "High-stakes decisions should be made by humans informed by AI, not by AI systems making autonomous decisions about people's lives. This doesn't mean ignoring AI recommendations. It means building interfaces and processes that let humans understand what the AI is recommending and why.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "Ethical AI is built through governance structures, systematic bias detection, clear accountability, and human oversight. It's operationalized through policies, processes, and incentives. Organizations that treat ethics as operational infrastructure—not just values—will build more trustworthy systems and earn lasting competitive advantage.",
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Algorithmic Bias: Detection and Prevention Strategies",
+    description:
+      "Bias in AI systems causes real harm to real people. Understanding how bias enters your systems and building detection infrastructure to catch it is essential for responsible AI deployment.",
+    category: "AI Fairness + Risk Management",
+    date: "December 14, 2025",
+    readTime: "10 min read",
+    image: "/blog/algorithmic-bias-detection.jpg",
+    slug: "algorithmic-bias-detection-prevention",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Bias in AI systems comes from multiple sources: skewed training data, historical discrimination encoded in data, proxy variables, and design choices in model development.",
+          "Detection requires both quantitative methods (statistical testing, fairness metrics) and qualitative methods (testing with affected communities, domain expertise).",
+          "Prevention happens upstream: inclusive data collection, careful feature selection, and bias-aware model development reduce bias before it becomes a detection problem.",
+          "Ongoing monitoring in production is essential. The most dangerous bias is the kind you discover after real people have been harmed.",
+          "Bias mitigation is an iterative process. There's no set-and-forget solution. Continuous improvement and sustained commitment matter.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "Algorithmic bias causes tangible harm. It denies loans to qualified borrowers from certain neighborhoods. It makes healthcare algorithms less effective for patients with darker skin tones. It biases criminal justice systems toward harsher sentences for marginalized groups. Understanding where bias comes from, how to detect it, and how to prevent it is essential for building AI systems that are fair and trustworthy.",
+      },
+      { type: "heading2", content: "Understanding Sources of Bias" },
+      {
+        type: "paragraph",
+        content:
+          "Bias doesn't appear randomly in AI systems. It has sources. Historical data reflects historical discrimination. If you train a hiring algorithm on 50 years of hiring data from a company with documented discrimination problems, your algorithm will learn those discriminatory patterns.",
+      },
+      { type: "heading2", content: "Prevention Strategies: Upstream Solutions" },
+      {
+        type: "paragraph",
+        content:
+          "Detection matters, but prevention is better. Build bias-resistant systems from the start. If your training data doesn't include diverse populations, your model won't work for diverse populations. Deliberately collect data from underrepresented groups. Be intentional about which features you use.",
+      },
+      { type: "heading2", content: "Ongoing Monitoring: Never Stop Looking" },
+      {
+        type: "paragraph",
+        content:
+          "Bias detection isn't a one-time process. It's ongoing. Set up monitoring systems that track fairness metrics continuously. Create alerts that trigger when metrics degrade. Establish processes for responding quickly to bias reports.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "Bias in AI is a solvable problem—but it requires sustained attention, systematic processes, and organizational commitment. Organizations that invest in bias detection and prevention will build more trustworthy systems, avoid costly mistakes, and earn the trust of the communities they serve.",
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: "Designing AI Interfaces for Uncertainty",
+    description:
+      "AI systems are uncertain. Good interface design surfaces that uncertainty honestly, helping users make better decisions while maintaining trust.",
+    category: "UX Design + AI Trust",
+    date: "December 7, 2025",
+    readTime: "9 min read",
+    image: "/blog/designing-ai-uncertainty.jpg",
+    slug: "designing-ai-interfaces-uncertainty",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "AI systems produce predictions with varying levels of confidence. Good interface design surfaces this uncertainty so users can calibrate trust appropriately.",
+          "Overconfidence in AI systems leads to bad decisions. Users need clear signals about when to trust recommendations and when to be skeptical.",
+          "Safe defaults, error handling, and clear escalation paths protect users when AI systems fail or encounter cases they were never trained on.",
+          "Confidence indicators should be based on actual uncertainty, not marketing. False certainty erodes trust and leads to harm.",
+          "Interface design is a critical part of AI safety. How you present uncertainty shapes whether users rely on AI appropriately or dangerously.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "AI systems don't know what they don't know. They make predictions based on training data that may not cover all situations. They encounter edge cases they've never seen before. They fail in ways both obvious and subtle. Yet most AI interfaces present their outputs with false certainty: a single number, a confident recommendation, a clear decision. Users see this and assume the system is sure.",
+      },
+      { type: "heading2", content: "Understanding AI Uncertainty" },
+      {
+        type: "paragraph",
+        content:
+          "Before we can design for uncertainty, we need to understand where it comes from. Some uncertainty is fundamental to the problem (aleatoric uncertainty). Some stems from your model's limitations (epistemic uncertainty). When the current situation differs from training data, models can fail spectacularly while appearing confident.",
+      },
+      { type: "heading2", content: "Concrete Interface Patterns" },
+      {
+        type: "paragraph",
+        content:
+          "Instead of showing a single recommendation, show a range. Use visual metaphors that users intuitively understand: traffic light confidence levels, feature importance for explainability. Show users which features most influenced the prediction.",
+      },
+      { type: "heading2", content: "Human-AI Collaboration" },
+      {
+        type: "paragraph",
+        content:
+          "The best AI interfaces aren't purely AI or purely human. They're collaborative systems where AI provides input and humans make decisions. Frame AI recommendations as decision support, not automatic decisions. Build feedback loops so humans can improve the system over time.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "AI systems are uncertain, and that's okay. What's not okay is hiding that uncertainty from users. Interface design that surfaces uncertainty honestly enables users to make better decisions and maintains appropriate trust.",
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: "From Burnout to Boundaries: How Rest-Positive Leadership Improves AI Governance",
+    description:
+      "When leaders are burned out, AI governance suffers. Exhausted decision-makers make poor judgment calls, miss critical risks, and build dysfunctional teams. The path to better AI governance starts with rest.",
+    category: "AI Governance + Leadership",
+    date: "November 30, 2025",
+    readTime: "9 min read",
+    image: "/blog/burnout-to-boundaries.jpg",
+    slug: "burnout-to-boundaries-ai-governance",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Burnout clouds judgment and increases the likelihood of poor decisions around AI risk, transparency, and accountability.",
+          "Rest-positive leadership—where leaders visibly model boundaries—creates permission for teams to work sustainably.",
+          "Sustainable AI governance requires governance structures that don't demand superhuman availability or impossible workloads.",
+          "Teams with healthy norms around boundaries catch more AI risks, have more honest conversations, and adapt faster.",
+          "Rest is infrastructure for good governance, not a luxury or a weakness.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "I've sat in countless governance meetings over the past fifteen years. Some of my most acute observations have come from noticing what people don't say. When a team leader goes silent on a critical question, when a governance committee rubber-stamps a risky decision, when someone stays late into the evening debugging a compliance system—I've learned to ask: are these people exhausted?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The answer is usually yes. Burnout is not just an individual wellness issue. It's a governance risk. Exhausted leaders and teams make worse decisions about AI, miss critical signals, communicate less honestly, and build unsustainable systems that fall apart under pressure.",
+      },
+      { type: "heading2", content: "The Governance Cost of Burnout" },
+      {
+        type: "paragraph",
+        content:
+          "Burnout degrades decision-making in predictable ways. Exhausted people operate in short-term survival mode. They skip steps. They rationalize corners. They become risk-blind—unable to see threats because they're cognitively overloaded. In AI governance specifically, this is dangerous.",
+      },
+      { type: "heading2", content: "Rest as a Governance Structure" },
+      {
+        type: "paragraph",
+        content:
+          "Rest is not something your team members do on their own time after work. Rest is infrastructure. It's a design choice. It's something you build into how governance actually works. Sustainable meeting loads, leadership that models boundaries, governance roles that don't require superhuman availability.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "The organizations that spend the most time on urgent governance work often have the worst governance. They're constantly in crisis mode. By contrast, organizations that create space for deeper thinking, honest conversations, and sustainable work rhythms tend to have more resilient AI governance.",
+      },
+    ],
+  },
+  {
+    id: 12,
+    title: "EU AI Act in Practice: A 2026 Readiness Checklist",
+    description:
+      "The EU AI Act is now in force. Organizations operating in or serving European markets need practical compliance strategies. Here's what you need to do right now.",
+    category: "AI Regulation + Compliance",
+    date: "November 23, 2025",
+    readTime: "9 min read",
+    image: "/blog/eu-ai-act-practice-checklist.jpg",
+    slug: "eu-ai-act-practice-checklist-2026",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "The EU AI Act applies to you if you operate in the EU market, even if you're headquartered elsewhere.",
+          "Risk classification determines what you need to do. Most AI systems are low or minimal risk, but high-risk systems require extensive documentation and testing.",
+          "You need an AI inventory now. Know what AI systems you have, where they're deployed, and what they do.",
+          "Documentation is your foundation. Technical documentation, training data records, and risk assessments need to be thorough and defensible.",
+          "Start now. Penalties scale with revenue and get more severe over time. Proactive compliance is much cheaper than enforcement.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "The EU AI Act became enforceable in 2024, and we're now in the period where organizations are either getting ahead of compliance or running headlong toward violations. I've seen both approaches. The ones getting ahead are spending time now understanding what they actually need to do.",
+      },
+      { type: "heading2", content: "First: Does the EU AI Act Apply to You?" },
+      {
+        type: "paragraph",
+        content:
+          "The EU AI Act applies if you operate in the EU market (sell to EU customers, have EU users, or provide services to EU organizations), are based in the EU, or have any AI system in your stack that touches EU users or data.",
+      },
+      { type: "heading2", content: "Second: Classify Your AI Systems by Risk" },
+      {
+        type: "paragraph",
+        content:
+          "The EU AI Act has a tiered approach. Prohibited AI uses are flat-out banned. High-risk systems require extensive compliance. Limited-risk systems require transparency. Most AI systems fall into minimal or no risk categories.",
+      },
+      { type: "heading2", content: "Third: Build Your AI Inventory and Impact Assessment" },
+      {
+        type: "paragraph",
+        content:
+          "You can't manage what you don't know you have. Organizations often discover hidden AI systems when they start compliance work. Your inventory should include name and purpose, risk classification, where it's deployed, what training data it uses, and who's accountable for it.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "EU AI Act compliance is achievable. It requires inventory, classification, documentation, and process changes. Start now. The organizations that begin compliance work early will be better positioned, more competitive, and more trusted.",
+      },
+    ],
+  },
+  {
+    id: 13,
+    title: "Building Accessible AI Assistants That Don't Code People Out",
+    description:
+      "AI assistants are powerful tools. They're also frequently inaccessible. If your assistant only works through text or voice, you're excluding people who are deaf, hard of hearing, visually impaired, or have other disabilities.",
+    category: "Accessibility + AI Design",
+    date: "November 16, 2025",
+    readTime: "10 min read",
+    image: "/blog/accessible-ai-assistants.jpg",
+    slug: "accessible-ai-assistants",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Most AI assistants are inaccessible by default. Text-only or voice-only interfaces exclude deaf users, blind users, and others.",
+          "Multimodal design—supporting text, voice, visual, and alternative input methods—makes AI better for everyone.",
+          "Screen reader support, proper semantic markup, and keyboard navigation are foundational, not optional.",
+          "Test with disabled users throughout design and development. Accessibility isn't something you add at the end.",
+          "Accessible AI assistants are better AI assistants. They're more resilient, more useful, and serve more people.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "I was on a call last week with a team that had just launched an AI assistant. They were excited about the capabilities—conversational, fast, helpful. But when I asked about accessibility, there was silence. They'd built it to work beautifully with voice and text. They hadn't thought about deaf users, hard of hearing users, blind users, or people with motor disabilities.",
+      },
+      { type: "heading2", content: "The Accessibility Problem with Most AI Assistants" },
+      {
+        type: "paragraph",
+        content:
+          "Most AI assistants are built with one primary interface: voice or text. If your interface is voice-only, you've excluded deaf and hard of hearing users. If it's text-only, you've excluded blind users who rely on screen readers. If interactions require mouse clicks on visually small targets, you've excluded people with motor disabilities.",
+      },
+      { type: "heading2", content: "The Multimodal Approach: Accessibility as Design" },
+      {
+        type: "paragraph",
+        content:
+          "The solution is multimodal design. This means building your AI assistant to work across multiple input and output modalities: text, voice, visual, keyboard, and alternative input methods. Users should be able to interact via voice, text, keyboard, or other input methods depending on their needs and environment.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "Building accessible AI assistants isn't just the right thing to do—it's better design. Multimodal interfaces serve more people, they're more resilient to errors, and they work better in diverse environments. The best AI assistants will be the ones that work for everyone.",
+      },
+    ],
+  },
+  {
+    id: 14,
+    title: "Accessibility Lawsuits, Demand Letters, and the Real Cost of Waiting",
+    description:
+      "Accessibility litigation is rising. Demand letters cost money and time. Getting hit by a lawsuit you could have prevented is expensive. Here's what's happening, what's at stake, and how to get ahead of it.",
+    category: "Accessibility + Legal Risk",
+    date: "November 9, 2025",
+    readTime: "9 min read",
+    image: "/blog/accessibility-lawsuits.jpg",
+    slug: "accessibility-lawsuits-demand-letters",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Accessibility lawsuits are rising sharply. Organizations of all sizes face litigation for inaccessible digital products.",
+          "Demand letters are cheaper than litigation but still costly. They signal that someone is serious about enforcing accessibility.",
+          "Title II of the ADA applies to public sector websites. Title III is less clear for private sector, but litigation is establishing accessibility obligations.",
+          "Overlay tools are not a legal defense. Courts and regulators are increasingly skeptical that overlays solve accessibility problems.",
+          "Proactive compliance is much cheaper than reactive remediation. Get ahead now before you're sued.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "I've spent the last year tracking accessibility lawsuits and demand letters across multiple industries. The trend is clear: litigation is accelerating. Organizations that weren't even thinking about accessibility three years ago are now getting sued. The cost of these cases is not trivial—and the cost of ignoring accessibility is becoming prohibitive.",
+      },
+      { type: "heading2", content: "The Rising Tide of Accessibility Litigation" },
+      {
+        type: "paragraph",
+        content:
+          "In the past few years, accessibility lawsuits have exploded. Between 2018 and 2024, the number of federal accessibility lawsuits filed annually doubled. Who's being sued? Everyone. Fortune 500 companies. Small and mid-sized businesses. Local nonprofits. E-commerce sites, media companies, healthcare providers, banks, universities, and government agencies.",
+      },
+      { type: "heading2", content: "Overlay Tools Are Not a Defense" },
+      {
+        type: "paragraph",
+        content:
+          "Many organizations have tried to solve accessibility by purchasing an 'overlay' tool—a JavaScript widget that adds accessibility features to an existing website. Courts and regulators are increasingly skeptical of this approach. In fact, overlays often create new accessibility problems on top of existing ones.",
+      },
+      { type: "heading2", content: "How to Get Ahead of It" },
+      {
+        type: "paragraph",
+        content:
+          "Get an independent accessibility audit of your website and apps. Create a remediation plan. Build accessibility into your development process. Make a public commitment. The cost of proactive compliance is a fraction of what you'll pay in litigation, remediation, and reputational damage.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "Accessibility litigation is real, it's growing, and it's expensive. The organizations that get ahead of it now will save money, avoid disruption, and build products that work for everyone. The ones that wait will pay the price.",
+      },
+    ],
+  },
+  {
+    id: 15,
+    title: "Designing for the Disability Economy: From Compliance to a $23 Trillion Strategy",
+    description:
+      "The disability market is massive, growing, and largely underserved. Organizations that shift from viewing disability as compliance to seeing it as market opportunity will win the next decade.",
+    category: "Market Strategy + Disability Innovation",
+    date: "November 2, 2025",
+    readTime: "10 min read",
+    image: "/blog/disability-economy-strategy.jpg",
+    slug: "disability-economy-strategy",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "The global disability market represents over $23 trillion in disposable income and purchasing power.",
+          "Aging populations are creating massive new markets for accessible products. By 2050, accessible design will be mainstream necessity.",
+          "Disability-led design produces better products that serve everyone. This isn't about accommodating a niche—it's about good design.",
+          "Organizations need to measure disability market opportunity and accessibility ROI, not just treat it as a cost center.",
+          "The companies winning in the disability economy are those led by disabled people, with disabled employees, and disabled customers at the center.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "I was speaking at a strategy conference last year when a CFO from a major tech company pulled me aside. 'We spend millions on accessibility compliance,' he said, 'and I don't even know if it's worth it.' I asked him a simple question: 'How much revenue do you think you're leaving on the table by being inaccessible?' He didn't have an answer. Most organizations don't.",
+      },
+      { type: "heading2", content: "The Scale of the Opportunity" },
+      {
+        type: "paragraph",
+        content:
+          "The global disability market is worth approximately $23 trillion in disposable income and economic participation. That's more than the GDP of every country except the US and China. In the US alone, people with disabilities control more than $490 billion in annual discretionary spending.",
+      },
+      { type: "heading2", content: "From Compliance to Strategy" },
+      {
+        type: "paragraph",
+        content:
+          "Most organizations treat accessibility as a compliance issue. Strategic thinking about disability is different. It starts by asking: who are our potential customers that we're currently excluding? What would happen to our revenue if we served them? Accessibility investments expand your addressable market.",
+      },
+      { type: "heading2", content: "The Innovation Dividend" },
+      {
+        type: "paragraph",
+        content:
+          "Designing for disability drives innovation. When you have to solve complex access problems, you often end up creating features that benefit everyone. Voice control was originally designed for blind users. Now it's in billions of devices because it's genuinely useful.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "The disability economy is one of the largest underserved markets in the world. Organizations that invest now—in accessible design, disabled leadership, and disability-centered strategy—will capture market share, build loyalty, and outperform competitors who treat accessibility as a cost center.",
+      },
+    ],
+  },
+  {
+    id: 16,
+    title: "Risk Travel as a Disabled Professional",
+    description:
+      "A strategic framework for navigating challenging destinations safely, managing health equity barriers, and staying professionally effective while living with chronic conditions and disabilities.",
+    category: "Risk Travel + Disability Strategy",
+    date: "October 26, 2025",
+    readTime: "10 min read",
+    image: "/blog/risk-travel-disabled-professional.jpg",
+    slug: "risk-travel-disabled-professional",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Pre-trip medical planning—including provider coordination across regions, medication access strategies, and equipment redundancy—is non-negotiable for disabled professionals traveling to emerging markets.",
+          "Equipment logistics require a three-tier approach: primary device, backup in carry-on, and critical component redundancy shipped ahead when traveling to regions with limited supply chains.",
+          "Accessible accommodations in emerging markets exist but require early research, direct vendor contact, and willingness to negotiate on accessibility features that may not be advertised.",
+          "Emergency protocols must account for language barriers, limited accessibility knowledge among local providers, and communication challenges when standard resources fail.",
+          "Insurance strategies differ significantly between emerging markets and developed regions—some trips genuinely aren't worth the risk, and knowing when to decline is a professional strength.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "I've presented at conferences in Lagos, conducted research in rural Indonesia, advised on policy in New Delhi, and managed chronic illness across all of it. For disabled professionals, risk travel isn't optional—it's often where the most meaningful work happens. But it requires strategic planning that goes far beyond the typical travel checklist.",
+      },
+      { type: "heading2", content: "The Disabled Professional's Paradox" },
+      {
+        type: "paragraph",
+        content:
+          "Disability doesn't remove you from professional obligation or opportunity. If anything, it often defines where your expertise is most valuable. The solution isn't to avoid these trips. It's to approach them with the same strategic rigor you'd apply to any high-stakes professional decision.",
+      },
+      { type: "heading2", content: "Phase 1: Pre-Trip Medical Planning and Coordination" },
+      {
+        type: "paragraph",
+        content:
+          "Your healthcare team needs to shift into travel-support mode weeks before you depart. Define your baseline and contingencies. Secure medication access. Identify local healthcare resources before you leave.",
+      },
+      { type: "heading2", content: "Phase 2: Equipment Logistics and Redundancy" },
+      {
+        type: "paragraph",
+        content:
+          "Equipment reliability becomes critical when you can't simply order a replacement or find a repair shop that understands your specific device. Develop a three-tier redundancy strategy for any critical device: primary device, backup in carry-on, shipped components.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "Risk travel as a disabled professional is possible, often necessary, and can be done safely with proper planning. The key is treating it as a strategic challenge, not an insurmountable barrier. Your disability expertise is valuable. Don't let logistical challenges keep you from doing important work.",
+      },
+    ],
+  },
+  {
+    id: 17,
+    title: "How AI is Transforming Accessible Travel",
+    description:
+      "AI tools are breaking down travel barriers for disabled people—but they're also creating new risks. Here's what works, what's failing, and where the technology is heading.",
+    category: "AI + Accessible Travel",
+    date: "October 19, 2025",
+    readTime: "9 min read",
+    image: "/blog/ai-transforming-accessible-travel.jpg",
+    slug: "ai-transforming-accessible-travel",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Real-time translation, accessibility apps, and AI-powered navigation are meaningfully improving travel access for disabled people.",
+          "Booking algorithms are exhibiting accessibility bias—denying or charging disabled users more, steering them to inaccessible properties, and lacking transparency.",
+          "AI travel insurance systems are discriminating against disabled travelers through risk profiling, charging higher premiums, and denying coverage based on algorithmic decisions.",
+          "The regulatory gap is massive—most AI used in travel booking and insurance operates without oversight or accessibility requirements.",
+          "Emerging AI capabilities—predictive accessibility scoring, real-time accommodation negotiation—could transform travel access if developed with disabled people.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "I've used AI translation tools to navigate healthcare systems in countries where I don't speak the language. I've relied on accessibility audit apps to screen accommodations before booking. I've also been denied travel insurance, charged discriminatory premiums, and seen booking algorithms steer me toward properties with inaccessible rooms.",
+      },
+      { type: "heading2", content: "What's Working: The Access Revolution" },
+      {
+        type: "paragraph",
+        content:
+          "Large language model-powered translation apps have fundamentally changed how disabled travelers navigate language barriers. Accessibility audit apps using computer vision and machine learning are moving beyond speculation. AI-powered navigation apps are increasingly incorporating accessibility features.",
+      },
+      { type: "heading2", content: "What's Failing: Algorithmic Discrimination in Booking and Insurance" },
+      {
+        type: "paragraph",
+        content:
+          "AI booking algorithms are exhibiting clear patterns of discrimination: accessibility information gaps, pricing discrimination, steering algorithms, and denial by proxy. Travel insurance is where algorithmic discrimination is most aggressive—denying coverage outright, charging discriminatory premiums, requiring intrusive underwriting.",
+      },
+      { type: "heading2", content: "The Emerging Frontier: What's Coming Next" },
+      {
+        type: "paragraph",
+        content:
+          "If AI systems were designed with accessibility as a core feature, the travel experience for disabled people could transform dramatically. Predictive accessibility scoring, AI-powered accommodation negotiation, disability-informed trip planning—these capabilities are emerging but need disability-led development.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "AI is a double-edged tool for disabled travelers. It can amplify access or amplify discrimination. The future depends on whether AI systems are designed with disabled people or without them. Advocacy, regulation, and disability-led innovation will determine which direction we go.",
+      },
+    ],
+  },
+  {
+    id: 18,
+    title: "Global Accessibility Standards: What Travelers Need to Know",
+    description:
+      "Accessibility requirements vary dramatically by region. Understanding which standards apply where—and how to advocate when local infrastructure falls short—is essential for planning risk travel globally.",
+    category: "Regulation + Global Travel",
+    date: "October 12, 2025",
+    readTime: "10 min read",
+    image: "/blog/global-accessibility-standards-travelers.jpg",
+    slug: "global-accessibility-standards-travelers",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "EU accessibility standards (AODA, EN standards, Web Accessibility Directive) are the world's most comprehensive and enforceable.",
+          "The US ADA doesn't have automatic extraterritorial reach, but international companies operating in the US must comply.",
+          "Asia-Pacific accessibility standards vary dramatically: Japan has strong legal standards but limited enforcement; Australia and New Zealand have ADA-equivalent requirements; most of Southeast Asia lacks comprehensive accessibility law.",
+          "Emerging markets often lack legal accessibility requirements entirely, making advocacy your primary tool.",
+          "Understanding which standards apply where helps you advocate more effectively and know when you're negotiating as a customer rather than invoking legal obligation.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "When I presented at a conference in Brussels, my hotel immediately adapted my room to meet EU accessibility standards—before I even asked. When I consulted on policy in Lagos, I negotiated every accommodation individually because no legal framework existed to require compliance. The difference wasn't the hotel's goodwill. It was regulation.",
+      },
+      { type: "heading2", content: "The European Standard: AODA and Beyond" },
+      {
+        type: "paragraph",
+        content:
+          "The EU has built the world's most comprehensive accessibility regulatory framework. The EU Web Accessibility Directive requires accessible booking systems. EN 17210 sets harmonized standards for physical accessibility. The EU AI Act requires that travel booking algorithms undergo accessibility impact assessments.",
+      },
+      { type: "heading2", content: "The US ADA and Its Limited Reach" },
+      {
+        type: "paragraph",
+        content:
+          "The Americans with Disabilities Act doesn't apply to businesses outside the US. But international companies that do business in the US must comply with ADA requirements. This creates a nexus you can use to your advantage when advocating for accommodation.",
+      },
+      { type: "heading2", content: "Asia-Pacific: A Patchwork of Standards and Approaches" },
+      {
+        type: "paragraph",
+        content:
+          "Japan has one of Asia's most developed accessibility legal frameworks. Australia and New Zealand have disability discrimination laws equivalent to the ADA. Thailand, Vietnam, Indonesia, and Philippines have varying accessibility laws, but enforcement is typically limited.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "Understanding global accessibility standards gives you leverage. Where legal requirements exist, you can invoke them. Where they don't, you're negotiating as a customer. Either way, knowing the landscape helps you travel more effectively and advocate more successfully.",
+      },
+    ],
+  },
+  {
+    id: 19,
+    title: "The Business Case for Accessible Tourism",
+    description:
+      "A $300 billion market opportunity. Loyal customers. Competitive advantage. Why hospitality and tourism companies should invest in accessibility now.",
+    category: "Disability Economy + Strategy",
+    date: "October 5, 2025",
+    readTime: "10 min read",
+    image: "/blog/business-case-accessible-tourism.jpg",
+    slug: "business-case-accessible-tourism",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Disabled travelers represent a $300+ billion annual market with high disposable income, longer stays, and above-average spending.",
+          "Accessible accommodations show higher occupancy rates and pricing power—hotels with documented accessibility features command premium rates.",
+          "Disabled travelers are uniquely loyal; those who find accessible accommodations return 80%+ more frequently than general travelers.",
+          "Aging populations (50+ travelers) are driving global tourism growth and have accessibility needs that accessible infrastructure serves profitably.",
+          "First-mover advantage: tourism operators investing in accessibility now are building competitive moats and capturing market share.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "Tourism is an industry built on customer experience. Yet most hospitality companies are actively excluding one of their most valuable customer segments: disabled travelers. This isn't a moral failure. It's a business strategy failure. The data is clear. The market is large. The loyalty is exceptional.",
+      },
+      { type: "heading2", content: "The Market: $300 Billion and Growing" },
+      {
+        type: "paragraph",
+        content:
+          "Over 1 billion people globally experience disability. Disabled travelers in the US spend an average of $56.3 billion annually on travel. Globally, disabled travelers represent $300+ billion in annual spending. Disabled travelers typically stay longer and spend more per day on accommodations.",
+      },
+      { type: "heading2", content: "Occupancy, Pricing Power, and Revenue Optimization" },
+      {
+        type: "paragraph",
+        content:
+          "Hotels with documented accessibility features show measurably better financial performance. Hotels with certified accessibility show 8-12% higher average annual occupancy. Accessible rooms in full-service hotels average 5-15% higher nightly rates than standard rooms.",
+      },
+      { type: "heading2", content: "Customer Loyalty and Lifetime Value" },
+      {
+        type: "paragraph",
+        content:
+          "When disabled travelers find accessible accommodations that meet their needs, they return at extraordinarily high rates. Disabled guests at accessible hotels show 65-80% repeat booking rates vs. 15-25% for general population. This loyalty is driven by scarcity—accessible options are limited.",
+      },
+      { type: "heading2", content: "The Bottom Line" },
+      {
+        type: "paragraph",
+        content:
+          "Accessible tourism isn't charity. It's strategy. The market is large, growing, loyal, and underserved. Tourism operators who invest in accessibility now are building sustainable competitive advantages. Those who wait will be playing catch-up for decades.",
+      },
+    ],
+  },
+  // Original Incluu blog articles from website migration
+  {
+    id: 20,
+    title: "From Invisibility to Radical Empathy",
+    description:
+      "I am passionate about my work as a Product Inclusion Specialist, a profession where I build products that work for everybody, regardless of ability, gender, resources, culture, race, or class.",
+    category: "Tech Ethics + Inclusion",
+    date: "March 1, 2024",
+    readTime: "6 min read",
+    image: "/blog/0ha5_gjflj6n_okrx-1.jpeg",
+    slug: "from-invisibility-to-radical-empathy",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "I am passionate about my work as a Product Inclusion Specialist, a profession where I build products that work for everybody, regardless of ability, gender, resources, culture, race, or class. I focus on building ethical products and processes that resist exploiting customers as merely transactional profit providers, because greed is the enemy of equal socioeconomic progress, and there is a middle: building equitably for both people and profits.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "As technology has exploded around us and demonstrated capabilities beyond our imagination, we've come to believe that building machines will relieve us of our own biases and shortcomings. Machines, we believe, won't be flawed the way we are.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The problem is that machines are built by humans. And humans carry bias. The data we feed into these systems reflects our history—a history marked by discrimination, exclusion, and inequity. When we don't actively work to counter these patterns, we encode them into our technology.",
+      },
+      { type: "heading2", content: "From Invisible to Seen" },
+      {
+        type: "paragraph",
+        content:
+          "For too long, marginalized communities have been invisible in the design process. Their needs weren't considered. Their voices weren't heard. Their experiences weren't valued. The result? Products and services that don't work for them—or worse, actively harm them.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Radical empathy means more than understanding someone else's perspective. It means actively centering their experience in the design process. It means recognizing that the people closest to the problem are closest to the solution. It means building with communities, not just for them.",
+      },
+      { type: "heading2", content: "The Path Forward" },
+      {
+        type: "paragraph",
+        content:
+          "Building inclusive technology isn't about adding features at the end. It's about fundamentally rethinking who we design for and how we design. It's about questioning our assumptions. It's about bringing diverse voices into every stage of the process.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The future of technology must be one where everyone can participate fully—where accessibility isn't an afterthought, where representation isn't tokenism, where inclusion isn't optional. This is the work I'm committed to, and the work I hope you'll join.",
+      },
+    ],
+  },
+  {
+    id: 21,
+    title: "60 Minutes and (En)Coded Bias",
+    description:
+      "Recently, CBS's 60-minutes aired a segment on racial bias in facial recognition technology, referring to a December 2019 NIST study as a 'landmark study' while failing to mention the groundbreaking research on which it was based.",
+    category: "AI Bias + Media",
+    date: "March 2, 2024",
+    readTime: "7 min read",
+    image: "/blog/joy_buolamwini_-_wikimania_2018_01-1-2.jpg",
+    slug: "60-minutes-and-encoded-bias",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "Droplets of water building until the cup overflows. You spend time. Spend effort. And when you see a final product, without your name—without your history—you wonder if you're the one who's crazy.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Recently, CBS's 60-minutes aired a segment on racial bias in facial recognition technology, referring to a December 2019 National Institute of Standards and Technology (NIST) study as a 'landmark study' while failing to mention the groundbreaking research on which the NIST study was based, and conducted by AI-research pioneers and Black women, Joy Buolamwini, Dr. Timnit Gebru and Inioluwa Deborah Raji.",
+      },
+      { type: "heading2", content: "The Erasure of Black Women in AI Research" },
+      {
+        type: "paragraph",
+        content:
+          "Ms. Buolamwini, who founded the Algorithmic Justice League, first published her findings in 2018 with her MIT thesis and the documentary 'Coded Bias.' Her work, along with that of Dr. Gebru and Raji, laid the foundation for understanding how facial recognition systems fail people of color, particularly Black women.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The NIST study that 60 Minutes called 'landmark' built upon this earlier work. Yet the segment made no mention of these researchers. This pattern of erasure—where Black women's contributions are overlooked while their work is absorbed into mainstream narratives—is all too common in tech and academia.",
+      },
+      { type: "heading2", content: "Why Attribution Matters" },
+      {
+        type: "paragraph",
+        content:
+          "Attribution isn't just about giving credit where it's due. It's about ensuring that the people most affected by biased systems are recognized as the experts on those systems. It's about challenging who gets to be seen as an authority. It's about honoring the labor and risk that marginalized researchers take on when they challenge powerful institutions.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "When we erase the contributions of Black women in AI research, we perpetuate the very dynamics that lead to biased systems in the first place: the assumption that certain voices matter more than others, that certain perspectives are more legitimate, that certain people are more worthy of recognition.",
+      },
+    ],
+  },
+  {
+    id: 22,
+    title: "The Spirit of Juneteenth is Acknowledgement",
+    description:
+      "Recognizing Juneteenth as a National Holiday is not a solution to ending racism. It's a bandaid, a temporary fix to a wound at which we have given only a cursory triage.",
+    category: "Racial Justice + History",
+    date: "March 3, 2024",
+    readTime: "5 min read",
+    image: "/blog/the-spirit-of-juneteenth.jpg",
+    slug: "the-spirit-of-juneteenth-is-acknowledgement",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "Recognizing Juneteenth as a National Holiday is not a solution to ending racism. It's a bandaid, a temporary fix to a wound at which we have given only a cursory triage.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Gatekeeping humanity by only granting the privilege of it being recognized, is wrong. There lies the audacity of racism: to believe freedom can be taken and given at one's will and without recourse.",
+      },
+      { type: "heading2", content: "Beyond Symbolism" },
+      {
+        type: "paragraph",
+        content:
+          "Establishing Juneteenth as a federal holiday is an acknowledgement of slavery, which as an institution, has morphed appearances and changed tactics often in order to remain viable in today's society. Juneteenth recognizes the subjugation of people based on race, but it does not address the ongoing systems that continue that subjugation.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "True acknowledgement requires action. It requires dismantling the systems that perpetuate inequality. It requires reparations. It requires education. It requires a fundamental reckoning with our history and its ongoing impact.",
+      },
+      { type: "heading2", content: "The Work Continues" },
+      {
+        type: "paragraph",
+        content:
+          "A holiday is a beginning, not an end. It's a marker that says 'this matters.' But the spirit of Juneteenth—the spirit of liberation, of recognition, of the long fight for freedom—demands more than a day off work. It demands sustained commitment to justice.",
+      },
+    ],
+  },
+  {
+    id: 23,
+    title: "Black Excellence and the Low Expectations of White Supremacy",
+    description:
+      "Black people are plagued by Imposter Syndrome, questioning their own competency and self worth; 'Have I gained entry, or simply been allowed entry?'",
+    category: "Racial Justice + Workplace",
+    date: "March 4, 2024",
+    readTime: "7 min read",
+    image: "/blog/blog-post-image-template-2.png",
+    slug: "black-excellence-and-the-low-expectations-of-white-supremacy",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "Black people are plagued by Imposter Syndrome, questioning their own competency and self worth; 'Have I gained entry, or simply been allowed entry?' White people have deliberately set the bar low, yet maintain that BIPOC entry lowers it.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In the wake of George Floyd's murder, corporate America pledged to do better, saying it would diversify its leadership, encourage equity and take concrete actions to root out systemic racism. They revealed that while Black and Hispanic employees are often overrepresented as compared to U.S. census data on the nation's workforce among the technicians, administrative assistants and service workers, they are significantly underrepresented in managerial and executive ranks.",
+      },
+      { type: "heading2", content: "The Double Bind" },
+      {
+        type: "paragraph",
+        content:
+          "Black professionals face a cruel paradox. We're told we don't belong, then questioned when we prove we do. We're held to higher standards while being told we only got here because the standards were lowered. We're expected to be exceptional just to be considered adequate.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is the soft bigotry of low expectations meeting the hard wall of systemic exclusion. White supremacy creates barriers, then blames those who struggle to overcome them. It demands excellence, then dismisses that excellence as affirmative action.",
+      },
+      { type: "heading2", content: "Reclaiming Excellence" },
+      {
+        type: "paragraph",
+        content:
+          "Black excellence has never been about meeting white standards. It's about thriving despite a system designed for our failure. It's about community, resilience, and the refusal to be diminished. The measure of our worth isn't determined by those who would exclude us.",
+      },
+    ],
+  },
+  {
+    id: 24,
+    title: "Race Norming and Bioethics",
+    description:
+      "'Race-norming'—also called 'race correction,' 'ethnic adjustment,' and 'race adjustment'—refers to the adjustment of medical test results or medical risk assessment algorithms based on a patient's race.",
+    category: "Healthcare + Racial Justice",
+    date: "March 5, 2024",
+    readTime: "8 min read",
+    image: "/blog/trnava-university-lr_mkznghuu-unsplash-scaled-2.jpg",
+    slug: "race-norming-and-bioethics",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "'Race-norming'—also called 'race correction,' 'ethnic adjustment,' and 'race adjustment'—refers to the adjustment of medical test results or medical risk assessment algorithms based on a patient's race. The practice, however, can and often does include additional factors such as age, assigned sex at birth, and pain tolerance.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Race-norming is believed to have been integrated into clinical risk assessment tools in 1981. Similar to the 'soft-bigotry of low expectations,' the practice is predicated on othering BIPOC communities, and most adversely affects Black people.",
+      },
+      { type: "heading2", content: "The Harm of Race-Based Medicine" },
+      {
+        type: "paragraph",
+        content:
+          "When algorithms adjust for race, they often result in Black patients receiving less aggressive treatment, being deprioritized for organ transplants, or having their symptoms dismissed. The assumption that race is a biological rather than social category leads to differential—and often inferior—care.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The NFL's use of race-norming in concussion settlements is a stark example: the practice assumed Black players started with lower cognitive function, making it harder for them to demonstrate impairment and receive compensation. This isn't medicine—it's discrimination codified in algorithms.",
+      },
+      { type: "heading2", content: "Toward Equitable Healthcare" },
+      {
+        type: "paragraph",
+        content:
+          "Removing race from medical algorithms isn't enough. We need to examine how racism—not race—affects health outcomes. We need to address social determinants of health, not use race as a proxy for them. We need to build healthcare systems that serve all patients equitably.",
+      },
+    ],
+  },
+  {
+    id: 25,
+    title: "Racism and The Wellness Industry",
+    description:
+      "2015 brought us #OscarsSoWhite shedding light on the absence of BIPOC voices and representation in the Academy Awards. 2018 brought us another hashtag: #WellnessSoWhite.",
+    category: "Wellness + Racial Justice",
+    date: "March 6, 2024",
+    readTime: "6 min read",
+    image: "/blog/tanaka-pendeke-o9gfrup1l9w-unsplash-scaled-2.jpg",
+    slug: "racism-and-the-wellness-industry",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "2015 brought us #OscarsSoWhite shedding light on the absence of BIPOC voices and representation in the Academy Awards; 'an award given for artistic and technical merit in the film industry.' 2018 brought us another hashtag: #WellnessSoWhite.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "#WellnessSoWhite began making its way into the discussions of diversity, equity, and inclusion in health and wellness via popular social media platforms and has resulted in small, albeit marked changes in the United States' multi-trillion dollar industry.",
+      },
+      { type: "heading2", content: "The Whitewashing of Wellness" },
+      {
+        type: "paragraph",
+        content:
+          "Wellness is about making healthy lifestyle choices and maintaining one's wellbeing both physically and mentally. In recent years, more people around the world have begun to recognize the importance of wellness. Yet the industry that has grown around it centers whiteness—in its imagery, its practitioners, its price points, and its cultural appropriation.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Yoga, meditation, and mindfulness practices have roots in cultures around the world, many of them non-white. Yet these practices have been packaged and sold primarily to white, affluent consumers, often stripped of their cultural context and spiritual significance.",
+      },
+      { type: "heading2", content: "Inclusive Wellness" },
+      {
+        type: "paragraph",
+        content:
+          "True wellness must be accessible to all. It must honor the traditions from which practices come. It must recognize that for many BIPOC communities, wellness also means healing from the trauma of racism. The wellness industry has work to do—and that work starts with representation, accessibility, and cultural humility.",
+      },
+    ],
+  },
+  {
+    id: 26,
+    title: "We Stand in Unity with Our Asian Allies",
+    description:
+      "It has taken us some time to find the words to express our deep empathy, sympathy, and worry for Asian communities across the US.",
+    category: "Solidarity + Racial Justice",
+    date: "April 1, 2024",
+    readTime: "5 min read",
+    image: "/blog/pexels-photo-5723322-1.jpeg",
+    slug: "we-stand-in-unity-with-our-asian-allies",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "It has taken us some time to find the words to express our deep empathy, sympathy, and worry for Asian communities across the US. Acts of violence engendered by hate affects us all, so we did not want to comment until we ourselves were in a space where we could do so in a way that lifts the voices, struggles, and causes of our Asian allies.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Incluu operates by educating and training folks to lead with curiosity and an open mind and heart; therefore, we strongly believe that education and learning on the perspectives of others is the best way to begin combating the hate and violence that plagues our communities.",
+      },
+      { type: "heading2", content: "Coalition Building" },
+      {
+        type: "paragraph",
+        content:
+          "The fight against racism isn't siloed. Anti-Asian hate is connected to anti-Black racism, anti-Indigenous violence, and all forms of white supremacy. We rise together or not at all. Coalition building means showing up for each other, even when—especially when—the spotlight isn't on our own community.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "We commit to listening, learning, and acting in solidarity with our Asian siblings. We commit to calling out the racism that has been directed at Asian communities, particularly during the pandemic. We commit to the long work of building a world where all of us can be safe.",
+      },
+    ],
+  },
+  {
+    id: 27,
+    title: "The Divisive Fallacy of Objective Truth",
+    description:
+      "[Helen] Pluckrose believes there is an objective truth! She believes in one truth that is rooted in Western, White/European ideologies of a particular scientific method which denounces any other forms of truth.",
+    category: "Critical Theory + Philosophy",
+    date: "April 2, 2024",
+    readTime: "8 min read",
+    image: "/blog/the_divisive_fallacy_of_objective_truth.jpg",
+    slug: "the-divisive-fallacy-of-objective-truth",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "[Helen] Pluckrose believes there is an objective truth! She believes in one truth that is rooted in Western, White/European ideologies of a particular scientific method which denounces any other forms of truth. Of course, this is a dangerous assumption.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Helen Pluckrose, the founder of the site Counterweight, has been outspoken in her critique of Critical Social Justice Theory (CSJ). In her article, 'What do we Mean by Critical Social Justice,' published earlier this year, Pluckrose attempts to explain her opposition to Critical Social Justice. She begins with the assertion that Liberalism and CST are quite similar and have shared goals.",
+      },
+      { type: "heading2", content: "The Myth of Objectivity" },
+      {
+        type: "paragraph",
+        content:
+          "The idea that there is a single, objective truth—accessible through Western scientific methods—ignores the ways that knowledge production itself is shaped by power. Whose questions get asked? Whose methods are considered valid? Whose perspectives are treated as universal?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This isn't to say that facts don't exist or that evidence doesn't matter. It's to recognize that what we count as evidence, how we interpret it, and whose interpretation we privilege are all shaped by our social position. Acknowledging this isn't relativism—it's intellectual honesty.",
+      },
+      { type: "heading2", content: "Beyond False Dichotomies" },
+      {
+        type: "paragraph",
+        content:
+          "The choice isn't between 'objective truth' and chaos. It's between a narrow conception of knowledge that centers certain voices and a more capacious understanding that makes room for multiple ways of knowing. This isn't division—it's expansion.",
+      },
+    ],
+  },
+  {
+    id: 28,
+    title: "5 Things Holding Organizations Back from Transformative Change",
+    description:
+      "At Incluu, LLC, we create brave spaces for life. Our work in the diversity, equity, and inclusion space at the intersection of human, tech, and civil rights has continued to expose the pitfalls organizations face.",
+    category: "DEI + Organizational Change",
+    date: "April 3, 2024",
+    readTime: "7 min read",
+    image: "/blog/good_cheap_fast-2.png",
+    slug: "5-things-holding-organizations-back-from-transformative-change",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "At Incluu, LLC, we create brave spaces for life. To some, this concept may sound dreamy, ambitious, and a little 'millennial,' but our work in the diversity, equity, and inclusion space at the intersection of human, tech, and civil rights has continued to expose the pitfalls organizations face when they do not fully embrace and commit to their DEI initiatives.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The murder of George Floyd in May 2020 and the global Black Lives Matter protests that followed forced organizations to explore the concept of breaking down barriers in their peoples, practices, and products. In doing so, many sought and are seeking to transform.",
+      },
+      { type: "heading2", content: "The Five Barriers" },
+      {
+        type: "paragraph",
+        content:
+          "1. Surface-level commitment: Organizations that treat DEI as a checkbox rather than a fundamental value will never achieve transformative change. Hiring a diversity consultant isn't the same as changing your culture.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "2. Lack of accountability: Without clear metrics, ownership, and consequences, DEI initiatives stall. Who is responsible? How will you measure progress? What happens when you fall short?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "3. Resistance from leadership: Change requires champions at the top. When executives aren't fully committed, the message is clear: this isn't really a priority.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "4. One-time training: A single workshop won't undo years of ingrained practices. Transformation requires ongoing learning, dialogue, and iteration.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "5. Centering comfort over growth: Real change is uncomfortable. Organizations that prioritize the comfort of the majority over the needs of the marginalized will stay stuck.",
+      },
+    ],
+  },
+  {
+    id: 29,
+    title: "Equal Pay & Caregiving: How COVID-19 Further Exacerbates Existing Inequities",
+    description:
+      "International Women's Day is a day in which many celebrate the progress we're making towards equal pay and fair wages between men and women.",
+    category: "Gender Equity + Economic Justice",
+    date: "April 4, 2024",
+    readTime: "6 min read",
+    image: "/blog/gris-zy-1920x1080-1.jpeg",
+    slug: "equal-pay-caregiving-how-covid19-further-exacerbates-existing-inequities",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "International Women's Day is a day in which many celebrate the progress we're making towards equal pay and fair wages between men and women. Over more than a century, this day has been observed in February on the Julian calendar and March on the Gregorian calendar.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "What is encoded in the language—as is often the case—is that International Women's Day is actually only a marker of the progress being made to bridge the wage gap between white men and white women. Black women currently observe equal pay day in August—August 3rd, this year, and it has yet to become cause for celebration.",
+      },
+      { type: "heading2", content: "The Pandemic's Unequal Impact" },
+      {
+        type: "paragraph",
+        content:
+          "COVID-19 didn't create gender inequity in caregiving—it exposed and deepened it. When schools closed and care systems collapsed, women absorbed the unpaid labor. Many left the workforce entirely. The 'she-cession' wasn't a natural disaster; it was a predictable result of building systems on the assumption that women's labor is infinitely elastic and endlessly free.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For women of color, the impact was even more severe. Already facing wider pay gaps, more likely to be in frontline jobs, less likely to have the option to work from home—the pandemic hit hardest where the safety net was thinnest.",
+      },
+      { type: "heading2", content: "Building Back Differently" },
+      {
+        type: "paragraph",
+        content:
+          "We can't go back to normal because normal was the problem. A post-pandemic world must include universal childcare, paid family leave, and fair wages for care workers. It must value the labor that makes all other labor possible.",
+      },
+    ],
+  },
+  {
+    id: 30,
+    title: "The Importance of Intersectionality in Tech",
+    description:
+      "One of the biggest misconceptions about tech is aptly summarized: '[Tech is] afforded a supremacy that humans feel comfortable not questioning. And yet, technology isn't just a neutral tool.'",
+    category: "Tech Ethics + Intersectionality",
+    date: "April 5, 2024",
+    readTime: "8 min read",
+    image: "/blog/christina-wocintechchat-com-rmweulmcyxm-unsplash-1024x684-281-29-2.jpg",
+    slug: "the-importance-of-intersectionality-in-tech",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "One of the biggest misconceptions about tech is aptly summarized by Hessie Jones: '[Tech is] afforded a supremacy that humans feel comfortable not questioning. And yet, technology isn't just a neutral tool.'",
+      },
+      {
+        type: "paragraph",
+        content:
+          "As AI/ML continues to become rapidly enmeshed in our daily lives, so have discussions of ethics, and the lack thereof, in tech. The dangers of the myriad intersectional biases in tech design have made their way from the confines of esoteric spaces into broader mainstream discussions of diversity, equity, inclusion, and ethics.",
+      },
+      { type: "heading2", content: "What Is Intersectionality?" },
+      {
+        type: "paragraph",
+        content:
+          "Coined by legal scholar Kimberlé Crenshaw, intersectionality recognizes that people hold multiple identities simultaneously, and that the intersection of these identities creates unique experiences of privilege and oppression. A Black woman doesn't experience racism and sexism separately—she experiences them as interlocking systems.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In tech, this means that systems can fail in ways that are only visible when you look at the intersection of identities. Facial recognition might work fine for white men and white women separately—but fail specifically for Black women.",
+      },
+      { type: "heading2", content: "Designing with Intersectionality" },
+      {
+        type: "paragraph",
+        content:
+          "Although many big tech companies are hiring in-house DEI consultants and broaching the topic of more equitable design, true intersectional thinking requires more than diverse hiring. It requires asking whose experiences we're centering, whose data we're training on, and whose voices have power in the design process.",
+      },
+    ],
+  },
+  {
+    id: 31,
+    title: "What is Liberatory Design?",
+    description:
+      "At first, you might be thinking, what does design have to do with liberation? You might feel a tinge of discomfort come over you, and a sigh of, 'Is nothing safe from wokeness?'",
+    category: "Design + Liberation",
+    date: "April 6, 2024",
+    readTime: "7 min read",
+    image: "/blog/libdes-2.jpg",
+    slug: "what-is-liberatory-design",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "At first, you might be thinking, what does design have to do with liberation? You might feel a tinge of discomfort come over you, and a sigh of, 'Is nothing safe from wokeness?' You'd be partially right.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "As our critical thought processes evolve, as binaries and ceilings become more expansive, we are forced to reckon with the pervasive, insidious nature of the oppressive, exploitative, white supremacist, capitalist, heteronormative, patriarchal structures we have all been indoctrinated into, voluntarily... and not.",
+      },
+      { type: "heading2", content: "Defining Liberatory Design" },
+      {
+        type: "paragraph",
+        content:
+          "'Liberatory Design is an evolution of the design thinking methodology. It's an approach to problem solving that helps people translate their values of equity into a tangible process.' It centers those most impacted by design decisions and aims to disrupt rather than replicate existing power structures.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Traditional design thinking assumes a neutral designer and a universal user. Liberatory design asks: Who is designing? For whom? With what assumptions? And most importantly: Does this design liberate or constrain?",
+      },
+      { type: "heading2", content: "Putting Liberation into Practice" },
+      {
+        type: "paragraph",
+        content:
+          "Liberatory design isn't a checklist—it's a practice. It requires ongoing reflection on our own positionality, genuine partnership with communities, and willingness to cede control. The goal isn't a better product for the people; it's a better process with the people.",
+      },
+    ],
+  },
+  {
+    id: 32,
+    title: "Digital Blackface: Are You Complicit?",
+    description:
+      "'Digital blackface' is used to describe various types of minstrel performance that become available in cyberspace. Blackface minstrelsy is a theatrical tradition dating back to the early 19th century.",
+    category: "Digital Culture + Racism",
+    date: "April 7, 2024",
+    readTime: "6 min read",
+    image: "/blog/priscilla-du-preez-bjhuu6bpuza-unsplash-2048x1365-2.jpg",
+    slug: "digital-blackface-are-you-complicit",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "'Digital blackface' is used to describe various types of minstrel performance that become available in cyberspace. Blackface minstrelsy is a theatrical tradition dating back to the early 19th century, in which performers 'blacken' themselves up with costume and behaviors to act as black caricatures.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The performances put society's most racist sensibilities on display and in turn fed them back to audiences to intensify these feelings and disperse them across culture.",
+      },
+      { type: "heading2", content: "GIFs, Memes, and Modern Minstrelsy" },
+      {
+        type: "paragraph",
+        content:
+          "When non-Black people use GIFs and memes of Black people to express emotions—the sassy neck roll, the exaggerated reaction—they're participating in a digital form of the same performance. They're using Black bodies as costumes for emotional expression while remaining distanced from the lived experience of Blackness.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This isn't about policing individual GIF usage. It's about recognizing patterns. Why are Black reaction GIFs so popular among non-Black users? What assumptions about Black expressiveness are being reinforced? Who profits from the circulation of these images?",
+      },
+      { type: "heading2", content: "Being Intentional Online" },
+      {
+        type: "paragraph",
+        content:
+          "Digital spaces require the same critical consciousness as physical ones. Before hitting send, consider: Am I treating Black people as props for my own expression? Am I perpetuating stereotypes? Being intentional isn't about perfection—it's about awareness and willingness to do differently.",
+      },
+    ],
+  },
+  {
+    id: 33,
+    title: "Facial Recognition and Racial Bias",
+    description:
+      "In as many years, 3 Black men have had their lives upended by wrongful arrests. Robert Williams, Michael Oliver, and Nijeer Parks were misidentified by facial recognition software.",
+    category: "AI Bias + Criminal Justice",
+    date: "April 18, 2024",
+    readTime: "8 min read",
+    image: "/blog/ariel-sion-i7v-btpnktg-unsplash-2048x1365-2.jpg",
+    slug: "facial-recognition-and-racial-bias",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "In as many years, 3 Black men have had their lives upended by wrongful arrests. Robert Williams, Michael Oliver, and Nijeer Parks were misidentified by facial recognition software, arrested, and held under suspicion of crimes ranging from petty theft to assault of a police officer.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For Parks, who was accused of the more serious crimes of assault and eluding the police, the fight to clear his name went on for the better part of a year. Before his case was thrown out of court, and his name cleared, Parks would go on to spend 10 days in jail, all due to algorithmic misidentification.",
+      },
+      { type: "heading2", content: "The Technology's Failure" },
+      {
+        type: "paragraph",
+        content:
+          "Facial recognition systems consistently perform worse on darker-skinned faces, particularly those of Black women. This isn't a bug—it's the predictable result of training data that underrepresents these groups and testing processes that don't adequately assess performance across demographics.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "But the problem isn't just technical. It's the deployment of imperfect technology in high-stakes situations without adequate safeguards. It's treating algorithmic output as evidence rather than as one input among many. It's the assumption that technology is neutral even when the outcomes clearly are not.",
+      },
+      { type: "heading2", content: "The Path Forward" },
+      {
+        type: "paragraph",
+        content:
+          "Some cities have banned facial recognition technology entirely. Others are implementing regulations around its use. But technical fixes and policy changes alone won't solve the problem. We need to fundamentally rethink how we deploy surveillance technology and who bears the cost of its failures.",
+      },
+    ],
+  },
+  {
+    id: 34,
+    title: "The Pitfalls of Adversarial Clothing",
+    description:
+      "When I present on panels about equitable and inclusive design, there are two areas I emphasize: these are the areas where we, as humans have the greatest opportunity to bring about transformative change.",
+    category: "AI + Privacy",
+    date: "April 18, 2024",
+    readTime: "7 min read",
+    image: "/blog/adversarial-clothing.png",
+    slug: "the-pitfalls-of-adversarial-clothing",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "When I present on panels about equitable and inclusive design, there are two areas I emphasize; as both a social scientist and tech ethicist, these are the areas where we, as humans have the greatest opportunity to bring about transformative change.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The first and most fundamental tool we have within our arsenal is the call-in. The call-in is the seed from which the best accessible, equitable, and inclusive products and processes take shape. Who am I designing this for? Who am I designing it with? If they are not one and the same, we must go back and begin again.",
+      },
+      { type: "heading2", content: "The Problem with Individual Solutions" },
+      {
+        type: "paragraph",
+        content:
+          "Adversarial clothing—garments designed to confuse facial recognition systems—represents an individual solution to a systemic problem. It places the burden of evading surveillance on the very people most likely to be harmed by it.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Moreover, it doesn't work equally for everyone. The effectiveness of these techniques varies, and those with more resources have better access to them. When we offer individual technical fixes for structural problems, we often deepen existing inequalities.",
+      },
+      { type: "heading2", content: "Systemic Change Required" },
+      {
+        type: "paragraph",
+        content:
+          "The solution to harmful surveillance isn't better camouflage—it's not building the harmful surveillance in the first place. We need to shift our focus from helping individuals evade bad systems to preventing those systems from being deployed.",
+      },
+    ],
+  },
+  {
+    id: 35,
+    title: "Ethical AI and Smart Lock Systems",
+    description:
+      "I recently sat down with a group to discuss the pros and cons of emerging technologies from my perspective as both anthropologist and ethical technologist; specifically, smart lock systems.",
+    category: "AI Ethics + Housing",
+    date: "April 19, 2024",
+    readTime: "9 min read",
+    image: "/blog/amol-tyagi-0juktkotkpu-unsplash-1638x2048-2.jpg",
+    slug: "ethical-ai-and-smart-lock-systems",
+    author: "Dr. Dédé Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "I recently sat down with a group to discuss the pros and cons of emerging technologies from my perspective as both anthropologist and ethical technologist; specifically, smart lock systems.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For those who may be unfamiliar with smart lock systems, they are a relatively new technological advancement that uses image and facial recognition software to enable users entry to businesses and residences thereby eliminating physical keys; this technology is believed to increase safety and ease of accessibility.",
+      },
+      { type: "heading2", content: "The Promise" },
+      {
+        type: "paragraph",
+        content:
+          "No more misplaced and lost keys, costly locksmith services, and the ease of allowing temporary and/or limited access to vendors, guests, and service providers. For people with certain disabilities, keyless entry can be genuinely liberating.",
+      },
+      { type: "heading2", content: "The Problems" },
+      {
+        type: "paragraph",
+        content:
+          "But smart locks that use facial recognition inherit all the biases of that technology. They create databases of who enters buildings and when. They can be used to surveil tenants and employees. And when they fail—as all technology eventually does—the consequences can be severe.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "We must ask: Who controls the data these systems generate? What happens when the technology fails for certain users more than others? How might landlords and employers misuse this surveillance capability? Convenience is not a sufficient justification for building pervasive surveillance into our homes and workplaces.",
+      },
+    ],
+  },
 ]
