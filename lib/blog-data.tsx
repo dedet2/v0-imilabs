@@ -689,7 +689,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Practical design patterns that make AI products work for everyone—from multimodal interaction to cognitive accessibility.",
     category: "Product Design + Accessibility",
-    date: "January 10, 2026",
+    date: "January 11, 2026",
     readTime: "9 min read",
     image: "/blog/inclusive-design-patterns.jpg",
     slug: "inclusive-design-patterns-ai",
@@ -963,7 +963,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "How AI governance is evolving worldwide, where we're converging, and how to prepare your organization for the regulatory landscape ahead.",
     category: "AI Policy + Governance",
-    date: "January 11, 2026",
+    date: "January 4, 2026",
     readTime: "9 min read",
     image: "/blog/executive-team-reviewing-compliance-dashboard.jpg",
     slug: "future-ai-regulation-global-trends",
@@ -3785,7 +3785,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "I am passionate about my work as a Product Inclusion Specialist, a profession where I build products that work for everybody, regardless of ability, gender, resources, culture, race, or class.",
     category: "Product Inclusion + Ethics",
-    date: "March 1, 2024",
+    date: "September 28, 2025",
     readTime: "8 min read",
     image: "/blog/0ha5_gjflj6n_okrx-1.jpeg",
     slug: "from-invisibility-to-radical-empathy",
@@ -3868,7 +3868,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Recently, CBS's 60-minutes aired a segment on racial bias in facial recognition technology, referring to a December 2019 NIST study as a 'landmark study' while failing to mention the groundbreaking research on which it was based.",
     category: "AI Bias + Media",
-    date: "March 2, 2024",
+    date: "September 21, 2025",
     readTime: "7 min read",
     image: "/blog/joy_buolamwini_-_wikimania_2018_01-1-2.jpg",
     slug: "60-minutes-and-encoded-bias",
@@ -4634,29 +4634,45 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "'Digital blackface' is used to describe various types of minstrel performance that become available in cyberspace. Blackface minstrelsy is a theatrical tradition dating back to the early 19th century, in which performers 'blacken' themselves up with costume and behaviors to act as black caricatures.",
+          "'Digital blackface' is used to describe various types of minstrel performance that become available in cyberspace. Blackface minstrelsy is a theatrical tradition dating back to the early 19th century, in which performers 'blacken' themselves up with costume and behaviors to act as black caricatures. The performances put society's most racist sensibilities on display and in turn fed them back to audiences to intensify these feelings and disperse them across culture. — Lauren Michele Jackson, Teen Vogue",
+      },
+      { type: "heading2", content: "The Fight for Liberation in Digital Spaces" },
+      {
+        type: "paragraph",
+        content:
+          "For those of us at the forefront of the fight for liberation, the obstacles seem endless. It would appear that every facet of our daily existence and interactions are marred by pervasive influence of white supremacy—or rather, 'white supremacist delusion' as Sonya Renee Taylor has coined it. We have long since uncovered the truth about the social construct of race, but knowing better and living in that truth don't always align.",
       },
       {
         type: "paragraph",
         content:
-          "The performances put society's most racist sensibilities on display and in turn fed them back to audiences to intensify these feelings and disperse them across culture.",
+          "Based on data compiled by Statista, it is estimated that in 2021 the average American spent 8+ hours on digital media daily, communicating with people from all walks of life, and from all over the world. A third of your day, everyday, is either an opportunity for harm or harm reduction and liberation.",
       },
       { type: "heading2", content: "GIFs, Memes, and Modern Minstrelsy" },
       {
         type: "paragraph",
         content:
-          "When non-Black people use GIFs and memes of Black people to express emotions—the sassy neck roll, the exaggerated reaction—they're participating in a digital form of the same performance. They're using Black bodies as costumes for emotional expression while remaining distanced from the lived experience of Blackness.",
+          "We've all seen it so much that in many ways, we've become numb to the problematic nature of digital blackface. When non-Black people use GIFs and memes of Black people to express emotions—the sassy neck roll, the exaggerated reaction, the dramatic eye roll—they're participating in a digital form of the same minstrel performance that dates back centuries.",
       },
       {
         type: "paragraph",
         content:
-          "This isn't about policing individual GIF usage. It's about recognizing patterns. Why are Black reaction GIFs so popular among non-Black users? What assumptions about Black expressiveness are being reinforced? Who profits from the circulation of these images?",
+          "They're using Black bodies as costumes for emotional expression while remaining distanced from the lived experience of Blackness. The Black body becomes a vessel for expression without any of the consequences of actually being Black in America.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This isn't about policing individual GIF usage. It's about recognizing patterns. Why are Black reaction GIFs so popular among non-Black users? What assumptions about Black expressiveness are being reinforced? Who profits from the circulation of these images? And importantly: how does this digital performance connect to centuries of Black people being reduced to entertainment for white audiences?",
       },
       { type: "heading2", content: "Being Intentional Online" },
       {
         type: "paragraph",
         content:
-          "Digital spaces require the same critical consciousness as physical ones. Before hitting send, consider: Am I treating Black people as props for my own expression? Am I perpetuating stereotypes? Being intentional isn't about perfection—it's about awareness and willingness to do differently.",
+          "Digital spaces require the same critical consciousness as physical ones. Before hitting send, consider: Am I treating Black people as props for my own expression? Am I perpetuating stereotypes about Black emotionality or expressiveness? Am I consuming Blackness without engaging with Black humanity?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Being intentional isn't about perfection—it's about awareness and willingness to do differently. It's about recognizing that what seems like harmless fun online has historical roots in dehumanization. And it's about choosing, in those 8+ hours we spend online daily, to be part of liberation rather than part of harm.",
       },
     ],
   },
@@ -4675,14 +4691,24 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "In as many years, 3 Black men have had their lives upended by wrongful arrests. Robert Williams, Michael Oliver, and Nijeer Parks were misidentified by facial recognition software, arrested, and held under suspicion of crimes ranging from petty theft to assault of a police officer.",
+          "It is estimated that almost half of American adults—over 117 million people, as of 2016—have photos within a facial recognition network used by law enforcement. This participation occurs without consent, or even awareness, and is bolstered by a lack of legislative oversight. More disturbingly, however, the current implementation of these technologies involves significant racial bias, particularly against Black Americans.",
       },
       {
         type: "paragraph",
         content:
-          "For Parks, who was accused of the more serious crimes of assault and eluding the police, the fight to clear his name went on for the better part of a year. Before his case was thrown out of court, and his name cleared, Parks would go on to spend 10 days in jail, all due to algorithmic misidentification.",
+          "In as many years, 3 Black men have had their lives upended by wrongful arrests. Robert Williams, Michael Oliver, and Nijeer Parks were misidentified by facial recognition software, arrested, and held under suspicion of crimes ranging from petty theft to assault of a police officer. For Parks, who was accused of the more serious crimes of assault and eluding the police, the fight to clear his name went on for the better part of a year. Before his case was thrown out of court, and his name cleared, Parks would go on to spend 10 days in jail, all due to hyper-reliance on technology.",
       },
-      { type: "heading2", content: "The Technology's Failure" },
+      {
+        type: "paragraph",
+        content:
+          "In the later filed lawsuit against the Woodbridge Police Department, its affiliates and Idemia the company behind the facial recognition software, Parks alleged that proper investigative techniques were forgone in lieu of faulty technology.",
+      },
+      { type: "heading2", content: "The Technology's Systemic Failure" },
+      {
+        type: "paragraph",
+        content:
+          "Despite widely published research findings detailing the issues of misidentification of darker skinned faces by facial recognition technologies, law enforcement's hyper-reliance remains. For BIPOC, and most notably, dark-skinned Black women (for whom misidentification occurs as often as 33% of the time compared to that of white men) this adds an added layer of vulnerability to an already over-policed population.",
+      },
       {
         type: "paragraph",
         content:
@@ -4698,6 +4724,11 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         content:
           "Some cities have banned facial recognition technology entirely. Others are implementing regulations around its use. But technical fixes and policy changes alone won't solve the problem. We need to fundamentally rethink how we deploy surveillance technology and who bears the cost of its failures.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The wrongful arrests of Robert Williams, Michael Oliver, and Nijeer Parks aren't isolated incidents—they're symptoms of a system that prioritizes technological efficiency over human rights. Until we address the underlying biases in both the technology and the institutions that deploy it, Black Americans will continue to bear the cost of algorithmic racism.",
       },
     ],
   },
@@ -4723,22 +4754,48 @@ export const blogPosts: BlogPost[] = [
         content:
           "The first and most fundamental tool we have within our arsenal is the call-in. The call-in is the seed from which the best accessible, equitable, and inclusive products and processes take shape. Who am I designing this for? Who am I designing it with? If they are not one and the same, we must go back and begin again.",
       },
+      {
+        type: "paragraph",
+        content:
+          "The second area is anticipating harm—thinking proactively about how technology might be misused or might disproportionately impact certain communities. This is where adversarial clothing enters the conversation, and where I have significant concerns.",
+      },
       { type: "heading2", content: "The Problem with Individual Solutions" },
       {
         type: "paragraph",
         content:
-          "Adversarial clothing—garments designed to confuse facial recognition systems—represents an individual solution to a systemic problem. It places the burden of evading surveillance on the very people most likely to be harmed by it.",
+          "Adversarial clothing—garments designed to confuse facial recognition systems—represents an individual solution to a systemic problem. These clothes use patterns that disrupt how AI systems identify human forms and faces. On the surface, this seems like an empowering response to surveillance overreach.",
       },
       {
         type: "paragraph",
         content:
-          "Moreover, it doesn't work equally for everyone. The effectiveness of these techniques varies, and those with more resources have better access to them. When we offer individual technical fixes for structural problems, we often deepen existing inequalities.",
+          "But it places the burden of evading surveillance on the very people most likely to be harmed by it. Black and brown communities, who already face disproportionate surveillance and policing, are now being asked to purchase specialized clothing to protect themselves from technology that shouldn't be deployed against them in the first place.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Moreover, adversarial clothing doesn't work equally for everyone. The effectiveness of these techniques varies based on body type, skin tone, and environmental conditions. Those with more resources have better access to the most effective options. When we offer individual technical fixes for structural problems, we often deepen existing inequalities.",
+      },
+      { type: "heading2", content: "The Capitalization of Resistance" },
+      {
+        type: "paragraph",
+        content:
+          "There's something deeply troubling about turning resistance to surveillance into a consumer product. Companies are now profiting from selling protection against systems that they—or companies like them—helped create. This is the logic of late capitalism: create the problem, then sell the solution.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Meanwhile, those who can't afford adversarial clothing remain vulnerable. Privacy becomes a luxury good, available only to those who can pay for it. This isn't liberation—it's a two-tiered system where the wealthy can buy their way out of surveillance while everyone else remains trapped.",
       },
       { type: "heading2", content: "Systemic Change Required" },
       {
         type: "paragraph",
         content:
           "The solution to harmful surveillance isn't better camouflage—it's not building the harmful surveillance in the first place. We need to shift our focus from helping individuals evade bad systems to preventing those systems from being deployed.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This means advocating for laws that restrict facial recognition technology. It means holding companies accountable for biased AI systems. It means demanding transparency about how surveillance technologies are used and against whom. The fight for privacy shouldn't require a new wardrobe—it should require a new relationship between technology and justice.",
       },
     ],
   },
@@ -4757,29 +4814,52 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          "I recently sat down with a group to discuss the pros and cons of emerging technologies from my perspective as both anthropologist and ethical technologist; specifically, smart lock systems.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "For those who may be unfamiliar with smart lock systems, they are a relatively new technological advancement that uses image and facial recognition software to enable users entry to businesses and residences thereby eliminating physical keys; this technology is believed to increase safety and ease of accessibility.",
+          "I recently sat down with a group to discuss the pros and cons of emerging technologies from my perspective as both anthropologist and ethical technologist; specifically, smart lock systems. For those who may be unfamiliar with smart lock systems, they are a relatively new technological advancement that uses image and facial recognition software to enable users entry to businesses and residences thereby eliminating physical keys; this technology is believed to increase safety and ease of accessibility.",
       },
       { type: "heading2", content: "The Promise" },
       {
         type: "paragraph",
         content:
-          "No more misplaced and lost keys, costly locksmith services, and the ease of allowing temporary and/or limited access to vendors, guests, and service providers. For people with certain disabilities, keyless entry can be genuinely liberating.",
+          "No more misplaced and lost keys, costly locksmith services, and the ease of allowing temporary and/or limited access to vendors, guests, and service providers. These are the pros and admittedly, they are cost-efficient, time-saving, and an added convenience for some—perhaps, many. For people with certain disabilities, keyless entry can be genuinely liberating.",
       },
-      { type: "heading2", content: "The Problems" },
+      { type: "heading2", content: "The Myth of Infallible AI" },
       {
         type: "paragraph",
         content:
-          "But smart locks that use facial recognition inherit all the biases of that technology. They create databases of who enters buildings and when. They can be used to surveil tenants and employees. And when they fail—as all technology eventually does—the consequences can be severe.",
+          "There is a misconception that AI is godlike, infallible even; but AI is a product of wholly fallible human design. Coded into the complex algorithms are the same biases we deal with in our day to day human experiences. Laypersons are more apt to buy into a science they don't fully understand and this leaves an already over-policed, vulnerable faction of the population at a heightened risk of unprecedented, unmitigated harm.",
+      },
+      { type: "heading2", content: "When Technology Meets Racial Bias" },
+      {
+        type: "paragraph",
+        content:
+          "Within the past month, a Black sixteen year old was seriously wounded after being shot by a White homeowner for ringing his doorbell in error. It is not only reasonable to suspect, but to assert the homeowner reacted with such heightened hostility towards the error and minor inconvenience due to his own preconceived notions about race.",
       },
       {
         type: "paragraph",
         content:
-          "We must ask: Who controls the data these systems generate? What happens when the technology fails for certain users more than others? How might landlords and employers misuse this surveillance capability? Convenience is not a sufficient justification for building pervasive surveillance into our homes and workplaces.",
+          "What, then, do we do when there is a digital intermediary—a smart lock system—that carries those same racial biases in its code? We've already established that facial recognition technology misidentifies Black faces at dramatically higher rates. Now imagine that same flawed technology controlling who can enter their own home.",
+      },
+      { type: "heading2", content: "The Surveillance Problem" },
+      {
+        type: "paragraph",
+        content:
+          "Smart locks that use facial recognition create databases of who enters buildings and when. They can be used to surveil tenants and employees. For marginalized communities already subject to over-surveillance, this adds yet another layer of monitoring to daily life.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "We must ask: Who controls the data these systems generate? What happens when the technology fails for certain users more than others? How might landlords and employers misuse this surveillance capability? What recourse do tenants have when they're locked out of their own homes by biased technology?",
+      },
+      { type: "heading2", content: "Convenience Is Not Enough" },
+      {
+        type: "paragraph",
+        content:
+          "Convenience is not a sufficient justification for building pervasive surveillance into our homes and workplaces. Before deploying these technologies, we need robust discussions about consent, data ownership, algorithmic accountability, and the differential impacts on vulnerable communities.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "As with all emerging technologies, we must ask not just 'can we build this?' but 'should we build this, and for whom?' The answer, as always, requires centering those most likely to be harmed—not just those most likely to benefit.",
       },
     ],
   },
