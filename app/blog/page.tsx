@@ -49,11 +49,13 @@ export default function BlogPage() {
             <div className="mb-16">
               <Card className="overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="grid md:grid-cols-2 gap-0">
-                  <div className="relative aspect-video md:aspect-auto">
+                  <div className="relative aspect-video md:aspect-auto min-h-[250px] md:min-h-[350px]">
                     <Image
                       src={blogPosts[0].image}
                       alt={blogPosts[0].title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority
                       className="object-cover"
                     />
                   </div>
@@ -92,11 +94,12 @@ export default function BlogPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.slice(1).map((post) => (
                 <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow group">
-                  <div className="relative aspect-video">
+                  <div className="relative aspect-video w-full">
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
