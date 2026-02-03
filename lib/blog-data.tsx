@@ -2640,7 +2640,7 @@ export const blogPosts: BlogPost[] = [
     category: "Accessibility + AI Design",
     date: "November 9, 2025",
     readTime: "10 min read",
-    image: "/blog/diverse-tech-team-collaborating-in-modern-office.jpg",
+    image: "/blog/6cb4e2dd75dc35bf36c9f9f9d1ab742b.jpg",
     slug: "accessible-ai-assistants",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3053,7 +3053,7 @@ export const blogPosts: BlogPost[] = [
     category: "Market Strategy + Disability Innovation",
     date: "November 2, 2025",
     readTime: "10 min read",
-    image: "/blog/diverse-team-collaborating-on-inclusive-technology.jpg",
+    image: "/blog/4c1f4ad7caff177a6bcbb707a503bd7f.jpg",
     slug: "disability-economy-strategy",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3263,7 +3263,7 @@ export const blogPosts: BlogPost[] = [
     category: "Risk Travel + Disability Strategy",
     date: "October 26, 2025",
     readTime: "10 min read",
-    image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=1920&h=1080&fit=crop&q=80",
+    image: "/blog/1b332847a247bda71713c1ec594ada2e.jpg",
     slug: "risk-travel-disabled-professional",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3617,7 +3617,7 @@ export const blogPosts: BlogPost[] = [
     category: "Regulation + Global Travel",
     date: "October 12, 2025",
     readTime: "10 min read",
-    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1920&h=1080&fit=crop&q=80",
+    image: "/blog/6d0721bc5c8e25fc6e4f4aeabcba7eb1.jpg",
     slug: "global-accessibility-standards-travelers",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
@@ -3801,7 +3801,7 @@ export const blogPosts: BlogPost[] = [
     category: "Disability Economy + Strategy",
     date: "October 5, 2025",
     readTime: "10 min read",
-    image: "https://images.unsplash.com/photo-1502920514313-52581002a659?w=1920&h=1080&fit=crop&q=80",
+    image: "/blog/ae98bc039210ef6efb9c68f5696be341.jpg",
     slug: "business-case-accessible-tourism",
     author: "Dr. Dédé Tetsubayashi",
     contentBlocks: [
