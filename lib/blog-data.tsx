@@ -1,5 +1,3 @@
-import { ReactNode } from "react"
-
 // Content block types for rich article content
 export type ContentBlock =
   | { type: "paragraph"; content: string }
