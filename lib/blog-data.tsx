@@ -3503,4 +3503,4 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-];
+]
