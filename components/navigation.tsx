@@ -133,6 +133,16 @@ export function Navigation() {
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Client success stories</p>
                   </Link>
+                  <Link
+                    href="/incluu/ai-agents"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Ethical AI Agents
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">Done-for-you AI solutions</p>
+                  </Link>
                 </div>
               )}
             </div>
@@ -469,6 +479,13 @@ export function Navigation() {
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Testimonials
+                    </Link>
+                    <Link
+                      href="/incluu/ai-agents"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Ethical AI Agents
                     </Link>
                   </div>
                 )}
