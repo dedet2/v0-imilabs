@@ -337,16 +337,6 @@ export function Navigation() {
                   onMouseLeave={() => closeDesktopDropdown("resources")}
                 >
                   <Link
-                    href="/ai-compliance"
-                    onClick={closeAllDesktopDropdowns}
-                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
-                  >
-                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
-                      AI Compliance Checker
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-1">EU AI Act compliance assessment</p>
-                  </Link>
-                  <Link
                     href="/resources/roi-calculator"
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
@@ -355,6 +345,16 @@ export function Navigation() {
                       ROI Calculator
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Calculate your AI ROI potential</p>
+                  </Link>
+                  <Link
+                    href="/resources/ai-compliance"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      AI Compliance Checker
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">EU AI Act compliance assessment</p>
                   </Link>
                   <Link
                     href="/resources/stories"
@@ -683,18 +683,18 @@ export function Navigation() {
                 {mobileDropdowns.resources && (
                   <div className="pl-8 flex flex-col gap-2">
                     <Link
-                      href="/ai-compliance"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      AI Compliance Checker
-                    </Link>
-                    <Link
                       href="/resources/roi-calculator"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       ROI Calculator
+                    </Link>
+                    <Link
+                      href="/resources/ai-compliance"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      AI Compliance Checker
                     </Link>
                     <Link
                       href="/resources/stories"

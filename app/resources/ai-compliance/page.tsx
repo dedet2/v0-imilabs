@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Get a comprehensive AI compliance assessment in just 2-5 business days. Identify critical gaps before they become costly violations.",
   alternates: {
-    canonical: "https://dr-dede.com/ai-compliance",
+    canonical: "https://dr-dede.com/resources/ai-compliance",
   },
   openGraph: {
     title: "AI Compliance Quickscan | Dr. Dédé Tetsubayashi",
@@ -162,16 +162,16 @@ export default function AICompliancePage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-red-600 via-red-500 to-orange-500 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_60%)]" />
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.15),transparent_60%)]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <Link
-              href="/"
+              href="/resources"
               className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors"
             >
               <ArrowRight className="h-4 w-4 mr-2 rotate-180" />
-              Back to Landing
+              Back to Resources
             </Link>
 
             <div className="flex items-center gap-3 mb-6">
@@ -193,7 +193,7 @@ export default function AICompliancePage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <div className="flex items-center gap-2 mb-2">
-                  <AlertTriangle className="h-5 w-5 text-yellow-300" />
+                  <AlertTriangle className="h-5 w-5 text-amber-400" />
                 </div>
                 <div className="text-3xl font-bold mb-1">$4.3M</div>
                 <div className="text-sm text-white/80">Average Fine</div>
@@ -201,14 +201,14 @@ export default function AICompliancePage() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <div className="flex items-center gap-2 mb-2">
-                  <Clock className="h-5 w-5 text-yellow-300" />
+                  <Clock className="h-5 w-5 text-amber-400" />
                 </div>
                 <div className="text-3xl font-bold mb-1">72 Hours</div>
                 <div className="text-sm text-white/80">To report data breaches</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <div className="flex items-center gap-2 mb-2">
-                  <Users className="h-5 w-5 text-yellow-300" />
+                  <Users className="h-5 w-5 text-amber-400" />
                 </div>
                 <div className="text-3xl font-bold mb-1">89%</div>
                 <div className="text-sm text-white/80">of Companies</div>
@@ -233,8 +233,8 @@ export default function AICompliancePage() {
             {risks.map((risk, index) => (
               <Card key={index} className="bg-white hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <div className="h-12 w-12 rounded-xl bg-red-100 flex items-center justify-center mb-4">
-                    <risk.icon className="h-6 w-6 text-red-600" />
+                  <div className="h-12 w-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4">
+                    <risk.icon className="h-6 w-6 text-amber-600" />
                   </div>
                   <CardTitle className="text-lg">{risk.title}</CardTitle>
                 </CardHeader>
@@ -251,7 +251,7 @@ export default function AICompliancePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <Badge className="mb-4 bg-cyan-100 text-cyan-700 border-cyan-200">The Solution</Badge>
+            <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200">The Solution</Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               The AI Compliance Quickscan<sup className="text-lg">TM</sup> Solution
             </h2>
@@ -263,7 +263,7 @@ export default function AICompliancePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
@@ -279,8 +279,8 @@ export default function AICompliancePage() {
               {deliverables.map((item, index) => (
                 <div key={index} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
                   <div className="flex-shrink-0">
-                    <div className="h-10 w-10 rounded-full bg-cyan-100 flex items-center justify-center">
-                      <CheckCircle2 className="h-5 w-5 text-cyan-600" />
+                    <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
+                      <CheckCircle2 className="h-5 w-5 text-purple-600" />
                     </div>
                   </div>
                   <div>
@@ -308,11 +308,11 @@ export default function AICompliancePage() {
             {packages.map((pkg, index) => (
               <Card
                 key={index}
-                className={`relative ${pkg.popular ? "border-2 border-cyan-500 shadow-xl scale-105" : "border border-gray-200"}`}
+                className={`relative ${pkg.popular ? "border-2 border-purple-500 shadow-xl scale-105" : "border border-gray-200"}`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-cyan-500 text-white px-4 py-1">Most Popular</Badge>
+                    <Badge className="bg-purple-500 text-white px-4 py-1">Most Popular</Badge>
                   </div>
                 )}
                 <CardHeader className="text-center pb-4">
@@ -330,14 +330,14 @@ export default function AICompliancePage() {
                   <ul className="space-y-3 mb-6">
                     {pkg.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-cyan-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-4 w-4 text-purple-600 flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Button
                     asChild
-                    className={`w-full ${pkg.popular ? "bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700" : ""}`}
+                    className={`w-full ${pkg.popular ? "bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-700 hover:to-cyan-600" : ""}`}
                     variant={pkg.popular ? "default" : "outline"}
                   >
                     <Link href="/contact?service=compliance-quickscan">
@@ -362,7 +362,7 @@ export default function AICompliancePage() {
               gain peace of mind.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white">
+              <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-700 hover:to-cyan-600 text-white">
                 <Link href="/contact?service=compliance-quickscan">
                   Schedule Your Quickscan
                   <ArrowRight className="ml-2 h-4 w-4" />

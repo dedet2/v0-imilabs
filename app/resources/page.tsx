@@ -143,7 +143,7 @@ export default function ResourcesPage() {
                   Assess your organization's AI governance compliance readiness
                 </p>
                 <Button asChild className="w-full bg-gradient-to-r from-cyan-600 to-cyan-700 hover:opacity-90">
-                  <Link href="/ai-compliance">
+                  <Link href="/resources/ai-compliance">
                     Start Assessment
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
