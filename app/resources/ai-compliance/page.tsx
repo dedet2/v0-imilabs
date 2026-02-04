@@ -162,8 +162,8 @@ export default function AICompliancePage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.15),transparent_60%)]" />
+      <section className="relative py-20 bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-400 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_60%)]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <Link
@@ -175,10 +175,10 @@ export default function AICompliancePage() {
             </Link>
 
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center">
-                <AlertTriangle className="h-6 w-6" />
+              <div className="h-12 w-12 rounded-full bg-purple-400/30 backdrop-blur-sm border border-purple-300/40 flex items-center justify-center">
+                <AlertTriangle className="h-6 w-6 text-white" />
               </div>
-              <Badge className="bg-white/20 text-white border-white/30">Compliance Risk Alert</Badge>
+              <Badge className="bg-purple-400/30 backdrop-blur-sm text-white border-purple-300/40">Compliance Risk Alert</Badge>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
@@ -191,28 +191,28 @@ export default function AICompliancePage() {
 
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="bg-purple-400/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/40">
                 <div className="flex items-center gap-2 mb-2">
-                  <AlertTriangle className="h-5 w-5 text-amber-400" />
+                  <AlertTriangle className="h-5 w-5 text-yellow-300" />
                 </div>
                 <div className="text-3xl font-bold mb-1">$4.3M</div>
-                <div className="text-sm text-white/80">Average Fine</div>
-                <div className="text-xs text-white/60 mt-1">GDPR violations in 2024</div>
+                <div className="text-sm text-white">Average Fine</div>
+                <div className="text-xs text-purple-100 mt-1">GDPR violations in 2024</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="bg-cyan-500 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/50">
                 <div className="flex items-center gap-2 mb-2">
-                  <Clock className="h-5 w-5 text-amber-400" />
+                  <Clock className="h-5 w-5 text-yellow-300" />
                 </div>
                 <div className="text-3xl font-bold mb-1">72 Hours</div>
-                <div className="text-sm text-white/80">To report data breaches</div>
+                <div className="text-sm text-white">To report data breaches</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="bg-gradient-to-r from-purple-500/60 to-cyan-500/60 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/30">
                 <div className="flex items-center gap-2 mb-2">
-                  <Users className="h-5 w-5 text-amber-400" />
+                  <Users className="h-5 w-5 text-yellow-300" />
                 </div>
                 <div className="text-3xl font-bold mb-1">89%</div>
-                <div className="text-sm text-white/80">of Companies</div>
-                <div className="text-xs text-white/60 mt-1">Have compliance gaps</div>
+                <div className="text-sm text-white">of Companies</div>
+                <div className="text-xs text-purple-100 mt-1">Have compliance gaps</div>
               </div>
             </div>
           </div>
@@ -233,8 +233,8 @@ export default function AICompliancePage() {
             {risks.map((risk, index) => (
               <Card key={index} className="bg-white hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <div className="h-12 w-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4">
-                    <risk.icon className="h-6 w-6 text-amber-600" />
+                  <div className="h-12 w-12 rounded-xl bg-purple-100 flex items-center justify-center mb-4">
+                    <risk.icon className="h-6 w-6 text-purple-600" />
                   </div>
                   <CardTitle className="text-lg">{risk.title}</CardTitle>
                 </CardHeader>
@@ -251,7 +251,7 @@ export default function AICompliancePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200">The Solution</Badge>
+            <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-cyan-400 text-white border-0">The Solution</Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               The AI Compliance Quickscan<sup className="text-lg">TM</sup> Solution
             </h2>
@@ -263,7 +263,7 @@ export default function AICompliancePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
@@ -279,8 +279,8 @@ export default function AICompliancePage() {
               {deliverables.map((item, index) => (
                 <div key={index} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
                   <div className="flex-shrink-0">
-                    <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
-                      <CheckCircle2 className="h-5 w-5 text-purple-600" />
+                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center">
+                      <CheckCircle2 className="h-5 w-5 text-white" />
                     </div>
                   </div>
                   <div>
@@ -308,11 +308,11 @@ export default function AICompliancePage() {
             {packages.map((pkg, index) => (
               <Card
                 key={index}
-                className={`relative ${pkg.popular ? "border-2 border-purple-500 shadow-xl scale-105" : "border border-gray-200"}`}
+                className={`relative ${pkg.popular ? "border-2 border-cyan-500 shadow-xl scale-105" : "border border-gray-200"}`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-purple-500 text-white px-4 py-1">Most Popular</Badge>
+                    <Badge className="bg-gradient-to-r from-purple-500 to-cyan-400 text-white px-4 py-1 border-0">Most Popular</Badge>
                   </div>
                 )}
                 <CardHeader className="text-center pb-4">
@@ -330,7 +330,7 @@ export default function AICompliancePage() {
                   <ul className="space-y-3 mb-6">
                     {pkg.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-purple-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-4 w-4 text-cyan-500 flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -353,22 +353,22 @@ export default function AICompliancePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-400 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Protect Your Organization?</h2>
-            <p className="text-lg text-gray-300 mb-8">
+            <p className="text-lg text-white/90 mb-8">
               Don't wait until a compliance violation costs you millions. Get your AI Compliance Quickscan today and
               gain peace of mind.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-700 hover:to-cyan-600 text-white">
+              <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-white/90 font-semibold">
                 <Link href="/contact?service=compliance-quickscan">
                   Schedule Your Quickscan
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+              <Button asChild variant="outline" size="lg" className="border-white/40 text-white hover:bg-white/10">
                 <Link href="/contact">Have Questions? Contact Us</Link>
               </Button>
             </div>
