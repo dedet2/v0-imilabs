@@ -6,10 +6,7 @@ import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { headers } from "next/headers"
 
-console.log("[v0] Layout module loaded")
-
 export async function generateMetadata(): Promise<Metadata> {
-  console.log("[v0] generateMetadata called")
   const headersList = await headers()
   const domain = headersList.get("x-domain") || "incluu"
   const isDrDede = domain === "dr-dede"

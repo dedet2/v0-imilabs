@@ -125,9 +125,9 @@ export default function ResourcesPage() {
                   Calculate the potential return on investment for AI governance and tech equity initiatives
                 </p>
                 <Button asChild className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:opacity-90">
-                  <Link href="https://pmukyznd.manus.space/" target="_blank">
+                  <Link href="/resources/roi-calculator/tool">
                     Launch Calculator
-                    <ExternalLink className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>
@@ -143,9 +143,9 @@ export default function ResourcesPage() {
                   Assess your organization's AI governance compliance readiness
                 </p>
                 <Button asChild className="w-full bg-gradient-to-r from-cyan-600 to-cyan-700 hover:opacity-90">
-                  <Link href="#compliance">
+                  <Link href="/ai-compliance">
                     Start Assessment
-                    <ExternalLink className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>
