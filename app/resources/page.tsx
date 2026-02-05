@@ -125,7 +125,7 @@ export default function ResourcesPage() {
                   Calculate the potential return on investment for AI governance and tech equity initiatives
                 </p>
                 <Button asChild className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:opacity-90">
-                  <Link href="/resources/roi-calculator/tool">
+                  <Link href="/resources/roi-calculator">
                     Launch Calculator
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

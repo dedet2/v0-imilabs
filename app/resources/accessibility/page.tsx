@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Accessibility Statement | Dr. Dédé Tetsubayashi",
   description: "Our commitment to digital accessibility. Learn about our accessibility features, standards compliance, and how to request accommodations.",
   alternates: {
-    canonical: "https://dr-dede.com/accessibility",
+    canonical: "https://dr-dede.com/resources/accessibility",
   },
 }
 
