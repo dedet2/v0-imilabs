@@ -29,7 +29,7 @@ export async function POST(request: Request) {
       .from("leads")
       .select("id, created_at")
       .eq("email", email.toLowerCase())
-      .single()
+      .maybeSingle()
 
     if (existingLead) {
       // Update existing lead with new info if provided
