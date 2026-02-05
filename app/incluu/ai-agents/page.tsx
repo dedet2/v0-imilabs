@@ -452,7 +452,7 @@ export default function AIAgentsPage() {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Schedule a consultation to discuss your specific needs and how we can help.
           </p>
-<Button asChild size="lg" className="bg-white text-black hover:bg-white/90 font-semibold">
+<Button asChild size="lg" className="bg-white text-cyan-600 hover:bg-white/90 font-semibold relative z-10">
                 <Link href="/contact?service=ai-agents">
                   Schedule a Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
