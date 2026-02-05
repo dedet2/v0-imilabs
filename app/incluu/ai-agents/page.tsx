@@ -444,7 +444,7 @@ export default function AIAgentsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-400 text-white">
+      <section className="py-20 bg-gradient-to-r from-cyan-500 to-purple-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Implement Ethical AI Agents in Your Organization?
@@ -452,14 +452,14 @@ export default function AIAgentsPage() {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Schedule a consultation to discuss your specific needs and how we can help.
           </p>
-          <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-white/90 font-semibold">
-            <Link href="/contact?service=ai-agents">
-              Schedule a Consultation
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-      </section>
-    </main>
-  )
-}
+<Button asChild size="lg" className="bg-white text-cyan-600 hover:bg-white/90 font-semibold">
+                <Link href="/contact?service=ai-agents">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </section>
+        </main>
+      )
+    }
