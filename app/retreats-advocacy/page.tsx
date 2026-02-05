@@ -41,7 +41,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
             </div>
             <span className="text-sm font-semibold text-white">Transformative Experiences</span>
           </div>
-          <h1 className="text-5xl md:text-6xl text-white font-light mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-6 tracking-tight">
             Retreats & Advocacy
           </h1>
           <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto mb-8 leading-relaxed">
@@ -91,7 +91,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">Wellness Designed for Everyone</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Wellness Designed for Everyone</h2>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                 <p>
                   Our wellness retreats are founded on the principle that true luxury means accessibility for all.
@@ -120,7 +120,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
       {/* 2026 Seasonal Calendar */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-light text-center mb-4 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             2026 Seasonal Offerings
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -210,7 +210,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
       {/* Retreat Experiences */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-6">Retreat Experiences</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">Retreat Experiences</h2>
           <p className="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             Transformative wellness journeys designed for leaders who deserve rest, renewal, and inclusive care.
           </p>
@@ -343,7 +343,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
       {/* Corporate Partnerships Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-6">Corporate Partnerships</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">Corporate Partnerships</h2>
           <p className="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             Bring transformative wellness experiences to your organization. Our corporate partnerships offer customized
             retreat experiences, executive wellness programs, and team restoration initiatives designed for
@@ -416,7 +416,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
       {/* Disability Advocacy Programs */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Disability Advocacy Programs</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Disability Advocacy Programs</h2>
 
           <div className="space-y-8">
             {[
@@ -490,7 +490,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
       {/* Why Choose Our Retreats */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Why Choose Our Retreats</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Why Choose Our Retreats</h2>
 
           <div className="grid sm:grid-cols-2 gap-8">
             {[
@@ -532,7 +532,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
       {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Participant Testimonials</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Participant Testimonials</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
@@ -564,7 +564,7 @@ export default function RetreatsAdvocacyHubComprehensive() {
       {/* Philosophy Quote */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-light mb-6 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Rest as Resistance
           </h2>
           <blockquote className="text-2xl md:text-3xl italic text-gray-700 mb-4">

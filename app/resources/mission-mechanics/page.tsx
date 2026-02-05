@@ -228,8 +228,11 @@ export default function MissionMechanicsPage() {
               </Badge>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
-              Transform Your Business Into a High-Performance Machine
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 text-balance">
+              Transform Your Business Into a{" "}
+              <span className="bg-gradient-to-r from-cyan-300 to-cyan-100 bg-clip-text text-transparent">
+                High-Performance Machine
+              </span>
             </h1>
             <p className="text-xl text-white/90 mb-10 max-w-3xl text-pretty">
               The Mission Mechanics Lab™ is a comprehensive 12-week program that transforms how your business operates,
@@ -271,7 +274,7 @@ export default function MissionMechanicsPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Are You Tired of Working IN Your Business Instead of ON It?
             </h2>
             <p className="text-lg text-muted-foreground">

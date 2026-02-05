@@ -182,7 +182,11 @@ export default function AICompliancePage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
-              Is Your AI Implementation Putting You at Risk?
+              Is Your{" "}
+              <span className="bg-gradient-to-r from-cyan-300 to-cyan-100 bg-clip-text text-transparent">
+                AI Implementation
+              </span>{" "}
+              Putting You at Risk?
             </h1>
             <p className="text-xl text-white/90 mb-10 max-w-3xl text-pretty">
               Get a comprehensive AI compliance assessment in just 2-5 business days. Identify critical gaps before

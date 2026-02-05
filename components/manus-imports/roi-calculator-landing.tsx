@@ -47,7 +47,8 @@ export default function ROICalculatorLanding() {
       setSuccess(true)
       // Redirect to the actual calculator after successful submission
       setTimeout(() => {
-        router.push("/resources/roi-calculator/tool")
+        // Scroll to calculator section on same page
+        document.getElementById("calculator-tool")?.scrollIntoView({ behavior: "smooth" })
       }, 1500)
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong")
