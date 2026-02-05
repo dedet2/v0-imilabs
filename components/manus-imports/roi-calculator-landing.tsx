@@ -1,14 +1,23 @@
 "use client"
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { Clock, DollarSign, TrendingUp, Calculator, Mail, Sparkles, Check, Star, ShieldCheck } from "lucide-react"
+import { useState, useMemo } from "react"
+import { Clock, DollarSign, TrendingUp, Calculator, Mail, Sparkles, Check, Star, ShieldCheck, ArrowLeft } from "lucide-react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function ROICalculatorLanding() {
-  const router = useRouter()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+  })
+  
+  // Calculator state
+  const [calculatorInputs, setCalculatorInputs] = useState({
+    timePerStage: 100,
+    stagesPerProduct: 6,
+    timeReduction: 50,
+    hourlyRate: 200,
+    productsPerYear: 12,
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState("")
@@ -47,7 +56,8 @@ export default function ROICalculatorLanding() {
       setSuccess(true)
       // Redirect to the actual calculator after successful submission
       setTimeout(() => {
-        router.push("/resources/roi-calculator/tool")
+        // Scroll to calculator section on same page
+        document.getElementById("calculator-tool")?.scrollIntoView({ behavior: "smooth" })
       }, 1500)
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong")
@@ -283,6 +293,260 @@ export default function ROICalculatorLanding() {
           </div>
         </div>
       </div>
+
+      {/* Calculator Tool Section */}
+      {success && (
+        <div id="calculator-tool" className="bg-gradient-to-br from-purple-600 via-purple-500 to-cyan-400 py-16">
+          <div className="container mx-auto px-4">
+            {/* Back to Landing Link */}
+            <Link href="/resources" className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors">
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Resources
+            </Link>
+
+            {/* Calculator Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-4">
+                <Calculator className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-4xl font-bold text-white mb-4">AI Risk Assessment ROI Calculator</h2>
+              <p className="text-white/90 text-lg">Calculate the exact financial impact of automating your risk assessments with Incluu</p>
+            </div>
+
+            {/* Calculator Content */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+              {/* Assessment Parameters */}
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center">
+                    <Calculator className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Assessment Parameters</h3>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Time per Stage (Hours)</label>
+                    <input
+                      type="number"
+                      value={calculatorInputs.timePerStage}
+                      onChange={(e) => setCalculatorInputs({ ...calculatorInputs, timePerStage: Number(e.target.value) })}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                    <p className="text-xs text-gray-500 mt-1">How long does one manual risk assessment stage take?</p>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Stages per Product</label>
+                    <input
+                      type="number"
+                      value={calculatorInputs.stagesPerProduct}
+                      onChange={(e) => setCalculatorInputs({ ...calculatorInputs, stagesPerProduct: Number(e.target.value) })}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                    <p className="text-xs text-gray-500 mt-1">How many assessment stages per product lifecycle?</p>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Time Reduction with Incluu (%)</label>
+                    <input
+                      type="number"
+                      value={calculatorInputs.timeReduction}
+                      onChange={(e) => setCalculatorInputs({ ...calculatorInputs, timeReduction: Number(e.target.value) })}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                    <p className="text-xs text-gray-500 mt-1">Estimated percentage of time saved using Incluu</p>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Blended Hourly Rate ($)</label>
+                    <input
+                      type="number"
+                      value={calculatorInputs.hourlyRate}
+                      onChange={(e) => setCalculatorInputs({ ...calculatorInputs, hourlyRate: Number(e.target.value) })}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                    <p className="text-xs text-gray-500 mt-1">Average hourly rate of employees handling assessments</p>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Products Assessed per Year</label>
+                    <input
+                      type="number"
+                      value={calculatorInputs.productsPerYear}
+                      onChange={(e) => setCalculatorInputs({ ...calculatorInputs, productsPerYear: Number(e.target.value) })}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                    <p className="text-xs text-gray-500 mt-1">Number of products requiring risk assessment annually</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* ROI Impact Analysis */}
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center">
+                    <TrendingUp className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">ROI Impact Analysis</h3>
+                </div>
+
+                {/* Metrics Grid */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl p-4 text-white">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Clock className="h-4 w-4" />
+                      <span className="text-sm">Annual Time Saved</span>
+                    </div>
+                    <p className="text-2xl font-bold">
+                      {((calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.productsPerYear * calculatorInputs.timeReduction) / 100).toLocaleString()} hrs
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-4 text-white">
+                    <div className="flex items-center gap-2 mb-2">
+                      <DollarSign className="h-4 w-4" />
+                      <span className="text-sm">Annual Savings</span>
+                    </div>
+                    <p className="text-2xl font-bold">
+                      ${((calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.productsPerYear * calculatorInputs.timeReduction * calculatorInputs.hourlyRate) / 100).toLocaleString()}
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-4 text-white">
+                    <div className="flex items-center gap-2 mb-2">
+                      <TrendingUp className="h-4 w-4" />
+                      <span className="text-sm">ROI</span>
+                    </div>
+                    <p className="text-2xl font-bold">1,340%</p>
+                  </div>
+                  <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-4 text-white">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Clock className="h-4 w-4" />
+                      <span className="text-sm">Payback Period</span>
+                    </div>
+                    <p className="text-2xl font-bold">1 mo</p>
+                  </div>
+                </div>
+
+                {/* Detailed Breakdown */}
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Time per Assessment:</span>
+                    <span className="font-medium">{calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct} hours</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Time Saved per Assessment:</span>
+                    <span className="font-medium">{(calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.timeReduction / 100).toFixed(0)} hours</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Total Assessments per Year:</span>
+                    <span className="font-medium">{calculatorInputs.productsPerYear}</span>
+                  </div>
+                  <div className="flex justify-between border-t pt-3">
+                    <span className="text-gray-900 font-semibold">Annual Cost Savings:</span>
+                    <span className="font-bold text-green-600">
+                      ${((calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.productsPerYear * calculatorInputs.timeReduction * calculatorInputs.hourlyRate) / 100).toLocaleString()}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Charts Section */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+              {/* Time & Cost Comparison */}
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
+                <h3 className="text-lg font-bold text-gray-900 mb-6">Time & Cost Comparison</h3>
+                <div className="flex items-end justify-center gap-16 h-64">
+                  <div className="flex flex-col items-center">
+                    <div 
+                      className="w-24 bg-gradient-to-t from-purple-400 to-purple-300 rounded-t-lg"
+                      style={{ height: '180px' }}
+                    />
+                    <p className="mt-4 text-sm text-gray-600">Before Incluu</p>
+                    <p className="font-bold">${(calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.productsPerYear * calculatorInputs.hourlyRate).toLocaleString()}</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div 
+                      className="w-24 bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-t-lg"
+                      style={{ height: `${180 * (1 - calculatorInputs.timeReduction / 100)}px` }}
+                    />
+                    <p className="mt-4 text-sm text-gray-600">After Incluu</p>
+                    <p className="font-bold">${((calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.productsPerYear * calculatorInputs.hourlyRate) * (1 - calculatorInputs.timeReduction / 100)).toLocaleString()}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Annual Time Allocation */}
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
+                <h3 className="text-lg font-bold text-gray-900 mb-6">Annual Time Allocation</h3>
+                <div className="flex items-center justify-center h-64">
+                  <div className="relative w-48 h-48">
+                    <svg viewBox="0 0 100 100" className="w-full h-full">
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        fill="none"
+                        stroke="#06b6d4"
+                        strokeWidth="20"
+                        strokeDasharray={`${calculatorInputs.timeReduction * 2.51} 251`}
+                        transform="rotate(-90 50 50)"
+                      />
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        fill="none"
+                        stroke="#ef4444"
+                        strokeWidth="20"
+                        strokeDasharray={`${(100 - calculatorInputs.timeReduction) * 2.51} 251`}
+                        strokeDashoffset={`-${calculatorInputs.timeReduction * 2.51}`}
+                        transform="rotate(-90 50 50)"
+                      />
+                    </svg>
+                  </div>
+                  <div className="ml-8 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4 rounded-full bg-cyan-500" />
+                      <div>
+                        <p className="text-sm text-gray-600">Time Saved</p>
+                        <p className="font-bold text-cyan-600">
+                          {((calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.productsPerYear * calculatorInputs.timeReduction) / 100).toLocaleString()}h
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4 rounded-full bg-red-500" />
+                      <div>
+                        <p className="text-sm text-gray-600">Remaining Time</p>
+                        <p className="font-bold text-red-600">
+                          {((calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.productsPerYear * (100 - calculatorInputs.timeReduction)) / 100).toLocaleString()}h
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Achieve These Results?</h3>
+              <p className="text-gray-600 mb-6">
+                Based on your inputs, Incluu could save your organization ${((calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.productsPerYear * calculatorInputs.timeReduction * calculatorInputs.hourlyRate) / 100).toLocaleString()} annually while reducing risk assessment time by {((calculatorInputs.timePerStage * calculatorInputs.stagesPerProduct * calculatorInputs.productsPerYear * calculatorInputs.timeReduction) / 100).toLocaleString()} hours.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:opacity-90 text-white">
+                  <Link href="/resources/ai-compliance">Get AI Compliance Assessment</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-purple-300 text-purple-600 hover:bg-purple-50">
+                  <Link href="/resources/mission-mechanics">Transform Your Operations</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

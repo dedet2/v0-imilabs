@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Linkedin, Twitter, Youtube, Mail, Instagram, Facebook } from "@/components/icons"
+import { Linkedin, Youtube, Instagram, Facebook, BlueSky, BlogIcon } from "@/components/icons"
 import { NewsletterForm } from "@/components/newsletter-form"
 
 export function Footer() {
@@ -153,16 +153,7 @@ export function Footer() {
                 <Linkedin className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </a>
               <a
-                href="https://twitter.com/drdede"
-                className="h-10 w-10 rounded-lg bg-gray-800 hover:bg-blue-400 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 group"
-                aria-label="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
-              </a>
-              <a
-                href="https://youtube.com/@drdede"
+                href="https://www.youtube.com/@the_drdede"
                 className="h-10 w-10 rounded-lg bg-gray-800 hover:bg-red-600 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 group"
                 aria-label="YouTube"
                 target="_blank"
@@ -171,7 +162,16 @@ export function Footer() {
                 <Youtube className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </a>
               <a
-                href="https://instagram.com/drdede"
+                href="https://www.dr-dede.com/blog"
+                className="h-10 w-10 rounded-lg bg-gray-800 hover:bg-purple-600 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 group"
+                aria-label="Dr. Dédé Blog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BlogIcon className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
+              </a>
+              <a
+                href="https://www.instagram.com/the_drdede/"
                 className="h-10 w-10 rounded-lg bg-gray-800 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 group"
                 aria-label="Instagram"
                 target="_blank"
@@ -180,7 +180,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </a>
               <a
-                href="https://facebook.com/drdede"
+                href="https://www.facebook.com/thedrdede/"
                 className="h-10 w-10 rounded-lg bg-gray-800 hover:bg-blue-700 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 group"
                 aria-label="Facebook"
                 target="_blank"
@@ -189,11 +189,13 @@ export function Footer() {
                 <Facebook className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </a>
               <a
-                href="mailto:contact@drdede.com"
-                className="h-10 w-10 rounded-lg bg-gray-800 hover:bg-purple-600 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 group"
-                aria-label="Email"
+                href="https://bsky.app/profile/drdede.bsky.social"
+                className="h-10 w-10 rounded-lg bg-gray-800 hover:bg-sky-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 group"
+                aria-label="BlueSky"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Mail className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
+                <BlueSky className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </a>
             </div>
           </div>

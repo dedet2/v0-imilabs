@@ -133,6 +133,16 @@ export function Navigation() {
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Client success stories</p>
                   </Link>
+                  <Link
+                    href="/incluu/ai-agents"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Ethical AI Agents
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">Done-for-you AI solutions</p>
+                  </Link>
                 </div>
               )}
             </div>
@@ -347,6 +357,26 @@ export function Navigation() {
                     <p className="text-xs text-muted-foreground mt-1">Calculate your AI ROI potential</p>
                   </Link>
                   <Link
+                    href="/resources/ai-compliance"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      AI Compliance Checker
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">EU AI Act compliance assessment</p>
+                  </Link>
+                  <Link
+                    href="/resources/mission-mechanics"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Mission Mechanics Lab
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">12-week transformation program</p>
+                  </Link>
+                  <Link
                     href="/resources/stories"
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
@@ -459,6 +489,13 @@ export function Navigation() {
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Testimonials
+                    </Link>
+                    <Link
+                      href="/incluu/ai-agents"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Ethical AI Agents
                     </Link>
                   </div>
                 )}
@@ -678,6 +715,20 @@ export function Navigation() {
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       ROI Calculator
+                    </Link>
+                    <Link
+                      href="/resources/ai-compliance"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      AI Compliance Checker
+                    </Link>
+                    <Link
+                      href="/resources/mission-mechanics"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Mission Mechanics Lab
                     </Link>
                     <Link
                       href="/resources/stories"
