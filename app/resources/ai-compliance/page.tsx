@@ -372,7 +372,7 @@ export default function AICompliancePage() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/40 text-white hover:bg-white/10">
+              <Button asChild variant="outline" size="lg" className="border-white bg-white/10 text-white hover:bg-white/20">
                 <Link href="/contact">Have Questions? Contact Us</Link>
               </Button>
             </div>
