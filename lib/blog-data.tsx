@@ -4556,6 +4556,83 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    id: 37,
+    title: "What Is Intersectionality and Why Is It Important",
+    description:
+      "It's been over three decades since law professor Kimberle Crenshaw coined the term intersectionality to describe the ways our social identities overlap and how various forms of inequality often operate together and exacerbate each other.",
+    category: "Race + Intersectionality",
+    date: "November 15, 2022",
+    readTime: "7 min read",
+    image: "/blog/what-is-intersectionality.webp",
+    slug: "what-is-intersectionality",
+    author: "Dr. Dede Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "It's been over three decades since law professor, Kimberle Crenshaw coined the term intersectionality. The phrase was coined to\u2014rather aptly\u2014describe the ways our social identities overlap.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "\"It's basically a lens, a prism for seeing the way in which various forms of inequality often operate together and exacerbate each other.\" \u2014 Kimberle Crenshaw, Time: Inequality in America",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In her groundbreaking 1989 paper, Kimberle Crenshaw pointed to the problems with considering racism and gender-based discrimination only as separate systems.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In a recent TedWomen Talk, Crenshaw recites, unbeknownst to the audience, the names of male victims of police violence. She requested only that audience members take a seat when an unfamiliar name is called. More than 50% of the audience would remain standing while the names of the male victims of police violence were called, but merely 4 would remain standing once she began to recite the names of female victims who had also fallen victim to police violence. This was a telling, albeit unsettling demonstration of the erasure of BIPOC women.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This demonstration provided the platform and the segue for some insight and history into one of several cases that led to Crenshaw's 1989 paper, Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine, Feminist Theory and Antiracist Politics.",
+      },
+      { type: "heading2", content: "The DeGraffenreid Case" },
+      {
+        type: "paragraph",
+        content:
+          "In 1976, Emma DeGraffenreid and several other Black women sued General Motors for discrimination. GM had never hired Black women for its front-office positions before 1964. During the recession of the last-hired-first-fired era, all the Black women were let go. The court dismissed the case, ruling that GM hired both Black people (men, for industrial jobs) and women (white, for secretarial positions)\u2014so there was no discrimination against either group.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "What the court could not see was how these women existed at the intersection of race and gender. They could not be understood through a framework that only recognized one form of discrimination at a time. This failure of imagination\u2014this inability to see overlapping identities\u2014was the catalyst for Crenshaw's work.",
+      },
+      { type: "heading2", content: "Why Intersectionality Matters Today" },
+      {
+        type: "paragraph",
+        content:
+          "Intersectionality is not just a theoretical framework\u2014it is a tool for understanding how systems of power operate in real life. When we fail to consider how race, gender, class, disability, sexuality, and other identities overlap, we create solutions that serve some people while leaving others behind.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In technology, intersectionality matters because the tools we build reflect the assumptions of the people who build them. Facial recognition systems that fail disproportionately on dark-skinned women. Content moderation systems that flag African American Vernacular English as toxic. Health algorithms that use race as a proxy in ways that reduce care for Black patients. These are not bugs\u2014they are the predictable consequences of designing without an intersectional lens.",
+      },
+      { type: "heading2", content: "Applying an Intersectional Lens" },
+      {
+        type: "paragraph",
+        content:
+          "Applying intersectionality in practice means asking: who is most likely to be harmed by this system? Whose experiences are we centering in our design process? Who is in the room when decisions are made\u2014and who is absent?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It means recognizing that a product that works for white women and Black men may still fail Black women. It means understanding that accessibility for wheelchair users doesn't automatically address the needs of blind users. It means designing for the margins, because when we design for those most marginalized, we create better outcomes for everyone.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Intersectionality asks us to hold complexity\u2014to resist the urge to flatten people into single categories. It is not about ranking oppressions or creating hierarchies of suffering. It is about seeing the full humanity of every person and building systems that reflect that fullness.",
+      },
+    ],
+  },
+  {
     id: 27,
     title: "The Divisive Fallacy of Objective Truth",
     description:
