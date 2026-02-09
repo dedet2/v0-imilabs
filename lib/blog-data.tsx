@@ -4518,60 +4518,62 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         content:
-          '<blockquote><em>\u201cIt\u2019s basically a lens, a prism for seeing the way in which various forms of inequality often operate together and exacerbate each other.\u201d</em><br/><em>Kimberl\u00e9 Crenshaw, <a href="https://time.com/5783951/equality-activists/" target="_blank" rel="noopener noreferrer"><u>Time: Inequality in America</u></a></em></blockquote>',
+          '<blockquote><p><em>\u201cIt\u2019s basically a lens, a prism for seeing the way in which various forms of inequality often operate together and exacerbate each other.\u201d</em></p><p><em>Kimberl\u00e9 Crenshaw, </em><a href="https://time.com/5783951/equality-activists/" target="_blank" rel="noopener noreferrer"><em><u>Time: Inequality in America</u></em></a></p></blockquote>',
       },
       {
         type: "paragraph",
         content:
-          'In her <a href="https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1052&context=uclf" target="_blank" rel="noopener noreferrer"><u>groundbreaking 1989 paper</u></a>, Kimberl\u00e9 Crenshaw pointed to the problems with considering racism and gender-based discrimination <em>only</em> as separate systems.',
+          'In her <a href="https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1052&amp;context=uclf" target="_blank" rel="noopener noreferrer"><u>groundbreaking 1989 paper</u></a>, Kimberl\u00e9 Crenshaw pointed to the problems with considering racism and gender-based discrimination <em>only</em> as separate systems.',
       },
       {
         type: "paragraph",
         content:
-          "In a recent TedWomen Talk, Crenshaw recites, unbeknownst to the audience, the names of male victims of police violence. She requested only that audience members take a seat when an unfamiliar name is called. More than 50% of the audience would remain standing while the names of the male victims of police violence were called, but merely 4 would remain standing once she began to recite the names of female victims who had also fallen victim to police violence. This was a telling, albeit unsettling demonstration of the erasure of BIPOC women.",
+          "In a recent TedWomen Talk, Crenshaw recites, unbeknownst to the audience, the names of male victims of police violence. She requested only that audience members take a seat when an unfamiliar name is called. More than 50% of the audience would remain standing while the names of the male victims of police violence were called, but merely 4 would remain standing once she began to recite the names of female victims who had also fallen victim to police violence. This was a telling, albeit unsettling demonstration of the erasure of BIPOC women.\u00a0",
       },
       {
         type: "paragraph",
         content:
-          "This demonstration provided the platform and the segue for some insight and history into one of several cases that led to Crenshaw\u2019s 1989 paper, <em>Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine, Feminist Theory and Antiracist Politics.</em>",
-      },
-      { type: "heading2", content: "The DeGraffenreid Case" },
-      {
-        type: "paragraph",
-        content:
-          "In 1976, Emma DeGraffenreid and several other Black women sued General Motors for discrimination. GM had never hired Black women for its front-office positions before 1964. During the recession of the last-hired-first-fired era, all the Black women were let go. The court dismissed the case, ruling that GM hired both Black people (men, for industrial jobs) and women (white, for secretarial positions)\u2014so there was no discrimination against either group.",
+          "This demonstration provided the platform and the segue for some insight and history into one of several cases that led to Crenshaw\u2019s 1989 paper,<em> Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine, Feminist Theory and Antiracist Politics.\u00a0</em>",
       },
       {
         type: "paragraph",
         content:
-          "What the court could not see was how these women existed at the intersection of race and gender. They could not be understood through a framework that only recognized one form of discrimination at a time. This failure of imagination\u2014this inability to see overlapping identities\u2014was the catalyst for Crenshaw\u2019s work.",
-      },
-      { type: "heading2", content: "Why Intersectionality Matters Today" },
-      {
-        type: "paragraph",
-        content:
-          "Intersectionality is not just a theoretical framework\u2014it is a tool for understanding how systems of power operate in real life. When we fail to consider how race, gender, class, disability, sexuality, and other identities overlap, we create solutions that serve some people while leaving others behind.",
+          'Crenshaw cites the case of <a href="https://law.justia.com/cases/federal/district-courts/FSupp/413/142/1660699/" target="_blank" rel="noopener noreferrer"><u>DeGraffenreid v. General Motors</u></a>; DeGraffenreid levied a discrimination lawsuit against the automotive manufacturing plant after she was denied her employment. The courts did not rule in her favor despite her qualifications and evidence that the plant laborers were all Black and male, <em>and</em> the business\u2019 front-end employees were all white\u2026and female. The judge ruled in favor of General Motors and stated that DeGraffenreid was not a protected class simply because she was Black <em>and f</em>emale; adding that this was a dangerous precedent to set.',
       },
       {
         type: "paragraph",
         content:
-          "In technology, intersectionality matters because the tools we build reflect the assumptions of the people who build them. Facial recognition systems that fail disproportionately on dark-skinned women. Content moderation systems that flag African American Vernacular English as toxic. Health algorithms that use race as a proxy in ways that reduce care for Black patients. These are not bugs\u2014they are the predictable consequences of designing without an intersectional lens.",
-      },
-      { type: "heading2", content: "Applying an Intersectional Lens" },
-      {
-        type: "paragraph",
-        content:
-          "Applying intersectionality in practice means asking: who is most likely to be harmed by this system? Whose experiences are we centering in our design process? Who is in the room when decisions are made\u2014and who is absent?",
+          '<blockquote><p><em>\u201cIn particular, courts seem to think that race discrimination was what happened to all Black people across gender and sex discrimination was what happened to all women, and if that is your framework, of course, what happens to Black women and other women of color is going to be difficult to see.\u201d</em></p><p><em>Kimberl\u00e9 Crenshaw, </em><a href="https://www.vox.com/the-highlight/2019/5/20/18542843/intersectionality-conservatism-law-race-gender-discrimination" target="_blank" rel="noopener noreferrer"><em><u>The Vox</u></em></a></p></blockquote>',
       },
       {
         type: "paragraph",
         content:
-          "It means recognizing that a product that works for white women and Black men may still fail Black women. It means understanding that accessibility for wheelchair users doesn\u2019t automatically address the needs of blind users. It means designing for the margins, because when we design for those most marginalized, we create better outcomes for everyone.",
+          "The need for an intersectional lens may have been a novel concept for the courts in 1976, but the complexities of life and the tragedy of death at the intersection of race and gender is a routine reality for BIWOC through the years and throughout the country. Yet, despite the far reach of its implications, the intersection of race and gender fell through the cracks in the framework of <em>both</em> the feminist movement and the civil rights movement.\u00a0",
       },
       {
         type: "paragraph",
         content:
-          "Intersectionality asks us to hold complexity\u2014to resist the urge to flatten people into single categories. It is not about ranking oppressions or creating hierarchies of suffering. It is about seeing the full humanity of every person and building systems that reflect that fullness.",
+          "Over the course of the past decade, intersectionality has made its way from esoteric dialogue amongst academics to mainstream politicization, and with that emergence, drawn its fair share of polarizing critique. In an interview for Time\u2019s feature on Inequality in America, Katie Steinmetz asked Crenshaw how she explains \u201cintersectionality now\u201d to which she responded,",
+      },
+      {
+        type: "paragraph",
+        content:
+          '<blockquote><p><em>\u201cThese days, I start with what it\u2019s not, because there has been distortion. It\u2019s not identity politics on steroids. It\u2019s not a mechanism to turn white men into the new pariahs.\u201d\u00a0</em></p><p><em>Kimberl\u00e9 Crenshaw, </em><a href="https://time.com/5783951/equality-activists/" target="_blank" rel="noopener noreferrer"><em><u>Time: Inequality in America</u></em></a></p></blockquote>',
+      },
+      {
+        type: "paragraph",
+        content:
+          '\u201cThe hierarchy of victimhood\u201d is one of the more popular critiques of Crenshaw\u2019s work. This critique posits that those with the most oppression are given the most attention, thus placing white men at the bottom of the supposed hierarchy. Some would argue that this is a necessary step towards equity, while others call it, \u201c<a href="https://jewishjournal.com/columnist/294500/intersectionality-the-new-caste-system/" target="_blank" rel="noopener noreferrer"><u>the new caste system</u></a>\u201d placing nonwhite, non-heterosexual people on top.\u201d It stands to reason that Crenshaw\u2019s long career in civil rights and feminism and the radical notion that aspecting Black women, when the accepted image of the American citizen is white and male, would draw the ire and harsh criticism of the faction of society built on the practice of centering the latter.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "Despite fervent criticism and opposition, Crenshaw\u2019s work continues to provide integral foundation in restructuring the framework of Black feminism and reimagining equality for BIWOC and other underrepresented, marginalized communities. Now when we talk about intersectionality, we are not <em>only</em> talking about the overlap of race and gender, but those of income, ability, sexual orientation, gender expression/representation, immigration status, and more. \u00a0",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In our next installment on the importance of intersectionality, we will explore the ways the framework can support more equitable AI and ML design.",
       },
     ],
   },
