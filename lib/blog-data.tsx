@@ -4499,6 +4499,169 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    id: 37,
+    title: "What Is Intersectionality and Why Is It Important",
+    description:
+      "It\u2019s been over three decades since law professor Kimberl\u00e9 Crenshaw coined the term intersectionality to describe the ways our social identities overlap and how various forms of inequality often operate together and exacerbate each other.",
+    category: "Race + Intersectionality",
+    date: "November 15, 2022",
+    readTime: "7 min read",
+    image: "/blog/what-is-intersectionality.webp",
+    slug: "what-is-intersectionality",
+    author: "Dr. D\u00e9d\u00e9 Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "It\u2019s been over three decades since law professor, Kimberl\u00e9 Crenshaw coined the term intersectionality. The phrase was coined to\u2014rather aptly\u2014describe the ways our social identities overlap.",
+      },
+      {
+        type: "paragraph",
+        content:
+          '<blockquote><em>\u201cIt\u2019s basically a lens, a prism for seeing the way in which various forms of inequality often operate together and exacerbate each other.\u201d</em><br/><em>Kimberl\u00e9 Crenshaw, <a href="https://time.com/5783951/equality-activists/" target="_blank" rel="noopener noreferrer"><u>Time: Inequality in America</u></a></em></blockquote>',
+      },
+      {
+        type: "paragraph",
+        content:
+          'In her <a href="https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1052&context=uclf" target="_blank" rel="noopener noreferrer"><u>groundbreaking 1989 paper</u></a>, Kimberl\u00e9 Crenshaw pointed to the problems with considering racism and gender-based discrimination <em>only</em> as separate systems.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "In a recent TedWomen Talk, Crenshaw recites, unbeknownst to the audience, the names of male victims of police violence. She requested only that audience members take a seat when an unfamiliar name is called. More than 50% of the audience would remain standing while the names of the male victims of police violence were called, but merely 4 would remain standing once she began to recite the names of female victims who had also fallen victim to police violence. This was a telling, albeit unsettling demonstration of the erasure of BIPOC women.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This demonstration provided the platform and the segue for some insight and history into one of several cases that led to Crenshaw\u2019s 1989 paper, <em>Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine, Feminist Theory and Antiracist Politics.</em>",
+      },
+      { type: "heading2", content: "The DeGraffenreid Case" },
+      {
+        type: "paragraph",
+        content:
+          "In 1976, Emma DeGraffenreid and several other Black women sued General Motors for discrimination. GM had never hired Black women for its front-office positions before 1964. During the recession of the last-hired-first-fired era, all the Black women were let go. The court dismissed the case, ruling that GM hired both Black people (men, for industrial jobs) and women (white, for secretarial positions)\u2014so there was no discrimination against either group.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "What the court could not see was how these women existed at the intersection of race and gender. They could not be understood through a framework that only recognized one form of discrimination at a time. This failure of imagination\u2014this inability to see overlapping identities\u2014was the catalyst for Crenshaw\u2019s work.",
+      },
+      { type: "heading2", content: "Why Intersectionality Matters Today" },
+      {
+        type: "paragraph",
+        content:
+          "Intersectionality is not just a theoretical framework\u2014it is a tool for understanding how systems of power operate in real life. When we fail to consider how race, gender, class, disability, sexuality, and other identities overlap, we create solutions that serve some people while leaving others behind.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In technology, intersectionality matters because the tools we build reflect the assumptions of the people who build them. Facial recognition systems that fail disproportionately on dark-skinned women. Content moderation systems that flag African American Vernacular English as toxic. Health algorithms that use race as a proxy in ways that reduce care for Black patients. These are not bugs\u2014they are the predictable consequences of designing without an intersectional lens.",
+      },
+      { type: "heading2", content: "Applying an Intersectional Lens" },
+      {
+        type: "paragraph",
+        content:
+          "Applying intersectionality in practice means asking: who is most likely to be harmed by this system? Whose experiences are we centering in our design process? Who is in the room when decisions are made\u2014and who is absent?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It means recognizing that a product that works for white women and Black men may still fail Black women. It means understanding that accessibility for wheelchair users doesn\u2019t automatically address the needs of blind users. It means designing for the margins, because when we design for those most marginalized, we create better outcomes for everyone.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Intersectionality asks us to hold complexity\u2014to resist the urge to flatten people into single categories. It is not about ranking oppressions or creating hierarchies of suffering. It is about seeing the full humanity of every person and building systems that reflect that fullness.",
+      },
+    ],
+  },
+  {
+    id: 28,
+    title: "5 Things Holding Organizations Back from Transformative Change",
+    description:
+      "Many organizations want to transform but few succeed. Here are the five most common barriers\u2014and what to do about them.",
+    category: "Organizational Change",
+    date: "November 1, 2022",
+    readTime: "7 min read",
+    image: "/blog/good_cheap_fast-2.png",
+    slug: "5-things-holding-organizations-back-from-transformative-change",
+    author: "Dr. D\u00e9d\u00e9 Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "At Incluu, LLC, we create brave spaces for life. To some, this concept may sound dreamy, ambitious, and a little \u2018millennial,\u2019 but our work in the diversity, equity, and inclusion space at the intersection of human, tech, and civil rights has continued to expose the pitfalls organizations face when they do not fully embrace and commit to their DEI initiatives.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The murder of George Floyd in May 2020 and the global Black Lives Matter protests that followed forced organizations to explore the concept of breaking down barriers in their peoples, practices, and products. In doing so, many sought and are seeking to transform. But transformation is hard. And many organizations are failing.",
+      },
+      { type: "heading2", content: "The Five Barriers" },
+      { type: "heading3", content: "1. Surface-Level Commitment" },
+      {
+        type: "paragraph",
+        content:
+          "Organizations that treat DEI as a checkbox rather than a fundamental value will never achieve transformative change. Hiring a diversity consultant isn\u2019t the same as changing your culture. Posting a black square on Instagram isn\u2019t the same as examining your hiring practices. Saying \u2018we stand with Black lives\u2019 isn\u2019t the same as paying Black employees equitably.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Transformation requires going beyond optics. It means examining every process, every policy, every practice. It means asking hard questions and being willing to change the answers. It means treating DEI not as an add-on but as fundamental to how you do business.",
+      },
+      { type: "heading3", content: "2. Lack of Accountability" },
+      {
+        type: "paragraph",
+        content:
+          "Without clear metrics, ownership, and consequences, DEI initiatives stall. Who is responsible for these outcomes? How will you measure progress? What happens when you fall short? If there\u2019s no accountability, there\u2019s no change.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Accountability means setting specific, measurable goals. It means tying executive compensation to DEI outcomes. It means regular public reporting on progress. It means consequences when goals aren\u2019t met\u2014not excuses.",
+      },
+      { type: "heading3", content: "3. Resistance from Leadership" },
+      {
+        type: "paragraph",
+        content:
+          "Change requires champions at the top. When executives aren\u2019t fully committed\u2014when they delegate DEI to HR and never think about it again\u2014the message is clear: this isn\u2019t really a priority. And employees notice.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Leadership commitment means more than signing off on initiatives. It means personal investment. It means showing up, doing the work, modeling the behavior you want to see. It means making difficult decisions that prioritize equity over short-term profit or comfort.",
+      },
+      { type: "heading3", content: "4. One-Time Training" },
+      {
+        type: "paragraph",
+        content:
+          "A single workshop won\u2019t undo years of ingrained practices. Transformation requires ongoing learning, dialogue, and iteration. It requires creating spaces for difficult conversations, not just checking a training box.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Effective DEI work is continuous. It adapts. It responds to feedback. It goes deeper over time. A one-time unconscious bias training might raise awareness, but it won\u2019t change behavior. That requires sustained effort, practice, and reflection.",
+      },
+      { type: "heading3", content: "5. Centering Comfort Over Growth" },
+      {
+        type: "paragraph",
+        content:
+          "Real change is uncomfortable. It requires examining privilege, confronting bias, and ceding power. Organizations that prioritize the comfort of the majority over the needs of the marginalized will stay stuck.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Growth happens at the edge of comfort. If your DEI work never makes anyone uncomfortable, you\u2019re not going deep enough. The goal isn\u2019t to make everyone feel good\u2014it\u2019s to create genuine equity. And that requires being willing to sit with discomfort.",
+      },
+      { type: "heading2", content: "The Path Forward" },
+      {
+        type: "paragraph",
+        content:
+          "Transformation is possible\u2014but only for organizations willing to do the hard work. It requires commitment that goes beyond optics, accountability with teeth, leadership that leads, ongoing learning, and courage to be uncomfortable. The organizations that get this right will build better cultures, better products, and better futures. The ones that don\u2019t will be left behind.",
+      },
+    ],
+  },
+  {
     id: 26,
     title: "We Stand in Unity with Our Asian Allies",
     description:
@@ -4552,83 +4715,6 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         content:
           "Educate yourself on Asian American history. Support Asian-owned businesses. Intervene when you witness harassment—safely, in ways that center the victim's wishes. Donate to organizations led by and serving Asian communities. And most importantly: speak up. Silence is complicity. When someone in your life makes racist 'jokes' or spreads anti-Asian misinformation, challenge them. Change starts with the conversations we're willing to have.",
-      },
-    ],
-  },
-  {
-    id: 37,
-    title: "What Is Intersectionality and Why Is It Important",
-    description:
-      "It's been over three decades since law professor Kimberle Crenshaw coined the term intersectionality to describe the ways our social identities overlap and how various forms of inequality often operate together and exacerbate each other.",
-    category: "Race + Intersectionality",
-    date: "November 15, 2022",
-    readTime: "7 min read",
-    image: "/blog/what-is-intersectionality.webp",
-    slug: "what-is-intersectionality",
-    author: "Dr. Dede Tetsubayashi",
-    contentBlocks: [
-      {
-        type: "paragraph",
-        content:
-          "It's been over three decades since law professor, Kimberle Crenshaw coined the term intersectionality. The phrase was coined to\u2014rather aptly\u2014describe the ways our social identities overlap.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "\"It's basically a lens, a prism for seeing the way in which various forms of inequality often operate together and exacerbate each other.\" \u2014 Kimberle Crenshaw, Time: Inequality in America",
-      },
-      {
-        type: "paragraph",
-        content:
-          "In her groundbreaking 1989 paper, Kimberle Crenshaw pointed to the problems with considering racism and gender-based discrimination only as separate systems.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "In a recent TedWomen Talk, Crenshaw recites, unbeknownst to the audience, the names of male victims of police violence. She requested only that audience members take a seat when an unfamiliar name is called. More than 50% of the audience would remain standing while the names of the male victims of police violence were called, but merely 4 would remain standing once she began to recite the names of female victims who had also fallen victim to police violence. This was a telling, albeit unsettling demonstration of the erasure of BIPOC women.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "This demonstration provided the platform and the segue for some insight and history into one of several cases that led to Crenshaw's 1989 paper, Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine, Feminist Theory and Antiracist Politics.",
-      },
-      { type: "heading2", content: "The DeGraffenreid Case" },
-      {
-        type: "paragraph",
-        content:
-          "In 1976, Emma DeGraffenreid and several other Black women sued General Motors for discrimination. GM had never hired Black women for its front-office positions before 1964. During the recession of the last-hired-first-fired era, all the Black women were let go. The court dismissed the case, ruling that GM hired both Black people (men, for industrial jobs) and women (white, for secretarial positions)\u2014so there was no discrimination against either group.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "What the court could not see was how these women existed at the intersection of race and gender. They could not be understood through a framework that only recognized one form of discrimination at a time. This failure of imagination\u2014this inability to see overlapping identities\u2014was the catalyst for Crenshaw's work.",
-      },
-      { type: "heading2", content: "Why Intersectionality Matters Today" },
-      {
-        type: "paragraph",
-        content:
-          "Intersectionality is not just a theoretical framework\u2014it is a tool for understanding how systems of power operate in real life. When we fail to consider how race, gender, class, disability, sexuality, and other identities overlap, we create solutions that serve some people while leaving others behind.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "In technology, intersectionality matters because the tools we build reflect the assumptions of the people who build them. Facial recognition systems that fail disproportionately on dark-skinned women. Content moderation systems that flag African American Vernacular English as toxic. Health algorithms that use race as a proxy in ways that reduce care for Black patients. These are not bugs\u2014they are the predictable consequences of designing without an intersectional lens.",
-      },
-      { type: "heading2", content: "Applying an Intersectional Lens" },
-      {
-        type: "paragraph",
-        content:
-          "Applying intersectionality in practice means asking: who is most likely to be harmed by this system? Whose experiences are we centering in our design process? Who is in the room when decisions are made\u2014and who is absent?",
-      },
-      {
-        type: "paragraph",
-        content:
-          "It means recognizing that a product that works for white women and Black men may still fail Black women. It means understanding that accessibility for wheelchair users doesn't automatically address the needs of blind users. It means designing for the margins, because when we design for those most marginalized, we create better outcomes for everyone.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Intersectionality asks us to hold complexity\u2014to resist the urge to flatten people into single categories. It is not about ranking oppressions or creating hierarchies of suffering. It is about seeing the full humanity of every person and building systems that reflect that fullness.",
       },
     ],
   },
@@ -4700,92 +4786,6 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    id: 28,
-    title: "5 Things Holding Organizations Back from Transformative Change",
-    description:
-      "Many organizations want to transform but few succeed. Here are the five most common barriers—and what to do about them.",
-    category: "Organizational Change",
-    date: "November 1, 2022",
-    readTime: "7 min read",
-    image: "/blog/good_cheap_fast-2.png",
-    slug: "5-things-holding-organizations-back-from-transformative-change",
-    author: "Dr. Dédé Tetsubayashi",
-    contentBlocks: [
-      {
-        type: "paragraph",
-        content:
-          "At Incluu, LLC, we create brave spaces for life. To some, this concept may sound dreamy, ambitious, and a little 'millennial,' but our work in the diversity, equity, and inclusion space at the intersection of human, tech, and civil rights has continued to expose the pitfalls organizations face when they do not fully embrace and commit to their DEI initiatives.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "The murder of George Floyd in May 2020 and the global Black Lives Matter protests that followed forced organizations to explore the concept of breaking down barriers in their peoples, practices, and products. In doing so, many sought and are seeking to transform. But transformation is hard. And many organizations are failing.",
-      },
-      { type: "heading2", content: "The Five Barriers" },
-      { type: "heading3", content: "1. Surface-Level Commitment" },
-      {
-        type: "paragraph",
-        content:
-          "Organizations that treat DEI as a checkbox rather than a fundamental value will never achieve transformative change. Hiring a diversity consultant isn't the same as changing your culture. Posting a black square on Instagram isn't the same as examining your hiring practices. Saying 'we stand with Black lives' isn't the same as paying Black employees equitably.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Transformation requires going beyond optics. It means examining every process, every policy, every practice. It means asking hard questions and being willing to change the answers. It means treating DEI not as an add-on but as fundamental to how you do business.",
-      },
-      { type: "heading3", content: "2. Lack of Accountability" },
-      {
-        type: "paragraph",
-        content:
-          "Without clear metrics, ownership, and consequences, DEI initiatives stall. Who is responsible for these outcomes? How will you measure progress? What happens when you fall short? If there's no accountability, there's no change.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Accountability means setting specific, measurable goals. It means tying executive compensation to DEI outcomes. It means regular public reporting on progress. It means consequences when goals aren't met—not excuses.",
-      },
-      { type: "heading3", content: "3. Resistance from Leadership" },
-      {
-        type: "paragraph",
-        content:
-          "Change requires champions at the top. When executives aren't fully committed—when they delegate DEI to HR and never think about it again—the message is clear: this isn't really a priority. And employees notice.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Leadership commitment means more than signing off on initiatives. It means personal investment. It means showing up, doing the work, modeling the behavior you want to see. It means making difficult decisions that prioritize equity over short-term profit or comfort.",
-      },
-      { type: "heading3", content: "4. One-Time Training" },
-      {
-        type: "paragraph",
-        content:
-          "A single workshop won't undo years of ingrained practices. Transformation requires ongoing learning, dialogue, and iteration. It requires creating spaces for difficult conversations, not just checking a training box.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Effective DEI work is continuous. It adapts. It responds to feedback. It goes deeper over time. A one-time unconscious bias training might raise awareness, but it won't change behavior. That requires sustained effort, practice, and reflection.",
-      },
-      { type: "heading3", content: "5. Centering Comfort Over Growth" },
-      {
-        type: "paragraph",
-        content:
-          "Real change is uncomfortable. It requires examining privilege, confronting bias, and ceding power. Organizations that prioritize the comfort of the majority over the needs of the marginalized will stay stuck.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Growth happens at the edge of comfort. If your DEI work never makes anyone uncomfortable, you're not going deep enough. The goal isn't to make everyone feel good—it's to create genuine equity. And that requires being willing to sit with discomfort.",
-      },
-      { type: "heading2", content: "The Path Forward" },
-      {
-        type: "paragraph",
-        content:
-          "Transformation is possible—but only for organizations willing to do the hard work. It requires commitment that goes beyond optics, accountability with teeth, leadership that leads, ongoing learning, and courage to be uncomfortable. The organizations that get this right will build better cultures, better products, and better futures. The ones that don't will be left behind.",
-      },
-    ],
-  },
-  {
     id: 29,
     title: "Equal Pay & Caregiving: How COVID-19 Further Exacerbates Existing Inequities",
     description:
@@ -4853,6 +4853,68 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    id: 31,
+    title: "What is Liberatory Design?",
+    description:
+      "Liberatory Design is a creative practice that centers equity and the lived experiences of those most impacted by inequity in the design process.",
+    category: "Design + Equity",
+    date: "July 20, 2022",
+    readTime: "7 min read",
+    image: "/blog/libdes-2.jpg",
+    slug: "what-is-liberatory-design",
+    author: "Dr. D\u00e9d\u00e9 Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "At first, you might be thinking, what does design have to do with liberation? You might feel a tinge of discomfort come over you, and a sigh of, \u2018Is nothing safe from wokeness?\u2019 You\u2019d be partially right.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "As our critical thought processes evolve, as binaries and ceilings become more expansive, we are forced to reckon with the pervasive, insidious nature of the oppressive, exploitative, white supremacist, capitalist, heteronormative, patriarchal structures we have all been indoctrinated into, voluntarily... and not.",
+      },
+      { type: "heading2", content: "Design Is Never Neutral" },
+      {
+        type: "paragraph",
+        content:
+          "Every design decision reflects values. When a building has stairs but no ramp, that\u2019s a design decision that values able-bodied access over disabled access. When an algorithm uses zip code as a feature, that\u2019s a design decision that encodes historical segregation. When a survey only offers \u2018male\u2019 and \u2018female\u2019 options, that\u2019s a design decision that erases non-binary people.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Traditional design thinking treats these as neutral choices\u2014or worse, as \u2018edge cases\u2019 to be handled later. Liberatory design recognizes that every choice has politics, and that \u2018neutral\u2019 usually means \u2018defaulting to the perspective of people with power.\u2019",
+      },
+      { type: "heading2", content: "Defining Liberatory Design" },
+      {
+        type: "paragraph",
+        content:
+          "\u2018Liberatory Design is an evolution of the design thinking methodology. It\u2019s an approach to problem solving that helps people translate their values of equity into a tangible process.\u2019 It centers those most impacted by design decisions and aims to disrupt rather than replicate existing power structures.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Traditional design thinking assumes a neutral designer and a universal user. Liberatory design asks: Who is designing? For whom? With what assumptions? And most importantly: Does this design liberate or constrain? Does it expand possibilities or limit them? Does it empower people or control them?",
+      },
+      { type: "heading2", content: "Putting Liberation into Practice" },
+      {
+        type: "paragraph",
+        content:
+          "Liberatory design isn\u2019t a checklist\u2014it\u2019s a practice. It requires ongoing reflection on our own positionality: What assumptions am I bringing? Whose perspective am I missing? How might my own privileges blind me to certain impacts?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It requires genuine partnership with communities\u2014not extractive user research where we take insights and leave, but collaborative design where affected communities have real power over outcomes. It requires willingness to cede control, to be led by those most impacted rather than those with the most credentials.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The goal isn\u2019t a better product for the people; it\u2019s a better process with the people. And that process should build power, build capacity, build relationships\u2014not just build products. Liberation isn\u2019t something we design for others. It\u2019s something we design alongside them.",
+      },
+    ],
+  },
+  {
     id: 30,
     title: "The Importance of Intersectionality in Tech",
     description:
@@ -4916,68 +4978,6 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         content:
           "And it means recognizing that you can't design for experiences you don't understand. This is why diverse teams matter—not as tokens, but as experts. People who live at the intersections understand failure modes that others miss. Their knowledge isn't optional; it's essential for building systems that work for everyone.",
-      },
-    ],
-  },
-  {
-    id: 31,
-    title: "What is Liberatory Design?",
-    description:
-      "Liberatory Design is a creative practice that centers equity and the lived experiences of those most impacted by inequity in the design process.",
-    category: "Design + Equity",
-    date: "July 20, 2022",
-    readTime: "7 min read",
-    image: "/blog/libdes-2.jpg",
-    slug: "what-is-liberatory-design",
-    author: "Dr. Dédé Tetsubayashi",
-    contentBlocks: [
-      {
-        type: "paragraph",
-        content:
-          "At first, you might be thinking, what does design have to do with liberation? You might feel a tinge of discomfort come over you, and a sigh of, 'Is nothing safe from wokeness?' You'd be partially right.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "As our critical thought processes evolve, as binaries and ceilings become more expansive, we are forced to reckon with the pervasive, insidious nature of the oppressive, exploitative, white supremacist, capitalist, heteronormative, patriarchal structures we have all been indoctrinated into, voluntarily... and not.",
-      },
-      { type: "heading2", content: "Design Is Never Neutral" },
-      {
-        type: "paragraph",
-        content:
-          "Every design decision reflects values. When a building has stairs but no ramp, that's a design decision that values able-bodied access over disabled access. When an algorithm uses zip code as a feature, that's a design decision that encodes historical segregation. When a survey only offers 'male' and 'female' options, that's a design decision that erases non-binary people.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Traditional design thinking treats these as neutral choices—or worse, as 'edge cases' to be handled later. Liberatory design recognizes that every choice has politics, and that 'neutral' usually means 'defaulting to the perspective of people with power.'",
-      },
-      { type: "heading2", content: "Defining Liberatory Design" },
-      {
-        type: "paragraph",
-        content:
-          "'Liberatory Design is an evolution of the design thinking methodology. It's an approach to problem solving that helps people translate their values of equity into a tangible process.' It centers those most impacted by design decisions and aims to disrupt rather than replicate existing power structures.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Traditional design thinking assumes a neutral designer and a universal user. Liberatory design asks: Who is designing? For whom? With what assumptions? And most importantly: Does this design liberate or constrain? Does it expand possibilities or limit them? Does it empower people or control them?",
-      },
-      { type: "heading2", content: "Putting Liberation into Practice" },
-      {
-        type: "paragraph",
-        content:
-          "Liberatory design isn't a checklist—it's a practice. It requires ongoing reflection on our own positionality: What assumptions am I bringing? Whose perspective am I missing? How might my own privileges blind me to certain impacts?",
-      },
-      {
-        type: "paragraph",
-        content:
-          "It requires genuine partnership with communities—not extractive user research where we take insights and leave, but collaborative design where affected communities have real power over outcomes. It requires willingness to cede control, to be led by those most impacted rather than those with the most credentials.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "The goal isn't a better product for the people; it's a better process with the people. And that process should build power, build capacity, build relationships—not just build products. Liberation isn't something we design for others. It's something we design alongside them.",
       },
     ],
   },
