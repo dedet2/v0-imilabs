@@ -52,7 +52,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Accessibility isn't just about compliance or goodwill. It's a strategic investment with measurable returns across market reach, operational efficiency, innovation, and brand value.",
     category: "Disability + AI Governance",
-    date: "February 1, 2026",
+    date: "February 5, 2026",
     readTime: "8 min read",
     image: "/blog/roi-accessible-technology.jpg",
     slug: "roi-accessible-technology",
@@ -213,7 +213,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "How designing for disability creates innovations that benefit everyone, drive market advantage, and spark breakthrough products.",
     category: "Disability + Innovation",
-    date: "January 25, 2026",
+    date: "January 8, 2026",
     readTime: "9 min read",
     image: "/blog/disability-innovation-driver.jpg",
     slug: "disability-innovation-curb-cut",
@@ -436,9 +436,9 @@ export const blogPosts: BlogPost[] = [
     id: 3,
     title: "The EU AI Act: What Leaders Need to Know in 2026",
     description:
-      "Key deadlines, critical requirements, and practical steps for compliance with the world's most comprehensive AI regulation.",
-    category: "AI Governance + Compliance",
-    date: "January 18, 2026",
+      "A comprehensive guide to the EU AI Act's key provisions, critical deadlines, and what organizational leaders must do to prepare for compliance in 2026 and beyond.",
+    category: "AI Governance + Policy",
+    date: "December 4, 2025",
     readTime: "10 min read",
     image: "/blog/eu-ai-act-leaders.jpg",
     slug: "eu-ai-act-leaders-2026",
@@ -687,9 +687,9 @@ export const blogPosts: BlogPost[] = [
     id: 4,
     title: "Inclusive Design Patterns for AI Interfaces",
     description:
-      "Practical design patterns that make AI products work for everyone—from multimodal interaction to cognitive accessibility.",
-    category: "Product Design + Accessibility",
-    date: "January 11, 2026",
+      "Practical, research-backed design patterns for building AI interfaces that work for users across abilities, contexts, and interaction styles.",
+    category: "AI Design + Accessibility",
+    date: "November 6, 2025",
     readTime: "9 min read",
     image: "/blog/inclusive-design-patterns.jpg",
     slug: "inclusive-design-patterns-ai",
@@ -961,9 +961,9 @@ export const blogPosts: BlogPost[] = [
     id: 5,
     title: "The Future of AI Regulation: Global Trends",
     description:
-      "How AI governance is evolving worldwide, where we're converging, and how to prepare your organization for the regulatory landscape ahead.",
-    category: "AI Policy + Governance",
-    date: "January 4, 2026",
+      "A comprehensive analysis of how governments worldwide are approaching AI regulation, from the EU AI Act to emerging frameworks in Asia, the Americas, and Africa.",
+    category: "AI Governance + Policy",
+    date: "October 2, 2025",
     readTime: "9 min read",
     image: "/blog/executive-team-reviewing-compliance-dashboard.jpg",
     slug: "future-ai-regulation-global-trends",
@@ -1172,9 +1172,9 @@ export const blogPosts: BlogPost[] = [
     id: 6,
     title: "Rest as Resistance: The Wellness Imperative for Leaders",
     description:
-      "Why rest is essential for sustainable leadership, better decisions, and an organization's governance capacity.",
+      "Why rest isn't a luxury but a radical act of resistance for leaders working at the intersection of technology, equity, and social change.",
     category: "Leadership + Wellness",
-    date: "December 28, 2025",
+    date: "September 4, 2025",
     readTime: "10 min read",
     image: "/blog/rest-resistance-wellness.jpg",
     slug: "rest-as-resistance-wellness-leaders",
@@ -1380,9 +1380,9 @@ export const blogPosts: BlogPost[] = [
     id: 7,
     title: "Building Inclusive AI Products: A Framework",
     description:
-      "Inclusive product design isn't an afterthought or a compliance checklist. It's a core competency that drives better outcomes for all users while expanding your market reach.",
-    category: "Product Design + Accessibility",
-    date: "December 21, 2025",
+      "A practical framework for building AI products that center equity, accessibility, and the lived experiences of marginalized communities from concept through deployment.",
+    category: "AI Product + Inclusion",
+    date: "August 7, 2025",
     readTime: "9 min read",
     image: "/blog/diverse-team-celebrating-inclusive-product-launch.jpg",
     slug: "building-inclusive-ai-products-framework",
@@ -1601,9 +1601,9 @@ export const blogPosts: BlogPost[] = [
     id: 8,
     title: "Building Ethical AI Systems: A Framework for Success",
     description:
-      "Ethical AI isn't a constraint on innovation. It's a foundation for sustainable, trustworthy systems that create long-term value for organizations and the communities they serve.",
-    category: "AI Governance + Ethics",
-    date: "December 14, 2025",
+      "How to build AI systems that are fair, transparent, and accountable. A practical framework for teams committed to ethical AI development.",
+    category: "AI Ethics + Engineering",
+    date: "July 3, 2025",
     readTime: "8 min read",
     image: "/blog/building-ethical-ai-systems.jpg",
     slug: "building-ethical-ai-systems-framework",
@@ -1793,9 +1793,9 @@ export const blogPosts: BlogPost[] = [
     id: 9,
     title: "Algorithmic Bias: Detection and Prevention Strategies",
     description:
-      "Bias in AI systems causes real harm to real people. Understanding how bias enters your systems and building detection infrastructure to catch it is essential for responsible AI deployment.",
-    category: "AI Fairness + Risk Management",
-    date: "December 7, 2025",
+      "A deep dive into how algorithmic bias emerges, how to detect it across the AI lifecycle, and practical strategies for prevention that go beyond surface-level fixes.",
+    category: "AI Bias + Technical",
+    date: "June 5, 2025",
     readTime: "10 min read",
     image: "/blog/algorithmic-bias-detection.jpg",
     slug: "algorithmic-bias-detection-prevention",
@@ -2001,9 +2001,9 @@ export const blogPosts: BlogPost[] = [
     id: 10,
     title: "Designing AI Interfaces for Uncertainty",
     description:
-      "AI systems are uncertain. Good interface design surfaces that uncertainty honestly, helping users make better decisions while maintaining trust.",
-    category: "UX Design + AI Trust",
-    date: "November 30, 2025",
+      "How to design AI interfaces that honestly communicate uncertainty, build user trust, and prevent overreliance on imperfect systems.",
+    category: "AI Design + UX",
+    date: "May 1, 2025",
     readTime: "9 min read",
     image: "/blog/diverse-team-collaborating-on-inclusive-technology.jpg",
     slug: "designing-ai-interfaces-uncertainty",
@@ -2179,9 +2179,9 @@ export const blogPosts: BlogPost[] = [
     id: 11,
     title: "From Burnout to Boundaries: How Rest-Positive Leadership Improves AI Governance",
     description:
-      "When leaders are burned out, AI governance suffers. Exhausted decision-makers make poor judgment calls, miss critical risks, and build dysfunctional teams. The path to better AI governance starts with rest.",
-    category: "AI Governance + Leadership",
-    date: "November 23, 2025",
+      "Exploring the critical connection between leadership wellness, sustainable work practices, and effective AI governance outcomes.",
+    category: "Leadership + AI Governance",
+    date: "March 27, 2025",
     readTime: "9 min read",
     image: "/blog/diverse-executives-in-meditation-session.jpg",
     slug: "burnout-to-boundaries-ai-governance",
@@ -2394,9 +2394,9 @@ export const blogPosts: BlogPost[] = [
     id: 12,
     title: "EU AI Act in Practice: A 2026 Readiness Checklist",
     description:
-      "The EU AI Act is now in force. Organizations operating in or serving European markets need practical compliance strategies. Here's what you need to do right now.",
-    category: "AI Regulation + Compliance",
-    date: "November 16, 2025",
+      "A practical readiness checklist for organizations preparing for EU AI Act compliance, covering risk classification, documentation, governance, and deployment requirements.",
+    category: "AI Governance + Compliance",
+    date: "February 20, 2025",
     readTime: "9 min read",
     image: "/blog/modern-corporate-office-with-diverse-team-working-on-ai-governance.jpg",
     slug: "eu-ai-act-practice-checklist-2026",
@@ -2636,9 +2636,9 @@ export const blogPosts: BlogPost[] = [
     id: 13,
     title: "Building Accessible AI Assistants That Don't Code People Out",
     description:
-      "AI assistants are powerful tools. They're also frequently inaccessible. If your assistant only works through text or voice, you're excluding people who are deaf, hard of hearing, visually impaired, or have other disabilities.",
-    category: "Accessibility + AI Design",
-    date: "November 9, 2025",
+      "A practical guide to building AI assistants that work for users across abilities—covering voice interaction, visual design, cognitive load, motor accessibility, and testing strategies.",
+    category: "AI Accessibility + Design",
+    date: "January 16, 2025",
     readTime: "10 min read",
     image: "/blog/6cb4e2dd75dc35bf36c9f9f9d1ab742b.jpg",
     slug: "accessible-ai-assistants",
@@ -2850,9 +2850,9 @@ export const blogPosts: BlogPost[] = [
     id: 14,
     title: "Accessibility Lawsuits, Demand Letters, and the Real Cost of Waiting",
     description:
-      "Accessibility litigation is rising. Demand letters cost money and time. Getting hit by a lawsuit you could have prevented is expensive. Here's what's happening, what's at stake, and how to get ahead of it.",
-    category: "Accessibility + Legal Risk",
-    date: "November 5, 2025",
+      "Digital accessibility lawsuits are surging. Understanding the legal landscape, real costs, and what your organization should do now to avoid becoming the next defendant.",
+    category: "Accessibility + Legal",
+    date: "December 12, 2024",
     readTime: "9 min read",
     image: "/blog/executive-team-reviewing-compliance-dashboard.jpg",
     slug: "accessibility-lawsuits-demand-letters",
@@ -3049,9 +3049,9 @@ export const blogPosts: BlogPost[] = [
     id: 15,
     title: "Designing for the Disability Economy: From Compliance to a $23 Trillion Strategy",
     description:
-      "The disability market is massive, growing, and largely underserved. Organizations that shift from viewing disability as compliance to seeing it as market opportunity will win the next decade.",
-    category: "Market Strategy + Disability Innovation",
-    date: "November 2, 2025",
+      "The disability economy represents a $23 trillion global market opportunity. Learn how to move beyond compliance and build products that serve this massive, underserved market.",
+    category: "Disability + Business Strategy",
+    date: "November 7, 2024",
     readTime: "10 min read",
     image: "/blog/4c1f4ad7caff177a6bcbb707a503bd7f.jpg",
     slug: "disability-economy-strategy",
@@ -3259,9 +3259,9 @@ export const blogPosts: BlogPost[] = [
     id: 16,
     title: "Risk Travel as a Disabled Professional",
     description:
-      "A strategic framework for navigating challenging destinations safely, managing health equity barriers, and staying professionally effective while living with chronic conditions and disabilities.",
-    category: "Risk Travel + Disability Strategy",
-    date: "October 26, 2025",
+      "A practical, experience-driven guide for disabled professionals navigating business travel—covering planning, advocacy, safety, and the realities most travel guides ignore.",
+    category: "Disability + Travel",
+    date: "October 3, 2024",
     readTime: "10 min read",
     image: "/blog/1b332847a247bda71713c1ec594ada2e.jpg",
     slug: "risk-travel-disabled-professional",
@@ -3447,9 +3447,9 @@ export const blogPosts: BlogPost[] = [
     id: 17,
     title: "How AI Is Transforming Accessible Travel",
     description:
-      "AI tools are breaking down travel barriers for disabled people—but they're also creating new risks. Here's what works, what's failing, and where the technology is heading.",
+      "An exploration of how artificial intelligence is reshaping travel accessibility—from real-time navigation to predictive accommodation—and the gaps that remain.",
     category: "AI + Accessible Travel",
-    date: "October 19, 2025",
+    date: "August 29, 2024",
     readTime: "9 min read",
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=1080&fit=crop&q=80",
     slug: "ai-transforming-accessible-travel",
@@ -3613,9 +3613,9 @@ export const blogPosts: BlogPost[] = [
     id: 18,
     title: "Global Accessibility Standards: What Travelers Need to Know",
     description:
-      "Accessibility requirements vary dramatically by region. Understanding which standards apply where—and how to advocate when local infrastructure falls short—is essential for planning risk travel globally.",
-    category: "Regulation + Global Travel",
-    date: "October 12, 2025",
+      "A comprehensive guide to global accessibility standards for travelers—covering regional frameworks, enforcement gaps, and practical strategies for navigating an inconsistent landscape.",
+    category: "Accessibility + Travel",
+    date: "July 25, 2024",
     readTime: "10 min read",
     image: "/blog/6d0721bc5c8e25fc6e4f4aeabcba7eb1.jpg",
     slug: "global-accessibility-standards-travelers",
@@ -3797,9 +3797,9 @@ export const blogPosts: BlogPost[] = [
     id: 19,
     title: "The Business Case for Accessible Tourism",
     description:
-      "A $300 billion market opportunity. Loyal customers. Competitive advantage. Why hospitality and tourism companies should invest in accessibility now.",
-    category: "Disability Economy + Strategy",
-    date: "October 5, 2025",
+      "Why accessible tourism isn't just a moral imperative—it's one of the largest untapped market opportunities in the global travel industry.",
+    category: "Accessibility + Business",
+    date: "June 20, 2024",
     readTime: "10 min read",
     image: "/blog/ae98bc039210ef6efb9c68f5696be341.jpg",
     slug: "business-case-accessible-tourism",
@@ -3967,7 +3967,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "I am passionate about my work as a Product Inclusion Specialist, a profession where I build products that work for everybody, regardless of ability, gender, resources, culture, race, or class.",
     category: "Product Inclusion + Ethics",
-    date: "September 28, 2025",
+    date: "March 1, 2024",
     readTime: "8 min read",
     image: "/blog/0ha5_gjflj6n_okrx-1.jpeg",
     slug: "from-invisibility-to-radical-empathy",
@@ -4050,7 +4050,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Recently, CBS's 60-minutes aired a segment on racial bias in facial recognition technology, referring to a December 2019 NIST study as a 'landmark study' while failing to mention the groundbreaking research on which it was based.",
     category: "AI Bias + Media",
-    date: "September 21, 2025",
+    date: "February 15, 2024",
     readTime: "7 min read",
     image: "/blog/joy_buolamwini_-_wikimania_2018_01-1-2.jpg",
     slug: "60-minutes-and-encoded-bias",
@@ -4133,7 +4133,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "A personal reflection on navigating invisibility and hypervisibility as a Black woman in tech, and the journey toward reclaiming full selfhood.",
     category: "Race + Tech",
-    date: "September 15, 2025",
+    date: "December 1, 2023",
     readTime: "8 min read",
     image: "/blog/black-woman-hyper-visible.webp",
     slug: "black-woman-hyper-visible-utterly-unseen",
@@ -4234,9 +4234,9 @@ export const blogPosts: BlogPost[] = [
     id: 22,
     title: "The Spirit of Juneteenth is Acknowledgement",
     description:
-      "Recognizing Juneteenth as a National Holiday is not a solution to ending racism. It's a bandaid, a temporary fix to a wound at which we have given only a cursory triage.",
-    category: "Racial Justice + History",
-    date: "September 14, 2025",
+      "The Spirit of Juneteenth is Acknowledgement, and acknowledgement requires action. It requires dismantling the systems that perpetuate inequality.",
+    category: "Culture + Liberation",
+    date: "June 19, 2023",
     readTime: "5 min read",
     image: "/blog/the-spirit-of-juneteenth.jpg",
     slug: "the-spirit-of-juneteenth-is-acknowledgement",
@@ -4301,9 +4301,9 @@ export const blogPosts: BlogPost[] = [
     id: 23,
     title: "Black Excellence and the Low Expectations of White Supremacy",
     description:
-      "Black people are plagued by Imposter Syndrome, questioning their own competency and self worth; 'Have I gained entry, or simply been allowed entry?'",
-    category: "Racial Justice + Workplace",
-    date: "September 7, 2025",
+      "The paradox of Black excellence: how the very act of celebrating Black achievement reveals the low expectations embedded in white supremacist systems.",
+    category: "Race + Culture",
+    date: "February 1, 2023",
     readTime: "7 min read",
     image: "/blog/blog-post-image-template-2.png",
     slug: "black-excellence-and-the-low-expectations-of-white-supremacy",
@@ -4368,9 +4368,9 @@ export const blogPosts: BlogPost[] = [
     id: 24,
     title: "Race Norming and Bioethics",
     description:
-      "'Race-norming'—also called 'race correction,' 'ethnic adjustment,' and 'race adjustment'—refers to the adjustment of medical test results or medical risk assessment algorithms based on a patient's race.",
-    category: "Healthcare + Racial Justice",
-    date: "August 31, 2025",
+      "The NFL's race norming scandal reveals how algorithmic discrimination operates in healthcare—and why the fight against biased AI is a matter of life and death.",
+    category: "Healthcare + AI Ethics",
+    date: "January 15, 2023",
     readTime: "8 min read",
     image: "/blog/trnava-university-Lr_MKzNGhUU-unsplash-scaled.webp",
     slug: "race-norming-and-bioethics",
@@ -4435,9 +4435,9 @@ export const blogPosts: BlogPost[] = [
     id: 25,
     title: "Racism and The Wellness Industry",
     description:
-      "2015 brought us #OscarsSoWhite shedding light on the absence of BIPOC voices and representation in the Academy Awards. 2018 brought us another hashtag: #WellnessSoWhite.",
-    category: "Wellness + Racial Justice",
-    date: "August 24, 2025",
+      "The wellness industry has a race problem. From the exclusion of Black bodies to the commodification of spiritual practices, the wellness space reflects the same inequities found across American society.",
+    category: "Race + Wellness",
+    date: "December 10, 2022",
     readTime: "6 min read",
     image: "/blog/tanaka-pendeke-o9gfRUp1l9w-unsplash-scaled.webp",
     slug: "racism-and-the-wellness-industry",
@@ -4499,12 +4499,177 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    id: 37,
+    title: "What Is Intersectionality and Why Is It Important",
+    description:
+      "It\u2019s been over three decades since law professor Kimberl\u00e9 Crenshaw coined the term intersectionality to describe the ways our social identities overlap and how various forms of inequality often operate together and exacerbate each other.",
+    category: "Race + Intersectionality",
+    date: "November 15, 2022",
+    readTime: "7 min read",
+    image: "/blog/what-is-intersectionality.webp",
+    slug: "what-is-intersectionality",
+    author: "Dr. D\u00e9d\u00e9 Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "It\u2019s been over three decades since law professor, Kimberl\u00e9 Crenshaw coined the term intersectionality. The phrase was coined to\u2014rather aptly\u2014describe the ways our social identities overlap.",
+      },
+      {
+        type: "paragraph",
+        content:
+          '<blockquote><p><em>\u201cIt\u2019s basically a lens, a prism for seeing the way in which various forms of inequality often operate together and exacerbate each other.\u201d</em></p><p><em>Kimberl\u00e9 Crenshaw, </em><a href="https://time.com/5783951/equality-activists/" target="_blank" rel="noopener noreferrer"><em><u>Time: Inequality in America</u></em></a></p></blockquote>',
+      },
+      {
+        type: "paragraph",
+        content:
+          'In her <a href="https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1052&amp;context=uclf" target="_blank" rel="noopener noreferrer"><u>groundbreaking 1989 paper</u></a>, Kimberl\u00e9 Crenshaw pointed to the problems with considering racism and gender-based discrimination <em>only</em> as separate systems.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "In a recent TedWomen Talk, Crenshaw recites, unbeknownst to the audience, the names of male victims of police violence. She requested only that audience members take a seat when an unfamiliar name is called. More than 50% of the audience would remain standing while the names of the male victims of police violence were called, but merely 4 would remain standing once she began to recite the names of female victims who had also fallen victim to police violence. This was a telling, albeit unsettling demonstration of the erasure of BIPOC women.\u00a0",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This demonstration provided the platform and the segue for some insight and history into one of several cases that led to Crenshaw\u2019s 1989 paper,<em> Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine, Feminist Theory and Antiracist Politics.\u00a0</em>",
+      },
+      {
+        type: "paragraph",
+        content:
+          'Crenshaw cites the case of <a href="https://law.justia.com/cases/federal/district-courts/FSupp/413/142/1660699/" target="_blank" rel="noopener noreferrer"><u>DeGraffenreid v. General Motors</u></a>; DeGraffenreid levied a discrimination lawsuit against the automotive manufacturing plant after she was denied her employment. The courts did not rule in her favor despite her qualifications and evidence that the plant laborers were all Black and male, <em>and</em> the business\u2019 front-end employees were all white\u2026and female. The judge ruled in favor of General Motors and stated that DeGraffenreid was not a protected class simply because she was Black <em>and f</em>emale; adding that this was a dangerous precedent to set.',
+      },
+      {
+        type: "paragraph",
+        content:
+          '<blockquote><p><em>\u201cIn particular, courts seem to think that race discrimination was what happened to all Black people across gender and sex discrimination was what happened to all women, and if that is your framework, of course, what happens to Black women and other women of color is going to be difficult to see.\u201d</em></p><p><em>Kimberl\u00e9 Crenshaw, </em><a href="https://www.vox.com/the-highlight/2019/5/20/18542843/intersectionality-conservatism-law-race-gender-discrimination" target="_blank" rel="noopener noreferrer"><em><u>The Vox</u></em></a></p></blockquote>',
+      },
+      {
+        type: "paragraph",
+        content:
+          "The need for an intersectional lens may have been a novel concept for the courts in 1976, but the complexities of life and the tragedy of death at the intersection of race and gender is a routine reality for BIWOC through the years and throughout the country. Yet, despite the far reach of its implications, the intersection of race and gender fell through the cracks in the framework of <em>both</em> the feminist movement and the civil rights movement.\u00a0",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Over the course of the past decade, intersectionality has made its way from esoteric dialogue amongst academics to mainstream politicization, and with that emergence, drawn its fair share of polarizing critique. In an interview for Time\u2019s feature on Inequality in America, Katie Steinmetz asked Crenshaw how she explains \u201cintersectionality now\u201d to which she responded,",
+      },
+      {
+        type: "paragraph",
+        content:
+          '<blockquote><p><em>\u201cThese days, I start with what it\u2019s not, because there has been distortion. It\u2019s not identity politics on steroids. It\u2019s not a mechanism to turn white men into the new pariahs.\u201d\u00a0</em></p><p><em>Kimberl\u00e9 Crenshaw, </em><a href="https://time.com/5783951/equality-activists/" target="_blank" rel="noopener noreferrer"><em><u>Time: Inequality in America</u></em></a></p></blockquote>',
+      },
+      {
+        type: "paragraph",
+        content:
+          '\u201cThe hierarchy of victimhood\u201d is one of the more popular critiques of Crenshaw\u2019s work. This critique posits that those with the most oppression are given the most attention, thus placing white men at the bottom of the supposed hierarchy. Some would argue that this is a necessary step towards equity, while others call it, \u201c<a href="https://jewishjournal.com/columnist/294500/intersectionality-the-new-caste-system/" target="_blank" rel="noopener noreferrer"><u>the new caste system</u></a>\u201d placing nonwhite, non-heterosexual people on top.\u201d It stands to reason that Crenshaw\u2019s long career in civil rights and feminism and the radical notion that aspecting Black women, when the accepted image of the American citizen is white and male, would draw the ire and harsh criticism of the faction of society built on the practice of centering the latter.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "Despite fervent criticism and opposition, Crenshaw\u2019s work continues to provide integral foundation in restructuring the framework of Black feminism and reimagining equality for BIWOC and other underrepresented, marginalized communities. Now when we talk about intersectionality, we are not <em>only</em> talking about the overlap of race and gender, but those of income, ability, sexual orientation, gender expression/representation, immigration status, and more. \u00a0",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In our next installment on the importance of intersectionality, we will explore the ways the framework can support more equitable AI and ML design.",
+      },
+    ],
+  },
+  {
+    id: 28,
+    title: "5 Things Holding Organizations Back from Transformative Change",
+    description:
+      "Many organizations want to transform but few succeed. Here are the five most common barriers\u2014and what to do about them.",
+    category: "Organizational Change",
+    date: "November 1, 2022",
+    readTime: "7 min read",
+    image: "/blog/good_cheap_fast-2.png",
+    slug: "5-things-holding-organizations-back-from-transformative-change",
+    author: "Dr. D\u00e9d\u00e9 Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "At Incluu, LLC, we create brave spaces for life. To some, this concept may sound dreamy, ambitious, and a little \u2018millennial,\u2019 but our work in the diversity, equity, and inclusion space at the intersection of human, tech, and civil rights has continued to expose the pitfalls organizations face when they do not fully embrace and commit to their DEI initiatives.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The murder of George Floyd in May 2020 and the global Black Lives Matter protests that followed forced organizations to explore the concept of breaking down barriers in their peoples, practices, and products. In doing so, many sought and are seeking to transform. But transformation is hard. And many organizations are failing.",
+      },
+      { type: "heading2", content: "The Five Barriers" },
+      { type: "heading3", content: "1. Surface-Level Commitment" },
+      {
+        type: "paragraph",
+        content:
+          "Organizations that treat DEI as a checkbox rather than a fundamental value will never achieve transformative change. Hiring a diversity consultant isn\u2019t the same as changing your culture. Posting a black square on Instagram isn\u2019t the same as examining your hiring practices. Saying \u2018we stand with Black lives\u2019 isn\u2019t the same as paying Black employees equitably.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Transformation requires going beyond optics. It means examining every process, every policy, every practice. It means asking hard questions and being willing to change the answers. It means treating DEI not as an add-on but as fundamental to how you do business.",
+      },
+      { type: "heading3", content: "2. Lack of Accountability" },
+      {
+        type: "paragraph",
+        content:
+          "Without clear metrics, ownership, and consequences, DEI initiatives stall. Who is responsible for these outcomes? How will you measure progress? What happens when you fall short? If there\u2019s no accountability, there\u2019s no change.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Accountability means setting specific, measurable goals. It means tying executive compensation to DEI outcomes. It means regular public reporting on progress. It means consequences when goals aren\u2019t met\u2014not excuses.",
+      },
+      { type: "heading3", content: "3. Resistance from Leadership" },
+      {
+        type: "paragraph",
+        content:
+          "Change requires champions at the top. When executives aren\u2019t fully committed\u2014when they delegate DEI to HR and never think about it again\u2014the message is clear: this isn\u2019t really a priority. And employees notice.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Leadership commitment means more than signing off on initiatives. It means personal investment. It means showing up, doing the work, modeling the behavior you want to see. It means making difficult decisions that prioritize equity over short-term profit or comfort.",
+      },
+      { type: "heading3", content: "4. One-Time Training" },
+      {
+        type: "paragraph",
+        content:
+          "A single workshop won\u2019t undo years of ingrained practices. Transformation requires ongoing learning, dialogue, and iteration. It requires creating spaces for difficult conversations, not just checking a training box.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Effective DEI work is continuous. It adapts. It responds to feedback. It goes deeper over time. A one-time unconscious bias training might raise awareness, but it won\u2019t change behavior. That requires sustained effort, practice, and reflection.",
+      },
+      { type: "heading3", content: "5. Centering Comfort Over Growth" },
+      {
+        type: "paragraph",
+        content:
+          "Real change is uncomfortable. It requires examining privilege, confronting bias, and ceding power. Organizations that prioritize the comfort of the majority over the needs of the marginalized will stay stuck.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Growth happens at the edge of comfort. If your DEI work never makes anyone uncomfortable, you\u2019re not going deep enough. The goal isn\u2019t to make everyone feel good\u2014it\u2019s to create genuine equity. And that requires being willing to sit with discomfort.",
+      },
+      { type: "heading2", content: "The Path Forward" },
+      {
+        type: "paragraph",
+        content:
+          "Transformation is possible\u2014but only for organizations willing to do the hard work. It requires commitment that goes beyond optics, accountability with teeth, leadership that leads, ongoing learning, and courage to be uncomfortable. The organizations that get this right will build better cultures, better products, and better futures. The ones that don\u2019t will be left behind.",
+      },
+    ],
+  },
+  {
     id: 26,
     title: "We Stand in Unity with Our Asian Allies",
     description:
-      "It has taken us some time to find the words to express our deep empathy, sympathy, and worry for Asian communities across the US.",
-    category: "Solidarity + Racial Justice",
-    date: "August 17, 2025",
+      "In the wake of rising anti-Asian violence, we reaffirm our commitment to solidarity across communities of color and our shared fight against white supremacy.",
+    category: "Solidarity + Justice",
+    date: "October 15, 2022",
     readTime: "5 min read",
     image: "/blog/pexels-photo-5723322-1.jpeg",
     slug: "we-stand-in-unity-with-our-asian-allies",
@@ -4559,9 +4724,9 @@ export const blogPosts: BlogPost[] = [
     id: 27,
     title: "The Divisive Fallacy of Objective Truth",
     description:
-      "[Helen] Pluckrose believes there is an objective truth! She believes in one truth that is rooted in Western, White/European ideologies of a particular scientific method which denounces any other forms of truth.",
-    category: "Critical Theory + Philosophy",
-    date: "August 10, 2025",
+      "The concept of 'objective truth' has long been weaponized to dismiss marginalized experiences. Here's why the insistence on a single truth is itself a tool of oppression.",
+    category: "Philosophy + Ethics",
+    date: "September 20, 2022",
     readTime: "8 min read",
     image: "/blog/the_divisive_fallacy_of_objective_truth.jpg",
     slug: "the-divisive-fallacy-of-objective-truth",
@@ -4623,98 +4788,12 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    id: 28,
-    title: "5 Things Holding Organizations Back from Transformative Change",
-    description:
-      "At Incluu, LLC, we create brave spaces for life. Our work in the diversity, equity, and inclusion space at the intersection of human, tech, and civil rights has continued to expose the pitfalls organizations face.",
-    category: "DEI + Organizational Change",
-    date: "August 3, 2025",
-    readTime: "7 min read",
-    image: "/blog/good_cheap_fast-2.png",
-    slug: "5-things-holding-organizations-back-from-transformative-change",
-    author: "Dr. Dédé Tetsubayashi",
-    contentBlocks: [
-      {
-        type: "paragraph",
-        content:
-          "At Incluu, LLC, we create brave spaces for life. To some, this concept may sound dreamy, ambitious, and a little 'millennial,' but our work in the diversity, equity, and inclusion space at the intersection of human, tech, and civil rights has continued to expose the pitfalls organizations face when they do not fully embrace and commit to their DEI initiatives.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "The murder of George Floyd in May 2020 and the global Black Lives Matter protests that followed forced organizations to explore the concept of breaking down barriers in their peoples, practices, and products. In doing so, many sought and are seeking to transform. But transformation is hard. And many organizations are failing.",
-      },
-      { type: "heading2", content: "The Five Barriers" },
-      { type: "heading3", content: "1. Surface-Level Commitment" },
-      {
-        type: "paragraph",
-        content:
-          "Organizations that treat DEI as a checkbox rather than a fundamental value will never achieve transformative change. Hiring a diversity consultant isn't the same as changing your culture. Posting a black square on Instagram isn't the same as examining your hiring practices. Saying 'we stand with Black lives' isn't the same as paying Black employees equitably.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Transformation requires going beyond optics. It means examining every process, every policy, every practice. It means asking hard questions and being willing to change the answers. It means treating DEI not as an add-on but as fundamental to how you do business.",
-      },
-      { type: "heading3", content: "2. Lack of Accountability" },
-      {
-        type: "paragraph",
-        content:
-          "Without clear metrics, ownership, and consequences, DEI initiatives stall. Who is responsible for these outcomes? How will you measure progress? What happens when you fall short? If there's no accountability, there's no change.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Accountability means setting specific, measurable goals. It means tying executive compensation to DEI outcomes. It means regular public reporting on progress. It means consequences when goals aren't met—not excuses.",
-      },
-      { type: "heading3", content: "3. Resistance from Leadership" },
-      {
-        type: "paragraph",
-        content:
-          "Change requires champions at the top. When executives aren't fully committed—when they delegate DEI to HR and never think about it again—the message is clear: this isn't really a priority. And employees notice.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Leadership commitment means more than signing off on initiatives. It means personal investment. It means showing up, doing the work, modeling the behavior you want to see. It means making difficult decisions that prioritize equity over short-term profit or comfort.",
-      },
-      { type: "heading3", content: "4. One-Time Training" },
-      {
-        type: "paragraph",
-        content:
-          "A single workshop won't undo years of ingrained practices. Transformation requires ongoing learning, dialogue, and iteration. It requires creating spaces for difficult conversations, not just checking a training box.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Effective DEI work is continuous. It adapts. It responds to feedback. It goes deeper over time. A one-time unconscious bias training might raise awareness, but it won't change behavior. That requires sustained effort, practice, and reflection.",
-      },
-      { type: "heading3", content: "5. Centering Comfort Over Growth" },
-      {
-        type: "paragraph",
-        content:
-          "Real change is uncomfortable. It requires examining privilege, confronting bias, and ceding power. Organizations that prioritize the comfort of the majority over the needs of the marginalized will stay stuck.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Growth happens at the edge of comfort. If your DEI work never makes anyone uncomfortable, you're not going deep enough. The goal isn't to make everyone feel good—it's to create genuine equity. And that requires being willing to sit with discomfort.",
-      },
-      { type: "heading2", content: "The Path Forward" },
-      {
-        type: "paragraph",
-        content:
-          "Transformation is possible—but only for organizations willing to do the hard work. It requires commitment that goes beyond optics, accountability with teeth, leadership that leads, ongoing learning, and courage to be uncomfortable. The organizations that get this right will build better cultures, better products, and better futures. The ones that don't will be left behind.",
-      },
-    ],
-  },
-  {
     id: 29,
     title: "Equal Pay & Caregiving: How COVID-19 Further Exacerbates Existing Inequities",
     description:
-      "International Women's Day is a day in which many celebrate the progress we're making towards equal pay and fair wages between men and women.",
-    category: "Gender Equity + Economic Justice",
-    date: "July 27, 2025",
+      "The pandemic didn't create caregiving inequities—it exposed and accelerated them. Here's how COVID-19 has widened the gap and what we must do about it.",
+    category: "Economic Justice",
+    date: "August 15, 2022",
     readTime: "6 min read",
     image: "/blog/gris-zy-1920x1080-1.jpeg",
     slug: "equal-pay-caregiving-how-covid19-further-exacerbates-existing-inequities",
@@ -4776,12 +4855,74 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    id: 31,
+    title: "What is Liberatory Design?",
+    description:
+      "Liberatory Design is a creative practice that centers equity and the lived experiences of those most impacted by inequity in the design process.",
+    category: "Design + Equity",
+    date: "July 20, 2022",
+    readTime: "7 min read",
+    image: "/blog/libdes-2.jpg",
+    slug: "what-is-liberatory-design",
+    author: "Dr. D\u00e9d\u00e9 Tetsubayashi",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        content:
+          "At first, you might be thinking, what does design have to do with liberation? You might feel a tinge of discomfort come over you, and a sigh of, \u2018Is nothing safe from wokeness?\u2019 You\u2019d be partially right.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "As our critical thought processes evolve, as binaries and ceilings become more expansive, we are forced to reckon with the pervasive, insidious nature of the oppressive, exploitative, white supremacist, capitalist, heteronormative, patriarchal structures we have all been indoctrinated into, voluntarily... and not.",
+      },
+      { type: "heading2", content: "Design Is Never Neutral" },
+      {
+        type: "paragraph",
+        content:
+          "Every design decision reflects values. When a building has stairs but no ramp, that\u2019s a design decision that values able-bodied access over disabled access. When an algorithm uses zip code as a feature, that\u2019s a design decision that encodes historical segregation. When a survey only offers \u2018male\u2019 and \u2018female\u2019 options, that\u2019s a design decision that erases non-binary people.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Traditional design thinking treats these as neutral choices\u2014or worse, as \u2018edge cases\u2019 to be handled later. Liberatory design recognizes that every choice has politics, and that \u2018neutral\u2019 usually means \u2018defaulting to the perspective of people with power.\u2019",
+      },
+      { type: "heading2", content: "Defining Liberatory Design" },
+      {
+        type: "paragraph",
+        content:
+          "\u2018Liberatory Design is an evolution of the design thinking methodology. It\u2019s an approach to problem solving that helps people translate their values of equity into a tangible process.\u2019 It centers those most impacted by design decisions and aims to disrupt rather than replicate existing power structures.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Traditional design thinking assumes a neutral designer and a universal user. Liberatory design asks: Who is designing? For whom? With what assumptions? And most importantly: Does this design liberate or constrain? Does it expand possibilities or limit them? Does it empower people or control them?",
+      },
+      { type: "heading2", content: "Putting Liberation into Practice" },
+      {
+        type: "paragraph",
+        content:
+          "Liberatory design isn\u2019t a checklist\u2014it\u2019s a practice. It requires ongoing reflection on our own positionality: What assumptions am I bringing? Whose perspective am I missing? How might my own privileges blind me to certain impacts?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It requires genuine partnership with communities\u2014not extractive user research where we take insights and leave, but collaborative design where affected communities have real power over outcomes. It requires willingness to cede control, to be led by those most impacted rather than those with the most credentials.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The goal isn\u2019t a better product for the people; it\u2019s a better process with the people. And that process should build power, build capacity, build relationships\u2014not just build products. Liberation isn\u2019t something we design for others. It\u2019s something we design alongside them.",
+      },
+    ],
+  },
+  {
     id: 30,
     title: "The Importance of Intersectionality in Tech",
     description:
-      "One of the biggest misconceptions about tech is aptly summarized: '[Tech is] afforded a supremacy that humans feel comfortable not questioning. And yet, technology isn't just a neutral tool.'",
-    category: "Tech Ethics + Intersectionality",
-    date: "July 20, 2025",
+      "Intersectionality isn't just an academic concept—it's a critical lens for understanding how technology impacts people differently based on their overlapping identities.",
+    category: "Tech + Intersectionality",
+    date: "June 15, 2022",
     readTime: "8 min read",
     image: "/blog/christina-wocintechchat-com-rmweulmcyxm-unsplash-1024x684-281-29-2.jpg",
     slug: "the-importance-of-intersectionality-in-tech",
@@ -4843,74 +4984,12 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    id: 31,
-    title: "What is Liberatory Design?",
-    description:
-      "At first, you might be thinking, what does design have to do with liberation? You might feel a tinge of discomfort come over you, and a sigh of, 'Is nothing safe from wokeness?'",
-    category: "Design + Liberation",
-    date: "July 13, 2025",
-    readTime: "7 min read",
-    image: "/blog/libdes-2.jpg",
-    slug: "what-is-liberatory-design",
-    author: "Dr. Dédé Tetsubayashi",
-    contentBlocks: [
-      {
-        type: "paragraph",
-        content:
-          "At first, you might be thinking, what does design have to do with liberation? You might feel a tinge of discomfort come over you, and a sigh of, 'Is nothing safe from wokeness?' You'd be partially right.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "As our critical thought processes evolve, as binaries and ceilings become more expansive, we are forced to reckon with the pervasive, insidious nature of the oppressive, exploitative, white supremacist, capitalist, heteronormative, patriarchal structures we have all been indoctrinated into, voluntarily... and not.",
-      },
-      { type: "heading2", content: "Design Is Never Neutral" },
-      {
-        type: "paragraph",
-        content:
-          "Every design decision reflects values. When a building has stairs but no ramp, that's a design decision that values able-bodied access over disabled access. When an algorithm uses zip code as a feature, that's a design decision that encodes historical segregation. When a survey only offers 'male' and 'female' options, that's a design decision that erases non-binary people.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Traditional design thinking treats these as neutral choices—or worse, as 'edge cases' to be handled later. Liberatory design recognizes that every choice has politics, and that 'neutral' usually means 'defaulting to the perspective of people with power.'",
-      },
-      { type: "heading2", content: "Defining Liberatory Design" },
-      {
-        type: "paragraph",
-        content:
-          "'Liberatory Design is an evolution of the design thinking methodology. It's an approach to problem solving that helps people translate their values of equity into a tangible process.' It centers those most impacted by design decisions and aims to disrupt rather than replicate existing power structures.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "Traditional design thinking assumes a neutral designer and a universal user. Liberatory design asks: Who is designing? For whom? With what assumptions? And most importantly: Does this design liberate or constrain? Does it expand possibilities or limit them? Does it empower people or control them?",
-      },
-      { type: "heading2", content: "Putting Liberation into Practice" },
-      {
-        type: "paragraph",
-        content:
-          "Liberatory design isn't a checklist—it's a practice. It requires ongoing reflection on our own positionality: What assumptions am I bringing? Whose perspective am I missing? How might my own privileges blind me to certain impacts?",
-      },
-      {
-        type: "paragraph",
-        content:
-          "It requires genuine partnership with communities—not extractive user research where we take insights and leave, but collaborative design where affected communities have real power over outcomes. It requires willingness to cede control, to be led by those most impacted rather than those with the most credentials.",
-      },
-      {
-        type: "paragraph",
-        content:
-          "The goal isn't a better product for the people; it's a better process with the people. And that process should build power, build capacity, build relationships—not just build products. Liberation isn't something we design for others. It's something we design alongside them.",
-      },
-    ],
-  },
-  {
     id: 32,
     title: "Digital Blackface: Are You Complicit?",
     description:
-      "'Digital blackface' is used to describe various types of minstrel performance that become available in cyberspace. Blackface minstrelsy is a theatrical tradition dating back to the early 19th century.",
-    category: "Digital Culture + Racism",
-    date: "July 6, 2025",
+      "Digital blackface is the use of Black people's images, GIFs, and expressions by non-Black people online. It's a modern form of minstrelsy that many participate in without awareness.",
+    category: "Race + Digital Culture",
+    date: "May 10, 2022",
     readTime: "6 min read",
     image: "/blog/priscilla-du-preez-bjhuu6bpuza-unsplash-2048x1365-2.jpg",
     slug: "digital-blackface-are-you-complicit",
@@ -4965,9 +5044,9 @@ export const blogPosts: BlogPost[] = [
     id: 33,
     title: "Facial Recognition and Racial Bias",
     description:
-      "In as many years, 3 Black men have had their lives upended by wrongful arrests. Robert Williams, Michael Oliver, and Nijeer Parks were misidentified by facial recognition software.",
-    category: "AI Bias + Criminal Justice",
-    date: "June 29, 2025",
+      "Facial recognition technology has a well-documented racial bias problem. Understanding how these systems fail—and who they fail—is critical for building ethical AI.",
+    category: "AI Ethics + Bias",
+    date: "April 5, 2022",
     readTime: "8 min read",
     image: "/blog/ariel-sion-i7v-btpnktg-unsplash-2048x1365-2.jpg",
     slug: "facial-recognition-and-racial-bias",
@@ -5021,9 +5100,9 @@ export const blogPosts: BlogPost[] = [
     id: 34,
     title: "The Pitfalls of Adversarial Clothing",
     description:
-      "When I present on panels about equitable and inclusive design, there are two areas I emphasize: these are the areas where we, as humans have the greatest opportunity to bring about transformative change.",
-    category: "AI + Privacy",
-    date: "June 22, 2025",
+      "Adversarial clothing designed to fool facial recognition raises important questions about surveillance, consent, and who bears the burden of protecting privacy.",
+    category: "Surveillance + Ethics",
+    date: "March 1, 2022",
     readTime: "7 min read",
     image: "/blog/adversarial-clothing.png",
     slug: "the-pitfalls-of-adversarial-clothing",
@@ -5088,9 +5167,9 @@ export const blogPosts: BlogPost[] = [
     id: 35,
     title: "Ethical AI and Smart Lock Systems",
     description:
-      "I recently sat down with a group to discuss the pros and cons of emerging technologies from my perspective as both anthropologist and ethical technologist; specifically, smart lock systems.",
-    category: "AI Ethics + Housing",
-    date: "June 15, 2025",
+      "Smart lock systems promise convenience and security, but they also raise serious questions about bias, accessibility, and who gets to feel safe in their own home.",
+    category: "AI Ethics + Accessibility",
+    date: "February 1, 2022",
     readTime: "9 min read",
     image: "/blog/amol-tyagi-0juktkotkpu-unsplash-1638x2048-2.jpg",
     slug: "ethical-ai-and-smart-lock-systems",
