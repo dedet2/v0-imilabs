@@ -386,6 +386,32 @@ export function Navigation() {
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Inspiring narratives</p>
                   </Link>
+                  <div className="border-t border-border my-1" />
+                  <a
+                    href="https://grc-travelrisk-engine.vercel.app"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      GRC TravelRisk Engine
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">AI-powered risk intelligence platform</p>
+                  </a>
+                  <a
+                    href="https://v0-dr-dede-executive-summary.vercel.app"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Executive Summary
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">Dr. Dédé&apos;s executive portfolio</p>
+                  </a>
+                  <div className="border-t border-border my-1" />
                   <Link
                     href="/resources/privacy-policy"
                     onClick={closeAllDesktopDropdowns}
@@ -737,6 +763,26 @@ export function Navigation() {
                     >
                       Stories
                     </Link>
+                    <div className="border-t border-border my-1" />
+                    <a
+                      href="https://grc-travelrisk-engine.vercel.app"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GRC TravelRisk Engine
+                    </a>
+                    <a
+                      href="https://v0-dr-dede-executive-summary.vercel.app"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Executive Summary
+                    </a>
+                    <div className="border-t border-border my-1" />
                     <Link
                       href="/resources/privacy-policy"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"

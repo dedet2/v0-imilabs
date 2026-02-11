@@ -90,6 +90,28 @@ export function Footer() {
                   Speaking & Events
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://grc-travelrisk-engine.vercel.app"
+                  className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2 group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="w-1 h-1 bg-cyan-400 rounded-full group-hover:w-2 transition-all duration-200" />
+                  GRC TravelRisk Engine
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://v0-dr-dede-executive-summary.vercel.app"
+                  className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2 group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="w-1 h-1 bg-cyan-400 rounded-full group-hover:w-2 transition-all duration-200" />
+                  Executive Summary
+                </a>
+              </li>
             </ul>
           </div>
 
