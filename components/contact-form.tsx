@@ -19,16 +19,49 @@ export function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      const formData = new FormData(e.currentTarget)
+      const data = {
+        firstName: formData.get("firstName") as string,
+        lastName: formData.get("lastName") as string,
+        email: formData.get("email") as string,
+        phone: formData.get("phone") as string,
+        organization: formData.get("organization") as string,
+        service: formData.get("service") as string,
+        message: formData.get("message") as string,
+      }
 
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24-48 hours.",
-    })
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
 
-    setIsSubmitting(false)
-    ;(e.target as HTMLFormElement).reset()
+      const result = await response.json()
+
+      if (response.ok && result.success) {
+        toast({
+          title: "Message sent!",
+          description: result.message || "We'll get back to you within 24-48 hours.",
+        })
+        ;(e.target as HTMLFormElement).reset()
+      } else {
+        toast({
+          title: "Something went wrong",
+          description: result.error || "Please try again or email us directly at rar@dr-dede.com",
+          variant: "destructive",
+        })
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      toast({
+        title: "Connection error",
+        description: "Please try again or email us directly at rar@dr-dede.com",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

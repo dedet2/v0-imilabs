@@ -92,7 +92,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://grc-travelrisk-engine.vercel.app"
+                  href="https://grc.incluu.us"
                   className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2 group"
                   target="_blank"
                   rel="noopener noreferrer"
