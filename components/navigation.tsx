@@ -143,6 +143,39 @@ export function Navigation() {
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Done-for-you AI solutions</p>
                   </Link>
+                  <div className="border-t border-border my-1" />
+                  <Link
+                    href="/incluu/ai-compliance"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      AI Compliance Checker
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">EU AI Act compliance assessment</p>
+                  </Link>
+                  <Link
+                    href="/incluu/mission-mechanics"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Mission Mechanics Lab
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">12-week transformation program</p>
+                  </Link>
+                  <a
+                    href="https://grc.incluu.us"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      GRC TravelRisk Engine
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">AI-powered risk intelligence platform</p>
+                  </a>
                 </div>
               )}
             </div>
@@ -323,6 +356,19 @@ export function Navigation() {
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Transforming AI through equity</p>
                   </Link>
+                  <div className="border-t border-border my-1" />
+                  <a
+                    href="https://v0-dr-dede-executive-summary.vercel.app"
+                    onClick={closeAllDesktopDropdowns}
+                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
+                      Executive Summary
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">Dr. Dédé&apos;s executive portfolio</p>
+                  </a>
                 </div>
               )}
             </div>
@@ -357,26 +403,6 @@ export function Navigation() {
                     <p className="text-xs text-muted-foreground mt-1">Calculate your AI ROI potential</p>
                   </Link>
                   <Link
-                    href="/resources/ai-compliance"
-                    onClick={closeAllDesktopDropdowns}
-                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
-                  >
-                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
-                      AI Compliance Checker
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-1">EU AI Act compliance assessment</p>
-                  </Link>
-                  <Link
-                    href="/resources/mission-mechanics"
-                    onClick={closeAllDesktopDropdowns}
-                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
-                  >
-                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
-                      Mission Mechanics Lab
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-1">12-week transformation program</p>
-                  </Link>
-                  <Link
                     href="/resources/stories"
                     onClick={closeAllDesktopDropdowns}
                     className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
@@ -386,31 +412,6 @@ export function Navigation() {
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Inspiring narratives</p>
                   </Link>
-                  <div className="border-t border-border my-1" />
-                  <a
-                    href="https://grc-travelrisk-engine.vercel.app"
-                    onClick={closeAllDesktopDropdowns}
-                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
-                      GRC TravelRisk Engine
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-1">AI-powered risk intelligence platform</p>
-                  </a>
-                  <a
-                    href="https://v0-dr-dede-executive-summary.vercel.app"
-                    onClick={closeAllDesktopDropdowns}
-                    className="block px-4 py-3 rounded-md hover:bg-accent transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-400 bg-clip-text text-transparent">
-                      Executive Summary
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-1">Dr. Dédé&apos;s executive portfolio</p>
-                  </a>
                   <div className="border-t border-border my-1" />
                   <Link
                     href="/resources/privacy-policy"
@@ -523,6 +524,30 @@ export function Navigation() {
                     >
                       Ethical AI Agents
                     </Link>
+                    <div className="border-t border-border my-1" />
+                    <Link
+                      href="/incluu/ai-compliance"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      AI Compliance Checker
+                    </Link>
+                    <Link
+                      href="/incluu/mission-mechanics"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Mission Mechanics Lab
+                    </Link>
+                    <a
+                      href="https://grc.incluu.us"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GRC TravelRisk Engine
+                    </a>
                   </div>
                 )}
               </div>
@@ -704,6 +729,16 @@ export function Navigation() {
                     >
                       Watch TEDx
                     </Link>
+                    <div className="border-t border-border my-1" />
+                    <a
+                      href="https://v0-dr-dede-executive-summary.vercel.app"
+                      className="text-sm text-foreground/70 hover:text-foreground py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Executive Summary
+                    </a>
                   </div>
                 )}
               </div>
@@ -743,45 +778,12 @@ export function Navigation() {
                       ROI Calculator
                     </Link>
                     <Link
-                      href="/resources/ai-compliance"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      AI Compliance Checker
-                    </Link>
-                    <Link
-                      href="/resources/mission-mechanics"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Mission Mechanics Lab
-                    </Link>
-                    <Link
                       href="/resources/stories"
                       className="text-sm text-foreground/70 hover:text-foreground py-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Stories
                     </Link>
-                    <div className="border-t border-border my-1" />
-                    <a
-                      href="https://grc-travelrisk-engine.vercel.app"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GRC TravelRisk Engine
-                    </a>
-                    <a
-                      href="https://v0-dr-dede-executive-summary.vercel.app"
-                      className="text-sm text-foreground/70 hover:text-foreground py-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Executive Summary
-                    </a>
                     <div className="border-t border-border my-1" />
                     <Link
                       href="/resources/privacy-policy"
