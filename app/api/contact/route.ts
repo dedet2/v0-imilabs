@@ -1,17 +1,89 @@
-import { createClient } from "@/lib/supabase/server"
 import { NextResponse } from "next/server"
 
-// Admin notification emails
-const ADMIN_EMAILS = [
-  "rar@dr-dede.com",
-  "info@dr-dede.com",
-  "info@incluu.us",
-]
+// ============================================================
+// Contact Form API — stores in Supabase + Airtable, notifies via
+// Google Workspace SMTP (primary) or Slack webhook (fallback).
+// NO Resend dependency — uses nodemailer with Google Workspace.
+// ============================================================
 
-// Airtable configuration
+const ADMIN_EMAILS = ["rar@dr-dede.com", "info@dr-dede.com", "info@incluu.us"]
+
+// Supabase direct REST API (no library dependency)
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://ruiphgtxyazqlasbchiv.supabase.co"
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || ""
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+
+// Airtable
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || "appOV1EhlOeCh6ZdO"
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY || ""
 const AIRTABLE_CONTACTS_TABLE = process.env.AIRTABLE_CONTACTS_TABLE || "Contact Submissions"
+
+// ---------- Supabase Storage ----------
+
+async function supabaseInsert(table: string, data: Record<string, unknown>) {
+  const key = SUPABASE_SERVICE_KEY || SUPABASE_ANON_KEY
+  if (!key) {
+    console.warn("No Supabase key configured — skipping Supabase storage")
+    return { success: false, reason: "no_key" }
+  }
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+      method: "POST",
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+        "Content-Type": "application/json",
+        Prefer: "return=minimal",
+      },
+      body: JSON.stringify(data),
+    })
+
+    if (!res.ok) {
+      const errorText = await res.text()
+      console.error(`Supabase insert to ${table} failed:`, errorText)
+      return { success: false, reason: errorText }
+    }
+
+    return { success: true }
+  } catch (error) {
+    console.error(`Supabase insert error (${table}):`, error)
+    return { success: false, reason: String(error) }
+  }
+}
+
+async function storeInSupabase(formData: Record<string, string>) {
+  // Try contact_submissions first
+  let result = await supabaseInsert("contact_submissions", {
+    first_name: formData.firstName,
+    last_name: formData.lastName,
+    email: formData.email.toLowerCase(),
+    phone: formData.phone || null,
+    company: formData.organization || null,
+    subject: formData.service || null,
+    message: formData.message,
+    source: "dr-dede.com",
+    status: "new",
+  })
+
+  if (result.success) return { success: true, table: "contact_submissions" }
+
+  // Fallback to leads table
+  result = await supabaseInsert("leads", {
+    email: formData.email.toLowerCase(),
+    first_name: formData.firstName,
+    last_name: formData.lastName,
+    company: formData.organization || null,
+    source: "contact_form",
+    interests: formData.service || null,
+  })
+
+  if (result.success) return { success: true, table: "leads" }
+
+  return { success: false, reason: result.reason }
+}
+
+// ---------- Airtable Storage ----------
 
 async function storeInAirtable(data: Record<string, string>) {
   if (!AIRTABLE_API_KEY) {
@@ -61,48 +133,84 @@ async function storeInAirtable(data: Record<string, string>) {
   }
 }
 
-async function sendAdminNotification(data: Record<string, string>) {
-  // Try Resend first
-  const RESEND_API_KEY = process.env.RESEND_API_KEY
-  if (RESEND_API_KEY) {
-    try {
-      const { Resend } = await import("resend")
-      const resend = new Resend(RESEND_API_KEY)
+// ---------- Email Notification via Google Workspace SMTP ----------
 
-      await resend.emails.send({
-        from: process.env.RESEND_FROM_EMAIL || "Dr. Dédé Website <notifications@dr-dede.com>",
-        to: ADMIN_EMAILS,
-        subject: `New Contact Inquiry: ${data.service || "General"} — ${data.firstName} ${data.lastName}`,
+async function sendEmailNotification(data: Record<string, string>) {
+  // Use nodemailer with Google Workspace SMTP
+  const SMTP_USER = process.env.SMTP_USER || process.env.GOOGLE_SMTP_USER
+  const SMTP_PASS = process.env.SMTP_PASS || process.env.GOOGLE_APP_PASSWORD
+
+  if (SMTP_USER && SMTP_PASS) {
+    try {
+      const nodemailer = await import("nodemailer")
+      const transporter = nodemailer.default.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
+        auth: {
+          user: SMTP_USER,
+          pass: SMTP_PASS,
+        },
+      })
+
+      const htmlBody = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #6b21a8; border-bottom: 2px solid #06b6d4; padding-bottom: 10px;">
+            New Contact Form Submission
+          </h2>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr><td style="padding: 8px; font-weight: bold;">Name:</td><td style="padding: 8px;">${data.firstName} ${data.lastName}</td></tr>
+            <tr style="background: #f9fafb;"><td style="padding: 8px; font-weight: bold;">Email:</td><td style="padding: 8px;"><a href="mailto:${data.email}">${data.email}</a></td></tr>
+            <tr><td style="padding: 8px; font-weight: bold;">Phone:</td><td style="padding: 8px;">${data.phone || "Not provided"}</td></tr>
+            <tr style="background: #f9fafb;"><td style="padding: 8px; font-weight: bold;">Organization:</td><td style="padding: 8px;">${data.organization || "Not provided"}</td></tr>
+            <tr><td style="padding: 8px; font-weight: bold;">Service Interest:</td><td style="padding: 8px;">${data.service || "Not specified"}</td></tr>
+          </table>
+          <div style="margin-top: 16px; padding: 16px; background: #f3f4f6; border-radius: 8px;">
+            <h3 style="margin-top: 0;">Message:</h3>
+            <p style="white-space: pre-wrap;">${data.message}</p>
+          </div>
+          <p style="color: #9ca3af; font-size: 12px; margin-top: 24px;">
+            Submitted from dr-dede.com contact form at ${new Date().toISOString()}
+          </p>
+        </div>
+      `
+
+      await transporter.sendMail({
+        from: `"Dr. Dédé Website" <${SMTP_USER}>`,
+        to: ADMIN_EMAILS.join(", "),
+        subject: `New Contact: ${data.service || "General"} — ${data.firstName} ${data.lastName}`,
+        html: htmlBody,
+      })
+
+      // Also send confirmation to the submitter
+      await transporter.sendMail({
+        from: `"Dr. Dédé Tetsubayashi" <${SMTP_USER}>`,
+        to: data.email,
+        subject: "Thank you for reaching out — Dr. Dédé Tetsubayashi",
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #6b21a8; border-bottom: 2px solid #06b6d4; padding-bottom: 10px;">
-              New Contact Form Submission
-            </h2>
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr><td style="padding: 8px; font-weight: bold; color: #374151;">Name:</td><td style="padding: 8px;">${data.firstName} ${data.lastName}</td></tr>
-              <tr style="background: #f9fafb;"><td style="padding: 8px; font-weight: bold; color: #374151;">Email:</td><td style="padding: 8px;"><a href="mailto:${data.email}">${data.email}</a></td></tr>
-              <tr><td style="padding: 8px; font-weight: bold; color: #374151;">Phone:</td><td style="padding: 8px;">${data.phone || "Not provided"}</td></tr>
-              <tr style="background: #f9fafb;"><td style="padding: 8px; font-weight: bold; color: #374151;">Organization:</td><td style="padding: 8px;">${data.organization || "Not provided"}</td></tr>
-              <tr><td style="padding: 8px; font-weight: bold; color: #374151;">Service Interest:</td><td style="padding: 8px;">${data.service || "Not specified"}</td></tr>
-            </table>
-            <div style="margin-top: 16px; padding: 16px; background: #f3f4f6; border-radius: 8px;">
-              <h3 style="color: #374151; margin-top: 0;">Message:</h3>
-              <p style="color: #4b5563; white-space: pre-wrap;">${data.message}</p>
-            </div>
-            <p style="color: #9ca3af; font-size: 12px; margin-top: 24px;">
-              Submitted from dr-dede.com contact form at ${new Date().toISOString()}
+            <h2 style="color: #6b21a8;">Thank You, ${data.firstName}!</h2>
+            <p>We've received your inquiry about <strong>${data.service || "our services"}</strong>
+            and will get back to you within 24-48 hours.</p>
+            <p>In the meantime, feel free to explore our latest resources at
+            <a href="https://www.dr-dede.com" style="color: #6b21a8;">dr-dede.com</a>.</p>
+            <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 24px 0;" />
+            <p style="color: #9ca3af; font-size: 12px;">
+              Dr. Dédé Tetsubayashi | AI Governance Expert | Digital Equity Pioneer<br />
+              <a href="https://www.dr-dede.com" style="color: #6b21a8;">www.dr-dede.com</a> |
+              <a href="https://www.incluu.us" style="color: #06b6d4;">www.incluu.us</a>
             </p>
           </div>
         `,
       })
 
-      return { success: true, method: "resend" }
+      return { success: true, method: "google_smtp" }
     } catch (error) {
-      console.error("Resend email error:", error)
+      console.error("SMTP email error:", error)
     }
   }
 
-  // Try Slack webhook as fallback
+  // Fallback: Slack webhook
   const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL
   if (SLACK_WEBHOOK_URL) {
     try {
@@ -110,11 +218,11 @@ async function sendAdminNotification(data: Record<string, string>) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          text: `🔔 *New Contact Form Submission*`,
+          text: `New Contact Form Submission`,
           blocks: [
             {
               type: "header",
-              text: { type: "plain_text", text: "🔔 New Contact Inquiry" },
+              text: { type: "plain_text", text: "New Contact Inquiry" },
             },
             {
               type: "section",
@@ -139,46 +247,11 @@ async function sendAdminNotification(data: Record<string, string>) {
     }
   }
 
-  console.warn("No notification method configured (set RESEND_API_KEY or SLACK_WEBHOOK_URL)")
+  console.warn("No notification service configured. Set SMTP_USER + SMTP_PASS (Google Workspace) or SLACK_WEBHOOK_URL")
   return { success: false, reason: "no_notification_service" }
 }
 
-async function sendConfirmationEmail(data: Record<string, string>) {
-  const RESEND_API_KEY = process.env.RESEND_API_KEY
-  if (!RESEND_API_KEY) return
-
-  try {
-    const { Resend } = await import("resend")
-    const resend = new Resend(RESEND_API_KEY)
-
-    await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "Dr. Dédé Tetsubayashi <notifications@dr-dede.com>",
-      to: [data.email],
-      subject: "Thank you for reaching out — Dr. Dédé Tetsubayashi",
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #6b21a8;">Thank You, ${data.firstName}!</h2>
-          <p style="color: #374151; line-height: 1.6;">
-            We've received your inquiry about <strong>${data.service || "our services"}</strong>
-            and will get back to you within 24-48 hours.
-          </p>
-          <p style="color: #374151; line-height: 1.6;">
-            In the meantime, feel free to explore our latest resources at
-            <a href="https://www.dr-dede.com" style="color: #6b21a8;">dr-dede.com</a>.
-          </p>
-          <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 24px 0;" />
-          <p style="color: #9ca3af; font-size: 12px;">
-            Dr. Dédé Tetsubayashi | AI Governance Expert | Digital Equity Pioneer<br />
-            <a href="https://www.dr-dede.com" style="color: #6b21a8;">www.dr-dede.com</a> |
-            <a href="https://www.incluu.us" style="color: #06b6d4;">www.incluu.us</a>
-          </p>
-        </div>
-      `,
-    })
-  } catch (error) {
-    console.error("Confirmation email error:", error)
-  }
-}
+// ---------- API Handler ----------
 
 export async function POST(request: Request) {
   try {
@@ -195,87 +268,27 @@ export async function POST(request: Request) {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email format" },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: "Invalid email format" }, { status: 400 })
     }
 
     const formData = { firstName, lastName, email, phone, organization, service, message }
 
-    // Store in Supabase (primary)
-    let supabaseResult = { success: false, reason: "" }
-    try {
-      const supabase = await createClient()
-      const { error: insertError } = await supabase.from("contact_submissions").insert({
-        first_name: firstName,
-        last_name: lastName,
-        email: email.toLowerCase(),
-        phone: phone || null,
-        organization: organization || null,
-        service_interest: service || null,
-        message: message,
-        source: "dr-dede.com",
-        status: "new",
-      })
-
-      if (insertError) {
-        console.error("Supabase contact insert error:", insertError)
-        // Try the leads table as fallback
-        const { error: leadsError } = await supabase.from("leads").insert({
-          email: email.toLowerCase(),
-          first_name: firstName,
-          last_name: lastName,
-          company: organization || null,
-          source: "contact_form",
-          interests: service || null,
-        })
-
-        if (leadsError) {
-          console.error("Supabase leads fallback error:", leadsError)
-          supabaseResult = { success: false, reason: String(leadsError.message) }
-        } else {
-          supabaseResult = { success: true, reason: "stored_in_leads" }
-        }
-      } else {
-        supabaseResult = { success: true, reason: "stored_in_contact_submissions" }
-      }
-    } catch (error) {
-      console.error("Supabase error:", error)
-      supabaseResult = { success: false, reason: String(error) }
-    }
-
-    // Store in Airtable (secondary) — run in parallel with notification
-    const [airtableResult, notificationResult] = await Promise.all([
+    // Store in Supabase + Airtable in parallel, plus send notifications
+    const [supabaseResult, airtableResult, notificationResult] = await Promise.all([
+      storeInSupabase(formData),
       storeInAirtable(formData),
-      sendAdminNotification(formData),
+      sendEmailNotification(formData),
     ])
 
-    // Send confirmation email (non-blocking)
-    sendConfirmationEmail(formData).catch((e) =>
-      console.error("Confirmation email failed:", e)
-    )
-
-    // At least one storage method must succeed
     const stored = supabaseResult.success || airtableResult.success
     if (!stored) {
-      console.error("CRITICAL: Failed to store contact submission anywhere!", {
-        supabase: supabaseResult,
-        airtable: airtableResult,
-      })
-      // Still return success to user — we don't want to lose the inquiry
-      // Log the full submission for manual recovery
-      console.error("LOST SUBMISSION DATA:", JSON.stringify(formData))
+      // CRITICAL: Log the full submission so it can be recovered
+      console.error("CRITICAL: Failed to store contact submission!", JSON.stringify(formData))
     }
 
     return NextResponse.json({
       success: true,
       message: "Thank you! We'll get back to you within 24-48 hours.",
-      stored: {
-        supabase: supabaseResult.success,
-        airtable: airtableResult.success,
-      },
-      notified: notificationResult.success,
     })
   } catch (error) {
     console.error("Contact API error:", error)
