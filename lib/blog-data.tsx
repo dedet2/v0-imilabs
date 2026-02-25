@@ -21,6 +21,7 @@ export interface BlogPost {
   image: string
   slug: string
   author: string
+  canonicalUrl?: string
   contentBlocks: ContentBlock[]
 }
 
@@ -46,6 +47,493 @@ export function getAdjacentPosts(slug: string): { prev: BlogPost | null, next: B
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: 38,
+    title: "Digital Blackface: A Deep Dive Into the Harm You May Be Causing Online",
+    description:
+      "An expanded exploration of digital blackface—the history, the psychology, the platforms that profit, and the practical tools for change. Understanding minstrelsy's digital evolution and what meaningful accountability looks like.",
+    category: "Race + Digital Culture",
+    date: "February 25, 2026",
+    readTime: "18 min read",
+    image: "/blog/coded-out-coded-in.png",
+    slug: "digital-blackface-deep-dive",
+    author: "Dr. Dédé Tetsubayashi",
+    canonicalUrl: "https://drdede.substack.com/p/digital-blackface-a-deep-dive-into",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Digital blackface is not a metaphor for minstrelsy\u2014it is minstrelsy in evolved form, using Black bodies as emotional shorthand without consequence.",
+          "GIF platforms have structurally encoded Black expressiveness as the default language of heightened digital emotion, creating extractive feedback loops.",
+          "The \u201Cjust a GIF\u201D defense ignores the aggregate harm of billions of instances reducing Black people to emotional costumes.",
+          "AI-generated content is scaling digital blackface at unprecedented speed, reproducing racial stereotypes without individual accountability.",
+          "Platform accountability requires compensation structures, equitable content moderation, algorithmic transparency, and investment in Black creators.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "My original piece on digital blackface introduced the concept. The response I received was significant\u2014from people who recognized themselves in the behavior, from Black people who finally had language for something that had always felt wrong, and from people who pushed back, defensively, insisting that a GIF is just a GIF. This deep dive is for all of you.",
+      },
+      { type: "heading2", content: "Part One: Understanding the History" },
+      { type: "heading3", content: "Minstrelsy Is Not Ancient History" },
+      {
+        type: "paragraph",
+        content:
+          "Most people, when they think of blackface, think of 19th century stage performances\u2014Al Jolson in white gloves and burnt cork, a grotesque tradition safely confined to history textbooks. This framing is convenient. It is also false.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Blackface minstrelsy didn\u2019t end with the vaudeville era. It evolved. In its original form, minstrelsy was a systematic dehumanization project. White performers \u201Cblacked up\u201D to portray Black people as lazy, childlike, hypersexual, comedically exaggerated\u2014a catalog of stereotypes designed to justify the hierarchies of slavery and, later, Jim Crow. The audience didn\u2019t just laugh; they learned. They were taught what \u201CBlackness\u201D meant, and they were taught it through caricature.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Digital blackface is not a metaphor for something like minstrelsy. It <em>is</em> minstrelsy. The form has changed. The function\u2014using Black performance for white entertainment and emotional expression, without consequence\u2014has not.",
+      },
+      { type: "heading3", content: "What Lauren Michele Jackson\u2019s Foundational Analysis Taught Us" },
+      {
+        type: "paragraph",
+        content:
+          "In 2017, writer and scholar Lauren Michele Jackson published \u201CWe Need to Talk About Digital Blackface in Reaction GIFs\u201D in Teen Vogue\u2014the article that gave the concept mainstream visibility and the language many people use today.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Jackson\u2019s argument was precise: digital blackface describes various types of minstrel performance in cyberspace. When non-Black people use GIFs and memes featuring Black people\u2014particularly to express heightened emotions, \u201Csassy\u201D reactions, exaggerated shock, dramatic expressiveness\u2014they are borrowing Black bodies as emotional shorthand.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The answer is rooted in a very old idea: that Black expressiveness is more authentic, more raw, more emotionally real than white expressiveness. This idea\u2014that Black people have a special access to emotion\u2014is not a compliment. It is a stereotype. And like all stereotypes, it reduces people to a single dimension while denying their full humanity.",
+      },
+      { type: "heading2", content: "Part Two: The Mechanics of How It Works" },
+      { type: "heading3", content: "The GIF Economy and Who Controls It" },
+      {
+        type: "paragraph",
+        content:
+          "When you search for a reaction GIF on Giphy, Tenor, or Twitter\u2019s built-in GIF search, you\u2019re interacting with a curated database. Someone made choices about what appears first when you search \u201Cexcited\u201D or \u201Cshocked\u201D or \u201Cyaaas.\u201D Someone decided what the default emotional vocabulary of digital communication looks like.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The result is a GIF ecosystem in which Black expressiveness has been systematically encoded as the default language of heightened digital emotion. This is not individual users making individual choices, but a structural system in which major technology platforms have built Black emotion into the emotional infrastructure of digital communication\u2014without the consent or compensation of the people whose images, performances, and emotional labor built that infrastructure.",
+      },
+      { type: "heading3", content: "The Extractive Loop" },
+      {
+        type: "paragraph",
+        content:
+          "When a Black creator\u2019s video goes viral and their most expressive moment becomes a GIF, they typically receive no compensation, no ongoing credit as that GIF circulates millions of times, and no control over how their image is used. Their momentary expression becomes public property\u2014emotional infrastructure for everyone else\u2019s communication.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "In music, it was Black artists\u2019 innovations in blues, jazz, rock and roll, hip-hop\u2014appropriated, sanitized, and sold by white artists to white audiences. In fashion, it was Black aesthetics repackaged as \u201Ctrends\u201D when adopted by non-Black people. In digital culture, it is Black emotional expression repurposed as freely available communication tools. The form has changed. The extractive logic has not.",
+      },
+      { type: "heading3", content: "The \u201CBut It\u2019s Just a GIF\u201D Defense" },
+      {
+        type: "paragraph",
+        content:
+          "<strong>\u201CIt\u2019s just a GIF.\u201D</strong> The harmlessness of individual actions is irrelevant to the harm of aggregate patterns. No individual drop of water is responsible for a flood. But if you\u2019re standing in a flood, the philosophical innocence of individual water molecules provides no comfort.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "<strong>\u201CYou\u2019re being oversensitive.\u201D</strong> \u201COversensitive\u201D is a word deployed to shift responsibility from those who cause harm to those who name it. When someone says \u201Cthat hurts,\u201D responding with \u201Cyou\u2019re too sensitive\u201D is not an argument. It\u2019s a power move.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "<strong>\u201CIntent matters.\u201D</strong> Intent matters, but it is not the only thing that matters. A car accident caused by an inattentive driver still injures the people in the other car. If your participation in a practice causes harm\u2014even if you didn\u2019t intend the harm\u2014the question isn\u2019t resolved by pointing to your intent. It\u2019s resolved by asking: now that I know, what will I do differently?",
+      },
+      { type: "heading2", content: "Part Three: Beyond GIFs \u2014 The Full Landscape" },
+      { type: "heading3", content: "Digital Blackface in Language and Text" },
+      {
+        type: "paragraph",
+        content:
+          "When non-Black people adopt AAVE (African American Vernacular English) digitally\u2014using \u201Cchile,\u201D \u201Cperiodt,\u201D \u201Cslay,\u201D \u201Cno cap,\u201D \u201Cand I oop,\u201D \u201Cit\u2019s giving\u201D\u2014without understanding their origins or maintaining any real engagement with Black culture, they are performing a version of the same dynamic.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Black people who speak AAVE face discrimination in hiring, housing, and education. Non-Black people who borrow AAVE face no such consequences. This asymmetry is the definition of extraction.",
+      },
+      { type: "heading3", content: "Digital Blackface in AI-Generated Content" },
+      {
+        type: "paragraph",
+        content:
+          "AI image generation tools, trained predominantly on scraped internet data, have internalized the visual languages and stereotypes of the cultures that produced that data. When users prompt AI systems to generate \u201Cexpressive\u201D or \u201Cdramatic\u201D characters, and the outputs default to racialized stereotypes\u2014we are watching digital blackface happen at scale and at speed.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "AI-generated digital blackface is not a future problem. It is happening now. And because AI-generated images circulate without the identity of a human creator attached to them, there is no individual accountable. The harm diffuses. The pattern persists.",
+      },
+      { type: "heading2", content: "Part Four: Platform Accountability" },
+      {
+        type: "paragraph",
+        content:
+          "Black culture is, consistently, the engine of virality on social media platforms. Black creators, Black vernacular, Black aesthetics, Black humor\u2014these drive engagement, and engagement drives advertising revenue. Platforms know this.",
+      },
+      {
+        type: "practicalStepsCard",
+        title: "What Platform Accountability Would Require",
+        items: [
+          { label: "Compensation structures", description: "For creators whose images become widely circulated GIFs and memes\u2014particularly when used in unintended ways." },
+          { label: "Content moderation equity", description: "Policies that take racial harm as seriously as copyright claims, which currently receive far more platform attention." },
+          { label: "Algorithmic transparency", description: "About how content featuring Black people is distributed, promoted, and monetized compared to equivalent content." },
+          { label: "Investment in Black creators", description: "Through equitable monetization, promotion, and platform governance representation\u2014not just token creator funds." },
+        ],
+      },
+      { type: "heading2", content: "Part Five: The Deeper Work" },
+      { type: "heading3", content: "From Awareness to Accountability" },
+      {
+        type: "paragraph",
+        content:
+          "Awareness is the first step. It is not the destination. The question isn\u2019t whether you now understand that digital blackface exists. The question is what you do with that understanding.",
+      },
+      {
+        type: "practicalStepsCard",
+        title: "For Non-Black People: Doing the Work",
+        items: [
+          { label: "Audit your GIF and meme use", description: "Look at the images you share to express emotions. When you reach for a reaction GIF, who is in that image? What stereotype is being activated?" },
+          { label: "Stop using AAVE you haven\u2019t earned", description: "Do you have genuine, ongoing relationships with Black people? Are you doing the work of understanding where the language comes from?" },
+          { label: "Engage with the source", description: "If you love Black culture, extend that love to the people who created it. Follow, pay for, and amplify Black creators." },
+          { label: "Get comfortable with discomfort", description: "The discomfort of having done harm you didn\u2019t know you were doing is not punishment. It is information. Let it move you toward different choices." },
+        ],
+      },
+      { type: "heading2", content: "Where Liberation Lives" },
+      {
+        type: "paragraph",
+        content:
+          "Digital blackface exists because we live in a world structured by white supremacy\u2014a world in which Black people\u2019s labor, creativity, expressiveness, and bodies have been treated as available resources rather than as human beings with sovereignty over their own image and expression.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Liberation in digital spaces requires what liberation requires everywhere: structural change. Platform accountability. Equitable compensation. Governance structures that include the voices of those most affected. Regulatory frameworks that treat racial harm as seriously as financial harm.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The fight for liberation has always included the fight for who gets to control their own image, their own expression, their own narrative. Digital spaces are the newest terrain in that fight. The question for each of us\u2014in every digital interaction\u2014is which side we\u2019re on.",
+      },
+      {
+        type: "questionsCard",
+        variant: "purple",
+        title: "Discussion Questions for Your Community",
+        questions: [
+          "Before reading this article, had you encountered the concept of digital blackface? How has your understanding changed or deepened?",
+          "Think about the last week of your digital communication. What patterns do you notice in the images and language you use to express emotion?",
+          "How do you see the \u201Ccoded gaze\u201D\u2014the embedded prejudices in AI systems\u2014connecting to digital blackface?",
+          "What accountability structures would you support on the platforms you use?",
+          "How do you distinguish between cultural appreciation and cultural appropriation in digital spaces?",
+        ],
+      },
+    ],
+  },
+  {
+    id: 39,
+    title: "The Untold Story of AI Bias Research",
+    description:
+      "The researchers, the resistance, and the reckoning that brought AI bias from obscurity to front-page news\u2014and why the story most people know is missing its most important chapters.",
+    category: "Race + Digital Culture",
+    date: "February 25, 2026",
+    readTime: "12 min read",
+    image: "/blog/untold-story-ai-bias-research.jpg",
+    slug: "untold-story-ai-bias-research",
+    author: "Dr. Dédé Tetsubayashi",
+    canonicalUrl: "https://drdede.substack.com/p/the-untold-story-of-ai-bias-research",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "AI bias research was pioneered largely by Black women operating outside Silicon Valley\u2019s well-funded centers\u2014and they were ignored for years.",
+          "Joy Buolamwini\u2019s Gender Shades study proved facial recognition error rates of up to 34.7% for darker-skinned women vs. 0.8% for lighter-skinned men.",
+          "Timnit Gebru was fired from Google after raising concerns about large language models\u2014the same technology underlying ChatGPT.",
+          "The COMPAS algorithm used in criminal sentencing was nearly twice as likely to falsely flag Black defendants as future criminals.",
+          "Black researchers represent only ~4% of AI researchers at major tech companies, yet bear the disproportionate burden of identifying and fixing bias.",
+        ],
+      },
+      { type: "heading2", content: "The Discovery That Almost Didn\u2019t Happen" },
+      {
+        type: "paragraph",
+        content:
+          "In 2015, a software engineer named Jacky Alcin\u00E9 noticed something deeply disturbing. Google Photos had automatically tagged photos of him and his girlfriend\u2014both Black\u2014as \u201Cgorillas.\u201D The story went viral. Google apologized. The tech world called it a bug. It wasn\u2019t a bug. It was a feature of how AI is built.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Here\u2019s what the mainstream narrative misses: people knew this was coming and had been raising alarms for years. Their names weren\u2019t Sergey Brin or Sundar Pichai\u2014they were largely Black, largely women, largely operating outside the well-funded centers of Silicon Valley. And for years, they were ignored.",
+      },
+      { type: "heading2", content: "The Researchers Silicon Valley Didn\u2019t Want to Hear" },
+      { type: "heading3", content: "Joy Buolamwini and the Ghost in the Machine" },
+      {
+        type: "paragraph",
+        content:
+          "In 2016, MIT Media Lab researcher Joy Buolamwini was working on a project using facial analysis software when she discovered she had a problem. The software couldn\u2019t detect her face. Until she put on a white mask.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Buolamwini\u2019s subsequent research\u2014published as the landmark \u201CGender Shades\u201D study in 2018\u2014demonstrated that commercial facial recognition systems from IBM, Microsoft, and Face++ had error rates of up to 34.7% for darker-skinned women, compared to as low as 0.8% for lighter-skinned men.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "When Buolamwini\u2019s work specifically critiqued Amazon\u2019s Rekognition software, Amazon\u2019s vice president of machine learning publicly attempted to discredit her research methodology\u2014while notably declining to share Amazon\u2019s own internal data. Amazon\u2019s facial recognition software, researchers later found, misidentified 28 members of Congress as people with criminal arrest records. Darker-skinned members of Congress were misidentified at disproportionately higher rates.",
+      },
+      { type: "heading3", content: "Timnit Gebru: The Cost of Speaking Truth" },
+      {
+        type: "paragraph",
+        content:
+          "Before she was fired from Google in December 2020\u2014in an incident that shook the AI research community to its core\u2014Gebru was co-lead of Google\u2019s Ethical AI team. She was also a co-founder of Black in AI, an organization that has worked to increase Black representation and inclusion in artificial intelligence research.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Her firing came after she submitted a paper\u2014co-authored with several colleagues\u2014raising concerns about the potential risks of large language models, the same foundational technology underlying tools like ChatGPT. Google management requested she remove her name from the paper. When she refused and raised concerns about the review process, she was abruptly \u201Clet go.\u201D",
+      },
+      {
+        type: "paragraph",
+        content:
+          "\u201CWhat happened to me is not new,\u201D she told The New York Times. \u201CIt\u2019s the same pattern that happens to Black women everywhere.\u201D Gebru went on to found the Distributed AI Research Institute (DAIR), an independent research organization not beholden to corporate funding.",
+      },
+      { type: "heading3", content: "The COMPAS Controversy: When Bias Has Bars" },
+      {
+        type: "paragraph",
+        content:
+          "COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) is an algorithmic risk assessment tool used in criminal sentencing in many U.S. states. In 2016, ProPublica published an analysis that should have stopped this technology in its tracks: COMPAS was almost twice as likely to falsely flag Black defendants as future criminals, and almost twice as likely to falsely clear white defendants as low risk.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is a pattern worth naming: when AI bias research threatens a revenue stream, the response is often to bury the finding under technical complexity, dispute methodology, and wait for the news cycle to move on. The people whose lives are shaped by these systems don\u2019t have the luxury of waiting.",
+      },
+      { type: "heading2", content: "The Structural Problem: Who Builds AI, Who Gets Hurt" },
+      {
+        type: "paragraph",
+        content:
+          "A 2023 survey by Stanford\u2019s Human-Centered AI institute found that Black researchers represent approximately 4% of AI researchers at major tech companies, despite making up 13% of the U.S. population. Women of color are even more dramatically underrepresented.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Consider training data: the datasets used to train AI systems are built from existing digital content\u2014and existing digital content reflects existing inequalities. When AI systems are trained on historical hiring data, they learn historical hiring discrimination. When trained on health data, they learn the systemic underdiagnosis and undertreatment of pain in Black patients. When trained on crime data, they learn the systemic over-policing of Black communities.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The algorithm is a mirror, and the mirror shows a society that has never achieved the equity it claims to pursue.",
+      },
+      { type: "heading3", content: "The Invisible Tax on Black Voices" },
+      {
+        type: "paragraph",
+        content:
+          "The work of identifying, documenting, and challenging AI bias falls disproportionately on Black researchers, Black advocates, and Black communities. Joy Buolamwini had to write the paper. Timnit Gebru had to build the organization. The communities experiencing bias from COMPAS had to fight legal battles most of them couldn\u2019t afford.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This is an emotional labor tax, a cognitive labor tax, and in Gebru\u2019s case\u2014a career tax. The people with the most to lose from AI bias are also the people being asked to do the most work to fix it, with the least institutional support and the highest personal risk.",
+      },
+      { type: "heading2", content: "What The Research Has Proven" },
+      {
+        type: "practicalStepsCard",
+        title: "Documented AI Bias Findings",
+        items: [
+          { label: "Facial recognition", description: "Performs significantly worse on darker-skinned faces with error rates exceeding 30% for darker-skinned women vs. under 1% for lighter-skinned men." },
+          { label: "Healthcare algorithms", description: "A 2019 study in Science found a widely-used health algorithm assigned similar risk scores to Black patients who were actually sicker than white patients." },
+          { label: "Criminal justice", description: "Algorithms show documented racial disparities in prediction and risk scoring that reinforce over-policing and over-incarceration." },
+          { label: "Hiring algorithms", description: "Show bias against applicants with \u201CBlack-sounding\u201D names\u2014a digital replication of discrimination documented in resume audits for decades." },
+          { label: "Language models", description: "Reflect and amplify racial biases, associating negative language with Black-identified names and positive language with white-identified names." },
+        ],
+      },
+      { type: "heading2", content: "The Researchers Who Changed the Conversation" },
+      {
+        type: "paragraph",
+        content:
+          "It is worth pausing to name names\u2014because naming is itself a form of resistance against erasure.",
+      },
+      {
+        type: "timelineCard",
+        title: "Pioneers of AI Bias Research",
+        items: [
+          { heading: "Joy Buolamwini", description: "Founder of the Algorithmic Justice League, whose \u201CGender Shades\u201D research reshaped how the industry talks about facial recognition bias." },
+          { heading: "Timnit Gebru", description: "Co-founder of Black in AI, founder of DAIR, whose research on bias in language models and whose firing from Google became a flashpoint in AI ethics debates." },
+          { heading: "Safiya Umoja Noble", description: "Author of Algorithms of Oppression, who documented how search engine results perpetuate racist and sexist stereotypes." },
+          { heading: "Ruha Benjamin", description: "Author of Race After Technology, who coined the term \u201Cthe New Jim Code\u201D to describe how neutral-seeming technical systems can perpetuate racial hierarchy." },
+          { heading: "Rediet Abebe", description: "Co-founder of Black in AI, whose research on algorithmic fairness has influenced how the field understands structural inequality." },
+          { heading: "Deborah Raji", description: "Researcher who has worked extensively on AI auditing and accountability, including audits documenting bias in commercial facial recognition systems." },
+        ],
+      },
+      { type: "heading2", content: "What Liberation Looks Like in the Age of AI" },
+      {
+        type: "practicalStepsCard",
+        title: "Imperatives for Change",
+        items: [
+          { label: "Diversity is not decoration", description: "Diverse teams catch biases that homogeneous teams miss. This is a quality assurance imperative backed by research." },
+          { label: "Community engagement is not optional", description: "The people most affected by algorithmic systems have knowledge that researchers and engineers do not." },
+          { label: "Accountability requires teeth", description: "Industry self-regulation has consistently failed. Meaningful change requires independent auditing, legal liability, and regulatory enforcement." },
+          { label: "Naming harm is not neutral", description: "When researchers name AI bias, they challenge systems that benefit powerful institutions. This research is, by its nature, political." },
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "The researchers who built the field of AI bias research\u2014who documented the harm, named the patterns, paid the professional and personal costs\u2014did so in the tradition of every activist and scholar who refused to let power go uncontested. Their work is not done. Neither is ours.",
+      },
+    ],
+  },
+  {
+    id: 40,
+    title: "You\u2019ve Been Coded Out. What Now? How We Code Back In.",
+    description:
+      "How AI learned to be racist, what it means to be \u201Ccoded out\u201D by design, and the four pillars for moving from awareness to action\u2014from margins to multipliers.",
+    category: "Race + Digital Culture",
+    date: "February 20, 2026",
+    readTime: "10 min read",
+    image: "/blog/digital-blackface-deep-dive.jpg",
+    slug: "coded-out-how-we-code-back-in",
+    author: "Dr. Dédé Tetsubayashi",
+    canonicalUrl: "https://drdede.substack.com/p/youve-been-coded-out-what-now-how",
+    contentBlocks: [
+      {
+        type: "keyTakeaways",
+        items: [
+          "Facial recognition algorithms misidentify Black faces at rates 10 to 100 times higher than white faces, leading to documented wrongful arrests.",
+          "Being \u201Ccoded out\u201D means being made invisible by design\u2014from voice assistants that ignore accents to credit models that mark entire communities as too risky.",
+          "The \u201Cdefault user\u201D myth places a narrow identity at the center of every design decision, treating everyone else as an \u201Cedge case.\u201D",
+          "Four pillars\u2014Lead with Curiosity, Be Accountable, Solve for One/Extend to Many, and Take Action\u2014provide a framework for inclusive AI.",
+          "When we solve for people at the sharpest edge of harm, we improve systems for everyone\u2014from margins to multipliers.",
+        ],
+      },
+      { type: "heading2", content: "Three Men, One Pattern" },
+      {
+        type: "paragraph",
+        content:
+          "January 2020, Detroit, Michigan. Robert Williams is in his front yard, playing with his daughters, when a police car pulls up. Officers step out and tell him he\u2019s under arrest for larceny. His daughters watch as their father is handcuffed in front of them and taken away. Robert spends 30 hours in jail for a crime he didn\u2019t commit. The \u201Cevidence\u201D? A facial recognition algorithm that couldn\u2019t tell Black faces apart.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Robert Williams isn\u2019t alone. There\u2019s Michael Oliver\u2014similar story, different city. Accused of a crime based solely on facial recognition. And Nijeer Parks\u2014accused of shoplifting and trying to hit a police officer with a car in a town he had never even visited. He spent 10 days in jail and nearly three years fighting the charges before they were dismissed.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Three Black men. Three wrongful arrests. Three lives disrupted. And these are only the cases we know about.",
+      },
+      { type: "heading2", content: "This Isn\u2019t Anecdotal. It\u2019s Systemic." },
+      {
+        type: "paragraph",
+        content:
+          "In 2019, the National Institute of Standards and Technology (NIST) published a major study on facial recognition accuracy across demographic groups. Their findings were damning: facial recognition algorithms misidentified Black faces at rates 10 to 100 times higher than white faces. For Black women specifically, error rates were even worse.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The systems being sold into policing, airports, housing, banking, and hiring are systematically worse at recognizing us. This isn\u2019t a random glitch. It\u2019s the predictable result of how these systems are built.",
+      },
+      { type: "heading2", content: "What It Means to Be \u201CCoded Out\u201D" },
+      {
+        type: "paragraph",
+        content:
+          "When I talk about being \u201Ccoded out,\u201D I\u2019m talking about being made invisible by design. You\u2019ve been coded out when a voice assistant never understands your accent or your disabled speech pattern. When a \u201Csmart\u201D form forces you into two gender options that don\u2019t fit. When a navigation app forgets wheelchair users exist. When a credit scoring model marks your entire community as \u201Ctoo risky,\u201D ignoring the structural barriers you face.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The common thread: a mythical \u201Cdefault user\u201D at the center of every design decision.",
+      },
+      { type: "heading2", content: "The Myth of the Default User" },
+      {
+        type: "paragraph",
+        content:
+          "Most tech products are built around an imaginary \u201Ctypical\u201D user\u2014usually defined by whoever\u2019s in the room building it. Everyone else gets labeled an \u201Cedge case.\u201D We see this in name fields that reject non-Western formats, recognition engines trained on narrow datasets, interfaces that quietly assume a certain way of seeing, moving, hearing, or processing information, and data pipelines that treat Black, disabled, and Global South communities as statistical noise.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The result? People at the margins get locked out, misclassified, or harmed first and worst. Trust erodes. Lives are disrupted. And yet the system is marketed as \u201Cobjective,\u201D \u201Cinnovative,\u201D or \u201Cunbiased.\u201D",
+      },
+      { type: "heading2", content: "From Coded Out to Coded In: Four Pillars" },
+      {
+        type: "practicalStepsCard",
+        title: "Pillar 1: Lead with Curiosity",
+        items: [
+          { label: "Who is missing", description: "From this dataset, this user research, this leadership meeting?" },
+          { label: "Whose support tickets", description: "Are dismissed as \u201Crare\u201D or \u201Cedge cases\u201D?" },
+          { label: "Where are people dropping off", description: "Silently, because the system doesn\u2019t recognize them?" },
+        ],
+      },
+      {
+        type: "practicalStepsCard",
+        title: "Pillar 2: Be Accountable",
+        items: [
+          { label: "Own the harm", description: "When your system locks people out or misidentifies them." },
+          { label: "Put real resources behind it", description: "Budget, time, and actual authority behind fixing it." },
+          { label: "Assign clear owners", description: "For inclusive outcomes\u2014and track progress like any other key metric." },
+        ],
+      },
+      {
+        type: "practicalStepsCard",
+        title: "Pillar 3: Solve for One, Extend to Many",
+        items: [
+          { label: "Case study", description: "A global bank\u2019s AI voice authentication was locking out users with regional accents and speech disabilities. Initial success rate: ~30% for some groups." },
+          { label: "The approach", description: "Co-designed with affected users, performed reverse bias audits, expanded and diversified training data." },
+          { label: "The result", description: "Success rates jumped to ~90%\u2014not just for \u201Cedge cases,\u201D but across their entire customer base." },
+        ],
+      },
+      {
+        type: "practicalStepsCard",
+        title: "Pillar 4: Take Action",
+        items: [
+          { label: "Run real audits", description: "Bias and impact audits on your models\u2014not just internal slide decks." },
+          { label: "Redesign for real users", description: "Forms, flows, and interfaces that reflect your actual users, especially those historically excluded." },
+          { label: "Design with communities", description: "Co-creation sessions, community councils, feedback loops that actually change decisions." },
+        ],
+      },
+      { type: "heading2", content: "Proof That Coding-In Works" },
+      {
+        type: "innovationCard",
+        title: "From Margins to Multipliers",
+        items: [
+          { heading: "Voiceitt + Webex", description: "Real-time captioning for atypical speech patterns meant managers finally heard ideas from team members who had been silent. Teams saw measurable productivity gains." },
+          { heading: "Microsoft Adaptive Controller", description: "Created with disabled gamers, it unlocked play for disabled players and sparked new ways for families and creators to interact around games." },
+          { heading: "Project Euphonia", description: "By centering people with atypical speech\u2014ALS, Parkinson\u2019s, stroke survivors\u2014Google\u2019s voice recognition became more accurate for everyone." },
+          { heading: "Fintech credit equity", description: "Bias audits and retraining models to include excluded borrowers increased approval rates, reduced default rates, and improved customer retention across India, Kenya, and Nigeria." },
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "Every time we treat \u201Cedge cases\u201D as design constraints instead of afterthoughts, we see the same pattern: higher trust, better outcomes, and real business value. From margins to multipliers.",
+      },
+      { type: "heading2", content: "What Do We Do Now?" },
+      {
+        type: "questionsCard",
+        variant: "cyan",
+        title: "Questions for Action",
+        questions: [
+          "What is one system in your world\u2014at work, in your city, in your product\u2014that clearly codes people out? How would you redesign it to be inclusive by default?",
+          "Which dataset, model, or process in your org has never been audited for exclusionary patterns? What would it take to change that this quarter?",
+          "Who are your so-called \u201Cedge cases\u201D? What might happen if you centered them for your next product cycle instead of designing around them?",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "Robert Williams is still fighting for justice. So are Michael Oliver and Nijeer Parks. They\u2019re fighting not just for themselves, but for every Black person who might be the next victim of an algorithm that can\u2019t see us.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "This Black History Month, honoring our ancestors means extending the fight for justice into the digital age. You\u2019ve been coded out. My work is about helping you\u2014and the systems around you\u2014get coded back in.",
+      },
+    ],
+  },
   {
     id: 1,
     title: "The ROI of Accessible Technology",
