@@ -8,6 +8,7 @@ import { notFound } from "next/navigation"
 import { getPostBySlug, getAllPostSlugs, getAdjacentPosts } from "@/lib/blog-data"
 import { ShareButton } from "@/components/share-button"
 import { ArticleContent } from "@/components/article-content"
+import { StructuredData } from "@/components/structured-data"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
@@ -25,10 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: post.title,
       description: post.description,
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
       images: [post.image],
     },
     alternates: {
-      canonical: `https://dr-dede.com/blog/${slug}`,
+      canonical: post.canonicalUrl || `https://dr-dede.com/blog/${slug}`,
     },
   }
 }
@@ -49,8 +53,32 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     notFound()
   }
 
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    image: `https://dr-dede.com${post.image}`,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      url: "https://dr-dede.com/dr-dede",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Dr. Dédé Tetsubayashi",
+      url: "https://dr-dede.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": post.canonicalUrl || `https://dr-dede.com/blog/${slug}`,
+    },
+  }
+
   return (
     <main className="min-h-screen pt-16">
+      <StructuredData data={articleStructuredData} />
       {/* Hero Section with Background Image */}
       <section className="relative py-20 sm:py-32 text-white overflow-hidden min-h-[400px] md:min-h-[500px]">
         {/* Background Image */}
