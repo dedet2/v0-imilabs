@@ -394,7 +394,7 @@ export const blogPosts: BlogPost[] = [
     category: "Race + Digital Culture",
     date: "February 20, 2026",
     readTime: "10 min read",
-    image: "/blog/coded-out-coded-in.jpg",
+    image: "/blog/coded-out-coded-in.png",
     slug: "coded-out-how-we-code-back-in",
     author: "Dr. Dédé Tetsubayashi",
     canonicalUrl: "https://drdede.substack.com/p/youve-been-coded-out-what-now-how",
