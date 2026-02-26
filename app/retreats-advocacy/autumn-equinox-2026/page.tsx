@@ -1,15 +1,12 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Leaf, Mountain, Sparkles, Users, Mail } from "lucide-react"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 export default function AutumnEquinox2026Page() {
-  const [showStripePayment, setShowStripePayment] = useState(false)
   return (
     <div className="min-h-screen bg-white">
       <section
@@ -48,7 +45,7 @@ export default function AutumnEquinox2026Page() {
               </Button>
             </Link>
             <Button
-              onClick={() => setShowStripePayment(true)}
+              onClick={() => window.location.href = 'mailto:info@dr-dede.com?subject=Retreat Reservation Inquiry'}
               className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide"
             >
               Secure My Spot!
@@ -219,7 +216,7 @@ export default function AutumnEquinox2026Page() {
                   </Button>
                 </Link>
                 <Button
-                  onClick={() => setShowStripePayment(true)}
+                  onClick={() => window.location.href = 'mailto:info@dr-dede.com?subject=Retreat Reservation Inquiry'}
                   className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-6 text-lg font-bold"
                 >
                   Secure My Spot!
@@ -254,22 +251,6 @@ export default function AutumnEquinox2026Page() {
       </section>
 
       {/* NO FOOTER - Site handles it */}
-
-      <Dialog open={showStripePayment} onOpenChange={setShowStripePayment}>
-        <DialogContent className="max-w-[95vw] sm:max-w-4xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-xl sm:text-2xl font-serif text-orange-600">Secure Your Spot</DialogTitle>
-          </DialogHeader>
-          <div className="mt-3 sm:mt-4">
-            {/* TODO: Create Stripe pricing table for Autumn Equinox 2026 and replace this ID */}
-            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-            <stripe-pricing-table
-              pricing-table-id="TODO_AUTUMN_EQUINOX_PRICING_TABLE"
-              publishable-key="pk_live_51HBq4LEVSHLlpak65gbm9X4cCKW6tyG6IL2F60eLf4W0cpozlg9gTSCxXsUVHSboSOMj79ZaTnAqQBTzA5e8avTo0055WBIeUn"
-            />
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   )
 }
