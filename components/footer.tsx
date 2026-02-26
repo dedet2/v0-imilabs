@@ -74,7 +74,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/dr-dede"
+                  href="/retreats-advocacy"
                   className="hover:text-purple-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
                   <span className="w-1 h-1 bg-purple-400 rounded-full group-hover:w-2 transition-all duration-200" />
@@ -83,7 +83,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/dr-dede"
+                  href="/speaking"
                   className="hover:text-purple-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
                   <span className="w-1 h-1 bg-purple-400 rounded-full group-hover:w-2 transition-all duration-200" />
