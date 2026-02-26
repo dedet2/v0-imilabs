@@ -1,43 +1,15 @@
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Leaf, Mountain, Sparkles, Users, Mail } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Autumn Equinox 2026 - Crimson & Gold | Rest as Resistance",
-  description:
-    "11-day wellness retreat celebrating autumn equinox in Japan (Sept 22 - Oct 2, 2026). Fall foliage, balance, restoration.",
-  alternates: {
-    canonical: "https://dr-dede.com/retreats-advocacy/autumn-equinox-2026",
-  },
-  openGraph: {
-    title: "Autumn Equinox 2026 - Crimson & Gold | Rest as Resistance",
-    description:
-      "11-day wellness retreat celebrating autumn equinox in Japan (Sept 22 - Oct 2, 2026). Fall foliage, balance, restoration.",
-    url: "https://dr-dede.com/retreats-advocacy/autumn-equinox-2026",
-    siteName: "Dr. Dédé Tetsubayashi",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=1200&q=80",
-        width: 1200,
-        height: 630,
-        alt: "Autumn Equinox 2026 - Crimson & Gold",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Autumn Equinox 2026 - Crimson & Gold | Rest as Resistance",
-    description: "11-day wellness retreat celebrating autumn equinox in Japan with spectacular fall foliage.",
-    images: ["https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=1200&q=80"],
-  },
-}
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 export default function AutumnEquinox2026Page() {
+  const [showStripePayment, setShowStripePayment] = useState(false)
   return (
     <div className="min-h-screen bg-white">
       <section
@@ -69,11 +41,19 @@ export default function AutumnEquinox2026Page() {
             sacred temple rituals, and mountain onsen. Experience Japan's most breathtaking season while honoring the
             wisdom of release and transformation.
           </p>
-          <Link href="/contact">
-            <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide">
-              Reserve Your Spot
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide">
+                Reserve Your Spot
+              </Button>
+            </Link>
+            <Button
+              onClick={() => setShowStripePayment(true)}
+              className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide"
+            >
+              Secure My Spot!
             </Button>
-          </Link>
+          </div>
         </div>
       </section>
 
@@ -232,11 +212,19 @@ export default function AutumnEquinox2026Page() {
                 </div>
               </div>
 
-              <Link href="/contact" className="block">
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-6 text-lg font-bold">
-                  Reserve Your Spot
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <Link href="/contact" className="block">
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-6 text-lg font-bold">
+                    Reserve Your Spot
+                  </Button>
+                </Link>
+                <Button
+                  onClick={() => setShowStripePayment(true)}
+                  className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-6 text-lg font-bold"
+                >
+                  Secure My Spot!
                 </Button>
-              </Link>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -266,6 +254,22 @@ export default function AutumnEquinox2026Page() {
       </section>
 
       {/* NO FOOTER - Site handles it */}
+
+      <Dialog open={showStripePayment} onOpenChange={setShowStripePayment}>
+        <DialogContent className="max-w-[95vw] sm:max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl font-serif text-orange-600">Secure Your Spot</DialogTitle>
+          </DialogHeader>
+          <div className="mt-3 sm:mt-4">
+            {/* TODO: Create Stripe pricing table for Autumn Equinox 2026 and replace this ID */}
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table
+              pricing-table-id="TODO_AUTUMN_EQUINOX_PRICING_TABLE"
+              publishable-key="pk_live_51HBq4LEVSHLlpak65gbm9X4cCKW6tyG6IL2F60eLf4W0cpozlg9gTSCxXsUVHSboSOMj79ZaTnAqQBTzA5e8avTo0055WBIeUn"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }

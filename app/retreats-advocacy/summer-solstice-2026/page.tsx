@@ -1,39 +1,15 @@
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check, ArrowLeft, Sparkles, Droplets, Mountain, Sunrise, Heart } from "lucide-react"
-
-export const metadata = {
-  title: "Summer Solstice in Hokkaido 2026 | Rest as Resistance",
-  description:
-    "7-day wellness retreat in Hokkaido during summer solstice (June 21-27, 2026). Lavender fields, pristine lakes, midnight sun.",
-  openGraph: {
-    title: "Summer Solstice in Hokkaido 2026 | Rest as Resistance",
-    description:
-      "7-day wellness retreat in Hokkaido during summer solstice (June 21-27, 2026). Lavender fields, pristine lakes, midnight sun.",
-    url: "https://dr-dede.com/retreats-advocacy/summer-solstice-2026",
-    siteName: "Dr. Dédé Tetsubayashi",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1200&q=80",
-        width: 1200,
-        height: 630,
-        alt: "Summer Solstice in Hokkaido 2026",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Summer Solstice in Hokkaido 2026 | Rest as Resistance",
-    description: "7-day wellness retreat in Hokkaido during summer solstice. Lavender fields and midnight sun.",
-    images: ["https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1200&q=80"],
-  },
-}
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 export default function SummerSolstice2026Page() {
+  const [showStripePayment, setShowStripePayment] = useState(false)
   return (
     <div className="min-h-screen bg-white">
       <link rel="canonical" href="https://dr-dede.com/retreats-advocacy/summer-solstice-2026" />
@@ -77,14 +53,23 @@ export default function SummerSolstice2026Page() {
             Experience Japan's northern paradise at peak summer. Seven days of endless daylight, purple lavender fields,
             crystal lakes, and mountain hot springs where nature's rhythm slows time itself.
           </p>
-          <Link href="/contact">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide"
+              >
+                Reserve Your Spot
+              </Button>
+            </Link>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide"
+              onClick={() => setShowStripePayment(true)}
+              className="bg-gradient-to-r from-cyan-600 to-green-500 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-lg hover:opacity-90 transition-all uppercase tracking-wide"
             >
-              Reserve Your Spot
+              Secure My Spot!
             </Button>
-          </Link>
+          </div>
         </div>
       </section>
 
@@ -235,11 +220,19 @@ export default function SummerSolstice2026Page() {
                 <p className="font-semibold">Single Occupancy: +$1,800</p>
                 <p className="mt-1">Payment Plans Available: 3-payment option</p>
               </div>
-              <Link href="/contact">
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-4 text-lg">
-                  Reserve Your Spot
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <Link href="/contact">
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-4 text-lg">
+                    Reserve Your Spot
+                  </Button>
+                </Link>
+                <Button
+                  onClick={() => setShowStripePayment(true)}
+                  className="w-full bg-gradient-to-r from-cyan-600 to-green-500 text-white py-4 text-lg"
+                >
+                  Secure My Spot!
                 </Button>
-              </Link>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -270,6 +263,22 @@ export default function SummerSolstice2026Page() {
       </section>
 
       {/* NO FOOTER - Site handles it */}
+
+      <Dialog open={showStripePayment} onOpenChange={setShowStripePayment}>
+        <DialogContent className="max-w-[95vw] sm:max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl font-serif text-cyan-600">Secure Your Spot</DialogTitle>
+          </DialogHeader>
+          <div className="mt-3 sm:mt-4">
+            {/* TODO: Create Stripe pricing table for Summer Solstice 2026 and replace this ID */}
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table
+              pricing-table-id="TODO_SUMMER_SOLSTICE_PRICING_TABLE"
+              publishable-key="pk_live_51HBq4LEVSHLlpak65gbm9X4cCKW6tyG6IL2F60eLf4W0cpozlg9gTSCxXsUVHSboSOMj79ZaTnAqQBTzA5e8avTo0055WBIeUn"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }
