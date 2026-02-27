@@ -94,8 +94,6 @@ export function Footer() {
                 <a
                   href="https://grc.incluu.us"
                   className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2 group"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <span className="w-1 h-1 bg-cyan-400 rounded-full group-hover:w-2 transition-all duration-200" />
                   GRC TravelRisk Engine
